@@ -1,5 +1,5 @@
-\babel@toc {italian}{}
-\babel@toc {italian}{}
+\select@language {italian}
+\select@language {italian}
 \contentsline {section}{\numberline {1}Introduzione}{4}{section.1}
 \contentsline {subsection}{\numberline {1.1}Scopo del documento}{4}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}Glossario}{4}{subsection.1.2}
@@ -11,7 +11,7 @@
 \contentsline {subsubsection}{\numberline {2.1.1}Descrizione}{5}{subsubsection.2.1.1}
 \contentsline {subsubsection}{\numberline {2.1.2}Studio del dominio}{5}{subsubsection.2.1.2}
 \contentsline {section}{\numberline {3}Valutazione sugli altri capitolati}{5}{section.3}
-\contentsline {subsection}{\numberline {3.1}Capitolato C1 - Ajarvis}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}Capitolato C1 - Butterfly}{5}{subsection.3.1}
 \contentsline {subsubsection}{\numberline {3.1.1}Descrizione}{5}{subsubsection.3.1.1}
 \contentsline {subsubsection}{\numberline {3.1.2}Studio del dominio}{5}{subsubsection.3.1.2}
 \contentsline {paragraph}{\numberline {3.1.2.1}Dominio applicativo}{5}{paragraph.3.1.2.1}
@@ -31,38 +31,38 @@
 \contentsline {subsubsection}{\numberline {3.3.1}Descrizione}{7}{subsubsection.3.3.1}
 \contentsline {subsubsection}{\numberline {3.3.2}Studio del dominio}{7}{subsubsection.3.3.2}
 \contentsline {paragraph}{\numberline {3.3.2.1}Dominio applicativo}{7}{paragraph.3.3.2.1}
-\contentsline {paragraph}{\numberline {3.3.2.2}Dominio tecnologico}{7}{paragraph.3.3.2.2}
-\contentsline {paragraph}{\numberline {3.3.2.3}Aspetti positivi}{7}{paragraph.3.3.2.3}
+\contentsline {paragraph}{\numberline {3.3.2.2}Dominio tecnologico}{8}{paragraph.3.3.2.2}
+\contentsline {paragraph}{\numberline {3.3.2.3}Aspetti positivi}{8}{paragraph.3.3.2.3}
 \contentsline {paragraph}{\numberline {3.3.2.4}Aspetti negativi}{8}{paragraph.3.3.2.4}
 \contentsline {paragraph}{\numberline {3.3.2.5}Conclusioni}{8}{paragraph.3.3.2.5}
 \contentsline {subsection}{\numberline {3.4}Capitolato C4 - ECoRe}{8}{subsection.3.4}
 \contentsline {subsubsection}{\numberline {3.4.1}Descrizione}{8}{subsubsection.3.4.1}
 \contentsline {subsubsection}{\numberline {3.4.2}Studio del dominio}{8}{subsubsection.3.4.2}
 \contentsline {paragraph}{\numberline {3.4.2.1}Dominio applicativo}{8}{paragraph.3.4.2.1}
-\contentsline {paragraph}{\numberline {3.4.2.2}Dominio tecnologico}{8}{paragraph.3.4.2.2}
-\contentsline {paragraph}{\numberline {3.4.2.3}Aspetti positivi}{8}{paragraph.3.4.2.3}
-\contentsline {paragraph}{\numberline {3.4.2.4}Aspetti negativi}{8}{paragraph.3.4.2.4}
+\contentsline {paragraph}{\numberline {3.4.2.2}Dominio tecnologico}{9}{paragraph.3.4.2.2}
+\contentsline {paragraph}{\numberline {3.4.2.3}Aspetti positivi}{9}{paragraph.3.4.2.3}
+\contentsline {paragraph}{\numberline {3.4.2.4}Aspetti negativi}{9}{paragraph.3.4.2.4}
 \contentsline {paragraph}{\numberline {3.4.2.5}Conclusioni}{9}{paragraph.3.4.2.5}
 \contentsline {subsection}{\numberline {3.5}Capitolato C5 - IronWorks}{9}{subsection.3.5}
 \contentsline {subsubsection}{\numberline {3.5.1}Descrizione}{9}{subsubsection.3.5.1}
 \contentsline {subsubsection}{\numberline {3.5.2}Studio del dominio}{9}{subsubsection.3.5.2}
 \contentsline {paragraph}{\numberline {3.5.2.1}Dominio applicativo}{9}{paragraph.3.5.2.1}
-\contentsline {paragraph}{\numberline {3.5.2.2}Dominio tecnologico}{9}{paragraph.3.5.2.2}
+\contentsline {paragraph}{\numberline {3.5.2.2}Dominio tecnologico}{10}{paragraph.3.5.2.2}
 \contentsline {subsubsection}{\numberline {3.5.3}Aspetti positivi}{10}{subsubsection.3.5.3}
 \contentsline {subsubsection}{\numberline {3.5.4}Aspetti negativi}{10}{subsubsection.3.5.4}
 \contentsline {subsubsection}{\numberline {3.5.5}Conclusioni}{10}{subsubsection.3.5.5}
-\contentsline {subsection}{\numberline {3.6}Capitolato C6 - Marvin}{10}{subsection.3.6}
-\contentsline {subsubsection}{\numberline {3.6.1}Descrizione}{10}{subsubsection.3.6.1}
-\contentsline {subsubsection}{\numberline {3.6.2}Studio del dominio}{10}{subsubsection.3.6.2}
-\contentsline {paragraph}{\numberline {3.6.2.1}Dominio applicativo}{10}{paragraph.3.6.2.1}
-\contentsline {paragraph}{\numberline {3.6.2.2}Dominio tecnologico}{10}{paragraph.3.6.2.2}
+\contentsline {subsection}{\numberline {3.6}Capitolato C6 - Marvin}{11}{subsection.3.6}
+\contentsline {subsubsection}{\numberline {3.6.1}Descrizione}{11}{subsubsection.3.6.1}
+\contentsline {subsubsection}{\numberline {3.6.2}Studio del dominio}{11}{subsubsection.3.6.2}
+\contentsline {paragraph}{\numberline {3.6.2.1}Dominio applicativo}{11}{paragraph.3.6.2.1}
+\contentsline {paragraph}{\numberline {3.6.2.2}Dominio tecnologico}{11}{paragraph.3.6.2.2}
 \contentsline {subsubsection}{\numberline {3.6.3}Aspetti positivi}{11}{subsubsection.3.6.3}
-\contentsline {subsubsection}{\numberline {3.6.4}Aspetti negativi}{11}{subsubsection.3.6.4}
-\contentsline {subsubsection}{\numberline {3.6.5}Conclusioni}{11}{subsubsection.3.6.5}
-\contentsline {subsection}{\numberline {3.7}Capitolato C8 - TuTourSelf}{11}{subsection.3.7}
-\contentsline {subsubsection}{\numberline {3.7.1}Descrizione}{11}{subsubsection.3.7.1}
-\contentsline {subsubsection}{\numberline {3.7.2}Studio del dominio}{11}{subsubsection.3.7.2}
+\contentsline {subsubsection}{\numberline {3.6.4}Aspetti negativi}{12}{subsubsection.3.6.4}
+\contentsline {subsubsection}{\numberline {3.6.5}Conclusioni}{12}{subsubsection.3.6.5}
+\contentsline {subsection}{\numberline {3.7}Capitolato C8 - TuTourSelf}{12}{subsection.3.7}
+\contentsline {subsubsection}{\numberline {3.7.1}Descrizione}{12}{subsubsection.3.7.1}
+\contentsline {subsubsection}{\numberline {3.7.2}Studio del dominio}{12}{subsubsection.3.7.2}
 \contentsline {paragraph}{\numberline {3.7.2.1}Dominio tecnologico}{12}{paragraph.3.7.2.1}
-\contentsline {subsubsection}{\numberline {3.7.3}Aspetti positivi}{12}{subsubsection.3.7.3}
-\contentsline {subsubsection}{\numberline {3.7.4}Aspetti negativi}{12}{subsubsection.3.7.4}
-\contentsline {subsubsection}{\numberline {3.7.5}Conclusioni}{12}{subsubsection.3.7.5}
+\contentsline {subsubsection}{\numberline {3.7.3}Aspetti positivi}{13}{subsubsection.3.7.3}
+\contentsline {subsubsection}{\numberline {3.7.4}Aspetti negativi}{13}{subsubsection.3.7.4}
+\contentsline {subsubsection}{\numberline {3.7.5}Conclusioni}{13}{subsubsection.3.7.5}

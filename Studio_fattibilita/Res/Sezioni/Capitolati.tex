@@ -1,5 +1,5 @@
 \section{Valutazione sul capitolato scelto}
-\subsection{Capitolato C3 - G\&B}
+\subsection{Capitolato C3 - G\&B: monitoraggio intelligente di processi DevOps}
 \subsubsection{Descrizione}
 \subsubsection{Studio del dominio}
 
@@ -7,36 +7,41 @@
 
 
 \section{Valutazione sugli altri capitolati}
-	\subsection{Capitolato C1 - Ajarvis}
+	\subsection{Capitolato C1 - Butterfly}
 		\subsubsection{Descrizione}
-	    Lo scopo di questo capitalo denominato \emph{Ajarvis: assistente virtuale di cerimonie Agile} è quello di realizzare un software in grado di registrare lo \gl{standup} mattutino dell'azienda. Nel dettaglio è richiesto di registrare la conversazione, convertirla in testo e analizzarne il contenuto in modo tale da poter realizzare una dashboard che rappresenta mediate grafici le diverse tematiche affrontate durante il discorso.  
+	    Il primo capitolato, denominato \emph{Butterfly: monitor per processi CI/CD} propone la creazione di un sistema publisher subscriber per facilitare e 		automatizzare l'invio e la ricezione delle segnalazioni provenienti dai vari strumenti utilizzati durante i processi di continuous integration e continuous delivery.
 		\subsubsection{Studio del dominio}
 			\paragraph{Dominio applicativo} \Spazio
-			 L'utilità di questo prodotto è sicuramente molto rilevante per quegli ambienti organizzati in team dove è necessario stilare un documento riassuntivo dell'incontro o comunque aver accesso alle informazioni dello standup in modo digitale e categorizzato.
+			 Il sistema che si richiede venga sviluppato in particolare dovra' essere composto da 4 elementi:
+\\-producers: hanno il compito di recuperare le segnalazioni e ripubblicarle sotto forma di messaggi all'interno dei
+topic adeguati;
+\\-consumers: hanno il compito di abbonarsi a dei topic e inoltrare ai destinatari finali tutte le segnalazioni
+provenienti dal suddetto topic;
+\\-broker: strumento utile per la gestione ed istanziazione dei topic;
+\\-componenti aggiuntive custom: si richiede, in particolare, la realizzazione di una componente che riesca a determinare la persona più adatta a cui inoltrare la segnalazione e la invii solo ed esclusivamente a lei.
 			\paragraph{Dominio tecnologico}
 			\begin{itemize}
-				\item \textbf{\gl{Node.js}} per interfacciarsi con le piattaforme Google;
-				\item  \textbf{\gl{Google Cloud Platform}} necessaria per salvare il \gl{file} audio; 
-				\item  \textbf{\gl{Google SQL}} per realizzare la base dei dati che visualizza l'utilizzatore;
-				\item  \textbf{\gl{Speech To Text}} per registrare concretamente il file audio;
-				\item  \textbf{\gl{Framework} Bootstrap} per realizzare la dashboard nella quale vengono rappresentati i dati dopo esser stati elaborati;
-				\item  \textbf{\gl{Natural Language Api}} per effettuare un'analisi preliminare sul testo.	
+				\item \textbf{\gl{Java8+}}; 
+				\item  \textbf{\gl{Apache Kafka}}: piattaforma a bassa latenza per la gestione dei \gl{feed dati} in tempo reale;
+				\item  \textbf{\gl{Docker}}: progetto open source per l'automatizzazione del deployment (consegna al cliente);
+				\item  \textbf{\gl{SonarQube}}: piattaforma per l'analisi statica del codice;
+				\item  \textbf{\gl{Redmine}}: \gl{Issue Tracking System} e \gl{Project Management Tool};
+				\item  \textbf{\gl{GitLab}}: software di versionamento.
 			\end{itemize}
 			
 			\paragraph{Aspetti positivi} \Spazio
 				\begin{itemize}
-				\item {Interessante in particolare per le tecnologie proposte in quanto l'analisi della voce è un tema attuale che in futuro potrà avere interessanti sviluppi;}
-				\item {Il pacchetto di tecnologie Google necessarie per lo sviluppo del capitolato è un bagaglio di cultura notevole extra-universitario.}	
+				\item {Linguaggio di programmazione (Java8+) affrontato durante l'anno accademico nel corso di Pogrammazione Concorrente e Distribuita. Di conseguenza i componenti del team hanno già familiarità con esso;}
+				\item{Ampio dominio tecnlogico che permette di allargare le proprie conoscenze, utile anche per un utilizzo futuro in ambito lavorativo;}
 			\end{itemize}
 			\paragraph{Aspetti negativi} \Spazio
 			\begin{itemize}
-				\item {Sicuramente le nuove tecnologie da apprendere che probabilmente richiederebbero molto più tempo di quello a disposizione;}
-				\item {Poca disponibilità da parte dell'azienda di svolgere incontri frontali con i gruppi fornitori.}	
+				\item {Alcune tecnologie non sono conosciute dal gruppo, come SonarQube, Apache Kafka. Ciò comporta uno studio preventivo prima dell'analisi dei requisiti;}
 			\end{itemize} 
 			\paragraph{Conclusioni} \Spazio
-			Il capitolato proposto ha avuto un giudizio positivo da parte di tutti i membri del gruppo. Non è stato scelto in quanto sono risultate di maggiore interesse altre tecnologie.
+			L'idea di sviluppare un'applicazione che possa connettere tra loro molteplici strumenti per CI/CD largamente utilizzati in ambito di sviluppo e' stata accolta positivamente dal team. Tuttavia il capitolato non è stato scelto visto il numero di tecnologie sconosciute e l'interesse per altre tecnologie da parte del gruppo.
 			
-	\subsection{Capitolato C2 - BlockCV}
+	\subsection{Capitolato C2 - Colletta: piattaforma raccolta dati di analisi di testo}
 	\subsubsection{Descrizione}
 	Il progetto dal titolo \emph{BlockCV: blockchain per gestione di CV certificati} prevede la creazione di una piattaforma distribuita per la pubblicazione di Curriculum Vitae con la possibilità di ricercare offerte di lavoro. Il sistema dev'essere basato sulla tecnologia Blockchain.
 	Il software deve essere integrabile nell'attuale sistema lavorativo, quindi dalla pubblicazione del CV, all'arricchimento dello stesso grazie a maggiori esperienze acquisite dall'utente e deve dare la possibilità alle varie realtà che hanno possibilità di assunzione di confermare le competenze degli utenti.    
@@ -64,7 +69,7 @@
 	Per via degli aspetti precedentemente elencati il gruppo ha preferito concentrarsi su un capitolato diverso.
 	
 	
-	\subsection{Capitolato C3 - DeSpeect}
+	\subsection{Capitolato C4 - MegAlexa: arricchitore di skill di Amazon Alexa}
 	\subsubsection{Descrizione}	
 		Il progetto \emph{DeSpeect: interfaccia grafica per Speect} prevede la realizzazione di un'interfaccia grafica di una libreria Open Source per lo sviluppo di \gl{frontend} e \gl{backend} di un sistema in sintesi vocale.
 		L'esigenza nasce dalla necessità di monitorare il comportamento dei plugin della libreria in questione.
@@ -88,32 +93,7 @@
 	\paragraph{Conclusioni} \Spazio
 	Per i fattori appena elencati, il gruppo si è orientato in un capitolato diverso.
 	
-	\subsection{Capitolato C4 - ECoRe}
-	\subsubsection{Descrizione}
-    L'idea del capitolato \emph{ECoRe: enterprise content recommendation} è quella di sviluppare un software in grado di suggerire contenuti che potrebbero risultare efficienti ed interessanti all'utente durante lo svolgimento del suo lavoro. Il sistema, dovrà essere in grado di ottenere queste informazioni da più fonti.
-	
-	\subsubsection{Studio del dominio} 
-	\paragraph{Dominio applicativo} \Spazio
-	Il software risulta essere utile per essere di supporto a determinate figure aziendali come per esempio i business consultant o chi si occupa di marketing.
-	\paragraph{Dominio tecnologico}
-		\begin{itemize}
-		\item \textbf{\gl{Apache SolR}}; 
-		\item \textbf{Elasticsearch} utilizzato per memorizzare ed elaborare le informazioni;
-		\item \textbf{\gl{Apache Nutch}} motore di ricerca per importare informazioni dal web nel software.
-	\end{itemize}
-	
-	\paragraph{Aspetti positivi} \Spazio
-	\begin{itemize}
-		\item Il progetto e le tecnologie necessarie per lo sviluppo risultano essere innovative;
-		\item Il progetto è applicabile in molti ambiti.
-	\end{itemize}
-	\paragraph{Aspetti negativi} \Spazio
-     Molte tecnologie necessarie per portare a compimento il progetto in tempi ragionevoli.
-
-	\paragraph{Conclusioni} \Spazio
-	Sebbene il progetto sia stato ritenuto interessante dai membri del team è stato scartato per via della mancanza di esperienza pregressa da parte di tutti i componenti.
-	
-	\subsection{Capitolato C5 - IronWorks}
+	\subsection{Capitolato C5 - P2PCS: piattaforma di peer-to-peer car sharing}
 		\subsubsection{Descrizione}
 		Il capitolato C5 \emph{IronWorks, utilità per la costruzione di software robusto} è proposto dall'azienda Zucchetti S.r.l. e pone come obbiettivo la generazione automatica del codice da diagrammi \gl{UML} per rendere più facile seguire le buone regole di programmazione. In particolare chiede la realizzazione di un'\gl{editor} per la costruzione di diagrammi UML (l'interesse è rivolto verso i soli diagrammi di robustezza) con la relativa generazione di codice Java per le entità persistenti e per i metodi di scrittura e lettura verso un database relazionale. 
 		\subsubsection{Studio del dominio}
@@ -155,7 +135,7 @@
 		Questo capitolato, sebbene non presentasse eccessive criticità, non ha suscitato particolare interesse rispetto ad altri. La limitazione alla rappresentazione dei soli diagrammi di robustezza è stata ritenuta troppo vincolante per la creazione di un prodotto completo e veramente utilizzabile nello sviluppo software.
 		
 		
-	\subsection{Capitolato C6 - Marvin}
+	\subsection{Capitolato C6 - Soldino: piattaforma Ethereum per pagamenti IVA}
 		\subsubsection{Descrizione}
 		Il capitolato \emph{Marvin, dimostratore di Uniweb su Ethereum}, proposto dall'azienda RedBabel, propone di realizzare una versione di Uniweb come una \gl{Dapp} che giri su \gl{Ethereum Virtual Machine}. \\  Infatti, come su Uniweb, devono poter interagire:
 		\begin{itemize} 
@@ -190,31 +170,3 @@
 		\end{itemize}
 		\subsubsection{Conclusioni}
 		Sebbene le conoscenze acquisite dallo sviluppo di questo capitolato siano direttamente spendibili nel mondo del lavoro, una buona progettazione richiederebbe uno studio approfondito di tutti i suoi campi applicativi, il quale risulterebbe troppo oneroso rispetto al tempo a disposizione.
-	
-	\subsection{Capitolato C8 - TuTourSelf}
-		\subsubsection{Descrizione}
-		Il capitolato d'appalto C8 \emph{TuTourSelf, piattaforma di prenotazioni per artisti in tournee} è proposto dall'omonima start-up TuTourSelf S.r.l. che con questo progetto mette in gioco una propria idea.\\ Il prodotto richiesto è un'applicazione web che permetta agli artisti di organizzare il proprio tour mettendosi in contatto personalmente con i locali disponibili, adatti ad ospitare l'evento e che corrispondano alle esigenze dell'artista. 
-		\subsubsection{Studio del dominio} 
-			L'applicazione web richiesta vuole rendere l’organizzazione delle performance live il più semplice possibile così da aiutare il percorso degli artisti che vogliono rimanere indipendenti e rendere possibile l'ascesa dei giovani talenti che ancora non sono affiancati da agenzie.
-			\paragraph{Dominio tecnologico} \Spazio
-			Per la realizzazione dell'applicazione web si chiede al gruppo la profonda conoscenza delle seguenti tecnologie:
-			\begin{itemize}
-				\item HTML5;
-				\item CSS;
-				\item JavaScript;
-				\item React.
-			\end{itemize}
-		\subsubsection{Aspetti positivi}
-		\begin{itemize}
-			\item La conoscenza delle tecnologie utilizzate sono molto richieste nel mondo lavorativo;
-			\item Interesse nella realizzazione di un'applicazione che funzioni anche su dispositivi mobile.
-		\end{itemize}
-		\subsubsection{Aspetti negativi}
-		\begin{itemize}
-			\item Nel mercato sono già presenti software strutturati in modo simile;
-			\item Troppa libertà per la realizzazione del lato back-end.
-		\end{itemize}
-		\subsubsection{Conclusioni}
-		Il team possiede già delle basi con le tecnologie richieste e preferisce avere un'esperienza progettuale con delle tecnologie nuove. Inoltre si ritiene più istruttivo lavorare a contatto di un'azienda già affermata nel territorio e nel mondo lavorativo che con una start-up.
-	
-	

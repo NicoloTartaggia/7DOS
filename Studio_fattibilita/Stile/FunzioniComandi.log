@@ -1,0 +1,22 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=latex 2018.11.30)  30 NOV 2018 14:26
+entering extended mode
+**./FunzioniComandi.tex
+(FunzioniComandi.tex
+LaTeX2e <2017-04-15>
+Babel <3.15> and hyphenation patterns for 75 language(s) loaded.
+)
+! Emergency stop.
+<*> ./FunzioniComandi.tex
+                         
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 27 strings out of 493313
+ 478 string characters out of 3138918
+ 53758 words of memory out of 3000000
+ 3675 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 7i,0n,6p,99b,8s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.
