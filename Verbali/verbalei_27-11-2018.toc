@@ -1,7 +1,0 @@
-\babel@toc {italian}{}
-\babel@toc {italian}{}
-\contentsline {section}{\numberline {1}Informazioni generali}{3}{section.1}
-\contentsline {subsection}{\numberline {1.1}Informazioni incontro}{3}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Argomenti affrontati}{3}{subsection.1.2}
-\contentsline {subsubsection}{\numberline {1.2.1}Organizzazione}{3}{subsubsection.1.2.1}
-\contentsline {subsubsection}{\numberline {1.2.2}Requisiti del progetto}{4}{subsubsection.1.2.2}
