@@ -1,18 +1,19 @@
 \documentclass[a4paper, oneside, openany,12pt]{article}
-
 \usepackage{graphbox}
 % permette di modificare i margini
 \usepackage[top=3.1cm, bottom=3.1cm, left=2.2cm, right=2.2cm]{geometry}
 
+
 \usepackage{lastpage} %info sul # dell'ultima pagina del documento
 \usepackage{fancyhdr} %per modificare dimensioni,margini, intestazioni e righe a piè di pagina
+
 \fancypagestyle{plain}{
   % cancella tutti i campi di intestazione e piè di pagina
   \fancyhf{}
+
+  \lhead{\includegraphics[width=2cm]{../logo}}
   
-  \lhead{}
-  
-  \rhead{\includegraphics[width=2cm]{../logo}}
+  \rhead{\sectiontitle}
   
   \lfoot{ %piè di pagina
     \Titolo{} \ - \textit{\Gruppo{}}
