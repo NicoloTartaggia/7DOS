@@ -1,0 +1,21 @@
+Capitolato C1
+Descrizione generale
+Il primo capitolato propone la creazione di un sistema publisher subscriber per facilitare e automatizzare l'invio e la ricezione delle segnalazioni provenienti dai vari strumenti utilizzati durante i processi di continuous integration e continuous delivery.
+
+Finalià del progetto
+Il sistema richiesto in particolare deve essere composto da 4 componenti:
+-producers: hanno il compito di recuperare le segnalazioni e di pubblicarle sottoforma di messaggi all'interno dei topic adeguati;
+-consumers: hanno il compito di abbonarsi a dei topic e di inoltrare ai destinatari finali le segnalazioni prevenienti dai suddetti topic;
+-broker: strumento utile per la gestione e l'instanziazione dei topic;
+-componenti custom: in particolare si richiede la realizzazione di una componente che riesca a determinare la persona più adatta a cui inoltrare la segnalazione e che la inivii solamente a lui.
+
+Tecnologie interessate
+-Java8+;
+-Apache kafka: piattaforma a bassa latenza per la gestione di feed data in tempo reale
+-Docker: progetto open source per l'automatizzazione del deployment (consegna al cliente)
+-Sonarqube: piattaforma per l'analisi statica del codice
+-Red Mine: issue tracking system e project management tool
+-GitLab: software di versionamento
+
+Conclusione
+L'idea si sviluppare una applicazione che possa connettere tra loro molteplici strumenti per CI/CD largamente utilizzata in ambito di sviluppo è stata accolta molto positivamente da ogni membro del team. Tuttavia il grande numero di tecnologie sconosciute ha portato a ritenere il progetto troppo oneroso da realizzare.

@@ -1,0 +1,34 @@
+C3
+Descrizione generale
+Il capitolato C3 ci introduce al mondo dei “DevOps” in cui gli operatori che erogano i servizi e coloro che fabbricano il software sono a stretto contatto. Per far si che la collaborazione sia efficace, è necessario un intenso e completo monitoraggio dei sistemi. Da qui nasce la necessità di rendere “intelligente” il controllo sulle risorse, così da massimizzare l’efficienza e la qualità degli interventi al sistema.
+
+Proposito del progetto
+Il proposito del progetto è la realizzazione di un plug-in per il sistema di monitoraggio Grafana. Si vuole che esso possa, tramite l’utilizzo dell’intelligenza artificiale, monitorare la “livellines” del sistema e riesca a consigliare degli interventi strategici da effettuare sullo stesso (o almeno a delineare la zona di intervento). Tutto ciò tramite l’utilizzo delle reti Bayesiane, dato che è un ottimo strumento per coniugare le conoscenze e competenze degli esperti, con la flessibilità dei sistemi basati sulla probabilità.
+
+Tecnologie interessate
+-Grafana: sistema di monitoraggio e analisi opensource.
+-Reti Bayesiane
+-Javascript
+
+Conclusioni
+Il capitolato in oggetto ha subito suscitato grande interesse nel nostro team per le tematiche moderne e interessanti, come le reti Bayesiane e l’intelligenza artificiale, soprattutto per la possibilità di dare forma nella pratica a molti concetti teorici visti in alcune occasioni.
+Per questo motivo, e anche per l’importanza dell’azienda proponente e del suo noto know-how, abbiamo deciso di scegliere questo capitolato.
+Dallo studio di fattibilità del capitolato è emerso il fatto che lo sviluppo di un plug in per un applicativo già esistente e consolidato come Grafana, il quale non è mai stato utilizzato da alcun componente del gruppo, impone certi vincoli tecnologici e può limitare di conseguenza le scelte del team. 
+
+C4
+Descrizione generale
+Il capitolato C4 ci introduce al nuovo mondo delle user interface. Ciò avviene mettendoci davanti all’interfaccia più in voga del momento, e cioè ad Amazon Alexa. Infatti, i dispositivi che fanno uso di Alexa, utilizzano il modo più semplice per l’uomo di esprimere i propri bisogni e desideri, cioè con la voce. 
+
+Proposito del progetto 
+L’obiettivo che si pone il progetto è quello di creare un’interfaccia web o mobile app per la customizzazione dei workflow che poi verranno avviati tramite una skill creata ad hoc dal team di sviluppo.
+//una skill per Amazon Alexa in grado di utilizzare dei workflow creati //dall’utente tramite un’apposita interfaccia web o mobile app. 
+Ciò vuol dire che un utente potrà utilizzare la sua immaginazione per dare vita ai workflow più consoni alle sue abitudine e bisogni in base a dei connettori precedentemente creati dal nostro team che legano insieme più funzioni (ad esempio, leggi l'ora - leggi il meteo - leggi posta).
+
+Tecnologie interessate e proposte
+-Amazon web services con le relative API Getway, Lamda e Aurora Serverless.
+-Linguaggi di programmazione: NodejS
+-Sviluppo web: HTML5, CSS3 e Javascript con relativi framework responsive come Bootstrap.
+-Sviluppo mobile: Swift o Kotlin
+
+Conclusioni
+Il capitolato in esame ha suscitato interesse da parte del team. L'utilizzo di tecnologie giovani e innovative come Alexa e AWS rappresentano una nuova generazione di interfacce, di cui è previsto uno sviluppo intenso nei prossimi anni. Tuttavia, da quanto emerso, l'implementazione di una applicazione mobile o di una interfaccia web non rappresenta una sfida abbastanza impegantiva in quanto tecnologie diffusa e poco stimolanti.

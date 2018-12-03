@@ -1,0 +1,15 @@
+﻿Descrizione generale:
+Il capitolato 5, P2PCS: piattaforma di peer-to-peer car sharing prevede la realizzazione di un applicativo mobile finalizzato allo sharing p2p di un proprio mezzo di trasporto.
+
+Finalità del progetto:
+L'applicativo ha lo scopo di far incontrare domanda e offerta di noleggio auto p2p. L'affittuario, dovrà poter indicare in quali giorni ed orari il suo veicolo è disponibile per una eventuale prenotazione, il luogo in cui ritirarlo, ed eventuali altre condizioni alle quali il cliente dovrà sottostare per affittare il mezzo.
+Il cliente avrà, dal lato suo, la possibilità di cercare e prenotare veicoli per data e luogo.
+Il tutto dovrà essere accompagnato da un sistema che coinvolga l'utente tramite sistemi di Gamification theory.
+
+Tecnologie interessate:
+Node.JS: piattaforma per l'esecuzione di codice JS server-side
+Android: OS per smartphone
+Framework Octalysis: Gamification Framework
+
+Conclusioni:
+Il capitolato non ha colto l'interesse del team per via del contesto poco interessante e della, quantomeno apparente, semplicità del progetto. Infatti, lo sviluppo di una piattaforma web è stato visto poco interessante rispetto alle altre proposte e non innovativo dal punto di vista delle tecnolgie interessate. 
