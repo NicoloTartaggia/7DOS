@@ -49,11 +49,17 @@
 \contentsline {subsubsection}{\numberline {3.4.3}Aspetti positivi}{10}{subsubsection.3.4.3}
 \contentsline {subsubsection}{\numberline {3.4.4}Aspetti negativi}{10}{subsubsection.3.4.4}
 \contentsline {subsubsection}{\numberline {3.4.5}Conclusioni}{10}{subsubsection.3.4.5}
-\contentsline {subsection}{\numberline {3.5}Capitolato C6 - Soldino: piattaforma Ethereum per pagamenti IVA}{10}{subsection.3.5}
-\contentsline {subsubsection}{\numberline {3.5.1}Descrizione}{10}{subsubsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.2}Studio del dominio}{10}{subsubsection.3.5.2}
-\contentsline {paragraph}{\numberline {3.5.2.1}Dominio applicativo}{10}{paragraph.3.5.2.1}
-\contentsline {paragraph}{\numberline {3.5.2.2}Dominio tecnologico}{10}{paragraph.3.5.2.2}
-\contentsline {subsubsection}{\numberline {3.5.3}Aspetti positivi}{11}{subsubsection.3.5.3}
-\contentsline {subsubsection}{\numberline {3.5.4}Aspetti negativi}{11}{subsubsection.3.5.4}
-\contentsline {subsubsection}{\numberline {3.5.5}Conclusioni}{11}{subsubsection.3.5.5}
+\contentsline {subsubsection}{\numberline {3.4.6}Studio del dominio}{10}{subsubsection.3.4.6}
+\contentsline {paragraph}{\numberline {3.4.6.1}Dominio applicativo}{10}{paragraph.3.4.6.1}
+\contentsline {paragraph}{\numberline {3.4.6.2}Dominio tecnologico}{10}{paragraph.3.4.6.2}
+\contentsline {subsubsection}{\numberline {3.4.7}Aspetti positivi}{10}{subsubsection.3.4.7}
+\contentsline {subsubsection}{\numberline {3.4.8}Aspetti negativi}{10}{subsubsection.3.4.8}
+\contentsline {subsubsection}{\numberline {3.4.9}Conclusioni}{11}{subsubsection.3.4.9}
+\contentsline {subsection}{\numberline {3.5}Capitolato C6 - Soldino: piattaforma Ethereum per pagamenti IVA}{11}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}Descrizione}{11}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.2}Studio del dominio}{11}{subsubsection.3.5.2}
+\contentsline {paragraph}{\numberline {3.5.2.1}Dominio applicativo}{11}{paragraph.3.5.2.1}
+\contentsline {paragraph}{\numberline {3.5.2.2}Dominio tecnologico}{11}{paragraph.3.5.2.2}
+\contentsline {subsubsection}{\numberline {3.5.3}Aspetti positivi}{12}{subsubsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.4}Aspetti negativi}{12}{subsubsection.3.5.4}
+\contentsline {subsubsection}{\numberline {3.5.5}Conclusioni}{12}{subsubsection.3.5.5}
