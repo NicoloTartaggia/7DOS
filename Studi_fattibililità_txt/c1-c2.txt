@@ -1,0 +1,59 @@
+﻿Capitolato C1
+Descrizione Generale
+
+Il capitolato propone la creazione di un sistema publisher subscriber per facilitare ed automatizzare l'invio e la
+ricezione delle segnalazioni provenienti dai vari strumenti utilizzati durante i processi di continuos integration e continuos delivery.
+
+Finalita' del progetto
+
+Il sistema che si richiede venga sviluppato in particolare dovra' essere composto da 4 componenti
+-producers: hanno il compito di recuperare le segnalazioni e ripubblicarle sotto forma di messaggi all'interno dei
+topic adeguati
+-consumers:hanno il compito di abbonarsi a dei topic e inoltrare ai destinatari finali tutte le segnalazioni
+provenienti dal suddetto topic
+-Broker:Strumento utile per la gestione ed istanziazione dei topic
+-Componenti aggiuntive custom:In particolare si richiede la realizzazione di una componente che riesca a
+determinare la persona più adatta a cui inoltrare la segnalazione e la invii solo ed esclusivamente a lei
+
+Tecnologie Interessate
+-Java 8+
+-Apache Kafka:piattaforma a bassa latenza per la gestione dei feed dati in tempo reale 
+-Docker:progetto open source per l'automatizzazione del deployment (consegna al cliente)
+-Sonarqube:piattaforma per l'analisi statica del codice
+-Redmine:Issue tracking sistem e project management tool
+-Gitlab:software di versionamento
+
+Conclusione
+
+L'idea di sviluppare un applicazione che potesse connettere tra loro molteplici strumenti per il CI/CD largamente
+utilizzati in ambito di sviluppo e' stata accolta positivamente dal team. Tuttavia il grande numero di tecnologie
+completamente sconosciute ci hanno portato a ritenere il progetto come troppo oneroso da realizzare
+
+
+----------------------------------------------------------------------
+
+
+Capitolato C2
+Descrizione Generale
+L'obbiettivo del progetto e' quello di realizzare una piattaforma collaborativa di raccolta dati in cui gli utenti
+possono predisporre e svolgere piccoli esercizi di analisi grammaticale.
+I dati raccolti inoltre dovranno essere facilmente accessibili dagli sviluppatori ai fini di migliorare tramite
+apprendimento automatico un software per l'analisi grammaticale.
+
+Finalita' del progetto
+All'interno della piattaforma è dunque possibile distinguere tre attori principali 
+-Insegnanti:hanno interesse a preparare in modo semplice e rapido degli esercizi per gli allievi, l'insegnante non
+dovra' scrivere direttamente le soluzioni dell'esercizio, esse verranno proposte automaticamente da un software per
+l'analisi grammaticale. L'insegnante dunque dovra' solamente correggere eventuali errori presenti nelle soluzioni
+proposte automaticamente.
+-Allievi:hanno interesse ad eseguire gli esercizi in modo rapido ed immediato
+-Sviluppatori:hanno interesse ad accedere ai dati in modo facile ed immediato ai fini di migliorare il software per
+l'analisi grammaticale
+
+Tecnologie interessate
+-HTML5, CSS3, JS: Web-stack moderno
+-Hunpos: software open source per il part-of-speech tagging
+-Firebase: Database NoSQL
+
+Conclusione
+Il capitolato non e' stato ben accolto dai membri del team a causa della tematica scarsamente interessante e dell'assenza di tecnologie realmente innovative che possano fornire nuove capacita' e conoscenze 
