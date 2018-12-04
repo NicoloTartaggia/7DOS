@@ -6,7 +6,7 @@
 	
 	\subsubsection{Studio del dominio}
 	\paragraph{Dominio applicativo} \Spazio 
-	La finalità del progetto è la realizzazione di un \gl{plug-in} per il sistema di monitoraggio \gl{Grafana}. Tale plug-in deve essere in grado di monitorare la \gl{liveliness} del sistema, individuarne i punti critici e consigliare  interventi strategici (o  delineare la zona di intervento) per migliorarlo, mediante l'impiego di tecniche di intelligenza artificiale. Nello specifico verranno impiegate le \gl{reti Bayesiane}, il cui risultante sistema probabilistico, una volta collegato ai dati raccolti, permette di evidenziare eventi invisibili ma con alta \gl{likelihood}.
+	La finalità del progetto è la realizzazione di un \gl{plug-in} per il software di monitoraggio \gl{Grafana}. Tale plug-in deve essere in grado di monitorare la \gl{liveliness} del sistema, individuarne i punti critici e consigliare  interventi strategici (o  delineare la zona di intervento) per migliorarlo, mediante l'impiego di tecniche di intelligenza artificiale. Nello specifico verranno impiegate le \gl{reti Bayesiane}, il cui risultante sistema probabilistico, una volta collegato ai dati raccolti, permette di evidenziare eventi invisibili ma con alta \gl{likelihood}.
 	\paragraph{Dominio tecnologico}
 	\begin{itemize}
 		\item\textbf{{Grafana}}: software per la visualizzazione dei dati tramite \gl{dashboard} e grafici;
@@ -30,85 +30,97 @@
 		\item{Necessità di approfondire la conoscenza del linguaggio JavaScript e delle sue librerie.}
 		\item{Necessità di acquisire le conoscenze matematiche fondamentali per poter implementare le tecniche di intelligenza artificiale richieste.}
 	\end{itemize} 
-	\subsection{Valutazione finale}
+	\subsubsection{Valutazione finale}
 	
 	Il capitolato è stato ricevuto in modo molto positivo dall'intero gruppo, principalmente per l'utilizzo di metodi di intelligenza artificiale applicati all'analisi di dati provenienti da un sistema, che costituisce un dominio applicativo di forte interesse per il futuro del panorama tecnologico. Sebbene nessuno dei membri del gruppo abbia esperienza con le tecnologie richieste (implicando un onere non indifferente nell'acquisizione delle competenze necessarie), esse presentano un forte potenziale e sono largamente richieste nell'ambito lavorativo; ciò ha portato il gruppo a ritenere questo capitolato come scelta più stimolante e promettente.
 	\pagebreak		
 	
-\newsection{Valutazione sugli altri capitolati}
+	\newsection{Valutazione sugli altri capitolati}
 	\subsection{Capitolato C1 - Butterfly}
-		\subsubsection{Descrizione}
-	    Il primo capitolato, denominato \emph{Butterfly: monitor per processi \gl{CI/CD}} propone la creazione di un sistema publisher subscriber per facilitare e automatizzare l'invio e la ricezione delle segnalazioni provenienti dai vari strumenti utilizzati durante i processi di continuous integration e continuous delivery.
-		\subsubsection{Studio del dominio}
-			\paragraph{Dominio applicativo} \Spazio
-			Il sistema che si richiede venga sviluppato in particolare dovrà essere composto da 4 elementi:
-			\begin{itemize}	 
-\item \textbf{{Producers}}: hanno il compito di recuperare le segnalazioni e ripubblicarle sotto forma di messaggi all'interno dei
-topic adeguati;
-\item \textbf{{Consumers}}: hanno il compito di abbonarsi a dei topic e inoltrare ai destinatari finali tutte le segnalazioni
-provenienti dal suddetto topic;
-\item \textbf{{Broker}}: strumento utile per la gestione ed istanziazione dei topic;
-\item \textbf{{Componenti aggiuntive custom}}: si richiede, in particolare, la realizzazione di una componente che riesca a determinare la persona più adatta a cui inoltrare la segnalazione e la invii solo ed esclusivamente a lei.
-			\end{itemize}
-			\paragraph{Dominio tecnologico}
-			\begin{itemize}
-				\item \textbf{\gl{Java8+}}; 
-				\item  \textbf{\gl{Apache Kafka}}: piattaforma a bassa latenza per la gestione dei \gl{feed dati} in tempo reale;
-				\item  \textbf{\gl{Docker}}: progetto open source per l'automatizzazione del deployment (consegna al cliente);
-				\item  \textbf{\gl{SonarQube}}: piattaforma per l'analisi statica del codice;
-				\item  \textbf{\gl{Redmine}}: \gl{Issue Tracking System} e \gl{Project Management Tool};
-				\item  \textbf{\gl{GitLab}}: software di versionamento.
-			\end{itemize}
-			
-			\paragraph{Aspetti positivi}
-
-			\paragraph{Aspetti positivi} 
-				\begin{itemize}
-				\item {Linguaggio di programmazione (Java8+) affrontato durante l'anno accademico nel corso di Programmazione Concorrente e Distribuita. Di conseguenza i componenti del team hanno già familiarità con esso;}
-				\item{Ampio dominio tecnlogico che permette di allargare le proprie conoscenze, utile anche per un utilizzo futuro in ambito lavorativo;}
-			\end{itemize}
-			\paragraph{Aspetti negativi}
-			\begin{itemize}
-				\item {Alcune tecnologie non sono conosciute dal gruppo, come SonarQube, Apache Kafka. Ciò comporta uno studio preventivo prima dell'analisi dei requisiti;}
-			\end{itemize} 
-			\paragraph{Conclusioni}
-			L'idea di sviluppare un'applicazione che possa connettere tra loro molteplici strumenti per CI/CD largamente utilizzati in ambito di sviluppo e' stata accolta positivamente dal team. Tuttavia il capitolato non è stato scelto visto il numero di tecnologie sconosciute e l'interesse per altre tecnologie da parte del gruppo.
-			
+	\subsubsection{Descrizione}
+	Il capitolato C1 \emph{Butterfly: monitor per processi \gl{CI/CD}}, presentato dall'azienda Imola Informatica, propone la creazione di un applicativo che integri i sistemi di segnalazione offerti da vari software utilizzati durante i processi di \gl{Continuous Integration} e \gl{Continuous Delivery}, con l'obiettivo di centralizzare e automatizzare l'invio delle segnalazioni, e indirizzarne la ricezione in modo appropriato. 
+	\subsubsection{Studio del dominio}
+	\paragraph{Dominio applicativo} \Spazio
+	Butterfly verrà utilizzato in un contesto di sviluppo software con processi di Continuous Integration e Continuous Delivery, in cui vengono generate frequenti segnalazioni dai vari \emph{tools} utilizzati (e.g. commit di \gl{git}) secondo i  meccanismi di esposizione proprietari. Butterfly dovrà recuperare o intercettare tali segnalazioni e, sfruttando il pattern \gl{publish-subscribe}, inoltrarle agli utenti di interesse.
+	L'applicativo da sviluppare sarà formato da 4 componenti principali:
+	\begin{itemize}	 
+		\item \textbf{{Producers}}: hanno il compito di recuperare le segnalazioni dai vari strumenti e pubblicarle, sotto forma di messaggi, all'interno dei
+		topic adeguati;
+		\item \textbf{{Consumers}}: hanno il compito di abbonarsi a dei topic e inoltrare ai destinatari finali tutte le segnalazioni
+		appartenenti al suddetto topic;
+		\item \textbf{{Broker}}: strumento utile per la gestione ed istanziazione dei topic;
+		\item \textbf{{Componenti aggiuntive custom}}: si richiede, in particolare, la realizzazione di una componente che riesca a determinare la persona più adatta a cui inoltrare la segnalazione e la invii solo ed esclusivamente a lei.
+	\end{itemize}
+	\paragraph{Dominio tecnologico} \Spazio
+	L'applicativo dovrà potersi interfacciare con i seguenti strumenti:
+	\begin{itemize}
+		\item  \textbf{\gl{Redmine}}: \gl{Issue Tracking System} e \gl{Project Management Tool};
+		\item  \textbf{\gl{GitLab}}: software di versionamento.
+		\item  \textbf{\gl{SonarQube}}: piattaforma per l'analisi statica del codice;
+		\item  \textbf{\gl{Telegram}}: sistema di messaggistica;
+		\item  \textbf{\gl{Slack}}: software per gestire le comunicazioni in un gruppo di lavoro;
+		\item  \textbf{\gl{Email}}: posta elettronica.
+		
+	\end{itemize}
+	
+	Le preferenze tecniche per lo sviluppo del progetto prevedono l'uso obbligatorio di determinate tecnologie e l'eventuale utilizzo di tecnologie non obbligatorie, ma fortemente consigliate:
+	\paragraph{Tecnologie obbligatorie}
+	\begin{itemize}
+		\item  \textbf{\gl{Docker}}: tool per la \gl{containerizzazione} di applicativi software, per l'istanziazione dei componenti;
+		\item  \textbf{\gl{API Rest}}: interfacce esposte dai componenti attraverso le quali usare l'applicativo;
+	\end{itemize}
+	\paragraph{Tecnologie consigliate}
+	\begin{itemize}
+		\item \textbf{\gl{Java8+},\gl{Python} o \gl{Node.js}}: linguaggio per lo sviluppo dei componenti applicativi;  
+		\item  \textbf{\gl{Apache Kafka}}: piattaforma a bassa latenza per la gestione dei \gl{feed dati} in tempo reale da usare come Broker.
+	\end{itemize}
+	
+	\paragraph{Aspetti positivi} 
+	\begin{itemize}
+		\item {Linguaggio di programmazione (Java8+) affrontato durante l'anno accademico nel corso di Programmazione Concorrente e Distribuita, con cui i componenti del team hanno già familiarità ;}
+		\item{Ampio dominio tecnologico che permette di allargare le proprie conoscenze, utile anche per un utilizzo futuro in ambito lavorativo;}
+	\end{itemize}
+	\paragraph{Aspetti negativi}
+	\begin{itemize}
+		\item {Alcune tecnologie non sono conosciute dal gruppo, come Redmine, SonarQube e Apache Kafka. Ciò comporta l'onere di uno studio preventivo prima dell'analisi dei requisiti e dell'acquisizione delle competenze necessarie all'integrazione di tali strumenti;}
+	\end{itemize} 
+	\subsubsection{Valutazione finale}
+	L'idea di sviluppare un'applicazione che possa connettere tra loro molteplici strumenti per CI/CD largamente utilizzati in ambito di sviluppo e' stata accolta positivamente dal team. Tuttavia il capitolato non è stato scelto visto l'eccessivo numero di tecnologie sconosciute e l'interesse per altre tecnologie da parte del gruppo.
+	
 	\subsection{Capitolato C2 - Colletta}
 	\subsubsection{Descrizione}
 	Il capitolato \emph{C2 Colletta: piattaforma raccolta dati di analisi di testo}, presentato dall'azienda Mivoq, richiede la realizzazione di una piattaforma per la raccolta di dati in cui gli utenti possono avere a disposizione e svolgere piccoli esercizi di grammatica, come l'analisi grammaticale.
 	I dati raccolti dovranno essere facilmente accessibili dagli sviluppatori con l'obiettivo di ottimizzare un software per l'analisi grammaticale mediante tecniche di \gl{apprendimento automatico}.   
-
+	
 	\subsubsection{Studio del dominio}
 	\paragraph{Dominio applicativo} \Spazio
 	La finalità del progetto è la realizzazione di una piattaforma per la raccolta dati che implementi la possibilità di eseguire e correggere in modo automatico esercizi di grammatica, salvarne il risultato e collezionare dati con l'obiettivo di migliorare il software di apprendimento automatico.
 	Prendendo in considerazione una piattaforma per l'analisi grammaticale è possibile distinguere tre attori principali:
 	\begin{itemize} 
-	\item \textbf{Insegnati}: preparano gli esercizi per gli allievi e correggono eventuali errori presenti nelle soluzioni eleborate in maniera automatica dal software;
-	\item \textbf{Allievi}: eseguono gli esercizi proposti ricevendone una valutazione immediata;
-	\item \textbf{Sviluppatori}: accedono ai dati collezionati ai fini di migliorare il software per l'analisi grammaticale.
+		\item \textbf{Insegnati}: preparano gli esercizi per gli allievi e correggono eventuali errori presenti nelle soluzioni eleborate in maniera automatica dal software;
+		\item \textbf{Allievi}: eseguono gli esercizi proposti ricevendone una valutazione immediata;
+		\item \textbf{Sviluppatori}: accedono ai dati collezionati ai fini di migliorare il software per l'analisi grammaticale.
 	\end{itemize}
-	\paragraph{Dominio tecnologico} 
-	Il committente non impone l'uso di specifiche tecnologie e lascia una discreta libertà sulla scelta di esse. Di seguito vengono riportate quelle suggerite nel capitolato.
+	\paragraph{Dominio tecnologico} \Spazio
+	Il committente non impone l'uso di specifiche tecnologie e lascia una discreta libertà sulla scelta di esse:
+	\paragraph{Tecnologie consigliate}
 	\begin{itemize}
 		\item \textbf{HTML, CSS e JavaScript}: linguaggi per lo sviluppo di siti web;
 		\item \textbf{\gl{Hunpos} o \gl{FreeLing}}: software open source per il \gl{part-of-speech tagging};
 		\item  \textbf{\gl{Firebase}}: database \gl{NoSQL};
 	\end{itemize}
-  \subsection{Valutazione generale}
+	\subsubsection{Valutazione generale}
 	\paragraph{Aspetti positivi}
-		\begin{itemize}
-			\item {La raccolta di dati con il fine di migliorare un prodotto software è risultata interessante grazie anche alle tecniche di apprendimento automatico necessarie per l'ottimizzazione.}
-		\end{itemize} 
-		\paragraph{Aspetti negativi} 
-		\begin{itemize}
-			\item {Le tecniche di apprendimento automatico sono sconosciute dal gruppo e ciò richiede l'onere di acquisire determinate competenze in materia;}
-			\item {Lo scopo di realizzare una applicazione per esercizi di grammatica non è risultato un ambito di interesse comune.}
-		\end{itemize} 
-	\subsection{Valutazione finale}
-	Il capitolato non è stato ricevuto in maniera positva del gruppo a causa dell'ambito di applicazione del prodotto finale, che non ha suscitato interesse per la sua realizzazione.
-	
+	\begin{itemize}
+		\item {La raccolta di dati con il fine di migliorare un prodotto software è risultata interessante grazie anche alle tecniche di apprendimento automatico necessarie per l'ottimizzazione.}
+	\end{itemize} 
 	\paragraph{Aspetti negativi} 
+	\begin{itemize}
+		\item {Le tecniche di apprendimento automatico sono sconosciute dal gruppo e ciò richiede l'onere di acquisire determinate competenze in materia;}
+		\item {Lo scopo di realizzare una applicazione per esercizi di grammatica non è risultato un ambito di interesse comune.}
+	\end{itemize} 
+	\subsubsection{Valutazione finale}
+	Il capitolato non è stato ricevuto in maniera positva dal gruppo a causa dell'ambito di applicazione del prodotto finale, che non ha suscitato interesse per la sua realizzazione.
 	
 	\subsection{Capitolato C4 - MegAlexa}
 	\subsubsection{Descrizione}	
@@ -176,8 +188,7 @@ L'affittuario, dovrà poter indicare in quali giorni ed orari il suo veicolo è 
 per una eventuale prenotazione, il luogo in cui ritirarlo, ed eventuali altre
 condizioni alle quali il cliente dovrà sottostare per affittare il mezzo.
 Il cliente avrà la possibilità di cercare e di prenotare veicoli per data e luogo.
-Il tutto dovrà essere accompagnato da un sistema che coinvolga l'utente tramite sistemi di
-Gamification theory.
+Il tutto dovrà essere accompagnato da un sistema che coinvolga l'utente tramite sistemi di Gamification theory.
 			\paragraph{Dominio tecnologico} \Spazio
 			E' richiesta la conoscenza delle seguenti tecnologie:
 			\paragraph{Dominio applicativo} 
@@ -204,30 +215,29 @@ Gamification theory.
 		
 	\subsection{Capitolato C6 - Soldino}
 		\subsubsection{Descrizione}
-		Il capitolato richiede la realizzazione di un sistema automatico per la gestione dell’IVA basato su Ethereum, da collegare ad una piattaforma Web di e-commerce.
+		Il capitolato \emph{C6 Soldino: piattaforma Ethereum per pagamenti IVA}, presentato dall'azienda RedBabel, richiede la realizzazione di un sistema automatizzato basato su \gl{Ethereum} per il calcolo e il pagamento dell'\gl{IVA} tramite un'interfaccia web.
 		\subsubsection{Studio del dominio}
-			\paragraph{Dominio applicativo} 
-			Lo scopo del progetto è di realizzare un’applicazione decentralizzata che utilizzi Ethereum per tenere automaticamente traccia dell’IVA, semplificando così la gestione alle aziende.
-Il governo è responsabile della creazione delle monete virtuali e della loro distribuzione alle aziende autorizzate. Il governo avrà quindi una lista delle aziende autorizzate ad effettuare una transazione nel sistema.
-Un’azienda deve quindi avere l’autorizzazione del governo per utilizzare l’applicazione, una volta ricevuta sarà pronta a vendere beni o servizi. Su base trimestrale il sistema farà pagare all’azienda l’IVA che le spetta.
-I cittadini possono comprare beni o servizi dalle aziende autorizzate alla vendita mediante la piattaforma web di e-commerce, utilizzando ugualmente le monete virtuali rilasciate dal governo.
+			\paragraph{Dominio applicativo} \Spazio
+			La finalità del progetto è la realizzazione di un’\gl{applicazione decentralizzata} basata su Ethereum per il calcolo automatico dell’IVA, in modo da agevolare le operazioni contabili degli esercenti. L'applicativo richiede che le attività commerciali siano registrate in una lista, così da tenere traccia della contabilità aziendale al fine di calcolare automaticamente l'importo dell'IVA su base trimestrale. Il progetto richiede anche la realizzazione di un sistema di \gl{e-commerce}.
+			
+			
 			\paragraph{Dominio tecnologico}
-			Per comprendere a fondo il dominio e per realizzare il progetto è richiesta la conoscenza delle seguenti tecnologie:
 			\begin{itemize}
-				\item Ethereum;
-				\item Smart contracts utilizzando la Ethereum Virtual Machine;
-				\item Tecnologia Blockchain;
-				\item Javascript;
-				\item Applicazioni decentralizzate per gli Smart contracts (chiamate ÐApp);
-				\item Piattaforma web: HTML, CSS;
+				\item \textbf{Ethereum}: piattaforma per la creazione e pubblicazione di \gl{smart contracts};
+				\item \textbf{\gl{Truffle}}: framework per Ethereum;
+				\item \textbf{\gl{Raiden networks}}: soluzione per trasferimenti di \gl{token ECR-20} quasi istantanei;
+				\item \textbf{HTML, CSS e Javascript}: linguaggi per lo sviluppo di siti web.
 			\end{itemize}
-		\subsubsection{Aspetti positivi}
+		\subsubsection{Valutazione generale}
+		\paragraph{Aspetti positivi}
 		\begin{itemize}
-			\item Da inserire?
+			\item L'uso di tencologie moderne ed in continua espansione ha attirato l'attenzione del gruppo;
+			\item L'obiettivo del progetto è risultato valido ed interessante.
 		\end{itemize}
-		\subsubsection{Aspetti negativi}
+		\paragraph{Aspetti negativi}
 		\begin{itemize}
-			\item Da inserire?
+			\item Alcune tecnologie necessarie non sono conosciute dal gruppo e ciò comporta l'onere di acquisire specifiche conoscenze a riguardo.
+			\item La realizzazione di un sistema di e-commerce è risultata dispendiosa e poco stimolante da realizzare.
 		\end{itemize}
-		\subsubsection{Conclusioni}
-		Il progetto offre ottimi spunti di studio nell’ambiente Ethereum e Blockchain, tuttavia è necessario imparare molte nuove tecnologie e creare un sistema web di e-commerce non banale. Il carico di lavoro preventivato dal team ha portato a scartare il capitolato.
+		\subsubsection{Valutazione finale }
+		Il capitolato è stato ricevuto in maniera positiva da parte del gruppo, in quanto forniva molti stimoli riguardo alle tecnologie innovative impiegate, tuttavia è stato deciso di non sceglierlo a causa del sistema di e-commerce da realizzare, che è stata ritenuta una attività dispendiosa e poco stimolante.
