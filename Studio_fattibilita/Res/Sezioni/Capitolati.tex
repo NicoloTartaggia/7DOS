@@ -1,36 +1,40 @@
 \newsection{Valutazione sul capitolato scelto}
-	\subsection{Capitolato C3 - G\&B: monitoraggio intelligente di processi DevOps}
+	\subsection{Capitolato C3 - G\&B}
 	
-		\subsubsection{Descrizione}
-		Il capitolato C3 ci introduce al mondo dei \gl{DevOps} in cui gli operatori che erogano i servizi e coloro che fabbricano il software sono a stretto contatto. Per far si che la collaborazione sia efficace, è necessario un intenso e completo monitoraggio dei sistemi. Da qui nasce la necessità di rendere “intelligente” il controllo sulle risorse, così da massimizzare l’efficienza e la qualità degli interventi al sistema.
-
+	\subsubsection{Descrizione}
+	Il capitolato C3 \emph{G\&B: monitoraggio intelligente di processi DevOps}, presentato dall'azienda Zucchetti, richiede la realizzazione di un'estensione per un sistema di monitoraggio dei processi \gl{DevOps} che offra la possibilità di applicare metodi di \gl{intelligenza artificiale} al flusso dei dati raccolti, al fine di guidare eventuali interventi sulla linea di produzione del software. In particolare, tale estensione verrà applicata al monitoraggio del flusso di dati ricevuti per allarmi o segnalazioni tra operatori di servizi gestionali in \gl{Cloud} e la rispettiva linea di produzione software.
+	
 	\subsubsection{Studio del dominio}
-		\paragraph{Dominio applicativo} \Spazio 
-		Il proposito del progetto è la realizzazione di un \gl{plug-in} per il sistema di monitoraggio \gl{Grafana}. Si vuole che esso possa, tramite l’utilizzo dell’intelligenza artificiale, monitorare la \gl{livellines} del sistema e riesca a consigliare degli interventi strategici da effettuare sullo stesso (o almeno a delineare la zona di intervento). Tutto ciò tramite l’utilizzo delle \gl{reti Bayesiane}, dato che è un ottimo strumento per coniugare le conoscenze e competenze degli esperti, con la flessibilità dei sistemi basati sulla probabilità.
-		\paragraph{Dominio tecnologico}
-		\begin{itemize}
-		\item\textbf{{Grafana}}: sistema di monitoraggio e analisi opensource;
-		\item\textbf{{Reti Bayesiane}} 
-		\item\textbf{{\gl{JavaScript}}}
-		\item\textbf{{\gl{JSON}}}: formato adatto per la lettura dei nodi della rete Bayesiana.
-		\end{itemize}
+	\paragraph{Dominio applicativo} \Spazio 
+	La finalità del progetto è la realizzazione di un \gl{plug-in} per il sistema di monitoraggio \gl{Grafana}. Tale plug-in deve essere in grado di monitorare la \gl{liveliness} del sistema, individuarne i punti critici e consigliare  interventi strategici (o  delineare la zona di intervento) per migliorarlo, mediante l'impiego di tecniche di intelligenza artificiale. Nello specifico verranno impiegate le \gl{reti Bayesiane}, il cui risultante sistema probabilistico, una volta collegato ai dati raccolti, permette di evidenziare eventi invisibili ma con alta \gl{likelihood}.
+	\paragraph{Dominio tecnologico}
+	\begin{itemize}
+		\item\textbf{{Grafana}}: software per la visualizzazione dei dati tramite \gl{dashboard} e grafici;
+		\item\textbf{{Reti Bayesiane}}: tecnica per l'analisi intelligente dei dati;
+		\item\textbf{{\gl{JavaScript}}}: linguaggio per lo sviluppo del plug-in;
+		\item\textbf{{\gl{JSON}}}: formato dei file per la definizione delle reti Bayesiane.
+	\end{itemize}
 	
-	\subsubsection{Conclusioni}
-		\paragraph{Aspetti positivi}
-		\begin{itemize}
-			\item{Interesse comune per tecnologie moderne come le reti Bayesiane e l'intelligenza artificiale;}
-			\item{Collaborazione con un'importante azienda del territorio italiano;}
-			\item{Interesse per lo sviluppo di un prodotto open source.}
-		\end{itemize}
-		\paragraph{Aspetti negativi}	
-		\begin{itemize}
-			\item{Nessuno dei componenti del gruppo ha mai lavorato in ambiente Grafana;}
-			\item{La conoscenza del linguaggio JavaScript e delle sue librerie deve essere approfondita.}
-		\end{itemize} 
-		\paragraph{Valutazione finale} \Spazio
-		L'uso di tecnologie innovative legate al mondo dell'intelligenza artificiale come le reti Bayesiane è risultato di interesse comune a tutti i membri e ciò ha portato l'intero gruppo a scegliere questo capitolato, sebbene nessuno dei componenti abbia conoscenze approfondite riguardo gli strumenti che si andranno ad usare.  
-		\pagebreak		
-		 
+	\subsubsection{Valutazione generale}
+	\paragraph{Aspetti positivi}
+	\begin{itemize}
+		\item{Sviluppo di un prodotto nell'ambito del metodo di sviluppo software DevOps;}
+		\item{Applicazione di metodi di intelligenza artificiale a tecnologie moderne in ambito produttivo;}
+		\item{Collaborazione con un'azienda di forte rilievo nel territorio italiano;}
+		\item{Acquisizione di competenze su un software gratuito e open source;}
+		\item{Sviluppo di un prodotto finale open source.}
+	\end{itemize}
+	\paragraph{Aspetti negativi}	
+	\begin{itemize}
+		\item{Nessun membro possiede competenze in ambiente Grafana, da cui l'onere di documentarsi su modalità di sviluppo e \gl{best practices} specifiche;} 
+		\item{Necessità di approfondire la conoscenza del linguaggio JavaScript e delle sue librerie.}
+		\item{Necessità di acquisire le conoscenze matematiche fondamentali per poter implementare le tecniche di intelligenza artificiale richieste.}
+	\end{itemize} 
+	\subsection{Valutazione finale}
+	
+	Il capitolato è stato ricevuto in modo molto positivo dall'intero gruppo, principalmente per l'utilizzo di metodi di intelligenza artificiale applicati all'analisi di dati provenienti da un sistema, che costituisce un dominio applicativo di forte interesse per il futuro del panorama tecnologico. Sebbene nessuno dei membri del gruppo abbia esperienza con le tecnologie richieste (implicando un onere non indifferente nell'acquisizione delle competenze necessarie), esse presentano un forte potenziale e sono largamente richieste nell'ambito lavorativo; ciò ha portato il gruppo a ritenere questo capitolato come scelta più stimolante e promettente.
+	\pagebreak		
+	
 \newsection{Valutazione sugli altri capitolati}
 	\subsection{Capitolato C1 - Butterfly}
 		\subsubsection{Descrizione}
@@ -70,47 +74,43 @@ provenienti dal suddetto topic;
 			\paragraph{Conclusioni}
 			L'idea di sviluppare un'applicazione che possa connettere tra loro molteplici strumenti per CI/CD largamente utilizzati in ambito di sviluppo e' stata accolta positivamente dal team. Tuttavia il capitolato non è stato scelto visto il numero di tecnologie sconosciute e l'interesse per altre tecnologie da parte del gruppo.
 			
-	\subsection{Capitolato C2 - Colletta: piattaforma raccolta dati di analisi di testo}
+	\subsection{Capitolato C2 - Colletta}
 	\subsubsection{Descrizione}
-	L'obbiettivo del progetto è quello di realizzare una piattaforma collaborativa di raccolta dati in cui gli utenti possano avere a disposizione e svolgere piccoli esercizi di grammatica, come l'analisi grammaticale.
-	I dati raccolti inoltre dovranno essere facilmente accessibili dagli sviluppatori con lo scopo di ottimizzare un software per l'analisi grammaticale mediante tecniche di apprendimento automatico.   
+	Il capitolato \emph{C2 Colletta: piattaforma raccolta dati di analisi di testo}, presentato dall'azienda Mivoq, richiede la realizzazione di una piattaforma per la raccolta di dati in cui gli utenti possono avere a disposizione e svolgere piccoli esercizi di grammatica, come l'analisi grammaticale.
+	I dati raccolti dovranno essere facilmente accessibili dagli sviluppatori con l'obiettivo di ottimizzare un software per l'analisi grammaticale mediante tecniche di \gl{apprendimento automatico}.   
+
 	\subsubsection{Studio del dominio}
 	\paragraph{Dominio applicativo} \Spazio
-	All'interno della piattaforma è dunque possibile distinguere tre attori principali:
+	La finalità del progetto è la realizzazione di una piattaforma per la raccolta dati che implementi la possibilità di eseguire e correggere in modo automatico esercizi di grammatica, salvarne il risultato e collezionare dati con l'obiettivo di migliorare il software di apprendimento automatico.
+	Prendendo in considerazione una piattaforma per l'analisi grammaticale è possibile distinguere tre attori principali:
 	\begin{itemize} 
-	\item \textbf{Insegnati}: hanno interesse a preparare in modo semplice e rapido degli esercizi per gli allievi, l'insegnante non dovrà scrivere direttamente le soluzioni dell'esercizio, esse verranno proposte automaticamente da un software per
-	l'analisi grammaticale. L'insegnante dunque dovrà solamente correggere eventuali errori presenti nelle soluzioni proposte automaticamente;
-	\item \textbf{Allievi}: hanno interesse ad eseguire gli esercizi in modo rapido ed immediato;
-	\item \textbf{Sviluppatori}: hanno interesse ad accedere ai dati in modo facile ed immediato ai fini di migliorare il software per l'analisi grammaticale.
+	\item \textbf{Insegnati}: preparano gli esercizi per gli allievi e correggono eventuali errori presenti nelle soluzioni eleborate in maniera automatica dal software;
+	\item \textbf{Allievi}: eseguono gli esercizi proposti ricevendone una valutazione immediata;
+	\item \textbf{Sviluppatori}: accedono ai dati collezionati ai fini di migliorare il software per l'analisi grammaticale.
 	\end{itemize}
-	\paragraph{Dominio tecnologico} \Spazio
-	Il committente non impone l'uso di specifiche tecnologie e lascia una discreta libertà sulla scelta di esse. Di seguito vengono riportate quelle suggerite nel capitolato.
-	\paragraph{Dominio applicativo} 
-	Il software è utilizzabile nel mercato online e molti utenti potrebbero usufruirne sia per cercare lavoro, sia per avere un CV online sempre accessibile e aggiornato con il tempo con la conferma delle competenze da entità verificate.
 	\paragraph{Dominio tecnologico} 
+	Il committente non impone l'uso di specifiche tecnologie e lascia una discreta libertà sulla scelta di esse. Di seguito vengono riportate quelle suggerite nel capitolato.
 	\begin{itemize}
-		\item \textbf{HTML5, CSS3 e JavaScript}: linguaggi per lo sviluppo di siti web;
+		\item \textbf{HTML, CSS e JavaScript}: linguaggi per lo sviluppo di siti web;
 		\item \textbf{\gl{Hunpos} o \gl{FreeLing}}: software open source per il \gl{part-of-speech tagging};
 		\item  \textbf{\gl{Firebase}}: database \gl{NoSQL};
 	\end{itemize}
-	
+  \subsection{Valutazione generale}
 	\paragraph{Aspetti positivi}
-	\begin{itemize}
-		\item {da aggiungere;}
-	\end{itemize} 
-	\paragraph{Aspetti negativi} 
-	\begin{itemize}
-	\item {da aggiungere;}
-	\end{itemize} 
-	\paragraph{Conclusioni} \Spazio
-	Il capitolato non è stato ben accolto dai membri del team a causa della tematica scarsamente interessante e dell'assenza di tecnologie realmente innovative che possano fornire nuove capacità e conoscenze.
-	\paragraph{Aspetti negativi} 
-	Per alcuni dei componenti del gruppo le tecnologie da utilizzare e alcuni framework imposti come vincolo obbligatorio dall'azienda sono sconosciuti.
-	\paragraph{Conclusioni}
-	Per via degli aspetti precedentemente elencati il gruppo ha preferito concentrarsi su un capitolato diverso.
+		\begin{itemize}
+			\item {La raccolta di dati con il fine di migliorare un prodotto software è risultata interessante grazie anche alle tecniche di apprendimento automatico necessarie per l'ottimizzazione.}
+		\end{itemize} 
+		\paragraph{Aspetti negativi} 
+		\begin{itemize}
+			\item {Le tecniche di apprendimento automatico sono sconosciute dal gruppo e ciò richiede l'onere di acquisire determinate competenze in materia;}
+			\item {Lo scopo di realizzare una applicazione per esercizi di grammatica non è risultato un ambito di interesse comune.}
+		\end{itemize} 
+	\subsection{Valutazione finale}
+	Il capitolato non è stato ricevuto in maniera positva del gruppo a causa dell'ambito di applicazione del prodotto finale, che non ha suscitato interesse per la sua realizzazione.
 	
+	\paragraph{Aspetti negativi} 
 	
-	\subsection{Capitolato C4 - MegAlexa: arricchitore di skill di Amazon Alexa}
+	\subsection{Capitolato C4 - MegAlexa}
 	\subsubsection{Descrizione}	
 		Il capitolato C4 ci introduce al nuovo mondo delle user interface. Ciò avviene mettendoci davanti all’interfaccia più in voga del momento, cioè \gl{Amazon Alexa}. Infatti i dispositivi che fanno uso di Alexa sfruttano il modo più semplice e veloce per l’uomo di esprimere i propri bisogni e desideri, la voce. 
 	\subsubsection{Studio del dominio}
@@ -143,7 +143,7 @@ provenienti dal suddetto topic;
 	\paragraph{Conclusioni} 
 	Per i fattori appena elencati, il gruppo si è orientato in un capitolato diverso.
 	
-	\subsection{Capitolato C5 - P2PCS: piattaforma di peer-to-peer car sharing}
+	\subsection{Capitolato C5 - P2PCS}
 		\subsubsection{Descrizione}
 		Il capitolato C5 prevede la realizzazione di un applicativo mobile finalizzato allo sharing \gl{p2p} di un proprio mezzo di trasporto.
 		\subsubsection{Studio del dominio}
@@ -202,7 +202,7 @@ Gamification theory.
 		Questo capitolato non ha generato interesse nel team per via della sua semplicità e per la mancanza di interesse nel contesto da parte del team. Pertanto non è stato scelto.
 		
 		
-	\subsection{Capitolato C6 - Soldino: piattaforma Ethereum per pagamenti IVA}
+	\subsection{Capitolato C6 - Soldino}
 		\subsubsection{Descrizione}
 		Il capitolato richiede la realizzazione di un sistema automatico per la gestione dell’IVA basato su Ethereum, da collegare ad una piattaforma Web di e-commerce.
 		\subsubsection{Studio del dominio}
