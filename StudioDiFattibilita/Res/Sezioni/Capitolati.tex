@@ -2,11 +2,11 @@
 	\subsection{Capitolato C3 - G\&B}
 	
 	\subsubsection{Descrizione}
-	Il capitolato C3 \emph{G\&B: monitoraggio intelligente di processi DevOps}, presentato dall'azienda Zucchetti, richiede la realizzazione di un'estensione per un sistema di monitoraggio dei processi \gl{DevOps} che offra la possibilità di applicare metodi di \gl{intelligenza artificiale} al flusso dei dati raccolti, al fine di guidare eventuali interventi sulla linea di produzione del software. In particolare, tale estensione verrà applicata al monitoraggio del flusso di dati ricevuti per allarmi o segnalazioni tra operatori di servizi gestionali in \gl{Cloud} e la rispettiva linea di produzione software.
+	Il capitolato C3 \emph{G\&B: monitoraggio intelligente di processi DevOps}, presentato dall'azienda Zucchetti, richiede la realizzazione di un'estensione per un sistema di monitoraggio dei processi \gl{DevOps} che offra la possibilità di applicare metodi di \gl{intelligenza artificiale} al flusso dei dati raccolti, al fine di guidare eventuali interventi sulla linea di produzione del software.
 	
 	\subsubsection{Studio del dominio}
 	\paragraph{Dominio applicativo} \Spazio 
-	La finalità del progetto è la realizzazione di un \gl{plug-in} per il software di monitoraggio \gl{Grafana}. Tale plug-in deve essere in grado di monitorare la \gl{liveliness} del sistema, individuarne i punti critici e consigliare  interventi strategici (o  delineare la zona di intervento) per migliorarlo, mediante l'impiego di tecniche di intelligenza artificiale. Nello specifico verranno impiegate le \gl{reti Bayesiane}, il cui risultante sistema probabilistico, una volta collegato ai dati raccolti, permette di evidenziare eventi invisibili ma con alta \gl{likelihood}.
+	L'obiettivo del progetto è la realizzazione di un \gl{plug-in} per il software di monitoraggio \gl{Grafana}. Tale plug-in deve essere in grado di monitorare la \gl{liveliness} del sistema, individuarne i punti critici e consigliare interventi strategici (o delineare la zona di intervento) per azioni migliorative, mediante l'impiego di tecniche di intelligenza artificiale. Nello specifico verranno impiegate le \gl{reti Bayesiane}, il cui risultante sistema probabilistico, una volta collegato ai dati raccolti, permette di evidenziare eventi invisibili ma con alta \gl{likelihood}. In particolare, tl'applicativo verrà impiegato nel monitoraggio del flusso di dati ricevuti per allarmi o segnalazioni tra operatori di servizi gestionali in \gl{Cloud} e la rispettiva linea di produzione software.
 	\paragraph{Dominio tecnologico}
 	\begin{itemize}
 		\item\textbf{{Grafana}}: software per la visualizzazione dei dati tramite \gl{dashboard} e grafici;
@@ -38,10 +38,10 @@
 	\newsection{Valutazione sugli altri capitolati}
 	\subsection{Capitolato C1 - Butterfly}
 	\subsubsection{Descrizione}
-	Il capitolato C1 \emph{Butterfly: monitor per processi \gl{CI/CD}}, presentato dall'azienda Imola Informatica, propone la creazione di un applicativo che integri i sistemi di segnalazione offerti da vari software utilizzati durante i processi di \gl{Continuous Integration} e \gl{Continuous Delivery}, con l'obiettivo di centralizzare e automatizzare l'invio delle segnalazioni, e indirizzarne la ricezione in modo appropriato. 
+	Il capitolato C1 \emph{Butterfly: monitor per processi \gl{CI/CD}}, presentato dall'azienda Imola Informatica, richiede la creazione di un applicativo che integri i sistemi di segnalazione offerti da vari software utilizzati durante i processi di \gl{Continuous Integration} e \gl{Continuous Delivery}, con l'obiettivo di centralizzare e automatizzare l'invio delle segnalazioni, e indirizzarne la ricezione in modo appropriato. 
 	\subsubsection{Studio del dominio}
 	\paragraph{Dominio applicativo} \Spazio
-	Butterfly verrà utilizzato in un contesto di sviluppo software con processi di Continuous Integration e Continuous Delivery, in cui vengono generate frequenti segnalazioni dai vari \emph{tools} utilizzati (e.g. commit di \gl{git}) secondo i  meccanismi di esposizione proprietari. Butterfly dovrà recuperare o intercettare tali segnalazioni e, sfruttando il pattern \gl{publish-subscribe}, inoltrarle agli utenti di interesse.
+	L'obiettivo del progetto è la realizzazione di un applicativo che verrà utilizzato in un contesto di sviluppo software con processi di Continuous Integration e Continuous Delivery, in cui vengono generate frequenti segnalazioni dai vari \emph{tools} utilizzati (e.g. commit di \gl{git}) secondo i  meccanismi di esposizione proprietari. Esso dovrà recuperare o intercettare tali segnalazioni e, sfruttando il pattern \gl{publish-subscribe}, inoltrarle agli utenti di interesse.
 	L'applicativo da sviluppare sarà formato da 4 componenti principali:
 	\begin{itemize}	 
 		\item \textbf{{Producers}}: hanno il compito di recuperare le segnalazioni dai vari strumenti e pubblicarle, sotto forma di messaggi, all'interno dei
@@ -64,15 +64,15 @@
 	\end{itemize}
 	
 	Le preferenze tecniche per lo sviluppo del progetto prevedono l'uso obbligatorio di determinate tecnologie e l'eventuale utilizzo di tecnologie non obbligatorie, ma fortemente consigliate:
-	\paragraph{Tecnologie obbligatorie}
+	\subparagraph{Tecnologie obbligatorie}
 	\begin{itemize}
-		\item  \textbf{\gl{Docker}}: tool per la \gl{containerizzazione} di applicativi software, per l'istanziazione dei componenti;
-		\item  \textbf{\gl{API Rest}}: interfacce esposte dai componenti attraverso le quali usare l'applicativo;
+		\item  \textbf{\gl{Docker}}: strumento per la \gl{containerizzazione} di applicativi software, da usare per l'istanziazione dei componenti;
+		\item  \textbf{\gl{API} \gl{Rest}}: interfacce esposte dai componenti attraverso le quali usare l'applicativo;
 	\end{itemize}
-	\paragraph{Tecnologie consigliate}
+	\subparagraph{Tecnologie consigliate}
 	\begin{itemize}
-		\item \textbf{\gl{Java8+},\gl{Python} o \gl{Node.js}}: linguaggio per lo sviluppo dei componenti applicativi;  
-		\item  \textbf{\gl{Apache Kafka}}: piattaforma a bassa latenza per la gestione dei \gl{feed dati} in tempo reale da usare come Broker.
+		\item \textbf{\gl{Java8+}, \gl{Python} o \gl{Node.js}}: linguaggi per lo sviluppo dei componenti applicativi;  
+		\item  \textbf{\gl{Apache Kafka}}: piattaforma a bassa latenza per la gestione dei \gl{feed dati} in tempo reale, da usare come Broker.
 	\end{itemize}
 	\subsubsection{Valutazione generale}
 	\paragraph{Aspetti positivi} 
@@ -89,23 +89,22 @@
 	
 	\subsection{Capitolato C2 - Colletta}
 	\subsubsection{Descrizione}
-	Il capitolato \emph{C2 Colletta: piattaforma raccolta dati di analisi di testo}, presentato dall'azienda Mivoq, richiede la realizzazione di una piattaforma per la raccolta di dati in cui gli utenti possono avere a disposizione e svolgere piccoli esercizi di grammatica, come l'analisi grammaticale.
+	Il capitolato C2 \emph{Colletta: piattaforma raccolta dati di analisi di testo}, presentato dall'azienda Mivoq, richiede la realizzazione di una piattaforma per la raccolta di dati in cui gli utenti possono avere a disposizione e svolgere piccoli esercizi di grammatica, come l'analisi grammaticale.
 	I dati raccolti dovranno essere facilmente accessibili dagli sviluppatori con l'obiettivo di ottimizzare un software per l'analisi grammaticale mediante tecniche di \gl{apprendimento automatico}.   
 	
 	\subsubsection{Studio del dominio}
 	\paragraph{Dominio applicativo} \Spazio
-	La finalità del progetto è la realizzazione di una piattaforma per la raccolta dati che implementi la possibilità di eseguire e correggere in modo automatico esercizi di grammatica, salvarne il risultato e collezionare dati con l'obiettivo di migliorare il software di apprendimento automatico.
+	L'obiettivo del progetto è la realizzazione di una piattaforma per la raccolta dati che implementi la possibilità di eseguire e correggere in modo automatico esercizi di grammatica, salvarne il risultato e collezionare dati con l'obiettivo di migliorare il software di apprendimento automatico.
 	Prendendo in considerazione una piattaforma per l'analisi grammaticale è possibile distinguere tre attori principali:
 	\begin{itemize} 
-	\item \textbf{Insegnanti}: preparano gli esercizi per gli allievi e correggono eventuali errori presenti nelle soluzioni eleborate in maniera automatica dal software;
+	\item \textbf{Insegnanti}: preparano gli esercizi per gli allievi e correggono eventuali errori presenti nelle soluzioni elaborate in maniera automatica dal software;
 	\item \textbf{Allievi}: eseguono gli esercizi proposti ricevendone una valutazione immediata;
 	\item \textbf{Sviluppatori}: accedono ai dati collezionati ai fini di migliorare il software per l'analisi grammaticale.
 	\end{itemize}
 	\paragraph{Dominio tecnologico} \Spazio
 	Il committente non impone l'uso di specifiche tecnologie e lascia una discreta libertà sulla scelta di esse:
-	\paragraph{Tecnologie consigliate}
 	\begin{itemize}
-		\item \textbf{HTML, CSS e JavaScript}: linguaggi per lo sviluppo di siti web;
+		\item \textbf{HTML, CSS e JavaScript}: linguaggi per lo sviluppo della piattaforma web;
 		\item \textbf{\gl{Hunpos} o \gl{FreeLing}}: software open source per il \gl{part-of-speech tagging};
 		\item  \textbf{\gl{Firebase}}: database \gl{NoSQL};
 	\end{itemize}
@@ -122,79 +121,61 @@
 	\subsubsection{Valutazione finale}
 	Il capitolato non è stato ricevuto in maniera positva dal gruppo a causa dell'ambito di applicazione del prodotto finale, che non ha suscitato interesse per la sua realizzazione.
 	
-	\subsection{Capitolato C4 - MegAlexa}
-	\subsubsection{Descrizione}	
-		Il capitolato C4 ci introduce al nuovo mondo delle user interface. Ciò avviene mettendoci davanti all’interfaccia più in voga del momento, cioè \gl{Amazon Alexa}. Infatti i dispositivi che fanno uso di Alexa sfruttano il modo più semplice e veloce per l’uomo di esprimere i propri bisogni e desideri, la voce. 
-	\subsubsection{Studio del dominio}
-	
-	\paragraph{Dominio applicativo} \Spazio
-     L’obiettivo che si pone il progetto è quello di creare un’interfaccia web o una mobile app per la customizzazione dei \gl{workflow} che poi verranno avviati tramite una skill creata ad hoc dal team di sviluppo.
-     Ciò vuol dire che un utente potrà utilizzare la sua immaginazione per dare vita ai workflow più consoni alle sue abitudine e bisogni in base a dei connettori precedentemente creati dal nostro team che legano insieme più funzioni (ad esempio, leggi l'ora - leggi il meteo - leggi posta).
-	\paragraph{Dominio applicativo} 
-     Il capitolato è posizionato nell'ambito della sintesi vocale, tecnologia molto presente nel mercato ordierno. 
-	\paragraph{Dominio tecnologico}
-	\begin{itemize}
-		\item {\textbf{\gl{AWS}} con le relative \gl{API Getway}, \gl{Lamda} e \gl{Aurora Serverless}};
-		\item  \textbf{\gl{NodejS}}: piattaforma open source per l'esecuzione di codice JavaScript server-side;
-		\item \textbf{HTML5, CSS3 e JavaScript}: linguaggi per lo sviluppo di siti web;
-		\item  \textbf{Swift o Kotlin} linguaggi per lo sviluppo di mobile app.
-	\end{itemize}
-	\paragraph{Aspetti positivi}
-	\begin{itemize}
-	\item {Le tecnologie impiegate sono risultate innovative e stimolanti;}
-	\end{itemize}
-	\paragraph{Aspetti positivi} 
-	Interessante la sintesi vocale in quanto è una tecnologia innovativa e ancora in fase di sviluppo in molti settori.
-	\paragraph{Aspetti negativi}
-	\begin{itemize}
-		\item Lo sviluppo di un'interfaccia web o mobile non rappresenta un argomento d'interesse per il gruppo;
-		\item Il capitolato non descrive in modo chiaro e preciso l'obiettivo del progetto
-	\end{itemize}
-	\paragraph{Conclusioni} \Spazio
-	Il capitolato in esame ha suscitato interesse da parte del team. L'utilizzo di tecnologie giovani e innovative come Alexa e AWS rappresentano una nuova generazione di interfacce, di cui è previsto uno sviluppo intenso nei prossimi anni, tuttavia l'implementazione di una applicazione mobile o di una interfaccia web non rappresenta una sfida abbastanza impegantiva in quanto tecnologie diffuse e poco stimolanti.
-	Per i fattori appena elencati, il gruppo si è orientato in un capitolato diverso.
-	
-	\subsection{Capitolato C5 - P2PCS}
-		\subsubsection{Descrizione}
-		Il capitolato C5 prevede la realizzazione di un servizio di car sharing \gl{Peer to Peer (p2p)} di uno o più mezzi di trasporto propri. L'applicativo andrà ad arricchire le funzionalità di un'applicazione mobile preesistente, chiamata \gl{GaiaGo}, la quale implementa un applicativo per il car sharing condominiale.
-		\subsubsection{Studio del dominio}
-			\paragraph{Dominio applicativo}
-			L'applicativo ha lo scopo di far incontrare domanda e offerta di noleggio auto p2p. L'affittuario dovrà poter indicare in quali giorni e in quali orari il suo veicolo è disponibile per un'eventuale prenotazione, il luogo in cui ritirarlo ed eventuali altre condizioni alle quali il cliente dovrà sottostare per affittare il mezzo. Il cliente, invece, avrà la possibilità di cercare e prenotare veicoli per una determinata data e luogo. Il tutto dovrà essere accompagnato da un sistema che coinvolga l'utente tramite sistemi di \gl{Gamification theory}.
-			\paragraph{Dominio tecnologico} 
-				\begin{itemize}
-					\item  \textbf{NodejS}: piattaforma open source per l'esecuzione di codice JavaScript server-side;
-					\item \textbf{\gl{Android}}: sistema operativo per smartphone;
-					\item \textbf{\gl{Octalysis}}: \gl{Gamification framework}:
-				\end{itemize}
+\subsection{Capitolato C4 - MegAlexa}
+\subsubsection{Descrizione}    
+Il capitolato C4 \emph{MegAlexa: arricchitore di skill di Amazon Alexa}, presentato dall’azienda Zero12, richiede di creare un applicativo in grado di estendere le funzionalità di \gl{Amazon Alexa} con la possibilità da parte dell’utente di creare delle skill personalizzate a partire da quelle preesistenti, permettendo di eseguire una routine di eventi dato un solo comando vocale.
+\subsubsection{Studio del dominio}
 
-		\subsubsection{Studio del dominio}
-			\paragraph{Dominio applicativo} \Spazio
-			L'applicativo ha lo scopo di far incontrare domanda e offerta di noleggio auto p2p.
-L'affittuario, dovrà poter indicare in quali giorni ed orari il suo veicolo è disponibile
-per una eventuale prenotazione, il luogo in cui ritirarlo, ed eventuali altre
-condizioni alle quali il cliente dovrà sottostare per affittare il mezzo.
-Il cliente avrà la possibilità di cercare e di prenotare veicoli per data e luogo.
-Il tutto dovrà essere accompagnato da un sistema che coinvolga l'utente tramite sistemi di Gamification theory.
-			
-			\paragraph{Dominio tecnologico} 
-			E' richiesta la conoscenza delle seguenti tecnologie per la realizzazione dell'applicazione web:
-				\begin{itemize}
-					\item \textbf{\gl{Node.JS}}: piattaforma per l'esecuzione di codice JS server-side;
-					\item \textbf{\gl{Android}}: OS per smartphone;
-					\item \textbf{\gl{Framework Octalysis}}: Gamification Framework.
-				\end{itemize}
-		\subsubsection{Valutazione generale}
-		\paragraph{Aspetti positivi}
-		\begin{itemize}
-			\item Il \gl{proponente} fornisce componenti software per le parti più complesse del capitolato.
-		\end{itemize}
-		\paragraph{Aspetti negativi}
-		\begin{itemize}
-			\item Le tecnologie coinvolte non hanno colto l'interesse del team;
-			\item Il capitolato è apparso troppo semplice.
-		\end{itemize}
-		\subsubsection{Conclusioni}
-		Il capitolato non ha colto l'interesse del team per via del contesto poco interessante e della, quantomeno apparente, semplicità del progetto. Infatti, lo 				sviluppo di una piattaforma mobile è stato visto poco interessante rispetto alle altre proposte e non innovativo dal punto di vista delle tecnolgie 					interessate. 
+\paragraph{Dominio applicativo} \Spazio
+
+L’obiettivo del progetto è la realizzazione di un applicativo web e mobile per la creazione di interazioni personalizzate con Amazon Alexa. Registrandosi alla piattaforma, l’utente potrà accedere all’applicativo che fornirà dei \gl{connettori} (o \gl{micro-funzioni}) da inserire all’interno di un \gl{workflow}, permettendo all’utente di definire una routine univoca di azioni avviabile mediante un comando vocale (e.g.: una routine composta da un messaggio di benvenuto, lettura di un \gl{feed RSS} e selezione delle notizie). Il progetto farà uso di tecnologie di sintesi e riconoscimento vocale con la previsione di realizzare un applicativo multilingue.
+\paragraph{Dominio tecnologico}
+\begin{itemize}
+	\item {\textbf{\gl{AWS}} con le relative API  \gl{Getway}, \gl{Lambda} e \gl{Aurora Serverless}: per l’interazione con Alexa};
+	\item  \textbf{\gl{Node.js}}: linguaggio di programmazione per la realizzazione dell’applicativo;
+	\item \textbf{HTML, CSS e JavaScript}: linguaggi per lo sviluppo dell’interfaccia web;
+	\item  \textbf{Swift o Kotlin}: linguaggi per lo sviluppo della mobile app.
+\end{itemize}
+\subsubsection{Valutazione generale}
+\paragraph{Aspetti positivi}
+\begin{itemize}
+	\item{Le tecnologie impiegate sono risultate innovative e stimolanti;}
+	\item{Interesse per la sintesi vocale in quanto è una tecnologia innovativa, con forte potenziale di sviluppo.}
+\end{itemize}
+\paragraph{Aspetti negativi}
+\begin{itemize}
+	\item{Lo sviluppo di un'interfaccia web o mobile non rappresenta un argomento d'interesse per il gruppo;}
+	\item{Il capitolato non descrive in modo chiaro e preciso l'obiettivo del progetto.}
+\end{itemize}
+\subsubsection{Valutazione finale} \Spazio
+Il capitolato in esame ha suscitato interesse da parte del team. L'utilizzo di tecnologie giovani e innovative come Alexa e AWS rappresentano una nuova generazione di interfacce, di cui è previsto uno sviluppo intenso nei prossimi anni, tuttavia l'implementazione di una applicazione mobile o di una interfaccia web non è risultata di interesse comune al gruppo in quanto fa uso di tecnologie diffuse e poco stimolanti.
+Per i fattori appena elencati, il gruppo si è orientato verso un capitolato diverso.
+
+	\subsection{Capitolato C5 - P2PCS}
+\subsubsection{Descrizione}
+Il capitolato C5 \emph{P2PCS: piattaforma di peer-to-peer car sharing}, presentato dall'azienda GaiaGo, prevede la realizzazione di un servizio per il car sharing \gl{Peer to Peer (P2P)} di uno o più mezzi di trasporto propri. L'applicativo andrà ad arricchire le funzionalità di un'applicazione mobile preesistente, chiamata \gl{GaiaGo}, la quale implementa un applicativo per il car sharing condominiale.
+\subsubsection{Studio del dominio}
+\paragraph{Dominio applicativo} \Spazio
+L'obiettivo del progetto é la realizzazione di applicativo con lo scopo di far incontrare domanda e offerta di noleggio auto P2P. L'affittuario dovrà poter indicare in quali giorni e in quali orari il suo veicolo è disponibile per un'eventuale prenotazione, il luogo in cui ritirarlo ed eventuali altre condizioni alle quali il cliente dovrà sottostare per affittare il mezzo. Il cliente, invece, avrà la possibilità di cercare e prenotare veicoli per una determinata data e luogo. Il tutto dovrà essere accompagnato da un sistema che coinvolga l'utente tramite sistemi di \gl{Gamification theory}.
+\paragraph{Dominio tecnologico} 
+\begin{itemize}
+	\item  \textbf{NodejS}: piattaforma open source per l'esecuzione di codice JavaScript server-side;
+	\item \textbf{\gl{Android}}: sistema operativo per smartphone;
+	\item \textbf{\gl{Octalysis}}: \gl{Gamification framework}:
+\end{itemize}
+\pagebreak
+\subsubsection{Valutazione generale}
+\paragraph{Aspetti positivi}
+\begin{itemize}
+	\item Il committente fornisce componenti software per le parti più complesse del capitolato.
+\end{itemize}
+\paragraph{Aspetti negativi}
+\begin{itemize}
+	\item Le tecnologie coinvolte non hanno colto l'interesse del team;
+	\item Il capitolato è apparso troppo semplice.
+\end{itemize}
+\subsubsection{Valutazione finale}
+Il capitolato non ha colto l'interesse del team per via del contesto poco interessante e della, quantomeno apparente, semplicità del progetto. Infatti, lo 				sviluppo di una piattaforma mobile è stato recepito come poco stimolante rispetto alle altre proposte e non innovativo dal punto di vista delle tecnologie 					interessate. 
 		
 		
 	\subsection{Capitolato C6 - Soldino}
@@ -215,7 +196,7 @@ Il tutto dovrà essere accompagnato da un sistema che coinvolga l'utente tramite
 		\subsubsection{Valutazione generale}
 		\paragraph{Aspetti positivi}
 		\begin{itemize}
-			\item L'uso di tencologie moderne ed in continua espansione ha attirato l'attenzione del gruppo;
+			\item L'uso di tecnologie moderne ed in continua espansione ha attirato l'attenzione del gruppo;
 			\item L'obiettivo del progetto è risultato valido ed interessante.
 		\end{itemize}
 		\paragraph{Aspetti negativi}
