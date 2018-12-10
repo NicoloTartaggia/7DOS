@@ -1,0 +1,64 @@
+Per la valutazione della qualita' del prodotto il team 7DOS ha deciso di fare affidamento allo standard ISO 25010.
+Quest' ultimo definisce 8 caratteristiche e 31 sotto caratteristiche che devono essere prese in considerazione durante lo sviluppo del progetto, per garantire un  elevata qualita' complessiva del prodotto.
+Per questione di praticita' si e' deciso di adottare solamente un sottoinsieme ristretto delle 8 macrocaratteristiche, più nello specifico le 5 elencate di seguito.
+Tutte le metriche per la valutazione della qualita' del prodotto adottate dal team 7DOS, elencate nel capitolo successivo saranno basate sui seguenti principi cardine.
+
+Performance efficency
+Definisce le prestazioni relative al sistema come, quantita' di risorse utilizzate per eseguire una determinata funzionalita' del sistema sotto delle specifiche condizioni. 
+Questa caratteristica e' a sua volta scomponibile nelle seguenti sotto-caratteristiche.
+	-Time behaviour: Grado con il quale i tempi di risposta del sistema ad una determinata azione, ed i tempi di processamento della funzionalita' correlata, rispettano i requisiti 
+	-Resource utilization: Grado con il quale il numero di risorse utilizzate dal sistema durante l'esecuzione delle sue funzionalita' rispetta i requisiti
+	-Capacity: Grado con il quale i limiti massimi dettati dal sistema rispettano quelli definiti dai requisiti
+
+Maintainability
+Definisce il grado di efficacia ed efficenza con cui un prodotto od un sistema può essere modificato per migliorarlo, correggerlo od adattarlo a dei cambiamenti all'ambiente. 
+Questa caratteristica e' a sua volta scomponibile nelle seguenti sotto-caratteristiche.
+	-Modularity:Grado di scomposizione del sistema in parti minimali tali che un cambiamento ad uno specifica componente ha il minimo impatto su tutte le altri componenti
+	-Reusability:Grado con cui una determinata componente del sistema può essere adattata ed utilizzata in altri sistemi o per realizzare altre componenti
+	-Analysability:Grado di efficacia ed efficienza con cui e' possibile analizzare l'impatto nel sistema di uno specifico cambiamente ad una o più delle sue parti, ai fini di rilevare eventuali casi di fallimento.
+	-Modificability:Grado con il quale un prodotto o sistema può essere modificato efficaciemente ed efficentemente senza introdurre difetti che ne possano intaccare la qualita' complessiva
+	-Testability:Grado di efficacia ed efficenza con cui e' possibile stabilire ed eseguire dei test per valutare la qualita' del sistema 
+
+-------------------------------------------------------------------------------------------------------
+Metrics
+Percentuale di test case superati:Fondamentale per valutare l'efficacia del prodotto software
+Calcolata attraverso la seguente formula.
+	PTS=(NTS/NTE)x100
+Dove
+	NTS=Numero di test case superati
+	NTE=Numero di test case eseguiti
+Range Accettazione: >=100%
+Range Ottimale: /
+
+Percentuale di test case falliti:Complementare della misura precedente.
+Calcolata attraverso la seguente formula
+	PTF=(NTF/NTE)x100
+Dove
+	NTF=Numero di test case falliti
+	NTE=Numero di test case eseguiti
+Range Accettazione: <=0%
+Range Ottimale:/
+
+Percentuale di difetti(Bug) risolti:
+Calcolata attraverso la seguente formula
+	PDR=(NDR/NTD)x100
+Dove
+	NDR=Numero di difetti risolti
+	NTD=Numero totale di difetti individuati
+Range Accettazione:0-5%
+Range Ottimale:0%<=
+
+Percentuale di difetti critici:
+	PDR=(NDC/NTD)x100
+Dove 
+	NDC=Numero di difetti critici individuati
+	NTD=Numero totale di difetti rilevati
+Range Accettazione:0%
+Range ottimale: /
+
+Tempo medio speso per risolvere un difetto:
+	TMD=(TCB/Numero totale d)
+----------------------------------------------------------------------
+Fonti
+-https://www.qasymphony.com/blog/64-test-metrics/
+-https://iso25000.com/index.php/en/iso-25000-standards/iso-25010
