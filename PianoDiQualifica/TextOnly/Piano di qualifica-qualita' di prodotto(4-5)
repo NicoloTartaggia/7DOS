@@ -57,7 +57,10 @@ Range Accettazione:0%
 Range ottimale: /
 
 Tempo medio speso per risolvere un difetto:
-	TMD=(TCB/Numero totale d)
+	TMD=(TCB/NTD)x100
+Dove
+	TCB=Tempo complessivo impiegato dall'intero team di sviluppo per risolvere tutte le problematiche incontrate
+	NTD=Numero totale di difetti rilevati
 ----------------------------------------------------------------------
 Fonti
 -https://www.qasymphony.com/blog/64-test-metrics/
