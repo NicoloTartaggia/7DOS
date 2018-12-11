@@ -11,10 +11,10 @@ Ogni documento deve attraversare le seguenti fasi per essere considerato formale
 \end{itemize}
 
 \subsubsection{Template}
-Per uniformare la struttura dei documenti è stato creato un template \LaTeX contenente la formattazione e l'impaginazione degli stessi.
+Per uniformare la struttura dei documenti è stato creato un template \LaTeX che implementa la formattazione e l'impaginazione degli stessi. Il contenuto di ogni documento è costituito di più file, uno per ogni sezione, la cui stesura è stata incaricata ai \emph{Redattori}.
 
 \subsubsection{Struttura dei documenti}
-Tutta la documentazione rispetterà la seguente struttura.
+Tutta la documentazione dovrà rispetterare la medesima struttura.
 
 \paragraph{Frontespizio} \Spazio
 Questa sezione contiene tutti gli elementi che dovranno essere presenti nella prima pagina di ogni documento.
@@ -75,6 +75,10 @@ Ci possono essere al più tre tipologie: indice delle sezioni, indice delle tabe
 	\end{itemize}
 \paragraph{Elenchi puntati} \Spazio
 	Ogni punto dell'elenco deve terminare con il carattere punto e virgola, tranne l'ultimo che deve terminare con il carattere punto e la prima parola deve avere la lettera maiuscola.
+
+\paragraph{Note a piè di pagina} \Spazio
+In caso di presenza in una pagina interna di note da esplicare, esse vanno indicate nella pagina corrente, in basso a sinistra. Ogni nota deve riportare un numero e una descrizione.
+
 \paragraph{Formati comuni} 
 \begin{itemize}
 	\item \textbf{Orari}: \textbf{HH:MM}
@@ -102,14 +106,11 @@ Le immagini devono essere separate dal testo lasciando una spaziatura per facili
 immagini. I formati consentiti sono \textbf{PNG} e \textbf{JPG}.
 \paragraph{Tabelle} \Spazio
 Le tabelle devono essere separate dal testo lasciando una spaziatura per facilitarne la lettura e vanno centrate orizzontalmente. Possono essere organizzate in modo affiancato e per ogni tabella deve essere presente una breve didascalia, oltre ad un identificativo che permetta il relativo inserimento all’interno dell’indice delle
-tabelle.
-TODO: decidere formato
+tabelle. L'intestazione di ogni colonna deve essere in grassetto ed avere la lettera maiuscola.
 
-\paragraph{Note a piè di pagina} \Spazio
-In caso di presenza in una pagina interna di note da esplicare, esse vanno indicate nella pagina corrente, in basso a sinistra. Ogni nota deve riportare un numero e una descrizione.
 
 \subsubsection{Nomenclatura dei documenti}
-Il formato usato per la nomenclatura dei documenti è \textbf{NomeDocumento\_vX.Y.Z}:
+Il formato usato per la nomenclatura dei documenti, tranne i \emph{Verbali}, è il seguente: \Spazio \centerline{\textbf{NomeDocumento\_vX.Y.Z}}
 \begin{itemize}
 	\item \textbf{NomeDocumento}: indica il nome del documento, scritto senza spazi e con la lettera maiuscola in ogni parola.
 	\item \textbf{vX.Y.Z}: indica la versione del documento secondo il seguente criterio:
@@ -123,17 +124,92 @@ Il formato usato per la nomenclatura dei documenti è \textbf{NomeDocumento\_vX.
 \subsubsection{Classificazione dei documenti}
 \paragraph{Documenti informali} \Spazio 
 Un documento viene considerato infomale se non è stato approvato dal \emph{Responsabile di Progetto}, pertanto è concesso esclusivamente ad uso interno al gruppo.
+
 \paragraph{Documenti formali}
 Un documento viene considerato formale dopo aver superato con esito positivo l'attività di verifica e in seguito alla sua appovazione da parte del \emph{Responsabile di Progetto}, pertanto può essere destinato ad una distribuzione esterna al gruppo.
-\paragraph{Verbali}
-TODO: decidere formato 
+
+\paragraph{Verbali} \Spazio
+Ogni verbale deve essere redatto dal segretario durante le riunioni, sia interne che esterne, tenute dal gruppo e dovrà rispettare il seguente contenuto:
+\begin{itemize}
+	\item \textbf{Informazioni incontro}: informazioni generali riguardo la riunione descritte secondo la seguente struttura:
+	\begin{itemize}
+		\item Luogo;
+		\item Data;
+		\item Ora;
+		\item Partecipanti del gruppo;
+		\item Partecipanti esterni.
+	\end{itemize}
+	\item \textbf{Argomenti affrontati}: descrizione dei temi discussi dal gruppo ed eventuali decisioni prese a riguardo.
+\end{itemize} 
 
 
 
-\subsubsection{Sigle}
+\subsubsection{Sigle usate}
+\begin{itemize}
+	\item \textbf{AR}: Analisi dei Requisiti;
+	\item \textbf{GL}: Glossario;
+	\item \textbf{NdP}: Norme di Progetto;
+	\item \textbf{PdP}: Piano di Progetto;
+	\item \textbf{PdQ}: Piano di Qualifica;
+	\item \textbf{SF}: Studio di Fattibilità;
+	\item \textbf{RA}: Revisione di accettazione;
+	\item \textbf{RP}: Revisione di progettazione;
+	\item \textbf{RQ}: Revisione di qualifica;
+	\item \textbf{RR}: Revisione dei requisiti.	
+\end{itemize}
 
-\subsubsection{Strumenti}
 
+\subsubsection{Glossario}
+Per segnalare la presenza di un termine all'interno del \emph{Glossario} dovrà essere impiegato l'apposito comando personalizzato che lo formatterà in corsivo aggiungendo una lettera 'g' come pedice(eg. \gl{Termine nel Glossario}).
+
+\subsubsection{Strumenti di supporto} TODO: aggiungere link??
+\paragraph{\LaTeX} \Spazio
+L'intera documentazioe dovrà essere redatta usando il liguazzo di markup \LaTeX che offre la possibilità di personalizzare comandi e variabili da usare all'interno dei documenti facilitandone la gestione e l'aggiornamento. Permette anche di dividere il contenuto di un documento dalla rispettiva struttura, suddividendolo in sezioni per facilitarne la stesura da parte dei \emph{Redattori} e di mantenere la stessa formattazione in tutti i documenti mediante l'uso di un template comune.
+
+
+\paragraph{TexStudio} \Spazio
+Per redigere i documenti in \LaTeX dovrà essere impiegato l'editor \emph{TexStudio}. L'ambiente mette a disposizione un'interfaccia per la scrittura dei documenti, organizzati secondo una struttura gerarchica e la visualizzazione dell'anteprima del risultato ottenuto in seguito alla compilazione avvenuta con successo e in caso contrario segnalando all'utente eventuali errori. 
+
+
+\subsection{Verifica}
+\subsubsection{Obiettivo} 
+Il processo di verifica ha lo scopo di esaminare un prodotto al fine di accertare che le attività produttive non abbiano introdotto errori sullo stesso, fornendo una prova oggettiva della sua correttezza o nel caso contrario, segnalando le eventuali problematiche riscontrate. Per questa prima parte del progetto il processo di verifica sarà eseguito sulla documentazione.
+
+\subsubsection{Analisi}
+\paragraph{Analisi statica} \Spazio
+L'analisi statica è un processo che consente di verificare la presenza di errori o anomalie nella documentazione o nel codice sorgente, senza che esso debba essere eseguito. Può essere svolta in due modi diversi:
+\begin{itemize}
+	\item \textbf{Walktrough}: è una tecnica che consiste nella lettura a largo spettro del prodotto in esame, senza fare assunzioni sugli eventuali errori che potrebbero essere riscontrati. Si tratta di un metodo oneroso e poco efficiente ma risulta indispensabile durante le prime fasi di sviluppo del progetto;
+	\item \textbf{Inspection}: è una tecnica che consiste nella lettura mirata del prodotto in esame, focalizzando la ricerca su errori già noti o con più alta probabilità, presenti su di una lista di controllo. Si tratta di un metodo veloce ed efficace.
+\end{itemize}
+
+\paragraph{Analisi dinamica}
+L'analisi dinamica è un processo che consente di verificare la presenza di errori o anomalie nel codice sorgente durante la sua esecuzione. Si effettua attraverso l'uso di test che devono essere ripetibili, ovvero partendo dal medesimo input si dovrà produrre sempre lo stesso output. Per ogni test devono essere definiti i seguenti parametri:
+\begin{itemize}
+	\item \textbf{Ambiente}: sistemi hardware e software in cui il test sarà eseguito;
+	\item \textbf{Stato iniziale}: valori assunti dalle variabili prima dell'esecuzione del test;
+	\item \textbf{Input}: valori inseriti in ingresso;
+	\item \textbf{Output}: esito prodotto dal test;
+	\item \textbf{Istruzioni aggiuntive}: regole su come va eseguito il test e su come va interpretato l'esito.
+\end{itemize}
+
+
+\subsubsection{Test}
+\paragraph{Test di unità} \Spazio
+I test di unità verificano che le singole parti di codice non presentino errori e con unità si intende la minima suddivisione di un software con funzionamento autonomo.
+
+\paragraph{Test di integrazione} \Spazio
+I test di integrazione sono il passo successivo ai test di unità, in quanto verificano che l'aggregazione di due o più unità precedentemente testate funzioni in modo corretto in tutte le sue parti. L'esecuzione di questi test deve essere svolta in maniera incrementale, implementando una nuova parte ad un sistema privo di errori.
+
+\paragraph{Test di sistema} \Spazio
+I test di sistema vengono effettuati sul prodotto software finale, in modo da verificare che tutti i requisiti siano rispettati.
+
+\paragraph{Test di regressione} \Spazio
+I test di regressione devono essere eseguiti in seguito ad una modifica apportata al software. Per verificare che non vengano introdotti errori nelle parti del sistema che dipendono da essa è necessario eseguire nuovamente i test di unità e di integrazione.
+
+
+\paragraph{Test di accettazione} \Spazio
+Il test di accettazione consiste nel collaudo del software in presenza del proponente e in caso di esito positivo il prodotto potrà essere rilasciato.
 
 
 
