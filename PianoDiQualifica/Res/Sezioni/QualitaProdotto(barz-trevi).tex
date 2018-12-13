@@ -22,6 +22,8 @@ Definisce le prestazioni relative al sistema come, quantita' di risorse utilizza
 \end{itemize}
 \subsubsection{Metriche adottate}
 \paragraph{Average Response Time}
+\begin{flushleft}
+
 Tempo medio richiesto per completare l'esecuzione di una funzionalita' richiesta ed esporre il risultato
 $$ARM=\frac{\sum\limits_{i=1}^N TF{\small{i}}}{NF}$$
 Dove
@@ -30,11 +32,17 @@ Dove
 \item{\textbf{TF${\small{i}}$}}:Tempo trascorso dal momento in cui viene richiesta l'esecuzione dell'i-esima funzionalita' fino al momento in cui la funzionalita' viene effettivamente completata ed il risultato viene esposto
 \item{\textbf{NF}}:Numero di funzionalita' eseguite durante una singola esecuzione del prodotto software
 \end{itemize}
+\textbf{Range Ottimale}:0.3s-0.5s \\
+\textbf{Range Accettabile}:0.5s-1.0s
+\end{flushleft}
 \paragraph{Average CPU Usage}
+\begin{flushleft}
 Percentuale media di utilizzo del processore durante una singola esecuzione del prodotto SW(Non so come rappresentarla sotto forma di formula)
+\end{flushleft}
 \paragraph{Average Memory Usage}
+\begin{flushleft}
 Percentuale media di utilizzo della Memoria RAM durante una singola esecuzione del prodotto SW(Non so come rappresentarla sotto forma di formula)
-
+\end{flushleft}
 
 \subsection{Usability} (trevisin)
 Questa caratteristica esprime il grado in cui un prodotto o sistema può essere usato da un determinato utente per raggiungere determinati scopi con efficacia, efficienza e soddisfazione in uno specifico contesto d'uso.
@@ -68,15 +76,47 @@ Definisce il grado di efficacia ed efficenza con cui un prodotto od un sistema p
 	\item{\textbf{Testability}}:Grado di efficacia ed efficenza con cui e' possibile stabilire ed eseguire dei test per valutare la qualita' del sistema
 \end{itemize}
 \subsubsection{Metriche Adottate}
-\paragraph{Average time spent per error}
-Tempo medio speso dall'intero team di sviluppo per la risoluzione di una singola funzionalità.
-	$$ATE=\frac{\sum\limits_{i=1}^N TTE{\small{i}}}{NE}$$
+\paragraph{Average time spent per feature development}
+\begin{flushleft}
+Tempo medio speso dall'intero team di sviluppo per lo sviluppo di nuove funzionalita'.
+	$$ATF=\frac{\sum\limits_{i=1}^N TF{\small{i}}}{NF}$$
 Dove
 \begin{itemize}
-	\item{\textbf{ATE}}:Average time spent per error
-	\item{\textbf{TTE${\small{i}}$}}:Tempo complessivo speso dall'intero team nella risoluzione di errori
+	\item{\textbf{ATF}}:Average time spent per feature development
+	\item{\textbf{TF${\small{i}}$}}:Tempo uomo speso dall'intero team di sviluppo per lo sviluppo dell'iesima funzionalita'.
+	\item{\textbf{NU}}:Numero di funzionalita' sviluppate
+\end{itemize}
+\textbf{Range Ottimale}:3h-4h 30m \\
+\textbf{Range Accettabile}:4h 30m-5h 30m
+\end{flushleft}
+\paragraph{Average time spent per error correction}
+\begin{flushleft}
+Tempo medio speso dall'intero team di sviluppo per la risoluzione di una singola funzionalità.
+	$$ATE=\frac{\sum\limits_{i=1}^N TE{\small{i}}}{NE}$$
+Dove
+\begin{itemize}
+	\item{\textbf{ATE}}:Average time spent per error correction
+	\item{\textbf{TE${\small{i}}$}}:Tempo uomo speso per risolvere l'i-esimo errore rilevato
 	\item{\textbf{NE}}:Numero complessivo di errori rilevati
 \end{itemize}
+\textbf{Range Ottimale}:45m-1h 30m \\
+\textbf{Range Accettabile}:1h 30m-2h 30m
+\end{flushleft}
+\paragraph{Average time spent per unit testing}
+\begin{flushleft}
+Tempo medio speso dall'intero team di sviluppo per la scrittura di test corretti e completi per una singola unita'.
+	$$ATU=\frac{\sum\limits_{i=1}^N TU{\small{i}}}{NU}$$
+Dove
+\begin{itemize}
+	\item{\textbf{ATU}}:Average time spent per unit testing
+	\item{\textbf{TU${\small{i}}$}}:Tempo uomo speso dall'intero team di sviluppo per la scrittura di test corretti e completi per l'i-esima unita'.
+	\item{\textbf{NU}}:Numero unita' testate
+\end{itemize}
+\textbf{Range Ottimale}:1h 30m-2h \\
+\textbf{Range Accettabile}:2h-2h 30m
+\end{flushleft}
+
+
 \subsection{Portability}
 Grado di efficacia ed efficenza con cui un sistema, prodotto o componente può essere trasferito da una specifica piattaforma hardware o software ad un altro ambiente completamente differente.
 \subsubsection{Sottocaratteristiche notevoli}
