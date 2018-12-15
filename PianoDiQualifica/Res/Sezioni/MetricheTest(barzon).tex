@@ -47,6 +47,59 @@ Ciascuno degli attributi elencati qui sopra è valutato secondo una scala a quat
 	\item{\textbf{Fully achieved}}(85\% - 100\%)
 \end{itemize}
 \subsection{Metriche per i prodotti}
-Tutte le metriche elencate di seguito saranno relative alla documentazione. Il team 7DOS ha deciso di rimandare la scelta di metriche relative a prodotti software in quanto poco interessanti per la prima revisione.
-\subsubsection{Numero di errori ortografici}
+\subsubsection{Metriche relative al codice software}
+Il team 7DOS ha deciso di non definire in questo momento delle metriche relative a prodotti software in quanto poco interessanti per la prima revisione.
+\subsubsection{Metriche relative alla documentazione}
+\paragraph{Numero di errori grammaticali}
+\begin{flushleft}
+Tutti i documenti verrano analizzati da un apposito strumento di analisi grammaticale. Per poter essere accettati non potranno avere un numero di errori grammaticali superiore a zero.
+\end{flushleft}
+
+\paragraph{Gunning fog index}
+\begin{flushleft}
+Utilizzato per misurare la facilita' di lettura e di comprensione di un testo. Il numero risultante è un indicatore del numero di anni di educazione formale della quale una persona necessita al fine di leggere il testo con facilità. \\
+L'indice di Gunning fog è calcolabile tramite la seguente formula:
+$$
+	0.4*((\frac{n^{\circ}\:parole}{n^{\circ}\:frasi})+100*(\frac{n^{\circ}\:parole\:complesse}{n^{\circ}\:parole}))
+$$
+\textbf{Range Ottimale}:<=12 \\
+\textbf{Range Accettabile}:>12-15
+\end{flushleft}
+\paragraph{Indice di Gulpease}
+\begin{flushleft}
+Utilizzato per misurare la leggibilita' di un testo in lingua italiana.\\
+L'indice di Gulpease è calcolabile tramite la seguente formula:
+$$
+	89+\frac{(numero\:delle\:frasi)-10*(numero\:delle\:lettere)}{numero\:delle\:parole}
+$$
+I risultati sono compresi tra 0 e 100 dove il valore 0 indica la leggibilità più bassa e 100 indica la leggibilità più alta. In generale risulta che testi con indice:
+	\begin{itemize}
+		\item{\textbf{Inferiore	a 80}}: Sono difficili da leggere per chi ha la licenza elementare
+		\item{\textbf{Inferiore	a 60}}: Sono difficili da leggere per chi ha la licenza media
+		\item{\textbf{Inferiore	a 40}}: Sono difficili da leggere per chi ha la licenza superiore
+	\end{itemize}
+\textbf{Range Ottimale}:60-100 \\
+\textbf{Range Accettabile}:40-100
+\end{flushleft}
+\paragraph{Indice di Flesh}
+\begin{flushleft}
+Utilizzato per misurare la leggibilita' di un testo in lingua inglese.\\
+L'indice di Flesh è calcolabile tramite la seguente formula:
+	$$
+		206,835-(0,846*S)-(1,015*P)
+	$$
+Dove
+	\begin{itemize}
+		\item{\textbf{S}}:E' il numero di sillabe calcolato su un campione di 100 parole.
+		\item{\textbf{P}}:P e' il numero medio di parole per frase,
+	\end{itemize}
+La leggibilita è considerata come
+	\begin{itemize}
+		\item{\textbf{Alta}}:se l'indice e' superiore a 60.
+		\item{\textbf{Media}}:se l'indice e' compresa tra 50 e 60.
+		\item{\textbf{Bassa}}:se l'indice e' inferiore a 50.
+	\end{itemize}
+\textbf{Range Ottimale}:60-100 \\
+\textbf{Range Accettabile}:50-60
+\end{flushleft}
 \pagebreak
