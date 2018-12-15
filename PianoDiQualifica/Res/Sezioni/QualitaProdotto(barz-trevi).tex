@@ -1,11 +1,15 @@
 \newsection{Qualità di prodotto}
-Per la valutazione della qualita' del prodotto il team 7DOS ha deciso di fare affidamento allo standard ISO 25010.
-Quest' ultimo definisce 8 caratteristiche e 31 sotto caratteristiche che devono essere prese in considerazione durante lo sviluppo del progetto, per garantire un  elevata qualita' complessiva del prodotto.
-Per questione di praticita' si e' deciso di adottare solamente un sottoinsieme ristretto delle 8 macrocaratteristiche, più nello specifico le 6 elencate di seguito.
-Tutte le metriche per la valutazione della qualita' del prodotto adottate dal team 7DOS, elencate nel capitolo successivo saranno basate sui seguenti principi cardine.
-\subsection{Functional Suitability} (trevisin)
+Per poter garantire che il prodotto realizzato sia di alta qualità, è necessario definire un modello per la valutazione di quest'ultima; il team 7DOS, per questo motivo, ha scelto di adottare il modello di qualità delineato nello standard ISO/IEC 25010, anche noto come \gl{SQuaRE}.
+
+Tale modello comprende 8 caratteristiche di qualità (ciascuna divisa in sotto-caratteristiche, per un totale di 31) che vanno prese in considerazione durante lo sviluppo del progetto per garantire un elevata qualità complessiva del prodotto finale.
+
+Per praticità e rilevanza ai fini del prodotto sono state selezionate 6 caratteristiche da considerare, e per ciascuna sono state considerate le sotto caratteristiche più rilevanti al progetto. 
+
+Tutte le metriche per la valutazione della qualità elencate nel capitolo successivo saranno basate sui seguenti principi cardine.
+
+\subsection{Functional Suitability}
 Questa caratteristica esprime il grado di soddisfacimento dei requisiti espliciti ed impliciti da parte di un prodotto o servizio, quando utilizzato sotto determinate condizioni.
-\subsubsection{Sottocaratteristiche notevoli}
+\subsubsection{Sotto-caratteristiche notevoli}
 In riguardo al prodotto che si intende realizzare, sono state individuate le seguenti sottocaratteristiche da perseguire come obiettivi prioritari: 
 \begin{itemize}
 	\item{\textbf{Functional Completeness}}: esprime il grado in cui l'insieme di funzioni copre i compiti specificati e gli obiettivi dell'utente;
@@ -13,17 +17,39 @@ In riguardo al prodotto che si intende realizzare, sono state individuate le seg
 \end{itemize}
 
 \subsection{Performance Efficiency}
-Definisce le prestazioni relative al sistema come, quantita' di risorse utilizzate per eseguire una determinata funzionalita' del sistema sotto delle specifiche condizioni. 
-\subsubsection{Sottocaratteristiche notevoli}
+Definisce le prestazioni relative al sistema come, quantità di risorse utilizzate per eseguire una determinata funzionalità del sistema sotto delle specifiche condizioni. 
+\subsubsection{Sotto-caratteristiche notevoli}
 \begin{itemize}
-	\item{\textbf{Time behaviour}}:Grado con il quale i tempi di risposta del sistema ad una determinata azione, ed i tempi di processamento della funzionalita' correlata, rispettano i requisiti.
-	\item{\textbf{Resource utilization}}:Grado con il quale il numero di risorse utilizzate dal sistema durante l'esecuzione delle sue funzionalita' rispetta i requisiti.
-	\item{\textbf{Capacity}}:Grado con il quale i limiti massimi dettati dal sistema rispettano quelli definiti dai requisiti.
+	\item{\textbf{Time Behaviour}}: esprime il grado in cui i tempi di risposta ed elaborazione e i volumi di produzione di un prodotto o sistema, durante l'esecuzione delle sue funzionalità, rispettano i requisiti.
+	\item{\textbf{Resource Utilization}}: esprime il grado in cui il numero e tipo di risorse utilizzate da un prodotto o sistema, durante l'esecuzione delle sue funzionalità, rispetta i requisiti.
+	\item{\textbf{Capacity}}: esprime il grado in cui i limiti massimi di un prodotto o sistema rispettano quelli definiti dai requisiti.
 \end{itemize}
+\subsubsection{Metriche adottate}
+\paragraph{Average Response Time}
+\begin{flushleft}
+Tempo medio richiesto per completare l'esecuzione di una funzionalità richiesta ed esporre il risultato
+$$ARM=\frac{\sum\limits_{i=1}^N TF{\small{i}}}{NF}$$
+Dove:
+\begin{itemize}
+\item{\textbf{ARM}} :Average Response Time
+\item{\textbf{TF${\small{i}}$}}: Tempo trascorso dal momento in cui viene richiesta l'esecuzione dell'i-esima funzionalita' fino al momento in cui la funzionalità viene effettivamente completata ed il risultato viene esposto
+\item{\textbf{NF}}: Numero di funzionalità eseguite durante una singola esecuzione del prodotto software
+\end{itemize}
+\textbf{Range Ottimale}:0.3s-0.5s \\
+\textbf{Range Accettabile}:0.5s-1.0s
+\end{flushleft}
+\paragraph{Average CPU Usage}
+\begin{flushleft}
+Percentuale media di utilizzo del processore durante una singola esecuzione del prodotto SW(Non so come rappresentarla sotto forma di formula)
+\end{flushleft}
+\paragraph{Average Memory Usage}
+\begin{flushleft}
+Percentuale media di utilizzo della Memoria RAM durante una singola esecuzione del prodotto SW(Non so come rappresentarla sotto forma di formula)
+\end{flushleft}
 
-\subsection{Usability} (trevisin)
+\subsection{Usability}
 Questa caratteristica esprime il grado in cui un prodotto o sistema può essere usato da un determinato utente per raggiungere determinati scopi con efficacia, efficienza e soddisfazione in uno specifico contesto d'uso.
-\subsubsection{Sottocaratteristiche notevoli}
+\subsubsection{Sotto-caratteristiche notevoli}
 In riguardo al prodotto che si intende realizzare, sono state individuate le seguenti sottocaratteristiche da perseguire come obiettivi prioritari:
 \begin{itemize}
 	\item{\textbf{Learnability}}: esprime il grado in cui un prodotto o sistema può essere usato da determinati utenti per raggiungere determinati obiettivi di imparare ad usare il prodotto o sistema  con efficacia, efficienza, sicurezza da rischi e soddisfazione in uno specifico contesto d'uso.
@@ -32,9 +58,9 @@ In riguardo al prodotto che si intende realizzare, sono state individuate le seg
 	.
 \end{itemize}
 
-\subsection{Reliability} (trevisin)
+\subsection{Reliability}
 Questa caratteristica esprime il grado in cui un sistema, prodotto o componente esegue determinate funzioni sotto determinate condizioni per un dato periodo di tempo.
-\subsubsection{Sottocaratteristiche notevoli}
+\subsubsection{Sotto-caratteristiche notevoli}
 In riguardo al prodotto che si intende realizzare, sono state individuate le seguenti sottocaratteristiche da perseguire come obiettivi prioritari: 
 \begin{itemize}
 	\item{\textbf{Maturity}}: esprime il grado in cui un sistema, prodotto o componente raggiunge i requisiti di affidabilità in normali condizioni operative;
@@ -43,15 +69,55 @@ In riguardo al prodotto che si intende realizzare, sono state individuate le seg
 \end{itemize}
 
 \subsection{Maintainability}
-Definisce il grado di efficacia ed efficenza con cui un prodotto od un sistema può essere modificato per migliorarlo, correggerlo od adattarlo a dei cambiamenti all'ambiente. 
-\subsubsection{Sottocaratteristiche notevoli}
+Definisce il grado di efficacia ed efficenza con cui un prodotto o un sistema può essere modificato per migliorarlo, correggerlo o adattarlo a dei cambiamenti all'ambiente. 
+\subsubsection{Sotto-caratteristiche notevoli}
 \begin{itemize}
 	\item{\textbf{Modularity}}:Grado di scomposizione del sistema in parti minimali tali che un cambiamento ad uno specifica componente ha il minimo impatto su tutte le altri componenti.
 	\item{\textbf{Reusability}}:Grado con cui una determinata componente del sistema può essere adattata ed utilizzata in altri sistemi o per realizzare altre componenti.
-	\item{\textbf{Analisablity}}:Grado di efficacia ed efficienza con cui e' possibile analizzare l'impatto nel sistema di uno specifico cambiamento ad una o più delle sue parti, ai fini di rilevare eventuali casi di fallimento.
-	\item{\textbf{Modificability}}:Grado con il quale un prodotto o sistema può essere modificato efficaciemente ed efficentemente senza introdurre difetti che ne possano intaccare la qualita' complessiva.
-	\item{\textbf{Testability}}:Grado di efficacia ed efficenza con cui e' possibile stabilire ed eseguire dei test per valutare la qualita' del sistema
+	\item{\textbf{Analisability}}:Grado di efficacia ed efficienza con cui e' possibile analizzare l'impatto nel sistema di uno specifico cambiamento ad una o più delle sue parti, ai fini di rilevare eventuali casi di fallimento.
+	\item{\textbf{Modificability}}:Grado con il quale un prodotto o sistema può essere modificato efficacemente ed efficientemente senza introdurre difetti che ne possano intaccare la qualita' complessiva.
+	\item{\textbf{Testability}}:Grado di efficacia ed efficienza con cui e' possibile stabilire ed eseguire dei test per valutare la qualità del sistema
 \end{itemize}
+\subsubsection{Metriche Adottate}
+\paragraph{Average Time Spent per Feature Development}
+\begin{flushleft}
+Tempo medio speso dall'intero team di sviluppo per lo sviluppo di nuove funzionalita'.
+	$$ATF=\frac{\sum\limits_{i=1}^N TF{\small{i}}}{NF}$$
+Dove
+\begin{itemize}
+	\item{\textbf{ATF}}:Average time spent per feature development
+	\item{\textbf{TF${\small{i}}$}}:Tempo uomo speso dall'intero team di sviluppo per lo sviluppo dell'iesima funzionalita'.
+	\item{\textbf{NU}}:Numero di funzionalita' sviluppate
+\end{itemize}
+\textbf{Range Ottimale}:3h-4h 30m \\
+\textbf{Range Accettabile}:4h 30m-5h 30m
+\end{flushleft}
+\paragraph{Average time spent per error correction}
+\begin{flushleft}
+Tempo medio speso dall'intero team di sviluppo per la risoluzione di una singola funzionalità.
+	$$ATE=\frac{\sum\limits_{i=1}^N TE{\small{i}}}{NE}$$
+Dove
+\begin{itemize}
+	\item{\textbf{ATE}}:Average time spent per error correction
+	\item{\textbf{TE${\small{i}}$}}:Tempo uomo speso per risolvere l'i-esimo errore rilevato
+	\item{\textbf{NE}}:Numero complessivo di errori rilevati
+\end{itemize}
+\textbf{Range Ottimale}:45m-1h 30m \\
+\textbf{Range Accettabile}:1h 30m-2h 30m
+\end{flushleft}
+\paragraph{Average time spent per unit testing}
+\begin{flushleft}
+Tempo medio speso dall'intero team di sviluppo per la scrittura di test corretti e completi per una singola unita'.
+	$$ATU=\frac{\sum\limits_{i=1}^N TU{\small{i}}}{NU}$$
+Dove
+\begin{itemize}
+	\item{\textbf{ATU}}:Average time spent per unit testing
+	\item{\textbf{TU${\small{i}}$}}:Tempo uomo speso dall'intero team di sviluppo per la scrittura di test corretti e completi per l'i-esima unita'.
+	\item{\textbf{NU}}:Numero unita' testate
+\end{itemize}
+\textbf{Range Ottimale}:1h 30m-2h \\
+\textbf{Range Accettabile}:2h-2h 30m
+\end{flushleft}
 \subsection{Portability}
 Grado di efficacia ed efficenza con cui un sistema, prodotto o componente può essere trasferito da una specifica piattaforma hardware o software ad un altro ambiente completamente differente.
 \subsubsection{Sottocaratteristiche notevoli}
