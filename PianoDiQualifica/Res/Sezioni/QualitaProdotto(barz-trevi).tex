@@ -10,10 +10,32 @@ Tutte le metriche per la valutazione della qualità elencate nel capitolo succes
 \subsection{Functional Suitability}
 Questa caratteristica esprime il grado di soddisfacimento dei requisiti espliciti ed impliciti da parte di un prodotto o servizio, quando utilizzato sotto determinate condizioni.
 \subsubsection{Sotto-caratteristiche notevoli}
-In riguardo al prodotto che si intende realizzare, sono state individuate le seguenti sottocaratteristiche da perseguire come obiettivi prioritari: 
+In riguardo al prodotto che si intende realizzare, sono state individuate le seguenti sotto-caratteristiche da perseguire come obiettivi prioritari: 
 \begin{itemize}
 	\item{\textbf{Functional Completeness}}: esprime il grado in cui l'insieme di funzioni copre i compiti specificati e gli obiettivi dell'utente;
 	\item{\textbf{Functional Correctness}}: esprime il grado in cui il prodotto restituisce risultati corretti, entro il livello di precisione desiderato.
+\end{itemize}
+\subsubsection{Metriche adottate} 
+\paragraph{Functional Implementation Completeness} ~\\ ~\\
+Misurazione in percentuale del grado in cui le funzionalità offerte dalla corrente implementazione del software coprono l'insieme di funzioni specificate nei requisiti.
+Viene utilizzata la seguente formula:
+$$FI_{Comp}=\frac{NF_i}{NF_r}*100$$
+dove FI\textsubscript{Comp} è il valore della metrica, NF\textsubscript{i} è numero di funzioni implementate e NF\textsubscript{r} è numero di funzioni specificate dai requisiti.
+\begin{itemize}
+	\item{\textbf{Intervallo possibile}: 0-100;}
+	\item{\textbf{Intervallo accettabile}: 75-100;}
+	\item{\textbf{Intervallo obiettivo}: 100.}
+\end{itemize}
+
+\paragraph{Average Functional Implementation Correctness} ~\\ ~\\
+Misurazione in percentuale del grado in cui le funzionalità offerte dalla corrente implementazione del software, in media, rispettano il livello di precisione indicato nei requisiti.
+Viene utilizzata la seguente formula:
+$$aFI_{Corr}=\frac{\sum\limits_{i=1}^N\frac{iPF_i}{rPF_i}}{N}$$
+dove aFI\textsubscript{Corr} è il valore della metrica, iPF\textsubscript{i} è il livello di precisione della i-esima funzione implementata, rPF\textsubscript{i} è il livello di precisione della i-esima funzione secondo i requisiti, e N è il numero totale di funzioni considerate.
+\begin{itemize}
+	\item{\textbf{Intervallo possibile}: 0-100;}
+	\item{\textbf{Intervallo accettabile}: 75-100;}
+	\item{\textbf{Intervallo obiettivo}: 95-100.}
 \end{itemize}
 
 \subsection{Performance Efficiency}
@@ -55,8 +77,11 @@ In riguardo al prodotto che si intende realizzare, sono state individuate le seg
 	\item{\textbf{Learnability}}: esprime il grado in cui un prodotto o sistema può essere usato da determinati utenti per raggiungere determinati obiettivi di imparare ad usare il prodotto o sistema  con efficacia, efficienza, sicurezza da rischi e soddisfazione in uno specifico contesto d'uso.
 	\item{\textbf{Operability}}: esprime il grado in cui un prodotto o sistema ha attributi che lo rendono facile da operare e controllare.
 	\item{\textbf{User Error Protection}}: esprime il grado in cui un sistema protegge gli utenti dal commettere errori.
-	.
 \end{itemize}
+\subsubsection{Metriche adottate}
+\paragraph{Average Functionality Learning Time}  ~\\ ~\\
+
+\paragraph{Average User Errors per Operation}  ~\\ ~\\
 
 \subsection{Reliability}
 Questa caratteristica esprime il grado in cui un sistema, prodotto o componente esegue determinate funzioni sotto determinate condizioni per un dato periodo di tempo.
@@ -67,6 +92,8 @@ In riguardo al prodotto che si intende realizzare, sono state individuate le seg
 	\item{\textbf{Fault Tolerance}}: esprime il grado in cui un sistema, prodotto o componente opera come previsto nonostante la presenza di malfunzionamenti hardware o software.
 	\item{\textbf{Recoverability???}}: non so se considerare anche questa caratteristica.
 \end{itemize}
+\subsubsection{Metriche adottate}
+\paragraph{Failure Density}
 
 \subsection{Maintainability}
 Definisce il grado di efficacia ed efficenza con cui un prodotto o un sistema può essere modificato per migliorarlo, correggerlo o adattarlo a dei cambiamenti all'ambiente. 
