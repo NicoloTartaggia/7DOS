@@ -48,7 +48,78 @@ Ciascuno degli attributi elencati qui sopra è valutato secondo una scala a quat
 \end{itemize}
 \subsection{Metriche per i prodotti}
 \subsubsection{Metriche relative al codice software}
-Il team 7DOS ha deciso di non definire in questo momento delle metriche relative a prodotti software in quanto poco interessanti per la prima revisione.
+\paragraph{Percentuale di requisiti soddisfatti}
+\begin{flushleft}
+Fondamentale per comprendere lo stato di avanzamento del progetto.\\
+Calcolata attraverso la seguente formula:
+$$
+	(\frac{n^{\circ}\:requisiti\:soddisfatti}{n^{\circ}\:totale\:di\:requisiti})*100
+$$
+\textbf{Range Ottimale}:100\%-100\% \\
+\textbf{Range Accettabile}:100\%-100\%
+\end{flushleft}
+\paragraph{Percentuale di test case passati}
+\begin{flushleft}
+Fondamentale per determinare l'effiacia del prodotto software.\\
+Calcolata tramite la seguente formula:
+$$
+	(\frac{n^{\circ}\:test\:superati}{n^{\circ}\:test\:eseguiti})*100
+$$
+\textbf{Range Ottimale}:100\%-100\% \\
+\textbf{Range Accettabile}:100\%-100\%
+\end{flushleft}
+\paragraph{Average Response Time}
+\begin{flushleft}
+Tempo medio richiesto per completare l'esecuzione di una funzionalità richiesta ed esporne il risultato.\\
+Calcolato tramite la seguente formula:
+$$\frac{\sum\limits_{i=1}^N TFE{\small{i}}}{NFE}$$
+Dove
+\begin{itemize}
+\item{\textbf{TFE${\small{i}}$}}:Tempo trascorso dal momento in cui viene richiesta l'esecuzione dell'i-esima funzionalità fino al momento in cui la funzionalita' viene effettivamente completata ed il risultato viene esposto.
+\item{\textbf{NFE}}:Numero di funzionalità eseguite durante una singola esecuzione del prodotto software.
+\end{itemize}
+\textbf{Range Ottimale}:0.3s-0.5s \\
+\textbf{Range Accettabile}:0.5s-1.0s
+\end{flushleft}
+\paragraph{Average time spent per feature development}
+\begin{flushleft}
+Tempo medio speso dall'intero team di sviluppo per lo sviluppo di nuove funzionalità.\\
+Calcolato attraverso la seguente formula:
+	$$\frac{\sum\limits_{i=1}^N TF{\small{i}}}{NF}$$
+Dove
+\begin{itemize}
+	\item{\textbf{TF${\small{i}}$}}:Tempo uomo speso dall'intero team di sviluppo per lo sviluppo dell'iesima funzionalita'.
+	\item{\textbf{NF}}:Numero di funzionalita' sviluppate
+\end{itemize}
+\textbf{Range Ottimale}:3h-4h 30m \\
+\textbf{Range Accettabile}:4h 30m-5h 30m
+\end{flushleft}
+\paragraph{Average time spent per error correction}
+\begin{flushleft}
+Tempo medio speso dall'intero team di sviluppo per la risoluzione di una singolo errore.\\
+Calcolato tramite la seguente formula
+	$$A\frac{\sum\limits_{i=1}^N TE{\small{i}}}{NE}$$
+Dove
+\begin{itemize}
+	\item{\textbf{TE${\small{i}}$}}:Tempo uomo speso per la risoluzione dell'i-esimo errore rilevato
+	\item{\textbf{NE}}:Numero complessivo di errori rilevati
+\end{itemize}
+\textbf{Range Ottimale}:45m-1h 30m \\
+\textbf{Range Accettabile}:1h 30m-2h 30m
+\end{flushleft}
+\paragraph{Average time spent per unit testing}
+\begin{flushleft}
+Tempo medio speso dall'intero team di sviluppo per la scrittura di test corretti e completi per una singola unita'.
+Calcolato attraverso la seguente formula
+	$$\frac{\sum\limits_{i=1}^N TU{\small{i}}}{NU}$$
+Dove
+\begin{itemize}
+	\item{\textbf{TU${\small{i}}$}}:Tempo uomo speso dall'intero team di sviluppo per la scrittura di test corretti e completi per l'i-esima unita'.
+	\item{\textbf{NU}}:Numero unita' testate.
+\end{itemize}
+\textbf{Range Ottimale}:1h 30m-2h \\
+\textbf{Range Accettabile}:2h-2h 30m
+\end{flushleft}
 \subsubsection{Metriche relative alla documentazione}
 \paragraph{Numero di errori grammaticali}
 \begin{flushleft}
@@ -90,10 +161,10 @@ L'indice di Flesh è calcolabile tramite la seguente formula:
 	$$
 Dove
 	\begin{itemize}
-		\item{\textbf{S}}:E' il numero di sillabe calcolato su un campione di 100 parole.
-		\item{\textbf{P}}:P e' il numero medio di parole per frase,
+		\item{\textbf{S}}:Numero di sillabe calcolato su un campione di 100 parole.
+		\item{\textbf{P}}:Numero medio di parole per frase.
 	\end{itemize}
-La leggibilita è considerata come
+La leggibilita è considerata come:
 	\begin{itemize}
 		\item{\textbf{Alta}}:se l'indice e' superiore a 60.
 		\item{\textbf{Media}}:se l'indice e' compresa tra 50 e 60.
