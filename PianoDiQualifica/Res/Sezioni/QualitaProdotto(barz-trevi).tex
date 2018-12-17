@@ -20,7 +20,7 @@ In riguardo al prodotto che si intende realizzare, sono state individuate le seg
 Misurazione in percentuale del grado in cui le funzionalità offerte dalla corrente implementazione del software coprono l'insieme di funzioni specificate nei requisiti.
 Viene utilizzata la seguente formula:
 $$FI_{Comp}=\frac{NF_i}{NF_r}*100$$
-dove FI\textsubscript{Comp} è il valore della metrica, NF\textsubscript{i} è numero di funzioni implementate e NF\textsubscript{r} è numero di funzioni specificate dai requisiti.
+dove FI\textsubscript{Comp} è il valore della metrica, NF\textsubscript{i} è numero di funzioni attualmente implementate e NF\textsubscript{r} è numero di funzioni specificate dai requisiti.
 \begin{itemize}
 	\item{\textbf{Intervallo possibile}: 0-100;}
 	\item{\textbf{Intervallo accettabile}: 75-100;}
@@ -34,7 +34,7 @@ $$aFI_{Corr}=\frac{\sum\limits_{i=1}^N\frac{iPF_i}{rPF_i}}{N}$$
 dove aFI\textsubscript{Corr} è il valore della metrica, iPF\textsubscript{i} è il livello di precisione della i-esima funzione implementata, rPF\textsubscript{i} è il livello di precisione della i-esima funzione secondo i requisiti, e N è il numero totale di funzioni considerate.
 \begin{itemize}
 	\item{\textbf{Intervallo possibile}: 0-100;}
-	\item{\textbf{Intervallo accettabile}: 75-100;}
+	\item{\textbf{Intervallo accettabile}: 80-100;}
 	\item{\textbf{Intervallo obiettivo}: 95-100.}
 \end{itemize}
 
@@ -72,31 +72,48 @@ Percentuale media di utilizzo della Memoria RAM durante una singola esecuzione d
 \subsection{Usability}
 Questa caratteristica esprime il grado in cui un prodotto o sistema può essere usato da un determinato utente per raggiungere determinati scopi con efficacia, efficienza e soddisfazione in uno specifico contesto d'uso.
 \subsubsection{Sotto-caratteristiche notevoli}
-In riguardo al prodotto che si intende realizzare, sono state individuate le seguenti sottocaratteristiche da perseguire come obiettivi prioritari:
+In riguardo al prodotto che si intende realizzare, sono state individuate le seguenti sotto-caratteristiche da perseguire come obiettivi prioritari.
 \begin{itemize}
 	\item{\textbf{Learnability}}: esprime il grado in cui un prodotto o sistema può essere usato da determinati utenti per raggiungere determinati obiettivi di imparare ad usare il prodotto o sistema  con efficacia, efficienza, sicurezza da rischi e soddisfazione in uno specifico contesto d'uso.
 	\item{\textbf{Operability}}: esprime il grado in cui un prodotto o sistema ha attributi che lo rendono facile da operare e controllare.
 	\item{\textbf{User Error Protection}}: esprime il grado in cui un sistema protegge gli utenti dal commettere errori.
 \end{itemize}
 \subsubsection{Metriche adottate}
-\paragraph{Average Functionality Learning Time}  ~\\ ~\\
+\paragraph{Average Learning Time}  ~\\ ~\\
+Misurazione in minuti del tempo medio impiegato da un utente per imparare ad utilizzare una singola funzionalità del prodotto. Viene utilizzata la seguente formula:
+$$aLT=\frac{\sum\limits_{i=1}^N{LT_i}}{N}$$
+dove aLT è il valore della metrica, LT\textsubscript{i} è il tempo necessario ad imparare ad utilizzare la i-esima funzione implementata, espresso in minuti, e N è il numero totale di funzioni considerate.
+\begin{itemize}
+	\item{\textbf{Intervallo possibile}: 0-90;}
+	\item{\textbf{Intervallo accettabile}: 0-30;}
+	\item{\textbf{Intervallo obiettivo}: 0-15.}
+\end{itemize}
 
 \paragraph{Average User Errors per Operation}  ~\\ ~\\
+Da tenere? Non so.
 
 \subsection{Reliability}
 Questa caratteristica esprime il grado in cui un sistema, prodotto o componente esegue determinate funzioni sotto determinate condizioni per un dato periodo di tempo.
 \subsubsection{Sotto-caratteristiche notevoli}
-In riguardo al prodotto che si intende realizzare, sono state individuate le seguenti sottocaratteristiche da perseguire come obiettivi prioritari: 
+In riguardo al prodotto che si intende realizzare, sono state individuate le seguenti sotto-caratteristiche da perseguire come obiettivi prioritari: 
 \begin{itemize}
 	\item{\textbf{Maturity}}: esprime il grado in cui un sistema, prodotto o componente raggiunge i requisiti di affidabilità in normali condizioni operative;
 	\item{\textbf{Fault Tolerance}}: esprime il grado in cui un sistema, prodotto o componente opera come previsto nonostante la presenza di malfunzionamenti hardware o software.
 	\item{\textbf{Recoverability???}}: non so se considerare anche questa caratteristica.
 \end{itemize}
 \subsubsection{Metriche adottate}
-\paragraph{Failure Density}
+\paragraph{Failure Density}  ~\\ ~\\
+Misurazione in percentuale della quantità di test falliti rispetto alla quantità di test eseguiti. Viene utilizzata la seguente formula:
+$$FD=\frac{T_f}{T_c}*100$$
+dove FD è il valore della metrica, T\textsubscript{f} è il numero di test falliti e T\textsubscript{e} è il numero di test eseguiti.
+\begin{itemize}
+	\item{\textbf{Intervallo possibile}: 0-100;}
+	\item{\textbf{Intervallo accettabile}: 0-10;}
+	\item{\textbf{Intervallo obiettivo}: 0.}
+\end{itemize}
 
 \subsection{Maintainability}
-Definisce il grado di efficacia ed efficenza con cui un prodotto o un sistema può essere modificato per migliorarlo, correggerlo o adattarlo a dei cambiamenti all'ambiente. 
+Definisce il grado di efficacia ed efficienza con cui un prodotto o un sistema può essere modificato per migliorarlo, correggerlo o adattarlo a dei cambiamenti all'ambiente. 
 \subsubsection{Sotto-caratteristiche notevoli}
 \begin{itemize}
 	\item{\textbf{Modularity}}:Grado di scomposizione del sistema in parti minimali tali che un cambiamento ad uno specifica componente ha il minimo impatto su tutte le altri componenti.
@@ -114,7 +131,7 @@ Dove
 \begin{itemize}
 	\item{\textbf{ATF}}:Average time spent per feature development
 	\item{\textbf{TF${\small{i}}$}}:Tempo uomo speso dall'intero team di sviluppo per lo sviluppo dell'iesima funzionalita'.
-	\item{\textbf{NU}}:Numero di funzionalita' sviluppate
+	\item{\textbf{NU}}:Numero di funzionalità sviluppate
 \end{itemize}
 \textbf{Range Ottimale}:3h-4h 30m \\
 \textbf{Range Accettabile}:4h 30m-5h 30m
