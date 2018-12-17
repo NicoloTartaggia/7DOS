@@ -30,7 +30,7 @@ dove FI\textsubscript{Comp} è il valore della metrica, NF\textsubscript{i} è n
 \paragraph{Average Functional Implementation Correctness} ~\\ ~\\
 Misurazione in percentuale del grado in cui le funzionalità offerte dalla corrente implementazione del software, in media, rispettano il livello di precisione indicato nei requisiti.
 Viene utilizzata la seguente formula:
-$$aFI_{Corr}=\frac{\sum\limits_{i=1}^N\frac{iPF_i}{rPF_i}}{N}$$
+$$aFI_{Corr}=\frac{\sum\limits_{i=1}^N\frac{iPF_i}{rPF_i}}{N}*100$$
 dove aFI\textsubscript{Corr} è il valore della metrica, iPF\textsubscript{i} è il livello di precisione della i-esima funzione implementata, rPF\textsubscript{i} è il livello di precisione della i-esima funzione secondo i requisiti, e N è il numero totale di funzioni considerate.
 \begin{itemize}
 	\item{\textbf{Intervallo possibile}: 0-100;}
@@ -130,7 +130,7 @@ Tempo medio speso dall'intero team di sviluppo per lo sviluppo di nuove funziona
 Dove
 \begin{itemize}
 	\item{\textbf{ATF}}:Average time spent per feature development
-	\item{\textbf{TF${\small{i}}$}}:Tempo uomo speso dall'intero team di sviluppo per lo sviluppo dell'iesima funzionalita'.
+	\item{\textbf{TF${\small{i}}$}}:Tempo uomo speso dall'intero team di sviluppo per lo sviluppo dell'i-esima funzionalita'.
 	\item{\textbf{NU}}:Numero di funzionalità sviluppate
 \end{itemize}
 \textbf{Range Ottimale}:3h-4h 30m \\
@@ -162,12 +162,4 @@ Dove
 \textbf{Range Ottimale}:1h 30m-2h \\
 \textbf{Range Accettabile}:2h-2h 30m
 \end{flushleft}
-\subsection{Portability}
-Grado di efficacia ed efficenza con cui un sistema, prodotto o componente può essere trasferito da una specifica piattaforma hardware o software ad un altro ambiente completamente differente.
-\subsubsection{Sottocaratteristiche notevoli}
-\begin{itemize}
-	\item{\textbf{Adaptability}}:Grado di efficacia ed efficenza con cui un prodotto può essere adattato a hardware diverso.
-	\item{\textbf{Installability}}:Grado di efficacia ed efficenza con un prodotto può essere installato o disinstallato da uno specifico ambiente.
-	\item{\textbf{Replaceability}}:Grado di efficacia ed efficenza con cui un prodotto e'in grado di rimpiazzare un altro prodotto con lo stesso scopo.
-\end{itemize}
 \pagebreak
