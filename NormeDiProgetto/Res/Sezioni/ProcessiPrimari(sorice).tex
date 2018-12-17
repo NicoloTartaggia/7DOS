@@ -1,7 +1,7 @@
 \newsection{Processi primari}
 \subsection{Fornitura}
 Il fine di questa sezione è quello di definire le norme che i membri del gruppo 7DOS sono invitati a rispettare con l'obiettivo di proporsi e diventare fornitori nei confronti dell'azienda proponente Zucchetti srl. e dei committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin per quanto concerne il prodotto \emph{G\&B}.
-Con la finalità di raggiungere questa meta nel miglior modo possibile, abbiamo intenzione di collaborare in modo efficiente e efficace con i referenti dell'azienda. 
+Per raggiungere questa meta nel miglior modo possibile, abbiamo intenzione di collaborare in modo efficiente e efficace con i referenti dell'azienda. 
 I punti fondamentali che verranno affrontati insieme al proponente saranno:
 \begin{itemize}
 \item Determinare gli aspetti cruciali al fine di soddisfare l'azienda proponente;
@@ -15,7 +15,8 @@ Successivamente alla presentazione dei Capitolati d'appalto, ogno componente del
 \begin{itemize}
  	\item\textbf{{Descrizione}}: riporta una breve sintesi del prodotto da sviluppare;
  	\item\textbf{{Studio del dominio}}: riporta un'analisi del dominio applicativo, in cui vi è una più corposa descrizione del prodotto da sviluppare con l'aggiunta di una generale contestualizzazione, e un'analisi del dominio tecnologico, in cui vengono elencate le maggiori tecnologie coinvolte per ogni prodotto secondo la descizione del capitolato e dalle esperienze pregresse dei componenti del gruppo;
-	\item\textbf{{Valutazione generale}}:composta dagli aspetti positivi, dai fattori di rischio e da una Valutazione finale in cui vi si può trovare in breve la motivazione della scelta presa per ogni capitolato in base a ciò che è stato riportato nelle due sezioni precedenti; 		
+	\item\textbf{{Valutazione generale}}:composta dagli aspetti positivi e dagli aspetti negativi trovati discussi dal gruppo riguardo al capitolato in esame;
+	\item\textbf{{Valutazione finale}}:in cui vi si può trovare in breve la motivazione della scelta presa per ogni capitolato in base a ciò che è stato riportato nelle tre sezioni precedenti; 		
 \end{itemize}
 \paragraph{Piano di progetto}\Spazio
 La redazione di un piano da seguire durante la realizzazione del progetto spetta al Responsabile, aiutato nelle scelte dagli Amministratori. Il documento dovrà dovrà coprire le seguenti tematiche:
@@ -78,9 +79,33 @@ Ogni caso d'suo è descritto dalla seguente struttura:
 	\item estensioni (se presenti); 	
 \end{itemize}
 \subparagraph{Requisiti}\Spazio
-\subparagraph{Codice identificativo}\Spazio
+Ogni requisito è descritto dalla seguente struttura:
+\begin{itemize}
+	\item Nome; 	
+	\item Tipo; 	
+	\item Importanza; 	
+	\item Stato implementazione; 	
+	\item Fonti; 	
+\end{itemize}
+
+Inoltre, a ciascun requisito corrisponde un codice identificativo cosi composto: 
+$$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$ 
+\begin{itemize}
+	\item R specifica che si tratta di un requisito ; 	
+	\item importanza identifica la rilevanza del requisito e può assumere 3 valori:
+	\begin{itemize}
+		\item 0: indica che il requisito è obbligatorio e il suo soddisfacimento dovrà necessariamente avvenire;  	
+		\item 1: indica che il requisito è desiderabile, cioè il suo soddisfacimento può portare maggiore completezza al sistema ma non è fondamentale per lo stesso; 	
+		\item 2: indica che il requisito è opzionale, e quindi la decisione di implementarlo o meno verrà presa dopo le dovute considerazioni; 	
+	\end{itemize} 	
+	\item tipo distingue se si tratta di un requisito funzionale (F), di qualità (Q), di prestazione (P) o di vincolo (V); 	
+	\item identificativo è un numero progressivo che identifica i sottocasi; 	
+\end{itemize}
 \subparagraph{UML}\Spazio
+I diagrammi UML devono essere realizzati usando la versione del linguaggio \emph{v2.0}
 \paragraph{Progettazione}
+\subparagraph{Scopo}\Spazio
+
 \paragraph{Codifica}
 \paragraph{Procedure}
 \subsection{Strumenti}
