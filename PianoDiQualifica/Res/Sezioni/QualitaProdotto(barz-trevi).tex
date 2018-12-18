@@ -17,7 +17,8 @@ In riguardo al prodotto che si intende realizzare, sono state individuate le seg
 \end{itemize}
 \subsubsection{Metriche adottate} 
 \paragraph{Functional Implementation Completeness} ~\\ ~\\
-Misurazione in percentuale del grado in cui le funzionalità offerte dalla corrente implementazione del software coprono l'insieme di funzioni specificate nei requisiti.
+Misurazione in percentuale del grado in cui le funzionalità offerte dalla corrente implementazione del software coprono l'insieme di funzioni specificate nei requisiti.\\
+Questa metrica è stata scelta per valutare il grado di completezza del prodotto; l'obiettivo è implementare tutte le funzionalità richieste.\\
 Viene utilizzata la seguente formula:
 $$FI_{Comp}=\frac{NF_i}{NF_r}*100$$
 dove FI\textsubscript{Comp} è il valore della metrica, NF\textsubscript{i} è numero di funzioni attualmente implementate e NF\textsubscript{r} è numero di funzioni specificate dai requisiti.
@@ -28,7 +29,8 @@ dove FI\textsubscript{Comp} è il valore della metrica, NF\textsubscript{i} è n
 \end{itemize}
 
 \paragraph{Average Functional Implementation Correctness} ~\\ ~\\
-Misurazione in percentuale del grado in cui le funzionalità offerte dalla corrente implementazione del software, in media, rispettano il livello di precisione indicato nei requisiti.
+Misurazione in percentuale del grado in cui le funzionalità offerte dalla corrente implementazione del software, in media, rispettano il livello di precisione indicato nei requisiti.\\
+Questa metrica è stata scelta per valutare il grado di accuratezza e garantire la qualità dei risultati restituiti dal prodotto, in quanto andrà a fare previsioni sulla verosimiglianza di alcuni eventi in base ai dati forniti, ed è necessario che tali previsioni siano sufficientemente accurate.\\
 Viene utilizzata la seguente formula:
 $$aFI_{Corr}=\frac{\sum\limits_{i=1}^N\frac{iPF_i}{rPF_i}}{N}*100$$
 dove aFI\textsubscript{Corr} è il valore della metrica, iPF\textsubscript{i} è il livello di precisione della i-esima funzione implementata, rPF\textsubscript{i} è il livello di precisione della i-esima funzione secondo i requisiti, e N è il numero totale di funzioni considerate.
@@ -80,17 +82,16 @@ In riguardo al prodotto che si intende realizzare, sono state individuate le seg
 \end{itemize}
 \subsubsection{Metriche adottate}
 \paragraph{Average Learning Time}  ~\\ ~\\
-Misurazione in minuti del tempo medio impiegato da un utente per imparare ad utilizzare una singola funzionalità del prodotto. Viene utilizzata la seguente formula:
+Misurazione in minuti del tempo medio impiegato da un utente per imparare ad utilizzare una singola funzionalità del prodotto.
+\\Questa metrica è stata scelta poiché, trattandosi di un prodotto che verrà reso disponibile pubblicamente, è stato ritenuto importante renderlo semplice da imparare per permetterne l'uso ad una vasta gamma di utenti.
+\\Viene utilizzata la seguente formula:
 $$aLT=\frac{\sum\limits_{i=1}^N{LT_i}}{N}$$
 dove aLT è il valore della metrica, LT\textsubscript{i} è il tempo necessario ad imparare ad utilizzare la i-esima funzione implementata, espresso in minuti, e N è il numero totale di funzioni considerate.
 \begin{itemize}
-	\item{\textbf{Intervallo possibile}: 0-90;}
+	\item{\textbf{Intervallo possibile}: 0-$\infty$;}
 	\item{\textbf{Intervallo accettabile}: 0-30;}
 	\item{\textbf{Intervallo obiettivo}: 0-15.}
 \end{itemize}
-
-\paragraph{Average User Errors per Operation}  ~\\ ~\\
-Da tenere? Non so.
 
 \subsection{Reliability}
 Questa caratteristica esprime il grado in cui un sistema, prodotto o componente esegue determinate funzioni sotto determinate condizioni per un dato periodo di tempo.
@@ -99,11 +100,12 @@ In riguardo al prodotto che si intende realizzare, sono state individuate le seg
 \begin{itemize}
 	\item{\textbf{Maturity}}: esprime il grado in cui un sistema, prodotto o componente raggiunge i requisiti di affidabilità in normali condizioni operative;
 	\item{\textbf{Fault Tolerance}}: esprime il grado in cui un sistema, prodotto o componente opera come previsto nonostante la presenza di malfunzionamenti hardware o software.
-	\item{\textbf{Recoverability???}}: non so se considerare anche questa caratteristica.
 \end{itemize}
 \subsubsection{Metriche adottate}
 \paragraph{Failure Density}  ~\\ ~\\
-Misurazione in percentuale della quantità di test falliti rispetto alla quantità di test eseguiti. Viene utilizzata la seguente formula:
+Misurazione in percentuale della quantità di test falliti rispetto alla quantità di test eseguiti.
+\\Questa metrica è stata scelta per garantire che il prodotto sia generalmente stabile e non risulti poco utilizzabile o inutilizzabile a causa di eccessive failure. Valutazioni più precise saranno effettuate in base ai singoli risultati dei test.\\
+Viene utilizzata la seguente formula:
 $$FD=\frac{T_f}{T_c}*100$$
 dove FD è il valore della metrica, T\textsubscript{f} è il numero di test falliti e T\textsubscript{e} è il numero di test eseguiti.
 \begin{itemize}
