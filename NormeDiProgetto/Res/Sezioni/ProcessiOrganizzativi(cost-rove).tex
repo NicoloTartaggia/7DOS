@@ -73,16 +73,16 @@ Il responsabile rappresenta il team nelle interazioni con il committente, si occ
 
 \subsubsection{Sistema di ticketing}
 \paragraph{Piattaforma}
-Per la gestione del sistema di ticketing viene utilizzato ****. La piattaforma permette
+Per la gestione del sistema di ticketing viene utilizzato nTask. La piattaforma permette
 di creare task e di assegnarli ai membri del gruppo. Ogni task è caratterizzato da
-descrizione, data di inizio e data di fine. **** permette inoltre di avere diverse visualizzazioni dei task assegnati: dashboard, diagramma di Gannt, lista testuale, tabella, calendario.
+descrizione, data di inizio e data di fine. nTask permette inoltre di avere diverse visualizzazioni dei task assegnati: dashboard, diagramma di Gannt, lista testuale, tabella, calendario.
 
 \paragraph{Gestione dei task}
 I task vengono creati ed assegnati dal responsabile di progetto. Qualora l'assegnatario dovesse realizzare che il task assegnato non è completabile entro la data di fine, o se ci dovessero essere altri problemi con il task, l'assegnatario avrà la responsabilità di segnalare il problema al responsabile di progetto che sarà tenuto a ripianificare la risoluzione del task.
 
 \subsubsection{Gestione dei rischi}
 La gestione dei rischi è in carico al responsabile di progetto. Egli deve monitorare, 
-individuare e riportare i rischi nel piano di progetto oltre a definire delle strategie per mitigarli. La gestione dei rischi ha luogo durante tutta la durata del progetto e a suo supporto utilizziamo **** che fornisce degli strumenti per il tracking dei rischi.
+individuare e riportare i rischi nel piano di progetto oltre a definire delle strategie per mitigarli. La gestione dei rischi ha luogo durante tutta la durata del progetto e a suo supporto utilizziamo nTask che fornisce degli strumenti per il tracking dei rischi.
 
 \subsection{Gestione delle comunicazioni}
 \subsubsection{Comunicazioni interne al gruppo}
@@ -128,6 +128,33 @@ Viene usato con Github, in quanto è un servizio già conosciuto dai membri del 
 
 \subsubsection{Client Git}
 A seconda delle preferenze, ogni membro del team deciderà se usare come client GitKraken o GitHub Desktop. Entrambi sono client desktop che facilitano l'utilizzo di git, rendendo molto più semplice inviare le modifiche locali al repository remoto, o viceversa.
+
+\subsection{Norme di versionamento}
+Come già detto, il servizio di hosting scelto per la repository è GitHub.
+La repository è privata, seguono le norme che ne riguardano gli aspetti principali.
+
+\subsubsection{Norme sui file}
+I file devono rispettare le norme di nomenclatura già specificate in 3.1.6 Nomenclatura dei documenti.
+Tramite il file .gitignore vengono esclusi i file intermedi di compilazione dei file latex.
+Gli unici file ammessi nella repository sono .tex .jpg .png .pdf.
+
+\subsubsection{Norme sui commit}
+Ogni modifica sostanziale effettuata ai file dev'essere seguita da un commit. Il commento associato ad ogni commit deve rispettare il template: [nome file] descrizione
+La descrizione deve essere concisa e quanto più esaustiva possibile. Ad ogni commit deve corrispondere un aggiornamento del diario delle modifiche. 
+
+\subsubsection{Norme su branching e merging}
+Le norme usate per branching e merging si rifanno al Git Feauture Branch Workflow:
+master è il branch in cui risiederà documentazione e codice verificati e approvati.
+Le modifiche o le nuove feature vanno implementate su un feature branch che saranno verificati
+prima di effettuare una pull request verso master.
+La pull request permette di non modificare master fintanto che non viene verificato il branch.
+Ogni nuovo feature branch deve:
+\begin{itemize}  
+\item essere creato a partire da master;
+\item avere un nome che permetta di capire a quale feature è associato.
+\end{itemize}
+Queste norme saranno rivisitate all'inizio del processo di sviluppo per accertarsi che il feature branch workflow
+sia il più opportuno da usare. Una possibile alternativa con cui verrà confrontato è GitFlow.
 
 \subsection{Formazione}
 La formazione ai fini del progetto è responsabilità di ogni singolo membro del gruppo. Qualora ai fini del progetto un membro del gruppo dovesse formarsi autonomamente su un argomento sconosciuto agli altri, sarà sua responsabilità informare il gruppo e se ritenuto opportuno formarlo secondo una delle seguenti modalità: 
