@@ -78,7 +78,6 @@ Definisce le prestazioni relative al sistema come, quantità di risorse utilizza
 \begin{itemize}
 	\item{\textbf{Time Behaviour}}: esprime il grado in cui i tempi di risposta ed elaborazione e i volumi di produzione di un prodotto o sistema, durante l'esecuzione delle sue funzionalità, rispettano i requisiti.
 	\item{\textbf{Resource Utilization}}: esprime il grado in cui il numero e tipo di risorse utilizzate da un prodotto o sistema, durante l'esecuzione delle sue funzionalità, rispetta i requisiti.
-	\item{\textbf{Capacity}}: esprime il grado in cui i limiti massimi di un prodotto o sistema rispettano quelli definiti dai requisiti.
 \end{itemize}
 
 \paragraph{Usability} ~\\ ~\\
@@ -115,30 +114,8 @@ Il processo di verifica, per essere informativo, deve esse quantificabile. Sono 
 	\item {\textbf{Intervallo accettabile:} i valori che vengono considerati oltre la soglia di accettabilità per la metrica;}
 	\item {\textbf{Intervallo obiettivo:} i valori che vengono considerati l'obiettivo ottimale da raggiungere.}
 \end{itemize}
-\subsubsection{Metriche generali}
-\paragraph{Functional Implementation Completeness} ~\\ ~\\
-Misurazione in percentuale del grado in cui le funzionalità offerte dalla corrente implementazione del software coprono l'insieme di funzioni specificate nei requisiti.\\
-Questa metrica è stata scelta per valutare il grado di completezza del prodotto; l'obiettivo è implementare tutte le funzionalità richieste.\\
-Viene utilizzata la seguente formula:
-$$FI_{Comp}=\frac{NF_i}{NF_r}*100$$
-dove FI\textsubscript{Comp} è il valore della metrica, NF\textsubscript{i} è numero di funzioni attualmente implementate e NF\textsubscript{r} è numero di funzioni specificate dai requisiti.
-\begin{itemize}
-	\item{\textbf{Intervallo limite}: 0-100;}
-	\item{\textbf{Intervallo accettabile}: 75-100;}
-	\item{\textbf{Intervallo obiettivo}: 100.}
-\end{itemize}
+\subsubsection{Metriche per i processi}
 
-\paragraph{Average Functional Implementation Correctness} ~\\ ~\\
-Misurazione in percentuale del grado in cui le funzionalità offerte dalla corrente implementazione del software, in media, rispettano il livello di precisione indicato nei requisiti.\\
-Questa metrica è stata scelta per valutare il grado di accuratezza e garantire la qualità dei risultati restituiti dal prodotto, in quanto andrà a fare previsioni sulla verosimiglianza di alcuni eventi in base ai dati forniti, ed è necessario che tali previsioni siano sufficientemente accurate.\\
-Viene utilizzata la seguente formula:
-$$aFI_{Corr}=\frac{\sum\limits_{i=1}^N\frac{iPF_i}{rPF_i}}{N}*100$$
-dove aFI\textsubscript{Corr} è il valore della metrica, iPF\textsubscript{i} è il livello di precisione della i-esima funzione implementata, rPF\textsubscript{i} è il livello di precisione della i-esima funzione secondo i requisiti, e N è il numero totale di funzioni considerate.
-\begin{itemize}
-	\item{\textbf{Intervallo limite}: 0-100;}
-	\item{\textbf{Intervallo accettabile}: 80-100;}
-	\item{\textbf{Intervallo obiettivo}: 95-100.}
-\end{itemize}
 \subsubsection{Metriche relative ai documenti}
 \paragraph{Numero di errori grammaticali}~\\ ~\\
 Misura del numero di errori grammaticali presenti all'interno di un documento.
@@ -190,6 +167,31 @@ La leggibilita è considerata come:
 \textbf{Intervallo accettabile}:50-100;\\	
 \textbf{Intervallo ottimale}:60-100. 
 \subsubsection{Metriche relative ai prodotti software}
+
+\paragraph{Functional Implementation Completeness} ~\\ ~\\
+Misurazione in percentuale del grado in cui le funzionalità offerte dalla corrente implementazione del software coprono l'insieme di funzioni specificate nei requisiti.\\
+Questa metrica è stata scelta per valutare il grado di completezza del prodotto; l'obiettivo è implementare tutte le funzionalità richieste.\\
+Viene utilizzata la seguente formula:
+$$FI_{Comp}=\frac{NF_i}{NF_r}*100$$
+dove FI\textsubscript{Comp} è il valore della metrica, NF\textsubscript{i} è numero di funzioni attualmente implementate e NF\textsubscript{r} è numero di funzioni specificate dai requisiti.
+\begin{itemize}
+	\item{\textbf{Intervallo limite}: 0-100;}
+	\item{\textbf{Intervallo accettabile}: 75-100;}
+	\item{\textbf{Intervallo obiettivo}: 100.}
+\end{itemize}
+
+\paragraph{Average Functional Implementation Correctness} ~\\ ~\\
+Misurazione in percentuale del grado in cui le funzionalità offerte dalla corrente implementazione del software, in media, rispettano il livello di precisione indicato nei requisiti.\\
+Questa metrica è stata scelta per valutare il grado di accuratezza e garantire la qualità dei risultati restituiti dal prodotto, in quanto andrà a fare previsioni sulla verosimiglianza di alcuni eventi in base ai dati forniti, ed è necessario che tali previsioni siano sufficientemente accurate.\\
+Viene utilizzata la seguente formula:
+$$aFI_{Corr}=\frac{\sum\limits_{i=1}^N\frac{iPF_i}{rPF_i}}{N}*100$$
+dove aFI\textsubscript{Corr} è il valore della metrica, iPF\textsubscript{i} è il livello di precisione della i-esima funzione implementata, rPF\textsubscript{i} è il livello di precisione della i-esima funzione secondo i requisiti, e N è il numero totale di funzioni considerate.
+\begin{itemize}
+	\item{\textbf{Intervallo limite}: 0-100;}
+	\item{\textbf{Intervallo accettabile}: 80-100;}
+	\item{\textbf{Intervallo obiettivo}: 95-100.}
+\end{itemize}
+
 \paragraph{Average Learning Time}  ~\\ ~\\
 Misurazione in minuti del tempo medio impiegato da un utente per imparare ad utilizzare una singola funzionalità del prodotto.
 \\Questa metrica è stata scelta poiché, trattandosi di un prodotto che verrà reso disponibile pubblicamente, è stato ritenuto importante renderlo semplice da imparare per permetterne l'uso ad una vasta gamma di utenti.
