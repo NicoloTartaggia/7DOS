@@ -2,9 +2,10 @@
 Il Piano di Qualifica qualità prevede che vengano delineati obiettivi da portare a termine seguendo strategia e metriche ben definite.
 \subsection{Obiettivi}
 La qualità del prodotto richiesta dal proponente è strettamente legata con la qualità dei processi che portano al suo sviluppo. Pertanto, attraverso questa sezione, si descrivono gli obiettivi per il perseguimento di entrambe le parti basandosi sugli standard riportati di seguito. 
-\subsubsection{Qualità di processo}
-	É impossibile produrre prodotti caratterizzati da un alto livello di qualità se il proprio way of warking non è di qualità. Per poter raggiungere gli obiettivi prefissati è fondamentale che i processi attuati garantiscano un elevato livello di qualità. Il gruppo 7dos, per questo motivo, ha deciso di adottare la normativa ISO/IEC 15504 (chiamata anche SPICE) e di seguire il principio di miglioramento continuo (\gl{PDCA}). \\ Per ogni \gl{processo} lo standard definisce una scala di maturità a cinque livelli (più il livello base, detto "livello 0"), riportati di seguito:
-	
+\subsection{Qualità di processo}
+	É impossibile produrre prodotti caratterizzati da un alto livello di qualità se il proprio way of warking non è di qualità. Per poter raggiungere gli obiettivi prefissati è fondamentale che i processi attuati garantiscano un elevato livello di qualità. Il gruppo 7dos, per questo motivo, ha deciso di adottare la normativa ISO/IEC 15504 (chiamata anche SPICE) e di seguire il principio di miglioramento continuo (\gl{PDCA}). 
+\subsubsection{ISO/IEC 15504(SPICE)}
+Per ogni \gl{processo} lo standard ISO/IEC 15504 definisce una scala di maturità a cinque livelli (più il livello base, detto "livello 0"), riportati di seguito:
 	\begin{itemize}
 	\item \textbf {Livello 0 - Incomplete Process}: il processo riporta \gl{performance} e risultati incompleti, inoltre è gestito in modo caotico.
 	\item \textbf {Livello 1 - Performed Process}:  il processo raggiunge i risultati attesi ma viene eseguito in modo non controllato. Gli attributi di tale processo sono:
@@ -40,7 +41,7 @@ La qualità del prodotto richiesta dal proponente è strettamente legata con la 
 	\item \textbf{L - Largely Achieved}: >50\% - 85\%;
 	\item \textbf{F - Fully Achieved}: >85\% - 100\%;
 	\end{itemize}
-
+\subsubsection{Ciclo di miglioramento continuo (PDCA)}
 	Il ciclo di miglioramento continuo (PDCA, \emph{Plan-Do-Check-Act)} prevede quattro fasi iterative che permettono di controllare costantemente lo sviluppo di un processo, in modo da poter perseguire la miglior qualità di quest'ultimo:
 	\begin{itemize}
 	\item \textbf{Plan}: in questa fase vengono definiti elementi estremamente importanti che riguardano il ciclo di miglioramento continuo. In particolare vengono fissati obiettivi, processi da utilizzare, risultati da ottenere, personale incaricato per i vari processi e scadenze da rispettare;
@@ -49,7 +50,7 @@ La qualità del prodotto richiesta dal proponente è strettamente legata con la 
 	\item \textbf{Act}: in questa fase vengono individuate le possibili problematiche che hanno prodotto risultati differenti da quelli attesi. Di conseguenza, verranno determinate tutte le attività da revisionare per migliorare la qualità del processo. 
 	\end{itemize}
 
-\paragraph{Gestione}  ~\\ ~\\
+\subsubsection{Gestione}
 	Il gruppo 7dos ha deciso di seguire l'approccio a maturità di processo per i seguenti motivi:
 	\begin{itemize}
 	\item predisposizione alla cura della qualità del prodotto e dei processi;
@@ -57,7 +58,7 @@ La qualità del prodotto richiesta dal proponente è strettamente legata con la 
 	\item adatto per i neofiti della programmazione progettuale.
 	\end{itemize}
 	
-\subsubsection{Qualità di prodotto}
+\subsection{Qualità di prodotto}
 Per poter garantire che il prodotto realizzato sia di alta qualità, è necessario definire un modello per la valutazione di quest'ultima; il team 7dos, per questo motivo, ha scelto di adottare il modello di qualità delineato nello standard ISO/IEC 25010, anche noto come \gl{SQuaRE}.
 
 Tale modello comprende 8 caratteristiche (ciascuna divisa in sotto-caratteristiche, per un totale di 31) che vanno prese in considerazione durante lo sviluppo del progetto per garantire un'elevata qualità complessiva del prodotto finale.
@@ -65,7 +66,7 @@ Tale modello comprende 8 caratteristiche (ciascuna divisa in sotto-caratteristic
 Per praticità e rilevanza ai fini del prodotto, sono state selezionate 5 caratteristiche da considerare e per ciascuna sono state individuate le sotto-caratteristiche più rilevanti al progetto, da perseguire come obiettivi prioritari. In particolare, sono state scartate: \gl{Compatibility}, in quanto andando a realizzare un plugin (di natura integrato in un sistema preesistente) è stata giudicata superflua; \gl{Security}, in quanto il plugin non dovrà gestire autenticazione o raccolta di dati; ed infine \gl{Portability} in quanto essendo il prodotto un plugin per un determinato sistema, non è rilevante la sua portabilità ad altri ambienti. 
 
 Di seguito vengono riportate le caratteristiche e sotto-caratteristiche selezionate:
-\paragraph{Functional Suitability} ~\\ ~\\
+\subsubsection{Functional Suitability}
 Questa caratteristica esprime il grado di soddisfacimento dei requisiti espliciti ed impliciti da parte di un prodotto o servizio, quando utilizzato sotto determinate condizioni.\\ \\
 \textbf{Sotto-caratteristiche notevoli:}
 \begin{itemize}
@@ -73,7 +74,7 @@ Questa caratteristica esprime il grado di soddisfacimento dei requisiti esplicit
 	\item{\textbf{Functional Correctness}}: esprime il grado con cui il prodotto restituisce risultati corretti, entro il livello di precisione desiderato.
 \end{itemize}
 
-\paragraph{Performance Efficiency} ~\\ ~\\
+\subsubsection{Performance Efficiency}
 Questa caratteristica esprime le prestazioni relative al sistema come, quantità di risorse utilizzate per eseguire una determinata funzionalità del sistema sotto specifiche condizioni.  \\ \\
 \textbf{Sotto-caratteristiche notevoli:}
 \begin{itemize}
@@ -81,7 +82,7 @@ Questa caratteristica esprime le prestazioni relative al sistema come, quantità
 	\item{\textbf{Resource Utilization}}: esprime il grado con cui il numero e tipo di risorse utilizzate da un prodotto o sistema, durante l'esecuzione delle sue funzionalità, rispetta i requisiti.
 \end{itemize}
 
-\paragraph{Usability} ~\\ ~\\
+\subsubsection{Usability}
 Questa caratteristica esprime il grado con cui un prodotto o sistema può essere usato da un determinato utente per raggiungere determinati scopi con efficacia, efficienza e soddisfazione in uno specifico contesto d'uso.\\ \\
 \textbf{Sotto-caratteristiche notevoli:}
 \begin{itemize}
@@ -90,7 +91,7 @@ Questa caratteristica esprime il grado con cui un prodotto o sistema può essere
 	\item{\textbf{User Error Protection}}: esprime il grado di efficacia ed efficienza con cui un sistema protegge gli utenti dal commettere errori.
 \end{itemize}
 
-\paragraph{Reliability}  ~\\ ~\\
+\subsubsection{Reliability}
 Questa caratteristica esprime il grado con cui un sistema, prodotto o componente esegue determinate funzioni sotto specifiche condizioni per un dato periodo di tempo. \\ \\
 \textbf{Sotto-caratteristiche notevoli:}
 \begin{itemize}
@@ -98,7 +99,7 @@ Questa caratteristica esprime il grado con cui un sistema, prodotto o componente
 	\item{\textbf{Fault Tolerance}}: esprime il grado con cui un sistema, prodotto o componente opera come previsto nonostante la presenza di malfunzionamenti hardware o software.
 \end{itemize}
 
-\paragraph{Maintainability} ~\\ ~\\
+\subsubsection{Maintainability}
 Questa caratteristica esprime il grado di efficacia ed efficienza con cui un prodotto, o componente può essere modificato per migliorarlo, correggerlo o adattarlo a dei cambiamenti all'ambiente. \\ \\
 \textbf{Sotto-caratteristiche notevoli}
 \begin{itemize}
@@ -108,126 +109,6 @@ Questa caratteristica esprime il grado di efficacia ed efficienza con cui un pro
 	\item{\textbf{Testability}}: esprime il grado di efficacia ed efficienza con cui è possibile stabilire ed eseguire dei test per valutare la qualità del sistema
 \end{itemize}
 
-\subsection{Definizione delle metriche}
-Il processo di verifica, per essere informativo, deve esse quantificabile. Sono state quindi stabilite delle metriche di natura numerica, in modo da misurare accuratamente le varie caratteristiche di qualità del prodotto. Per ogni metrica sono presenti  spiegazione, motivazione, formula usata per il calcolo e tre intervalli di valori. Questi ultimi sono distinti come segue:
-\begin{itemize}
-	\item {\textbf{Intervallo limite:} eventuali intervalli di valori in cui la metrica deve essere racchiusa per poter essere considerata come un valore legale che possiede una certa rilevanza;}
-	\item {\textbf{Intervallo accettabile:} i valori che vengono considerati oltre la soglia di accettabilità per la metrica;}
-	\item {\textbf{Intervallo obiettivo:} i valori che vengono considerati l'obiettivo ottimale da raggiungere.}
-\end{itemize}
-
-\subsubsection{Metriche relative ai documenti}
-\paragraph{Numero di errori grammaticali}~\\ ~\\
-Misura del numero di errori grammaticali presenti all'interno di un documento.
-Tutti i documenti verranno analizzati da un apposito strumento di analisi grammaticale. Per poter essere accettati non potranno avere un numero di errori grammaticali superiore a zero.
-
-\paragraph{Gunning fog index}~\\ ~\\
-Indice utilizzato per misurare la facilità di lettura e comprensione di un testo. Il numero risultante è un indicatore del numero di anni di educazione formale necessari al fine di leggere il testo con facilità. \\
-L'indice di Gunning fog è calcolabile tramite la seguente formula:
-$$
-	0.4*((\frac{n^{\circ}\:parole}{n^{\circ}\:frasi})+100*(\frac{n^{\circ}\:parole\:complesse}{n^{\circ}\:parole}))
-$$
-Per questa metrica vengono definiti i seguenti intervalli: 
-\begin{itemize}
-	\item{\textbf{Intervallo limite}: $\mathbb{R+}$;}
-	\item{\textbf{Intervallo accettabile}: $\mathbb{R+}$}
-	\item{\textbf{Intervallo obiettivo}: $\leq$12;}
-\end{itemize}
-\paragraph{Indice di Gulpease}~\\ ~\\
-Utilizzato per misurare la leggibilità di un testo in lingua italiana.\\
-L'indice di Gulpease è calcolabile tramite la seguente formula:
-$$
-	89+\frac{(numero\:delle\:frasi)-10*(numero\:delle\:lettere)}{numero\:delle\:parole}
-$$
-I risultati sono compresi tra 0 e 100, dove 0 indica la leggibilità più bassa e 100 la leggibilità più alta. In generale risulta che i testi con indice:
-	\begin{itemize}
-		\item{\textbf{Inferiore	a 80}}: sono difficili da leggere per chi ha la licenza elementare;
-		\item{\textbf{Inferiore	a 60}}: sono difficili da leggere per chi ha la licenza media;
-		\item{\textbf{Inferiore	a 40}}: sono difficili da leggere per chi ha la licenza superiore.
-	\end{itemize}
-Per questa metrica vengono definiti i seguenti intervalli: 
-	\begin{itemize}
-		\item{\textbf{Intervallo limite}: 0-100;}
-		\item{\textbf{Intervallo accettabile}: 40-100;}
-		\item{\textbf{Intervallo obiettivo}: 60-100;}
-	\end{itemize}
-\paragraph{Indice di Flesh}~\\ ~\\
-Utilizzato per misurare la leggibilità di un testo in lingua inglese.\\
-L'indice di Flesh è calcolabile tramite la seguente formula:
-	$$
-		206,835-(0,846*S)-(1,015*P)
-	$$
-Dove
-	\begin{itemize}
-		\item{\textbf{S}}: numero di sillabe calcolato su un campione di 100 parole.
-		\item{\textbf{P}}: numero medio di parole per frase.
-	\end{itemize}
-La leggibilità è considerata:
-	\begin{itemize}
-		\item{\textbf{Alta}}: se l'indice è superiore a 60.
-		\item{\textbf{Media}}: se l'indice è compresa tra 50 e 60.
-		\item{\textbf{Bassa}}: se l'indice è inferiore a 50.
-	\end{itemize}
-Per questa metrica vengono definiti i seguenti intervalli: 
-\begin{itemize}
-	\item{\textbf{Intervallo limite}: 0-100;}
-	\item{\textbf{Intervallo accettabile}: 50-100;}
-	\item{\textbf{Intervallo obiettivo}: 60-100;}
-\end{itemize} 
-\subsubsection{Metriche relative ai prodotti software}
-Di seguito viene riportato solamente un piccolo sottoinsieme di metriche relative ai prodotti software ritenute come fondamentali dal team 7dos.
-Questa sezione verrà ampliata successivamente qualora fosse necessario introdurre nuove metriche per la valutazione della qualità dei prodotti software. 
-\paragraph{Functional Implementation Completeness} ~\\ ~\\
-Misurazione in percentuale del grado con cui le funzionalità offerte dalla corrente implementazione del software coprono l'insieme di funzioni specificate nei requisiti.\\
-Questa metrica è stata scelta per valutare il grado di completezza del prodotto; l'obiettivo è implementare tutte le funzionalità richieste.\\
-Viene utilizzata la seguente formula:
-$$FI_{Comp}=\frac{NF_i}{NF_r}*100$$
-dove FI\textsubscript{Comp} è il valore della metrica, NF\textsubscript{i} è numero di funzioni attualmente implementate e NF\textsubscript{r} è numero di funzioni specificate dai requisiti.
-Per questa metrica vengono definiti i seguenti intervalli: 
-\begin{itemize}
-	\item{\textbf{Intervallo limite}: 0-100;}
-	\item{\textbf{Intervallo accettabile}: 75-100;}
-	\item{\textbf{Intervallo obiettivo}: 100.}
-\end{itemize}
-
-\paragraph{Average Functional Implementation Correctness} ~\\ ~\\
-Misurazione in percentuale del grado in cui le funzionalità offerte dalla corrente implementazione del software, in media, rispettano il livello di precisione indicato nei requisiti.\\
-Questa metrica è stata scelta per valutare il grado di accuratezza e garantire la qualità dei risultati restituiti dal prodotto, in quanto andrà a fare previsioni sulla verosimiglianza di alcuni eventi in base ai dati forniti, ed è necessario che tali previsioni siano sufficientemente accurate.\\
-Viene utilizzata la seguente formula:
-$$aFI_{Corr}=\frac{\sum\limits_{i=1}^N\frac{iPF_i}{rPF_i}}{N}*100$$
-dove aFI\textsubscript{Corr} è il valore della metrica, iPF\textsubscript{i} è il livello di precisione della i-esima funzione implementata, rPF\textsubscript{i} è il livello di precisione della i-esima funzione secondo i requisiti, e N è il numero totale di funzioni considerate.
-Per questa metrica vengono definiti i seguenti intervalli: 
-\begin{itemize}
-	\item{\textbf{Intervallo limite}: 0-100;}
-	\item{\textbf{Intervallo accettabile}: 80-100;}
-	\item{\textbf{Intervallo obiettivo}: 95-100.}
-\end{itemize}
-
-\paragraph{Average Learning Time}  ~\\ ~\\
-Misurazione in minuti del tempo medio impiegato da un utente per imparare ad utilizzare una singola funzionalità del prodotto.
-\\Questa metrica è stata scelta poiché, trattandosi di un prodotto che verrà reso disponibile pubblicamente, è stato ritenuto importante renderlo semplice da imparare per permetterne l'uso ad una vasta gamma di utenti.
-\\Viene utilizzata la seguente formula:
-$$aLT=\frac{\sum\limits_{i=1}^N{LT_i}}{N}$$
-dove aLT è il valore della metrica, LT\textsubscript{i} è il tempo necessario ad imparare ad utilizzare la i-esima funzione implementata, espresso in minuti, e N è il numero totale di funzioni considerate.
-Per questa metrica vengono definiti i seguenti intervalli: 
-\begin{itemize}
-	\item{\textbf{Intervallo limite}: $\mathbb{R+}$;}
-	\item{\textbf{Intervallo accettabile}: 0-30;}
-	\item{\textbf{Intervallo obiettivo}: 0-15.}
-\end{itemize}
-
-\paragraph{Failure Density}  ~\\ ~\\
-Misurazione in percentuale della quantità di test falliti rispetto alla quantità di test eseguiti.
-\\Questa metrica è stata scelta per garantire che il prodotto sia generalmente stabile e non risulti poco utilizzabile o inutilizzabile a causa di eccessive \gl{failure}. Valutazioni più precise saranno effettuate in base ai singoli risultati dei test.\\
-Viene utilizzata la seguente formula:
-$$FD=\frac{T_f}{T_c}*100$$
-dove FD è il valore della metrica, T\textsubscript{f} è il numero di test falliti e T\textsubscript{e} è il numero di test eseguiti.
-Per questa metrica vengono definiti i seguenti intervalli: 
-\begin{itemize}
-	\item{\textbf{Intervallo limite}: 0-100;}
-	\item{\textbf{Intervallo accettabile}: 0-10;}
-	\item{\textbf{Intervallo obiettivo}: 0.}
-\end{itemize}
 
 \pagebreak
 \pagebreak
