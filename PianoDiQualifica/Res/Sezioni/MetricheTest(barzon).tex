@@ -1,4 +1,120 @@
 \newsection{Metriche dei test}
+Il processo di verifica, per essere informativo, deve essere quantificabile. Sono state quindi stabilite delle metriche di natura numerica, in modo da misurare accuratamente le varie caratteristiche di qualità del prodotto. Per ogni metrica sono presenti  spiegazione, motivazione, formula usata per il calcolo e tre intervalli di valori. Questi ultimi sono distinti come segue:
+\begin{itemize}
+	\item {\textbf{Intervallo limite:} eventuali intervalli di valori in cui la metrica deve essere racchiusa per poter essere considerata come un valore legale che possiede una certa rilevanza;}
+	\item {\textbf{Intervallo accettabile:} i valori che vengono considerati oltre la soglia di accettabilità per la metrica;}
+	\item {\textbf{Intervallo obiettivo:} i valori che vengono considerati l'obiettivo ottimale da raggiungere.}
+\end{itemize}
+
+\subsection{Metriche relative ai documenti}
+\subsubsection{Numero di errori grammaticali}
+Misura del numero di errori grammaticali presenti all'interno di un documento.
+Tutti i documenti verranno analizzati da un apposito strumento di analisi grammaticale. Per poter essere accettati non potranno avere un numero di errori grammaticali superiore a zero.
+
+\subsubsection{Gunning fog index}
+Indice utilizzato per misurare la facilità di lettura e comprensione di un testo. Il numero risultante è un indicatore del numero di anni di educazione formale necessari al fine di leggere il testo con facilità. \\
+L'indice di Gunning fog è calcolabile tramite la seguente formula:
+$$
+	0.4*((\frac{n^{\circ}\:parole}{n^{\circ}\:frasi})+100*(\frac{n^{\circ}\:parole\:complesse}{n^{\circ}\:parole}))
+$$
+Per questa metrica vengono definiti i seguenti intervalli: 
+\begin{itemize}
+	\item{\textbf{Intervallo limite}: $\mathbb{R+}$;}
+	\item{\textbf{Intervallo accettabile}: $\mathbb{R+}$;}
+	\item{\textbf{Intervallo obiettivo}: $\leq$12.}
+\end{itemize}
+\subsubsection{Indice di Gulpease}
+Utilizzato per misurare la leggibilità di un testo in lingua italiana.\\
+L'indice di Gulpease è calcolabile tramite la seguente formula:
+$$
+	89+\frac{(numero\:delle\:frasi)-10*(numero\:delle\:lettere)}{numero\:delle\:parole}
+$$
+I risultati sono compresi tra 0 e 100, dove 0 indica la leggibilità più bassa e 100 la leggibilità più alta. In generale risulta che i testi con indice:
+	\begin{itemize}
+		\item{\textbf{Inferiore	a 80}}: sono difficili da leggere per chi ha la licenza elementare;
+		\item{\textbf{Inferiore	a 60}}: sono difficili da leggere per chi ha la licenza media;
+		\item{\textbf{Inferiore	a 40}}: sono difficili da leggere per chi ha la licenza superiore.
+	\end{itemize}
+Per questa metrica vengono definiti i seguenti intervalli: 
+	\begin{itemize}
+		\item{\textbf{Intervallo limite}: 0-100;}
+		\item{\textbf{Intervallo accettabile}: 40-100;}
+		\item{\textbf{Intervallo obiettivo}: 60-100.}
+	\end{itemize}
+\subsubsection{Indice di Flesh}
+Utilizzato per misurare la leggibilità di un testo in lingua inglese.\\
+L'indice di Flesh è calcolabile tramite la seguente formula:
+	$$
+		206,835-(0,846*S)-(1,015*P)
+	$$
+Dove S è il numero di sillabe calcolato su un campione di 100 parole e P è il numero medio di parole per frase.\\
+La leggibilità è considerata:
+	\begin{itemize}
+		\item{\textbf{Alta}}: se l'indice è superiore a 60;
+		\item{\textbf{Media}}: se l'indice è compresa tra 50 e 60;
+		\item{\textbf{Bassa}}: se l'indice è inferiore a 50.
+	\end{itemize}
+Per questa metrica vengono definiti i seguenti intervalli: 
+\begin{itemize}
+	\item{\textbf{Intervallo limite}: 0-100;}
+	\item{\textbf{Intervallo accettabile}: 50-100;}
+	\item{\textbf{Intervallo obiettivo}: 60-100.}
+\end{itemize} 
+\subsection{Metriche relative ai prodotti software}
+Di seguito viene riportato solamente un piccolo sottoinsieme di metriche relative ai prodotti software ritenute come fondamentali dal team 7dos.
+Questa sezione verrà ampliata successivamente qualora fosse necessario introdurre nuove metriche per la valutazione della qualità dei prodotti software. 
+\subsubsection{Functional Implementation Completeness}
+Misurazione in percentuale del grado con cui le funzionalità offerte dalla corrente implementazione del software coprono l'insieme di funzioni specificate nei requisiti.\\
+Questa metrica è stata scelta per valutare il grado di completezza del prodotto; l'obiettivo è implementare tutte le funzionalità richieste.\\
+Viene utilizzata la seguente formula:
+$$FI_{Comp}=\frac{NF_i}{NF_r}*100$$
+dove FI\textsubscript{Comp} è il valore della metrica, NF\textsubscript{i} è numero di funzioni attualmente implementate e NF\textsubscript{r} è numero di funzioni specificate dai requisiti.
+Per questa metrica vengono definiti i seguenti intervalli: 
+\begin{itemize}
+	\item{\textbf{Intervallo limite}: 0-100;}
+	\item{\textbf{Intervallo accettabile}: 75-100;}
+	\item{\textbf{Intervallo obiettivo}: 100.}
+\end{itemize}
+
+\subsubsection{Average Functional Implementation Correctness}
+Misurazione in percentuale del grado in cui le funzionalità offerte dalla corrente implementazione del software, in media, rispettano il livello di precisione indicato nei requisiti.\\
+Questa metrica è stata scelta per valutare il grado di accuratezza e garantire la qualità dei risultati restituiti dal prodotto, in quanto andrà a fare previsioni sulla verosimiglianza di alcuni eventi in base ai dati forniti, ed è necessario che tali previsioni siano sufficientemente accurate.\\
+Viene utilizzata la seguente formula:
+$$aFI_{Corr}=\frac{\sum\limits_{i=1}^N\frac{iPF_i}{rPF_i}}{N}*100$$
+dove aFI\textsubscript{Corr} è il valore della metrica, iPF\textsubscript{i} è il livello di precisione della i-esima funzione implementata, rPF\textsubscript{i} è il livello di precisione della i-esima funzione secondo i requisiti, e N è il numero totale di funzioni considerate.
+Per questa metrica vengono definiti i seguenti intervalli: 
+\begin{itemize}
+	\item{\textbf{Intervallo limite}: 0-100;}
+	\item{\textbf{Intervallo accettabile}: 80-100;}
+	\item{\textbf{Intervallo obiettivo}: 95-100.}
+\end{itemize}
+
+\subsubsection{Average Learning Time}
+Misurazione in minuti del tempo medio impiegato da un utente per imparare ad utilizzare una singola funzionalità del prodotto.
+\\Questa metrica è stata scelta poiché, trattandosi di un prodotto che verrà reso disponibile pubblicamente, è stato ritenuto importante renderlo semplice da imparare per permetterne l'uso ad una vasta gamma di utenti.
+\\Viene utilizzata la seguente formula:
+$$aLT=\frac{\sum\limits_{i=1}^N{LT_i}}{N}$$
+dove aLT è il valore della metrica, LT\textsubscript{i} è il tempo necessario ad imparare ad utilizzare la i-esima funzione implementata, espresso in minuti, e N è il numero totale di funzioni considerate.
+Per questa metrica vengono definiti i seguenti intervalli: 
+\begin{itemize}
+	\item{\textbf{Intervallo limite}: $\mathbb{R+}$;}
+	\item{\textbf{Intervallo accettabile}: 0-30;}
+	\item{\textbf{Intervallo obiettivo}: 0-15.}
+\end{itemize}
+
+\subsubsection{Failure Density}
+Misurazione in percentuale della quantità di test falliti rispetto alla quantità di test eseguiti.
+\\Questa metrica è stata scelta per garantire che il prodotto sia generalmente stabile e non risulti poco utilizzabile o inutilizzabile a causa di eccessive \gl{failure}. Valutazioni più precise saranno effettuate in base ai singoli risultati dei test.\\
+Viene utilizzata la seguente formula:
+$$FD=\frac{T_f}{T_c}*100$$
+dove FD è il valore della metrica, T\textsubscript{f} è il numero di test falliti e T\textsubscript{e} è il numero di test eseguiti.
+Per questa metrica vengono definiti i seguenti intervalli: 
+\begin{itemize}
+	\item{\textbf{Intervallo limite}: 0-100;}
+	\item{\textbf{Intervallo accettabile}: 0-10;}
+	\item{\textbf{Intervallo obiettivo}: 0.}
+\end{itemize}
+\subsection{Tabella riassuntiva delle metriche}
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|p{4cm}|C{3cm}|C{3cm}|C{3cm}|}
