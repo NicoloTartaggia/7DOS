@@ -11,55 +11,66 @@
 
 \newpage
 	% A	----------------------------------------------------------------------------------------------
-	{\Huge{\textbf{A}}} \\
-	\line(1,0){450}
-	
+	\section{A}
 	% Attività ------------------------------------------------------
-	\section{Attività}
+	\subsection{Attività}
 	\label{sec:attivita}
-	L'attività è una componente essenziale di un \hyperref[sec:progetto]{progetto}. Un attività prevede dell'intenzionalità: le specifiche dell'attività sono determinate da chi la svolge. 	
+	L'attività è una componente essenziale di un \hyperref[sec:progetto]{progetto}. Un'attività prevede dell'intenzionalità: le specifiche dell'attività sono determinate da chi la svolge. 	
 	
 	% Analisi dei requisiti ------------------------------------------------------
-	\section{Analisi dei requisiti}
-	\label{sec:analisirequisiti}
-	L'obiettivo dell'analisi dei requisiti è quello di individuare e definire i \hyperref[sec:requisito]{requisiti} di progetto. Output di tale processo è un documento contrattuale che andrà fornito all'azienda appaltatrice nell'ambito di una gara d'appalto. Sulla base di tale documento l'azienda deciderà a chi affidare l'appalto. \newpage
-
-	% B	----------------------------------------------------------------------------------------------
-	{\Huge{\textbf{B}}} \\
-	\line(1,0){450}
+	\subsection{Analisi dinamica}
+	\label{sec:analisidinamica}
+	Tecnica di analisi di un prodotto software in cui il software viene eseguito in un ambiente reale o virtuale; coincide con i test: 
+	\begin{itemize}  
+		\item Di unità: verificano il corretto funzionamento dell'unità.
+		\item Di integrazione: verifica la corretta interazione tra più unità che interagiscono dando luogo ad un \emph{build}.
+		\item Di sistema: verificano la corretta interazione tra più \emph{build} che danno luogo ad un sistema complesso.
+	\end{itemize}	
+	Il collaudo, test finale eseguito con il committente, è solo un attività formale se i test precedenti sono stati eseguiti rigorosamente. I test devono essere ripetibili e deterministici, perciò dev'essere documentata la loro esecuzione, le condizioni iniziali di esecuzione, il risultato atteso e quello ottenuto. I test inoltre devono essere automatizzati per ridurre al minimo la possibilità di errore umano.
 	
+	\subsection{Analisi dei requisiti}
+	\label{sec:analisirequisiti}
+	L'obiettivo dell'analisi dei requisiti è quello di individuare e definire i \hyperref[sec:requisito]{requisiti} di progetto. Il risultato di tale processo è un documento contrattuale che andrà fornito all'azienda appaltatrice nell'ambito di una gara d'appalto. Sulla base di questo documento l'azienda deciderà a chi affidare l'appalto.
+	
+	\subsection{Analisi statica}
+	\label{sec:analisistatica}
+	Tecnica di analisi di un prodotto software in cui il software non viene eseguito, bensì ne viene esaminato il codice.
+	\emph{Walkthrough} e \emph{Inspection} sono le due tecniche di analisi statica prevalenti. \emph{Walkthrough} prevede un'analisi a tappeto del codice sorgente alla ricerca di possibili criticità, mentre \emph{Inspection} somiglia di più all'analisi a campione e prevede l'analisi specifica di parti considerate di importanza critica.
+		% B	----------------------------------------------------------------------------------------------
+	
+	\section{B}
 	% Baseline ------------------------------------------------------
-	\section{Baseline}
+	\subsection{Baseline}
 	\label{sec:baseline}
 	La baseline è in generale un punto di partenza, il piano di progetto originale. La baseline ha diverse declinazioni che indirizzano un obbiettivo strategico e il loro scopo è di aiutare a misurare l'avanzamento del processo nella direzione degli obbiettivi. Gli obiettivi vengono concordati con il committente in modo di dimostrare l'avanzamento del progetto. La baseline è suddivisa in parti, definite nel modo migliore per aiutare a raggiungere gli obbiettivi. Ogni parte evolve nel tempo ed ha quindi un numero di versioni, a cura dell'owner (responsabile) della parte. Il mantenimento della baseline avviene tramite la \hyperref[sec:controlloconfigurazione]{gestione della configurazione}. 
 	
 	% Best Practice -------------------------------------------------
-	\section{Best Practice}
+	\subsection{Best Practice}
 	\label{sec:bestpractice}
 	Una best practice è il migliore modo di approciare un problema. Le best practice prevedono l'applicazione di principi noti ed autorevoli. In ingegneria è richiesta la conoscenza e l'uso di best practices, non di crearne di nuove.
 
 	% Best Practice -------------------------------------------------
-	\section{Brainstorming}
+	\subsection{Brainstorming}
 	\label{sec:brainstorming}
 	Discussioni collaborative, creative, viene data voce ad ogni persona a turno, si tiene traccia della discussione. \newpage
 
 
 	% C	----------------------------------------------------------------------------------------------
-	{\Huge{\textbf{C}}} \\
-	\line(1,0){450}
+	
+	\section{C}
 
 	% Ciclo di vita del software ------------------------------------
-	\section{Capitolato d'appalto}
+	\subsection{Capitolato d'appalto}
 	\label{sec:capitolato}
 	Documento prodotto da un azienda che descrive il prodotto di cui l'azienda sente il bisogno. Il capitolato è una chiamata ai fornitori, una notifica di bisogno che andrà esaminata per verificare se è il caso di partecipare al bando d'appalto per la realizzazione del prodotto voluto dall'azienda. Il capitolato d'appalto è la prima fonte di informazioni da analizzare per l'analisi dei requisiti. Il dominio dell'azienda appaltatrice influenzerà le informazioni contenute nel capitolato che quindi dovrà essere attentamente analizzato tenendo conto del contesto professionale da cui arriva, il dialogo con l'azienda appaltatrice sarà necessario per la corretta comprensione del capitolato. 
 	
 	% Ciclo di vita del software ------------------------------------
-	\section{Ciclo di vita del software}
+	\subsection{Ciclo di vita del software}
 	\label{sec:ciclodivita}
 	Insieme di fasi, lo sviluppo del software è una di esse, le fasi sono diverse in base al modello di ciclo di vita utilizzato.
 
 	% CoCoMo -------------------------------------------------------
-	\section{CoCoMo}
+	\subsection{CoCoMo}
 	\label{sec:cocomo}
 	Modello algoritmico per la stima di costi e risorse. Il modello stima le risorse necessarie e le esprime in mesi/persona MP. Ha come input:
 	\begin{itemize}  
@@ -72,76 +83,76 @@
 	\end{itemize}		
 
 	% Code-'n-Fix -------------------------------------------------------
-	\section{Code-'n-Fix}
+	\subsection{Code-'n-Fix}
 	\label{sec:codenfix}
 	Vecchia pratica nell'ambito di produzione del software, autodescrittiva: l'intera attività di produzione del software consisteva nel codificare e riparare software.
 	
 	% Compiti -------------------------------------------------------
-	\section{Compito}
+	\subsection{Compito}
 	\label{sec:compiti}
 	Un compito è una componente essenziale di un \hyperref[sec:progetto]{progetto}. I compiti vengono assegnati e non lasciano spazio alla decisione di chi li riceve.
 	
 	% Configurazione ------------------------------------------------
-	\section{Configurazione}
+	\subsection{Configurazione}
 	\label{sec:configurazione}
 	Insieme di regole che determina come assemblare le sezioni di un software, quali \hyperref[sec:versione]{versioni} usare per ogni sezione, come le sezioni interagiscono, quali sezioni con quali versioni producono una baseline eccetera.
 	
 	% Controllo di configurazione ----------------------------------
-	\section{Controllo di configurazione}
+	\subsection{Controllo di configurazione}
 	\label{sec:controlloconfigurazione}
 	Gestione e controllo della \hyperref[sec:configurazione]{configurazione} che permette di assemblare le varie componenti di un software.\newpage
 
 	% D	----------------------------------------------------------------------------------------------
-	{\Huge{\textbf{D}}} \\
-	\line(1,0){450}
+	
+	\section{D}
 
 	% Disciplinato -------------------------------------------------	
-	\section{Disciplinato}
+	\subsection{Disciplinato}
 	\label{sec:disciplinato}
 	Soggetto ad un insieme di regole pensate per garantire la massima \hyperref[sec:efficienza]{efficienza} ed \hyperref[sec:efficacia]{efficacia}.\newpage
 
 	% E	----------------------------------------------------------------------------------------------
-	{\Huge{\textbf{E}}} \\
-	\line(1,0){450}
+	
+	\section{E}
 
 	% Economicità --------------------------------------------------
-	\section{Economicità}
+	\subsection{Economicità}
 	\label{sec:economicita}
 	Efficacia raggiungibile con efficienza. Garantita dall'uso di standard.
 	
 	% Efficacia ---------------------------------------------------
-	\section{Efficacia}
+	\subsection{Efficacia}
 	\label{sec:efficacia}
 	L'abilità di un entità di portare a il compito assegnatole.
 	
 	% Efficienza ---------------------------------------------------
-	\section{Efficienza}
+	\subsection{Efficienza}
 	\label{sec:efficienza}
 	Data la misura del consumo di risorse che avviene nel compimento di un obiettivo, minore il consumo di risorse, maggiore l'efficienza.\newpage
 
 	% I	----------------------------------------------------------------------------------------------
 	{\Huge{\textbf{I}}} \\
-	\line(1,0){450}
+	\section{I}
 
 	% Incremento ---------------------------------------------------
-	\section{Incremento}
+	\subsection{Incremento}
 	\label{sec:incremento}
 	Procedura che prevede avanzamento per aggiunta ad un impianto base.
 
 	%ISO 12207 -----------------------------------------------------
-	\section{IEE 830-1998}
+	\subsection{IEE 830-1998}
 	\label{sec:iee830}
 	Best practice raccomandate per la specifica dei requisiti di prodotti software. Vedi la voce \hyperref[sec:requisito]{requisito}.
 	\linebreak
 
 	%ISO 12207 -----------------------------------------------------
-	\section{ISO/IEC 12207}
+	\subsection{ISO/IEC 12207}
 	\label{sec:iso12207}
 	Standard riferiti ai processi di \hyperref[sec:ciclodivita]{ciclo di vita}, raggruppati in 3 categorie: Primari, di supporto, organizzativi.
 	\linebreak
 
 	%ISO 42010:2011 -----------------------------------------------------
-	\section{ISO/IEC/IEEE 42010:2011}
+	\subsection{ISO/IEC/IEEE 42010:2011}
 	\label{sec:iso12207}
 	Standard di best practice riferiti alla progettazione software, alla definizione dell'architettura del software. Punti essenziali sono:
 	\begin{itemize}  
@@ -152,7 +163,7 @@
 	\end{itemize}		
 
 	%ISO 90003:2004 -----------------------------------------------------
-	\section{ISO 90003:2004}
+	\subsection{ISO 90003:2004}
 	\label{sec:iso90003}
 	Standard di best practice per la valutazione della qualità di processi dei fornitori. I principi fondamentali sono:
 	\begin{itemize}  
@@ -167,21 +178,21 @@
 	A garantire l'adesione a questi principi dev'essere la documentazione verticale (specifica di progetto) ed orizzontale (specifica dell'azienda).	
 	
 	% Iterazione ---------------------------------------------------
-	\section{Iterazione}
+	\subsection{Iterazione}
 	\label{sec:iterazione}
 	Procedura che prevede avanzamento per raffinamento e rivisitazioni.\newpage
 
 	% M	----------------------------------------------------------------------------------------------
 	{\Huge{\textbf{M}}} \\
-	\line(1,0){450}
+	\section{M}
 	
 	% Manutenzione ------------------------------------------------	
-	\section{Manuale della qualità}
+	\subsection{Manuale della qualità}
 	\label{sec:manualequalita}
 	Documento che specifica le strategie che un organizzazione adotta per operare processi di qualità.
 	
 	
-	\section{Manutenzione}
+	\subsection{Manutenzione}
 	\label{sec:manutenzione}
 	La manutenzione di un prodotto software è di diversi tipi:
 		
@@ -198,13 +209,13 @@
 		Ha come scopo l'adattamento a nuove tecnologie, ambiti, contesti, l'aggiunta di funzionalità, etc..
 
 	% Modelli di ciclo di vita -------------------------------------
-	\section{Miglioramento continuo}
+	\subsection{Miglioramento continuo}
 	\label{sec:miglioramentocontinuo}
 	Principio attorno al quale organizzare i processi per ottenere un miglioramento continuo, prevede 4 macrofasi:
 	Plan (keep track of what you're going to do), Do (as planned), Check, Act (keep what works, throw what doesn't)
 		
 	% Modelli di ciclo di vita -------------------------------------
-	\section{Modello di ciclo di vita}
+	\subsection{Modello di ciclo di vita}
 	\label{sec:modelliciclodivita}
 	Il \hyperref[sec:ciclodivita]{ciclo di vita} di un software non è univocamente determinato. Diversi modelli descrivono il ciclo di vita di un software.
 	Il ciclo di vita determina quali processi attivare. La scelta del modello dipende da 3 macrofattori: cosa vuole il committente, dipendenza da terze parti, livello di coinvolgimento del committente nell'accertamento dello stato di avanzamento.
@@ -255,11 +266,11 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 
 	% P	----------------------------------------------------------------------------------------------
 	{\Huge{\textbf{P}}} \\
-	\line(1,0){450}
+	\section{P}
 	
 	% Pianificazione delle attività --------------------------------------------
 
-	\section{Pianificazione delle attività}	
+	\subsection{Pianificazione delle attività}	
 	\label{sec:pianificazioneattivita}
 	Pianificare le attività è uno dei compiti del \hyperref[sec:projectmanager]{project manager}.
 	La pianificazione include l'allineamento delle attività su un asse temporale, l'assegnazione delle attività a delle persone. \\Il project manager si avvale di diversi strumenti per pianificare le attività:  	
@@ -269,7 +280,7 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	\item WBS (Work Breakdown Structure divisione delle attività fino a raggiungere il compito minore assegnabile ad una persona. Diagramma che rappresenta l'assegnazione di tali attività alle persone nel tempo, rispettando e rappresentando dipendenze e vincoli temporali.) \ldots 
 	\end{itemize}	
 	
-	\section{Piano di progetto}	
+	\subsection{Piano di progetto}	
 	\label{sec:pianoprogetto}
 	Include:
 	\begin{itemize}  
@@ -283,23 +294,23 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	\end{itemize}	
 		
 	% Processo -----------------------------------------------------------------
-	\section{Processo}	
+	\subsection{Processo}	
 	\label{sec:processi}
 	Insieme di attività correlate (includono tutto ciò che è attinente) e coese (sono tutte necessarie) che trasformano ingressi (bisogni) in uscite (prodotti) secondo regole date dal controllo processo a seguito di decisioni prese sulla base di misurazioni delle risorse consumate dal processo.
 	I processi si differenziano in base alla specificità dell'ambito di applicazione, possono essere standard (riferimento base generico), definito (standard adattato alle esigenze aziendali), di progetto (definito adattato al progetto).
 	
 	% Processi Software --------------------------------------------------------
-	\section{Processo Software}
+	\subsection{Processo Software}
 	\label{sec:processisoftware}
 Insieme di attività che devono essere svolte per far avanzare un prodotto software nel suo ciclo di vita (nell'ambito SWE, vedi "Processi" per una voce più generale).
 
 	% Processi specializzati per progetto --------------------------------------------
-	\section{Processo specializzato per progetto}
+	\subsection{Processo specializzato per progetto}
 	\label{sec:processispecializzati}
 	Prevodono una fase di pianificazione, una di definizione, attenzione nella conduzione e analisi critica del funzionamento del processo.
 	
 	% Prodotto Software --------------------------------------------	
-	\section{Prodotto Software}
+	\subsection{Prodotto Software}
 	\label{sec:prodottosoftware}
 	Un prodotto software prende forme diverse in base al soggetto richiedente:
 		
@@ -320,7 +331,7 @@ Insieme di attività che devono essere svolte per far avanzare un prodotto softw
 		Si tratta di un prodotto software le cui specifiche ed obiettivi sono determinati per la risoluzione di un problema.
 	
 	% Prodotti documentali --------------------------------------------		
-	\section{Prodotti documentali}	
+	\subsection{Prodotti documentali}	
 	\label{sec:prodottidocumentali}
 	\begin{itemize}  
 	\item \hyperref[sec:capitolato]{Capitolato d'appalto}
@@ -329,22 +340,22 @@ Insieme di attività che devono essere svolte per far avanzare un prodotto softw
 	\end{itemize}	
 		
 	% Produttività --------------------------------------------	
-	\section{Produttività}	
+	\subsection{Produttività}	
 	\label{sec:produttivita}
 	Una misurazione di efficienza, rapporto tra quantità di prodotto realizzato e risorse consumate.
 
 	% Progettazione Software ---------------------------------------------------
-	\section{Progettazione Software}
+	\subsection{Progettazione Software}
 	\label{sec:progettazionesoftware}
 	Insieme di attività che precede la realizzazione il cui scopo è quello definire l'architettura del software con l'obiettivo di sviluppare un prodotto corretto per costruzione piuttosto che per correzione.
 	
 	% Progetto ---------------------------------------------------
-	\section{Progetto}
+	\subsection{Progetto}
 	\label{sec:progetto}
 	Insieme di attività e compiti, atti a raggiungere obbiettivi SMART, che hanno una data di inizio ed una di fine, e che consumano un pool di risorse limitate.	
 	
 	% Project Manager ---------------------------------------------------	
-	\section{Project Manager}
+	\subsection{Project Manager}
 	\label{sec:projectmanager}
 	Individuo che ha il compito di gestione del progetto. Ciò prevede:
 	\begin{itemize}  
@@ -355,7 +366,7 @@ Insieme di attività che devono essere svolte per far avanzare un prodotto softw
 	\end{itemize}	
 		
 	% Prototipo ---------------------------------------------------
-	\section{Prototipo}
+	\subsection{Prototipo}
 	\label{sec:prototipo}
 	Esemplare di prova del prodotto, serve a provare e scegliere soluzioni, puo' avere carattere usa e getta (in metodi iterativi) 
 	o puo' essere la base per incrementi successivi (in metodi incrementali).
@@ -363,9 +374,9 @@ Insieme di attività che devono essere svolte per far avanzare un prodotto softw
 
 	% O ----------------------------------------------------------------------------------------------
 	{\Huge{\textbf{O}}} \\
-	\line(1,0){450}
+	\section{O}
 		
-	\section{Obiettivo SMART}
+	\subsection{Obiettivo SMART}
 	\label{sec:smart}
 	\begin{itemize}  
 	\item Specific: formalmente definiti
@@ -377,15 +388,15 @@ Insieme di attività che devono essere svolte per far avanzare un prodotto softw
 
 	% Q	----------------------------------------------------------------------------------------------
 	{\Huge{\textbf{Q}}} \\
-	\line(1,0){450}
+	\section{Q}
 	
 	% Quantificabile -----------------------------------------------
-	\section{Quantificabile}
+	\subsection{Quantificabile}
 	\label{sec:quantificabile}
 	Misurabile.
 	
 	% Qualità -----------------------------------------------------
-	\section{Qualità} 
+	\subsection{Qualità} 
 	\label{sec:qualita}
 	Riferita alla qualità del prodotto o dei processi:
 	\subsection{Qualità del prodotto}
@@ -403,16 +414,16 @@ Insieme di attività che devono essere svolte per far avanzare un prodotto softw
 	\item Efficienza.
 	\end{itemize}
 	\subsection{Qualità dei processi}
-	Una buona qualità dei processi induce una buona qualità nel prodotto di tali processi. Per assicurarsi che un processo sia di qualità, è necessario un meccanismo di controllo che effettui modifiche sul way of working ove ritenuto necessario sulla base di misurazioni sulla qualità dei processi. Per definire gli strumenti di valutazione della qualità dei processi dei fornitori in genere, non solo in ambito di sviluppo software, è stato messo a punto lo standard ISO 9000, in ambito specifico di ingegneria software si ha invece ISO 90003:2004.
+	Una buona qualità dei processi induce una buona qualità del prodotto di questi. Per assicurarsi che un processo sia di qualità, è necessario un meccanismo di controllo che effettui modifiche sul \emph{way of working} ove ritenuto necessario sulla base di misurazioni sulla qualità dei processi. Per definire gli strumenti di valutazione della qualità dei processi dei fornitori in genere, non solo in ambito di sviluppo software, è stato messo a punto lo standard ISO 9000, in ambito specifico di ingegneria software si ha invece ISO 90003:2004.
 	
 		\newpage
 
 	% R	----------------------------------------------------------------------------------------------
 	{\Huge{\textbf{R}}} \\
-	\line(1,0){450}
+	\section{R}
 
 	% Requisito -----------------------------------------------------
-	\section{Requisito}
+	\subsection{Requisito}
 	\label{sec:requisito}
 	I requisiti sono le capacità che il sistema dovrà avere per svolgere le funzioni volute dal committente. È best practice definire requisiti:
 	\begin{itemize}  
@@ -427,7 +438,7 @@ Insieme di attività che devono essere svolte per far avanzare un prodotto softw
 	\end{itemize}
 
 	% Rischio -----------------------------------------------------
-	\section{Rischio}
+	\subsection{Rischio}
 	\label{sec:rischio}
 	I rischi di progetto sono: sforamento costi, tempi, o risultati insoddisfacenti. Fonti di rischio principali sono:
 	tecnologie usate, rapporti interpersonali, organizzazione del lavoro, requisiti e rapporti con stakeholder, tempi e costi.
@@ -435,12 +446,12 @@ Insieme di attività che devono essere svolte per far avanzare un prodotto softw
 	Identificazione (nel progetto, prodotto, mercato), Analisi (probabilità e conseguenze), Pianificazione (come evitare e o mitigare gli effetti), Controllo(attenzione agli indicatori di rischio, raffinamento strategie).
 	
 	% Riuso -----------------------------------------------------
-	\section{Riuso}
+	\subsection{Riuso}
 	\label{sec:riuso}
 	Del codice, puo' essere di due tipi: opportunistico (copia e incolla) ha un basso costo e poco impatto, sistematico, ha un maggior costo e un maggior impatto.		
 
 	% Ruolo -----------------------------------------------------
-	\section{Ruolo}
+	\subsection{Ruolo}
 	\label{sec:ruolo}
 	Indica l'area di specializzazione (importante per garantire skill eccezionali).
 	In un progetto informatico i ruoli principali sono:
@@ -456,21 +467,21 @@ Insieme di attività che devono essere svolte per far avanzare un prodotto softw
 	
 	% S	----------------------------------------------------------------------------------------------
 	{\Huge{\textbf{S}}} \\
-	\line(1,0){450}
+	\section{S}
 	
 	% Sistematico -------------------------------------------------
-	\section{Sistematico}
+	\subsection{Sistematico}
 	\label{sec:sistematico}
 	Metodico, rigoroso.
 
 	% Slack -------------------------------------------------
-	\section{Slack}
+	\subsection{Slack}
 	\label{sec:slack}
 	Margine di tempo tra la fine di un attività e la scadenza di fine attività. \\
 	Se è positivo, l'attività è prevista terminare prima della scadenza quindi vi è un margine per eventuali imprevisti. Se è vicino o 0 tale margine è piccolo o assente, si introducono quindi dei rischi. Se è negativo, la scadenza è passata e l'attività non è stata portata al termine.
 	
 	% Software Engineering ----------------------------------------
-	\section{Software Engineering}
+	\subsection{Software Engineering}
 	\label{sec:swe}
 	Disciplina il cui scopo è la realizzazione di prodotti software.
 	SWE si occupa dell'organizzazione e della gestione delle attività e compiti e dell'interazioni di un team di sviluppatori
@@ -479,82 +490,69 @@ Insieme di attività che devono essere svolte per far avanzare un prodotto softw
 	SWE prevede un approccio sistematico, disciplinato e quantificabile all'attività di sviluppo.
 
 	% Stima dei costi -------------------------------------------------
-	\section{Stima dei costi}
+	\subsection{Stima dei costi}
 	\label{sec:stimacosti}
 	Influenzata dalle dimensioni del progetto, dalle esperienze pregresse, dalla familiarità con le tecnologie adottate, dalla produttività dell'ambiente di lavoro, dalla qualità attesa. \\Un modello algoritmico che puo' aiutare in ciò è il \hyperref[sec:cocomo]{CoCoMo}.
 
 	% Stima dei costi -------------------------------------------------
-	\section{Studio di fattibilità}
+	\subsection{Studio di fattibilità}
 	\label{sec:studiofattibilita}
 	Studio economico realizzato per determinare se è vantaggioso partecipare ad una gara d'appalto.\newpage
 
 	% Tracciamento dei requisiti --------------------------------------
-	\section{Tracciamento dei requisiti}
+	\subsection{Tracciamento dei requisiti}
 	\label{sec:tracciamentorequisiti}
 	Attività di monitoraggio dell'evoluzione e della scoperta dei requisiti che possono cambiare durante lo svolgersi dello sviluppo del progetto.Tale attività viene svolta tramite apparati informatici appositi, le informazioni importanti sui requisiti di cui viene tenuta traccia sono: status, origin, assegnatari.\newpage
 
 	% V	----------------------------------------------------------------------------------------------
 	{\Huge{\textbf{V}}} \\
-	\line(1,0){450}
+	\section{V}
 	
 	% Validare ---------------------------------------------------
-	\section{Validare}
+	\subsection{Validare}
 	\label{sec:validare}
 	Attività di confronto tra i risultati ottenuti e quelli aspettati. Quest'attività si svolge al termine del progetto.
 	
 	% Verificare -------------------------------------------------
-	\section{Verificare}
+	\subsection{Verificare}
 	\label{sec:verificare}
-	Attività di verifica di presenza di errori e di rispetto del way of working. La verifica si manifesta tangibilmente sotto forma di test, effettuati sui moduli che compongono il prodotto software. Le forme di verifica sono 2: analisi dinamica e analisi statica. L'analisi dinamica prevede l'esecuzione del software mentre l'analisi statica prevede un analisi del codice sorgente senza eseguirlo. 
-	\subsection{Analisi Dinamica}
-	Coincide con i test: 
-	\begin{itemize}  
-	\item Di unità: verificano il corretto funzionamento dell'unità.
-	\item Di integrazione: verifica la corretta interazione tra più unità che interagiscono dando luogo ad un build.
-	\item Di sistema: verificano la corretta interazione tra più build che danno luogo ad un sistema complesso.
-	\end{itemize}	
-	Il collaudo, test finale eseguito con il committente, è solo un attività formale se i test precedenti sono stati eseguiti rigorosamente. I test devono essere ripetibili e deterministici, perciò dev'essere documentata la loro esecuzione, le condizioni iniziali di esecuzione del test, il risultato atteso e quello ottenuto. I test inoltre devono essere automatizzati per ridurre al minimo la possibilità di errore umano in fase di test.
-	\subsection{Analisi Statica}
-	Walkthrough e Inspection sono le 2 tecniche di analisi statica prevalenti. Walkthrough prevede un analisi a tappeto del codice sorgente alla ricerca di possibili criticità, mentre la inspection somiglia di più all'analisi a campione e prevede l'analisi specifica di parti considerate di importanza critica.
+	Attività di verifica di presenza di errori e di rispetto del way of working. La verifica si manifesta tangibilmente sotto forma di test, effettuati sui moduli che compongono il prodotto software. Le forme di verifica sono 2: \hyperref[sec:analisidinamica]{\underline{analisi dinamica}} e \hyperref[sec:analisistatica]{\underline{analisi statica}}. L'analisi dinamica prevede l'esecuzione del software mentre l'analisi statica prevede un analisi del codice sorgente senza eseguirlo. 
 	
 	% Verificare -------------------------------------------------
-	\section{Verificatore di requisiti}
+	\subsection{Verificatore di requisiti}
 	\label{sec:verificatorerequisiti}
-	Individuo che ha il compito di verificare i requisiti, tecniche usate sono: \\
-	Walkthrough: verifica a tappeto dei requisiti: ogni requisito viene analizzato alla ricerca di non conformità alla best practice stabilita. \\
-	Inspection: verifica a campione, campione selezionato sulla base di conoscenze pregresse sulle caratteristiche di requisiti problematici.
+	Individuo che ha il compito di verificare i requisiti, utilizza le tecniche descritte in \emph{\hyperref[sec:analisistatica]{analisi statica}}.
 	
 	% Versionamento ----------------------------------------------
-	\section{Versionamento}
+	\subsection{Versionamento}
 	\label{sec:versionamento}
 	Organizzazione e gestione delle versioni del software prodotte nel corso dello sviluppo.
 
 	% Versione ----------------------------------------------
-	\section{Versione}
+	\subsection{Versione}
 	\label{sec:versione}
 	Vedi \hyperref[sec:baseline]{baseline}. \newpage
 
 	% W	----------------------------------------------------------------------------------------------
 	{\Huge{\textbf{W}}} \\
-	\line(1,0){450}
+	\section{W}
 	
 	% Way of working ------------------------------------------------
-	\section{Way of working}
+	\subsection{Way of working}
 	\label{sec:wow}
 	Insieme di regole, pratiche, che caratterizzano l'attività di sviluppo. Il way of working è pensato per agevolare lo sviluppo ed evitare sprechi di risore ed errori. \newpage
 
 	
 	% Z	----------------------------------------------------------------------------------------------
-	{\Huge{\textbf{Z}}} \\
-	\line(1,0){450}
+	\section{Z}
 	
 	% Zero-latency ------------------------------------------------
-	\section{Zero-latency}
+	\subsection{Zero-latency}
 	\label{sec:zerolatency}
 	Riferito al lavoro: senza ritardo. L'approccio prevede l'inizio della attività di sviluppo non appena possibile. Permette di avere un margine di tempo tra termine del progetto e consegna.
 	
 	% Zero-laxity ------------------------------------------------
-	\section{Zero-laxity}
+	\subsection{Zero-laxity}
 	\label{sec:zerolaxity}
 	Riferito al lavoro: senza margine. L'approccio prevede l'inizio delle attività di sviluppo nel momento in cui la data di consegna del progetto meno il tempo richiesto dallo sviluppo equivale zero o meno. 
 \end{document}
