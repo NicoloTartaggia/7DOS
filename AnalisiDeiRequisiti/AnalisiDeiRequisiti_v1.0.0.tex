@@ -1,0 +1,22 @@
+%generare il pdf con il comando: pdflatex main.tex
+\input{Stile/Stile.tex}
+\input{Stile/FunzioniComandi.tex}
+\input{Res/Comandi}
+
+
+\begin{document}
+\copertina
+\input{Res/Diario}
+
+\tableofcontents
+\pagebreak
+
+\listoffigures
+\pagebreak
+
+\listoftables
+\pagebreak
+
+\include{Res/Sezioni}
+
+\end{document}
