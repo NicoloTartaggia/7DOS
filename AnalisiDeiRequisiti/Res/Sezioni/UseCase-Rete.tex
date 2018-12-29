@@ -1,3 +1,65 @@
-\subsection{}
+\subsection{UC1: Utilizzo editor grafico}
+
+\begin{itemize}
+	\item{\textbf{Attori primari:Utente}}
+	\item{\textbf{Scopo e descrizione:}L'utente vuole utilizzare l'editor grafico ai fini di realizzare facilmente tramite interfaccia grafica un'apposita rete bayesiana, o modificarne una già esistente}
+	\item{\textbf{Precondizione:}L'editor grafico è stato caricato correttamente ed è pronto all'uso}
+	\item{\textbf{Flusso base degli eventi:}
+		\begin{enumerate}
+			\item{L'utente crea uno o più nodi (UC1.1)}
+			\item{L'utente modifica i parametri dei nodi impostati inizialmente con valori di default(UC1.2)}
+			\item{L'utente crea un collegamento tra nodi (UC1.2)}
+			\item{L'utente può eliminare o modificare nuovamente determinati nodi (UC1.4, UC1.2)}
+			\item{L'utente può eliminare determinati collegamenti in eccesso (UC1.5)}
+			\item{L'utente effettua il salvataggio della rete su un apposito file(UC1.6)}
+		\end{enumerate}
+	}
+	\item{\textbf{Postcondizione:}Il sistema ha ottenuto le informazioni sulle operazioni che l'utente desidera eseguire e le ha eseguite}
+\end{itemize}
+\subsubsection{UC1.1: Creazione di un nodo}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente desidera creare un nodo della rete bayesiana. Un nodo della rete bayesiana è composto dai seguenti attributi: nome del nodo, lista di eventi del nodo. Ogni evento a sua volta è composto dai seguenti attributi: Nome dell'evento e probabilità dell'evento}
+	\item{\textbf{Precondizione:}L'utente ha indicato al sistema di voler inserire un nodo all'interno della rete bayesiana}
+	\item{\textbf{Flusso base degli eventi:}}
+		\begin{enumerate}
+			\item{Inizializzazione nome nodo (UC1.1.1)}
+			\item{inizializzazione lista eventi nodo(UC1.1.2)}
+		\end{enumerate}
+	\item{\textbf{Postcondizione:}Il sistema ha creato un nodo con parametri inizializzati con valori di default}
+\end{itemize}
+\subsubsection{UC1.1.1:Inizializzazione nome nodo}
+\begin{itemize}
+	\item{\textbf{Attori primari:Utente}}
+	\item{\textbf{Scopo e descrizione:}Il nome del nodo viene inizializzato con un valore di default composto dalla stringa "Nodo" seguita da un numero progressivo che viene incrementato ad ogni creazione di un nodo}
+	\item{\textbf{Precondizione:}L'utente ha effettuato la creazione di un nuovo nodo della rete}
+	\item{\textbf{Postcondizione:}L'inizializzazione del titolo del nodo è stata completata correttamente}
+\end{itemize}
+\subsubsection{UC1.1.2:Inizializzazione lista eventi nodo}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}La lista degli eventi del nodo viene inizializzata con due eventi di default chiamati come "Evento1" ed "Evento2", ciascun dei quali ha probabilità 50% }
+	\item{\textbf{Precondizione:}L'utente ha effettuato la creazione di un nuovo nodo della rete}
+	\item{\textbf{Postcondizione:}L'inizializzazione della lista degli eventi del nodo è stata completata correttamente}
+\end{itemize}
+\subsubsection{UC1.1.2:Modifica nodo}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente desidera modificare il valore dei parametri di un nodo della rete bayesiana}
+	\item{\textbf{Precondizione:}L'utente ha indicato il nodo su cui desidera effettuare l'operazione di modifica}
+	\item{\textbf{Flusso base degli eventi:}}
+		\begin{enumerate}
+			\item{L'utente modifica il nome del nodo}		
+		\end{enumerate}
+	\item{\textbf{Postcondizione:}L'utente ha indicato quali parametri del nodo desidera modificare e sono stati aggiornati correttamente}
+\end{itemize}
 
 
+\begin{itemize}
+	\item{\textbf{Attori primari:}}
+	\item{\textbf{Scopo e descrizione:}}
+	\item{\textbf{Precondizione:}}
+	\item{\textbf{Flusso base degli eventi:}}
+
+	\item{\textbf{Postcondizione:}}
+\end{itemize}
