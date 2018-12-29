@@ -1,4 +1,63 @@
 \newsection{Introduzione}
 \subsection{Scopo del documento}
+Questo documento ha lo scopo di presentare la pianificazione del gruppo 7dos per lo sviluppo del progetto "Grafana \& Bayes" presentato da Zucchetti. In questo documento sarà presente anche un'analisi dei rischi e dei costi dello sviluppo del capitolato scelto.
+In particolare, il documento conterrà:
+\begin{itemize}
+	\item Un'analisi dei rischi relativi al progetto;
+	\item Una breve descrizione del del modello di sviluppo scelto per il progetto;
+	\item Una dettagliata pianificazione dei tempi delle attività da svolgere;
+	\item Una stima preventiva dell'utilizzo delle risorse a disposizione;
+\end{itemize}
+
+%------------------------
+% Ho notato che gli altri gruppi hanno lasciato le seguenti sezioni identiche al piano di qualifica, se pensate vadano modificate in qualche modo mettiamoci d'accordo
+%------------------------
+
+\subsection{Scopo del prodotto}
+Il prodotto da realizzare consiste in un \gl{plugin} per il software di monitoraggio \gl{Grafana}, da sviluppare in linguaggio \gl{JavaScript}. Il prodotto dovrà svolgere almeno le seguenti funzioni:
+\begin{itemize}
+	\item{Leggere la definizione di una \gl{rete Bayesiana}, memorizzata in formato \gl{JSON};}
+	\item{Associare dei nodi della rete Bayesiana ad un flusso di dati presente nel sistema di Grafana;}
+	\item{Ricalcolare i valori delle probabilità della rete secondo regole temporali prestabilite;}
+	\item{Derivare nuovi dati dai nodi della rete non collegati al flusso di dati, e fornirli al sistema di Grafana;}
+	\item{Visualizzare i dati mediante il sistema di creazione di grafici e \gl{dashboard} a disposizione.}
+\end{itemize}
+
+\subsection{Glossario}
+Per rendere la lettura del documento più semplice, chiara e comprensibile viene allegato il \emph{Glossario v1.0.0} nel quale sono contenute le definizioni dei termini tecnici, dei vocaboli ambigui, degli acronimi e delle abbreviazioni. La presenza di un termine all'interno del Glossario è segnalata con una "g" posta come pedice (esempio: $Glossario_{g}$).
+
+\subsection{Riferimenti}
+
+TODO in fase di redazione
+
+\subsubsection{Normativi}
+\begin{itemize}
+	\item \textbf{ISO/IEC 12207:} \url{https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf} (Ultima consultazione effettuata: TODO da inserire);
+	\item \textbf{ISO/IEC 25010:} \url{https://iso25000.com/index.php/en/iso-25000-standards/iso-25010} (Ultima consultazione effettuata: TODO da inserire);
+	\item \textbf{Da verbali} \emph{.}
+\end{itemize}
+\subsubsection{Informativi}
+\begin{itemize}
+	\item \textbf{Norme di Progetto:} \emph{Norme di Progetto v1.0.0.};
+	\item \textbf{Piano di Progetto:} \emph{Piano di qualifica v1.0.0.};
+	\item \textbf{Capitolato C3:} G\&B: monitoraggio intelligente di processi DevOps
+ \\ \url{https://www.math.unipd.it/~tullio/IS-1/2018/Progetto/C3.pdf};
+ 	\item \textbf{Slide del corso "Ingegneria del Software"} - Ciclo di vita del software
+ \\ \url{https://www.math.unipd.it/~tullio/IS-1/2018/Dispense/L05.pdf};
+	\item \textbf{Slide del corso "Ingegneria del Software"} - Gestione di progetto
+ \\ \url{https://www.math.unipd.it/~tullio/IS-1/2018/Dispense/L06.pdf};
+ 	\item \textbf{Slide del corso "Ingegneria del Software"} - Regole del progetto didattico
+ \\ \url{https://www.math.unipd.it/~tullio/IS-1/2018/Dispense/P01.pdf}.
+ 
+\end{itemize}
+
+\subsection{Scadenze (da confermare)}
+Il gruppo 7dos ha deciso di rispettare le seguenti scadenze, su cui si basa la pianificazione per lo svolgimento del progetto:
+\begin{itemize}
+	\item \textbf{Revisione dei Requisiti:} 21-01-2019;
+	\item \textbf{Revisione di Progettazione:} 15-03-2019;
+	\item \textbf{Revisione di Qualifica:} 19-04-2019;
+	\item \textbf{Revisione di Accettazione:} 17-05-2019.
+\end{itemize}
 
 \pagebreak
