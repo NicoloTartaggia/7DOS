@@ -1,5 +1,4 @@
 \subsection{UC1: Utilizzo editor grafico}
-
 \begin{itemize}
 	\item{\textbf{Attori primari:Utente}}
 	\item{\textbf{Scopo e descrizione:}L'utente vuole utilizzare l'editor grafico ai fini di realizzare facilmente tramite interfaccia grafica un'apposita rete bayesiana, o modificarne una già esistente}
@@ -19,41 +18,136 @@
 \subsubsection{UC1.1: Creazione di un nodo}
 \begin{itemize}
 	\item{\textbf{Attori primari:}Utente}
-	\item{\textbf{Scopo e descrizione:}L'utente desidera creare un nodo della rete bayesiana. Un nodo della rete bayesiana è composto dai seguenti attributi: nome del nodo, lista di eventi del nodo. Ogni evento a sua volta è composto dai seguenti attributi: Nome dell'evento e probabilità dell'evento}
+	\item{\textbf{Scopo e descrizione:}L'utente desidera creare un nodo della rete bayesiana. Un nodo della rete bayesiana è composto da quattro componenti:
+	\begin{enumerate}
+		\item{Il nome del nodo}
+		\item{Una \gl{CPT}}
+		\item{La lista dei predecessori}
+		\item{La lista dei successori}
+	\end{enumerate}
+Al momento della creazione del nodo tutte le componenti vengono inizializzate con valori di default.}
 	\item{\textbf{Precondizione:}L'utente ha indicato al sistema di voler inserire un nodo all'interno della rete bayesiana}
 	\item{\textbf{Flusso base degli eventi:}}
 		\begin{enumerate}
-			\item{Inizializzazione nome nodo (UC1.1.1)}
-			\item{inizializzazione lista eventi nodo(UC1.1.2)}
+			\item{Inizializzazione lista predecessori(UC1.1.1)}
+			\item{Inizializzazione lista successori(UC1.1.2)}
+			\item{Inizializzazione nome nodo (UC1.1.3)}
+			\item{inizializzazione CPT(UC1.1.4)}
 		\end{enumerate}
-	\item{\textbf{Postcondizione:}Il sistema ha creato un nodo con parametri inizializzati con valori di default}
+	\item{\textbf{Postcondizione:}Il sistema ha creato un nodo le cui componenti sono state tutte inizializzate correttamente con valori di default}
 \end{itemize}
-\subsubsection{UC1.1.1:Inizializzazione nome nodo}
+\subsubsection{UC1.1.1:Inizializzazione lista predecessori}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}Un nodo al momento della sua creazione nasce completamente distaccato dalla rete, di conseguenza non possiede alcun predecessore e la relativa lista dovrà essere vuota}
+	\item{\textbf{Precondizione:}L'utente ha indicato al sistema di voler inserire un nodo all'interno della rete bayesiana}
+	\item{\textbf{Postcondizione:}L'inizializzazione della lista di predecessori è stata completata correttamente}
+\end{itemize}
+\subsubsection{UC1.1.1:Inizializzazione lista successori}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}Un nodo al momento della sua creazione nasce completamente distaccato dalla rete, di conseguenza non possiede alcun successore e la relativa lista dovrà essere vuota}
+	\item{\textbf{Precondizione:}L'utente ha indicato al sistema di voler inserire un nodo all'interno della rete bayesiana}
+	\item{\textbf{Postcondizione:}L'inizializzazione della lista di predecessori è stata completata correttamente}
+\end{itemize}
+\subsubsection{UC1.1.3:Inizializzazione nome nodo}
 \begin{itemize}
 	\item{\textbf{Attori primari:Utente}}
-	\item{\textbf{Scopo e descrizione:}Il nome del nodo viene inizializzato con un valore di default composto dalla stringa "Nodo" seguita da un numero progressivo che viene incrementato ad ogni creazione di un nodo}
+	\item{\textbf{Scopo e descrizione:}Il nome del nodo viene inizializzato con un valore di default composto dalla stringa "Nodo" seguita da un numero progressivo che parte da 1 e viene incrementato ad ogni creazione di un nodo}
 	\item{\textbf{Precondizione:}L'utente ha effettuato la creazione di un nuovo nodo della rete}
 	\item{\textbf{Postcondizione:}L'inizializzazione del titolo del nodo è stata completata correttamente}
 \end{itemize}
-\subsubsection{UC1.1.2:Inizializzazione lista eventi nodo}
+
+\subsubsection{UC1.1.4:Inizializzazione CPT}
 \begin{itemize}
 	\item{\textbf{Attori primari:}Utente}
-	\item{\textbf{Scopo e descrizione:}La lista degli eventi del nodo viene inizializzata con due eventi di default chiamati come "Evento1" ed "Evento2", ciascun dei quali ha probabilità 50% }
+	\item{\textbf{Scopo e descrizione:}Una CPT è composta principalmente da tre componenti:
+		\begin{enumerate}
+			\item{La lista dei possibili stati in cui il nodo corrente può risiedere}
+			\item{La lista di tutte le combinazione esistenti di tutti i possibili stati dei nodi predecessori}
+			\item{La tabella delle probabilità vera e propria in cui ogni cella è identificata da una coppia di elementi delle liste dei due punti precedenti}
+		\end{enumerate}			
+		Ogni punto deve venire inizializzato correttamente tramite appositi valori di default.
+	}
 	\item{\textbf{Precondizione:}L'utente ha effettuato la creazione di un nuovo nodo della rete}
-	\item{\textbf{Postcondizione:}L'inizializzazione della lista degli eventi del nodo è stata completata correttamente}
+	\item{\textbf{Flusso base degli eventi:}}
+	\begin{enumerate}
+		\item{Inizializzazione lista stati nodo corrente(UC1.1.4.1)}
+		\item{Inizializzazione lista combinazione stati nodi predecessori(UC1.1.4.2)}
+		\item{Inizializzazione celle tabella probabilità condizionate (UC1.1.4.3)}
+	\end{enumerate}
+	\item{\textbf{Postcondizione:}L'inizializzazione della CPT è stata completata correttamente}
 \end{itemize}
-\subsubsection{UC1.1.2:Modifica nodo}
+\subsubsection{UC1.1.4.1:Inizializzazione lista stati nodo corrente}
 \begin{itemize}
 	\item{\textbf{Attori primari:}Utente}
-	\item{\textbf{Scopo e descrizione:}L'utente desidera modificare il valore dei parametri di un nodo della rete bayesiana}
+	\item{\textbf{Scopo e descrizione:}La lista degli stati del nodo corrente viene inizializzata di default con due stati distinti. Ad ogni stato del nodo corrente è associato un nome ed un intervallo di valori, anche essi dovranno essere inizializzati con valori di default.}
+	\item{\textbf{Precondizione:}L'utente ha effettuato la creazione di un nuovo nodo della rete}
+	\item{\textbf{Postcondizione:}L'inizializzazione della lista di stati del nodo corrente è stata completata correttamente}
+\end{itemize}
+\subsubsection{UC1.1.4.2:Inizializzazione lista combinazioni stati nodi predecessori}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}Un nodo al momento della sua creazione nasce privo di predecessori e successori, di conseguenza la lista di predecessori dovrà essere vuota}
+	\item{\textbf{Precondizione:}L'utente ha effettuato la creazione di un nuovo nodo della rete}
+	\item{\textbf{Postcondizione:}L'inizializzazione della lista delle possibili combinazioni di stati dei nodi predecessori è stata completata correttamente}
+\end{itemize}
+\subsubsection{UC1.1.4.3:Inizializzazione celle tabella probabilità condizionate}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}Prendendo in considerazione i sottocasi UC1.1.4.1 e UC1.1.4.2 si può affermare che la CPT di un nodo al momento della sua creazione possiede solamente due celle. Entrambe verranno inizializzate con il valore 50\%}
+	\item{\textbf{Precondizione:}L'utente ha effettuato la creazione di un nuovo nodo della rete}
+	\item{\textbf{Postcondizione:}L'inizializzazione delle celle delal tabella delle probabilità condizionate è stata completata correttamente}
+\end{itemize}
+
+\subsubsection{UC1.2:Modifica nodo}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente desidera modificare il valore di uno o più parametri di un nodo della rete bayesiana}
 	\item{\textbf{Precondizione:}L'utente ha indicato il nodo su cui desidera effettuare l'operazione di modifica}
 	\item{\textbf{Flusso base degli eventi:}}
 		\begin{enumerate}
-			\item{L'utente modifica il nome del nodo}		
+			\item{L'utente può modificare il nome del nodo(UC1.2.1)}
+			\item{L'utente può modifcare la CPT associata al nodo(UC1.2.2)}		
 		\end{enumerate}
-	\item{\textbf{Postcondizione:}L'utente ha indicato quali parametri del nodo desidera modificare e sono stati aggiornati correttamente}
+	\item{\textbf{Postcondizione:}L'utente ha indicato quali parametri del nodo desidera modificare, come devono essere modificati e sono stati aggiornati correttamente}
+	\item{\textbf{Estensioni:}}
+		\begin{itemize}
+			\item{Nel caso in cui l'utente L'utente modifichi gli attributi del nodo con valori non validi il nodo, e tutti collegamenti associati ad esso non verranno considerati come facenti parte della rete}
+		\end{itemize}
 \end{itemize}
-
+\subsubsection{UC1.2.1:Modifica nome nodo}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente desidera modificare il nome di uno specifico nodo.}
+	\item{\textbf{Precondizione:}L'utente ha indicato al sistema di volere modificare il nome di uno specifico nodo}
+	\item{\textbf{Postcondizione:}Il nome del nodo è stato aggiornato correttamente}
+\end{itemize}
+\subsubsection{UC1.2.2:Modifica CPT associata al nodo}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente desidera modificare la CPT associata al nodo. Una CPT è composta principalmente da tre componenti:
+	\begin{enumerate}
+		\item{La lista dei possibili stati in cui il nodo corrente può risiedere}
+		\item{La lista di tutte le combinazione esistenti di tutti i possibili stati dei nodi predecessori}
+		\item{La tabella delle probabilità vera e propria in cui ogni cella è identificata da una coppia di elementi delle liste dei due punti precedenti}
+	\end{enumerate}
+	Questo caso d'uso si concentra principalmente sulla modifica della prima ed ultima componente. L'interazione dell'utente con la seconda componente verrà trattata nei casi d'uso (Inserire numero Creazione collegamento)(Inserire numero elminazione collegamento).ù
+}
+	\item{\textbf{Precondizione:}L'utente ha indicato al sistema quale operazioni vuole effettuare sulla lista di eventi di uno specifico nodo.}
+	\item{\textbf{Flusso base degli eventi:}}
+	\begin{enumerate}
+		\item{L'utente può aggiungere uno stato al nodo corrente}
+		\item{L'utente può rimuovere un stato dal nodo corrente}
+		\item{L'utente può modificare gli attributi associati ad uno stato del nodo corrente}
+		\item{L'utente può modificare la probabilità contenuta in una cella della CPT}
+	\end{enumerate}
+	\item{\textbf{Postcondizione:}Le operazioni richieste sono state eseguite e la lista di eventi del nodo indicato è stata aggiornata correttamente.}
+\end{itemize}
+\subsubsection{UC1.2.2.1:Inserimento stato nodo}
+\subsubsection{UC1.2.2.2:Eliminazione stato nodo}
+\subsubsection{UC1.2.2.3:Modifica di un possibile stato di un nodo}
+\subsubsection{UC1.2.2.4:Modifica cella CPT}
 
 \begin{itemize}
 	\item{\textbf{Attori primari:}}
