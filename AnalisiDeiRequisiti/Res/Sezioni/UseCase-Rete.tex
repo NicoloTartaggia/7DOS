@@ -341,3 +341,82 @@ Al momento della creazione del nodo tutte le componenti vengono inizializzate co
 	\item{\textbf{Flusso base degli eventi:}}
 	\item{\textbf{Postcondizione:}Il percorso in cui salvare il file è stato definito correttamente}
 \end{itemize}
+\subsubsection{UC1.7:Inserimento valori non validi per parametri nodo}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente durante un operazione di modifica di un nodo ha inserito dei valori non validi per uno o più parametri. La causa dell'errore dovrà essere opportunamente segnalata all'utente. Il nodo e tutti i collegamenti ad esso associati, fintanto che gli errori non verranno risolti, risulteranno come temporaneamente inattivi all'interno della rete}
+	\item{\textbf{Precondizione:}L'utente ha eseguito una o più operazioni di modifica ad un nodo inserendo valori non validi.}
+	\item{\textbf{Flusso base degli eventi:}}
+	\begin{enumerate}
+	\item{L'utente può inserire un nome non valido per un nodo (UC1.7.1)}
+	\item{L'utente può inserire un nome non valido per lo stato di un nodo (UC1.7.2)}
+	\item{L'utente può inserire dei valori non validi per l'intervallo associato ad uno stato di un nodo(UC1.7.3)}
+	\item{La somma delle probabilità condizionate può essere non coerente (UC1.7.4)}
+	\item{L'utente può inserire un valore non valido per una cella della CPT associata ad un nodo (UC1.7.5)}
+	\end{enumerate}
+	\item{\textbf{Postcondizione:}Gli errori sono stati gestiti correttamente e l'utente è stato informato di essi}
+\end{itemize}
+\subsubsection{UC1.7.1:Inserimento nome nodo non valido}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente ha modificato il nome di un nodo con un valore non valido. Le principali cause d'errore possono essere l'inserimento di una stringa vuota od il nome di un nodo già esistente}
+	\item{\textbf{Precondizione:}L'utente ha modificato il nome di nodo}
+	\item{\textbf{Postcondizione:}L'utente viene informato della causa d'errore ed il nome del nodo viene ripristinato al valore precedente.}
+\end{itemize}
+\subsubsection{UC1.7.2:Valore nome stato nodo non valido}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente ha modificato il nome di uno stato di un nodo con un valore non valido. Le principali cause d'errore possono essere l'inserimento di una stringa vuota od il nome di uno stato già esistente all'interno dello stesso nodo}
+	\item{\textbf{Precondizione:}L'utente ha modificato il nome di uno stato di un nodo}
+	\item{\textbf{Postcondizione:}L'utente viene informato della causa d'errore ed il nome dello stato viene ripristinato al valore precedente.}
+\end{itemize}
+\subsubsection{UC1.7.3:Valori dell'intervallo di uno stato di un nodo non validi}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente ha modificato l'intervallo di valori associato ad uno stato di un nodo con dei valori non valid. La principale causa d'errore può essere l'inserimento di un limite inferiore maggiore rispetto al limite superiore o viceversa }
+	\item{\textbf{Precondizione:}L'utente ha modificato l'intervallo di valori associato ad uno stato di un nodo}
+	\item{\textbf{Postcondizione:}L'utente viene informato dell'errore, il nodo e tutti i collegamenti ad esso associati vengono temporaneamente disattivati dalla rete fintanto che l'errore non viene risolto}
+\end{itemize}
+\subsubsection{UC1.7.4:Somma percentuali CPT nm valida}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}Per ogni possibile combinazione esistente di tutti i possibili stati dei nodi predecessori la somma dei valori delle probabilità condizionate di ogni stato deve essere inferiore a 100 (Od 1 a seconda del sistema di interpretazione scelto)}
+	\item{\textbf{Precondizione:}}
+	\item{\textbf{Flusso base degli eventi:}}
+	\item{\textbf{Postcondizione:}}
+\end{itemize}
+\subsubsection{UC1.7.5:Valore cella CPT non valido}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente ha inserito all'interno di una cella della CPT di un nodo un valore non valido. Una cella della CPT contiene una probabilità condizionata, di conseguenza qualsiasi valore al di fuori dell'intervallo 0-100 (Oppure 0-1 a seconda del sistema di rappresentazione scelto) è considerato come non valido}
+	\item{\textbf{Precondizione:}L'utente ha inserito all'interno di una cella della CPT di un nodo un valore non valido}
+	\item{\textbf{Postcondizione:}L'utente viene informato dell'errore, il nodo e tutti i collegamenti ad esso associati vengono temporaneamente disattivati dalla rete fintanto che l'errore non viene risolto}
+\end{itemize}
+\subsubsection{UC1.8:Inserimento valori non validi per salvataggio rete}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}Eventuali errori avvenuti durante il processo di salvataggio della rete devono essere gestiti correttamente}
+	\item{\textbf{Precondizione:}L'utente ha inserito valori non validi per i parametri necessari per salvare correttamente la rete su un file}
+	\item{\textbf{Flusso base degli eventi:}}
+	\begin{enumerate}
+		\item{Il nome del file può essere non valido (UC1.8.1)}
+		\item{Il percorso in cui salvare il file può essere non valido(UC1.8.2)}
+	\end{enumerate}
+	\item{\textbf{Postcondizione:}Il processo di salvataggio non viene portato a termine e l'utente viene informato degli errori avvenuti durante esso}
+\end{itemize}
+\subsubsection{UC1.8.1:Nome file non valido}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}}
+	\item{\textbf{Precondizione:}}
+	\item{\textbf{Flusso base degli eventi:}}
+	\item{\textbf{Postcondizione:}}
+\end{itemize}
+\subsubsection{UC1.8.2:Percorso in cu salvare il file non valido}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}}
+	\item{\textbf{Precondizione:}}
+	\item{\textbf{Flusso base degli eventi:}}
+	\item{\textbf{Postcondizione:}}
+\end{itemize}
