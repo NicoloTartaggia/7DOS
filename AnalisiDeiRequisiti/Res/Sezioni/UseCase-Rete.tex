@@ -1,4 +1,9 @@
 \subsection{UC1: Utilizzo editor grafico}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.45]{Img/UC1}
+	\caption{UC1: Utilizzo editor grafico}\label{}
+\end{figure}
 \begin{itemize}
 	\item{\textbf{Attori primari:Utente}}
 	\item{\textbf{Scopo e descrizione:}L'utente vuole utilizzare l'editor grafico ai fini di realizzare facilmente tramite interfaccia grafica un'apposita rete bayesiana, o modificarne una già esistente}
@@ -16,6 +21,11 @@
 	\item{\textbf{Postcondizione:}Il sistema ha ottenuto le informazioni sulle operazioni che l'utente desidera eseguire e le ha eseguite}
 \end{itemize}
 \subsubsection{UC1.1: Creazione di un nodo}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.45]{Img/UC1-1}
+	\caption{UC1.1: Creazione di un nodo}\label{}
+\end{figure}
 \begin{itemize}
 	\item{\textbf{Attori primari:}Utente}
 	\item{\textbf{Scopo e descrizione:}L'utente desidera creare un nodo della rete bayesiana. Un nodo della rete bayesiana è composto da quattro componenti:
@@ -43,7 +53,7 @@ Al momento della creazione del nodo tutte le componenti vengono inizializzate co
 	\item{\textbf{Precondizione:}L'utente ha indicato al sistema di voler inserire un nodo all'interno della rete bayesiana}
 	\item{\textbf{Postcondizione:}L'inizializzazione della lista di predecessori è stata completata correttamente}
 \end{itemize}
-\subsubsection{UC1.1.1:Inizializzazione lista successori}
+\subsubsection{UC1.1.2:Inizializzazione lista successori}
 \begin{itemize}
 	\item{\textbf{Attori primari:}Utente}
 	\item{\textbf{Scopo e descrizione:}Un nodo al momento della sua creazione nasce completamente distaccato dalla rete, di conseguenza non possiede alcun successore e la relativa lista dovrà essere vuota}
@@ -59,6 +69,11 @@ Al momento della creazione del nodo tutte le componenti vengono inizializzate co
 \end{itemize}
 
 \subsubsection{UC1.1.4:Inizializzazione CPT}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.45]{Img/UC1-1-4}
+	\caption{UC1.1.4: Inizializzazione CPT}\label{}
+\end{figure}
 \begin{itemize}
 	\item{\textbf{Attori primari:}Utente}
 	\item{\textbf{Scopo e descrizione:}Una CPT è composta principalmente da tre componenti:
@@ -101,6 +116,11 @@ Al momento della creazione del nodo tutte le componenti vengono inizializzate co
 \end{itemize}
 
 \subsubsection{UC1.2:Modifica nodo}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.45]{Img/UC1-2}
+	\caption{UC1.2: Modifica nodo}\label{}
+\end{figure}
 \begin{itemize}
 	\item{\textbf{Attori primari:}Utente}
 	\item{\textbf{Scopo e descrizione:}L'utente desidera modificare il valore di uno o più parametri di un nodo della rete bayesiana}
@@ -124,6 +144,11 @@ Al momento della creazione del nodo tutte le componenti vengono inizializzate co
 	\item{\textbf{Postcondizione:}Il nome del nodo è stato aggiornato correttamente}
 \end{itemize}
 \subsubsection{UC1.2.2:Modifica CPT associata al nodo}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.45]{Img/UC1-2-2}
+	\caption{UC1.2.2: Modifica CPT associata al nodo}\label{}
+\end{figure}
 \begin{itemize}
 	\item{\textbf{Attori primari:}Utente}
 	\item{\textbf{Scopo e descrizione:}L'utente desidera modificare la CPT associata al nodo. Una CPT è composta principalmente da tre componenti:
@@ -145,15 +170,174 @@ Al momento della creazione del nodo tutte le componenti vengono inizializzate co
 	\item{\textbf{Postcondizione:}Le operazioni richieste sono state eseguite e la lista di eventi del nodo indicato è stata aggiornata correttamente.}
 \end{itemize}
 \subsubsection{UC1.2.2.1:Inserimento stato nodo}
-\subsubsection{UC1.2.2.2:Eliminazione stato nodo}
-\subsubsection{UC1.2.2.3:Modifica di un possibile stato di un nodo}
-\subsubsection{UC1.2.2.4:Modifica cella CPT}
-
 \begin{itemize}
-	\item{\textbf{Attori primari:}}
-	\item{\textbf{Scopo e descrizione:}}
-	\item{\textbf{Precondizione:}}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente desidera creare un nuovo stato associato al nodo corrente da inserire all'interno della CPT.}
+	\item{\textbf{Precondizione:}L'utente ha indicato di volere inserire uno stato all'interno della CPT del nodo corrente}
+	\item{\textbf{Postcondizione:}Lo stato è stato inserito correttamente}
+\end{itemize}
+\subsubsection{UC1.2.2.2:Eliminazione stato nodo}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente desidera eliminare uno stato associato alla CPT del nodo corrente}
+	\item{\textbf{Precondizione:}L'utente ha indicato quale stato vuole eliminare}
+	\item{\textbf{Postcondizione:}Lo stato è stato eliminato correttamente assieme a tutte le celle della tabella ad esso associate}
+\end{itemize}
+\subsubsection{UC1.2.2.3:Modifica di un possibile stato di un nodo}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.45]{Img/UC1-2-2-3}
+	\caption{UC1.2.2.3: Modifica di un possibile stato di un nodo}\label{}
+\end{figure}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}Uno stato associato alla CPT di un nodo è composto da due componenti: Un nome ed un intervallo di valori. L'utente può effettuare operazioni di modifca su entrambe le componenti}
+	\item{\textbf{Precondizione:}L'utente ha indicato quale stato vuole modificare e come vuole modificarlo}
+	\item{\textbf{Flusso base degli eventi:}
+		\begin{enumerate}
+			\item{L'utente può modificare il nome dello stato}
+			\item{L'utente può modificare il range di valori dello stato}
+		\end{enumerate}			
+	}
+	\item{\textbf{Postcondizione:}Lo stato è stato modificato correttamente come richiesto dall'utente.Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'utente}
+\end{itemize}
+\subsubsection{UC1.2.2.3.1:Modifica nome stato}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente desidera modificare il nome di uno stato associato alla CPT di un nodo}
+	\item{\textbf{Precondizione:}L'utente ha indicato di volere modificare il nome di uno stato.}
+	\item{\textbf{Postcondizione:}Il nome dello stato è stato aggiornato correttamente. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'utente}
+\end{itemize}
+\subsubsection{UC1.2.2.3.2:Modifica intervallo valori stato}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente desidera modificare l'intervallo di valori associato ad uno stato.}
+	\item{\textbf{Precondizione:}L'utente ha indicato che vuole modificare l'intervallo di valori di uno stato}
+	\item{\textbf{Postcondizione:}L'intervallo di valori è stato aggiornato correttamente come richiesto dall'utente. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'utente}
+\end{itemize}
+\subsubsection{UC1.2.2.4:Modifica cella CPT}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente desidera modificare la probabilità contenuta in una cella della CPT}
+	\item{\textbf{Precondizione:}L'utente ha indicato quale cella vuole modificare e con quale valore vuole sostituire quello corrente}
+	\item{\textbf{Postcondizione:}Il valore contenuto all'interno della cella è stato aggiornato corretamente. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'utente}
+\end{itemize}
+\subsubsection{UC1.3:Eliminazione di un nodo dalla rete}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente desidera eliminare un nodo dalla rete}
+	\item{\textbf{Precondizione:}L'utente ha indicato quale nodo vuole eliminare dalla rete}
+	\item{\textbf{Flusso base degli eventi:}}			
+	\item{\textbf{Postcondizione:}Il nodo indicato e tutti i collegamenti associati sono stati eliminati correttamente. Inoltre tutte le CPT dei successori sono state aggiornate correttamente}
+\end{itemize}
+\subsubsection{UC1.4:Creazione collegamento}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.45]{Img/UC1-4}
+	\caption{UC1.4: Creazione collegamento}\label{}
+\end{figure}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente desidera creare un collegamento tra nodi all'interno della rete. I collegamenti all'interno di una rete bayesiana sono direzionati, di conseguenza è sempre definito un nodo di partenza ed un nodo d'arrivo.}
+	\item{\textbf{Precondizione:}L'utente ha indicato quale nodi della rete vuole collegare tra loro, qual'è il nodo di partenza e qual'è il nodo di arrivo}
 	\item{\textbf{Flusso base degli eventi:}}
-
-	\item{\textbf{Postcondizione:}}
+		\begin{enumerate}
+			\item{Inserimento nodo arrivo in lista successori del nodo di partenza(UC1.4.1)}
+			\item{Inserimento nodo partenza lista predecessori del nodo di arrivo(UC1.4.2)}
+			\item{Inizializzazione nuove celle in CPT nodo di arrivo(UC1.4.3)}
+		\end{enumerate}
+	\item{\textbf{Postcondizione:}il collegamento tra nodi è avvenuto correttamente}
+\end{itemize}
+\subsubsection{UC1.4.1:Inserimento nodo arrivo in lista successori del nodo di partenza}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}Il nodo di arrivo del collegamento creato viene inserito all'interno della lista dei successori del nodo di partenza}
+	\item{\textbf{Precondizione:}L'utente ha creato un collegamento tra due nodi}
+	\item{\textbf{Postcondizione:}L'aggiornamento della lista di successori è avvenuta correttamente}
+\end{itemize}
+\subsubsection{UC1.4.2:Inserimento nodo partenza in lista predecessori del nodo di arrivo}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}Il nodo di partenza del collegamento creato viene inserito all'interno della lista dei predecessori del nodo di arrivo}
+	\item{\textbf{Precondizione:}L'utente ha creato un collegamento tra due nodi}
+	\item{\textbf{Postcondizione:}L'aggiornamento della lista di predecessori è avvenuta correttamente}
+\end{itemize}
+\subsubsection{UC1.4.3:Inizializzazione nuove celle in CPT nodo di arrivo}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}In seguito alla creazione di un nuovo collegamento il nodo di arrivo di quest'ultimo possiede un nuovo predecessore. Di conseguenza esistono nuove possibili combinazioni di stati dei nodi predecessori e di conseguenza nuove celle della CPT.}
+	\item{\textbf{Precondizione:}L'utente ha creato un collegamento tra due nodi}
+	\item{\textbf{Postcondizione:}Le nuove celle della CPT sono state inizializzate con appositi valori di default}
+\end{itemize}
+\subsubsection{UC1.5:Eliminazione collegamento}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.45]{Img/UC1-5}
+	\caption{UC1.5: Eliminazione collegamento}\label{}
+\end{figure}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente desidera eliminare un collegamento tra nodi all'interno della rete. I collegamenti all'interno di una rete bayesiana sono direzionati, di conseguenza è sempre definito un nodo di partenza ed un nodo d'arrivo.}
+	\item{\textbf{Precondizione:}L'utente ha indicato quale collegamento vuole eliminare}
+	\item{\textbf{Flusso base degli eventi:}}
+		\begin{enumerate}
+			\item{Rimozione nodo arrivo da lista successori del nodo di partenza(UC1.5.1)}
+			\item{Rimozione nodo partenza da lista predecessori del nodo di arrivo(UC1.5.2)}
+			\item{Eliminazione celle associate al collegamento dal CPT nodo di arrivo(UC1.5.3)}
+		\end{enumerate}
+	\item{\textbf{Postcondizione:}il collegamento tra nodi è stato rimosso correttamente}
+\end{itemize}
+\subsubsection{UC1.5.1:Rimozione nodo arrivo da lista successori del nodo di partenza}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}Il nodo di arrivo del collegamento che si vuole eliminare viene rimosso dalla lista dei successori del nodo di partenza}
+	\item{\textbf{Precondizione:}L'utente ha richiesto l'eliminazione di un collegamento tra due nodi}
+	\item{\textbf{Postcondizione:}L'aggiornamento della lista di successori è avvenuta correttamente}
+\end{itemize}
+\subsubsection{UC1.5.2:Rimozione nodo partenza da lista predecessori del nodo di arrivo}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}Il nodo di partenza del collegamento che si vuole eliminare viene rimosso dalla lista dei predecessori del nodo di arrivo}
+	\item{\textbf{Precondizione:}L'utente ha richiesto l'eliminazione di un collegamento tra due nodi}
+	\item{\textbf{Postcondizione:}L'aggiornamento della lista di predecessori è avvenuta correttamente}
+\end{itemize}
+\subsubsection{UC1.5.3:Eliminazione celle associate al collegamento dal CPT nodo di arrivo}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}In seguito all'eliminazione di un collegamento il nodo di arrivo di quest'ultimo possiede un predecessore in meno. Di conseguenza esistono meno possibili combinazioni di stati dei nodi predecessori. Tutte le celle della tabella associate al predecessore rimosso devono essere eliminate.}
+	\item{\textbf{Precondizione:}L'utente ha richiesto l'eliminazione di un collegamento tra due nodi}
+	\item{\textbf{Postcondizione:}Le celle in eccesso sono state rimosse correttamente}
+\end{itemize}
+\subsubsection{UC1.6:Salvataggio rete}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.45]{Img/UC1-6}
+	\caption{UC1.6: Salvataggio rete}\label{}
+\end{figure}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}La rete creata dall'utente tramite l'editor grafico viene salvata su disco su un apposito file json.}
+	\item{\textbf{Precondizione:}L'utente ha indicato di volere salvare la rete su file.}
+	\item{\textbf{Flusso base degli eventi:}}
+	\begin{enumerate}
+		\item{Inserimento nome file (UC1.6.1)}
+		\item{Inserimento percorso file{UC1.6.2}}
+	\end{enumerate}
+	\item{\textbf{Postcondizione:}La rete è stata salvata correttamente come richiesto dall'utente}
+\end{itemize}
+\subsubsection{UC1.6.1:Inserimento nome file}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente inserisce il nome con cui vuole salvare il file associato alla rete}
+	\item{\textbf{Precondizione:}L'utente ha indicato di volere salvare la rete su file.}
+	\item{\textbf{Flusso base degli eventi:}}
+	\item{\textbf{Postcondizione:}Il file è stato nominato correttamente}
+\end{itemize}
+\subsubsection{UC1.6.2:Inserimento percorso file}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente inserisce il percorso in cui vuole salvare il file associato alla rete}
+	\item{\textbf{Precondizione:}L'utente ha indicato di volere salvare la rete su file.}
+	\item{\textbf{Flusso base degli eventi:}}
+	\item{\textbf{Postcondizione:}Il percorso in cui salvare il file è stato definito correttamente}
 \end{itemize}
