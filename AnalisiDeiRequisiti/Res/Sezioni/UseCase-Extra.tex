@@ -1,4 +1,5 @@
 \subsection{UC5: Gestione degli alert}
+\hypertarget{UC5}{}
 \begin{figure} [H]
  	\centering
  	\includegraphics[scale=0.45]{Img/UC5}
@@ -17,6 +18,7 @@
 \end{itemize}
 
 \subsection{UC5.1: Configurazione dei parametri}
+\hypertarget{UC5.1}{}
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.45]{Img/UC5-1}
@@ -36,6 +38,7 @@
 \end{itemize}
 
 \subsection{UC5.1.1: Inserimento del nome}
+\hypertarget{UC5.1.1}{}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: L'attore inserisce il nome dell'alert;
@@ -44,6 +47,7 @@
 \end{itemize}
 
 \subsection{UC5.1.2: Inserimento intervallo di verifica}
+\hypertarget{UC5.1.2}{}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: L'attore inserisce l'intervallo di verifica ed una eventuale durata minima della condizione di attivazione per notificare l'alert;
@@ -52,6 +56,7 @@
 \end{itemize}
 
 \subsection{UC5.1.3: Inserimento della condizione di attivazione}
+\hypertarget{UC5.1.3}{}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: L'attore inserisce la condizione necessaria per l'attivazione dell'alert;
@@ -60,6 +65,7 @@
 \end{itemize}
 
 \subsection{UC5.2: Gestione delle notifiche}
+\hypertarget{UC5.2}{}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: L'attore seleziona il modo in cui viene notificata l'attivazione di un alert;
@@ -68,6 +74,7 @@
 \end{itemize}
 
 \subsection{UC8: Condivisione dei grafici}
+\hypertarget{UC8}{}
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.45]{Img/UC8}
@@ -92,6 +99,7 @@
 \end{itemize}
 
 \subsection{UC8.1: Condivisione tramite link}
+\hypertarget{UC8.1}{}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: L'attore visualizza un link diretto alla dashboard o ad un panel;
@@ -100,6 +108,7 @@
 \end{itemize}
 
 \subsection{UC8.2: Inclusione tramite codice HTML}
+\hypertarget{UC8.2}{}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: L'attore visualizza il codice \gl{HTML} per includere un panel in una pagina web;
@@ -109,6 +118,7 @@
 
 
 \subsection{UC8.3: Selezione opzioni di visualizzazione}
+\hypertarget{UC8.3}{}
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.45]{Img/UC8-3}
@@ -130,6 +140,7 @@
 \end{itemize}
 
 \subsection{UC8.3.1: Selezione visualizzazione intervallo di tempo corrente}
+\hypertarget{UC8.3.1}{}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: L'attore seleziona la visualizzazione dell'intervallo di tempo in cui sono stati raccolti i dati presenti nel grafico;
@@ -138,6 +149,7 @@
 \end{itemize}
 
 \subsection{UC8.3.2: Deselezione visualizzazione intervallo di tempo corrente}
+\hypertarget{UC8.3.2}{}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: L'attore deseleziona la visualizzazione dell'intervallo di tempo in cui sono stati raccolti i dati presenti nel grafico;
@@ -146,6 +158,7 @@
 \end{itemize}
 
 \subsection{UC8.3.3: Selezione visualizzazione variabili di template}
+\hypertarget{UC8.3.3}{}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: L'attore seleziona la visualizzazione delle variabili di template nel grafico;
@@ -154,14 +167,16 @@
 \end{itemize}
 
 \subsection{UC8.3.4: Deselezione visualizzazione variabili di template}
+\hypertarget{UC8.3.4}{}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: L'attore deseleziona la visualizzazione delle variabili di template nel grafico;
 	\item \textbf{Precondizione}: Il sistema permette di deselezionare la visualizzazione delle variabili di template in un grafico;
-	\item \textbf{Postcondizione}: Le variabili di template no vengono visualizzate nel grafico.
+	\item \textbf{Postcondizione}: Le variabili di template non vengono visualizzate nel grafico.
 \end{itemize}
 
 \subsection{UC8.3.5: Selezione del tema}
+\hypertarget{UC8.3.5}{}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: L'attore seleziona i colori di sfondo del grafico; 
@@ -170,6 +185,7 @@
 \end{itemize}
 
 \subsection{UC8.4: Condivisione di snapshot}
+\hypertarget{UC8.4}{}
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.45]{Img/UC8-4}
@@ -181,8 +197,8 @@
 	\item \textbf{Precondizione}: Il sistema permette la condivisione di snapshot;
 	\item \textbf{Flusso principale degli eventi}:
 	\begin{itemize}
-		\item Pubblicazione du istanza locale (UC8.4.1);
-		\item Pubblicazione du Raintank (UC8.4.2).
+		\item Pubblicazione su istanza locale (UC8.4.1);
+		\item Pubblicazione su Raintank (UC8.4.2).
 	\end{itemize}
 	\item \textbf{Postcondizione}: Lo snapshot con le relative opzioni di visualizzazione è stato condiviso dall'attore;
 	\item \textbf{Estensioni}:
@@ -192,6 +208,7 @@
 \end{itemize}
 
 \subsection{UC8.4.1: Pubblicazione su istanza locale}
+\hypertarget{UC8.4.1}{}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: L'attore pubblica lo snapshot della dashboard o di un panel sulla sua istanza locale;
@@ -200,6 +217,7 @@
 \end{itemize}
 
 \subsection{UC8.4.2: Pubblicazione su Raintank}
+\hypertarget{UC8.4.2}{}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: L'attore pubblica lo snapshot della dashboard o di un panel sulla piattaforma \gl{Raintank};
@@ -208,6 +226,7 @@
 \end{itemize}
 
 \subsection{UC8.4.3: Configurazione opzioni di pubblicazione}
+\hypertarget{UC8.4.3}{}
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.45]{Img/UC8-4-3}
@@ -227,6 +246,7 @@
 \end{itemize}
 
 \subsection{UC8.4.3.1: Inserimento del nome}
+\hypertarget{UC8.4.3.1}{}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: L'attore inserisce il nome dello snapshot;
@@ -235,6 +255,7 @@
 \end{itemize}
 
 \subsection{UC8.4.3.2: Selezione tempo di permanenza}
+\hypertarget{UC8.4.3.2}{}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: L'attore seleziona il tempo di permanenza di uno snapshot dal momento della sua pubblicazione;
@@ -243,6 +264,7 @@
 \end{itemize}
 
 \subsection{UC8.4.3.3: Inserimento tempo di timeout}
+\hypertarget{UC8.4.3.3}{}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: L'attore inserisce il tempo(in secondi) massimo per il caricamento dei dati nello snapshot;

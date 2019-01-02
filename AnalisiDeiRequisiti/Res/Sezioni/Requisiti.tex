@@ -1,3 +1,91 @@
 \newsection{Requisiti}
+\newcolumntype{H}{>{\centering\arraybackslash}m{7cm}}
+\subsection{Requisiti Funzionali}
+\normalsize
+\begin{longtable}{|c|H|c|}
+	\hline
+	\textbf{Id Requisito} & \textbf{Descrizione} & \textbf{Fonte}\\
+	\hline
+	\endhead
+	\hypertarget{R0F1}{R0F1} & Deve essere possibile visualizzare una mappa topologica dell'applicazione monitorata. & VE\_2017-12-06 \\ \hline 
+	\hypertarget{R1F1.1}{R1F1.1} & Ogni tipologia di componente dell'applicazione monitorata deve essere rappresenta graficamente in modo diverso dalle altre. & VE\_2017-12-19 \\ \hline 
+	\hypertarget{R1F1.1.1}{R1F1.1.1} & I server devono essere rappresentati sotto forma di cerchi. & Interno \\ \hline 
+	\caption[Requisiti Funzionali]{Requisiti Funzionali}
+	\label{tabella:req0}
+\end{longtable}
+\clearpage
+\newcolumntype{H}{>{\centering\arraybackslash}m{7cm}}
+\subsection{Requisiti di Qualità}
+\normalsize
+\begin{longtable}{|c|H|c|}
+	\hline
+	\textbf{Id Requisito} & \textbf{Descrizione} & \textbf{Fonte}\\
+	\hline
+	\endhead
+	\hypertarget{R0Q1}{R0Q1} & La logica applicativa deve essere indipendente dalla rappresentazione dei dati nel database. & VE\_2017-12-19 \\ \hline 
+	\hypertarget{R0Q2}{R0Q2} & Tutto il codice prodotto deve rispettare le norme che sono state stabilite nel documento Norme di Progetto & Interno \\ \hline 
+	\hypertarget{R0Q3}{R0Q3} & Tutti i documenti e il codice prodotto devono rispettare le metriche riportate nel documento Piano di Qualifica & Interno \\ \hline 
+	\hypertarget{R0Q4}{R0Q4} & Deve essere prodotto un manuale utente. & Interno \\ \hline 
+	\hypertarget{R0Q5}{R0Q5} & Deve essere prodotto un manuale sviluppatore. & Interno \\ \hline 
+	\caption[Requisiti di Qualità]{Requisiti Di Qualità}
+	\label{tabella:req1}
+\end{longtable}
+\clearpage
+\newcolumntype{H}{>{\centering\arraybackslash}m{7cm}}
+\subsection{Requisiti di Vincolo}
+\normalsize
+\begin{longtable}{|c|H|c|}
+	\hline
+	\textbf{Id Requisito} & \textbf{Descrizione} & \textbf{Fonte}\\
+	\hline
+	\endhead
+	\hypertarget{R0V1}{R0V1} & Il codice sorgente prodotto deve essere rilasciato in un repository pubblico con licenza \gl{open source} che ne permetta l'utilizzo a scopi commerciali. & Capitolato  \\ \hline 
+	\hypertarget{R0V2}{R0V2} & I plugin sviluppati devono essere utilizzabili nell'ambiente Kibana. & Capitolato  \\ \hline 
+	\hypertarget{R0V3}{R0V3} & Il plugin deve utilizzare JavaScript. & Capitolato  \\ \hline 
+	\hypertarget{R1V3.1}{R1V3.1} & Il plugin può utilizzare la libreria \gl{D3.js}. & Capitolato  \\ \hline 
+	\hypertarget{R1V3.2}{R1V3.2} & Il plugin può utilizzare la libreria Canvas.js. & Capitolato  \\ \hline 
+	\hypertarget{R1V3.3}{R1V3.3} & Il plugin può utilizzare la libreria \gl{Chart.js}. & Capitolato  \\ \hline 
+	\hypertarget{R1V3.4}{R1V3.4} & Il plugin può utilizzare la libreria Plottly.js. & Capitolato  \\ \hline 
+	\caption[Requisiti Di Vincolo]{Requisiti di Vincolo}
+	\label{tabella:req3}
+\end{longtable}
+\clearpage
 
-\pagebreak
+
+
+\subsection{Tracciamento Requisiti - Use case}
+\normalsize
+\begin{longtable}{|c|c|}
+	\hline
+	\textbf{Codice Requisiti} & \textbf{Codice Use case} \\
+	\hline
+	\endhead
+	\hyperlink{R0F1}{R0F1} & \hyperlink{UC1}{UC1}\\
+	\hline
+	\hyperlink{R2F1.3}{R2F1.3} & \hyperlink{UC6.1}{UC6.1}\\
+	\hline
+	\caption[Tracciamento Requisiti-Use case]{Tracciamento Requisiti-Use case}
+	\label{tabella:requi-usecase}
+\end{longtable}
+\clearpage
+
+\subsection{Tracciamento Use case - Requisiti}
+\normalsize
+\begin{longtable}{|c|c|}
+	\hline
+	\textbf{Codice Use case} & \textbf{Codice Requisiti} \\
+	\hline
+	\endhead
+	\hyperlink{UC1}{UC1} & \hyperlink{R0F1}{R0F1}\\
+	\hline
+	\hyperlink{UC1.1}{UC1.1} & \hyperlink{R0F1.6}{R0F1.6}\\
+	\hline
+	\hyperlink{UC1.1.1}{UC1.1.1} & \hyperlink{R0F1.6.1}{R0F1.6.1}\\
+	\hline
+	\caption[Tracciamento Use case-Requisiti]{Tracciamento Use case-Requisiti}
+	\label{tabella:requi-usecase}
+\end{longtable}
+\clearpage
+
+
+
