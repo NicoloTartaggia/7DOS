@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-11-25" view-index="0" gantt-divider-location="401" resource-divider-location="300" version="2.8.9" locale="en_US">
+    <description/>
+    <view zooming-state="default:6" id="gantt-chart">
+        <field id="tpd3" name="Name" width="187" order="0"/>
+        <field id="tpd4" name="Begin date" width="78" order="1"/>
+        <field id="tpd5" name="End date" width="66" order="2"/>
+        <field id="tpd6" name="Duration" width="66" order="3"/>
+        <option id="color.recent"><![CDATA[#00cc33 #00ff33 #ff0000 #00cc00 #000000 #ff0033]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="true"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="5" name="Norme di progetto" color="#000000" meeting="false" start="2018-11-26" duration="9" complete="0" thirdDate="2018-11-28" thirdDate-constraint="0" expand="true">
+            <depend id="42" type="2" difference="0" hardness="Strong"/>
+            <depend id="49" type="2" difference="0" hardness="Strong"/>
+            <depend id="50" type="2" difference="0" hardness="Strong"/>
+            <depend id="51" type="2" difference="0" hardness="Strong"/>
+            <depend id="69" type="2" difference="0" hardness="Strong"/>
+            <depend id="211" type="2" difference="0" hardness="Strong"/>
+            <task id="10" name="Processi primari" color="#8cb6ce" meeting="false" start="2018-11-26" duration="6" complete="0" thirdDate="2018-11-28" thirdDate-constraint="0" expand="true">
+                <depend id="38" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="11" name="Processi di supporto" color="#8cb6ce" meeting="false" start="2018-11-26" duration="6" complete="0" thirdDate="2018-11-28" thirdDate-constraint="0" expand="true">
+                <depend id="38" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="14" name="Processi organizzativi" color="#8cb6ce" meeting="false" start="2018-11-26" duration="6" complete="0" thirdDate="2018-11-28" thirdDate-constraint="0" expand="true">
+                <depend id="38" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="38" name="Verifica" color="#00cc33" meeting="false" start="2018-12-02" duration="3" complete="0" thirdDate="2018-11-26" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="42" name="Studio di fattibilità" color="#000000" meeting="false" start="2018-12-05" duration="6" complete="0" thirdDate="2018-11-26" thirdDate-constraint="0" expand="true">
+            <depend id="52" type="2" difference="0" hardness="Strong"/>
+            <depend id="211" type="2" difference="0" hardness="Strong"/>
+            <task id="48" name="Analisi capitolati" color="#8cb6ce" meeting="false" start="2018-12-05" duration="4" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true">
+                <depend id="47" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="47" name="Verifica" color="#00cc33" meeting="false" start="2018-12-09" duration="2" complete="0" thirdDate="2018-11-26" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="52" name="Analisi dei requisiti" color="#000000" meeting="false" start="2018-12-11" duration="20" complete="0" thirdDate="2018-11-26" thirdDate-constraint="0" expand="true">
+            <depend id="211" type="2" difference="0" hardness="Strong"/>
+            <task id="121" name="Descrizione generale" color="#8cb6ce" meeting="false" start="2018-12-11" duration="3" complete="0" thirdDate="2018-12-20" thirdDate-constraint="0" expand="true">
+                <depend id="68" type="2" difference="0" hardness="Strong"/>
+                <depend id="69" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="68" name="Casi d'uso" color="#8cb6ce" meeting="false" start="2018-12-14" duration="12" complete="0" thirdDate="2018-12-20" thirdDate-constraint="0" expand="true">
+                <depend id="70" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="69" name="Requisiti" color="#8cb6ce" meeting="false" start="2018-12-14" duration="12" complete="0" thirdDate="2018-12-20" thirdDate-constraint="0" expand="true">
+                <depend id="70" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="70" name="Verifica" color="#00cc33" meeting="false" start="2018-12-26" duration="5" complete="0" thirdDate="2018-12-20" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="49" name="Piano di progetto" color="#000000" meeting="false" start="2018-12-05" duration="35" complete="0" thirdDate="2018-11-26" thirdDate-constraint="0" expand="true">
+            <depend id="211" type="2" difference="0" hardness="Strong"/>
+            <task id="53" name="Analisi dei rischi" color="#8cb6ce" meeting="false" start="2018-12-05" duration="3" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true">
+                <depend id="67" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="54" name="Pianificazione" color="#8cb6ce" meeting="false" start="2018-12-05" duration="5" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true">
+                <depend id="67" type="2" difference="0" hardness="Strong"/>
+                <depend id="206" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="206" name="Preventivo" color="#8cb6ce" meeting="false" start="2018-12-10" duration="3" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true">
+                <depend id="64" type="2" difference="8" hardness="Strong"/>
+            </task>
+            <task id="64" name="Consuntivo" color="#8cb6ce" meeting="false" start="2019-01-02" duration="3" complete="0" thirdDate="2019-01-02" thirdDate-constraint="1" expand="true">
+                <depend id="67" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="67" name="Verifica" color="#00cc33" meeting="false" start="2019-01-05" duration="4" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="50" name="Piano di qualifica" color="#000000" meeting="false" start="2018-12-05" duration="28" complete="0" thirdDate="2018-11-26" thirdDate-constraint="0" expand="true">
+            <depend id="211" type="2" difference="0" hardness="Strong"/>
+            <task id="60" name="Strategia generale" color="#8cb6ce" meeting="false" start="2018-12-05" duration="9" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true">
+                <depend id="62" type="2" difference="0" hardness="Strong"/>
+                <depend id="63" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="61" name="Metriche" color="#8cb6ce" meeting="false" start="2018-12-05" duration="9" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true">
+                <depend id="62" type="2" difference="7" hardness="Strong"/>
+                <depend id="63" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="62" name="Resoconto" color="#8cb6ce" meeting="false" start="2018-12-26" duration="3" complete="0" thirdDate="2018-12-26" thirdDate-constraint="1" expand="true">
+                <depend id="63" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="63" name="Verifica" color="#00cc00" meeting="false" start="2018-12-29" duration="4" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="51" name="Glossario" color="#000000" meeting="false" start="2018-12-05" duration="36" complete="0" thirdDate="2018-11-26" thirdDate-constraint="0" expand="true">
+            <depend id="211" type="2" difference="0" hardness="Strong"/>
+            <task id="58" name="Stesura" color="#8cb6ce" meeting="false" start="2018-12-05" duration="31" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true">
+                <depend id="59" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="59" name="Verifica" color="#00cc00" meeting="false" start="2019-01-05" duration="5" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="211" name="Consegna" color="#ff0000" meeting="true" start="2019-01-14" duration="0" complete="0" thirdDate="2019-01-14" thirdDate-constraint="1" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>

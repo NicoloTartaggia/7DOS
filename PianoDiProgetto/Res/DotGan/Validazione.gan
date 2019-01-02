@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-04-20" view-index="0" gantt-divider-location="446" resource-divider-location="300" version="2.8.9" locale="en_US">
+    <description/>
+    <view zooming-state="default:3" id="gantt-chart">
+        <field id="tpd3" name="Name" width="181" order="0"/>
+        <field id="tpd4" name="Begin date" width="94" order="1"/>
+        <field id="tpd5" name="End date" width="84" order="2"/>
+        <field id="tpd6" name="Duration" width="83" order="3"/>
+        <option id="color.recent"><![CDATA[#ff0033 #00cc33 #00ff33 #ff0000 #00cc00 #000000]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="true"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="5" name="Norme di progetto" color="#000000" meeting="false" start="2019-04-22" duration="7" complete="0" thirdDate="2018-11-28" thirdDate-constraint="0" expand="true">
+            <depend id="236" type="2" difference="0" hardness="Strong"/>
+            <task id="219" name="Incremento" color="#8cb6ce" meeting="false" start="2019-04-22" duration="4" complete="0" thirdDate="2018-11-25" thirdDate-constraint="0" expand="true">
+                <depend id="38" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="38" name="Verifica" color="#00cc33" meeting="false" start="2019-04-26" duration="3" complete="0" thirdDate="2018-11-26" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="52" name="Analisi dei requisiti" color="#000000" meeting="false" start="2019-04-22" duration="7" complete="0" thirdDate="2018-11-26" thirdDate-constraint="0" expand="true">
+            <depend id="236" type="2" difference="0" hardness="Strong"/>
+            <task id="121" name="Incremento" color="#8cb6ce" meeting="false" start="2019-04-22" duration="4" complete="0" thirdDate="2018-12-20" thirdDate-constraint="0" expand="true">
+                <depend id="70" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="70" name="Verifica" color="#00cc33" meeting="false" start="2019-04-26" duration="3" complete="0" thirdDate="2018-12-20" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="49" name="Piano di progetto" color="#000000" meeting="false" start="2019-04-22" duration="9" complete="0" thirdDate="2018-11-26" thirdDate-constraint="0" expand="true">
+            <depend id="236" type="2" difference="0" hardness="Strong"/>
+            <task id="53" name="Incremento" color="#8cb6ce" meeting="false" start="2019-04-22" duration="4" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true">
+                <depend id="254" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="254" name="Consuntivo" color="#8cb6ce" meeting="false" start="2019-04-26" duration="2" complete="0" thirdDate="2019-02-28" thirdDate-constraint="1" expand="true">
+                <depend id="67" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="67" name="Verifica" color="#00cc33" meeting="false" start="2019-04-28" duration="3" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="50" name="Piano di qualifica" color="#000000" meeting="false" start="2019-04-22" duration="7" complete="0" thirdDate="2018-11-26" thirdDate-constraint="0" expand="true">
+            <depend id="236" type="2" difference="0" hardness="Strong"/>
+            <task id="60" name="Incremento" color="#8cb6ce" meeting="false" start="2019-04-22" duration="4" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true">
+                <depend id="63" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="63" name="Verifica" color="#00cc00" meeting="false" start="2019-04-26" duration="3" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="51" name="Glossario" color="#000000" meeting="false" start="2019-04-22" duration="14" complete="0" thirdDate="2018-11-26" thirdDate-constraint="0" expand="true">
+            <depend id="236" type="2" difference="0" hardness="Strong"/>
+            <task id="58" name="Incremento" color="#8cb6ce" meeting="false" start="2019-04-22" duration="10" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true">
+                <depend id="59" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="59" name="Verifica" color="#00cc00" meeting="false" start="2019-05-02" duration="4" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="236" name="Consegna" color="#ff0033" meeting="true" start="2019-05-10" duration="0" complete="0" thirdDate="2019-05-10" thirdDate-constraint="1" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
