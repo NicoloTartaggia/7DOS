@@ -49,15 +49,15 @@
             </task>
             <task id="70" name="Verifica" color="#00cc33" meeting="false" start="2019-04-26" duration="3" complete="0" thirdDate="2018-12-20" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="49" name="Piano di progetto" color="#000000" meeting="false" start="2019-04-22" duration="9" complete="0" thirdDate="2018-11-26" thirdDate-constraint="0" expand="true">
+        <task id="49" name="Piano di progetto" color="#000000" meeting="false" start="2019-04-22" duration="15" complete="0" thirdDate="2018-11-26" thirdDate-constraint="0" expand="true">
             <depend id="236" type="2" difference="0" hardness="Strong"/>
             <task id="53" name="Incremento" color="#8cb6ce" meeting="false" start="2019-04-22" duration="4" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true">
                 <depend id="254" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="254" name="Consuntivo" color="#8cb6ce" meeting="false" start="2019-04-26" duration="2" complete="0" thirdDate="2019-02-28" thirdDate-constraint="1" expand="true">
+            <task id="254" name="Consuntivo" color="#8cb6ce" meeting="false" start="2019-05-02" duration="2" complete="0" thirdDate="2019-05-02" thirdDate-constraint="1" expand="true">
                 <depend id="67" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="67" name="Verifica" color="#00cc33" meeting="false" start="2019-04-28" duration="3" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true"/>
+            <task id="67" name="Verifica" color="#00cc33" meeting="false" start="2019-05-04" duration="3" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true"/>
         </task>
         <task id="50" name="Piano di qualifica" color="#000000" meeting="false" start="2019-04-22" duration="7" complete="0" thirdDate="2018-11-26" thirdDate-constraint="0" expand="true">
             <depend id="236" type="2" difference="0" hardness="Strong"/>
