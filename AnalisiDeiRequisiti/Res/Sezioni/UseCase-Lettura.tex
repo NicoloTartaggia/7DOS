@@ -68,38 +68,20 @@
 	\item \textbf{Postcondizione}: L'attore inserisce le regole temporali desiderate.
 \end{itemize}
 \subsection{UC2.3: Salvataggio della configurazione attuale}
-\begin{figure} [H]
-	\centering
-	\includegraphics[scale=0.45]{Img/UC2-1}
-	\caption{UC2.3: Salvataggio della configurazione attuale}\label{}
-\end{figure}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: L'attore salva l'attuale configurazione della connessione della rete bayesiana al flusso dati in un file .JSON per un futuro riutilizzo;
-	\item \textbf{Precondizione}: La connessione tra rete bayesiana e sorgente dati è configurata nel modo desiderato;
-	\item \textbf{Flusso principale degli eventi}:
-	\begin{itemize}
-		\item Inserimento nome file (UC1.6.1);
-		\item Inserimento percorso file (UC1.6.2);
-	\end{itemize}
-	\item \textbf{Postcondizione}: Il file salvato contiene la configurazione attuale.
+	\item \textbf{Precondizione}: La connessione tra rete bayesiana e sorgente dati è configurata nel modo desiderato, e il sistema ne permette il salvataggio in un file;
+	\item \textbf{Postcondizione}: Viene salvato un file contenente la configurazione attuale.
 \end{itemize}
 
 \subsection{UC2.4: Caricamento di una configurazione salvata}
-\begin{figure} [H]
-	\centering
-	\includegraphics[scale=0.45]{Img/UC2-1}
-	\caption{UC2.4: Caricamento di una configurazione salvata}\label{}
-\end{figure}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: L'attore configura la connessione tra la rete bayesiana e la sorgente dati con secondo le impostazioni descritte da un file salvato su disco;
-	\item \textbf{Precondizione}: Il file contiene una configurazione adeguata alla rete ;
-	\item \textbf{Flusso principale degli eventi}:
-	\begin{itemize}
-		\item Inserimento nome file (UC1.6.1);
-		\item Inserimento percorso file (UC1.6.2);
-	\end{itemize}
+	\item \textbf{Precondizione}: Il sistema permette di leggere un file .JSON contenente la configurazione;
+	\item \textbf{Scenario alternativo}: \\
+	1. Viene caricato un file con una configurazione non valida o in un formato non valido, il sistema rimane nello stato precedente all'azione;
 	\item \textbf{Postcondizione}: La connessione tra rete e sorgente dati viene configurata secondo i dati salvati nel file.
 \end{itemize}
 
@@ -111,10 +93,11 @@
 	\item \textbf{Flusso principale degli eventi}:
 	\item \textbf{Postcondizione}: L'attore viene notificato dell'errore.
 \end{itemize}
+
 \subsection{UC3: Lettura dei dati dalla rete bayesiana}
 \begin{figure} [H]
 	\centering
-	\includegraphics[scale=0.45]{Img/UC2}
+	\includegraphics[scale=0.45]{Img/UC3}
 	\caption{UC3: Lettura dei dati dalla rete bayesiana}\label{}
 \end{figure}
 \begin{itemize}
@@ -136,10 +119,15 @@
 	\item \textbf{Postcondizione}: Grafana ha letto correttamente i dati dalla rete bayesiana.
 \end{itemize}
 \subsection{UC3.2: Aggiornamento della dashboard}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.45]{Img/UC3-2}
+	\caption{UC3.2: Aggiornamento della dashboard}\label{}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Attori}: Utente, Grafana;
 	\item \textbf{Descrizione}: L'utente imposta la frequenza di aggiornamento della dashboard; Grafana aggiorna la visualizzazione dei panel;
-	\item \textbf{Precondizione}: Grafana legge correttamente i dati dalla rete bayesiana;
+	\item \textbf{Precondizione}: Grafana legge correttamente i dati dalla rete bayesiana, e il sistema permette di impostare la frequenza di aggiornamento;
 	\item \textbf{Flusso principale degli eventi}:
 		\item Impostazione della frequenza di aggiornamento della dashboard (UC3.2.1);
 		\item Aggiornamento di un panel (UC3.2.2)
