@@ -1,12 +1,19 @@
 \subsection{Analisi}
+% Comando per testare con le linee più grosse
+\arrayrulewidth=1pt
+% Colori per la tabella
+\definecolor{title_row}{rgb}{0.13, 0.59, 0.95}
+\definecolor{title_text}{rgb}{1, 1, 1}
 
 \subsubsection{Prospetto Orario}
 Nel periodo di Analisi la distribuzione oraria è la seguente:
 
 \begin{center}
+\renewcommand{\arraystretch}{2}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Nome} & \textbf{Resp.} & \textbf{Ammi.} & \textbf{Analist.} & \textbf{Progett.} & \textbf{Program.} & \textbf{Verific.} & \textbf{Totale} \\ \hline
+\rowcolor{title_row}
+\textbf{\color{title_text}{Nome}} & \textbf{\color{title_text}{Resp.}} & \textbf{\color{title_text}{Ammi.}} & \textbf{\color{title_text}{Analist.}} & \textbf{\color{title_text}{Progett.}} & \textbf{\color{title_text}{Program.}} & \textbf{\color{title_text}{Verific.}} & \textbf{\color{title_text}{Totale}} \\ \hline
 Andrea Trevisin  & & & & & & &  \\ \hline
 Giacomo Barzon   & & & & & & &  \\ \hline
 Giovanni Sorice  & & & & & & &  \\ \hline
@@ -15,6 +22,7 @@ Marco Costantino & & & & & & &  \\ \hline
 Michele Roverato & & & & & & &  \\ \hline
 Nicolò Tartaggia & & & & & & &  \\ \hline
 \end{tabular}
+\renewcommand{\arraystretch}{1}
 \end{center}
 
 Il seguente grafico dà una rappresentazione visiva della suddivisione oraria: \\
@@ -27,9 +35,11 @@ Il seguente grafico dà una rappresentazione visiva della suddivisione oraria: \
 Nel periodo di Analisi il resoconto della distribuzione delle ore e dei relativi costi è la seguente:
 
 \begin{center}
+\renewcommand{\arraystretch}{2}
 \begin{tabular}{|c|c|c|}
 \hline
-\textbf{Ruolo}  & \textbf{Ore} & \textbf{Costo in \euro} \\ \hline
+\rowcolor{title_row}
+\textbf{\color{title_text}{Ruolo}}  & \textbf{\color{title_text}{Ore}} & \textbf{\color{title_text}{Costo in \euro}} \\ \hline
 Responsabile    &              &                     \\ \hline
 Amministratore  &              &                     \\ \hline
 Analista        &              &                     \\ \hline
@@ -38,6 +48,7 @@ Programmatore   &              &                     \\ \hline
 Verificatore    &              &                     \\ \hline
 \textbf{Totale} & \textbf{}    & \textbf{}           \\ \hline
 \end{tabular}
+\renewcommand{\arraystretch}{1}
 \end{center}
 
 Il seguente grafico dà una rappresentazione visiva della distribuzione dei ruoli: \\
