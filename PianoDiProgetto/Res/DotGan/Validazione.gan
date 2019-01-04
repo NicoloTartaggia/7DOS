@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-04-20" view-index="0" gantt-divider-location="446" resource-divider-location="300" version="2.8.9" locale="en_US">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-04-20" view-index="0" gantt-divider-location="409" resource-divider-location="300" version="2.8.9" locale="en_US">
     <description/>
     <view zooming-state="default:3" id="gantt-chart">
-        <field id="tpd3" name="Name" width="181" order="0"/>
-        <field id="tpd4" name="Begin date" width="94" order="1"/>
-        <field id="tpd5" name="End date" width="84" order="2"/>
-        <field id="tpd6" name="Duration" width="83" order="3"/>
-        <option id="color.recent"><![CDATA[#ff0033 #00cc33 #00ff33 #ff0000 #00cc00 #000000]]></option>
+        <field id="tpd3" name="Name" width="165" order="0"/>
+        <field id="tpd4" name="Begin date" width="86" order="1"/>
+        <field id="tpd5" name="End date" width="77" order="2"/>
+        <field id="tpd6" name="Duration" width="77" order="3"/>
+        <option id="color.recent"><![CDATA[#00cc33 #ff0033 #00ff33 #ff0000 #00cc00 #000000]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Name" width="210" order="0"/>
@@ -73,6 +73,22 @@
             </task>
             <task id="59" name="Verifica" color="#00cc00" meeting="false" start="2019-05-02" duration="4" complete="0" thirdDate="2018-12-12" thirdDate-constraint="0" expand="true"/>
         </task>
+        <task id="260" name="Manuale utente" meeting="false" start="2019-04-22" duration="8" complete="0" expand="true">
+            <task id="261" name="Incremento" color="#8cb6ce" meeting="false" start="2019-04-22" duration="5" complete="0" thirdDate="2019-04-20" thirdDate-constraint="0" expand="true">
+                <depend id="262" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="262" name="Verifica" color="#00cc33" meeting="false" start="2019-04-27" duration="3" complete="0" thirdDate="2019-04-20" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="255" name="Product baseline" meeting="false" start="2019-04-22" duration="8" complete="0" expand="true">
+            <task id="256" name="Incremento" color="#8cb6ce" meeting="false" start="2019-04-22" duration="5" complete="0" thirdDate="2019-04-20" thirdDate-constraint="0" expand="true">
+                <depend id="257" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="257" name="Verifica" color="#00cc33" meeting="false" start="2019-04-27" duration="3" complete="0" thirdDate="2019-04-20" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="258" name="Validazione" color="#8cb6ce" meeting="false" start="2019-04-22" duration="14" complete="0" thirdDate="2019-04-20" thirdDate-constraint="0" expand="true">
+            <depend id="259" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="259" name="Collaudo" color="#8cb6ce" meeting="false" start="2019-05-06" duration="2" complete="0" thirdDate="2019-04-20" thirdDate-constraint="0" expand="true"/>
         <task id="236" name="Consegna" color="#ff0033" meeting="true" start="2019-05-10" duration="0" complete="0" thirdDate="2019-05-10" thirdDate-constraint="1" expand="true"/>
     </tasks>
     <resources/>
