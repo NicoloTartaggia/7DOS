@@ -88,19 +88,21 @@
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: L'attore configura la connessione tra la rete bayesiana e la sorgente dati con secondo le impostazioni descritte da un file salvato su disco;
-	\item \textbf{Precondizione}: Il sistema permette di leggere un file .JSON contenente la configurazione;
-	\item \textbf{Scenario alternativo}: \\
-	1. Viene caricato un file con una configurazione non valida o in un formato non valido, il sistema rimane nello stato precedente all'azione;
-	\item \textbf{Postcondizione}: La connessione tra rete e sorgente dati viene configurata secondo i dati salvati nel file.
+	\item \textbf{Precondizione}: Il sistema permette di leggere un file .JSON, esiste un file .JSON contenente la configurazione;
+	\item \textbf{Estensioni}: 
+	\begin{itemize}
+		\item  Viene caricato un file dal contenuto non valido e/o in un formato non valido, il sistema rimane nello stato precedente all'azione (UC2.4.1)
+	\end{itemize}
+	\item \textbf{Postcondizione}: La connessione tra rete e sorgente dati viene configurata secondo le informazioni salvati nel file.
 \end{itemize}
 
-\subsection{UC2.4.1: Caricamento di una configurazione non valida}
+\subsection{UC2.4.1: Caricamento di un file non valido}
 \hypertarget{UC2.4.1}{}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: L'attore tenta di caricare una configurazione non valida per la rete in uso, e ne viene notificato;
-	\item \textbf{Precondizione}: Il file non contiene una configurazione adeguata alla rete o viene riconosciuto dal sistema (contenuti non validi o formato non valido);
-	\item \textbf{Postcondizione}: L'attore viene notificato dell'errore ,il sistema rimane nello stato precedente all'azione.
+	\item \textbf{Descrizione}: L'attore tenta di caricare un file non valido, e ne viene notificato;
+	\item \textbf{Precondizione}: I contenuti del file, e/o il suo formato, non sono validi;
+	\item \textbf{Postcondizione}: L'attore viene notificato dell'errore, il sistema rimane nello stato precedente all'azione.
 \end{itemize}
 
 \subsection{UC3: Lettura dei dati dalla rete bayesiana}
@@ -161,4 +163,17 @@
 	\item \textbf{Descrizione}: L'attore aggiorna la visualizzazione di un panel con nuovi dati dal flusso collegato;
 	\item \textbf{Precondizione}: Grafana possiede nuovi dati relativi al flusso dati rappresentato dal panel;
 	\item \textbf{Postcondizione}: La visualizzazione del panel è aggiornata in base ai nuovi dati.
+\end{itemize}
+
+\subsection{UC9: Caricamento della rete bayesiana da file}
+\hypertarget{UC9}{}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: L'attore carica la rete bayesiana da un file.JSON salvato su disco;
+	\item \textbf{Precondizione}: Il sistema permette di leggere un file .JSON, esiste un file .JSON contenente la rete;
+	\item \textbf{Estensioni}:
+	\begin{itemize}
+		\item Viene caricato un file dal contenuto non valido e/o in un formato non valido, il sistema rimane nello stato precedente all'azione (UC2.4.1);
+	\end{itemize}
+	\item \textbf{Postcondizione}: La rete bayesiana viene creata secondo le informazioni salvate nel file.
 \end{itemize}
