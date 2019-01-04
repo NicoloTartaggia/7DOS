@@ -309,37 +309,11 @@ Al momento della creazione del nodo tutte le componenti vengono inizializzate co
 	\item{\textbf{Postcondizione:}Le celle in eccesso sono state rimosse correttamente}
 \end{itemize}
 \subsubsection{UC1.6:Salvataggio rete}
-\begin{figure} [H]
-	\centering
-	\includegraphics[scale=0.45]{Img/UC1-6}
-	\caption{UC1.6: Salvataggio rete}\label{}
-\end{figure}
 \begin{itemize}
 	\item{\textbf{Attori primari:}Utente}
 	\item{\textbf{Scopo e descrizione:}La rete creata dall'utente tramite l'editor grafico viene salvata su disco su un apposito file json.}
 	\item{\textbf{Precondizione:}L'utente ha indicato di volere salvare la rete su file.}
-	\item{\textbf{Flusso base degli eventi:}}
-	\begin{enumerate}
-		\item{Inserimento nome file (UC1.6.1)}
-		\item{Inserimento percorso file{UC1.6.2}}
-	\end{enumerate}
 	\item{\textbf{Postcondizione:}La rete è stata salvata correttamente come richiesto dall'utente}
-\end{itemize}
-\subsubsection{UC1.6.1:Inserimento nome file}
-\begin{itemize}
-	\item{\textbf{Attori primari:}Utente}
-	\item{\textbf{Scopo e descrizione:}L'utente inserisce il nome con cui vuole salvare il file associato alla rete}
-	\item{\textbf{Precondizione:}L'utente ha indicato di volere salvare la rete su file.}
-	\item{\textbf{Flusso base degli eventi:}}
-	\item{\textbf{Postcondizione:}Il file è stato nominato correttamente}
-\end{itemize}
-\subsubsection{UC1.6.2:Inserimento percorso file}
-\begin{itemize}
-	\item{\textbf{Attori primari:}Utente}
-	\item{\textbf{Scopo e descrizione:}L'utente inserisce il percorso in cui vuole salvare il file associato alla rete}
-	\item{\textbf{Precondizione:}L'utente ha indicato di volere salvare la rete su file.}
-	\item{\textbf{Flusso base degli eventi:}}
-	\item{\textbf{Postcondizione:}Il percorso in cui salvare il file è stato definito correttamente}
 \end{itemize}
 \subsubsection{UC1.7:Inserimento valori non validi per parametri nodo}
 \begin{itemize}
@@ -392,11 +366,49 @@ Al momento della creazione del nodo tutte le componenti vengono inizializzate co
 	\item{\textbf{Precondizione:}L'utente ha inserito all'interno di una cella della CPT di un nodo un valore non valido}
 	\item{\textbf{Postcondizione:}L'utente viene informato dell'errore, il nodo e tutti i collegamenti ad esso associati vengono temporaneamente disattivati dalla rete fintanto che l'errore non viene risolto}
 \end{itemize}
-\subsubsection{UC1.8:Inserimento valori non validi per salvataggio rete}
+\subsubsection{UC1.8:Salvataggio file .json}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.45]{Img/UC1-8}
+	\caption{UC1.8: Salvataggio file .json}\label{}
+\end{figure}
 \begin{itemize}
 	\item{\textbf{Attori primari:}Utente}
-	\item{\textbf{Scopo e descrizione:}Eventuali errori avvenuti durante il processo di salvataggio della rete devono essere gestiti correttamente}
-	\item{\textbf{Precondizione:}L'utente ha inserito valori non validi per i parametri necessari per salvare correttamente la rete su un file}
+	\item{\textbf{Scopo e descrizione:}L'utente desidera salvare un file .json, utilizzato per memorizzare diverse impostazioni della rete. Un file .json è identificato principalmente da due componenti:Un nome ed un percorso in cui è salvato all'interno del file system}
+	\item{\textbf{Precondizione:}L'utente ha indicato di volere salvare la rete su file.}
+	\item{\textbf{Flusso base degli eventi:}}
+	\begin{enumerate}
+		\item{L'utente inserisce il nome del file(UC1.8.1)}
+		\item{L'utente inserisce il percorso in cui salvare il file (UC1.8.2)}
+	\end{enumerate}
+	\item{\textbf{Postcondizione:}Il file è stato nominato correttamente}
+\end{itemize}
+\subsubsection{UC1.8.1:Inserimento nome file}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente inserisce il nome con cui vuole salvare il file associato alla rete}
+	\item{\textbf{Precondizione:}L'utente ha indicato di volere salvare la rete su file.}
+	\item{\textbf{Flusso base degli eventi:}}
+	\item{\textbf{Postcondizione:}Il file è stato nominato correttamente}
+\end{itemize}
+\subsubsection{UC1.8.2:Inserimento percorso file}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}L'utente inserisce il percorso in cui vuole salvare il file associato alla rete}
+	\item{\textbf{Precondizione:}L'utente ha indicato di volere salvare la rete su file.}
+	\item{\textbf{Flusso base degli eventi:}}
+	\item{\textbf{Postcondizione:}Il percorso in cui salvare il file è stato definito correttamente}
+\end{itemize}
+\subsubsection{UC1.9:Inserimento valori non validi per file .json}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.45]{Img/UC1-9}
+	\caption{UC1.9: Inserimento valori non validi per file .json}\label{}
+\end{figure}
+\begin{itemize}
+	\item{\textbf{Attori primari:}Utente}
+	\item{\textbf{Scopo e descrizione:}Eventuali errori avvenuti durante il processo di salvataggio di un file .json devono essere gestiti correttamente}
+	\item{\textbf{Precondizione:}L'utente ha inserito valori non validi per i parametri necessari per salvare correttamente un file .json}
 	\item{\textbf{Flusso base degli eventi:}}
 	\begin{enumerate}
 		\item{Il nome del file può essere non valido (UC1.8.1)}
@@ -404,19 +416,17 @@ Al momento della creazione del nodo tutte le componenti vengono inizializzate co
 	\end{enumerate}
 	\item{\textbf{Postcondizione:}Il processo di salvataggio non viene portato a termine e l'utente viene informato degli errori avvenuti durante esso}
 \end{itemize}
-\subsubsection{UC1.8.1:Nome file non valido}
+\subsubsection{UC1.9.1:Nome file non valido}
 \begin{itemize}
 	\item{\textbf{Attori primari:}Utente}
-	\item{\textbf{Scopo e descrizione:}}
-	\item{\textbf{Precondizione:}}
-	\item{\textbf{Flusso base degli eventi:}}
-	\item{\textbf{Postcondizione:}}
+	\item{\textbf{Scopo e descrizione:}L'utente ha inserito un nome non valido per il file .json. Le principali cause d'errore possono essere l'inserimento di un nome vuoto od il nome di un file già esistente all'interno della stessa directory}
+	\item{\textbf{Precondizione:} L'utente ha inserito un valore non valido per il nome del file che si vuole salvare}
+	\item{\textbf{Postcondizione:}Il processo di salvataggio non viene portato a termine e l'utente viene informato degli errori avvenuti durante esso}
 \end{itemize}
-\subsubsection{UC1.8.2:Percorso in cu salvare il file non valido}
+\subsubsection{UC1.9.2:Percorso in cui salvare il file non valido}
 \begin{itemize}
 	\item{\textbf{Attori primari:}Utente}
-	\item{\textbf{Scopo e descrizione:}}
-	\item{\textbf{Precondizione:}}
-	\item{\textbf{Flusso base degli eventi:}}
-	\item{\textbf{Postcondizione:}}
+	\item{\textbf{Scopo e descrizione:}L'utente ha inserito un percorso non valido per il salvataggio del file .json. Le principali cause d'errore possono essere l'inserimento di un percorso vuoto, di un percorso con struttura errata o di un percorso inesistente}
+	\item{\textbf{Precondizione:} L'utente ha inserito un valore non valido per il percorso del file che si vuole salvare}
+	\item{\textbf{Postcondizione:}Il processo di salvataggio non viene portato a termine e l'utente viene informato degli errori avvenuti durante esso}
 \end{itemize}
