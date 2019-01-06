@@ -173,7 +173,7 @@ Al momento della creazione del nodo tutte le componenti vengono inizializzate co
 	\item{\textbf{Attori primari:} Utente;} 
 	\item{\textbf{Scopo e descrizione:} L'attore desidera creare un nuovo stato associato al nodo corrente da inserire all'interno della CPT;} 
 	\item{\textbf{Precondizione:} L'attore ha indicato di volere inserire uno stato all'interno della CPT del nodo corrente;} 
-	\item{\textbf{Postcondizione:} Lo stato è stato inserito correttamente.} 
+	\item{\textbf{Postcondizione:} Lo stato è stato inserito correttamente ed i suoi parametri sono stati inizializzati con valori di default.} 
 \end{itemize} 
 \subsubsection{UC1.2.2.2: Eliminazione stato nodo} 
 \begin{itemize} 
@@ -198,28 +198,44 @@ Al momento della creazione del nodo tutte le componenti vengono inizializzate co
 			\item{L'attore può modificare il range di valori dello stato.} 
 		\end{itemize} 			
 	} 
-	\item{\textbf{Postcondizione:} Lo stato è stato modificato correttamente come richiesto dall'attore.Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore.} 
+	\item{\textbf{Postcondizione:} Lo stato è stato modificato correttamente come richiesto dall'attore. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore.} 
 \end{itemize} 
 \subsubsection{UC1.2.2.3.1: Modifica nome stato} 
 \begin{itemize} 
 	\item{\textbf{Attori primari:} Utente;} 
 	\item{\textbf{Scopo e descrizione:} L'attore desidera modificare il nome di uno stato associato alla CPT di un nodo;} 
 	\item{\textbf{Precondizione:} L'attore ha indicato di volere modificare il nome di uno stato;} 
-	\item{\textbf{Postcondizione:} Il nome dello stato è stato aggiornato correttamente. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore.} 
+	\item{\textbf{Postcondizione:} Il nome dello stato è stato aggiornato correttamente. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore.}
+	\item{\textbf{Estensioni:}
+		\begin{itemize}
+			\item{Valore nome stato nodo non valido (UC1.7.2)}
+		\end{itemize}
+	}
 \end{itemize} 
 \subsubsection{UC1.2.2.3.2: Modifica intervallo valori stato} 
 \begin{itemize} 
 	\item{\textbf{Attori primari:} Utente;} 
 	\item{\textbf{Scopo e descrizione:} L'attore desidera modificare l'intervallo di valori associato ad uno stato;} 
 	\item{\textbf{Precondizione:} L'attore ha indicato che vuole modificare l'intervallo di valori di uno stato;} 
-	\item{\textbf{Postcondizione:} L'intervallo di valori è stato aggiornato correttamente come richiesto dall'attore. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore.} 
+	\item{\textbf{Postcondizione:} L'intervallo di valori è stato aggiornato correttamente come richiesto dall'attore. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore.}
+	\item{\textbf{Estensioni:}
+		\begin{itemize}
+			\item{Valore intervallo stato nodo non valido (UC1.7.3)}
+		\end{itemize}
+	}
 \end{itemize} 
 \subsubsection{UC1.2.2.4: Modifica cella CPT} 
 \begin{itemize} 
 	\item{\textbf{Attori primari:} Utente;} 
 	\item{\textbf{Scopo e descrizione:} L'attore desidera modificare la probabilità contenuta in una cella della CPT;} 
 	\item{\textbf{Precondizione:} L'attore ha indicato quale cella vuole modificare e con quale valore vuole sostituire quello corrente;} 
-	\item{\textbf{Postcondizione:} Il valore contenuto all'interno della cella è stato aggiornato corretamente. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore.} 
+	\item{\textbf{Postcondizione:} Il valore contenuto all'interno della cella è stato aggiornato corretamente. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore.}
+	\item{\textbf{Estensioni:}
+		\begin{itemize}
+			\item{Somma percentuale CPT non valida (UC1.7.4)}
+			\item{Valore cella CPT non valido (UC1.7.5)}
+		\end{itemize}
+	}
 \end{itemize} 
 \subsubsection{UC1.3: Eliminazione di un nodo dalla rete} 
 \begin{itemize} 
