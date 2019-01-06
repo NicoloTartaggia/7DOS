@@ -299,21 +299,21 @@ Al momento della creazione del nodo tutte le componenti vengono inizializzate co
 			\item{Rimozione nodo partenza da lista predecessori del nodo di arrivo(UC1.5.2);} 
 			\item{Eliminazione celle associate al collegamento dal CPT nodo di arrivo(UC1.5.3).} 
 		\end{itemize} 
-	\item{\textbf{Postcondizione:} il collegamento tra nodi è stato rimosso correttamente;} 
+	\item{\textbf{Postcondizione:} il collegamento tra nodi è stato rimosso correttamente, e le CPT dei successori sono state aggiornate correttamente;} 
 \end{itemize} 
 \subsubsection{UC1.5.1: Rimozione nodo arrivo da lista successori del nodo di partenza} 
 \begin{itemize} 
 	\item{\textbf{Attori primari:} Utente;} 
 	\item{\textbf{Scopo e descrizione:} Il nodo di arrivo del collegamento che si vuole eliminare viene rimosso dalla lista dei successori del nodo di partenza;} 
 	\item{\textbf{Precondizione:} L'attore ha richiesto l'eliminazione di un collegamento tra due nodi;} 
-	\item{\textbf{Postcondizione:} L'aggiornamento della lista di successori è avvenuta correttamente.} 
+	\item{\textbf{Postcondizione:} L'aggiornamento della lista di successori del nodo di partenza è avvenuta correttamente.} 
 \end{itemize} 
 \subsubsection{UC1.5.2: Rimozione nodo partenza da lista predecessori del nodo di arrivo} 
 \begin{itemize} 
 	\item{\textbf{Attori primari:} Utente;} 
 	\item{\textbf{Scopo e descrizione:} Il nodo di partenza del collegamento che si vuole eliminare viene rimosso dalla lista dei predecessori del nodo di arrivo;} 
 	\item{\textbf{Precondizione:} L'attore ha richiesto l'eliminazione di un collegamento tra due nodi;} 
-	\item{\textbf{Postcondizione:} L'aggiornamento della lista di predecessori è avvenuta correttamente.} 
+	\item{\textbf{Postcondizione:} L'aggiornamento della lista di predecessori del nodo di arrivo è avvenuta correttamente.} 
 \end{itemize} 
 \subsubsection{UC1.5.3: Eliminazione celle associate al collegamento dal CPT nodo di arrivo} 
 \begin{itemize} 
@@ -329,11 +329,11 @@ Al momento della creazione del nodo tutte le componenti vengono inizializzate co
 	\item{\textbf{Precondizione:} L'attore ha indicato di volere salvare la rete su file;} 
 	\item{\textbf{Postcondizione:} La rete è stata salvata correttamente come richiesto dall'attore.} 
 \end{itemize} 
-\subsubsection{UC1.7: Inserimento valori non validi per parametri nodo}
+\subsubsection{UC1.7: Errore modifica nodo}
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.45]{Img/UC1-7} 
-	\caption{UC1.7: Inserimento valori non validi per parametri nodo} \label{} 
+	\caption{UC1.7: Errore modifica nodo} \label{} 
 \end{figure}
 \begin{itemize} 
 	\item{\textbf{Attori primari:} Utente;} 
