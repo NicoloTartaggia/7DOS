@@ -1,6 +1,6 @@
 \newsection{Meccanismi di controllo e di rendicontazione}
 \subsection{Meccanismi di controllo}
-Il sistema di ticketing adottato, descritto nel documento \emph{Norme di Progetto v1.0.0} permette di suddividere e controllare le varie attività. In particolare, è possibile visualizzare:
+Il sistema di ticketing adottato, descritto nel documento \emph{Norme di Progetto v1.0.0}, permette di suddividere e controllare le varie attività. In particolare, è possibile visualizzare:
 \begin{itemize}
 \item{\textbf{Calendario attività}}: la data di fine delle varie attività è indicata in un calendario e gestita automaticamente dal sistema di ticketing;  
 \item{\textbf{Dettaglio attività}}: ogni attività include diverse informazioni, quali personale incaricato, stato dell'attività e data di fine prevista. 
@@ -9,9 +9,15 @@ Il sistema di ticketing adottato, descritto nel documento \emph{Norme di Progett
 Ogni attività, assegnata a uno o più componenti del gruppo, deve essere svolta entro una data prestabilita. In questo modo è possibile pianificare in modo chiaro ed efficace l'insieme delle varie attività. Il mancato completamento entro la data prevista comporta un ritardo, il quale viene annotato (decidere dove?) e rendicontato.
 
 \subsubsection{Controllo delle fasi di processo}
-//va inserito il grafico delle attività basato sul PDCA
-
+Il ciclo \gl{PDCA} descritto nel documento \emph{Piano di progetto v1.0.0} distingue lo stato di avanzamento di un'attività. Utilizzando il numero di attività presenti nel sistema di ticketing e un \gl{grafico ad area in pila} che rappresenta tutte le attività in determinata fase del ciclo, vengono visualizzati in quali stati le attività si trovano. \\
+In questo modo di possono ricavare informazioni in  modo rapido e di particolare importanza, come:
+\begin{itemize}
+\item{La velocità con la quale le attività passano di stato in stato, fino al completamento della fase \emph{act}.}
+\item{Eventuali periodo di stallo di una o più attività all'interno di una fase specifica.} \\ \\
+\end{itemize}  
+\centerline {\includegraphics[scale=1]{../PianoDiProgetto/Img/Grafico_PDCA.png}}
 \subsubsection{Controllo delle metriche di progetto}
+
 
 \subsection{Meccanismi di rendicontazione}
 Il sistema di ticketing adottato, descritto nel documento \emph{Norme di Progetto v1.0.0}, permette ad ogni membro di rendicontare le ore spese per una specifica attività. In particolare, è possibile visualizzare:
