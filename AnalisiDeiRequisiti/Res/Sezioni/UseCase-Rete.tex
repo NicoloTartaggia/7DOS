@@ -28,7 +28,7 @@
 \end{figure} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore desidera creare un nodo della rete bayesiana. Un nodo della rete bayesiana è composto da quattro componenti: 
+	\item{\textbf{Scopo e descrizione}: L'attore desidera creare un nodo della \gl{rete bayesiana}. Un nodo della rete bayesiana è composto da quattro componenti: 
 		\begin{itemize} 
 			\item{Il nome del nodo;} 
 			\item{Una \gl{CPT};} 
@@ -190,7 +190,7 @@
 \end{figure} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: Uno stato associato alla CPT di un nodo è composto da due componenti: Un nome ed un intervallo di valori. L'attore può effettuare operazioni di modifca su entrambe le componenti;} 
+	\item{\textbf{Scopo e descrizione}: Uno stato associato alla CPT di un nodo è composto da due componenti: Un nome ed un intervallo di valori. L'attore può effettuare operazioni di modifica su entrambe le componenti;} 
 	\item{\textbf{Precondizione}: L'attore ha indicato quale stato vuole modificare e come vuole modificarlo;} 
 	\item{\textbf{Flusso base degli eventi}: 
 		\begin{itemize} 
@@ -229,7 +229,7 @@
 	\item{\textbf{Attori primari}: Utente;} 
 	\item{\textbf{Scopo e descrizione}: L'attore desidera modificare la probabilità contenuta in una cella della CPT;} 
 	\item{\textbf{Precondizione}: L'attore ha indicato quale cella vuole modificare e con quale valore vuole sostituire quello corrente;} 
-	\item{\textbf{Postcondizione}: Il valore contenuto all'interno della cella è stato aggiornato corretamente. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore;}
+	\item{\textbf{Postcondizione}: Il valore contenuto all'interno della cella è stato aggiornato correttamente. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore;}
 	\item{\textbf{Estensioni}:
 		\begin{itemize}
 			\item{Somma percentuale CPT non valida (UC1.7.4);}
@@ -325,7 +325,7 @@
 \subsection{UC1.6: Salvataggio rete} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: La rete creata dall'attore tramite l'editor grafico viene salvata su disco su un apposito file json;} 
+	\item{\textbf{Scopo e descrizione}: La rete creata dall'attore tramite l'editor grafico viene salvata su disco su un apposito file \gl{JSON};} 
 	\item{\textbf{Precondizione}: L'attore ha indicato di volere salvare la rete su file;} 
 	\item{\textbf{Postcondizione}: La rete è stata salvata correttamente come richiesto dall'attore.} 
 \end{itemize} 
@@ -366,7 +366,7 @@
 \subsection{UC1.7.3: Valori dell'intervallo di uno stato di un nodo non validi} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore ha modificato l'intervallo di valori associato ad uno stato di un nodo con dei valori non valid. La principale causa d'errore può essere l'inserimento di un limite inferiore maggiore rispetto al limite superiore o viceversa;} 
+	\item{\textbf{Scopo e descrizione}: L'attore ha modificato l'intervallo di valori associato ad uno stato di un nodo con dei valori non validi. La principale causa d'errore può essere l'inserimento di un limite inferiore maggiore rispetto al limite superiore o viceversa;} 
 	\item{\textbf{Precondizione}: L'attore ha modificato l'intervallo di valori associato ad uno stato di un nodo;} 
 	\item{\textbf{Postcondizione}: L'attore viene informato dell'errore, il nodo e tutti i collegamenti ad esso associati vengono temporaneamente disattivati dalla rete fintanto che l'errore non viene risolto.} 
 \end{itemize} 
@@ -414,5 +414,4 @@
 	\item{\textbf{Scopo e descrizione}: L'attore inserisce il percorso in cui vuole salvare il file associato alla rete;} 
 	\item{\textbf{Precondizione}: L'attore ha indicato di volere salvare la rete su file;} 
 	\item{\textbf{Postcondizione}: Il percorso in cui salvare il file è stato definito correttamente.} 
-\end{itemize} 
-
+\end{itemize}

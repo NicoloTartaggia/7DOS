@@ -36,12 +36,40 @@
 	\hypertarget{R1F6.1.3}{R1F6.1.3} & Deve essere possibile inserire la condizione di attivazione di un alert. & Interno \\ \hline 
 	\hypertarget{R1F6.2}{R1F6.2} & Deve essere possibile impostare il modo in cui viene notificata l’attivazione di un alert. & Interno \\ \hline 
 	\hypertarget{R1F7}{R1F7} & Deve essere possibile disegnare la rete Bayesiana con un piccolo editor grafico specializzato. & Capitolato \\ \hline 
-	\hypertarget{R1F7.1}{R1F7.1} & Deve essere possibile creare un nodo all’interno della rete. & Interno \\ \hline 
-	\hypertarget{R1F7.2}{R1F7.2} & Deve essere possibile modificare la tabella delle probabilità condizionate associata ad un nodo della rete. & Interno \\ \hline 
+	\hypertarget{R1F7.1}{R1F7.1} & Deve essere possibile creare un nodo della rete. & Interno \\ \hline 
+	\hypertarget{R1F7.1.1}{R1F7.1.2} & Deve essere possibile inizializzare correttamente la lista di predecessori del nodo. & Interno \\ \hline 
+	\hypertarget{R1F7.1.2}{R1F7.1.2} & Deve essere possibile inizializzare correttamente la lista di successori del nodo. & Interno \\ \hline 
+	\hypertarget{R1F7.1.3}{R1F7.1.3} & Deve essere possibile inizializzare correttamente il nome del nodo. & Interno \\ \hline 
+	\hypertarget{R1F7.1.4}{R1F7.1.4} & Deve essere possibile inizializzare correttamente la CPT associata al nodo. & Interno \\ \hline 
+	\hypertarget{R1F7.1.4.1}{R1F7.1.4.1} & Deve essere possibile inizializzare correttamente la lista degli stati associata alla CPT del nodo correttamente. & Interno \\ \hline 
+	\hypertarget{R1F7.1.4.2}{R1F7.1.4.2} & Deve essere possibile inizializzare correttamente la lista delle combinazioni degli stati dei nodi predecessori associata alla CPT del nodo correttamente. & Interno \\ \hline 
+	\hypertarget{R1F7.1.4.3}{R1F7.1.4.3} & Deve essere possibile inizializzare correttamente le celle della CPT. & Interno \\ \hline 
+	\hypertarget{R1F7.2}{R1F7.2} & Deve essere possibile modificare i parametri di un nodo della rete. & Interno \\ \hline
+	\hypertarget{R1F7.2.1}{R1F7.2.1} & Deve essere possibile modificare il nome di un nodo della rete. & Interno \\ \hline  
+	\hypertarget{R1F7.2.2}{R1F7.2.2} & Deve essere possibile modificare la CPT associata ad un nodo della rete. & Interno \\ \hline  
+	\hypertarget{R1F7.2.2.1}{R1F7.2.2.1} & Deve essere possibile aggiungere uno stato alla CPT associata ad un nodo della rete. & Interno \\ \hline  
+	\hypertarget{R1F7.2.2.2}{R1F7.2.2.2} & Deve essere possibile eliminare uno stato dalla CPT associata ad un nodo della rete. & Interno \\ \hline  
+	\hypertarget{R1F7.2.2.3}{R1F7.2.2.3} & Deve essere possibile modificare i parametri associati ad uno stato della CPT associata ad un nodo della rete. & Interno \\ \hline  
+	\hypertarget{R1F7.2.2.3}{R1F7.2.2.3} & Deve essere possibile modificare il nome di uno stato associato alla CPT associata ad un nodo della rete. & Interno \\ \hline  
+	\hypertarget{R1F7.2.2.3.1}{R1F7.2.2.3.1} & Deve essere possibile modificare il range di valori di uno stato associato alla CPT associata ad un nodo della rete. & Interno \\ \hline  
+	\hypertarget{R1F7.2.2.3.2}{R1F7.2.2.3.2} & Deve essere possibile modificare il range di valori di uno stato associato alla CPT associata ad un nodo della rete. & Interno \\ \hline  
+	\hypertarget{R1F7.2.2.4}{R1F7.2.2.4} & Deve essere possibile modificare una cella della CPT. & Interno \\ \hline  
 	\hypertarget{R1F7.3}{R1F7.3} & Deve essere possibile eliminare un nodo dalla rete. & Interno \\ \hline 
-	\hypertarget{R1F7.4}{R1F7.4} & Deve essere possibile creare un collegamento tra due nodi della rete. & Interno \\ \hline 
-	\hypertarget{R1F7.5}{R1F7.5} & Deve essere possibile eliminare un collegamento tra due nodi della rete. & Interno \\ \hline 
-	\hypertarget{R1F7.6}{R1F7.6} & Deve essere possibile salvare la rete su un file .json. & Interno \\ \hline 
+	\hypertarget{R1F7.4}{R1F7.4} & Deve essere possibile creare un collegamento tra due nodi della rete. & Interno \\ \hline
+	\hypertarget{R1F7.4.1}{R1F7.4.1} & Deve essere possibile indicare il nodo di partenza del collegamento. & Interno \\ \hline   
+	\hypertarget{R1F7.4.2}{R1F7.4.2} & Deve essere possibile indicare il nodo di arrivo del collegamento. & Interno \\ \hline   
+	\hypertarget{R1F7.5}{R1F7.5} & Deve essere possibile eliminare un collegamento dalla rete. & Interno \\ \hline 
+	\hypertarget{R1F7.6}{R1F7.6} & Deve essere possibile salvare la rete su file JSON. & Interno \\ \hline 
+	\hypertarget{R1F7.6.1}{R1F7.6.1} & Deve essere possibile indicare il nome del file JSON su cui si vuole salvare la struttura della  rete. & Interno \\ \hline 
+	\hypertarget{R1F7.6.2}{R1F7.6.2} & Deve essere possibile indicare il percorso del file system in cui si vuole salvare il file JSON contenente la struttura della  rete. & Interno \\ \hline 
+	\hypertarget{R1F7.7}{R1F7.7} & Deve essere possibile gestire errori relativi al salvataggio del file JSON contenente la struttura della rete. & Interno \\ \hline 
+	\hypertarget{R1F7.7.1}{R1F7.7.1} & Deve essere possibile gestire l’inserimento di valori non validi per il nome del file. & Interno \\ \hline 
+	\hypertarget{R1F7.7.2}{R1F7.7.2} & Deve essere possibile gestire l’inserimento di valori non validi per per il percorso del file. & Interno \\ \hline 
+	\hypertarget{R1F7.8}{R1F7.8} & Deve essere possibile gestire errori relativi alla modifica di un nodo. & Interno \\ \hline 
+	\hypertarget{R1F7.8.1}{R1F7.8.1} & Deve essere possibile gestire l’inserimento di valori non validi per il nome di un nodo. & Interno \\ \hline 
+	\hypertarget{R1F7.8.2}{R1F7.8.2} & Deve essere possibile gestire l’inserimento di valori non validi per il nome di uno stato associato alla CPT di un nodo della rete. & Interno \\ \hline 
+	\hypertarget{R1F7.8.3}{R1F7.8.3} & Deve essere possibile gestire l’inserimento di valori non validi per l’intervallo associato ad uno stato del nodo. & Interno \\ \hline 
+	\hypertarget{R1F7.8.4}{R1F7.8.4} & Deve essere possibile gestire l’inserimento di valori non validi per una cella della tabella. & Interno \\ \hline 
 	\hypertarget{R2F8}{R2F8} & Deve essere possibile applicare più reti Bayesiane in oggetti di monitoraggio diversi. & Capitolato \\ \hline 
 	\hypertarget{R2F9}{R2F9} & Deve essere possibile creare una rete Bayesiana a partire dai dati raccolti sul campo anziché svilupparla con la collaborazione degli esperti del settore. & Capitolato \\ \hline 
 	\hypertarget{R2F10}{R2F10} & Deve essere possibile condividere un grafico. & Interno \\ \hline 
