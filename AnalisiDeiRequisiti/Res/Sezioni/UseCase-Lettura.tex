@@ -87,7 +87,7 @@
 \hypertarget{UC2.4}{}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Scopo e descrizione}: L'attore configura la connessione tra la rete bayesiana e la sorgente dati con secondo le impostazioni descritte da un file salvato su disco;
+	\item \textbf{Scopo e descrizione}: L'attore configura la connessione tra la rete bayesiana e la sorgente dati secondo le impostazioni descritte da un file salvato su disco;
 	\item \textbf{Precondizione}: Il sistema permette di leggere un file JSON, esiste un file JSON contenente la configurazione;
 	\item \textbf{Estensioni}: 
 	\begin{itemize}
@@ -143,8 +143,10 @@
 	\item \textbf{Scopo e descrizione}: L'utente imposta la frequenza di aggiornamento della dashboard; Grafana aggiorna la visualizzazione dei panel;
 	\item \textbf{Precondizione}: Grafana legge correttamente i dati dalla rete bayesiana, e il sistema permette di impostare la frequenza di aggiornamento;
 	\item \textbf{Flusso principale degli eventi}:
-		\item Impostazione della frequenza di aggiornamento della dashboard (UC3.2.1);
-		\item Aggiornamento di un panel (UC3.2.2)
+		\begin{itemize}
+			\item Impostazione della frequenza di aggiornamento della dashboard (UC3.2.1);
+			\item Aggiornamento di un panel (UC3.2.2)
+		\end{itemize}
 	\item \textbf{Postcondizione}: Grafana aggiorna la dashboard con nuovi dati letti dalla rete, secondo la frequenza desiderata.
 \end{itemize}
 \subsection{UC3.2.1: Impostazione della frequenza di aggiornamento della dashboard}
