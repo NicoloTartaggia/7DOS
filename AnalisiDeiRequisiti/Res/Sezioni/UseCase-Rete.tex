@@ -399,7 +399,7 @@
 		\item{L'attore inserisce il nome del file(UC1.8.1);} 
 		\item{L'attore inserisce il percorso in cui salvare il file (UC1.8.2).} 
 	\end{itemize} 
-	\item{\textbf{Postcondizione}: Il file è stato nominato correttamente.} 
+	\item{\textbf{Postcondizione}: Il file è stato salvato correttamente.} 
 \end{itemize} 
 \subsection{UC1.8.1: Inserimento nome file} 
 \begin{itemize} 
@@ -415,34 +415,4 @@
 	\item{\textbf{Precondizione}: L'attore ha indicato di volere salvare la rete su file;} 
 	\item{\textbf{Postcondizione}: Il percorso in cui salvare il file è stato definito correttamente.} 
 \end{itemize} 
-\subsection{UC1.9: Inserimento valori non validi per file JSON} 
-\begin{figure} [H]
-	\centering
-	\includegraphics[scale=0.45]{Img/UC1-9} 
-	\caption{UC1.9: Inserimento valori non validi per file JSON} \label{} 
-\end{figure} 
-\begin{itemize} 
-	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: Eventuali errori avvenuti durante il processo di salvataggio di un fileJSON devono essere gestiti correttamente;} 
-	\item{\textbf{Precondizione}: L'attore ha inserito valori non validi per i parametri necessari per salvare correttamente un file JSON;} 
-	\item{\textbf{Flusso base degli eventi}: } 
-	\begin{itemize} 
-		\item{Il nome del file può essere non valido (UC1.8.1);} 
-		\item{Il percorso in cui salvare il file può essere non valido(UC1.8.2).} 
-	\end{itemize} 
-	\item{\textbf{Postcondizione}: Il processo di salvataggio non viene portato a termine e l'attore viene informato degli errori avvenuti durante esso.} 
-\end{itemize} 
-\subsection{UC1.9.1: Nome file non valido} 
-\begin{itemize} 
-	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore ha inserito un nome non valido per il file JSON. Le principali cause d'errore possono essere l'inserimento di un nome vuoto o il nome di un file già esistente all'interno della stessa directory;} 
-	\item{\textbf{Precondizione}: L'attore ha inserito un valore non valido per il nome del file che si vuole salvare;} 
-	\item{\textbf{Postcondizione}: Il processo di salvataggio non viene portato a termine e l'attore viene informato degli errori avvenuti durante esso.} 
-\end{itemize} 
-\subsection{UC1.9.2: Percorso in cui salvare il file non valido} 
-\begin{itemize} 
-	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore ha inserito un percorso non valido per il salvataggio del file JSON. Le principali cause d'errore possono essere l'inserimento di un percorso vuoto, di un percorso con struttura errata o di un percorso inesistente;} 
-	\item{\textbf{Precondizione}: L'attore ha inserito un valore non valido per il percorso del file che si vuole salvare;} 
-	\item{\textbf{Postcondizione}: Il processo di salvataggio non viene portato a termine e l'attore viene informato degli errori avvenuti durante esso.} 
-\end{itemize} 
+
