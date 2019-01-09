@@ -6,8 +6,18 @@ software conforme alle caratteristiche riportate di seguito, e il proponente, ch
 requisiti come le caratteristiche ricercate.
 In fase di collaudo la conformità ai requisiti concordati costituirà il criterio per l'accettazione
 del \gl{prodotto} da parte del \gl{committente}.
+\subsection{Scopo del prodotto}
+Il prodotto da realizzare consiste in un \gl{plugin} per il software di monitoraggio \gl{Grafana}, da sviluppare in linguaggio \gl{JavaScript}. Il prodotto dovrà svolgere almeno le seguenti funzioni:
+\begin{itemize}
+	\item{Leggere la definizione di una \gl{rete Bayesiana}, memorizzata in formato \gl{JSON};}
+	\item{Associare dei nodi della rete Bayesiana ad un flusso di dati presente nel sistema di Grafana;}
+	\item{Ricalcolare i valori delle probabilità della rete secondo regole temporali prestabilite;}
+	\item{Derivare nuovi dati dai nodi della rete non collegati al flusso di dati, e fornirli al sistema di Grafana;}
+	\item{Visualizzare i dati mediante il sistema di creazione di grafici e \gl{dashboard} a disposizione.}
+\end{itemize}
+Viene previsto un utilizzo del prodotto da parte dell'azienda proponente per il monitoraggio di sistemi gestionali in Cloud; tuttavia, dato l'obiettivo di rendere il prodotto open-source, esso dovrà essere utilizzabile indipendentemente dal particolare sistema che si desidera monitorare.
 \subsection{Glossario}
-Per rendere la lettura del documento più semplice, chiara e comprensibile viene allegato il \emph{Glossario v1.0.0} nel quale sono contenute le definizioni dei termini tecnici, dei vocaboli ambigui, degli acronimi e delle abbreviazioni. La presenza di un termine all'interno del Glossario è segnalata con una "g" posta come pedice (esempio: $Glossario_{g}$).  
+Per rendere la lettura del documento più semplice, chiara e comprensibile viene allegato il \emph{Glossario v1.0.0} nel quale sono contenute le definizioni dei termini tecnici, dei vocaboli ambigui, degli acronimi e delle abbreviazioni. La presenza di un termine all'interno del Glossario è segnalata con una "g" posta come pedice (esempio: $Glossario_{g}$). 
 \subsection{Riferimenti}
 \subsubsection{Normativi}
 \begin{itemize}
@@ -15,7 +25,6 @@ Per rendere la lettura del documento più semplice, chiara e comprensibile viene
 	\item \textbf{Capitolato d'appalto C3}: G\&B monitoraggio intelligente di processi DevOps \\
 	\url{https://www.math.unipd.it/~tullio/IS-1/2018/Progetto/C3.pdf};
 	\item \textbf{ISO/IEC 12207}:\\ \url{https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf};
-	\item \textbf{Da verbali}.
 \end{itemize}
 \subsubsection{Informativi}
 \begin{itemize}
@@ -23,6 +32,7 @@ Per rendere la lettura del documento più semplice, chiara e comprensibile viene
 	\url{http://docs.grafana.org/plugins/developing/code-styleguide/};
 	\item \textbf{\gl{Angular TypeScript} Code Styleguide:} \\
 	\url{https://angular.io/guide/styleguide};
-	TODO: aggiungere rif al libro di swe
+	\item \textbf{Verbali:} \emph{Verbale del 2018-12-12};
+	\item \textbf{Software Engineering - Ian Sommerville - 10th Edition}.
 \end{itemize}
 \pagebreak
