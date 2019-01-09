@@ -30,7 +30,7 @@
 	
 	\subsection{Analisi dei requisiti}
 	\label{sec:analisirequisiti}
-	L'obiettivo dell'analisi dei requisiti è quello di individuare e definire i \underline{\hyperref[sec:reqisito]{requisiti}} di progetto. Il risultato di tale processo è un documento contrattuale che andrà fornito all'azienda appaltatrice nell'ambito di una gara d'appalto. Sulla base di questo documento l'azienda deciderà a chi affidare l'appalto.
+	L'obiettivo dell'analisi dei requisiti è quello di individuare e definire i \underline{\hyperref[sec:requisito]{requisiti}} di progetto. Il risultato di tale processo è un documento contrattuale che andrà fornito all'azienda appaltatrice nell'ambito di una gara d'appalto. Sulla base di questo documento l'azienda deciderà a chi affidare l'appalto.
 	
 	\subsection{Analisi statica}
 	\label{sec:analisistatica}
@@ -69,6 +69,12 @@
 	\subsection{Ciclo di vita del software}
 	\label{sec:ciclodivita}
 	In ingegneria del software, modo in cui l'attività di realizzazione di un prodotto software viene scomposta in sotto-attività coordinate tra loro, e il cui risultato é il prodotto software e tutta la documentazione necessaria. Il ciclo di vita del software varia a seconda della metodologia di sviluppo adottata.
+	
+		
+	% Cloud ------------------------------------
+	\subsection{Cloud}
+	\label{sec:cloud}
+	Abbreviativo di "\emph{cloud computing}" ("computazione sulle nuvole", sta ad indicare un paradigma di erogazione di servizi informatici da un fornitore ad un cliente attraverso Internet. In particolare, il fornitore permette al cliente di accedere e configurare delle risorse fisiche in remoto, \emph{on demand}.
 
 	% CoCoMo -------------------------------------------------------
 	\subsection{CoCoMo}
@@ -90,7 +96,7 @@
 	% Conditional probability Table(CPT)-------------------------------------------------------
 	\subsection{Conditional probability Table(CPT)}
 	\label{sec:CPT}
-	Una Conditional probability Table (CPT) è una tabella in cui:
+	Una Conditional Probability Table (CPT) è una tabella in cui:
 		\begin{itemize}
 			\item{Ogni colonna rappresenta l'i-esimo stato in cui il nodo corrente può risiedere. Ad ogni stato è identificato da un nome ed un intervallo di valori associato. Un nodo non può possedere più stati con intervalli di valori sovrapposti tra loro.}
 			\item{Ogni riga rappresenta la j-esima combinazione esistente di tutti i possibili stati dei nodi predecessori}
@@ -106,6 +112,16 @@
 	\label{sec:configurazione}
 	Insieme di regole che determina come assemblare le sezioni di un software, quali \underline{\hyperref[sec:versione]{versioni}} usare per ogni sezione, come le sezioni interagiscono, quali sezioni con quali versioni producono una \underline{\hyperref[sec:baseline]{baseline}} , etc. etc..
 	
+	% ----------------------------------
+	\subsection{Continuous Delivery}
+	\label{sec:continuousdelivery}
+	Approccio di \underline{\hyperref[sec:swe]{software engineering}} che prevede la produzione di prodotti software in brevi cicli, assicurandosi che sia possibile rilasciare il software manualmente in qualsiasi momento. Ha come obiettivo l'incremento delle velocità di sviluppo, testing e rilascio del prodotto software.
+	
+	% ----------------------------------
+	\subsection{Continuous Integration}
+	\label{sec:continuousintegration}
+	Pratica di sviluppo che richiede che gli sviluppatori integrino il codice in una \emph{repository} condivisa più volte al giorno. Ogni integrazione è verificata mediante un build automatizzato, che permette di rilevare errori immediatamente.
+	
 	% Controllo di configurazione ----------------------------------
 	\subsection{Controllo di configurazione}
 	\label{sec:controlloconfigurazione}
@@ -119,6 +135,12 @@
 	\subsection{Dashboard}
 	\label{sec:dashboard}
 	Una dashboard (in italiano cruscotto) è una schermata che permette di monitorare in tempo reale l’andamento dei report e delle metriche aziendali. Una dashboard può presentare uno o più \underline{\hyperref[sec:panel]{panel}} al suo interno.
+	
+		% Devops
+	\subsection{DevOps}
+	\label{sec:devops}
+	Termine derivante dalla contrazione delle parole inglesi \emph{development} ("sviluppo") e \emph{operations} ("operazioni" nel senso di "messa in produzione"). Indica un metodo di sviluppo software basato sulla comunicazione e collaborazione tra sviluppatori e addetti alle "\emph{IT operations}", per sviluppare e mantenere velocemente ed efficacemente prodotti e servizi software.
+	
 	
 	% Disciplinato -------------------------------------------------	
 	\subsection{Disciplinato}
@@ -145,6 +167,11 @@
 
 	%G
 	\newsection{G}
+	
+		\subsection{Git}
+	\label{sec:git}	
+	Sistema di controllo versione, permette di organizzare e tracciare il lavoro di più persone su file condivisi.
+	
 	\subsection{Grafana}
 	\label{sec:grafana}	
 	Grafana è un compositore di grafici, che viene eseguito come applicazione web. Supporta \underline{\hyperref[sec:influxdb]{InfluxDB}}.
@@ -159,21 +186,27 @@
 	% I	----------------------------------------------------------------------------------------------
 	\newsection{I}
 
-	% Incremento ---------------------------------------------------
-	\subsection{Incremento}
-	\label{sec:incremento}
-	Procedura che prevede avanzamento per aggiunta ad un impianto base.
 
-	%InfluxDB
-	\subsection{InfluxDB}
-	\label{sec:influxdb}
-	InfluxDB è un database di serie temporali open source. È ottimizzato per la memorizzazione e il recupero rapido e ad alta disponibilità di dati di serie temporali in campi come il monitoraggio delle operazioni, le metriche dell'applicazione, i dati di sensori e l'analisi in tempo reale.
-	
 	%ISO 12207 -----------------------------------------------------
 	\subsection{IEE 830-1998}
 	\label{sec:iee830}
 	Best practice raccomandate per la specifica dei \underline{\hyperref[sec:requisito]{requisiti}} di prodotti software. 
 	
+	% Incremento ---------------------------------------------------
+\subsection{Incremento}
+\label{sec:incremento}
+Procedura che prevede avanzamento per aggiunta ad un impianto base.
+
+%InfluxDB
+\subsection{InfluxDB}
+\label{sec:influxdb}
+InfluxDB è un database di serie temporali open source. È ottimizzato per la memorizzazione e il recupero rapido e ad alta disponibilità di dati di serie temporali in campi come il monitoraggio delle operazioni, le metriche dell'applicazione, i dati di sensori e l'analisi in tempo reale.
+
+%Intelligenza artificiale
+\subsection{Intelligenza artificiale}
+\label{sec:ia}
+Disciplina nel ramo dell'informatica, si occupa dello studio e della progettazione di sistemi informatici in grado di funzionare in maniera simile alla mente umana. Per raggiungere questo obiettivo, si occupa anche di elaborare modelli matematici che approssimino le modalità di pensiero ed apprendimento caratteristiche dei cervelli biologici. 
+
 
 	%ISO 12207 -----------------------------------------------------
 	\subsection{ISO/IEC 12207}
@@ -240,6 +273,19 @@
 	\subsection{JSON}
 	JSON(JavaScript Object Notation) è un formato adatto all'interscambio di dati fra applicazioni client/server basato sul linguaggio \underline{\hyperref[sec:javascript]{JavaScript}}.
 	\newpage
+	
+		% L	----------------------------------------------------------------------------------------------
+	\newsection{L}
+	
+	% Liveliness ------------------------------------------------	
+	\subsection{Liveliness}
+	\label{sec:liveliness}
+	Parola inglese, significa "vitalità" in italiano. In ambito informatico si riferisce ad un insieme di proprietà dei sistemi concorrenti, per cui un sistema deve funzionare nonostante i suoi componenti concorrenti debbano "fare a turni" in sezioni critiche. 
+	
+	% Likelihood ------------------------------------------------
+	\subsection{Likelihood}
+	\label{sec:likelihood}
+	Parola inglese, significa "verosimiglianza" in italiano. In ambito probabilistico si usa per indicare la probabilità che un evento si verifichi. 
 
 	% M	----------------------------------------------------------------------------------------------
 	\newsection{M}
@@ -329,6 +375,25 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 			%Scrum ----------------------------------------
 			\subsubsection{Scrum}
 				Scrum ha come focus fondamentale le  \emph{user-stories}: una visione di ciò che vuole il cliente, da esse si ricava un \emph{product backlog}, insieme di attività/feature da svolgere/realizzare. L'attività di \emph{Sprint Backlog} é un passo iterativo che impone controlli frequenti (\emph{Daily Scrum}) sulla correttezza delle azioni intraprese, tramite \emph{Sprint Review} e \emph{Retrospective}.\newpage
+				
+					% O	----------------------------------------------------------------------------------------------
+				\newsection{O}
+				
+						\subsection{Obiettivo SMART}
+				\label{sec:smart}
+				\begin{itemize}  
+					\item Specific: formalmente definiti;
+					\item Measurable: il cui stato di ottenimento è misurabile;
+					\item Achievable: raggiungibili;
+					\item Realistic: pratici (raggiungibili);
+					\item Time-Bound: costretti da un vincolo temporale.
+				\end{itemize}
+				
+				% Open Source
+				\subsection{Open source}
+				\label{sec:opensource}
+				Tipo di prodotto software il cui codice sorgente viene rilasciato al pubblico mediante una licenza che ne permette a chiunque lo studio, la modifica e la distribuzione per qualsiasi scopo.
+				\newpage
 
 	% P	----------------------------------------------------------------------------------------------
 	\newsection{P}
@@ -464,19 +529,11 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	\label{sec:prototipo}
 	Esemplare di prova del prodotto, serve a provare e scegliere soluzioni; può avere carattere usa e getta (in metodi iterativi) oppure essere la base per incrementi successivi (in metodi incrementali).
 	Un prototipo di tipo usa e getta comporta dei costi che producono poco valore aggiunto.\newpage	
-
-	% O ----------------------------------------------------------------------------------------------
-	\newsection{O}
-		
-	\subsection{Obiettivo SMART}
-	\label{sec:smart}
-	\begin{itemize}  
-	\item Specific: formalmente definiti;
-	\item Measurable: il cui stato di ottenimento è misurabile;
-	\item Achievable: raggiungibili;
-	\item Realistic: pratici (raggiungibili);
-	\item Time-Bound: costretti da un vincolo temporale.
-	\end{itemize}\newpage
+	% Publish/subscribe -----------------
+	\subsection{Publish/subscribe}
+\label{sec:pubsub}
+In ambito informatico, design pattern utilizzato per la comunicazione asincrona tra diversi processi, oggetti o altri agenti.
+\newpage
 
 	% Q	----------------------------------------------------------------------------------------------
 	\newsection{Q}
@@ -516,6 +573,10 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	%Raintank
 	\subsection{Raintank}
 	Raintank è una piattaforma di monitoraggio open source per raccogliere, archiviare e analizzare enormi quantità di dati diagnostici, da un'ampia varietà di fonti, in molti formati diversi.
+	
+		%Redmine
+	\subsection{Redmine}
+	Applicazione web gratuita e \underline{\hyperref[sec:opensource]{open source}} per attività di \emph{project management} e \emph{issue tracking}.
 	
 	% Requisito -----------------------------------------------------
 	\subsection{Requisito}
