@@ -211,7 +211,7 @@ Per verificare la presenza di errori di sintassi, di parole grammaticalmente cor
 La verifica del rispetto delle norme descritte in \emph{Norme di Progetto v1.0.0} è compito dei \emph{Verificatori} incaricati. Non essendo possibile impiegare strumenti automatici per verificare la corretta applicazione di tutte le norme spetta quindi ai \emph{Verificatori} sottoporre i documenti a verifica, secondo la strategia \gl{inspection}.
 
 \paragraph{Verifica sull'indice Gulpease} \Spazio
-Per ogni documento i \emph{Verificatori} devono calcolare l'indice di leggibilità e se questo dovesse risultare troppo basso, dovrà essere eseguita la verifica del documento con l'obiettivo di ricercare frasi troppo prolisse o complesse.
+Per ogni documento i \emph{Verificatori} devono calcolare l'indice di leggibilità e se questo dovesse risultare troppo basso, dovrà essere eseguita la verifica del documento con l'obiettivo di ricercare frasi troppo prolisse o complesse. Il calcolo deve essere effettuato attraverso uno \gl{script} scritto in \gl{Perl} che trasforma i documenti dal formato .pdf al formato .txt per effettuare un calcolo più preciso, eliminando le tabelle ma non il loro contenuto.
 
 \paragraph{Miglioramento del processo di verifica} \Spazio
 Per migliorare e ottimizzare il processo di verifica i \emph{Verificatori} devono riportare gli errori riscontrati più frequentemente al fine di rendere più efficiente ed efficace la verifica di un documento, prestando maggiore attenzione agli errori più comuni.
