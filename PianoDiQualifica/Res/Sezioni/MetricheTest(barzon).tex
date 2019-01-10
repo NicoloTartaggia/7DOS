@@ -124,11 +124,13 @@ Per questa metrica vengono definiti i seguenti intervalli:
 	\item{\textbf{Intervallo obiettivo}: 0.}
 \end{itemize}
 \subsection{Tabella riassuntiva delle metriche}
+\renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
 	\centering
-	\begin{tabular}{|p{4cm}|C{3cm}|C{3cm}|C{3cm}|}
+	\begin{tabular}{|C{4cm}|C{3cm}|C{3cm}|C{3cm}|}
 		\hline
-		Nome Metrica & Intervallo limite & Range accettabile & Range ottimale \\ \hline
+		\rowcolor{title_row}
+		\textbf{\color{title_text}{Nome Metrica}} & \textbf{\color{title_text}{Intervallo limite}} & \textbf{\color{title_text}{Range accettabile}} & \textbf{\color{title_text}{Range ottimale}} \\ \hline
 		Functional Implementation Completeness & 0-100 & 75-100 & 100 \\ \hline
 		Average Functional Implementation Correctnes&0-100&80-100&95-100 \\ \hline
 		Numero di errori grammaticali & / & 0 & 0 \\ \hline
@@ -139,4 +141,5 @@ Per questa metrica vengono definiti i seguenti intervalli:
 		Failure Density&0-100&0-10&0\\ \hline
 	\end{tabular}
 \end{table}
+\renewcommand{\arraystretch}{1}
 \pagebreak
