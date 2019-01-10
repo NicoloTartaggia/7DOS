@@ -1,3 +1,22 @@
 \newsection{Specifica dei test}
 
+\subsection{Analisi statica}
+L'analisi statica è una tecnica di analisi applicabile sia ai documenti sia al codice che permette di individuare errori tramite verifica. Nella sezione 3.2 del documento \emph{Norme di Progetto v1.0.0} vengono elencati gli strumenti per effettuare la verifica della documentazione. Per quanto riguarda il codice, attraverso l'analisi statica possono essere analizzate la sintassi e la semantica, stimate le variabili e controllato il flusso dei dati.
+\subsection{Analisi dinamica}
+L'analisi dinamica è una tecnica di analisi applicabile solamente al prodotto software. Essa permette di individuare errori di implementazione e di verificare il funzionamento del codice mediante l'uso di test dedicati durante l'esecuzione del codice stesso.\\
+Essendo il test una parte essenziale per questo tipo di verifica, è necessario tutti i test siano \gl{ripetibili}. Con ciò si intende che un test specifico eseguito in un ambiente definito produce sempre gli stessi output, dato un certo input.\\\\
+I test applicabili sono di 5 tipi diversi, elencati nelle seguenti sottosezioni.
+
+\subsubsection{Test di unità [TU]}
+I test di unità mirano alla verifica della parte più piccola di lavoro prodotta da un programmatore, equivalente all'unità logica più piccola del prodotto, che può essere una singola classe, un metodo o funzione oppure un insieme di essi.
+\subsubsection{Test di integrazione [TI]}
+I test di integrazione mirano alla verifica di due o più unità già testate che vengono aggregate \textbf{incrementalmente} in una struttura più grande, rappresentando l’estensione logica del test di unità. In questo modo si può testare se il comportamento atteso dell'aggregato rispetta le previsioni. In caso negativo, è possibile che le singole unità contengano difetti residui da correggere oppure che i software utilizzati siano poco conosciuti e abbiano comportamenti inaspettati.\\
+La strategia di integrazione dei vari moduli scelta è quella \gl{bottom-up}, la quale prevede che vengano testate per prime le procedure più a basso livello e passando, progressivamente, a procedure di più alto livello. 
+\subsubsection{Test di sistema [TS]}
+I test di sistema mirano alla verifica del prodotto software completo di tutte le sue componenti. Un software a cui vengono applicati questi tipi di test deve essere giunto ad una versione ritenuta definitiva. \\
+Essendo test significativi, sarà richiesta la supervisione dei Verificatori incaricati.
+\subsubsection{Test di regressione [TR]}
+I test di regressione mirano ad eseguire nuovamente i test di unità e di integrazione su componenti software che hanno subito modifiche, in modo da controllare che i cambiamenti apportati non abbiano inserito nuovi errori sia nelle componenti modificate che nelle componenti non modificate e che prima non erano soggette ad errori.
+\subsubsection{Test di accettazione [TA]}
+I test di accettazione mirano al collaudo del prodotto software in presenza del \gl{proponente}. Essi sono test finali e il superamento di essi comporta la validazione e il rilascio del prodotto.
 \pagebreak
