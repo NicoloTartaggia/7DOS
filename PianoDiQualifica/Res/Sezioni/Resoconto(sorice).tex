@@ -23,9 +23,13 @@ Dal grafico possiamo estrapolare che:
 Vengono qui riportati i valori dell'indice Gulpease per ogni documento durante la fase
 di Analisi. Un documento è considerato valido soltanto se rispetta le metriche descritte
 su 4.1.
-\begin{longtable}{|c|c|c|}
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|}
 \hline
-\textbf{Documento} & \textbf{Valore indice} & \textbf{Esito} \\
+\rowcolor{title_row}
+\textbf{\color{title_text}{Documento}} & \textbf{\color{title_text}{Valore indice}} & \textbf{\color{title_text}{Esito}} \\
 \hline
 	\emph{Piano di Progetto v1.0.0} & {55.49} & {Superato}\\
 \hline
@@ -39,10 +43,13 @@ su 4.1.
 \hline
 	\emph{Glossario v1.0.0} & {51.66} & {Superato}\\
 \hline
+\end{tabular}
 \caption[Esiti verifica documenti, Analisi]{Esito verifica documenti}
 \label{tabella:verifica documenti}
-\endhead
-\end{longtable}
+\end{center}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
 Dalla tabella si può notare come tutti gli indici Gulpease dei documenti rientrino nei vincoli dati. Per questo motivo i documenti redatti hanno raggiunto la leggibilità desiderata.
 \subsubsection{Dettaglio dell'esito delle revisioni}
 Le revisioni del committente previste durante lo sviluppo del progetto sono quattro.

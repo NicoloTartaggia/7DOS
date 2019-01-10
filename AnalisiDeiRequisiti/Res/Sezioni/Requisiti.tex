@@ -25,10 +25,11 @@ $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 \newcolumntype{H}{>{\centering\arraybackslash}m{7cm}}
 \subsection{Requisiti Funzionali}
 \normalsize
-\definecolor{dosblue}{rgb}{0.88,1,1}
+\renewcommand{\arraystretch}{1.5}
 \begin{longtable}{|c|H|c|}
 	\hline
-	\textbf{Id Requisito} & \textbf{Descrizione} & \textbf{Fonte}\\
+	\rowcolor{title_row}
+	\textbf{\color{title_text}{Id Requisito}} & \textbf{\color{title_text}{Descrizione}} & \textbf{\color{title_text}{Fonte}}\\
 	\hline
 	\endhead
 	\hypertarget{R0F1}{R0F1} & Deve essere possibile leggere la definizione della rete Bayesiana da un file in formato JSON. & Capitolato \\ \hline 
@@ -112,13 +113,16 @@ $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 	\caption[Requisiti Funzionali]{Requisiti Funzionali}
 	\label{tabella:req0}
 \end{longtable}
+\renewcommand{\arraystretch}{1}
 \clearpage
 \newcolumntype{H}{>{\centering\arraybackslash}m{7cm}}
 \subsection{Requisiti di Qualità}
 \normalsize
+\renewcommand{\arraystretch}{1.5}
 \begin{longtable}{|c|H|c|}
 	\hline
-	\textbf{Id Requisito} & \textbf{Descrizione} & \textbf{Fonte}\\
+	\rowcolor{title_row}
+	\textbf{\color{title_text}{Id Requisito}} & \textbf{\color{title_text}{Descrizione}} & \textbf{\color{title_text}{Fonte}}\\
 	\hline
 	\endhead
 	\hypertarget{R0Q1}{R0Q1} & La progettazione e il codice devono seguire le norme riportate nel documento allegato Norme di Progetto. & Interno \\ \hline 
@@ -128,13 +132,16 @@ $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 	\caption[Requisiti di Qualità]{Requisiti Di Qualità}
 	\label{tabella:req1}
 \end{longtable}
+\renewcommand{\arraystretch}{1}
 \clearpage
 \newcolumntype{H}{>{\centering\arraybackslash}m{7cm}}
 \subsection{Requisiti di Vincolo}
 \normalsize
+\renewcommand{\arraystretch}{1.5}
 \begin{longtable}{|c|H|c|}
 	\hline
-	\textbf{Id Requisito} & \textbf{Descrizione} & \textbf{Fonte}\\
+	\rowcolor{title_row}
+	\textbf{\color{title_text}{Id Requisito}} & \textbf{\color{title_text}{Descrizione}} & \textbf{\color{title_text}{Fonte}}\\
 	\hline
 	\endhead
 	\hypertarget{R2V1}{R2V1} & Identificare altri metodi di Intelligenza Artificiale oltre alla rete Bayesiana che siano applicabili all’analisi del flusso di dati di monitoraggio al fine di aiutare la linea di produzione del software a scoprire i punti migliorabili dalla propria procedura. & Capitolato  \\ \hline 
@@ -145,15 +152,18 @@ $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 	\caption[Requisiti Di Vincolo]{Requisiti di Vincolo}
 	\label{tabella:req3}
 \end{longtable}
+\renewcommand{\arraystretch}{1}
 \clearpage
 
 
 
 \subsection{Tracciamento Requisiti - Casi d'uso}
 \normalsize
+\renewcommand{\arraystretch}{1.5}
 \begin{longtable}{|c|c|}
 	\hline
-\textbf{Codice Requisiti} & \textbf{Codice Casi d'uso} \\
+	\rowcolor{title_row}
+\textbf{\color{title_text}{Codice Requisiti}} & \textbf{\color{title_text}{Codice Casi d'uso}} \\
 \hline
 \endhead
 \hyperlink{R0F1}{R0F1} & \hyperlink{UC4}{UC4}\\
@@ -309,13 +319,16 @@ $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 	\caption[Tracciamento Requisiti - Casi d'uso]{Tracciamento Requisiti - Casi d'uso}
 	\label{tabella:requi-usecase}
 \end{longtable}
+\renewcommand{\arraystretch}{1}
 \clearpage
 
 \subsection{Tracciamento Casi d'uso - Requisiti}
 \normalsize
+\renewcommand{\arraystretch}{1.5}
 \begin{longtable}{|c|c|}
 	\hline
-	\textbf{Codice Casi d'uso} & \textbf{Codice Requisiti} \\
+	\rowcolor{title_row}
+	\textbf{\color{title_text}{Codice Casi d'uso}} & \textbf{\color{title_text}{Codice Requisiti}} \\
 	\hline
 	\endhead
 	\hyperlink{UC1}{UC1} & \hyperlink{R1F7}{R1F7} \\
@@ -468,6 +481,7 @@ $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 	\caption[Tracciamento Casi d'uso - Requisiti]{Tracciamento Casi d'uso - Requisiti}
 	\label{tabella:requi-usecase}
 \end{longtable}
+\renewcommand{\arraystretch}{1}
 \clearpage
 
 
