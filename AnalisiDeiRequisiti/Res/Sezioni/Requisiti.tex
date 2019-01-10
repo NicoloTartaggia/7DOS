@@ -1,4 +1,27 @@
 \newsection{Requisiti}
+\subsection{Struttura}
+Ogni requisito è descritto dalla seguente struttura:
+\begin{itemize}
+	\item Nome;
+	\item Tipo;
+	\item Importanza;
+	\item Stato implementazione;
+	\item Fonti.
+\end{itemize}
+
+Inoltre, a ciascun requisito corrisponde un codice identificativo cosi composto:
+$$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
+\begin{itemize}
+	\item R specifica che si tratta di un requisito ;
+	\item importanza identifica la rilevanza del requisito e può assumere 3 valori:
+	\begin{itemize}
+		\item 0: indica che il requisito è obbligatorio e il suo soddisfacimento dovrà necessariamente avvenire;
+		\item 1: indica che il requisito è desiderabile, cioè il suo soddisfacimento può portare maggiore completezza al sistema ma non è fondamentale per lo stesso;
+		\item 2: indica che il requisito è opzionale, e quindi la decisione di implementarlo o meno verrà presa dopo le dovute considerazioni;
+	\end{itemize}
+	\item tipo distingue se si tratta di un requisito funzionale (F), di qualità (Q), di prestazione (P) o di vincolo (V);
+	\item identificativo è un numero progressivo che identifica i sottocasi.
+\end{itemize}
 \newcolumntype{H}{>{\centering\arraybackslash}m{7cm}}
 \subsection{Requisiti Funzionali}
 \normalsize
