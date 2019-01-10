@@ -25,7 +25,7 @@ Segue la lista dei ruoli di progetto che ogni membro dovrà ricoprire a rotazion
 Le rotazioni andranno effettuate quando arrecheranno meno disagi alle attività di progetto e i ruoli saranno stabiliti casualmente con eventuali aggiustamenti per garantire che ogni membro possa assumere almeno una volta ogni ruolo.
 
 \paragraph{Analista} \Spazio
-L'analista si occupa di determinare e descrivere in maniera formale i requisiti del prodotto, siano essi impliciti o espliciti. Deve:
+L'Analista si occupa di determinare e descrivere in maniera formale i requisiti del prodotto, siano essi impliciti o espliciti. Deve:
 \begin{itemize}
 \item Comunicare con il committente per determinare i requisiti del prodotto e i requisiti di dominio;
 \item Produrre uno Studio di Fattibilità;
@@ -33,7 +33,7 @@ L'analista si occupa di determinare e descrivere in maniera formale i requisiti 
 \end{itemize}
 
 \paragraph{Progettista} \Spazio
-Il progettista fa uso dell'Analisi dei Requisiti per produrre un architettura che rispetti i requisiti definiti dall'analista. Deve:
+Il Progettista fa uso dell'Analisi dei Requisiti per produrre un architettura che rispetti i requisiti definiti dall'analista. Deve:
 \begin{itemize}
 \item Produrre un'architettura che faccia uso di best practices e che agevoli \gl{manutenzione} e verifica;
 \item Assicurarsi che l'architettura rispetti i requisiti definiti dall'analista;
@@ -41,7 +41,7 @@ Il progettista fa uso dell'Analisi dei Requisiti per produrre un architettura ch
 \end{itemize}
 
 \paragraph{Programmatore} \Spazio
-Il programmatore ha come compito quello di implementare l'architettura progettata dal progettista. Deve:
+Il Programmatore ha come compito quello di implementare l'architettura progettata dal progettista. Deve:
 \begin{itemize}
 \item Scrivere codice che sia documentato e che rispetti le direttive del progettista;
 \item Codificare i moduli necessari al testing del codice;
@@ -49,7 +49,7 @@ Il programmatore ha come compito quello di implementare l'architettura progettat
 \end{itemize}
 
 \paragraph{Verificatore} \Spazio
-Il verificatore si occupa delle attività di verifica. Deve:
+Il Verificatore si occupa delle attività di verifica. Deve:
 \begin{itemize}
 \item Verificare la qualità dei prodotti delle varie attività;
 \item Verificare che le attività siano svolte rispettando le norme di progetto stabilite;
@@ -57,18 +57,18 @@ Il verificatore si occupa delle attività di verifica. Deve:
 \end{itemize}
 
 \paragraph{Amministratore} \Spazio
-L'amministratore gestisce l'ambiente di lavoro del team. Deve:
+L'Amministratore gestisce l'ambiente di lavoro del team. Deve:
 \begin{itemize}
 \item Determinare quali strumenti verranno usati dal team (sistema di versioning, \gl{sistema di ticketing}, strumenti per la comunicazione, etc.);
 \item Garantisce l'operatività dei sistemi informatici a supporto delle attività di progetto.
 \end{itemize}
 
 \paragraph{Responsabile} \Spazio
-Il responsabile rappresenta il team nelle interazioni con il committente, si occupa di coordinamento interno, si assume la responsabilità delle scelte prese ed approva i prodotti dei processi. Deve:
+Il Responsabile rappresenta il team nelle interazioni con il committente, si occupa di coordinamento interno, si assume la responsabilità delle scelte prese ed approva i prodotti dei processi. Deve:
 \begin{itemize}
 \item Gestire i processi di comunicazione interna ed esterna (incontri, comunicazioni con il committente, riunioni del team);
 \item Approvare i prodotti risultanti dei processi (documenti, altro);
-\item Coordinare il gruppo assegnando attività ai vari membri, assegnando scadenze alle attività e gestendo i rischi.
+\item Coordinare il gruppo assegnando attività ai vari membri e scadenze e gestendo i rischi.
 \end{itemize}
 
 \subsubsection{Sistema di ticketing}
@@ -80,8 +80,8 @@ descrizione, data di inizio e data di fine. nTask permette inoltre di avere dive
 \paragraph{Gestione dei task} \Spazio
 Vengono distinti 2 tipi di task:
 \begin{itemize}
-\item Pro-attiviti: creati e assegnati dal responsabile di progetto, organizzano lo svolgimento delle attività e la verifica;
-\item Reattivi: creati e assegnati dai verificatori, organizzano la correzione o il \gl{miglioramento} dei prodotti delle attività.
+\item Pro-attiviti: creati e assegnati dal Responsabile di progetto, organizzano lo svolgimento delle attività e la verifica;
+\item Reattivi: creati e assegnati dai Verificatori, organizzano la correzione o il \gl{miglioramento} dei prodotti delle attività.
 \end{itemize}
 Qualora l'assegnatario di un task dovesse realizzare tale task non è completabile entro la data di fine, o se ci dovessero essere altri problemi con il task, avrà la responsabilità di segnalare il problema al responsabile di progetto che sarà tenuto a ripianificare la risoluzione del task.
 
@@ -90,18 +90,18 @@ Il nome del task deve essere nella forma [attività] nome. Il nome deve essere d
 
 \subsection{Gestione delle comunicazioni}
 \subsubsection{Comunicazioni interne al gruppo}
-Le comunicazioni interne sono gestite con \gl{Discord}, un software di messaggistica istantanea e di VoIP con altri membri di uno stesso server. In alternativa, ove necessario, gli utenti possono scambiarsi messaggi privati anche al di fuori di un server.
+Le comunicazioni interne sono gestite con \gl{Discord}, un software di messaggistica istantanea e di \gl{VoIP} con altri membri di uno stesso server. In alternativa, ove necessario, gli utenti possono scambiarsi messaggi privati anche al di fuori di un server.
 Un server può essere creato gratuitamente, ed è possibile organizzare le conversazione creando vari canali vocali e testuali associati ad uno scopo e ad alcuni membri del team.\newline
 Oltre a qualche canale vocale per discutere di vari argomenti, i canali testuali principali sono: \verb|#|general per le discussioni generali e i canali nella categoria "Notification Center" dove apparirà una notifica inviata da un bot in caso di evento rilevante, per esempio l'arrivo di una nuova e-mail o un commit nel repository.
 \newline
-Il maggior vantaggio rispetto a Slack sta nell'essere un software con tutte le funzionalità di base disponibili gratuitamente, rendendo molto vantaggioso avere la possibilità di trovarsi a discutere con tutti gli altri membri del gruppo, cosa non possibile nella versione gratuita di Slack che offre solo chiamate 1-1.
+Il maggior vantaggio rispetto a \gl{Slack} sta nell'essere un software con tutte le funzionalità di base disponibili gratuitamente, rendendo molto vantaggioso avere la possibilità di trovarsi a discutere con tutti gli altri membri del gruppo, cosa non possibile nella versione gratuita di Slack che offre solo chiamate 1-1.
 
 \subsubsection{Comunicazioni esterne}
-Le comunicazioni esterne sono compito del responsabile di progetto, che utilizzerà l'indirizzo e-mail del gruppo \href{mailto:7dos.swe@gmail.com}{7dos.swe@gmail.com} facendo così apparire una notifica nel server Discord del team una volta inviata la mail.
+Le comunicazioni esterne sono compito del Responsabile di progetto, che utilizzerà l'indirizzo e-mail del gruppo \href{mailto:7dos.swe@gmail.com}{7dos.swe@gmail.com} facendo così apparire una notifica nel server Discord del team una volta inviata la mail.
 
 \subsection{Gestione degli incontri}
 \subsubsection{Incontri interni}
-Il responsabile di progetto ha il compito di decidere il giorno e la data di un incontro, discutendone con gli altri membri del team. Per comodità, è stato scelto il martedì come giorno di riferimento da proporre inizialmente ai membri del team.
+Il Responsabile di progetto ha il compito di decidere il giorno e la data di un incontro, discutendone con gli altri membri del team. Per comodità, è stato scelto il martedì come giorno di riferimento da proporre inizialmente ai membri del team.
 \newline
 Una volta raggiunto un accordo su un giorno con un numero consistente di partecipanti (almeno 4), tutti i membri che hanno accettato dovranno presentarsi in orario nel luogo prestabilito per la riunione, comunicando eventuali ritardi o impegni insormontabili.
 Ad ogni incontro, tutti devono partecipare attivamente alla discussione offrendo la loro opinione sui punti da decidere e discutere, mentre un membro del team scelto dal responsabile prenderà appunti sui contenuti da inserire appena possibile in un verbale.
@@ -109,21 +109,21 @@ Ad ogni incontro, tutti devono partecipare attivamente alla discussione offrendo
 Se non è possibile trovare un giorno in cui effettuare una riunione in un luogo fisico, si tenterà di scegliere un giorno in cui trovarsi a discutere su Discord.
 
 \subsubsection{Incontri esterni}
-Gli incontri esterni saranno anch'essi organizzati dal responsabile di progetto, che si metterà in contatto con il committente o il proponente tramite email come descritto al punto 4.1.2 per accordarsi con essi sulla data, l'ora e il luogo dell'incontro. Una volta che questi ultimi saranno stati decisi e confermati da entrambe le parti, il responsabile avviserà i membri utilizzando Discord.
-In caso di impossibilità da una delle due parti ad organizzare un incontro fisico, si considererà l'opzione di un incontro utilizzando un servizio VoIP come Skype, Hangout o simili.
+Gli incontri esterni saranno anch'essi organizzati dal Responsabile di progetto, che si metterà in contatto con il committente o il proponente tramite email come descritto al punto 4.1.2 per accordarsi con essi sulla data, l'ora e il luogo dell'incontro. Una volta che questi ultimi saranno stati decisi e confermati da entrambe le parti, il responsabile avviserà i membri utilizzando Discord.
+In caso di impossibilità da una delle due parti ad organizzare un incontro fisico, si considererà l'opzione di un incontro utilizzando un servizio VoIP come \gl{Skype}, \gl{Hangout} o simili.
 
 \subsection{Strumenti di gestione e coordinamento}
 In questa sezione si riassumono brevemente i principali strumenti utilizzati nella comunicazione e nella collaborazione del team.
 
 \subsubsection{Discord}
-Discord è il software che si è scelto di utilizzare per le comunicazioni interne al gruppo, come spiegato al punto 4.2.1. Permette la creazione gratuita di un server nel quale comunicare con gli altri membri mediante canali testuali e vocali. Permette inoltre la creazione di un numero illimitato di Webhooks, utili per integrare molti altri strumenti, come Github.
+Discord è il software che si è scelto di utilizzare per le comunicazioni interne al gruppo, come spiegato al punto 4.2.1. Permette la creazione gratuita di un server nel quale comunicare con gli altri membri mediante canali testuali e vocali. Permette inoltre la creazione di un numero illimitato di \gl{Webhooks}, utili per integrare molti altri strumenti, come \gl{Github}.
 
 \subsubsection{Github}
-Github è il servizio di hosting scelto per la repository. Funziona utilizzando git, un software di \gl{versionamento} descritto al punto 4.4.3 Oltre all'hosting del codice sorgente, offre altre caratteristiche utili, tra le quali:
+Github è il servizio di hosting scelto per la repository. Funziona utilizzando \gl{git}, un software di \gl{versionamento} descritto al punto 4.4.3 Oltre all'hosting del codice sorgente, offre altre caratteristiche utili, tra le quali:
 \begin{itemize}
-\item Un Issue tracking System, con etichette e milestone;
-\item Una lista dei commit passati e delle relative modifiche ai file semplice da consultare;
-\item Account Educational gratuito per gli studenti, il quale permette la creazione di repository private, normalmente creabili solo con un account a pagamento.
+\item Un \gl{Issue tracking System}, con etichette e \gl{milestone};
+\item Una lista dei \gl{commit} passati e delle relative modifiche ai file semplice da consultare;
+\item \gl{Account Educational} gratuito per gli studenti, il quale permette la creazione di repository private, normalmente creabili solo con un account a pagamento.
 \end{itemize}
 
 \subsubsection{Git}
@@ -131,7 +131,7 @@ Git è un software open-source di controllo \gl{versione} distribuito.
 Viene usato con Github, in quanto è un servizio già conosciuto dai membri del team e molto comodo da utilizzare.
 
 \subsubsection{Client Git}
-A seconda delle preferenze, ogni membro del team deciderà se usare come client GitKraken o GitHub Desktop. Entrambi sono client desktop che facilitano l'utilizzo di git, rendendo molto più semplice inviare le modifiche locali al repository remoto, o viceversa.
+A seconda delle preferenze, ogni membro del team deciderà se usare come client \gl{GitKraken} o \gl{GitHub Desktop}. Entrambi sono client desktop che facilitano l'utilizzo di git, rendendo molto più semplice inviare le modifiche locali al repository remoto, o viceversa.
 
 \subsection{Norme di versionamento}
 Come già detto, il servizio di hosting scelto per la repository è GitHub.
@@ -139,15 +139,15 @@ La repository è privata e sarà resa pubblica a fine progetto. Seguono le norme
 
 \subsubsection{Norme sui file}
 I file devono rispettare le norme di nomenclatura già specificate in 3.1.6 Nomenclatura dei documenti.
-Tramite il file .gitignore vengono esclusi i file intermedi di compilazione dei file latex.
+Tramite il file \gl{.gitignore} vengono esclusi i file intermedi di compilazione dei file latex.
 Gli unici file ammessi nella repository sono .tex .jpg .png .pdf.
 
 \subsubsection{Norme sui commit}
-Ogni modifica sostanziale effettuata ai file dev'essere seguita da un commit. Il commento associato ad ogni commit deve essere nella forma: [nome file] descrizione
+Ogni modifica sostanziale effettuata ai file dev'essere seguita da un commit. Il commento associato ad ogni commit deve essere nella forma: [nome file] descrizione.
 La descrizione deve essere concisa e quanto più esaustiva possibile. Ad ogni commit deve corrispondere un aggiornamento del diario delle modifiche.
 
 \subsubsection{Norme su branching e merging}
-Le norme usate per branching e merging si rifanno al Git Feauture Branch Workflow:
+Le norme usate per \gl{branching} e \gl{merging} si rifanno al \gl{Git Feauture Branch Workflow}:
 master è il branch in cui risiederà documentazione e codice verificati e approvati.
 Le modifiche o le nuove feature vanno implementate su un feature branch che saranno verificati
 prima di effettuare una pull request verso master.
@@ -157,8 +157,7 @@ Ogni nuovo feature branch deve:
 \item essere creato a partire da master;
 \item avere un nome che permetta di capire a quale feature è associato.
 \end{itemize}
-Queste norme saranno rivisitate all'inizio del processo di sviluppo per accertarsi che il feature branch workflow
-sia il più opportuno da usare. Una possibile alternativa con cui verrà confrontato è GitFlow.
+Queste norme saranno rivisitate all'inizio del processo di sviluppo per accertarsi che il feature branch workflow sia il più opportuno da usare. Una possibile alternativa con cui verrà confrontato è \gl{GitFlow}.
 
 \subsection{Formazione}
 La formazione ai fini del progetto è responsabilità di ogni singolo membro del gruppo. Qualora ai fini del progetto un membro del gruppo dovesse formarsi autonomamente su un argomento sconosciuto agli altri, sarà sua responsabilità informare il gruppo e se ritenuto opportuno formarlo secondo una delle seguenti modalità:
