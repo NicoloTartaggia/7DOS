@@ -1,0 +1,98 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thin Formal Letter
+% LaTeX Template
+% Version 2.0 (7/2/17)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% WikiBooks (http://en.wikibooks.org/wiki/LaTeX/Letters) with modifications by 
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{letter} % Copiata dal nostro stile
+
+\usepackage{geometry} % Per modificare margini e dimensioni varie
+\usepackage{graphicx} % Per inserire immagini
+
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	top=3cm, % Top margin
+	bottom=1.5cm, % Bottom margin
+	left=2.2cm, % Left margin
+	right=2.2cm, % Right margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage{charter} % stix di default, copiato dagli answer credo
+\usepackage{scrextend} % indentazione per il corpo della lettera
+\usepackage{microtype} % Improve justification
+\usepackage{eurosym} % wanna see the muney
+
+\date{15/01/2018} % comment to show today date
+
+\signature{
+	Project manager 7DOS \\
+    \includegraphics[width=4cm]{../logo.png}
+} % firma a piè di pagina
+
+%\address{123 Broadway \\ City, State 12345 \\ (000) 111-1111} % Your address and phone number
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	INDIRIZZO
+%----------------------------------------------------------------------------------------
+
+
+
+\begin{letter}{Professore Tullio Vardanega \\ Università degli studi di Padova \\ Dipartimento di Matematica "Tullio Levi-Civita" \\ Via Trieste 63 \\ 35121 Padova} % Name/title of the addressee
+
+\begin{center}
+\includegraphics[width=10cm]{../logo}
+7dos.swe@gmail.com
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%	CONTENUTO
+%----------------------------------------------------------------------------------------
+\opening{\textbf{Egregio Professor Tullio Vardanega,}}
+\begin{addmargin}[2em]{2em}
+  \hspace{1cm} Con la presente lettera il gruppo 7DOS intende comunicarLe ufficialmente che parteciperà alla realizzazione del Progetto di Ingegneria del Software da lei proposto e si impegnerà nella realizzazione del prodotto \emph{G\&B} commissionato da Zucchetti S.r.l.\\
+  In allegato troverà i seguenti documenti:
+      \begin{itemize}
+      \item \emph{Analisi dei Requisiti v1.0.0};
+      \item \emph{Piano di Qualifica v1.0.0};
+      \item \emph{Piano di Progetto v1.0.0};
+      \item \emph{Norme di Progetto v1.0.0};
+      \item \emph{Glossario v1.0.0};
+      \item \emph{Studio di Fattibilità v1.0.0};
+      \end{itemize}
+
+  Il gruppo stima di consegnare il prodotto commissionato entro il 17/05/2018. Il costo preventivato è di 13.037,00 \euro. \\ Siamo a sua completa disposizione per eventuali chiarimenti.
+\end{addmargin}
+
+%\vspace{2\parskip} % Extra whitespace for aesthetics
+\closing{Distinti saluti,}
+%\vspace{2\parskip} % Extra whitespace for aesthetics
+
+%\ps{P.S. You can find additional information attached to this letter.} % Postscript text, comment this line to remove it
+
+%\encl{Copyright permission form} % Enclosures with the letter, comment this line to remove it
+
+%----------------------------------------------------------------------------------------
+
+\end{letter}
+ 
+\end{document}
