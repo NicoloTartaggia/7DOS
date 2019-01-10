@@ -20,7 +20,7 @@
 	% Analisi dei requisiti ------------------------------------------------------
 	\subsection{Analisi dinamica}
 	\label{sec:analisidinamica}
-	Tecnica di analisi di un prodotto software in cui il software viene eseguito in un ambiente reale o virtuale; coincide con i test: 
+	Tecnica di analisi di un \underline{\hyperref[sec:prodottosoftware]prodotto {software}} in cui il quest'ultimo viene eseguito in un ambiente reale o virtuale; coincide con i test: 
 	\begin{itemize}  
 		\item Di unità: verificano il corretto funzionamento dell'unità.
 		\item Di integrazione: verifica la corretta interazione tra più unità che interagiscono dando luogo ad un \emph{build}.
@@ -34,7 +34,7 @@
 	
 	\subsection{Analisi statica}
 	\label{sec:analisistatica}
-	Tecnica di analisi di un prodotto software in cui questo non viene eseguito, bensì ne viene esaminato il codice.
+	Tecnica di analisi di un \underline{\hyperref[sec:prodottosoftware]{prodotto software}} in cui questo non viene eseguito, bensì ne viene esaminato il codice.
 	\emph{Walkthrough} e \emph{Inspection} sono le due tecniche di analisi statica prevalenti: \emph{Walkthrough} prevede un'analisi a tappeto del codice sorgente alla ricerca di possibili criticità, mentre \emph{Inspection} somiglia di più all'analisi a campione e prevede l'analisi specifica di parti considerate di importanza critica.
 	\newpage
 	% B	----------------------------------------------------------------------------------------------
@@ -68,7 +68,7 @@
 	% Ciclo di vita del software ------------------------------------
 	\subsection{Ciclo di vita del software}
 	\label{sec:ciclodivita}
-	In ingegneria del software, modo in cui l'attività di realizzazione di un prodotto software viene scomposta in sotto-attività coordinate tra loro, e il cui risultato é il prodotto software e tutta la documentazione necessaria. Il ciclo di vita del software varia a seconda della metodologia di sviluppo adottata.
+	In \underline{\hyperref[sec:swe]{ingegneria del software}}, modo in cui l'attività di realizzazione di un \underline{\hyperref[sec:prodottosoftware]{prodotto software}} viene scomposta in sotto-attività coordinate tra loro, e il cui risultato é il prodotto software e tutta la documentazione necessaria. Il ciclo di vita del software varia a seconda della metodologia di sviluppo adottata.
 	
 		
 	% Cloud ------------------------------------
@@ -87,14 +87,24 @@
 	\item Un coefficiente moltiplicativo (parte da 1);
 	\item Un fattore di espansione del tempo (parte da 2.5);
 	\item Un coefficiente di complessità.
-	\end{itemize}		
+	\end{itemize}	
+
+	% Commit -------------------------------------------------------
+	\subsection{Commit}
+	\label{sec:commit}
+    Termine inglese che significa "impegnarsi", "prendere l'impegno". In ambito informatico indica l'azione di aggiungere gli ultimi cambiamenti alla \underline{\hyperref[sec:repo]repository{}}.
+
+	% Compiti -------------------------------------------------------
+	\subsection{Compito}
+	\label{sec:compiti}
+	Un compito è una componente essenziale di un \underline{\hyperref[sec:progetto]{progetto}}. I compiti vengono assegnati e non lasciano spazio alla decisione di chi li riceve.	
 
 	% Code-'n-Fix -------------------------------------------------------
 	\subsection{Code-'n-Fix}
 	\label{sec:codenfix}
-	Vecchia pratica nell'ambito di produzione del software, autodescrittiva: l'intera attività di produzione consisteva nel codificare e riparare software.
+	Vecchia pratica nell'ambito di produzione del \underline{\hyperref[sec:prodottosoftware]{software}}, autodescrittiva: l'intera attività di produzione consisteva nel codificare e riparare software.
 	% Conditional probability Table(CPT)-------------------------------------------------------
-	\subsection{Conditional probability Table(CPT)}
+	\subsection{Conditional Probability Table(CPT)}
 	\label{sec:CPT}
 	Una Conditional Probability Table (CPT) è una tabella in cui:
 		\begin{itemize}
@@ -102,30 +112,26 @@
 			\item{Ogni riga rappresenta la j-esima combinazione esistente di tutti i possibili stati dei nodi predecessori}
 			\item{le celle interne indicano la probabilità, condizionata dai nodi predecessori, che il nodo corrente si trovi in uno specifico stato data una combinazione esistente dei possibili stati dei nodi predecessori}
 		\end{itemize}
-	% Compiti -------------------------------------------------------
-	\subsection{Compito}
-	\label{sec:compiti}
-	Un compito è una componente essenziale di un \underline{\hyperref[sec:progetto]{progetto}}. I compiti vengono assegnati e non lasciano spazio alla decisione di chi li riceve.
 	
 	% Configurazione ------------------------------------------------
 	\subsection{Configurazione}
 	\label{sec:configurazione}
-	Insieme di regole che determina come assemblare le sezioni di un software, quali \underline{\hyperref[sec:versione]{versioni}} usare per ogni sezione, come le sezioni interagiscono, quali sezioni con quali versioni producono una \underline{\hyperref[sec:baseline]{baseline}} , etc. etc..
+	Insieme di regole che determina come assemblare le sezioni di un \underline{\hyperref[sec:prodottosoftware]{software}}, quali \underline{\hyperref[sec:versione]{versioni}} usare per ogni sezione, come le sezioni interagiscono, quali sezioni con quali versioni producono una \underline{\hyperref[sec:baseline]{baseline}} , etc. etc..
 	
 	% ----------------------------------
 	\subsection{Continuous Delivery}
 	\label{sec:continuousdelivery}
-	Approccio di \underline{\hyperref[sec:swe]{software engineering}} che prevede la produzione di prodotti software in brevi cicli, assicurandosi che sia possibile rilasciare il software manualmente in qualsiasi momento. Ha come obiettivo l'incremento delle velocità di sviluppo, testing e rilascio del prodotto software.
+	Approccio di \underline{\hyperref[sec:swe]{software engineering}} che prevede la produzione di \underline{\hyperref[sec:prodottosoftware]{prodotti software}} in brevi cicli, assicurandosi che sia possibile rilasciare il software manualmente in qualsiasi momento. Ha come obiettivo l'incremento delle velocità di sviluppo, testing e rilascio del prodotto software.
 	
 	% ----------------------------------
 	\subsection{Continuous Integration}
 	\label{sec:continuousintegration}
-	Pratica di sviluppo che richiede che gli sviluppatori integrino il codice in una \emph{repository} condivisa più volte al giorno. Ogni integrazione è verificata mediante un build automatizzato, che permette di rilevare errori immediatamente.
+	Pratica di sviluppo che richiede che gli sviluppatori integrino il codice in una \underline{\hyperref[sec:repo]{repository}} condivisa più volte al giorno. Ogni integrazione è verificata mediante un build automatizzato, che permette di rilevare errori immediatamente.
 	
 	% Controllo di configurazione ----------------------------------
 	\subsection{Controllo di configurazione}
 	\label{sec:controlloconfigurazione}
-	Gestione e controllo della \underline{\hyperref[sec:configurazione]{configurazione}} che permette di assemblare le varie componenti di un software.\newpage
+	Gestione e controllo della \underline{\hyperref[sec:configurazione]{configurazione}} che permette di assemblare le varie componenti di un \underline{\hyperref[sec:prodottosoftware]{software}}.\newpage
 
 	% D	----------------------------------------------------------------------------------------------
 	
@@ -139,7 +145,7 @@
 		% Devops
 	\subsection{DevOps}
 	\label{sec:devops}
-	Termine derivante dalla contrazione delle parole inglesi \emph{development} ("sviluppo") e \emph{operations} ("operazioni" nel senso di "messa in produzione"). Indica un metodo di sviluppo software basato sulla comunicazione e collaborazione tra sviluppatori e addetti alle "\emph{IT operations}", per sviluppare e mantenere velocemente ed efficacemente prodotti e servizi software.
+	Termine derivante dalla contrazione delle parole inglesi \emph{development} ("sviluppo") e \emph{operations} ("operazioni" nel senso di "messa in produzione"). Indica un metodo di sviluppo \underline{\hyperref[sec:prodottosoftware]{software}} basato sulla comunicazione e collaborazione tra sviluppatori e addetti alle "\emph{IT operations}", per sviluppare e mantenere velocemente ed efficacemente prodotti e servizi software.
 	
 	
 	% Disciplinato -------------------------------------------------	
@@ -168,9 +174,13 @@
 	%G
 	\newsection{G}
 	
-		\subsection{Git}
+	\subsection{Git}
 	\label{sec:git}	
 	Sistema di controllo versione, permette di organizzare e tracciare il lavoro di più persone su file condivisi.
+	
+	\subsection{GitLab}
+	\label{sec:git}	
+	Applicazione web per il la gestione di \underline{\hyperref[sec:repo]{repository}}. Include una wiki, \underline{\hyperref[sec:issuetrack]{issue tracking}} e servizi di pipeline \underline{\hyperref[sec:continuousdelivery]{CD}}/\underline{\hyperref[sec:continuousintegration]{CI}} sotto licenza \underline{\hyperref[sec:opensource]{open source}}.
 	
 	\subsection{Grafana}
 	\label{sec:grafana}	
@@ -187,10 +197,10 @@
 	\newsection{I}
 
 
-	%ISO 12207 -----------------------------------------------------
+	%IEEE 830 -----------------------------------------------------
 	\subsection{IEE 830-1998}
 	\label{sec:iee830}
-	Best practice raccomandate per la specifica dei \underline{\hyperref[sec:requisito]{requisiti}} di prodotti software. 
+	Best practice raccomandate per la specifica dei \underline{\hyperref[sec:requisito]{requisiti}} di \underline{\hyperref[sec:prodottosoftware]{prodotti software}}. 
 	
 	% Incremento ---------------------------------------------------
 \subsection{Incremento}
@@ -235,7 +245,7 @@ Disciplina nel ramo dell'informatica, si occupa dello studio e della progettazio
 	%ISO 42010:2011 -----------------------------------------------------
 	\subsection{ISO/IEC/IEEE 42010:2011}
 	\label{sec:iso12207}
-	Standard di \underline{\hyperref[sec:bestpractice]{best practice}} concernenti la progettazione software e la definizione dell'architettura del software. Punti essenziali sono:
+	Standard di \underline{\hyperref[sec:bestpractice]{best practice}} concernenti la \underline{\hyperref[sec:progettazionesoftware]{progettazione software }} e la definizione dell'architettura del \underline{\hyperref[sec:prodottosoftware]{software}}. Punti essenziali sono:
 	\begin{itemize}  
 	\item La decomposizione del sistema in componenti (utile ad aumentare il parallelismo);
 	\item Definizione delle interfacce dei componenti;
@@ -256,7 +266,12 @@ Disciplina nel ramo dell'informatica, si occupa dello studio e della progettazio
 	\item La presa di decisioni basate su evidenze;
 	\item La gestione delle relazioni.
 	\end{itemize}	
-	A garantire l'adesione a questi principi dev'essere la documentazione verticale (specifica di progetto) ed orizzontale (specifica dell'azienda).	
+	A garantire l'adesione a questi principi dev'essere la documentazione verticale (specifica di progetto) ed orizzontale (specifica dell'azienda).
+	
+		%ISS -----------------------------------------------------
+	\subsection{Issue Tracking System}
+	\label{sec:issuetrack}
+	\underline{\hyperref[sec:prodottosoftware]{Prodotto software}} che gestisce e mantiene liste di problematiche. Utile in situazioni di sviluppo collaborativo da parte di un team.
 	
 	% Iterazione ---------------------------------------------------
 	\subsection{Iterazione}
@@ -330,7 +345,7 @@ Disciplina nel ramo dell'informatica, si occupa dello studio e della progettazio
 	% Modelli di ciclo di vita -------------------------------------
 	\subsection{Modello di ciclo di vita}
 	\label{sec:modelliciclodivita}
-	Il \underline{\hyperref[sec:ciclodivita]{ciclo di vita}} di un software non è univocamente determinato, ma ne vengono individuati diversi modelli possibili. La scelta del modello dipende da 3 macro-fattori: cosa vuole il committente, dipendenza da terze parti, livello di coinvolgimento del committente nell'accertamento dello stato di avanzamento.
+	Il \underline{\hyperref[sec:ciclodivita]{ciclo di vita}} di un \underline{\hyperref[sec:prodottosoftware]{software}} non è univocamente determinato, ma ne vengono individuati diversi modelli possibili. La scelta del modello dipende da 3 macro-fattori: cosa vuole il committente, dipendenza da terze parti, livello di coinvolgimento del committente nell'accertamento dello stato di avanzamento.
 	
 		%Sequenziale ----------------------------------------
 		\subsubsection{Sequenziale (A cascata)}
@@ -355,7 +370,7 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 		
 		%A componenti ----------------------------------------
 		\subsubsection{A componenti}
-			Si sviluppa sull'idea di riutilizzare componenti software. Prevede quindi tecniche di adattamento delle componenti e dei requisiti finalizzate al riuso del software.
+			Si sviluppa sull'idea di riutilizzare componenti . Prevede quindi tecniche di adattamento delle componenti e dei requisiti finalizzate al riuso del \underline{\hyperref[sec:prodottosoftware]{software}}.
 		
 		%Spirale ----------------------------------------
 		\subsubsection{A spirale}	
@@ -366,11 +381,11 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 		Metodi che si rifanno a 4 principi fondamentali:
 			\begin{itemize}  
 			\item Focus sugli \emph{stakeholder} e le loro interazioni, piuttosto che su processi e strumenti;
-			\item Focus sul software piuttosto che sulla documentazione;
+			\item Focus sul \underline{\hyperref[sec:prodottosoftware]{software}} piuttosto che sulla documentazione;
 			\item Rapporto collaborativo piuttosto che contrattuale con il cliente;
 			\item Risposta veloce anche se non pianificata al cambiamento. 
 			\end{itemize}				
-		Tali metodi offrono degli svantaggi poiché la documentazione è cruciale nella fase di manutenzione del software e l'assenza di pianificazione in faccia ai cambiamenti comporta dei rischi.
+		Tali metodi offrono degli svantaggi poiché la documentazione è cruciale nella fase di manutenzione del \underline{\hyperref[sec:prodottosoftware]{software}} e l'assenza di pianificazione in faccia ai cambiamenti comporta dei rischi.
 		
 			%Scrum ----------------------------------------
 			\subsubsection{Scrum}
@@ -392,7 +407,7 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 				% Open Source
 				\subsection{Open source}
 				\label{sec:opensource}
-				Tipo di prodotto software il cui codice sorgente viene rilasciato al pubblico mediante una licenza che ne permette a chiunque lo studio, la modifica e la distribuzione per qualsiasi scopo.
+				Tipo di prodotto \underline{\hyperref[sec:prodottosoftware]{software}} il cui codice sorgente viene rilasciato al pubblico mediante una licenza che ne permette a chiunque lo studio, la modifica e la distribuzione per qualsiasi scopo.
 				\newpage
 
 	% P	----------------------------------------------------------------------------------------------
@@ -449,7 +464,7 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	% Plugin
 	\subsection{Plugin}
 	\label{sec:plugin}
-	Un plugin in campo informatico è un programma non autonomo che interagisce con un altro programma per ampliarne o estenderne le funzionalità originarie. Ad esempio, un plugin per un software di grafica permette l'utilizzo di nuove funzioni non presenti nel software principale.
+	Un plugin in campo informatico è un programma non autonomo che interagisce con un altro programma per ampliarne o estenderne le funzionalità originarie. Ad esempio, un plugin per un \underline{\hyperref[sec:prodottosoftware]{software}} di grafica permette l'utilizzo di nuove funzioni non presenti nel software principale.
 		
 	% Processo -----------------------------------------------------------------
 	\subsection{Processo}	
@@ -460,7 +475,7 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	% Processi Software --------------------------------------------------------
 	\subsection{Processo software}
 	\label{sec:processisoftware}
-	Insieme di attività che devono essere svolte per far avanzare un prodotto software nel suo ciclo di vita (nell'ambito SWE, vedi "Processo" per una voce più generale).
+	Insieme di attività che devono essere svolte per far avanzare un prodotto \underline{\hyperref[sec:prodottosoftware]{software}} nel suo ciclo di vita (nell'ambito SWE, vedi "Processo" per una voce più generale).
 
 	% Processi specializzati per progetto --------------------------------------------
 	\subsection{Processo specializzato per progetto}
@@ -506,7 +521,7 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	% Progettazione Software ---------------------------------------------------
 	\subsection{Progettazione Software}
 	\label{sec:progettazionesoftware}
-	Insieme di attività che precede la realizzazione il cui scopo è quello definire l'architettura del software con l'obiettivo di sviluppare un prodotto corretto per costruzione piuttosto che per correzione.
+	Insieme di attività che precede la realizzazione il cui scopo è quello definire l'architettura del \underline{\hyperref[sec:prodottosoftware]{software}} con l'obiettivo di sviluppare un prodotto corretto per costruzione piuttosto che per correzione.
 	
 	% Progetto ---------------------------------------------------
 	\subsection{Progetto}
@@ -546,7 +561,7 @@ In ambito informatico, design pattern utilizzato per la comunicazione asincrona 
 	% Qualità -----------------------------------------------------
 	\subsection{Qualità} 
 	\label{sec:qualita}
-	 Misura in cui un prodotto software soddisfa un certo numero di aspettative rispetto sia al suo funzionamento sia alla sua struttura interna.
+	 Misura in cui un prodotto \underline{\hyperref[sec:prodottosoftware]{software}} soddisfa un certo numero di aspettative rispetto sia al suo funzionamento sia alla sua struttura interna.
 	\subsubsection{Qualità del prodotto}
 	\label{sec:qualitaprodotto}
 	Caratteristiche di un prodotto di qualità:
@@ -572,11 +587,19 @@ In ambito informatico, design pattern utilizzato per la comunicazione asincrona 
 	\newsection{R}
 	%Raintank
 	\subsection{Raintank}
+	\label{sec:raintank}
 	Raintank è una piattaforma di monitoraggio open source per raccogliere, archiviare e analizzare enormi quantità di dati diagnostici, da un'ampia varietà di fonti, in molti formati diversi.
 	
 		%Redmine
 	\subsection{Redmine}
+	\label{sec:redmine}
 	Applicazione web gratuita e \underline{\hyperref[sec:opensource]{open source}} per attività di \emph{project management} e \emph{issue tracking}.
+	
+	% Repository 
+	\subsection{Repository}
+	\label{sec:repo}
+	Termine inglese che significa "deposito", "ripostiglio". In ambito informatico viene usato per indicare una struttura dati in cui vengono gestiti i metadati per un insieme di file o una strutture di cartelle. Esempi di metadati gestiti da una repository sono lo storico dei cambiamenti avvenuti, o l'insieme dei \underline{\hyperref[sec:commit]{commit}} (modifiche).
+
 	
 	% Requisito -----------------------------------------------------
 	\subsection{Requisito}
@@ -595,8 +618,8 @@ In ambito informatico, design pattern utilizzato per la comunicazione asincrona 
 
 	% Rete Bayesiana 
 	\subsection{Rete Bayesiana}
+	\label{sec:retebayes}
 	Una rete Bayesiana è un modello grafico probabilistico che rappresenta un insieme di variabili stocastiche con le loro dipendenze condizionali attraverso l'uso di un grafo. Per esempio, una rete Bayesiana potrebbe rappresentare la relazione probabilistica esistente tra dei sintomi e delle malattie. Dati i sintomi, la rete può essere usata per calcolare la probabilità della presenza di diverse malattie.
-	\label{sec:reteBayesiana}
 
 	% Rischio -----------------------------------------------------
 	\subsection{Rischio}
@@ -648,7 +671,7 @@ In ambito informatico, design pattern utilizzato per la comunicazione asincrona 
 	% Software Engineering ----------------------------------------
 	\subsection{Software Engineering}
 	\label{sec:swe}
-	Disciplina il cui scopo è la realizzazione di prodotti software; nota anche con l'acronimo SWE.
+	Disciplina il cui scopo è la realizzazione di  \underline{\hyperref[sec:prodottosoftware]{prodotti software}}; nota anche con l'acronimo SWE.
 	SWE si occupa dell'organizzazione e della gestione delle attività, compiti e interazioni di un team di sviluppatori,
 	le quali hanno come obiettivo per l'attività di sviluppo e il software risultate \underline{\hyperref[sec:efficacia]{Efficacia}} ed \underline{\hyperref[sec:efficienza]{Efficienza}}.	
 	SWE si occupa inoltre delle metodologie di cura del progetto per l'intero ciclo di vita del software.
@@ -680,7 +703,7 @@ In ambito informatico, design pattern utilizzato per la comunicazione asincrona 
 	% Verificare -------------------------------------------------
 	\subsection{Verificare}
 	\label{sec:verificare}
-	Attività di verifica di presenza di errori e di rispetto del \underline{\hyperref[sec:wow]{way of working}}. La verifica si manifesta tangibilmente sotto forma di test, effettuati sui moduli che compongono il prodotto software. Le forme di verifica sono 2: \hyperref[sec:analisidinamica]{\underline{analisi dinamica}} e \hyperref[sec:analisistatica]{\underline{analisi statica}}. L'analisi dinamica prevede l'esecuzione del software mentre l'analisi statica prevede un analisi del codice sorgente senza eseguirlo. 
+	Attività di verifica di presenza di errori e di rispetto del \underline{\hyperref[sec:wow]{way of working}}. La verifica si manifesta tangibilmente sotto forma di test, effettuati sui moduli che compongono il prodotto \underline{\hyperref[sec:prodottosoftware]{software}}. Le forme di verifica sono 2: \hyperref[sec:analisidinamica]{\underline{analisi dinamica}} e \hyperref[sec:analisistatica]{\underline{analisi statica}}. L'analisi dinamica prevede l'esecuzione del software mentre l'analisi statica prevede un analisi del codice sorgente senza eseguirlo. 
 	
 	% Verificare -------------------------------------------------
 	\subsection{Verificatore di requisiti}
@@ -690,7 +713,7 @@ In ambito informatico, design pattern utilizzato per la comunicazione asincrona 
 	% Versionamento ----------------------------------------------
 	\subsection{Versionamento}
 	\label{sec:versionamento}
-	Organizzazione e gestione delle versioni del software prodotte nel corso dello sviluppo.
+	Organizzazione e gestione delle versioni del \underline{\hyperref[sec:prodottosoftware]{software}} prodotte nel corso dello sviluppo.
 
 	% Versione ----------------------------------------------
 	\subsection{Versione}
