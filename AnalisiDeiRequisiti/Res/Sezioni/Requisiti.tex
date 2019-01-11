@@ -12,12 +12,12 @@ Ogni requisito è descritto dalla seguente struttura:
 Inoltre, a ciascun requisito corrisponde un codice identificativo cosi composto:
 $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 \begin{itemize}
-	\item R specifica che si tratta di un requisito ;
+	\item R specifica che si tratta di un requisito;
 	\item importanza identifica la rilevanza del requisito e può assumere 3 valori:
 	\begin{itemize}
 		\item 0: indica che il requisito è obbligatorio e il suo soddisfacimento dovrà necessariamente avvenire;
 		\item 1: indica che il requisito è desiderabile, cioè il suo soddisfacimento può portare maggiore completezza al sistema ma non è fondamentale per lo stesso;
-		\item 2: indica che il requisito è opzionale, e quindi la decisione di implementarlo o meno verrà presa dopo le dovute considerazioni;
+		\item 2: indica che il requisito è opzionale, e quindi la decisione di implementarlo o meno verrà presa dopo le dovute considerazioni.
 	\end{itemize}
 	\item tipo distingue se si tratta di un requisito funzionale (F), di qualità (Q), di prestazione (P) o di vincolo (V);
 	\item identificativo è un numero progressivo che identifica i sottocasi.
@@ -56,9 +56,9 @@ $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 	\hypertarget{R1F6}{R1F6} & Deve essere possibile definire alert in base a livelli di soglia raggiunti dai nodi non collegati al flusso dei dati. & Capitolato \\ \hline 
 	\hypertarget{R1F6.1}{R1F6.1} & Deve essere possibile configurare i parametri di un alert. & Interno \\ \hline 
 	\hypertarget{R1F6.1.1}{R1F6.1.1} & Deve essere possibile inserire il nome di un alert. & Interno \\ \hline 
-	\hypertarget{R1F6.1.2}{R1F6.1.2} & Deve essere possibile inserire l’intervallo di verifica di un alert. & Interno \\ \hline 
+	\hypertarget{R1F6.1.2}{R1F6.1.2} & Deve essere possibile inserire l'intervallo di verifica di un alert. & Interno \\ \hline 
 	\hypertarget{R1F6.1.3}{R1F6.1.3} & Deve essere possibile inserire la condizione di attivazione di un alert. & Interno \\ \hline 
-	\hypertarget{R1F6.2}{R1F6.2} & Deve essere possibile impostare il modo in cui viene notificata l’attivazione di un alert. & Interno \\ \hline 
+	\hypertarget{R1F6.2}{R1F6.2} & Deve essere possibile impostare il modo in cui viene notificata l'attivazione di un alert. & Interno \\ \hline 
 	\hypertarget{R1F7}{R1F7} & Deve essere possibile disegnare la rete Bayesiana con un piccolo editor grafico specializzato. & Capitolato \\ \hline 
 	\hypertarget{R1F7.1}{R1F7.1} & Deve essere possibile creare un nodo della rete. & Interno \\ \hline 
 	\hypertarget{R1F7.1.1}{R1F7.1.2} & Deve essere possibile inizializzare correttamente la lista di predecessori del nodo. & Interno \\ \hline 
@@ -87,23 +87,23 @@ $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 	\hypertarget{R1F7.6.1}{R1F7.6.1} & Deve essere possibile indicare il nome del file JSON su cui si vuole salvare la struttura della  rete. & Interno \\ \hline 
 	\hypertarget{R1F7.6.2}{R1F7.6.2} & Deve essere possibile indicare il percorso del file system in cui si vuole salvare il file JSON contenente la struttura della  rete. & Interno \\ \hline 
 	\hypertarget{R1F7.7}{R1F7.7} & Deve essere possibile gestire errori relativi alla modifica di un nodo. & Interno \\ \hline 
-	\hypertarget{R1F7.7.1}{R1F7.7.1} & Deve essere possibile gestire l’inserimento di valori non validi per il nome di un nodo. & Interno \\ \hline 
-	\hypertarget{R1F7.7.2}{R1F7.7.2} & Deve essere possibile gestire l’inserimento di valori non validi per il nome di uno stato associato alla CPT di un nodo della rete. & Interno \\ \hline 
-	\hypertarget{R1F7.7.3}{R1F7.7.3} & Deve essere possibile gestire l’inserimento di valori non validi per l’intervallo associato ad uno stato del nodo. & Interno \\ \hline 
-	\hypertarget{R1F7.7.4}{R1F7.7.4} & Deve essere possibile gestire l’inserimento di valori non validi per una cella della tabella. & Interno \\ \hline 
+	\hypertarget{R1F7.7.1}{R1F7.7.1} & Deve essere possibile gestire l'inserimento di valori non validi per il nome di un nodo. & Interno \\ \hline 
+	\hypertarget{R1F7.7.2}{R1F7.7.2} & Deve essere possibile gestire l'inserimento di valori non validi per il nome di uno stato associato alla CPT di un nodo della rete. & Interno \\ \hline 
+	\hypertarget{R1F7.7.3}{R1F7.7.3} & Deve essere possibile gestire l'inserimento di valori non validi per l'intervallo associato ad uno stato del nodo. & Interno \\ \hline 
+	\hypertarget{R1F7.7.4}{R1F7.7.4} & Deve essere possibile gestire l'inserimento di valori non validi per una cella della tabella. & Interno \\ \hline 
 	\hypertarget{R2F8}{R2F8} & Deve essere possibile applicare più reti Bayesiane in oggetti di monitoraggio diversi. & Capitolato \\ \hline 
 	\hypertarget{R2F9}{R2F9} & Deve essere possibile creare una rete Bayesiana a partire dai dati raccolti sul campo anziché svilupparla con la collaborazione degli esperti del settore. & Capitolato \\ \hline 
 	\hypertarget{R2F10}{R2F10} & Deve essere possibile condividere un grafico. & Interno \\ \hline 
 	\hypertarget{R2F10.1}{R2F10.1} & Deve essere possibile visualizzare il link diretto ad una dashboard o ad un panel. & Interno \\ \hline 
-	\hypertarget{R2F10.2}{R2F10.2} & Deve essere possibile visualizzare visualizzare il codice per l’inclusione di un panel in una pagina web. & Interno \\ \hline 
+	\hypertarget{R2F10.2}{R2F10.2} & Deve essere possibile visualizzare visualizzare il codice per l'inclusione di un panel in una pagina web. & Interno \\ \hline 
 	\hypertarget{R2F10.3}{R2F10.3} & Deve essere possibile selezionare le opzioni di visualizzazione per la condivisione dei grafici. & Interno \\ \hline 
-	\hypertarget{R2F10.3.1}{R2F10.3.1} & Deve essere possibile selezionare la visualizzazione dell’intervallo di tempo corrente in un grafico. & Interno \\ \hline 
-	\hypertarget{R2F10.3.2}{R2F10.3.2} & Deve essere possibile deselezionare la visualizzazione dell’intervallo di tempo corrente in un grafico. & Interno \\ \hline 
+	\hypertarget{R2F10.3.1}{R2F10.3.1} & Deve essere possibile selezionare la visualizzazione dell'intervallo di tempo corrente in un grafico. & Interno \\ \hline 
+	\hypertarget{R2F10.3.2}{R2F10.3.2} & Deve essere possibile deselezionare la visualizzazione dell'intervallo di tempo corrente in un grafico. & Interno \\ \hline 
 	\hypertarget{R2F10.3.3}{R2F10.3.3} & Deve essere possibile selezionare la visualizzazione di variabili di template in un grafico. & Interno \\ \hline 
 	\hypertarget{R2F10.3.4}{R2F10.3.4} &  Deve essere possibile deselezionare la visualizzazione di variabili di template in un grafico. & Interno \\ \hline 
 	\hypertarget{R2F10.3.5}{R2F10.3.5} & Deve essere possibile selezionare il tema di un grafico. & Interno \\ \hline 
 	\hypertarget{R2F10.4}{R2F10.4} & Deve essere possibile condividere uno snapshot di una dashboard o di un panel. & Interno \\ \hline 
-	\hypertarget{R2F10.4.1}{R2F10.4.1} & Deve essere possibile pubblicare uno snapshot sull’istanza locale dell’utente. & Interno \\ \hline 
+	\hypertarget{R2F10.4.1}{R2F10.4.1} & Deve essere possibile pubblicare uno snapshot sull'istanza locale dell'utente. & Interno \\ \hline 
 	\hypertarget{R2F10.4.2}{R2F10.4.2} & Deve essere possibile pubblicare uno snapshot su Raintank. & Interno \\ \hline 
 	\hypertarget{R2F10.4.3}{R2F10.4.3} & Deve essere possibile configurare le opzioni di visualizzazione di uno snapshot. & Interno \\ \hline 
 	\hypertarget{R2F10.4.3.1}{R2F10.4.3.1} & Deve essere possibile inserire il nome di uno snapshot. & Interno \\ \hline 
@@ -144,11 +144,11 @@ $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 	\textbf{\color{title_text}{Id Requisito}} & \textbf{\color{title_text}{Descrizione}} & \textbf{\color{title_text}{Fonte}}\\
 	\hline
 	\endhead
-	\hypertarget{R2V1}{R2V1} & Identificare altri metodi di Intelligenza Artificiale oltre alla rete Bayesiana che siano applicabili all’analisi del flusso di dati di monitoraggio al fine di aiutare la linea di produzione del software a scoprire i punti migliorabili dalla propria procedura. & Capitolato  \\ \hline 
-	\hypertarget{R0V2}{R0V2} & Il plugin deve utilizzare JavaScript. & Capitolato  \\ \hline 
+	\hypertarget{R2V1}{R2V1} & Identificare altri metodi di Intelligenza Artificiale oltre alla rete Bayesiana che siano applicabili all'analisi del flusso di dati di monitoraggio al fine di aiutare la linea di produzione del software a scoprire i punti migliorabili dalla propria procedura. & Capitolato  \\ \hline 
+	\hypertarget{R0V2}{R0V2} & Il plug-in deve utilizzare JavaScript. & Capitolato  \\ \hline 
 	\hypertarget{R0V3}{R0V3} & Il codice sorgente prodotto deve essere rilasciato in un repository pubblico con licenza open source. & Interno  \\ \hline 
-	\hypertarget{R1V4}{R1V4} & Il plugin può utilizzare la libreria JBayes.js. & Capitolato  \\ \hline 
-	\hypertarget{R0V5}{R0V5} & Il plugin deve essere utilizzabile nell’ambiente Grafana. & Capitolato  \\ \hline 
+	\hypertarget{R1V4}{R1V4} & Il plug-in può utilizzare la libreria JBayes.js. & Capitolato  \\ \hline 
+	\hypertarget{R0V5}{R0V5} & Il plug-in deve essere utilizzabile nell'ambiente Grafana. & Capitolato  \\ \hline 
 	\caption[Requisiti Di Vincolo]{Requisiti di Vincolo}
 	\label{tabella:req3}
 \end{longtable}
