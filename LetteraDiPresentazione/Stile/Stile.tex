@@ -1,0 +1,128 @@
+\documentclass[12pt]{letter} % Copiata dal nostro stile
+
+\usepackage{setspace}
+\usepackage{geometry} % Per modificare margini e dimensioni varie
+\usepackage{graphicx} % Per inserire immagini
+
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	top=3cm, % Top margin
+	bottom=1.5cm, % Bottom margin
+	left=2.2cm, % Left margin
+	right=2.2cm, % Right margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage{charter} % stix di default, copiato dagli answer credo
+\usepackage{scrextend} % indentazione per il corpo della lettera
+\usepackage{microtype} % Improve justification
+\usepackage{eurosym} % wanna see the muney
+
+\date{11/01/2019} % comment to show today date
+
+\signature{
+	Project manager 7DOS \\
+	\includegraphics[width=6cm]{../PianoDiProgetto/Res/Firme/andrea.png}
+} % firma a piè di pagina
+
+%\address{123 Broadway \\ City, State 12345 \\ (000) 111-1111} % Your address and phone number
+
+
+
+
+
+
+
+
+
+
+
+%\usepackage{calc} %introduce la notazione infissa per le op. aritmetiche interne a LaTeX
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel} %il documento è in italiano
+%\usepackage{textcomp} %The pack­age sup­ports the Text Com­pan­ion fonts, which pro­vide many text sym­bols
+%(such as baht, bul­let, copy­right, mu­si­cal­note, onequar­ter, sec­tion, and yen), in the TS1 en­cod­ing.
+
+\usepackage{graphicx}       %permette di inserire delle immagini
+%\usepackage{caption}        %numerazione figure e loro descrizione testuale
+\usepackage[labelformat=empty]{caption}
+\usepackage{subcaption}     %sottofigure numerabili
+\usepackage{float}  %permette di inserire un # qualsiasi di figure fluttuanti
+\usepackage{xcolor}
+\usepackage{rotating} %permette di ruotare le immagini
+%\usepackage{changepage} %utile se c'è bisogno di aggiustare margini per centrare figure
+
+%package utili per la math mode ( $ ... $ o \[ ... \] )
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+%\usepackage{euler}    %font 'ams euler', lo stesso di 'Concrete Mathematics' di Knuth
+\usepackage{amsthm}
+\usepackage{mathtools}
+
+% package utili per tabelle(\thead in particolare)
+\usepackage{array, booktabs, caption}
+\usepackage{makecell}
+\renewcommand\theadfont{\bfseries}
+\usepackage{boldline}
+
+\usepackage{listings} %permette di inserire degli spezzoni di codice
+
+\usepackage{tikz} %disegno di immagini vettoriali a schermo. Utile per grafi
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{graphs}
+\usetikzlibrary{arrows}
+%\usepackage{tikz-uml} %serve per disgnare l'UML, fantastica guida:
+%https://perso.ensta-paristech.fr/~kielbasi/tikzuml/var/files/doc/tikzumlmanual.pdf
+%download package: http://perso.ensta-paristech.fr/~kielbasi/tikzuml/
+
+%package per le tabelle
+\usepackage{booktabs} %permette di poter usare delle liste nelle tabelle
+\usepackage{tabularx} 
+\usepackage{longtable} %una tabella può continuare su più pagine
+\usepackage{multirow} %utile per visualizzare una cella su più righe
+%\usepackage{multicolumn} %cella su più colonne
+%\usepackage[table]{xcolor} %rende disponibile l'utilizzo di un colore per lo sfondo
+                        %delle celle di una tabella
+
+%crea una cella per le tabelle in grado di andare a capo con \newline
+%https://tex.stackexchange.com/questions/12703/how-to-create-fixed-width-table-columns-with-text-raggedright-centered-raggedlef
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+%indice con i puntini
+\usepackage{tocloft}
+
+%http://ctan.mirror.garr.it/mirrors/CTAN/macros/latex/contrib/appendix/appendix.pdf
+\usepackage{appendix} %aggiunge dei comandi per l'appendice
+\usepackage{parskip} %aiuta LaTeX a trovare il miglior stile per i page break
+\setcounter{secnumdepth}{5} % numera i sottoparagrafi
+\setcounter{tocdepth}{5} %aggiunge all'indice i sottoparagrafi
+%\usepackage{titlesec} %\begin{paragraph} si può usare come subsubsubsection!
+
+
+\usepackage{breakurl}%\url{...} può continare alla linea successiva. (si può andare a capo)
+
+%Pacchetto per il simbolo degli euro
+\usepackage{eurosym}
+
+%Pacchetto per i colori delle tabelle
+\usepackage{color, colortbl}
+
+\definecolor{Maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black, % colore dei link interni
+    urlcolor=blue  % colore dei link interniesterni
+}
+
