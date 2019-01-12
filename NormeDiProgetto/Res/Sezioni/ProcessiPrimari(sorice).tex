@@ -112,29 +112,29 @@ Esplicita concretamente una prima forma ad alto livello del design del software 
 	\begin{itemize}
 	\item \textbf{{Comunicare con gli stakeholder}} e dare delle informazioni chiare, così da intraprendere le prime discussioni sul progetto;
 	\item \textbf{{Analizzare il sistema}} in modo esplicito nei primi passi del progetto può portare ad importanti considerazioni riguardo a performance, affidabilità e manutenibilità;
-	\item Capire come il sistema è organizzato e come i componenti interoperano tra di loro sottolineando la possibilità di \textbf{{riutilizzo in larga scala}} di parte del codice, dato che si è notata una frequente ripetizione dei requisiti in un sistema complesso come quello affrontato dal nostro team.  	
-	\end{itemize} 	
+	\item Capire come il sistema è organizzato e come i componenti interoperano tra di loro sottolineando la possibilità di \textbf{{riutilizzo in larga scala}} di parte del codice, dato che si è notata una frequente ripetizione dei requisiti in un sistema complesso come quello affrontato dal nostro team.
+	\end{itemize}
 \subparagraph{Attività}\Spazio
 Il design del software non è composta da una singola attività, bensì da un insieme preciso di sotto-attività progettuali che portano al design finale.
 Le sotto-attività che il nostro gruppo ha scelto di svolgere sono:
 	\begin{itemize}
-	\item\textbf{{Progettazione architetturale}}: i progettisti identificheranno una struttura globale del sistema, quindi i \gl{componenti} principali, le loro relazioni e come saranno distribuiti;
+	\item\textbf{{Progettazione architetturale}}: i progettisti identificheranno una struttura globale del sistema, quindi i componenti principali, le loro relazioni e come saranno distribuiti;
 	\item\textbf{{Progettazione dell'interfaccia}}: i progettisti definiranno le interfacce tra i \gl{moduli} di sistema. Ciò deve essere fatto assolutamente in modo non ambiguo dato che, grazie a queste specifiche, ogni componente potrà usare in modo appropriato le funzionalità degli altri componenti del progetto senza sapere l'effettiva implementazione;
 	\item\textbf{{Selezione e progettazione dei componenti}}: i progettisti cercheranno dei componenti riutilizzabili e valuteranno se inserirli nel progetto, specificandone gli appropriati utilizzi e aggiustamenti, o se sarà più opportuno costruire dei nuovi componenti.
 \end{itemize}
 \paragraph{Codifica}\Spazio
-Le convenzioni stilistiche definite in \gl{Grafana Plugin Code Styleguide} e, più in particolare per il linguaggio Typescript, in \gl{Angular TypeScript Styleguide} verranno seguite dai programmatori per lo sviluppo dell'intero progetto. \\
+Le convenzioni stilistiche definite in \gl{Grafana Plugin Code Styleguide} e, più in particolare per il linguaggio Typescript, in \gl{Angular TypeScript} Styleguide verranno seguite dai programmatori per lo sviluppo dell'intero progetto. \\
 Soltanto il Responsabile di progetto, dopo un'attenta analisi e valutazione, potrà ammettere modifiche alle convinzioni stabilite.\\
 L’unica lingua ammessa per i nomi di variabili, classi e funzioni è l’inglese.
 
 \subsection{Strumenti}
 \subsubsection{Creazione diagrammi UML}
-Per quanto concerne la creazione e la modellazione dei diagrammi UML per i casi d'uso, è stato deciso di utilizzare \gl{Astah UML}, data la sua facilità di utilizzo e compatibilità con UML 2.x. Per la successiva fase di modellazione delle classi, potrebbe verificarsi una scelta diversa riguardo al software da utilizzare.
+Per quanto concerne la creazione e la modellazione dei diagrammi UML per i casi d'uso, è stato deciso di utilizzare Astah UML, data la sua facilità di utilizzo e compatibilità con UML 2.x. Per la successiva fase di modellazione delle classi, potrebbe verificarsi una scelta diversa riguardo al software da utilizzare.
 \subsubsection{Diagrammi di Gantt e consuntivi}
-Per quanto riguarda la creazione dei diagrammi di Gantt è stato deciso di utilizzare \gl{GanttProject} data la sua completezza, facilità di utilizzo e la possibilità di esportare i diagrammi sottoforma di \gl{png}. Inoltre, i file \gl{.gan} di GanttProject sono salvati sotto forma di \gl{xml}, quindi facilmente versionabili.
-Infine, per l'attuale realizzazione dei consuntivi è stato deciso di utilizzare \gl{Microsoft Excel} come strumento per creare i grafici.
+Per quanto riguarda la creazione dei diagrammi di Gantt è stato deciso di utilizzare GanttProject data la sua completezza, facilità di utilizzo e la possibilità di esportare i diagrammi sottoforma di \gl{png}. Inoltre, i file di GanttProject sono salvati sotto forma di \gl{xml}, quindi facilmente versionabili.
+Infine, per l'attuale realizzazione dei consuntivi è stato deciso di utilizzare Microsoft Excel come strumento per creare i grafici.
 \subsubsection{Gestione dei processi}
-Per quanto concerne la gestione dei processi è stato deciso di utilizzare \gl{nTask}, data la sua comoda \gl{board view}, la possibilità di creare più feature anche nella versione gratuita, la possibilità di avere \gl{risk tracking} integrato e la creazione semi-automatica dei diagrammi di Gantt.
+Per quanto concerne la gestione dei processi è stato deciso di utilizzare nTask, data la sua comoda board view, la possibilità di creare più feature anche nella versione gratuita, la possibilità di avere \gl{risk tracking} integrato e la creazione semi-automatica dei diagrammi di Gantt.
 \subsubsection{Tracciamento dei requisiti}
-Per quanto riguarda il tracciamento dei requisiti, il gruppo ha deciso di utilizzare inizialmente uno strumento non totalmente adatto a questo compito, cioè un foglio di calcolo. Essendo a conoscenza delle limitate funzionalità offerte da questa tecnologie per lo scopo a noi d'interesse, il team 7DOS ha deciso di migrare i dati raccolti in uno strumento creato appositamente per questo scopo. Lo strumento scelto è Trender e rende il tracciamento dei requisiti semi-automatico, inoltre offre la creazione di file \gl{.tex} per il tracciamento dei requisiti.
+Per quanto riguarda il tracciamento dei requisiti, il gruppo ha deciso di utilizzare inizialmente uno strumento non totalmente adatto a questo compito, cioè un foglio di calcolo. Essendo a conoscenza delle limitate funzionalità offerte da questa tecnologie per lo scopo a noi d'interesse, il team 7DOS ha deciso di migrare i dati raccolti in uno strumento creato appositamente per questo scopo. Lo strumento scelto è Trender e rende il tracciamento dei requisiti semi-automatico, inoltre offre la creazione di file .tex per il tracciamento dei requisiti.
 \pagebreak
