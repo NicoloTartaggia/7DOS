@@ -62,7 +62,7 @@
 	\item{\textbf{Attori primari}: Utente;} 
 	\item{\textbf{Scopo e descrizione}: un nodo al momento della sua creazione nasce completamente distaccato dalla rete, di conseguenza non possiede alcun successore e la relativa lista dovrà essere vuota;} 
 	\item{\textbf{Precondizione}: l'attore ha indicato al sistema di voler inserire un nodo all'interno della rete Bayesiana;} 
-	\item{\textbf{Postcondizione}: l'inizializzazione della lista di predecessori è stata completata correttamente.} 
+	\item{\textbf{Postcondizione}: l'inizializzazione della lista di successori è stata completata correttamente.} 
 \end{itemize} 
 \subsection{UC1.1.3: Inizializzazione nome nodo}
 \hypertarget{UC1.1.3}{}  
@@ -85,10 +85,10 @@
 	\item{\textbf{Scopo e descrizione}: una CPT è composta principalmente da tre componenti: 
 		\begin{itemize} 
 			\item{La lista dei possibili stati in cui il nodo corrente può risiedere;} 
-			\item{La lista di tutte le combinazione esistenti di tutti i possibili stati dei nodi predecessori;} 
-			\item{La tabella delle probabilità vera e propria in cui ogni cella è identificata da una coppia di elementi delle liste dei due punti precedenti.} 
+			\item{La lista di tutte le combinazioni esistenti di tutti i possibili stati dei nodi predecessori;} 
+			\item{La tabella delle probabilità vera e propria, in cui ogni cella è identificata da una coppia di elementi delle liste dei due punti precedenti.} 
 		\end{itemize} 			
-		Ogni punto deve venire inizializzato correttamente tramite appositi valori di default;
+		Ogni punto deve essere inizializzato correttamente tramite appositi valori di default;
 	} 
 	\item{\textbf{Precondizione}: l'attore ha effettuato la creazione di un nuovo nodo della rete;} 
 	\item{\textbf{Flusso base degli eventi}: } 
@@ -132,26 +132,26 @@
 \end{figure} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore desidera modificare il valore di uno o più parametri di un nodo della rete Bayesiana;} 
-	\item{\textbf{Precondizione}: L'attore ha indicato il nodo su cui desidera effettuare l'operazione di modifica;} 
+	\item{\textbf{Scopo e descrizione}: l'attore desidera modificare il valore di uno o più parametri di un nodo della rete Bayesiana;} 
+	\item{\textbf{Precondizione}: l'attore ha indicato il nodo su cui desidera effettuare l'operazione di modifica;} 
 	\item{\textbf{Flusso base degli eventi}: } 
 	\begin{itemize} 
 		\item{L'attore può modificare il nome del nodo(UC1.2.1);} 
 		\item{L'attore può modificare la CPT associata al nodo(UC1.2.2).} 		
 	\end{itemize} 
-	\item{\textbf{Postcondizione}: L'attore ha indicato quali parametri del nodo desidera modificare, come devono essere modificati e sono stati aggiornati correttamente;} 
+	\item{\textbf{Postcondizione}: l'attore ha indicato quali parametri del nodo desidera modificare, come devono essere modificati e sono stati aggiornati correttamente;} 
 	\item{\textbf{Estensioni}:} 
 	\begin{itemize} 
-		\item{Nel caso in cui l'attore modifichi gli attributi del nodo con valori non validi il nodo, e tutti i collegamenti ad esso associati non verranno considerati come facenti parte della rete.} 
+		\item{Nel caso in cui l'attore modifichi gli attributi del nodo con valori non validi, il nodo e tutti i collegamenti ad esso associati non verranno considerati come facenti parte della rete.} 
 	\end{itemize} 
 \end{itemize} 
 \subsection{UC1.2.1: Modifica nome nodo} 
 \hypertarget{UC1.2.1}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore desidera modificare il nome di uno specifico nodo;} 
-	\item{\textbf{Precondizione}: L'attore ha indicato al sistema di volere modificare il nome di uno specifico nodo;} 
-	\item{\textbf{Postcondizione}: Il nome del nodo è stato aggiornato correttamente.} 
+	\item{\textbf{Scopo e descrizione}: l'attore desidera modificare il nome di uno specifico nodo;} 
+	\item{\textbf{Precondizione}: l'attore ha indicato al sistema di volere modificare il nome di uno specifico nodo;} 
+	\item{\textbf{Postcondizione}: il nome del nodo è stato aggiornato correttamente.} 
 \end{itemize} 
 \subsection{UC1.2.2: Modifica CPT associata al nodo} 
 \hypertarget{UC1.2.2}{} 
@@ -162,39 +162,39 @@
 \end{figure} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore desidera modificare la CPT associata al nodo. Una CPT è composta principalmente da tre componenti: 
+	\item{\textbf{Scopo e descrizione}: l'attore desidera modificare la CPT associata al nodo. Una CPT è composta principalmente da tre componenti: 
 		\begin{itemize} 
 			\item{La lista dei possibili stati in cui il nodo corrente può risiedere;} 
-			\item{La lista di tutte le combinazione esistenti di tutti i possibili stati dei nodi predecessori;} 
-			\item{La tabella delle probabilità vera e propria in cui ogni cella è identificata da una coppia di elementi delle liste dei due punti precedenti.} 
+			\item{La lista di tutte le combinazioni esistenti di tutti i possibili stati dei nodi predecessori;} 
+			\item{La tabella delle probabilità vera e propria, in cui ogni cella è identificata da una coppia di elementi delle liste dei due punti precedenti.} 
 		\end{itemize} 
-		Questo caso d'uso si concentra principalmente sulla modifica della prima ed ultima componente. L'interazione dell'attore con la seconda componente verrà trattata nei casi d'uso UC1.3 e UC1.4;
+		Questo caso d'uso si concentra principalmente sulla modifica della prima e dell'ultima componente. L'interazione dell'attore con la seconda componente verrà trattata nei casi d'uso UC1.3 e UC1.4;
 	} 
-	\item{\textbf{Precondizione}: L'attore ha indicato al sistema quale operazioni vuole effettuare sulla CPT di uno specifico nodo;} 
+	\item{\textbf{Precondizione}: l'attore ha indicato al sistema quale operazioni vuole effettuare sulla CPT di uno specifico nodo;} 
 	\item{\textbf{Flusso base degli eventi}: } 
 	\begin{itemize} 
 		\item{L'attore può aggiungere uno stato al nodo corrente;} 
-		\item{L'attore può rimuovere un stato dal nodo corrente;} 
+		\item{L'attore può rimuovere uno stato dal nodo corrente;} 
 		\item{L'attore può modificare gli attributi associati ad uno stato del nodo corrente;} 
 		\item{L'attore può modificare la probabilità contenuta in una cella della CPT.} 
 	\end{itemize} 
-	\item{\textbf{Postcondizione}: Le operazioni richieste sono state eseguite e la CPT del nodo indicato è stata aggiornata correttamente.} 
+	\item{\textbf{Postcondizione}: le operazioni richieste sono state eseguite e la CPT del nodo indicato è stata aggiornata correttamente.} 
 \end{itemize} 
 \subsection{UC1.2.2.1: Inserimento stato nodo} 
 \hypertarget{UC1.2.2.1}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore desidera creare un nuovo stato associato al nodo corrente da inserire all'interno della CPT;} 
-	\item{\textbf{Precondizione}: L'attore ha indicato di volere inserire uno stato all'interno della CPT del nodo corrente;} 
-	\item{\textbf{Postcondizione}: Lo stato è stato inserito correttamente ed i suoi parametri sono stati inizializzati con valori di default.} 
+	\item{\textbf{Scopo e descrizione}: l'attore desidera creare un nuovo stato associato al nodo corrente da inserire all'interno della CPT;} 
+	\item{\textbf{Precondizione}: l'attore ha indicato di volere inserire uno stato all'interno della CPT del nodo corrente;} 
+	\item{\textbf{Postcondizione}: lo stato è stato inserito correttamente ed i suoi parametri sono stati inizializzati con valori di default.} 
 \end{itemize} 
 \subsection{UC1.2.2.2: Eliminazione stato nodo} 
 \hypertarget{UC1.2.2.2}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore desidera eliminare uno stato associato alla CPT del nodo corrente;} 
-	\item{\textbf{Precondizione}: L'attore ha indicato quale stato vuole eliminare;} 
-	\item{\textbf{Postcondizione}: Lo stato è stato eliminato correttamente assieme a tutte le celle della tabella ad esso associate.} 
+	\item{\textbf{Scopo e descrizione}: l'attore desidera eliminare uno stato associato alla CPT del nodo corrente;} 
+	\item{\textbf{Precondizione}: l'attore ha indicato quale stato vuole eliminare;} 
+	\item{\textbf{Postcondizione}: lo stato è stato eliminato correttamente assieme a tutte le celle della tabella ad esso associate.} 
 \end{itemize} 
 \subsection{UC1.2.2.3: Modifica di un possibile stato di un nodo} 
 \hypertarget{UC1.2.2.3}{} 
@@ -205,23 +205,23 @@
 \end{figure} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: Uno stato associato alla CPT di un nodo è composto da due componenti: Un nome ed un intervallo di valori. L'attore può effettuare operazioni di modifica su entrambe le componenti;} 
-	\item{\textbf{Precondizione}: L'attore ha indicato quale stato vuole modificare e come vuole modificarlo;} 
+	\item{\textbf{Scopo e descrizione}: uno stato associato alla CPT di un nodo è composto da due componenti: un nome ed un intervallo di valori. L'attore può effettuare operazioni di modifica su entrambe le componenti;} 
+	\item{\textbf{Precondizione}: l'attore ha indicato quale stato vuole modificare e come vuole modificarlo;} 
 	\item{\textbf{Flusso base degli eventi}: 
 		\begin{itemize} 
 			\item{L'attore può modificare il nome dello stato;} 
 			\item{L'attore può modificare il range di valori dello stato.} 
 		\end{itemize} 			
 	} 
-	\item{\textbf{Postcondizione}: Lo stato è stato modificato correttamente come richiesto dall'attore. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore.} 
+	\item{\textbf{Postcondizione}: lo stato è stato modificato correttamente come richiesto dall'attore. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore.} 
 \end{itemize} 
 \subsection{UC1.2.2.3.1: Modifica nome stato} 
 \hypertarget{UC1.2.2.3.1}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore desidera modificare il nome di uno stato associato alla CPT di un nodo;} 
-	\item{\textbf{Precondizione}: L'attore ha indicato di volere modificare il nome di uno stato;} 
-	\item{\textbf{Postcondizione}: Il nome dello stato è stato aggiornato correttamente. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore;}
+	\item{\textbf{Scopo e descrizione}: l'attore desidera modificare il nome di uno stato associato alla CPT di un nodo;} 
+	\item{\textbf{Precondizione}: l'attore ha indicato di volere modificare il nome di uno stato;} 
+	\item{\textbf{Postcondizione}: il nome dello stato è stato aggiornato correttamente. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore;}
 	\item{\textbf{Estensioni}:
 		\begin{itemize}
 			\item{Valore nome stato nodo non valido (UC1.7.2)}.
@@ -232,9 +232,9 @@
 \hypertarget{UC1.2.2.3.2}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore desidera modificare l'intervallo di valori associato ad uno stato;} 
-	\item{\textbf{Precondizione}: L'attore ha indicato che vuole modificare l'intervallo di valori di uno stato;} 
-	\item{\textbf{Postcondizione}: L'intervallo di valori è stato aggiornato correttamente come richiesto dall'attore. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore;}
+	\item{\textbf{Scopo e descrizione}: l'attore desidera modificare l'intervallo di valori associato ad uno stato;} 
+	\item{\textbf{Precondizione}: l'attore ha indicato che vuole modificare l'intervallo di valori di uno stato;} 
+	\item{\textbf{Postcondizione}: l'intervallo di valori è stato aggiornato correttamente come richiesto dall'attore. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore;}
 	\item{\textbf{Estensioni}:
 		\begin{itemize}
 			\item{Valore intervallo stato nodo non valido (UC1.7.3).}
@@ -245,9 +245,9 @@
 \hypertarget{UC1.2.2.4}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore desidera modificare la probabilità contenuta in una cella della CPT;} 
-	\item{\textbf{Precondizione}: L'attore ha indicato quale cella vuole modificare e con quale valore vuole sostituire quello corrente;} 
-	\item{\textbf{Postcondizione}: Il valore contenuto all'interno della cella è stato aggiornato correttamente. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore;}
+	\item{\textbf{Scopo e descrizione}: l'attore desidera modificare la probabilità contenuta in una cella della CPT;} 
+	\item{\textbf{Precondizione}: l'attore ha indicato quale cella vuole modificare e con quale valore vuole sostituire quello corrente;} 
+	\item{\textbf{Postcondizione}: il valore contenuto all'interno della cella è stato aggiornato correttamente. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore;}
 	\item{\textbf{Estensioni}:
 		\begin{itemize}
 			\item{Somma percentuale CPT non valida (UC1.7.4);}
@@ -259,10 +259,10 @@
 \hypertarget{UC1.3}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore desidera eliminare un nodo dalla rete;} 
+	\item{\textbf{Scopo e descrizione}: l'attore desidera eliminare un nodo dalla rete;} 
 	\item{\textbf{Precondizione}:
-		 L'attore ha indicato quale nodo vuole eliminare dalla rete;} 
-	\item{\textbf{Postcondizione}: Il nodo indicato e tutti i collegamenti associati sono stati eliminati correttamente. Inoltre tutte le CPT dei successori sono state aggiornate correttamente.} 
+		 l'attore ha indicato quale nodo vuole eliminare dalla rete;} 
+	\item{\textbf{Postcondizione}: il nodo indicato e tutti i collegamenti associati sono stati eliminati correttamente. Inoltre tutte le CPT dei successori sono state aggiornate correttamente.} 
 \end{itemize} 
 \subsection{UC1.4: Creazione collegamento} 
 \hypertarget{UC1.4}{} 
@@ -273,8 +273,8 @@
 \end{figure} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore desidera creare un collegamento tra nodi all'interno della rete. I collegamenti all'interno di una rete Bayesiana sono direzionati, di conseguenza è sempre definito un nodo di partenza ed un nodo d'arrivo;} 
-	\item{\textbf{Precondizione}: L'attore ha indicato quale nodi della rete vuole collegare tra loro, qual è il nodo di partenza e qual è il nodo di arrivo;} 
+	\item{\textbf{Scopo e descrizione}: l'attore desidera creare un collegamento tra nodi all'interno della rete. I collegamenti all'interno di una rete Bayesiana sono direzionati, di conseguenza è sempre definito un nodo di partenza ed un nodo d'arrivo;} 
+	\item{\textbf{Precondizione}: l'attore ha indicato quale nodi della rete vuole collegare tra loro, qual è il nodo di partenza e qual è il nodo di arrivo;} 
 	\item{\textbf{Flusso base degli eventi}: } 
 	\begin{itemize} 
 		\item{Inserimento nodo arrivo in lista successori del nodo di partenza(UC1.4.1);} 
