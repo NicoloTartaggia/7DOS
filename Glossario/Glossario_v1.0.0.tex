@@ -24,8 +24,8 @@
 	\label{sec:analisidinamica}
 	Tecnica di analisi di un \underline{\hyperref[sec:prodottosoftware]prodotto {software}} in cui quest'ultimo viene eseguito in un ambiente reale o virtuale; coincide con i test:
 	\begin{itemize}
-		\item \textbf{Di unità}: verificano il corretto funzionamento dell'unità.
-		\item \textbf{Di integrazione}: verifica la corretta interazione tra più unità che interagiscono dando luogo ad un \emph{build}.
+		\item \textbf{Di unità}: verificano il corretto funzionamento dell'unità;
+		\item \textbf{Di integrazione}: verifica la corretta interazione tra più unità che interagiscono dando luogo ad un \emph{build};
 		\item \textbf{Di sistema}: verificano la corretta interazione tra più \emph{build} che compongono un sistema complesso.
 	\end{itemize}
 	Il collaudo, test finale eseguito con il committente, è solo un attività formale se i test precedenti sono stati eseguiti rigorosamente. I test devono essere ripetibili e deterministici, perciò vanno documentati: le condizioni iniziali di esecuzione, l'esecuzione, il risultato atteso ed il risultato ottenuto. I test inoltre devono essere automatizzati per ridurre al minimo la possibilità di errore umano.
@@ -127,9 +127,9 @@
 	\label{sec:CPT}
 	Una Conditional Probability Table (CPT) è una tabella in cui:
 		\begin{itemize}
-			\item{Ogni colonna rappresenta l'i-esimo stato in cui il nodo corrente può risiedere. Ogni stato è identificato da un nome ed un intervallo di valori associato. Un nodo non può possedere più stati con intervalli di valori sovrapposti tra loro.}
-			\item{Ogni riga rappresenta la j-esima combinazione esistente di tutti i possibili stati dei nodi predecessori}
-			\item{le celle interne indicano la probabilità, condizionata dai nodi predecessori, che il nodo corrente si trovi in uno specifico stato data una combinazione esistente dei possibili stati dei nodi predecessori}
+			\item{Ogni colonna rappresenta l'i-esimo stato in cui il nodo corrente può risiedere. Ogni stato è identificato da un nome ed un intervallo di valori associato. Un nodo non può possedere più stati con intervalli di valori sovrapposti tra loro;}
+			\item{Ogni riga rappresenta la j-esima combinazione esistente di tutti i possibili stati dei nodi predecessori;}
+			\item{le celle interne indicano la probabilità, condizionata dai nodi predecessori, che il nodo corrente si trovi in uno specifico stato data una combinazione esistente dei possibili stati dei nodi predecessori.}
 		\end{itemize}
 
 	
@@ -411,9 +411,9 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 		\subsubsection{Incrementale}
 			Prevede un approccio che fa uso di incrementi, ha come vantaggi:
 			\begin{itemize}
-			\item Il valore aggiunto di ogni incremento
-			\item La riduzione del rischio di fallimento portata da ogni incremento
-			\item L'uso di abilitatori che facilitano il lavoro
+			\item Il valore aggiunto di ogni incremento;
+			\item La riduzione del rischio di fallimento portata da ogni incremento;
+			\item L'uso di abilitatori che facilitano il lavoro.
 			\end{itemize}
 
 		
@@ -631,16 +631,15 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	\label{sec:qualitaprodotto}
 	Caratteristiche di un prodotto di qualità:
 	\begin{itemize}
-	\item Sufficienza: capacità di soddisfare tutti i requisiti;
-	\item Comprensibilità: facilità di utilizzo, comprensione del funzionamento da parte degli  \emph{stakeholder};
-	\item Modularità: suddivisione in parti chiaramente distinte e sconnesse, principio fondamentale dell' \emph{information hiding}.;
-	\item Robustezza: agli input di utilizzo;
-	\item Sicurezza: affidabilità in caso di malfunzionamento (hardware o software);
-	\item Sicurezza bis: resistenza alla intrusioni;
-	\item Flessibilità: misura della facilità con la quale il sistema può essere modificato o adattato per soddisfare nuovi requisiti;
-	\item Riusabilità: misura della facilità di riutilizzo in altri contesti dei moduli che formano il prodotto;
-	\item Disponibilità: più inconveniente il tempo di \emph{downtime} in caso di guasti o aggiornamenti, meno disponibile risulta il prodotto;
-	\item \underline{\hyperref[sec:efficienza]{Efficienza}};
+	\item \textbf{Sufficienza}: capacità di soddisfare tutti i requisiti;
+	\item \textbf{Comprensibilità}: facilità di utilizzo, comprensione del funzionamento da parte degli  \emph{stakeholder};
+	\item \textbf{Modularità}: suddivisione in parti chiaramente distinte e sconnesse, principio fondamentale dell' \emph{information hiding}.;
+	\item \textbf{Robustezza}: agli input di utilizzo;
+	\item \textbf{Sicurezza}: affidabilità in caso di malfunzionamento (hardware o software), resistenza alla intrusioni;
+	\item \textbf{Flessibilità}: misura della facilità con la quale il sistema può essere modificato o adattato per soddisfare nuovi requisiti;
+	\item \textbf{Riusabilità}: misura della facilità di riutilizzo in altri contesti dei moduli che formano il prodotto;
+	\item \textbf{Disponibilità}: più inconveniente il tempo di \emph{downtime} in caso di guasti o aggiornamenti, meno disponibile risulta il prodotto;
+	\item \textbf{\underline{\hyperref[sec:efficienza]{Efficienza}}};
 	\end{itemize}
 	\subsubsection{Qualità dei processi}
 	\label{sec:qualitaprocesso}
@@ -666,14 +665,14 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	\label{sec:requisito}
 	I requisiti sono le capacità che il sistema dovrà avere per svolgere le funzioni volute dal committente. È \underline{\hyperref[sec:bestpractice]{best practice}} definire requisiti:
 	\begin{itemize}
-	\item Non ambigui: Interpretati univocamente da tutti .
-	\item Corretti.
-	\item Completi.
-	\item Variabili.
-	\item Consistenti: che non si contraddicono a vicenda o da sè.
-	\item Modificabili.
-	\item Tracciabili
-	\item Ordinati: tra obbligatori, desiderabili ed opzionali.
+	\item \textbf{Non ambigui}: interpretati univocamente da tutti;
+	\item \textbf{Corretti};
+	\item \textbf{Completi};
+	\item \textbf{Variabili};
+	\item \textbf{Consistenti}: che non si contraddicono a vicenda o da sè;
+	\item \textbf{Modificabili};
+	\item \textbf{Tracciabili};
+	\item \textbf{Ordinati}: tra obbligatori, desiderabili ed opzionali.
 	\end{itemize}
 
 
@@ -692,7 +691,7 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	
 	\subsection{Riuso}
 	\label{sec:riuso}
-	Del codice, può essere di due tipi: opportunistico (copia e incolla), che ha un basso costo e poco impatto, o sistematico, che ha un maggior costo e un maggior impatto.
+	Il codice, può essere riutilizzato in due modi diversi: opportunistico (copia e incolla), caratterizzato da un basso costo e ed impatto, o sistematico, caratterizzato da un maggior costo ed impatto.
 
 	
 	\subsection{Ruolo}
@@ -747,7 +746,7 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	\label{sec:swe}
 	Disciplina il cui scopo è la realizzazione di  \underline{\hyperref[sec:prodottosoftware]{prodotti software}}; nota anche con l'acronimo SWE.
 	SWE si occupa dell'organizzazione e della gestione delle attività, compiti e interazioni di un team di sviluppatori,
-	le quali hanno come obiettivo per l'attività di sviluppo e il software risultate \underline{\hyperref[sec:efficacia]{Efficacia}} ed \underline{\hyperref[sec:efficienza]{Efficienza}}.
+	le quali hanno come obiettivo per l'attività di sviluppo e il software risultante \underline{\hyperref[sec:efficacia]{Efficacia}} ed \underline{\hyperref[sec:efficienza]{Efficienza}}.
 	SWE si occupa inoltre delle metodologie di cura del progetto per l'intero ciclo di vita del software.
 	SWE prevede un approccio sistematico, disciplinato e quantificabile all'attività di sviluppo.
 
@@ -784,7 +783,7 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 
 	\subsection{Tracciamento dei requisiti}
 	\label{sec:tracciamentorequisiti}
-	Attività di monitoraggio dell'evoluzione e della scoperta dei requisiti che possono cambiare durante lo svolgersi dello sviluppo del progetto.Tale attività viene svolta tramite apparati informatici appositi, le informazioni importanti sui requisiti di cui viene tenuta traccia sono: \emph{status}, \emph{origin}, assegnatari.
+	Attività di monitoraggio dell'evoluzione e della scoperta dei requisiti che possono cambiare durante lo svolgersi dello sviluppo del progetto. Tale attività viene svolta tramite apparati informatici appositi, le informazioni importanti sui requisiti di cui viene tenuta traccia sono: \emph{status}, \emph{origin}, assegnatari.
 
 
 	\subsection{TypeScript}
@@ -858,12 +857,12 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	
 	\subsection{Zero-latency}
 	\label{sec:zerolatency}
-	Termine inglese che significa "senza ritardo". Riferito al lavoro, indica un approccio prevede l'inizio della attività di sviluppo non appena possibile. Permette di avere un margine di tempo tra termine del progetto e consegna.
+	Termine inglese che significa "senza ritardo". Riferito al modo con cui si approccia il lavoro, prevede l'inizio delle attività di sviluppo non appena possibile. Permette di avere un margine di tempo tra il termine previsto del progetto e le scadenze imposte.
 
 	
 	\subsection{Zero-laxity}
 	\label{sec:zerolaxity}
-	Termine inglese che significa "senza margine". Riferito al lavoro, indica un approccio prevede l'inizio delle attività di sviluppo nel momento in cui la data di consegna del progetto meno il tempo richiesto dallo sviluppo equivale zero o meno.
+	Termine inglese che significa "senza margine". Riferito al modo con cui si approccia il lavoro, prevede l'inizio delle attività di sviluppo il più tardi possibile in modo tale che non sia presente alcun margine tra il termine previsto del progetto e le scadenze imposte.
 
 
 \end{document}
