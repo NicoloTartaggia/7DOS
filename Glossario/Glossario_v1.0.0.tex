@@ -1,6 +1,10 @@
-\input{Stile/Stile.tex}
+	\input{Stile/Stile.tex}
 \input{Stile/FunzioniComandi.tex}
 \input{Res/Comandi}
+
+\setcounter{secnumdepth}{0}
+\usepackage{sectsty}
+\sectionfont{\centering\fontsize{30}{30}\selectfont}
 
 
 \begin{document}
@@ -19,6 +23,9 @@
 	\label{sec:alter}
 	Notifica.
 
+	\subsection{Analisi dei requisiti}
+	\label{sec:analisirequisiti}
+	L'obiettivo dell'analisi dei requisiti è quello di individuare e definire i \underline{\hyperref[sec:requisito]{requisiti}} di progetto. Il risultato di tale processo è un documento contrattuale che andrà fornito all'azienda appaltatrice nell'ambito di una gara d'appalto. Sulla base di questo documento l'azienda deciderà a chi affidare l'appalto.
 
 	\subsection{Analisi dinamica}
 	\label{sec:analisidinamica}
@@ -29,12 +36,6 @@
 		\item \textbf{Di sistema}: verificano la corretta interazione tra più \emph{build} che compongono un sistema complesso.
 	\end{itemize}
 	Il collaudo, test finale eseguito con il committente, è solo un attività formale se i test precedenti sono stati eseguiti rigorosamente. I test devono essere ripetibili e deterministici, perciò vanno documentati: le condizioni iniziali di esecuzione, l'esecuzione, il risultato atteso ed il risultato ottenuto. I test inoltre devono essere automatizzati per ridurre al minimo la possibilità di errore umano.
-
-
-	\subsection{Analisi dei requisiti}
-	\label{sec:analisirequisiti}
-	L'obiettivo dell'analisi dei requisiti è quello di individuare e definire i \underline{\hyperref[sec:requisito]{requisiti}} di progetto. Il risultato di tale processo è un documento contrattuale che andrà fornito all'azienda appaltatrice nell'ambito di una gara d'appalto. Sulla base di questo documento l'azienda deciderà a chi affidare l'appalto.
-
 
 	\subsection{Analisi statica}
 	\label{sec:analisistatica}
@@ -76,7 +77,7 @@
 	
 	\subsection{Budget Variance}
 	\label{sec:budgetvariance}
-	La Budget Variance è una metrica che indica se la spesa \textit{complessiva} attuale è maggiore o minore alla spesa pianificata. Viene calcolata: $BV = EV - AC$ Dove BV indica la budget variance, EV indica l'earned value ovvero il valore delle attività realizzate, AC indica l'actual cost ovvero il costo effettivamente sostenuto.
+	La \emph{Budget Variance} è una metrica che indica se la spesa \textit{complessiva} attuale è maggiore o minore alla spesa pianificata. Viene calcolata: $BV = EV - AC$, dove BV indica la \emph{budget variance}, EV indica \emph{l'earned value}, ovvero il valore delle attività realizzate, AC indica \emph{l'actual cost}, ovvero il costo effettivamente sostenuto.
 	
 	% C	----------------------------------------------------------------------------------------------
 	\newpage
@@ -116,7 +117,9 @@
 	\label{sec:codenfix}
 	Vecchia pratica nell'ambito di produzione del \underline{\hyperref[sec:prodottosoftware]{software}}, autodescrittiva: l'intera attività di produzione consisteva nel codificare e riparare software.
 
-
+	\subsection{Committente}
+	\label{sec:committente}
+	Figura che commissiona un lavoro.
 	
 	\subsection{Compito}
 	\label{sec:compito}
@@ -142,10 +145,6 @@
 	\label{sec:controlloconfigurazione}
 	Gestione e controllo della \underline{\hyperref[sec:configurazione]{configurazione}} che permette di assemblare le varie componenti di un \underline{\hyperref[sec:prodottosoftware]{software}}.
 
-
-	\subsection{Committente}
-	\label{sec:committente}
-	Figura che commissiona un lavoro.
 
 	% D	----------------------------------------------------------------------------------------------
 	\newpage
@@ -308,22 +307,19 @@
 	\newpage
 	\newsection{J}
 
-
-	\subsection{JPG}
-	\label{sec:jpg}
-	Formato lossy per memorizzare immagini.
-
-
 	\subsection{JavaScript}
 	\label{sec:javascript}
 	Linguaggio di scripting orientato agli oggetti e agli eventi, comunemente utilizzato nella programmazione web, lato client, per la creazione di effetti dinamici interattivi tramite funzioni di script, invocate da eventi innescati a loro volta in vari modi dall'utente sulla pagina web in uso.
 
+	\subsection{JPG}
+	\label{sec:jpg}
+	Formato lossy per memorizzare immagini.
+	
 
 	\subsection{JSON}
 	\label{sec:json}
 	\emph{JSON(JavaScript Object Notation)} è un formato adatto all'interscambio di dati fra applicazioni client/server basato sul linguaggio \underline{\hyperref[sec:javascript]{JavaScript}}.
 	
-
 
 	% L	----------------------------------------------------------------------------------------------
 	\newpage
@@ -363,20 +359,12 @@
 
 	\subsection{Manutenzione}
 	\label{sec:manutenzione}
-	Processo correttivo e di sviluppo che avviene dopo il rilascio della versione finale di un prodotto software. Se ne distinguono diversi tipi, come di seguito.
-
-		
-		\subsubsection{M. correttiva}
-		Ha come scopo la correzione di errori, bug, inesattezze, inefficienze, etc..
-
-		
-		\subsubsection{M. adattiva}
-		Ha come scopo l'adattamento a diverse tecnologie, ambiti, contesti.
-
-		
-		\subsubsection{M. evolutiva}
-		Ha come scopo l'adattamento a nuove tecnologie, ambiti, contesti, l'aggiunta di funzionalità, etc..
-
+	Processo correttivo e di sviluppo che avviene dopo il rilascio della versione finale di un prodotto software. Se ne distinguono diversi tipi, elencati di seguito:
+	\begin{itemize}
+		\item{Manutenzione correttiva: ha come scopo la correzione di errori, bug, inesattezze, inefficienze, etc.;}
+		\item{Manutenzione adattiva: ha come scopo l'adattamento a diverse tecnologie, ambiti e contesti;}
+		\item{Manutenzione evolutiva: ha come scopo l'adattamento a nuove tecnologie, ambiti, contesti, implementando nuove funzionalità e caratteristiche.}
+	\end{itemize}
 
 	
 	\subsection{Miglioramento continuo}
@@ -400,12 +388,11 @@
 	Il \underline{\hyperref[sec:ciclodivita]{ciclo di vita}} di un \underline{\hyperref[sec:prodottosoftware]{software}} non è univocamente determinato, ma ne vengono individuati diversi modelli possibili. La scelta del modello dipende da 3 macro-fattori: cosa vuole il committente, dipendenza da terze parti, livello di coinvolgimento del committente nell'accertamento dello stato di avanzamento.
 
 		
-		\subsubsection{Sequenziale (A cascata)}
+		\subsubsection{Sequenziale (a cascata)}
 			Ha per principio cardine la ripetibilità dei processi.
-			Il ciclo di vita sequenziale è lineare, le fasi si susseguono, e la direzione
-			ammessa è una sola.
-			Il modello fa forte uso di documentazione il che rende il sistema organizzato e tracciabile, prevede pre e post per ogni fase e associa ad ogni fase date di inizio e fine.
-ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, progettazione (intesa come \textit{design}), realizzazione, manutenzione.
+			Il ciclo di vita sequenziale è lineare, le fasi si susseguono e la direzione ammessa è una sola.
+			Il modello fa forte uso di documentazione il che rende il sistema organizzato e tracciabile, prevede pre e post per ogni fase e associa ad ogni fase date di inizio e di fine.
+ISO 12207 definisce così le fasi del ciclo di vita sequenziale: analisi, progettazione (intesa come \textit{design}), realizzazione, manutenzione.
 
 		
 		\subsubsection{Incrementale}
@@ -422,11 +409,11 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 
 		
 		\subsubsection{A componenti}
-			Si sviluppa sull'idea di riutilizzare componenti . Prevede quindi tecniche di adattamento delle componenti e dei requisiti finalizzate al riuso del \underline{\hyperref[sec:prodottosoftware]{software}}.
+			Si sviluppa sull'idea di riutilizzare componenti. Prevede quindi tecniche di adattamento delle componenti e dei requisiti finalizzate al riuso del \underline{\hyperref[sec:prodottosoftware]{software}}.
 
 		
 		\subsubsection{A spirale}
-				Modello di ciclo di vita utilizzato quando il progetto è innovativo e non esistono best practice applicabili per lo sviluppo del progetto.
+				Modello di ciclo di vita utilizzato quando il progetto è innovativo e non esistono \emph{best practice} applicabili per lo sviluppo del progetto.
 
 		
 		\subsubsection{Agili}
@@ -441,7 +428,7 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 
 			
 			\subsubsection{Scrum}
-				Scrum ha come focus fondamentale le  \emph{user-stories}: una visione di ciò che vuole il cliente, da esse si ricava un \emph{product backlog}, insieme di attività/feature da svolgere/realizzare. L'attività di \emph{Sprint Backlog} é un passo iterativo che impone controlli frequenti (\emph{Daily Scrum}) sulla correttezza delle azioni intraprese, tramite \emph{Sprint Review} e \emph{Retrospective}.
+				\emph{Scrum} ha come focus fondamentale le  \emph{user-stories}: una visione di ciò che vuole il cliente,. Da esse si ricava un \emph{product backlog}, insieme di attività/feature da svolgere/realizzare. L'attività di \emph{Sprint Backlog} é un passo iterativo che impone controlli frequenti (\emph{Daily Scrum}) sulla correttezza delle azioni intraprese, tramite \emph{Sprint Review} e \emph{Retrospective}.
 				
 	
 	\subsection{Modulo}
@@ -449,7 +436,7 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	Si tratta di una componente o parte del software, un modulo:
 	\begin{itemize}
 	\item Incapsula dati e comportamenti in maniera coerente e coesa;
-	\item Ha un interfaccia che ne permette l'uso;
+	\item Ha un'interfaccia che ne permette l'uso;
 	\item E' pensato in modo da favorire la pratica della modularità.
 	\end{itemize}
 	
@@ -466,18 +453,18 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	\subsection{Obiettivo SMART}
 	\label{sec:smart}
 	\begin{itemize}
-			\item \textbf{Specific}: formalmente definiti;
+			\item \textbf{Specific}: formalmente definito;
 			\item \textbf{Measurable}: il cui stato di ottenimento è misurabile;
-			\item \textbf{Achievable}: raggiungibili;
-			\item \textbf{Realistic}: realistici;
-			\item \textbf{Time-Bound}: costretti da un vincolo temporale.
+			\item \textbf{Achievable}: raggiungibile;
+			\item \textbf{Realistic}: pratico;
+			\item \textbf{Time-Bound}: limitato da un vincolo temporale.
 		\end{itemize}
 
 
 		
 	\subsection{Open source}
 	\label{sec:opensource}
-	Tipo di prodotto \underline{\hyperref[sec:prodottosoftware]{software}} il cui codice sorgente viene rilasciato al pubblico mediante una licenza che ne permette a chiunque lo studio, la modifica e la distribuzione.
+	Tipo di prodotto \underline{\hyperref[sec:prodottosoftware]{software}} il cui codice sorgente viene rilasciato al pubblico mediante una licenza che ne permette a chiunque lo studio, la modifica e la distribuzione per qualsiasi scopo.
 		
 
 	% P	----------------------------------------------------------------------------------------------
@@ -487,7 +474,7 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 
 	\subsection{Panel}
 	\label{sec:panel}
-	Un panel è una rappresentazione visiva di dati elaborati da un sistema mostrati sotto forma di grafici.
+	Un \emph{panel} è una rappresentazione visiva di dati elaborati da un sistema mostrati sotto-forma di grafici.
 
 
 	\subsection{PDCA}
@@ -498,36 +485,34 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	\subsection{Pianificazione delle attività}
 	\label{sec:pianificazioneattivita}
 	Pianificare le attività è uno dei compiti del \underline{\hyperref[sec:projectmanager]{project manager}}.
-	La pianificazione include l'allineamento delle attività su un asse temporale, l'assegnazione delle attività a delle persone. \\Il project manager si avvale di diversi strumenti per pianificare le attività:
+	La pianificazione include l'allineamento delle attività su un asse temporale e l'assegnazione delle attività a delle persone. \\Il project manager si avvale di diversi strumenti per pianificare le attività:
 	\begin{itemize}
 	\item \textbf{Diagrammi di Gantt}: Rappresentano durata prevista vs durata effettiva delle attività;
 	\item \textbf{Diagrammi PERT}: \emph{Programme Evaluation and Review Technique}, tiene conto delle dipendenze tra attività e mostra lo \hyperref[sec:slack]{slack};
 	\item \textbf{WBS}: \emph{Work Breakdown Structure}, divisione delle attività fino a raggiungere il compito minore assegnabile ad una persona. Diagramma che rappresenta l'assegnazione di tali attività alle persone nel tempo, rispettando e rappresentando dipendenze e vincoli temporali.
 	\end{itemize}
 
-
 	\subsection{Piano di progetto}
 	\label{sec:pianoprogetto}
 	Include:
 	\begin{itemize}
-	\item Introduzione (scopo, struttura);
-	\item Organizzazione del progetto;
-	\item Analisi dei rischi;
-	\item Risorse disponibili (tempo, persone);
-	\item Suddivisione del lavoro;
-	\item Calendario delle attività;
-	\item Meccanismi di controllo e rendicontazione.
+		\item Introduzione (scopo, struttura);
+		\item Organizzazione del progetto;
+		\item Analisi dei rischi;
+		\item Risorse disponibili (tempo, persone);
+		\item Suddivisione del lavoro;
+		\item Calendario delle attività;
+		\item Meccanismi di controllo e rendicontazione.
 	\end{itemize}
-
 
 	\subsection{Plug-in}
 	\label{sec:plug-in}
-	Un plug-in in campo informatico è un programma non autonomo che interagisce con un altro programma per ampliarne o estenderne le funzionalità originarie. Ad esempio, un plug-in per un \underline{\hyperref[sec:prodottosoftware]{software}} di grafica permette l'utilizzo di nuove funzioni non presenti nel software principale.
+	Un \emph{plug-in} in campo informatico è un programma non autonomo che interagisce con un altro programma per ampliare o estendere le sue funzionalità originarie. Ad esempio, un \emph{plug-in} per un \underline{\hyperref[sec:prodottosoftware]{software}} di grafica permette l'utilizzo di nuove funzioni non presenti nel software principale.
 
 
 	\subsection{PNG}
 	\label{sec:png}	
-	Formato lossless per memorizzare immagini.
+	Formato \emph{lossless} per memorizzare immagini.
 
 	
 	\subsection{Processo}
@@ -543,29 +528,19 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	
 	\subsection{Processo specializzato per progetto}
 	\label{sec:processispecializzati}
-	Prevedono una fase di pianificazione, una di definizione, attenzione nella conduzione e analisi critica del funzionamento del processo.
+	Prevedono una fase di pianificazione e una di definizione, attenzione nella conduzione e analisi critica del funzionamento del processo.
 
 	
 	\subsection{Prodotto software}
 	\label{sec:prodottosoftware}
 	Una "entità" software progettata per essere rilasciata ad un cliente.
 	Prende forme diverse in base al soggetto richiedente:
-
-		
-		\subsubsection{Commessa}
-		Si tratta di un prodotto software le cui specifiche ed obiettivi sono indicati da un committente.
-
-		
-		\subsubsection{Pacchetto}
-		Si tratta di un prodotto software le cui specifiche ed obiettivi sono indicati per la replicazione in o per altri software.
-
-		
-		\subsubsection{Componente}
-		Si tratta di un prodotto software le cui specifiche ed obiettivi sono indicati per la composizione con altri software.
-
-		
-		\subsubsection{Servizio}
-		Si tratta di un prodotto software le cui specifiche ed obiettivi sono determinati per la risoluzione di un problema.
+	\begin{itemize}
+		\item\textbf{Commessa}: si tratta di un prodotto software le cui specifiche ed obiettivi sono indicati da un committente;
+		\item\textbf{Pacchetto}: si tratta di un prodotto software le cui specifiche ed obiettivi sono indicati per la replicazione in o per altri software;
+		\item\textbf{Componente}: si tratta di un prodotto software le cui specifiche ed obiettivi sono indicati per la composizione con altri software;
+		\item\textbf {Servizio}: si tratta di un prodotto software le cui specifiche ed obiettivi sono determinati per la risoluzione di un problema.
+	\end{itemize}		
 
 
 	\subsection{Prodotti documentali}
@@ -584,12 +559,12 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 
 	\subsection{Progettazione Software}
 	\label{sec:progettazionesoftware}
-	Insieme di attività che precede la realizzazione il cui scopo è quello definire l'architettura del \underline{\hyperref[sec:prodottosoftware]{software}} con l'obiettivo di sviluppare un prodotto corretto per costruzione piuttosto che per correzione.
+	Insieme di attività che precede la realizzazione il cui scopo è quello definire l'architettura del \underline{\hyperref[sec:prodottosoftware]{software}}, con l'obiettivo di sviluppare un prodotto corretto per costruzione piuttosto che per correzione.
 
 
 	\subsection{Progetto}
 	\label{sec:progetto}
-	Insieme di attività e compiti, atti a raggiungere \underline{\hyperref[sec:smart]{obiettivi SMART}}, che hanno una data di inizio ed una di fine, e che consumano un pool di risorse limitate.
+	Insieme di attività e compiti atti a raggiungere \underline{\hyperref[sec:smart]{obiettivi SMART}}, che hanno una data di inizio ed una di fine e che consumano un pool di risorse limitate.
 
 	
 	\subsection{Project Manager}
@@ -598,30 +573,25 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	\begin{itemize}
 	\item Istanziare i processi nel progetto (quelli standard aziendali e quelli istanziati dai processi aziendali);
 	\item Stimare costi e risorse necessarie;
-	\item Pianificare attività (organizzarle nel tempo e a chi assegnarle);
+	\item Pianificare attività (organizzarle nel tempo e a assegnandole);
 	\item Controllare le attività e verificare i risultati.
 	\end{itemize}
 
 
 	\subsection{Proponente}
 	\label{sec:proponente}
-	Parte terza, un azienda, che propone un \underline{\hyperref[sec:capitolato]{capitolato}}. 
+	Parte terza, per esempio un'azienda, che propone un \underline{\hyperref[sec:capitolato]{capitolato}}. 
 
 	
 	\subsection{Prototipo}
 	\label{sec:prototipo}
-	Esemplare di prova del prodotto, serve a provare e scegliere soluzioni; può avere carattere usa e getta (in metodi iterativi) oppure essere la base per incrementi successivi (in metodi incrementali).
+	Esemplare di prova del prodotto. Serve a provare e scegliere soluzioni; può avere carattere usa e getta (in metodi iterativi) oppure essere la base per incrementi successivi (in metodi incrementali).
 	Un prototipo di tipo usa e getta comporta dei costi che producono poco valore aggiunto.
 
 
 	% Q	----------------------------------------------------------------------------------------------
 	\newpage
 	\newsection{Q}
-
-	
-	\subsection{Quantificabile}
-	\label{sec:quantificabile}
-	Misurabile.
 
 	
 	\subsection{Qualità}
@@ -632,19 +602,22 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	Caratteristiche di un prodotto di qualità:
 	\begin{itemize}
 	\item \textbf{Sufficienza}: capacità di soddisfare tutti i requisiti;
-	\item \textbf{Comprensibilità}: facilità di utilizzo, comprensione del funzionamento da parte degli  \emph{stakeholder};
+	\item \textbf{Comprensibilità}: facilità di utilizzo e comprensione del funzionamento da parte degli  \emph{stakeholder};
 	\item \textbf{Modularità}: suddivisione in parti chiaramente distinte e sconnesse, principio fondamentale dell' \emph{information hiding}.;
 	\item \textbf{Robustezza}: agli input di utilizzo;
 	\item \textbf{Sicurezza}: affidabilità in caso di malfunzionamento (hardware o software), resistenza alla intrusioni;
 	\item \textbf{Flessibilità}: misura della facilità con la quale il sistema può essere modificato o adattato per soddisfare nuovi requisiti;
 	\item \textbf{Riusabilità}: misura della facilità di riutilizzo in altri contesti dei moduli che formano il prodotto;
 	\item \textbf{Disponibilità}: più inconveniente il tempo di \emph{downtime} in caso di guasti o aggiornamenti, meno disponibile risulta il prodotto;
-	\item \textbf{\underline{\hyperref[sec:efficienza]{Efficienza}}};
+	\item \textbf{\underline{\hyperref[sec:efficienza]{Efficienza}}}.
 	\end{itemize}
 	\subsubsection{Qualità dei processi}
 	\label{sec:qualitaprocesso}
-	Una buona qualità dei processi induce una buona qualità del prodotto di questi. Per assicurarsi che un processo sia di qualità, è necessario un meccanismo di controllo che effettui modifiche sul \underline{\hyperref[sec:wow]{\underline{\hyperref[sec:wow]{way of working}}}} ove ritenuto necessario sulla base di misurazioni sulla qualità dei processi. Per definire gli strumenti di valutazione della qualità dei processi dei fornitori in genere, non solo in ambito di sviluppo software, è stato messo a punto lo standard ISO 9000, in ambito specifico di ingegneria software si ha invece ISO 90003:2004.
+	Una buona qualità dei processi induce una buona qualità del prodotto di questi. Per assicurarsi che un processo sia di qualità, è necessario un meccanismo di controllo che effettui modifiche sul \underline{\hyperref[sec:wow]{way of working}} ove ritenuto necessario sulla base di misurazioni sulla qualità dei processi. Per definire gli strumenti di valutazione della qualità dei processi dei fornitori in genere, non solo in ambito di sviluppo software, è stato messo a punto lo standard ISO 9000, in ambito specifico di ingegneria software si ha invece \underline{\hyperref[sec:iso90003]{ISO 90003:2004}}.
 
+	\subsection{Quantificabile}
+	\label{sec:quantificabile}
+	Misurabile.
 		
 	% R	----------------------------------------------------------------------------------------------
 	\newpage
@@ -653,12 +626,12 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 
 	\subsection{Raintank}
 	\label{sec:raintank}
-	Raintank è una piattaforma di monitoraggio open source per raccogliere, archiviare e analizzare enormi quantità di dati diagnostici, da un'ampia varietà di fonti, in molti formati diversi.
+	\emph{Raintank} è una piattaforma di monitoraggio \emph{open source} per raccogliere, archiviare e analizzare enormi quantità di dati diagnostici, da un'ampia varietà di fonti e in molti formati diversi.
 
 
 	\subsection{Repository}
 	\label{sec:repo}
-	Termine inglese che significa "deposito", "ripostiglio". In ambito informatico viene usato per indicare una struttura dati in cui vengono gestiti i metadati per un insieme di file o una strutture di cartelle. Esempi di metadati gestiti da una repository sono lo storico dei cambiamenti avvenuti, o l'insieme dei \underline{\hyperref[sec:commit]{commit}} (modifiche).
+	Termine inglese che significa "deposito", "ripostiglio". In ambito informatico viene usato per indicare una struttura dati in cui vengono gestiti i metadati per un insieme di file o una strutture di cartelle. Esempi di metadati gestiti da una \emph{repository} sono lo storico dei cambiamenti avvenuti, o l'insieme dei \underline{\hyperref[sec:commit]{commit}} (modifiche).
 
 
 	\subsection{Requisito}
@@ -678,20 +651,20 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 
 	\subsection{Rete Bayesiana}
 	\label{sec:retebayes}
-	Una rete Bayesiana è un modello grafico probabilistico che rappresenta un insieme di variabili stocastiche con le loro dipendenze condizionali attraverso l'uso di un grafo. Per esempio, una rete Bayesiana potrebbe rappresentare la relazione probabilistica esistente tra dei sintomi e delle malattie. Dati i sintomi, la rete può essere usata per calcolare la probabilità della presenza di diverse malattie.
+	Una \emph{rete Bayesiana} è un modello grafico probabilistico che rappresenta un insieme di variabili stocastiche con le loro dipendenze condizionali attraverso l'uso di un grafo. Per esempio, una \emph{rete Bayesiana} potrebbe rappresentare la relazione probabilistica esistente tra dei sintomi e delle malattie. Dati i sintomi, la rete può essere usata per calcolare la probabilità della presenza di diverse malattie.
 
 	
 	\subsection{Rischio}
 	\label{sec:rischio}
-	I rischi di progetto sono: sforamento costi, tempi, o risultati insoddisfacenti. Fonti di rischio principali sono:
+	I rischi di progetto sono: sforamento dei costi,  o dei tempi, o risultati insoddisfacenti. Fonti di rischio principali sono:
 	tecnologie usate, rapporti interpersonali, organizzazione del lavoro, requisiti e rapporti con  \emph{stakeholder}, tempi e costi.
 	La gestione del rischio si fa tramite:
-	identificazione (nel progetto, prodotto, mercato), Analisi (probabilità e conseguenze), Pianificazione (come evitare e o mitigare gli effetti), Controllo(attenzione agli indicatori di rischio, raffinamento strategie).
+	identificazione (nel progetto, prodotto, mercato), analisi (probabilità e conseguenze), pianificazione (come evitare e o mitigare gli effetti) e controllo(attenzione agli indicatori di rischio, raffinamento strategie).
 
 	
 	\subsection{Riuso}
 	\label{sec:riuso}
-	Il codice, può essere riutilizzato in due modi diversi: opportunistico (copia e incolla), caratterizzato da un basso costo e ed impatto, o sistematico, caratterizzato da un maggior costo ed impatto.
+	Riutilizzo del codice, può essere di due tipi: opportunistico (copia e incolla), caratterizzato da un basso costo e poco impatto, o sistematico, caratterizzato da un maggior costo ed maggior impatto.
 
 	
 	\subsection{Ruolo}
@@ -699,10 +672,10 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	Indica l'area di specializzazione.
 	In un progetto informatico i ruoli principali sono:
 	\begin{itemize}
-	\item \textbf{Analista}: si occupa dell'analisi dei requisiti, in generale: individua e definisce il "problema" in termini formali (in modo che sia possibile verificare se la soluzione è tale);
-	\item \textbf{Progettista}: si occupa del design del prodotto. In generale: si occupa della soluzione del "problema";
-	\item \textbf{Programmatore}: Realizza il prodotto, non ha libertà di scelta, segue le direttive del progettista;
-	\item \textbf{Verificatore}: testano la qualità del prodotto, danno feedback;
+	\item \textbf{Analista}: si occupa dell'analisi dei requisiti. In generale, individua e definisce il "problema" in termini formali, in modo che sia possibile verificare se la soluzione è tale;
+	\item \textbf{Progettista}: si occupa del \emph{design} del prodotto. In generale, si occupa della soluzione del "problema";
+	\item \textbf{Programmatore}: Realizza il prodotto. Non ha libertà di scelta e segue le direttive del \emph{Progettista};
+	\item \textbf{Verificatore}: testa la qualità del prodotto e comunica feedback;
 	\item \textbf{Amministratore}: garantisce il funzionamento dell'apparato informatico aziendale.
 	\end{itemize}
 	Tutte queste figure professionali sono coordinate nell'ambito di un progetto da un \underline{\hyperref[sec:projectmanager]{project manager}}.
@@ -715,20 +688,20 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	
 	\subsection{Schedule Variance}
 	\label{sec:schedulevariance}
-	Schedule variance (SV) è una metrica che indica se le attività di progetto sono in linea rispetto alla loro schedulazione.
+	\emph{Schedule Variance (SV)} è una metrica che indica se le attività di progetto sono in linea rispetto alla loro schedulazione.
 	Può assumere valori:
 	\begin{itemize}
 	\item \textbf{Positivi}: indicano che le attività procedono più velocemente rispetto a quanto pianificato;
 	\item \textbf{Negativi}: indicano che le attività procedono più lentamente rispetto a quanto pianificato;
 	\item \textbf{Zero}: indica che le attività rispettano la loro schedulazione.
 	\end{itemize}
-	Generalmente viene calcolata: $SV = EV - PV$
-	Dove SV indica la schedule variance, EV indica l'earned value ovvero il valore del lavoro effettuato, PV indica il planned value ovvero il costo del lavoro pianificato.
+	Generalmente viene calcolata: $SV = EV - PV$,
+	dove SV indica la \emph{schedule variance}, EV indica \emph{l'earned value}, ovvero il valore del lavoro effettuato e PV indica il \emph{planned value}, ovvero il costo del lavoro pianificato.
 
 
 	\subsection{Script}
 	\label{sec:script}
-	Il termine script, in informatica, designa un tipo particolare di programma, scritto in una particolare classe di linguaggi di programmazione, detti linguaggi di scripting.
+	Il termine \emph{script}, in informatica, designa un tipo particolare di programma, scritto in una particolare classe di linguaggi di programmazione, detti linguaggi di \emph{scripting}.
 
 
 	\subsection{Sistematico}
@@ -739,7 +712,7 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	\subsection{Slack (tempo)}
 	\label{sec:slackt}
 	Margine di tempo tra la fine di un attività e la scadenza di fine attività. \\
-	Se è positivo, l'attività è prevista terminare prima della scadenza quindi vi è un margine per eventuali imprevisti. Se è vicino o 0 tale margine è piccolo o assente, si introducono quindi dei rischi. Se è negativo, la scadenza è passata e l'attività non è stata portata al termine.
+	Se è positivo, l'attività è prevista terminare prima della scadenza, quindi vi è un margine per eventuali imprevisti. Se è vicino o 0, tale margine è piccolo o assente; si introducono quindi dei rischi. Se è negativo, la scadenza è passata e l'attività non è stata portata al termine.
 
 
 	\subsection{Software Engineering}
@@ -778,7 +751,7 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 
 	\subsection{Ticket}
 	\label{sec:telegram}
-	Un ticket è l'associazione tra una task ed un assegnatario. Un sistema di ticketing é una piattaforma per la gestione di task, ticket e assegnatari. 
+	Un \emph{ticket} è l'associazione tra una \underline{\hyperref[sec:task]{task}} ed un assegnatario. Un sistema di ticketing é una piattaforma per la gestione di task, ticket e assegnatari. 
 
 
 	\subsection{Tracciamento dei requisiti}
@@ -788,7 +761,7 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 
 	\subsection{TypeScript}
 	\label{sec:typescript}
-	Estensione di javascript increntrata nell'aumentarne la scalabilità. Sviluppata e manutenuta da Microsoft. Tra le feature di interesse vi è il typing statico e la possibilità di sviluppare applicazioni sia client-side che server-side.
+	Estensione di \underline{\hyperref[sec:javascript]{javascript}} increntrata nell'aumentarne la scalabilità. Sviluppata e manutenuta da Microsoft. Tra le feature di interesse vi è il \emph{typing} statico e la possibilità di sviluppare applicazioni sia \emph{client-side} che \emph{server-side}.
 
 	% V	----------------------------------------------------------------------------------------------
 	\newpage
@@ -832,7 +805,7 @@ ISO 12207 definisce cosi' le fasi del ciclo di vita sequenziale: analisi, proget
 	
 	\subsection{Webhook}
 	\label{sec:webhook}
-	Tecnologia nell'ambito del web development che permette di modificare il comportamento di una pagina web tramite callbacks personalizzate.
+	Tecnologia nell'ambito del \emph{web development} che permette di modificare il comportamento di una pagina web tramite \emph{callbacks} personalizzate.
 
 
 	\subsection{Workflow}
