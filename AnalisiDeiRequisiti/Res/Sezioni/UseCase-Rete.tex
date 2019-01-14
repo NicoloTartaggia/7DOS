@@ -3,7 +3,7 @@
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.45]{Img/UC1} 
-	\caption{UC1: Utilizzo editor grafico} \label{} 
+	\caption{UC1 - Utilizzo editor grafico} \label{} 
 \end{figure} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;}
@@ -26,7 +26,7 @@
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.45]{Img/UC1-1} 
-	\caption{UC1.1: Creazione di un nodo} \label{} 
+	\caption{UC1.1 - Creazione di un nodo} \label{} 
 \end{figure} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
@@ -78,7 +78,7 @@
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.45]{Img/UC1-1-4} 
-	\caption{UC1.1.4: Inizializzazione CPT} \label{} 
+	\caption{UC1.1.4 - Inizializzazione CPT} \label{} 
 \end{figure} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
@@ -128,7 +128,7 @@
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.45]{Img/UC1-2} 
-	\caption{UC1.2: Modifica nodo} \label{} 
+	\caption{UC1.2 - Modifica nodo} \label{} 
 \end{figure} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
@@ -158,7 +158,7 @@
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.45]{Img/UC1-2-2} 
-	\caption{UC1.2.2: Modifica CPT associata al nodo} \label{} 
+	\caption{UC1.2.2 - Modifica CPT associata al nodo} \label{} 
 \end{figure} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
@@ -201,7 +201,7 @@
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.45]{Img/UC1-2-2-3} 
-	\caption{UC1.2.2.3: Modifica di un possibile stato di un nodo} \label{} 
+	\caption{UC1.2.2.3 - Modifica di un possibile stato di un nodo} \label{} 
 \end{figure} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
@@ -269,7 +269,7 @@
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.45]{Img/UC1-4} 
-	\caption{UC1.4: Creazione collegamento} \label{} 
+	\caption{UC1.4 - Creazione collegamento} \label{} 
 \end{figure} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
@@ -287,42 +287,42 @@
 \hypertarget{UC1.4.1}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: Il nodo di arrivo del collegamento creato viene inserito all'interno della lista dei successori del nodo di partenza;} 
-	\item{\textbf{Precondizione}: L'attore ha creato un collegamento tra due nodi;} 
-	\item{\textbf{Postcondizione}: L'aggiornamento della lista di successori è avvenuta correttamente.} 
+	\item{\textbf{Scopo e descrizione}: il nodo di arrivo del collegamento creato viene inserito all'interno della lista dei successori del nodo di partenza;} 
+	\item{\textbf{Precondizione}: l'attore ha creato un collegamento tra due nodi;} 
+	\item{\textbf{Postcondizione}: l'aggiornamento della lista di successori è avvenuta correttamente.} 
 \end{itemize} 
 \subsection{UC1.4.2: Inserimento nodo partenza in lista predecessori del nodo di arrivo} 
 \hypertarget{UC1.4.2}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: Il nodo di partenza del collegamento creato viene inserito all'interno della lista dei predecessori del nodo di arrivo;} 
-	\item{\textbf{Precondizione}: L'attore ha creato un collegamento tra due nodi;} 
-	\item{\textbf{Postcondizione}: L'aggiornamento della lista di predecessori è avvenuta correttamente.} 
+	\item{\textbf{Scopo e descrizione}: il nodo di partenza del collegamento creato viene inserito all'interno della lista dei predecessori del nodo di arrivo;} 
+	\item{\textbf{Precondizione}: l'attore ha creato un collegamento tra due nodi;} 
+	\item{\textbf{Postcondizione}: l'aggiornamento della lista di predecessori è avvenuta correttamente.} 
 \end{itemize} 
 \subsection{UC1.4.3: Inizializzazione nuove celle in CPT nodo di arrivo} 
 \hypertarget{UC1.4.3}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: In seguito alla creazione di un nuovo collegamento il nodo di arrivo di quest'ultimo possiede un nuovo predecessore. Di conseguenza esistono nuove possibili combinazioni di stati dei nodi predecessori e di conseguenza nuove celle della CPT;} 
-	\item{\textbf{Precondizione}: L'attore ha creato un collegamento tra due nodi;} 
-	\item{\textbf{Postcondizione}: Le nuove celle della CPT sono state inizializzate con appositi valori di default.} 
+	\item{\textbf{Scopo e descrizione}: in seguito alla creazione di un nuovo collegamento, il nodo di arrivo di quest'ultimo possiede un nuovo predecessore. Di conseguenza esistono nuove possibili combinazioni di stati dei nodi predecessori e di conseguenza nuove celle della CPT;} 
+	\item{\textbf{Precondizione}: l'attore ha creato un collegamento tra due nodi;} 
+	\item{\textbf{Postcondizione}: le nuove celle della CPT sono state inizializzate con appositi valori di default.} 
 \end{itemize} 
 \subsection{UC1.5: Eliminazione collegamento} 
 \hypertarget{UC1.5}{} 
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.45]{Img/UC1-5} 
-	\caption{UC1.5: Eliminazione collegamento} \label{} 
+	\caption{UC1.5 - Eliminazione collegamento} \label{} 
 \end{figure} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore desidera eliminare un collegamento tra nodi all'interno della rete. I collegamenti all'interno di una rete Bayesiana sono direzionati, di conseguenza è sempre definito un nodo di partenza ed un nodo d'arrivo;} 
-	\item{\textbf{Precondizione}: L'attore ha indicato quale collegamento vuole eliminare;} 
+	\item{\textbf{Scopo e descrizione}: l'attore desidera eliminare un collegamento tra nodi all'interno della rete. I collegamenti all'interno di una rete Bayesiana sono direzionati, di conseguenza è sempre definito un nodo di partenza ed un nodo d'arrivo;} 
+	\item{\textbf{Precondizione}: l'attore ha indicato quale collegamento vuole eliminare;} 
 	\item{\textbf{Flusso base degli eventi}: } 
 	\begin{itemize} 
 		\item{Rimozione nodo arrivo da lista successori del nodo di partenza(UC1.5.1);} 
 		\item{Rimozione nodo partenza da lista predecessori del nodo di arrivo(UC1.5.2);} 
-		\item{Eliminazione celle associate al collegamento dal CPT nodo di arrivo(UC1.5.3).} 
+		\item{Eliminazione celle associate al collegamento dalla CPT nodo di arrivo(UC1.5.3).} 
 	\end{itemize} 
 	\item{\textbf{Postcondizione}: il collegamento tra nodi è stato rimosso correttamente, e le CPT dei successori sono state aggiornate correttamente;} 
 \end{itemize} 
@@ -330,45 +330,45 @@
 \hypertarget{UC1.5.1}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: Il nodo di arrivo del collegamento che si vuole eliminare viene rimosso dalla lista dei successori del nodo di partenza;} 
-	\item{\textbf{Precondizione}: L'attore ha richiesto l'eliminazione di un collegamento tra due nodi;} 
-	\item{\textbf{Postcondizione}: L'aggiornamento della lista di successori del nodo di partenza è avvenuta correttamente.} 
+	\item{\textbf{Scopo e descrizione}: il nodo di arrivo del collegamento che si vuole eliminare viene rimosso dalla lista dei successori del nodo di partenza;} 
+	\item{\textbf{Precondizione}: l'attore ha richiesto l'eliminazione di un collegamento tra due nodi;} 
+	\item{\textbf{Postcondizione}: l'aggiornamento della lista di successori del nodo di partenza è avvenuta correttamente.} 
 \end{itemize} 
 \subsection{UC1.5.2: Rimozione nodo partenza da lista predecessori del nodo di arrivo} 
 \hypertarget{UC1.5.2}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: Il nodo di partenza del collegamento che si vuole eliminare viene rimosso dalla lista dei predecessori del nodo di arrivo;} 
-	\item{\textbf{Precondizione}: L'attore ha richiesto l'eliminazione di un collegamento tra due nodi;} 
-	\item{\textbf{Postcondizione}: L'aggiornamento della lista di predecessori del nodo di arrivo è avvenuta correttamente.} 
+	\item{\textbf{Scopo e descrizione}: il nodo di partenza del collegamento che si vuole eliminare viene rimosso dalla lista dei predecessori del nodo di arrivo;} 
+	\item{\textbf{Precondizione}: l'attore ha richiesto l'eliminazione di un collegamento tra due nodi;} 
+	\item{\textbf{Postcondizione}: l'aggiornamento della lista di predecessori del nodo di arrivo è avvenuta correttamente.} 
 \end{itemize} 
-\subsection{UC1.5.3: Eliminazione celle associate al collegamento dal CPT nodo di arrivo} 
+\subsection{UC1.5.3: Eliminazione celle associate al collegamento dalla CPT nodo di arrivo} 
 \hypertarget{UC1.5.3}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: In seguito all'eliminazione di un collegamento il nodo di arrivo di quest'ultimo possiede un predecessore in meno. Di conseguenza esistono meno possibili combinazioni di stati dei nodi predecessori. Tutte le celle della tabella associate al predecessore rimosso devono essere eliminate;} 
-	\item{\textbf{Precondizione}: L'attore ha richiesto l'eliminazione di un collegamento tra due nodi;} 
-	\item{\textbf{Postcondizione}: Le celle in eccesso sono state rimosse correttamente.} 
+	\item{\textbf{Scopo e descrizione}: in seguito all'eliminazione di un collegamento, il nodo di arrivo di quest'ultimo possiede un predecessore in meno. Di conseguenza esistono meno possibili combinazioni di stati dei nodi predecessori. Tutte le celle della tabella associate al predecessore rimosso devono essere eliminate;} 
+	\item{\textbf{Precondizione}: l'attore ha richiesto l'eliminazione di un collegamento tra due nodi;} 
+	\item{\textbf{Postcondizione}: le celle in eccesso sono state rimosse correttamente.} 
 \end{itemize} 
 \subsection{UC1.6: Salvataggio rete} 
 \hypertarget{UC1.6}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: La rete creata dall'attore tramite l'editor grafico viene salvata su disco su un apposito file JSON;} 
-	\item{ \textbf{Precondizione}: Il sistema permette di leggere un file JSON, l'attore ha indicato di voler salvare la rete su file;} 
-	\item{\textbf{Postcondizione}:Viene salvato un file contenente la configurazione attuale.} 
+	\item{\textbf{Scopo e descrizione}: la rete creata dall'attore tramite l'editor grafico viene salvata su disco su un apposito file JSON;} 
+	\item{ \textbf{Precondizione}: il sistema permette di leggere un file JSON, l'attore ha indicato di voler salvare la rete su file;} 
+	\item{\textbf{Postcondizione}: viene salvato un file contenente la configurazione attuale.} 
 \end{itemize} 
 \subsection{UC1.7: Errore modifica nodo}
 \hypertarget{UC1.7}{} 
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.45]{Img/UC1-7} 
-	\caption{UC1.7: Errore modifica nodo} \label{} 
+	\caption{UC1.7 - Errore modifica nodo} \label{} 
 \end{figure}
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore durante un operazione di modifica di un nodo ha inserito dei valori non validi per uno o più parametri. La causa dell'errore dovrà essere opportunamente segnalata all'attore. Il nodo e tutti i collegamenti ad esso associati, fintanto che gli errori non verranno risolti, risulteranno come temporaneamente inattivi all'interno della rete;} 
-	\item{\textbf{Precondizione}: L'attore ha eseguito una o più operazioni di modifica ad un nodo inserendo valori non validi;} 
+	\item{\textbf{Scopo e descrizione}: l'attore, durante un'operazione di modifica di un nodo, ha inserito dei valori non validi per uno o più parametri. La causa dell'errore dovrà essere opportunamente segnalata all'attore. Il nodo e tutti i collegamenti ad esso associati, fintanto che gli errori non verranno risolti, risulteranno come temporaneamente inattivi all'interno della rete;} 
+	\item{\textbf{Precondizione}: l'attore ha eseguito una o più operazioni di modifica ad un nodo inserendo valori non validi;} 
 	\item{\textbf{Flusso base degli eventi}: } 
 	\begin{itemize} 
 		\item{L'attore può inserire un nome non valido per un nodo (UC1.7.1);} 
@@ -377,79 +377,79 @@
 		\item{La somma delle probabilità condizionate può essere non coerente (UC1.7.4);} 
 		\item{L'attore può inserire un valore non valido per una cella della CPT associata ad un nodo (UC1.7.5).} 
 	\end{itemize} 
-	\item{\textbf{Postcondizione}: Gli errori sono stati gestiti correttamente e l'attore è stato informato di essi;} 
+	\item{\textbf{Postcondizione}: gli errori sono stati gestiti correttamente e l'attore è stato informato di essi;} 
 \end{itemize} 
 \subsection{UC1.7.1: Inserimento nome nodo non valido} 
 \hypertarget{UC1.7.1}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore ha modificato il nome di un nodo con un valore non valido. Le principali cause d'errore possono essere l'inserimento di una stringa vuota od il nome di un nodo già esistente;} 
-	\item{\textbf{Precondizione}: L'attore ha modificato il nome di nodo;} 
-	\item{\textbf{Postcondizione}: L'attore viene informato della causa d'errore ed il nome del nodo viene ripristinato al valore precedente.} 
+	\item{\textbf{Scopo e descrizione}: l'attore ha modificato il nome di un nodo con un valore non valido. Le principali cause d'errore possono essere l'inserimento di una stringa vuota od il nome di un nodo già esistente;} 
+	\item{\textbf{Precondizione}: l'attore ha modificato il nome di nodo;} 
+	\item{\textbf{Postcondizione}: l'attore viene informato della causa d'errore ed il nome del nodo viene ripristinato al valore precedente.} 
 \end{itemize} 
 \subsection{UC1.7.2: Valore nome stato nodo non valido} 
 \hypertarget{UC1.7.2}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore ha modificato il nome di uno stato di un nodo con un valore non valido. Le principali cause d'errore possono essere l'inserimento di una stringa vuota od il nome di uno stato già esistente all'interno dello stesso nodo;} 
-	\item{\textbf{Precondizione}: L'attore ha modificato il nome di uno stato di un nodo;} 
-	\item{\textbf{Postcondizione}: L'attore viene informato della causa d'errore ed il nome dello stato viene ripristinato al valore precedente.} 
+	\item{\textbf{Scopo e descrizione}:l'attore ha modificato il nome di uno stato di un nodo con un valore non valido. Le principali cause d'errore possono essere l'inserimento di una stringa vuota od il nome di uno stato già esistente all'interno dello stesso nodo;} 
+	\item{\textbf{Precondizione}: l'attore ha modificato il nome di uno stato di un nodo;} 
+	\item{\textbf{Postcondizione}: l'attore viene informato della causa d'errore ed il nome dello stato viene ripristinato al valore precedente.} 
 \end{itemize} 
 \subsection{UC1.7.3: Valori dell'intervallo di uno stato di un nodo non validi} 
 \hypertarget{UC1.7.3}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore ha modificato l'intervallo di valori associato ad uno stato di un nodo con dei valori non validi. La principale causa d'errore può essere l'inserimento di un limite inferiore maggiore rispetto al limite superiore o viceversa;} 
-	\item{\textbf{Precondizione}: L'attore ha modificato l'intervallo di valori associato ad uno stato di un nodo;} 
-	\item{\textbf{Postcondizione}: L'attore viene informato dell'errore, il nodo e tutti i collegamenti ad esso associati vengono temporaneamente disattivati dalla rete fintanto che l'errore non viene risolto.} 
+	\item{\textbf{Scopo e descrizione}: l'attore ha modificato l'intervallo di valori associato ad uno stato di un nodo con dei valori non validi. La principale causa d'errore può essere l'inserimento di un limite inferiore maggiore rispetto al limite superiore o viceversa;} 
+	\item{\textbf{Precondizione}: l'attore ha modificato l'intervallo di valori associato ad uno stato di un nodo;} 
+	\item{\textbf{Postcondizione}: l'attore viene informato dell'errore, il nodo e tutti i collegamenti ad esso associati vengono temporaneamente disattivati dalla rete fintanto che l'errore non viene risolto.} 
 \end{itemize} 
 \subsection{UC1.7.4: Somma percentuali CPT non valida} 
 \hypertarget{UC1.7.4}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: Per ogni possibile combinazione esistente di tutti i possibili stati dei nodi predecessori la somma dei valori delle probabilità condizionate di ogni stato del nodo deve essere inferiore a 100 (oppure 1, a seconda del sistema di interpretazione scelto);} 
-	\item{\textbf{Precondizione}: L'attore ha modificato una qualsiasi cella della CPT del nodo;} 
-	\item{\textbf{Postcondizione}: L'attore viene informato dell'errore, il nodo e tutti i collegamenti ad esso associati vengono temporaneamente disattivati dalla rete fintanto che l'errore non viene risolto.}
+	\item{\textbf{Scopo e descrizione}: per ogni possibile combinazione esistente di tutti i possibili stati dei nodi predecessori, la somma dei valori delle probabilità condizionate di ogni stato del nodo deve essere inferiore a 100 oppure 1, a seconda del sistema di interpretazione scelto;} 
+	\item{\textbf{Precondizione}: l'attore ha modificato una qualsiasi cella della CPT del nodo;} 
+	\item{\textbf{Postcondizione}: l'attore viene informato dell'errore, il nodo e tutti i collegamenti ad esso associati vengono temporaneamente disattivati dalla rete fintanto che l'errore non viene risolto.}
 \end{itemize} 
 \subsection{UC1.7.5: Valore cella CPT non valido} 
 \hypertarget{UC1.7.5}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore ha inserito all'interno di una cella della CPT di un nodo un valore non valido. Una cella della CPT contiene una probabilità condizionata, di conseguenza qualsiasi valore al di fuori dell'intervallo 0-100 (Oppure 0-1 a seconda del sistema di rappresentazione scelto) è considerato come non valido;} 
-	\item{\textbf{Precondizione}: L'attore ha inserito all'interno di una cella della CPT di un nodo un valore non valido;} 
-	\item{\textbf{Postcondizione}: L'attore viene informato dell'errore, il nodo e tutti i collegamenti ad esso associati vengono temporaneamente disattivati dalla rete fintanto che l'errore non viene risolto.} 
+	\item{\textbf{Scopo e descrizione}: l'attore ha inserito all'interno di una cella della CPT di un nodo un valore non valido. Una cella della CPT contiene una probabilità condizionata, di conseguenza qualsiasi valore al di fuori dell'intervallo 0-100 oppure 0-1, a seconda del sistema di rappresentazione scelto, è considerato come non valido;} 
+	\item{\textbf{Precondizione}: l'attore ha inserito all'interno di una cella della CPT di un nodo un valore non valido;} 
+	\item{\textbf{Postcondizione}: l'attore viene informato dell'errore. Il nodo e tutti i collegamenti ad esso associati vengono temporaneamente disattivati dalla rete fintanto che l'errore non viene risolto.} 
 \end{itemize} 
 \subsection{UC1.8: Salvataggio file JSON} 
 \hypertarget{UC1.8}{} 
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.45]{Img/UC1-8} 
-	\caption{UC1.8: Salvataggio file JSON} \label{} 
+	\caption{UC1.8 - Salvataggio file JSON} \label{} 
 \end{figure} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore desidera salvare un file JSON, utilizzato per memorizzare diverse impostazioni della rete. Un file JSON è identificato principalmente da due componenti: un nome ed un percorso in cui è salvato all'interno del file system;} 
-	\item{\textbf{Precondizione}: L'attore ha indicato di volere salvare la rete su file;} 
+	\item{\textbf{Scopo e descrizione}: l'attore desidera salvare un file JSON, utilizzato per memorizzare diverse impostazioni della rete. Un file JSON è identificato principalmente da due componenti: un nome ed un percorso in cui è salvato all'interno del file system;} 
+	\item{\textbf{Precondizione}: l'attore ha indicato di volere salvare la rete su file;} 
 	\item{\textbf{Flusso base degli eventi}: } 
 	\begin{itemize} 
 		\item{L'attore inserisce il nome del file(UC1.8.1);} 
 		\item{L'attore inserisce il percorso in cui salvare il file (UC1.8.2).} 
 	\end{itemize} 
-	\item{\textbf{Postcondizione}: Il file è stato salvato correttamente.} 
+	\item{\textbf{Postcondizione}: il file è stato salvato correttamente.} 
 \end{itemize} 
 \subsection{UC1.8.1: Inserimento nome file} 
 \hypertarget{UC1.8.1}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore inserisce il nome con cui vuole salvare un file JSON;} 
-	\item{\textbf{Precondizione}: L'attore ha indicato di volere salvare il file;} 
-	\item{\textbf{Postcondizione}: Il file è stato nominato correttamente.} 
+	\item{\textbf{Scopo e descrizione}: l'attore inserisce il nome con cui vuole salvare un file JSON;} 
+	\item{\textbf{Precondizione}: l'attore ha indicato di volere salvare il file;} 
+	\item{\textbf{Postcondizione}: il file è stato nominato correttamente.} 
 \end{itemize} 
 \subsection{UC1.8.2: Inserimento percorso file} 
 \hypertarget{UC1.8.2}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: L'attore inserisce il percorso in cui vuole salvare il file associato alla rete;} 
-	\item{\textbf{Precondizione}: L'attore ha indicato di volere salvare la rete su file;} 
-	\item{\textbf{Postcondizione}: Il percorso in cui salvare il file è stato definito correttamente.} 
+	\item{\textbf{Scopo e descrizione}: l'attore inserisce il percorso in cui vuole salvare il file associato alla rete;} 
+	\item{\textbf{Precondizione}: l'attore ha indicato di volere salvare la rete su file;} 
+	\item{\textbf{Postcondizione}: il percorso in cui salvare il file è stato definito correttamente.} 
 \end{itemize}
