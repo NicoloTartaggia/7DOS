@@ -16,68 +16,69 @@ L'analisi dei rischi è strutturata nel seguente modo:
 	\end{itemize}
 \subsection{Analisi dei rischi}
 	\subsubsection{Rischi umani}
-		\begin{itemize}
-			\item \textbf{Conflitti tra i membri del team} (es. disaccordi, tensioni)
-				\begin{itemize}
-					\item \textbf{Probabilità di occorrenza:} bassa;
-					\item \textbf{Conseguenze:} lievi;
-					\item \textbf{Monitoraggio:} spetta ai membri del gruppo segnalare al responsabile eventuali problemi interpersonali attinenti al progetto;
-					\item \textbf{Piano di contingenza:} il responsabile interverrà per mitigare le tensioni e in caso estremo riassegnare le attività per evitare interamente i conflitti.
-				\end{itemize}
-			\item \textbf{Problemi di natura personali dei membri del team} (es. periodi di malattia, impegni personali)
-				\begin{itemize}
-					\item \textbf{Probabilità di occorrenza:} media;
-					\item \textbf{Conseguenze:} gravi;
-					\item \textbf{Monitoraggio:} spetta ai membri del gruppo segnalare al responsabile eventuali periodi di indisponibilità quanto prima possibile;
-					\item \textbf{Piano di contingenza:} la segnalazione tempestiva permette al responsabile di progetto di ripianificare le attività opportunamente.
-				\end{itemize}
-			\item \textbf{Inesperienza del gruppo}
-				\begin{itemize}
-					\item \textbf{Probabilità di occorrenza:} alta;
-					\item \textbf{Conseguenze:} gravi;
-					\item \textbf{Monitoraggio:} spetta ai membri del gruppo segnalare lacune dal punto di vista professionale o l'imbattersi in un attività che non si riesca a svolgere;
-					\item \textbf{Piano di contingenza:} la segnalazione tempestiva permette al responsabile di progetto di trovare una soluzione adeguata. In particolare il responsabile dovrà decidere se assegnare più ore/uomo per lo svolgimento dell'attività o se incaricare un membro del gruppo in funzione di supporto. Alla decisione del responsabile dovrà aver seguito un assessment delle risorse riassegnate e una proiezione delle conseguenze di tali cambiamenti sulla pianificazione.
-				\end{itemize}
-		\end{itemize}
-	\subsubsection{Rischi tecnologici}
-		\begin{itemize}
-			\item \textbf{Guasti agli strumenti di lavoro personali} (es. guasti al pc od alla connessione alla rete personale)
-				\begin{itemize}
-					\item \textbf{Probabilità di occorrenza:} bassa;
-					\item \textbf{Conseguenze:} gravi;
-					\item \textbf{Monitoraggio:} spetta ai membri del gruppo segnalare l'impossibilità di lavorare per via di eventuali guasti agli strumenti di lavoro personali;
-					\item \textbf{Piano di contingenza:} se il periodo di inattività non può essere recuperato, il membro del gruppo che dovesse avere problemi sarà tenuto a procurarsi degli strumenti (computer, connessione ad internet) di fortuna oppure ad utilizzare quelli dei laboratori dell'università.
-				\end{itemize}
-			\item \textbf{Guasti ai servizi usati a supporto} (es. GitHub)
-				\begin{itemize}
-					\item \textbf{Probabilità di occorrenza:} bassa;
-					\item \textbf{Conseguenze:} gravi;
-					\item \textbf{Monitoraggio:} i membri del team che dovessero notare disservizi degli strumenti usati come GitHub o nTask sono tenuti a segnalarlo al responsabile;
-					\item \textbf{Piano di contingenza:} i membri del gruppo sono tenuti ad effettuare almeno un backup della repository remota al giorno. In caso di disservizi duraturi, saranno utilizzati servizi alternativi tra quelli considerati	durante la scelta degli strumenti da utilizzare.
-				\end{itemize}
-		\end{itemize}
-	\subsubsection{Rischi di progetto}
-		\begin{itemize}
-		\item \textbf{Instabilità dei requisiti}
-			\begin{itemize}
-				\item \textbf{Probabilità di occorrenza:} media;
-				\item \textbf{Conseguenze:} gravi;
-				\item \textbf{Monitoraggio:} il responsabile ha il \gl{compito} di monitorare i requisiti;
-				\item \textbf{Piano di contingenza:} dell'instabilità è aspettata e sintomo del raffinamento dei requisiti.	Se dovesse essere dovuta a requisiti volatili poiché non abbastanza specifici o perché in costante mutamento, il responsabile dovrà contattare il \gl{Proponente} per accordare un incontro per risolvere il problema.
-			\end{itemize}
-		\item \textbf{Sottostima delle risorse necessarie}
-			\begin{itemize}
-				\item \textbf{Probabilità di occorrenza:} media;
-				\item \textbf{Conseguenze:} medie;
-				\item \textbf{Monitoraggio:} il responsabile deve accertarsi che il team sia \gl{in-schedule}. I membri del gruppo devono avvisare il responsabile se la probabilità di sforare con le tempistiche dovesse aumentare;
-				\item \textbf{Piano di contingenza:} il responsabile è tenuto in tal caso a determinare se una diversa pianificazione può risolvere il problema o se dei requisiti (di Bassa priorità) debbano rimanere insoddisfatti.
-			\end{itemize}
-		\item \textbf{Errori di gestione del progetto}
-			\begin{itemize}
-				\item \textbf{Probabilità di occorrenza:} media;
-				\item \textbf{Conseguenze:} medie;
-				\item \textbf{Monitoraggio:} il responsabile è tenuto ad effettuare l'attività di monitoraggio;
-				\item \textbf{Piano di contingenza:} il responsabile è tenuto a risolvere il problema assicurandosi che le politiche di gestione del progetto siano rispettate ed eventualmente modificandole.
-			\end{itemize}
-		\end{itemize}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{| m{8em} | m{6em} | m{6em} | m{8em} | m{8em} |}
+\hline 
+\rowcolor{title_row}
+\textbf{\color{title_text}Rischio} & \textbf{\color{title_text}Probabilità di occorrenza} & \textbf{\color{title_text}Impatto} & \textbf{\color{title_text}Monitoraggio} & \textbf{\color{title_text}Piano di contingenza} \\
+\endhead
+
+\hline \textbf{Conflitti tra i membri del team} (es. disaccordi, tensioni) & Bassa & Lieve & 
+	Spetta ai membri del gruppo segnalare al responsabile eventuali problemi interpersonali attinenti al progetto &
+	Il responsabile interverrà per mitigare le tensioni e in caso estremo riassegnare le attività per evitare interamente i conflitti \\
+\hline \textbf{Problemi di natura personali dei membri del team} (es. periodi di malattia, impegni personali) & Media & Grave &
+	Spetta ai membri del gruppo segnalare al responsabile eventuali periodi di indisponibilità quanto prima possibile &
+	La segnalazione tempestiva permette al responsabile di progetto di ripianificare le attività opportunamente \\
+\hline \textbf{Inesperienza del gruppo} & Alta & Grave &
+	Spetta ai membri del gruppo segnalare lacune dal punto di vista professionale o l'imbattersi in un attività che non si riesca a svolgere &
+	La segnalazione tempestiva permette al responsabile di progetto di trovare una soluzione adeguata. In particolare il responsabile dovrà decidere se assegnare più ore/uomo per lo svolgimento dell'attività o se incaricare un membro del gruppo in funzione di supporto. Alla decisione del responsabile dovrà aver seguito un assessment delle risorse riassegnate e una proiezione delle conseguenze di tali cambiamenti sulla pianificazione \\
+\hline \textbf{Conflitti tra i membri del team} (es. disaccordi, tensioni) & Bassa & Lieve &
+	Spetta ai membri del gruppo segnalare al responsabile eventuali problemi interpersonali attinenti al progetto &
+	Il responsabile interverrà per mitigare le tensioni e in caso estremo riassegnare le attività per evitare interamente i conflitti \\
+\hline \textbf{Inesperienza del gruppo} & Alta & Grave &
+	Spetta ai membri del gruppo segnalare al responsabile eventuali periodi di indisponibilità quanto prima possibile &
+	La segnalazione tempestiva permette al responsabile di progetto di ripianificare le attività opportunamente \\
+\hline \textbf{Problemi di natura personali dei membri del team} (es. periodi di malattia, impegni personali) & Media & Grave &
+	spetta ai membri del gruppo segnalare lacune dal punto di vista professionale o l'imbattersi in un attività che non si riesca a svolgere &
+	la segnalazione tempestiva permette al responsabile di progetto di trovare una soluzione adeguata. In particolare il responsabile dovrà decidere se assegnare più ore/uomo per lo svolgimento dell'attività o se incaricare un membro del gruppo in funzione di supporto. Alla decisione del responsabile dovrà aver seguito un assessment delle risorse riassegnate e una proiezione delle conseguenze di tali cambiamenti sulla pianificazione \\
+\hline
+\end{longtable}	
 \pagebreak
+\renewcommand{\arraystretch}{1}	
+	\subsubsection{Rischi tecnologici}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{| m{8em} | m{6em} | m{6em} | m{8em} | m{8em} |}
+\hline 
+\rowcolor{title_row}
+\textbf{\color{title_text}Rischio} & \textbf{\color{title_text}Probabilità di occorrenza} & \textbf{\color{title_text}Impatto} & \textbf{\color{title_text}Monitoraggio} & \textbf{\color{title_text}Piano di contingenza} \\
+\endhead
+\hline \textbf{Guasti agli strumenti di lavoro personali} (es. guasti al pc od alla connessione alla rete personale) & Bassa & Grave &
+	Spetta ai membri del gruppo segnalare l'impossibilità di lavorare per via di eventuali guasti agli strumenti di lavoro personali &
+	Se il periodo di inattività non può essere recuperato, il membro del gruppo che dovesse avere problemi sarà tenuto a procurarsi degli strumenti (computer, connessione ad internet) di fortuna oppure ad utilizzare quelli dei laboratori dell'università \\
+\hline \textbf{Guasti ai servizi usati a supporto} (es. GitHub) & Bassa & Grave &
+	I membri del team che dovessero notare disservizi degli strumenti usati come GitHub o nTask sono tenuti a segnalarlo al responsabile &
+	I membri del gruppo sono tenuti ad effettuare almeno un backup della repository remota al giorno. In caso di disservizi duraturi, saranno utilizzati servizi alternativi tra quelli considerati	durante la scelta degli strumenti da utilizzare\\
+\hline
+\end{longtable}
+\pagebreak
+\renewcommand{\arraystretch}{1}		
+	\subsubsection{Rischi di progetto}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{| m{8em} | m{6em} | m{6em} | m{8em} | m{8em} |}
+\hline 
+\rowcolor{title_row}
+\textbf{\color{title_text}Rischio} & \textbf{\color{title_text}Probabilità di occorrenza} & \textbf{\color{title_text}Impatto} & \textbf{\color{title_text}Monitoraggio} & \textbf{\color{title_text}Piano di contingenza} \\
+\endhead
+\hline \textbf{Instabilità dei requisiti} & Media & Grave &
+	Il responsabile ha il \gl{compito} di monitorare i requisiti; &
+	Dell'instabilità è aspettata e sintomo del raffinamento dei requisiti.	Se dovesse essere dovuta a requisiti volatili poiché non abbastanza specifici o perché in costante mutamento, il responsabile dovrà contattare il \gl{Proponente} per accordare un incontro per risolvere il problema \\
+\hline \textbf{Sottostima delle risorse necessarie} & Media & Media &
+	Il responsabile deve accertarsi che il team sia \gl{in-schedule}. I membri del gruppo devono avvisare il responsabile se la probabilità di sforare con le tempistiche dovesse aumentare &
+	Il responsabile è tenuto in tal caso a determinare se una diversa pianificazione può risolvere il problema o se dei requisiti (di Bassa priorità) debbano rimanere insoddisfatti\\
+\hline \textbf{Errori di gestione del progetto} & Media & Media &
+	Il responsabile è tenuto ad effettuare l'attività di monitoraggio &
+	Il responsabile è tenuto a risolvere il problema assicurandosi che le politiche di gestione del progetto siano rispettate ed eventualmente modificandole\\
+\hline
+\end{longtable}
+\pagebreak
+\renewcommand{\arraystretch}{1}		
