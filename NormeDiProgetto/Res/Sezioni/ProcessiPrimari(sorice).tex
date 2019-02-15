@@ -9,8 +9,8 @@ I punti fondamentali che verranno affrontati insieme al proponente saranno:
 \item Determinare vincoli sui processi e sui requisiti;
 \item Stimare i costi del prodotto finale.
 \end{itemize}
-\subsubsection{Attività}
-\paragraph{Studio di Fattibilità}\Spazio
+Di seguito verranno riportate tutte le attività che compongono questo processo:
+\subsubsection{Studio di Fattibilità}
 Nel documento \emph{Studio di Fattibilità v 1.0.0.} troviamo le motivazioni che hanno portato il nostro gruppo a favorire la scelta del prodotto per cui proporci come fornitori. Inoltre, si riportano, per ogni capitolato, le seguenti informazioni:
 \begin{itemize}
  	\item\textbf{{Descrizione}}: riporta una breve sintesi del prodotto da sviluppare;
@@ -19,7 +19,7 @@ Nel documento \emph{Studio di Fattibilità v 1.0.0.} troviamo le motivazioni che
  	\item\textbf{{Valutazione finale}}: vi si può trovare in breve la motivazione della scelta presa per ogni capitolato in base a ciò che è stato riportato nelle tre sezioni precedenti.
 \end{itemize}
 \pagebreak
-\paragraph{Piano di Progetto}\Spazio
+\subsubsection{Piano di Progetto}
 La redazione di un \gl{piano} da seguire durante la realizzazione del progetto spetta al \emph{Responsabile}, aiutato nelle scelte dagli \emph{Amministratori}. Il documento dovrà coprire le seguenti tematiche:
  \begin{itemize}
  	\item\textbf{{Analisi dei rischi}}: riporta una dettagliata analisi dei rischi che si potrebbero incontrare durante la realizzazione del progetto, determinandone, in base alle conoscenze pregresse e alle nuove acquisite, la probabilità che essi accadano e la loro gravità. Inoltre, quando possibile, verranno analizzati i possibili metodi per affrontarli;
@@ -27,7 +27,12 @@ La redazione di un \gl{piano} da seguire durante la realizzazione del progetto s
  	\item {\textbf{Suddivisione risorse}: riporta la suddivisione oraria delle risorse, tenendo conto dei ruoli ricoperti da tutti i membri. In questo modo si ha una visione chiara su come il gruppo sta procedendo e quante ore vengono impiegate per ogni attività;}
  	\item\textbf{{Preventivo}}: sulla base della pianificazione, viene stimata la quantità di lavoro necessaria per portare a termine ogni attività (e quindi ogni fase) del progetto, per arrivare infine ad avere una valutazione complessiva per tutto il progetto e proporre un preventivo finale con il costo del lavoro precedentemente stimato.
  \end{itemize}
-\paragraph{Piano di Qualifica}\Spazio
+\paragraph{Strumenti di supporto}
+\subparagraph{GanttProject}\Spazio
+Per quanto riguarda la creazione dei diagrammi di Gantt è stato deciso di utilizzare GanttProject data la sua completezza, facilità di utilizzo e la possibilità di esportare i diagrammi sottoforma di \gl{png}. Inoltre, i file di GanttProject sono salvati sotto forma di \gl{xml}, quindi facilmente versionabili.
+\subparagraph{Microsoft Office}\Spazio
+Infine, per l'attuale realizzazione dei consuntivi è stato deciso di utilizzare Microsoft Excel come strumento per creare i grafici, data la sua incredibile semplicità ma allo stesso tempo facilità di utilizzo.
+\subsubsection{Piano di Qualifica}
 Il \gl{compito} di \gl{verifica} e \gl{validazione} viene svolto da parte dei \emph{Verificatori}. Questa mansione verrà svolta secondo un preciso metodo che deve coprire le seguenti tematiche:
 \begin{itemize}
 	\item\textbf{{Metodo di verifica}}: riporta le procedure di controllo sulla \gl{qualità} di \gl{processo} e di \gl{prodotto}, considerando i mezzi e le risorse a disposizione;
@@ -50,9 +55,8 @@ Inoltre, il gruppo ha deciso di seguire le linee guida dettate dallo standard \g
 	\item Progettazione;
 	\item Codifica.
 \end{itemize}
-\subsubsection{Attività}
-\paragraph{Analisi dei requisiti}
-\subparagraph{Scopo}\Spazio
+\subsubsection{Analisi dei requisiti}
+\paragraph{Scopo}\Spazio
 Determinare con precisione i requisiti del progetto ed elencarli in modo formale. Essi vengono estrapolati da varie fonti:
 \begin{itemize}
 	\item documenti di specifica del \gl{capitolato};
@@ -60,7 +64,7 @@ Determinare con precisione i requisiti del progetto ed elencarli in modo formale
 	\item verbali interni ed esterni;
 	\item casi d'uso.
 \end{itemize}
-\subparagraph{Casi d'uso}\Spazio
+\paragraph{Casi d'uso}\Spazio
 Ogni caso d'uso è descritto dalla seguente struttura:
 \begin{itemize}
 	\item codice identificativo: $$ \textbf{UC \{codice\_padre\}.\{codice\_figlio\}  } $$
@@ -79,7 +83,7 @@ Ogni caso d'uso è descritto dalla seguente struttura:
 	\item inclusioni (se presenti);
 	\item estensioni (se presenti).
 \end{itemize}
-\subparagraph{Requisiti}\Spazio
+\paragraph{Requisiti}\Spazio
 Ogni requisito è descritto dalla seguente struttura:
 \begin{itemize}
 	\item Nome;
@@ -102,19 +106,22 @@ $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 	\item tipo distingue se si tratta di un requisito funzionale (F), di qualità (Q), di prestazione (P) o di vincolo (V);
 	\item identificativo è un numero progressivo che identifica i sottocasi.
 \end{itemize}
-\subparagraph{UML}\Spazio
+\paragraph{UML}\Spazio
 I diagrammi UML devono essere realizzati usando la versione del linguaggio \emph{v2.0}
-\pagebreak
-
-\paragraph{Progettazione}
-\subparagraph{Scopo}\Spazio
+\paragraph{Strumenti di supporto}
+\subparagraph{Trender}\Spazio
+Per quanto riguarda il tracciamento dei requisiti, il gruppo ha deciso di utilizzare inizialmente uno strumento non totalmente adatto a questo compito, cioè un foglio di calcolo. Essendo a conoscenza delle limitate funzionalità offerte da questa tecnologie per lo scopo a noi d'interesse, il team 7DOS ha deciso di migrare i dati raccolti in uno strumento creato appositamente per questo scopo. Lo strumento scelto è Trender e rende il tracciamento dei requisiti semi-automatico, inoltre offre la creazione di file .tex per il tracciamento dei requisiti.
+\subparagraph{Astah UML}\Spazio
+Per quanto concerne la creazione e la modellazione dei diagrammi UML per i casi d'uso, è stato deciso di utilizzare Astah UML, data la sua facilità di utilizzo e compatibilità con UML 2.x. Per la successiva fase di modellazione delle classi, potrebbe verificarsi una scelta diversa riguardo al software da utilizzare.
+\subsubsection{Progettazione}
+\paragraph{Scopo}\Spazio
 Esplicita concretamente una prima forma ad alto livello del design del software pensata per il progetto, determinandone le caratteristiche più in evidenza in modo da:
 	\begin{itemize}
 	\item \textbf{{Comunicare con gli stakeholder}} e dare delle informazioni chiare, così da intraprendere le prime discussioni sul progetto;
 	\item \textbf{{Analizzare il sistema}} in modo esplicito nei primi passi del progetto può portare ad importanti considerazioni riguardo a performance, affidabilità e manutenibilità;
 	\item Capire come il sistema è organizzato e come i componenti interoperano tra di loro sottolineando la possibilità di \textbf{{riutilizzo in larga scala}} di parte del codice, dato che si è notata una frequente ripetizione dei requisiti in un sistema complesso come quello affrontato dal nostro team.
 	\end{itemize}
-\subparagraph{Attività}\Spazio
+\paragraph{Attività}\Spazio
 Il design del software non è composta da una singola attività, bensì da un insieme preciso di sotto-attività progettuali che portano al design finale.
 Le sotto-attività che il nostro gruppo ha scelto di svolgere sono:
 	\begin{itemize}
@@ -126,15 +133,4 @@ Le sotto-attività che il nostro gruppo ha scelto di svolgere sono:
 Le convenzioni stilistiche definite in \gl{Grafana Plugin Code Styleguide} e, più in particolare per il linguaggio Typescript, in \gl{Angular TypeScript} Styleguide verranno seguite dai programmatori per lo sviluppo dell'intero progetto. \\
 Soltanto il Responsabile di progetto, dopo un'attenta analisi e valutazione, potrà ammettere modifiche alle convinzioni stabilite.\\
 L’unica lingua ammessa per i nomi di variabili, classi e funzioni è l’inglese.
-
-\subsection{Strumenti}
-\subsubsection{Creazione diagrammi UML}
-Per quanto concerne la creazione e la modellazione dei diagrammi UML per i casi d'uso, è stato deciso di utilizzare Astah UML, data la sua facilità di utilizzo e compatibilità con UML 2.x. Per la successiva fase di modellazione delle classi, potrebbe verificarsi una scelta diversa riguardo al software da utilizzare.
-\subsubsection{Diagrammi di Gantt e consuntivi}
-Per quanto riguarda la creazione dei diagrammi di Gantt è stato deciso di utilizzare GanttProject data la sua completezza, facilità di utilizzo e la possibilità di esportare i diagrammi sottoforma di \gl{png}. Inoltre, i file di GanttProject sono salvati sotto forma di \gl{xml}, quindi facilmente versionabili.
-Infine, per l'attuale realizzazione dei consuntivi è stato deciso di utilizzare Microsoft Excel come strumento per creare i grafici.
-\subsubsection{Gestione dei processi}
-Per quanto concerne la gestione dei processi è stato deciso di utilizzare nTask, data la sua comoda board view, la possibilità di creare più feature anche nella versione gratuita, la possibilità di avere \gl{risk tracking} integrato e la creazione semi-automatica dei diagrammi di Gantt.
-\subsubsection{Tracciamento dei requisiti}
-Per quanto riguarda il tracciamento dei requisiti, il gruppo ha deciso di utilizzare inizialmente uno strumento non totalmente adatto a questo compito, cioè un foglio di calcolo. Essendo a conoscenza delle limitate funzionalità offerte da questa tecnologie per lo scopo a noi d'interesse, il team 7DOS ha deciso di migrare i dati raccolti in uno strumento creato appositamente per questo scopo. Lo strumento scelto è Trender e rende il tracciamento dei requisiti semi-automatico, inoltre offre la creazione di file .tex per il tracciamento dei requisiti.
 \pagebreak
