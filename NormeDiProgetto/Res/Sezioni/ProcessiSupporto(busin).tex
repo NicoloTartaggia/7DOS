@@ -184,7 +184,13 @@ Descrizione delle procedure per verificare adeguatamente lo svolgimento dei proc
 
 \paragraph{Controllo delle metriche} \Spazio
 Alla conclusione di ogni fase del progetto, per ogni macro-attività , si devono calcolare i relativi indici. Al fine di avere un indice complessivo di fase deve essere inoltre calcolato il valore medio
-di tali indici.
+di tali indici. Di seguito verranno descritte in modo dettagliato tutte le metriche relative ai processi adottate. Per una spiegazione dettagliata riguardo gli obbiettivi che il team si è imposto di raggiungere per le suddette metriche consultare il piano di qualifica.
+\subparagraph{\gl{Schedule Variance (SV)}}\Spazio
+Metrica che indica se si è in linea, in anticipo o in ritardo rispetto alle attività pianificate nella \gl{baseline}. Essa è un indicatore di efficacia. \\
+Se SV > 0 significa che si sta procedendo più velocemente rispetto a quanto pianificato. Viceversa, se SV < 0 allora il gruppo è in ritardo. 
+\subparagraph{\gl{Budget Variance (BV)}}\Spazio
+Metrica che indica se la spesa complessiva fino a quel momento è maggiore o minore rispetto a quanto pianificato. Essa è un indicatore con valore contabile e finanziario. \\
+Se BV > 0 il budget complessivo sta diminuendo con velocità minore rispetto a quanto pianificato. Viceversa se BV < 0.
 
 \paragraph{Analisi PDCA} \Spazio
 Attraverso lo studio della rappresentazione grafica del \gl{PDCA} relativo alla fase di progetto in esame, verranno tratte delle considerazioni riguardo lo svolgimento dei processi.
@@ -200,18 +206,53 @@ Da esso si possono identificare in modo visuale, quindi generico e non numericam
 
 \subsubsection{Analisi dei documenti}
  Descrizione delle procedure da eseguire per verificare adeguatamente i documenti.
+\paragraph{Controllo delle metriche} \Spazio
+In seguito ad una qualsiasi modifica di un documento, si devono calcolare tutti i relativi indici di quel specifico documento. Inoltre dovrà essere ricalcolata la media complessiva di tutti gli indici calcolati fino a quel momento del documento in questione.
+Di seguito verranno descritte in modo dettagliato tutte le metriche relative ai documenti adottate. Per una spiegazione dettagliata riguardo gli obbiettivi che il team si è imposto di raggiungere per le suddette metriche consultare il piano di qualifica.
 
-\paragraph{Controllo ortografico} \Spazio
+\subparagraph{Numero di errori ortografici}\Spazio
+Misura del numero di errori ortografici presenti all'interno di un documento.
 Per verificare la presenza di errori ortografici nella documentazione deve essere usato lo strumento di controllo ortografico offerto dall'editor \emph{TexStudio} che integra i dizionari di OpenOffice per segnalare potenziali errori presenti nel testo.
 
+\subparagraph{Gunning fog index}\Spazio
+Indice utilizzato per misurare la facilità di lettura e comprensione di un testo. Il numero risultante è un indicatore del numero di anni di educazione formale necessari al fine di leggere il testo con facilità. \\
+L'indice di Gunning fog è calcolabile tramite la seguente formula:
+$$
+0.4*((\frac{n^{\circ}\:parole}{n^{\circ}\:frasi})+100*(\frac{n^{\circ}\:parole\:complesse}{n^{\circ}\:parole}))
+$$
+Per ogni documento i \emph{Verificatori} devono calcolare il Gunning fog index e se questo dovesse risultare troppo alto, dovrà essere eseguita la verifica del documento con l'obiettivo di ricercare frasi troppo prolisse o complesse. Il calcolo deve essere effettuato attraverso uno \gl{script} scritto in Perl che trasforma i documenti dal formato .pdf al formato .txt per effettuare un calcolo più preciso, eliminando le tabelle ma non il loro contenuto.
+\subparagraph{Indice di Gulpease}\Spazio
+Utilizzato per misurare la leggibilità di un testo in lingua italiana.\\
+L'indice di Gulpease è calcolabile tramite la seguente formula:
+$$
+89+\frac{(numero\:delle\:frasi)-10*(numero\:delle\:lettere)}{numero\:delle\:parole}
+$$
+I risultati sono compresi tra 0 e 100, dove 0 indica la leggibilità più bassa e 100 la leggibilità più alta. In generale risulta che i testi con indice:
+\begin{itemize}
+	\item{\textbf{Inferiore	a 80}}: sono difficili da leggere per chi ha la licenza elementare;
+	\item{\textbf{Inferiore	a 60}}: sono difficili da leggere per chi ha la licenza media;
+	\item{\textbf{Inferiore	a 40}}: sono difficili da leggere per chi ha la licenza superiore.
+\end{itemize}
+Per ogni documento i \emph{Verificatori} devono calcolare l'indice di Gulpease e se questo dovesse risultare troppo basso, dovrà essere eseguita la verifica del documento con l'obiettivo di ricercare frasi troppo prolisse o complesse. Il calcolo deve essere effettuato attraverso uno \gl{script} scritto in Perl che trasforma i documenti dal formato .pdf al formato .txt per effettuare un calcolo più preciso, eliminando le tabelle ma non il loro contenuto.
+\subparagraph{Indice di Flesh}\Spazio
+Utilizzato per misurare la leggibilità di un testo in lingua inglese.\\
+L'indice di Flesh è calcolabile tramite la seguente formula:
+$$
+206,835-(0,846*S)-(1,015*P)
+$$
+Dove S è il numero di sillabe calcolato su un campione di 100 parole e P è il numero medio di parole per frase.\\
+La leggibilità è considerata:
+\begin{itemize}
+	\item{\textbf{Alta}}: se l'indice è superiore a 60;
+	\item{\textbf{Media}}: se l'indice è compresa tra 50 e 60;
+	\item{\textbf{Bassa}}: se l'indice è inferiore a 50.
+\end{itemize}
+Per ogni documento i \emph{Verificatori} devono calcolare l'indice di Flesh e se questo dovesse risultare troppo basso, dovrà essere eseguita la verifica del documento con l'obiettivo di ricercare frasi troppo prolisse o complesse. Il calcolo deve essere effettuato attraverso uno \gl{script} scritto in Perl che trasforma i documenti dal formato .pdf al formato .txt per effettuare un calcolo più preciso, eliminando le tabelle ma non il loro contenuto.
 \paragraph{Controllo del periodo} \Spazio
 Per verificare la presenza di errori di sintassi, di parole grammaticalmente corrette ma presenti in un contesto sbagliato e di periodi difficili da comprendere è necessario l'intervento umano. Per questo motivo ogni documento deve essere sottoposto a verifica da parte dei \emph{Verificatori} incaricati, secondo la strategia walkthrough.
 
 \paragraph{Rispetto delle norme di progetto} \Spazio
 La verifica del rispetto delle norme descritte in \emph{Norme di Progetto v1.0.0} è compito dei \emph{Verificatori} incaricati. Non essendo possibile impiegare strumenti automatici per verificare la corretta applicazione di tutte le norme spetta quindi ai \emph{Verificatori} sottoporre i documenti a verifica, secondo la strategia inspection.
-
-\paragraph{Verifica sull'indice Gulpease} \Spazio
-Per ogni documento i \emph{Verificatori} devono calcolare l'indice di leggibilità e se questo dovesse risultare troppo basso, dovrà essere eseguita la verifica del documento con l'obiettivo di ricercare frasi troppo prolisse o complesse. Il calcolo deve essere effettuato attraverso uno \gl{script} scritto in Perl che trasforma i documenti dal formato .pdf al formato .txt per effettuare un calcolo più preciso, eliminando le tabelle ma non il loro contenuto.
 
 \paragraph{Miglioramento del processo di verifica} \Spazio
 Per migliorare e ottimizzare il processo di verifica i \emph{Verificatori} devono riportare gli errori riscontrati più frequentemente al fine di rendere più efficiente ed efficace la verifica di un documento, prestando maggiore attenzione agli errori più comuni.
