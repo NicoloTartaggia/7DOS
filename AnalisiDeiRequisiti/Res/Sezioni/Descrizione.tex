@@ -1,11 +1,21 @@
 \newsection{Descrizione generale}
 
 \subsection{Prospettive del prodotto}
-Il prodotto di questo progetto vede la realizzazione di un plug-in per la piattaforma Grafana in grado di sfruttare la tecnologia delle reti Bayesiane associando i nodi della rete ad un flusso di dati costantemente monitorato.
+Il prodotto di questo progetto vede la realizzazione di un plug-in per la piattaforma Grafana in grado di sfruttare la tecnologia delle reti Bayesiane associando i nodi della rete ad un flusso di dati costantemente monitorato. Correlato al mondo \gl{DevOps}, il prodotto si pone l'obiettivo di  determinare quali eventi non visibili siano i più probabili, segnalando in modo tempestivo quelli che superano precise soglie limite, attivando degli allarmi personalizzati. 
 
 \subsection{Funzioni del prodotto}
-Il plug-in fornisce un'interfaccia in cui è possibile importare la definizione di una rete Bayesiana da un file in formato JSON. In seguito sarà possibile associare i nodi di questa rete ad un flusso di dati monitorato in modo costante. A questo punto l'utente sarà in grado di:
+Il plug-in fornisce un'interfaccia che permette all'utente di:
+
 \begin{itemize}
+	\item Importare la definizione di una rete Bayesiana da un file JSON;
+	\item Utilizzare un editor grafico per:
+	\begin{itemize}
+		\item Creare una rete Bayesiana;
+		\item Modificare una rete Bayesiana;
+		\item Esportare la definizione della rete in un file JSON.
+	\end{itemize} 
+	\item Configurare la connessione tra i nodi della rete ed il flusso dati;
+	\item Leggere i dati raccolti dalla rete;
 	\item Visualizzare i dati raccolti tramite grafici;
 	\item Modificare la disposizione dei panel su una dashboard;
 	\item Creare \gl{alert} personalizzati;
@@ -13,9 +23,9 @@ Il plug-in fornisce un'interfaccia in cui è possibile importare la definizione 
 \end{itemize}
 
 \subsection{Caratteristiche degli utenti}
-Come specificato dal proponente nel \emph{Verbale 2018-12-12 v1.0.0} il prodotto si rivolge ad un utente generico e non ad uno nello specifico, in quanto chiunque potrà usufruire dei servizi offerti dal plug-in attraverso Grafana. 
+Come specificato dal proponente nel \emph{Verbale 2018-12-12 v1.0.0} il prodotto si rivolge ad un utente generico e non ad uno nello specifico, in quanto chiunque potrà usufruire dei servizi offerti dal plug-in attraverso Grafana. Non emerge quindi il requisito di avere alcuna gerarchia di utenti, o utenti con privilegi differenziati. Pertanto il prodotto prevede una sola tipologia di utente, ovvero l’utilizzatore finale.
 
 \subsection{Vincoli generali}
-Il prodotto deve essere compatibile con Grafana e deve essere sviluppato in JavaScript.
+Il prodotto deve essere compatibile con Grafana e deve essere sviluppato in JavaScript. L'utente deve essere regolarmente iscritto alla piattaforma per ottenere l'accesso all'area \emph{Plugins} da cui effettuare il download e l'installazione del prodotto. Non sono richiesti particolari requisiti hardware, anche se gli stessi possono influenzarne la velocità di esecuzione.
 
 \pagebreak
