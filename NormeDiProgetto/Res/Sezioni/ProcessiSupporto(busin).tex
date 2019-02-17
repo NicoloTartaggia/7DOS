@@ -256,7 +256,48 @@ La verifica del rispetto delle norme descritte in \emph{Norme di Progetto v1.0.0
 
 \paragraph{Miglioramento del processo di verifica} \Spazio
 Per migliorare e ottimizzare il processo di verifica i \emph{Verificatori} devono riportare gli errori riscontrati più frequentemente al fine di rendere più efficiente ed efficace la verifica di un documento, prestando maggiore attenzione agli errori più comuni.
+\subsubsection{Analisi dei prodotti software}
+Descrizione delle procedure da eseguire per verificare adeguatamente i prodotti software.
+\paragraph{Analisi statica}\Spazio
+Esecuzione di test che non richiedono l'esecuzione del sistema software ma effettuano controlli sul codice sorgente del prodotto software.
+[Inserire test statici che eseguiamo]
+\paragraph{Analisi dinamica}\Spazio
+Il processo di analisi dinamica consiste nell'esecuzione di test di varia tipologia i quali richiedono l'esecuzione del sistema software o solamente di alcune sue componenti.
+Le principali tipologie di test che è possibile eseguire durante l'analisi dinamica sono le seguenti:
+\begin{itemize}
+	\item {\textbf{Test d'unità}: Verificano un unità, il più piccolo sottosistema possibile (nella programmazione ad oggetti comunemente una classe o od un metodo) che
+		può essere testato separatamente}
+	\item {\textbf{Test d'integrazione}: Verificano se sono rispettati i contratti di interfaccia tra più moduli o sub-system}
+	\item {\textbf{Test di sistema}: Verificano il comportamento dell’intero sistema software}
+\end{itemize}
+\paragraph{Controllo delle metriche} \Spazio
+Di seguito viene riportato solamente un piccolo sottoinsieme di metriche relative ai prodotti software ritenute come fondamentali dal team 7DOS.
+Questa sezione verrà ampliata successivamente qualora fosse necessario introdurre nuove metriche per la valutazione della qualità dei prodotti software
+\subparagraph{Functional Implementation Completeness}\Spazio
+Misurazione in percentuale del grado con cui le funzionalità offerte dalla corrente implementazione del software coprono l'insieme di funzioni specificate nei requisiti.\\
+Questa metrica è stata scelta per valutare il grado di completezza del prodotto; l'obiettivo è implementare tutte le funzionalità richieste.\\
+Viene utilizzata la seguente formula:
+$$FI_{Comp}=\frac{NF_i}{NF_r}*100$$
+dove FI\textsubscript{Comp} è il valore della metrica, NF\textsubscript{i} è numero di funzioni attualmente implementate e NF\textsubscript{r} è numero di funzioni specificate dai requisiti.
 
+\subparagraph{Average Functional Implementation Correctness}\Spazio
+Misurazione in percentuale del grado in cui le funzionalità offerte dalla corrente implementazione del software, in media, rispettano il livello di precisione indicato nei requisiti.\\
+Questa metrica è stata scelta per valutare il grado di accuratezza e garantire la qualità dei risultati restituiti dal prodotto, in quanto andrà a fare previsioni sulla verosimiglianza di alcuni eventi in base ai dati forniti, ed è necessario che tali previsioni siano sufficientemente accurate.\\
+Viene utilizzata la seguente formula:
+$$aFI_{Corr}=\frac{\sum\limits_{i=1}^N\frac{iPF_i}{rPF_i}}{N}*100$$
+dove aFI\textsubscript{Corr} è il valore della metrica, iPF\textsubscript{i} è il livello di precisione della i-esima funzione implementata, rPF\textsubscript{i} è il livello di precisione della i-esima funzione secondo i requisiti, e N è il numero totale di funzioni considerate.
 
+\subparagraph{Average Learning Time}\Spazio
+Misurazione in minuti del tempo medio impiegato da un utente per imparare ad utilizzare una singola funzionalità del prodotto.
+\\Questa metrica è stata scelta poiché, trattandosi di un prodotto che verrà reso disponibile pubblicamente, è stato ritenuto importante renderlo semplice da imparare per permetterne l'uso ad una vasta gamma di utenti.
+\\Viene utilizzata la seguente formula:
+$$aLT=\frac{\sum\limits_{i=1}^N{LT_i}}{N}$$
+dove aLT è il valore della metrica, LT\textsubscript{i} è il tempo necessario ad imparare ad utilizzare la i-esima funzione implementata, espresso in minuti, e N è il numero totale di funzioni considerate.
 
+\subparagraph{Failure Density}\Spazio
+Misurazione in percentuale della quantità di test falliti rispetto alla quantità di test eseguiti.
+\\Questa metrica è stata scelta per garantire che il prodotto sia generalmente stabile e non risulti poco utilizzabile o inutilizzabile a causa di eccessive \gl{failure}. Valutazioni più precise saranno effettuate in base ai singoli risultati dei test.\\
+Viene utilizzata la seguente formula:
+$$FD=\frac{T_f}{T_c}*100$$
+dove FD è il valore della metrica, T\textsubscript{f} è il numero di test falliti e T\textsubscript{e} è il numero di test eseguiti.
 \pagebreak
