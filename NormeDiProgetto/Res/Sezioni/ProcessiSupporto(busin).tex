@@ -187,10 +187,31 @@ Alla conclusione di ogni fase del progetto, per ogni macro-attività , si devono
 di tali indici. Di seguito verranno descritte in modo dettagliato tutte le metriche relative ai processi adottate. Per una spiegazione dettagliata riguardo gli obbiettivi che il team si è imposto di raggiungere per le suddette metriche consultare il piano di qualifica.
 \subparagraph{\gl{Schedule Variance (SV)}}\Spazio
 Metrica che indica se si è in linea, in anticipo o in ritardo rispetto alle attività pianificate nella \gl{baseline}. Essa è un indicatore di efficacia. \\
+Calcolabile attraverso la seguente formula:
+\[ SV=BCWP-BCWS\]
+Dove:
+\begin{itemize}
+	\item {\textbf{SV}: corrisponde al valore della metrica;}
+	\item {\textbf{BCWP}: corrisponde al valore, in giorni od euro, prodotto dalle attività del progetto realizzate fino alla data corrente, od in altre parole la somma complessiva del valore di tutte le componenti completate fino ad ora.}
+	\item {\textbf{BCWS}: corrisponde al numero di giorni od euro pianificati inizialmente per realizzare le attività fino alla data corrente.}	
+\end{itemize}
 Se SV > 0 significa che si sta procedendo più velocemente rispetto a quanto pianificato. Viceversa, se SV < 0 allora il gruppo è in ritardo. 
 \subparagraph{\gl{Budget Variance (BV)}}\Spazio
 Metrica che indica se la spesa complessiva fino a quel momento è maggiore o minore rispetto a quanto pianificato. Essa è un indicatore con valore contabile e finanziario. \\
+Calcolabile attraverso la seguente formula:
+\[BV=BCWS-ACWP\]
+\begin{itemize}
+	\item {\textbf{BV}: corrisponde al valore della metrica;}
+	\item {\textbf{BCWS}: corrisponde al costo pianificato in giorni od euro per realizzare le attività del progetto fino alla data corrente;}
+	\item {\textbf{ACWP}: corrisponde al costo, in giorni od euro, effettivamente sostenuto fino alla data corrente.}
+\end{itemize}
 Se BV > 0 il budget complessivo sta diminuendo con velocità minore rispetto a quanto pianificato. Viceversa se BV < 0.
+\subparagraph{Numero rischi non previsti}\Spazio
+Indica la quantità di rischi rilevati durante lo svolgimento delle attività, non preventivati all'interno dell'analisi dei rischi durante l'attuale fase del progetto.
+\subparagraph{Indisponibilità servizi esterni}\Spazio
+Numero complessivo di giorni in cui uno specifico servizio esterno, tra tutti quelli utilizzati, è rimasto indisponibile per la maggior parte del tempo rendendone quindi impossibile l'utilizzo. Ovviamente sarà necessario utilizzare un contatore separato per ogni servizio utilizzato.
+\subparagraph{Media commit a settimana}\Spazio
+Media dei commit effettuati settimanalmente sulle diverse repository del gruppo. Utile per tenere traccia dell'impegno dedicato settimanalmente dal team sul progetto.
 
 \paragraph{Analisi PDCA} \Spazio
 Attraverso lo studio della rappresentazione grafica del \gl{PDCA} relativo alla fase di progetto in esame, verranno tratte delle considerazioni riguardo lo svolgimento dei processi.
@@ -265,26 +286,45 @@ Misurazione in percentuale del grado con cui le funzionalità offerte dalla corr
 Questa metrica è stata scelta per valutare il grado di completezza del prodotto; l'obiettivo è implementare tutte le funzionalità richieste.\\
 Viene utilizzata la seguente formula:
 $$FI_{Comp}=\frac{NF_i}{NF_r}*100$$
-dove FI\textsubscript{Comp} è il valore della metrica, NF\textsubscript{i} è numero di funzioni attualmente implementate e NF\textsubscript{r} è numero di funzioni specificate dai requisiti.
-
+Dove:
+\begin{itemize}
+	\item{\textbf{FI\textsubscript{Comp}}: è il valore della metrica;}
+	\item{\textbf{NF\textsubscript{i}}: è il numero di funzioni attualmente implementate;}
+	\item{\textbf{NF\textsubscript{r}}: è il numero di funzioni specificate dai requisiti.}
+\end{itemize}
 \subparagraph{Average Functional Implementation Correctness}\Spazio
 Misurazione in percentuale del grado in cui le funzionalità offerte dalla corrente implementazione del software, in media, rispettano il livello di precisione indicato nei requisiti.\\
 Questa metrica è stata scelta per valutare il grado di accuratezza e garantire la qualità dei risultati restituiti dal prodotto, in quanto andrà a fare previsioni sulla verosimiglianza di alcuni eventi in base ai dati forniti, ed è necessario che tali previsioni siano sufficientemente accurate.\\
 Viene utilizzata la seguente formula:
 $$aFI_{Corr}=\frac{\sum\limits_{i=1}^N\frac{iPF_i}{rPF_i}}{N}*100$$
-dove aFI\textsubscript{Corr} è il valore della metrica, iPF\textsubscript{i} è il livello di precisione della i-esima funzione implementata, rPF\textsubscript{i} è il livello di precisione della i-esima funzione secondo i requisiti, e N è il numero totale di funzioni considerate.
-
+Dove:
+\begin{itemize}
+	\item{\textbf{aFI\textsubscript{Corr}}: è il valore della metrica;}
+	\item{\textbf{iPF\textsubscript{i}}: è il livello di precisione della i-esima funzione implementata;}
+	\item{\textbf{rPF\textsubscript{i}}: è il livello di precisione della i-esima funzione secondo i requisiti;}
+	\item{\textbf{N}: è il numero totale di funzioni considerate.}
+\end{itemize}
 \subparagraph{Average Learning Time}\Spazio
 Misurazione in minuti del tempo medio impiegato da un utente per imparare ad utilizzare una singola funzionalità del prodotto.
 \\Questa metrica è stata scelta poiché, trattandosi di un prodotto che verrà reso disponibile pubblicamente, è stato ritenuto importante renderlo semplice da imparare per permetterne l'uso ad una vasta gamma di utenti.
 \\Viene utilizzata la seguente formula:
 $$aLT=\frac{\sum\limits_{i=1}^N{LT_i}}{N}$$
-dove aLT è il valore della metrica, LT\textsubscript{i} è il tempo necessario ad imparare ad utilizzare la i-esima funzione implementata, espresso in minuti, e N è il numero totale di funzioni considerate.
+Dove:
+\begin{itemize}
+	\item{\textbf{aLT}: è il valore della metrica;}
+	\item{\textbf{LT\textsubscript{i}}: è il tempo necessario ad imparare ad utilizzare la i-esima funzione implementata, espresso in minuti;}
+	\item{\textbf{N}: è il numero totale di funzioni considerate.}
+\end{itemize}
 
 \subparagraph{Failure Density}\Spazio
 Misurazione in percentuale della quantità di test falliti rispetto alla quantità di test eseguiti.
 \\Questa metrica è stata scelta per garantire che il prodotto sia generalmente stabile e non risulti poco utilizzabile o inutilizzabile a causa di eccessive \gl{failure}. Valutazioni più precise saranno effettuate in base ai singoli risultati dei test.\\
 Viene utilizzata la seguente formula:
 $$FD=\frac{T_f}{T_c}*100$$
-dove FD è il valore della metrica, T\textsubscript{f} è il numero di test falliti e T\textsubscript{e} è il numero di test eseguiti.
+Dove:
+\begin{itemize}
+	\item{\textbf{FD}: è il valore della metrica;}
+	\item{\textbf{T\textsubscript{f}}: è il numero di test falliti;}
+	\item{\textbf{T\textsubscript{e}}: è il numero di test eseguiti.}
+\end{itemize}
 \pagebreak
