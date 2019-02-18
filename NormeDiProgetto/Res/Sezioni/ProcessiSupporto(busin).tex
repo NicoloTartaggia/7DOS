@@ -234,20 +234,6 @@ I risultati sono compresi tra 0 e 100, dove 0 indica la leggibilità più bassa 
 	\item{\textbf{Inferiore	a 40}}: sono difficili da leggere per chi ha la licenza superiore.
 \end{itemize}
 Per ogni documento i \emph{Verificatori} devono calcolare l'indice di Gulpease e se questo dovesse risultare troppo basso, dovrà essere eseguita la verifica del documento con l'obiettivo di ricercare frasi troppo prolisse o complesse. Il calcolo deve essere effettuato attraverso uno \gl{script} scritto in Perl che trasforma i documenti dal formato .pdf al formato .txt per effettuare un calcolo più preciso, eliminando le tabelle ma non il loro contenuto.
-\subparagraph{Indice di Flesh}\Spazio
-Utilizzato per misurare la leggibilità di un testo in lingua inglese.\\
-L'indice di Flesh è calcolabile tramite la seguente formula:
-$$
-206,835-(0,846*S)-(1,015*P)
-$$
-Dove S è il numero di sillabe calcolato su un campione di 100 parole e P è il numero medio di parole per frase.\\
-La leggibilità è considerata:
-\begin{itemize}
-	\item{\textbf{Alta}}: se l'indice è superiore a 60;
-	\item{\textbf{Media}}: se l'indice è compresa tra 50 e 60;
-	\item{\textbf{Bassa}}: se l'indice è inferiore a 50.
-\end{itemize}
-Per ogni documento i \emph{Verificatori} devono calcolare l'indice di Flesh e se questo dovesse risultare troppo basso, dovrà essere eseguita la verifica del documento con l'obiettivo di ricercare frasi troppo prolisse o complesse. Il calcolo deve essere effettuato attraverso uno \gl{script} scritto in Perl che trasforma i documenti dal formato .pdf al formato .txt per effettuare un calcolo più preciso, eliminando le tabelle ma non il loro contenuto.
 \paragraph{Controllo del periodo} \Spazio
 Per verificare la presenza di errori di sintassi, di parole grammaticalmente corrette ma presenti in un contesto sbagliato e di periodi difficili da comprendere è necessario l'intervento umano. Per questo motivo ogni documento deve essere sottoposto a verifica da parte dei \emph{Verificatori} incaricati, secondo la strategia walkthrough.
 
