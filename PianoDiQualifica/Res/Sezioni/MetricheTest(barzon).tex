@@ -6,69 +6,7 @@ Il processo di verifica, per essere informativo, deve essere quantificabile. Son
 	\item {\textbf{Intervallo obiettivo:} i valori che vengono considerati l'obiettivo ottimale da raggiungere.}
 \end{itemize}
 
-\subsection{Metriche relative ai processi}
-Le metriche per i processi scelte permettono di analizzare costi e tempi.
-\subsubsection{\gl{Schedule Variance (SV)}}
-Metrica che indica se si è in linea, in anticipo o in ritardo rispetto alle attività pianificate nella \gl{baseline}. Essa è un indicatore di efficacia. \\
-Se SV > 0 significa che si sta procedendo più velocemente rispetto a quanto pianificato. Viceversa, se SV < 0 allora il gruppo è in ritardo. 
-\subsubsection{\gl{Budget Variance (BV)}}
-Metrica che indica se la spesa complessiva fino a quel momento è maggiore o minore rispetto a quanto pianificato. Essa è un indicatore con valore contabile e finanziario. \\
-Se BV > 0 il budget complessivo sta diminuendo con velocità minore rispetto a quanto pianificato. Viceversa se BV < 0.
-
-\subsection{Metriche relative ai documenti}
-\subsubsection{Numero di errori grammaticali}
-Misura del numero di errori grammaticali presenti all'interno di un documento.
-Tutti i documenti verranno analizzati da un apposito strumento di analisi grammaticale. Per poter essere accettati non potranno avere un numero di errori grammaticali superiore a zero.
-
-\subsubsection{Gunning fog index}
-Indice utilizzato per misurare la facilità di lettura e comprensione di un testo. Il numero risultante è un indicatore del numero di anni di educazione formale necessari al fine di leggere il testo con facilità. \\
-L'indice di Gunning fog è calcolabile tramite la seguente formula:
-$$
-	0.4*((\frac{n^{\circ}\:parole}{n^{\circ}\:frasi})+100*(\frac{n^{\circ}\:parole\:complesse}{n^{\circ}\:parole}))
-$$
-Per questa metrica vengono definiti i seguenti intervalli: 
-\begin{itemize}
-	\item{\textbf{Intervallo limite}: $\mathbb{R+}$;}
-	\item{\textbf{Intervallo accettabile}: $\mathbb{R+}$;}
-	\item{\textbf{Intervallo obiettivo}: $\leq$12.}
-\end{itemize}
-\subsubsection{Indice di Gulpease}
-Utilizzato per misurare la leggibilità di un testo in lingua italiana.\\
-L'indice di Gulpease è calcolabile tramite la seguente formula:
-$$
-	89+\frac{(numero\:delle\:frasi)-10*(numero\:delle\:lettere)}{numero\:delle\:parole}
-$$
-I risultati sono compresi tra 0 e 100, dove 0 indica la leggibilità più bassa e 100 la leggibilità più alta. In generale risulta che i testi con indice:
-	\begin{itemize}
-		\item{\textbf{Inferiore	a 80}}: sono difficili da leggere per chi ha la licenza elementare;
-		\item{\textbf{Inferiore	a 60}}: sono difficili da leggere per chi ha la licenza media;
-		\item{\textbf{Inferiore	a 40}}: sono difficili da leggere per chi ha la licenza superiore.
-	\end{itemize}
-Per questa metrica vengono definiti i seguenti intervalli: 
-	\begin{itemize}
-		\item{\textbf{Intervallo limite}: 0-100;}
-		\item{\textbf{Intervallo accettabile}: 40-100;}
-		\item{\textbf{Intervallo obiettivo}: 60-100.}
-	\end{itemize}
-\subsubsection{Indice di Flesh}
-Utilizzato per misurare la leggibilità di un testo in lingua inglese.\\
-L'indice di Flesh è calcolabile tramite la seguente formula:
-	$$
-		206,835-(0,846*S)-(1,015*P)
-	$$
-Dove S è il numero di sillabe calcolato su un campione di 100 parole e P è il numero medio di parole per frase.\\
-La leggibilità è considerata:
-	\begin{itemize}
-		\item{\textbf{Alta}}: se l'indice è superiore a 60;
-		\item{\textbf{Media}}: se l'indice è compresa tra 50 e 60;
-		\item{\textbf{Bassa}}: se l'indice è inferiore a 50.
-	\end{itemize}
-Per questa metrica vengono definiti i seguenti intervalli: 
-\begin{itemize}
-	\item{\textbf{Intervallo limite}: 0-100;}
-	\item{\textbf{Intervallo accettabile}: 50-100;}
-	\item{\textbf{Intervallo obiettivo}: 60-100.}
-\end{itemize} 
+ 
 \subsection{Metriche relative ai prodotti software}
 Di seguito viene riportato solamente un piccolo sottoinsieme di metriche relative ai prodotti software ritenute come fondamentali dal team 7DOS.
 Questa sezione verrà ampliata successivamente qualora fosse necessario introdurre nuove metriche per la valutazione della qualità dei prodotti software. 
