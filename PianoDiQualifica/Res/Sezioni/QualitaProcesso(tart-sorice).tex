@@ -18,8 +18,37 @@ La qualità di un qualsiasi prodotto o sistema è strettamente legata alla quali
 			\item{\emph{Budget Variance} (\gl{BV}).}
 		\end{itemize}	
 	}
+	\item{\textbf{Rischi}: quantificazione di rischi interni ed esterni
+	\begin{itemize}
+		\item\emph{Numero rischi non previsti.}
+		\item\emph{Indisponibilità servizi esterni.}	
+	\end{itemize}	
+	}
+	\item{\textbf{Build e versionamento}: quantificazione di build e versionamenti dei prodotti
+	\begin{itemize}
+		\item\emph{Media commit a settimana.}
+	\end{itemize}	
+	}
 \end{itemize}
+\subsection{Tabella riassuntiva delle metriche relative ai processi}
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|C{5cm}|C{4cm}|C{4cm}|}
+		\hline
+		\rowcolor{title_row}
+		\textbf{\color{title_text}{Nome Metrica}} &  \textbf{\color{title_text}{Range accettabile}} & \textbf{\color{title_text}{Range ottimale}} \\ \hline
+		Schedule Variance & $\geq$-5 giorni  & $\geq$0 giorni \\ \hline
+		Budget Variance&$\geq$-10\% &$\geq$0\% \\ \hline
+		Numero rischi non previsti&$\geq$-3 &$\geq$0 \\ \hline
+		Indisponibilità servizi esterni&$\geq$-5 &$\geq$0 \\ \hline
+		Media commit a settimana&$\geq$20 &$\geq$30 \\ \hline
 
+	\end{tabular}
+	\caption{Riassunto delle metriche dei test sui processi}
+	\label{tabella:riassunto metriche dei test sui processi}
+\end{table}
+\renewcommand{\arraystretch}{1}
 
 \subsubsection{Gestione}
 	Il gruppo 7DOS ha deciso di seguire l'approccio a maturità di processo per i seguenti motivi:
@@ -47,12 +76,51 @@ Per praticità e rilevanza ai fini del prodotto, sono state selezionate 5 caratt
 	\item{\textbf{Lettura e comprensione}: facilità di lettura e comprensione di un testo
 		\begin{itemize}
 			\item{\emph{Gunning fog index}.}
+			\item{\emph{Indice di Gulpease}.}
 		\end{itemize}	
 	}
-	\item{\textbf{Leggibilità dell'italiano}: misurazione della leggibilità di un testo in lingua italiana
-	\begin{itemize}
-		\item{\emph{Indice di Gulpease}.}
-	\end{itemize}	
-	}
 \end{itemize}
+
+\subsection{Metriche relative ai prodotti software}
+
+\begin{itemize}
+	\item{\textbf{Sviluppo e rispetto dei requisiti}:
+		\begin{itemize}
+			\item{\emph{Functional Implementation Completeness}.}
+			\item{\emph{Average Functional Implementation Correctness}.}			
+		\end{itemize}	
+	}
+	\item{\textbf{Interazioni con l'utente}: 
+		\begin{itemize}
+			\item{\emph{Average Learning Time}.}
+		\end{itemize}	
+	}
+	\item{\textbf{Test e completezza}: 
+	\begin{itemize}
+		\item{\emph{Failure Density}.}
+	\end{itemize}	
+}
+\end{itemize}
+
+\subsection{Tabella riassuntiva delle metriche relative ai prodotti}
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|C{4cm}|C{3cm}|C{3cm}|C{3cm}|}
+		\hline
+		\rowcolor{title_row}
+		\textbf{\color{title_text}{Nome Metrica}} & \textbf{\color{title_text}{Intervallo limite}} & \textbf{\color{title_text}{Range accettabile}} & \textbf{\color{title_text}{Range ottimale}} \\ \hline
+		Functional Implementation Completeness & 0-100 & 75-100 & 100 \\ \hline
+		Average Functional Implementation Correctnes&0-100&80-100&95-100 \\ \hline
+		Numero di errori grammaticali & / & 0 & 0 \\ \hline
+		Gunning fog index & / &12-15&0-12 \\ \hline
+		Indice di Gulpease & 0-100& 40-100& 60-100 \\ \hline
+		Indice di Flesh& 0-100 & 50-100& 60-100\\ \hline
+		Average Learning Time& / &0-15 & 0-30 \\ \hline
+		Failure Density&0-100&0-10&0\\ \hline
+	\end{tabular}
+	\caption{Riassunto delle metriche dei test sui prodotti}
+	\label{tabella:riassunto metriche dei test sui prodotti}
+\end{table}
+\renewcommand{\arraystretch}{1}
 \pagebreak
