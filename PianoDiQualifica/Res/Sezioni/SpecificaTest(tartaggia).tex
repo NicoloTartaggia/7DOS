@@ -1,22 +1,82 @@
-\newsection{Specifica dei test}
+\newsection{Metodologia di analisi}
 
 \subsection{Analisi statica}
-L'analisi statica è una tecnica di analisi applicabile sia ai documenti sia al codice che permette di individuare errori tramite verifica. Nella sezione 3.2 del documento \emph{Norme di Progetto v1.0.0} vengono elencati gli strumenti per effettuare la verifica della documentazione. Per quanto riguarda il codice, attraverso l'analisi statica possono essere analizzate la sintassi e la semantica, stimate le variabili e controllato il flusso dei dati.
-\subsection{Analisi dinamica}
-L'analisi dinamica è una tecnica di analisi applicabile solamente al prodotto software. Essa permette di individuare errori di implementazione e di verificare il funzionamento del codice mediante l'uso di test dedicati durante l'esecuzione del codice stesso.\\
-Essendo il test una parte essenziale per questo tipo di verifica, è necessario tutti i test siano \gl{ripetibili}. Con ciò si intende che un test specifico eseguito in un ambiente definito produce sempre gli stessi output, dato un certo input.\\\\
-I test applicabili sono di 5 tipi diversi, elencati nelle seguenti sottosezioni.
+L'analisi statica è una tecnica di analisi applicabile sia a prodotti di natura documentale che applicativa, e consiste nell'effettuare la verifica del prodotto individuando eventuali errori/anomalie. Nella sezione 3.2 del documento \emph{Norme di Progetto v1.0.0} vengono elencati gli strumenti per effettuare la verifica della documentazione. Essa si compone di due attività complementari, come di seguito.
 
-\subsubsection{Test di unità [TU]}
-I test di unità mirano alla verifica della parte più piccola di lavoro prodotta da un Programmatore, equivalente all'unità logica più piccola del prodotto, che può essere una singola classe, un metodo o funzione oppure un insieme di essi.
-\subsubsection{Test di integrazione [TI]}
+\subsubsection{Walkthrough}
+Attività di lettura integrale e approfondita del testo o codice del prodotto, principalmente utilizzata durante le prime fasi del progetto in quanto permette una verifica più attenta e precisa dei prodotti (che nei primi stadi sono usualmente ridotti in contenuti). Ricade tra i compiti del \emph{Verificatore} (vedere \emph{Norme di Progetto}), che si occuperà anche di stilare una lista degli errori riscontrati per facilitare la discussione di eventuali modifiche e permettere di individuare gli errori più frequenti. La fase finale dell'attività di \emph{Walkthrough} consiste nell'applicare e registrare le modifiche correttive approvate.
+
+\subsubsection{Inspection}
+Attività di analisi mirata di parti specifiche del prodotto documentale o software che sono ritenute sezioni critiche, ovvero con grande concentrazione, potenziale o effettiva, di errori o anomalie. La lista degli errori da controllare va compilata prima dell'inizio dell'attività, in quanto maturata dall'esperienza acquisita durante le precedenti attività di \emph{Walkthrough}. Essendo limitata ad un'area specifica, risulta più veloce nell'esecuzione e nell'attuazione delle modifiche necessarie.
+
+\subsection{Analisi dinamica}
+L'analisi dinamica è una tecnica di analisi applicabile solamente al prodotto software, messa in atto durante l'esecuzione del software attraverso l'uso di appositi test mirati a verificare il corretto funzionamento del prodotto, rilevando possibili \emph{failure} e risalendo agli eventuali errori di implementazione che ne sono la causa.\\
+L'analisi dinamica prevede 5 possibili categorie di test, come di seguito. 
+
+\subsubsection{Test di unità}
+I test di unità mirano alla verifica della parte più piccola di lavoro prodotta da un \emph{Programmatore}, equivalente all'unità logica più piccola del prodotto, che può essere una singola classe, un metodo o funzione oppure un insieme di essi.
+\subsubsection{Test di integrazione}
 I test di integrazione mirano alla verifica di due o più unità già testate che vengono aggregate \textbf{incrementalmente} in una struttura più grande, rappresentando l’estensione logica del test di unità. In questo modo si può testare se il comportamento atteso dell'aggregato rispetta le previsioni. In caso negativo, è possibile che le singole unità contengano difetti residui da correggere oppure che i software utilizzati siano poco conosciuti e abbiano comportamenti inaspettati.\\
 La strategia di integrazione dei vari moduli scelta è quella \gl{bottom-up}, la quale prevede che vengano testate per prime le procedure più a basso livello e passando, progressivamente, a procedure di più alto livello. 
-\subsubsection{Test di sistema [TS]}
+\subsubsection{Test di sistema}
 I test di sistema mirano alla verifica del prodotto software completo di tutte le sue componenti. Un software a cui vengono applicati questi tipi di test deve essere giunto ad una versione ritenuta definitiva. \\
 Essendo test significativi, sarà richiesta la supervisione dei Verificatori incaricati.
-\subsubsection{Test di regressione [TR]}
+\subsubsection{Test di regressione}
 I test di regressione mirano ad eseguire nuovamente i test di unità e di integrazione su componenti software che hanno subito modifiche, in modo da controllare che i cambiamenti apportati non abbiano inserito nuovi errori sia nelle componenti modificate che nelle componenti non modificate e che prima non erano soggette ad errori.
-\subsubsection{Test di accettazione [TA]}
-I test di accettazione mirano al collaudo del prodotto software in presenza del \gl{proponente}. Essi sono test finali e il superamento di essi comporta la validazione e il rilascio del prodotto.
+\subsubsection{Test di accettazione}
+I test di accettazione mirano al collaudo del prodotto software in presenza del \gl{proponente}. Essi sono test finali il cui superamento comporta la validazione e il rilascio del prodotto.
+
+\pagebreak
+
+
+\newsection{Pianificazione dei test dinamici}
+
+In questa sezione vengono dichiarati i test che verranno utilizzati per la fase di analisi dinamica del prodotto software, suddivisi secondo le categorie descritte nella sezione 2.1.
+La consistenza dei test in esecuzioni ripetute è una condizione imperativa, dunque è necessario che essi siano \gl{ripetibili}: un dato test eseguito in un ambiente specifico deve produrre, se fornito un determinato input, sempre gli stessi output. Al fine di garantire ciò, il team 7DOS ha scelto di basarsi sullo standard \gl{ISO/IEC/IEEE 29119}\footnote{ISO/IEC/IEEE 29119 parte 3 sezione 7, IEEE 2013.} per quanto riguarda la pianificazione e documentazione dei test dinamici. Tale standard prevede di definire, per ciascun test o suite di test, una \emph{specifica di test} composta di:
+\begin{itemize}
+	\item {\textbf{Specifica di progettazione:} definisce le funzionalità del prodotto da testare e le condizioni di test, ovvero l'ambiente di esecuzione e le pre-condizioni (particolari eventi o stati pregressi) necessarie al suo svolgimento;}
+	\item {\textbf{Specifica di caso:} definisce l'insieme degli input che si desidera testare, e l'insieme dei risultati attesi per ogni (gruppo di) input per una o più funzionalità testate;}
+	\item {\textbf{Specifica di procedura:} definisce l'ordine di esecuzione dei test (nel caso di una suite di test), la modalità di svolgimento, ovvero le azioni da compiere e gli input da inserire in modo ordinato, eventuali azioni necessarie per il raggiungimento delle pre-condizioni e la modalità di analisi dei risultati ottenuti.}
+\end{itemize}
+
+Per quanto concerne la \emph{specifica di progettazione}, il team ha scelto di associarvi uno o più requisiti funzionali a seconda della specificità del test. Questo permette di descrivere più precisamente le funzionalità oggetto di test e di tracciare al meglio il soddisfacimento dei requisiti.
+\subsection{Test di unità}
+Questa sezione verrà sviluppata in futuro, quando sorgerà la necessità di definire dei test di unità per il prodotto.
+\subsection{Test di integrazione}
+Questa sezione verrà sviluppata in futuro, quando sorgerà la necessità di definire dei test di integrazione per il prodotto.
+\subsection{Test di sistema}
+Di seguito viene riportata una tabella riassuntiva che dichiara i test di sistema pianificati. Per ogni test vengono riportati: un codice univoco identificativo con prefisso "TS", il codice identificativo del requisito funzionale associato e lo stato della definizione della specifica di test ("ND" indica che la specifica non è stata definita, "RW" indica che è in revisione, "OK" indica che è stata definita e approvata). \\
+I test di sistema vengono fatti corrispondere ai requisiti funzionali principali e in particolare, nella versione corrente del documento, è previsto un test per ciascun requisito funzionale principale obbligatorio. \\
+Le specifiche di test sono associate al codice univoco del test; quelle definite sono descritte per intero nell'Appendice B.
+
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\rowcolor{title_row}
+			\textbf{\color{title_text}{Id Test}} & \textbf{\color{title_text}{Id Requisito}} & \textbf{\color{title_text}{Stato specifica}} \\
+			\hline
+			{TS0F1} & {R0F1} & {ND}\\
+			\hline
+			{TS0F2} & {R0F2} & {ND}\\
+			\hline
+			{TS0F3} & {R0F3} & {ND}\\
+			\hline
+			{TS0F3} & {R0F3} & {ND}\\
+			\hline
+			{TS0F4} & {R0F4} & {ND}\\
+			\hline
+			{TS0F5} & {R0F5} & {ND}\\
+			\hline
+		\end{tabular}
+		\caption{Riassunto dei test di sistema pianificati}
+		\label{tabella:riassunto ts}
+\end{center}
+\end{table}
+\renewcommand{\arraystretch}{1}
+\subsection{Test di regressione}
+Questa sezione verrà sviluppata in futuro, quando sorgerà la necessità di definire dei test di regressione per il prodotto.
+\subsection{Test di accettazione}
+Questa sezione verrà sviluppata in futuro, quando sorgerà la necessità di definire dei test di accettazione per il prodotto.
 \pagebreak
