@@ -240,7 +240,23 @@
 			\item{Valore intervallo stato nodo non valido (UC1.7.3).}
 		\end{itemize}
 	}
-\end{itemize} 
+\end{itemize}
+\subsection{UC1.2.2.3.3: Valore nome stato nodo non valido} 
+\hypertarget{UC1.2.2.3.3}{} 
+\begin{itemize} 
+	\item{\textbf{Attori primari}: Utente;} 
+	\item{\textbf{Scopo e descrizione}:l'attore ha modificato il nome di uno stato di un nodo con un valore non valido. Le principali cause d'errore possono essere l'inserimento di una stringa vuota od il nome di uno stato già esistente all'interno dello stesso nodo;} 
+	\item{\textbf{Precondizione}: l'attore ha modificato il nome di uno stato di un nodo;} 
+	\item{\textbf{Postcondizione}: l'attore viene informato della causa d'errore ed il nome dello stato viene ripristinato al valore precedente.} 
+\end{itemize}
+\subsection{UC1.2.3.3.4: Valori dell'intervallo di uno stato di un nodo non validi} 
+\hypertarget{UC1.2.2.3.4}{} 
+\begin{itemize} 
+	\item{\textbf{Attori primari}: Utente;} 
+	\item{\textbf{Scopo e descrizione}: l'attore ha modificato l'intervallo di valori associato ad uno stato di un nodo con dei valori non validi. La principale causa d'errore può essere l'inserimento di un limite inferiore maggiore rispetto al limite superiore o viceversa;} 
+	\item{\textbf{Precondizione}: l'attore ha modificato l'intervallo di valori associato ad uno stato di un nodo;} 
+	\item{\textbf{Postcondizione}: l'attore viene informato dell'errore, il nodo e tutti i collegamenti ad esso associati vengono temporaneamente disattivati dalla rete fintanto che l'errore non viene risolto.} 
+\end{itemize}
 \subsection{UC1.2.2.4: Modifica cella CPT} 
 \hypertarget{UC1.2.2.4}{} 
 \begin{itemize} 
@@ -254,6 +270,30 @@
 			\item{Valore cella CPT non valido (UC1.7.5).}
 		\end{itemize}
 	}
+\end{itemize}
+\subsection{UC1.2.2.5: Somma percentuali CPT non valida} 
+\hypertarget{UC1.2.2.5}{} 
+\begin{itemize} 
+	\item{\textbf{Attori primari}: Utente;} 
+	\item{\textbf{Scopo e descrizione}: per ogni possibile combinazione esistente di tutti i possibili stati dei nodi predecessori, la somma dei valori delle probabilità condizionate di ogni stato del nodo deve essere inferiore a 100 oppure 1, a seconda del sistema di interpretazione scelto;} 
+	\item{\textbf{Precondizione}: l'attore ha modificato una qualsiasi cella della CPT del nodo;} 
+	\item{\textbf{Postcondizione}: l'attore viene informato dell'errore, il nodo e tutti i collegamenti ad esso associati vengono temporaneamente disattivati dalla rete fintanto che l'errore non viene risolto.}
+\end{itemize} 
+\subsection{UC1.2.2.6: Valore cella CPT non valido} 
+\hypertarget{UC1.2.2.6}{} 
+\begin{itemize} 
+	\item{\textbf{Attori primari}: Utente;} 
+	\item{\textbf{Scopo e descrizione}: l'attore ha inserito all'interno di una cella della CPT di un nodo un valore non valido. Una cella della CPT contiene una probabilità condizionata, di conseguenza qualsiasi valore al di fuori dell'intervallo 0-100 oppure 0-1, a seconda del sistema di rappresentazione scelto, è considerato come non valido;} 
+	\item{\textbf{Precondizione}: l'attore ha inserito all'interno di una cella della CPT di un nodo un valore non valido;} 
+	\item{\textbf{Postcondizione}: l'attore viene informato dell'errore. Il nodo e tutti i collegamenti ad esso associati vengono temporaneamente disattivati dalla rete fintanto che l'errore non viene risolto.} 
+\end{itemize}
+\subsection{UC1.2.3: Inserimento nome nodo non valido} 
+\hypertarget{UC1.2.3}{} 
+\begin{itemize} 
+	\item{\textbf{Attori primari}: Utente;} 
+	\item{\textbf{Scopo e descrizione}: l'attore ha modificato il nome di un nodo con un valore non valido. Le principali cause d'errore possono essere l'inserimento di una stringa vuota od il nome di un nodo già esistente;} 
+	\item{\textbf{Precondizione}: l'attore ha modificato il nome di nodo;} 
+	\item{\textbf{Postcondizione}: l'attore viene informato della causa d'errore ed il nome del nodo viene ripristinato al valore precedente.} 
 \end{itemize} 
 \subsection{UC1.3: Eliminazione di un nodo dalla rete} 
 \hypertarget{UC1.3}{} 
@@ -354,71 +394,17 @@
 \hypertarget{UC1.6}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: la rete creata dall'attore tramite l'editor grafico viene salvata su disco su un apposito file JSON;} 
-	\item{ \textbf{Precondizione}: il sistema permette di leggere un file JSON, l'attore ha indicato di voler salvare la rete su file;} 
-	\item{\textbf{Postcondizione}: viene salvato un file contenente la configurazione attuale.} 
+	\item{\textbf{Scopo e descrizione}: L'intera struttura realizzata dall'utente tramite l'editor grafico, cioè l'insieme dei nodi ed i collegamenti tra essi deve essere salvabile su disco all'interno di un apposito file JSON;} 
+	\item{ \textbf{Precondizione}: L'utente ha indicato al sistema di voler salvare la rete all'interno di un apposito file JSON} 
+	\item{\textbf{Postcondizione}: viene salvato su disco un file JSON contenente la struttura della rete realizzata.} 
 \end{itemize} 
 \subsection{UC1.7: Errore modifica nodo}
-\hypertarget{UC1.7}{} 
-\begin{figure} [H]
-	\centering
-	\includegraphics[scale=0.45]{Img/UC1-7} 
-	\caption{UC1.7 - Errore modifica nodo} \label{} 
-\end{figure}
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
 	\item{\textbf{Scopo e descrizione}: l'attore, durante un'operazione di modifica di un nodo, ha inserito dei valori non validi per uno o più parametri. La causa dell'errore dovrà essere opportunamente segnalata all'attore. Il nodo e tutti i collegamenti ad esso associati, fintanto che gli errori non verranno risolti, risulteranno come temporaneamente inattivi all'interno della rete;} 
 	\item{\textbf{Precondizione}: l'attore ha eseguito una o più operazioni di modifica ad un nodo inserendo valori non validi;} 
-	\item{\textbf{Flusso base degli eventi}: } 
-	\begin{itemize} 
-		\item{L'attore può inserire un nome non valido per un nodo (UC1.7.1);} 
-		\item{L'attore può inserire un nome non valido per lo stato di un nodo (UC1.7.2);} 
-		\item{L'attore può inserire dei valori non validi per l'intervallo associato ad uno stato di un nodo(UC1.7.3);} 
-		\item{La somma delle probabilità condizionate può essere non coerente (UC1.7.4);} 
-		\item{L'attore può inserire un valore non valido per una cella della CPT associata ad un nodo (UC1.7.5).} 
-	\end{itemize} 
 	\item{\textbf{Postcondizione}: gli errori sono stati gestiti correttamente e l'attore è stato informato di essi;} 
-\end{itemize} 
-\subsection{UC1.7.1: Inserimento nome nodo non valido} 
-\hypertarget{UC1.7.1}{} 
-\begin{itemize} 
-	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: l'attore ha modificato il nome di un nodo con un valore non valido. Le principali cause d'errore possono essere l'inserimento di una stringa vuota od il nome di un nodo già esistente;} 
-	\item{\textbf{Precondizione}: l'attore ha modificato il nome di nodo;} 
-	\item{\textbf{Postcondizione}: l'attore viene informato della causa d'errore ed il nome del nodo viene ripristinato al valore precedente.} 
-\end{itemize} 
-\subsection{UC1.7.2: Valore nome stato nodo non valido} 
-\hypertarget{UC1.7.2}{} 
-\begin{itemize} 
-	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}:l'attore ha modificato il nome di uno stato di un nodo con un valore non valido. Le principali cause d'errore possono essere l'inserimento di una stringa vuota od il nome di uno stato già esistente all'interno dello stesso nodo;} 
-	\item{\textbf{Precondizione}: l'attore ha modificato il nome di uno stato di un nodo;} 
-	\item{\textbf{Postcondizione}: l'attore viene informato della causa d'errore ed il nome dello stato viene ripristinato al valore precedente.} 
-\end{itemize} 
-\subsection{UC1.7.3: Valori dell'intervallo di uno stato di un nodo non validi} 
-\hypertarget{UC1.7.3}{} 
-\begin{itemize} 
-	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: l'attore ha modificato l'intervallo di valori associato ad uno stato di un nodo con dei valori non validi. La principale causa d'errore può essere l'inserimento di un limite inferiore maggiore rispetto al limite superiore o viceversa;} 
-	\item{\textbf{Precondizione}: l'attore ha modificato l'intervallo di valori associato ad uno stato di un nodo;} 
-	\item{\textbf{Postcondizione}: l'attore viene informato dell'errore, il nodo e tutti i collegamenti ad esso associati vengono temporaneamente disattivati dalla rete fintanto che l'errore non viene risolto.} 
-\end{itemize} 
-\subsection{UC1.7.4: Somma percentuali CPT non valida} 
-\hypertarget{UC1.7.4}{} 
-\begin{itemize} 
-	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: per ogni possibile combinazione esistente di tutti i possibili stati dei nodi predecessori, la somma dei valori delle probabilità condizionate di ogni stato del nodo deve essere inferiore a 100 oppure 1, a seconda del sistema di interpretazione scelto;} 
-	\item{\textbf{Precondizione}: l'attore ha modificato una qualsiasi cella della CPT del nodo;} 
-	\item{\textbf{Postcondizione}: l'attore viene informato dell'errore, il nodo e tutti i collegamenti ad esso associati vengono temporaneamente disattivati dalla rete fintanto che l'errore non viene risolto.}
-\end{itemize} 
-\subsection{UC1.7.5: Valore cella CPT non valido} 
-\hypertarget{UC1.7.5}{} 
-\begin{itemize} 
-	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: l'attore ha inserito all'interno di una cella della CPT di un nodo un valore non valido. Una cella della CPT contiene una probabilità condizionata, di conseguenza qualsiasi valore al di fuori dell'intervallo 0-100 oppure 0-1, a seconda del sistema di rappresentazione scelto, è considerato come non valido;} 
-	\item{\textbf{Precondizione}: l'attore ha inserito all'interno di una cella della CPT di un nodo un valore non valido;} 
-	\item{\textbf{Postcondizione}: l'attore viene informato dell'errore. Il nodo e tutti i collegamenti ad esso associati vengono temporaneamente disattivati dalla rete fintanto che l'errore non viene risolto.} 
-\end{itemize} 
+\end{itemize}   
 \subsection{UC1.8: Salvataggio file JSON} 
 \hypertarget{UC1.8}{} 
 \begin{figure} [H]
