@@ -6,23 +6,22 @@ La qualità di un qualsiasi prodotto o sistema è strettamente legata alla quali
 	È impossibile creare prodotti di alta qualità se il proprio \gl{way of working} è scadente: risulta quindi fondamentale che i processi attuati, \emph{in primis}, garantiscano un elevato livello qualitativo. Il gruppo 7DOS ha deciso di adottare la normativa \gl{ISO/IEC 15504}, anche nota come \gl{SPICE}, e di seguire il principio di miglioramento continuo (\gl{PDCA}). 
 
 
-\subsubsection{Procedure di qualità di processo}
+\subsubsection{Obiettivi di qualità di processo}
 
-\paragraph{Obiettivi}
 Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
 
 \begin{itemize}
-	\item{\textbf{Pianificazione}: organizzazione oraria del lavoro, prestando attenzione nell'assegnazione dei compiti ai vari membri del gruppo;
+	\item{\textbf{Pianificazione}: organizzazione oraria del lavoro, prestando attenzione nell'assegnazione dei compiti ai vari membri del gruppo e attenendosi ai costi preventivati;
 	}
 	\item{\textbf{Budget}: controllo e verifica della pianificazione monetaria cercando di attenersi ai costi preventivati;
 	}
 	\item{\textbf{Rischi}: quantificazione ed individuazione di rischi interni ed esterni, con particolare attenzione al calcolo dei rischi non previsti;
 	}
-	\item{\textbf{Build e versionamento}: quantificazione di build e versionamenti dei prodotti
+	\item{\textbf{Versionamento e build}: monitoraggio del contenuto e quantificazione dei vari \gl{commit}. Inoltre ogni aggiornamento ad una nuova versione verrà controllato tramite uno strumento di \gl{buld automation}.
 	}
 \end{itemize}
 
-Le metriche utilizzate sono le seguenti:
+Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
 \begin{itemize}
 	\item{\textbf{Pianificazione}: 
 		\begin{itemize}
@@ -47,7 +46,7 @@ Le metriche utilizzate sono le seguenti:
 	}
 \end{itemize}
 
-\subsection{Tabella riassuntiva delle metriche relative ai processi}
+\subsubsection{Tabella riassuntiva delle metriche relative ai processi}
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
 	\centering
@@ -82,23 +81,32 @@ Tale modello comprende 8 caratteristiche (ciascuna divisa in sotto-caratteristic
 
 Per praticità e rilevanza ai fini del prodotto, sono state selezionate 5 caratteristiche da considerare e per ciascuna sono state individuate le sotto-caratteristiche più rilevanti al progetto, da perseguire come obiettivi prioritari. In particolare, sono state scartate: \gl{Compatibility}, in quanto andando a realizzare un plug-in (di natura integrato in un sistema preesistente) è stata giudicata superflua; \gl{Security}, in quanto il plug-in non dovrà gestire autenticazione o raccolta di dati; ed infine \gl{Portability} in quanto essendo il prodotto un plug-in per un determinato sistema, non è rilevante la sua portabilità ad altri ambienti. 
 
-\subsection{Metriche relative ai documenti}
+\subsubsection{Obiettivi di qualità di prodotto}
+Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+
+\paragraph{Qualità dei documenti}
+	\begin{itemize}
+		\item{\textbf{Leggibilità}: i documenti prodotti dovranno essere leggibili e comprensibili da persone con almeno una licenza di istruzione media;}
+		\item{\textbf{Correttezza ortografica}: i documenti prodotti dovranno essere privi di errori ortografici.}
+	\end{itemize}
+
+Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
 
 \begin{itemize}
-	\item{\textbf{Grammatica}: controllo e verifica della correttezza grammaticale
+	\item{\textbf{Leggibilità}:
+		\begin{itemize}
+			\item{\emph{Gunning fog index};}
+			\item{\emph{Indice di Gulpease}.}
+		\end{itemize}	
+	}
+	\item{\textbf{Correttezza ortografica}:
 		\begin{itemize}
 			\item{\emph{Numero di errori grammaticali}.}
 		\end{itemize}	
 	}
-	\item{\textbf{Lettura e comprensione}: facilità di lettura e comprensione di un testo
-		\begin{itemize}
-			\item{\emph{Gunning fog index}.}
-			\item{\emph{Indice di Gulpease}.}
-		\end{itemize}	
-	}
 \end{itemize}
 
-\subsection{Metriche relative ai prodotti software}
+\subsubsection{Qualità dei prodotti software}
 
 \begin{itemize}
 	\item{\textbf{Sviluppo e rispetto dei requisiti}:
