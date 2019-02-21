@@ -109,22 +109,48 @@ Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, 
 \subsubsection{Qualità dei prodotti software}
 
 \begin{itemize}
-	\item{\textbf{Sviluppo e rispetto dei requisiti}:
+	\item{\textbf{Functional Suitability}: l'insieme delle funzioni rispettano le aspettative e i risultati ottenuti sono corretti e presentano livelli di precisione desiderati;
+	}
+	\item{\textbf{Performance Efficiency}: una determinata funzionalità del sistema richiede la minor quantità di risorse disponibili e, al tempo stesso, deve essere eseguita nel minor tempo possibile; 
+	}
+	\item{\textbf{Usability}: il prodotto è comprensibile dall'utente e il tempo per conoscere a pieno le sue funzionalità è accettabile. Inoltre, queste ultime devono essere coerenti con ciò che l'utente si aspetta;
+	}
+	\item{\textbf{Reliability}: il prodotto svolge le sue funzioni correttamente mentre è in uso. Questo comporta che vengano evitati il più possibile malfunzionamenti in caso di \gl{fault}. Se questi si verificano, vengono attivate procedure di gestione dell'errore in modo da non influenzare le prestazioni;
+	}
+	\item{\textbf{Maintainability}: il prodotto può essere modificato, tramite azioni di correzione, o aggiornato, tramite azioni di miglioramento. In particolare, deve essere possibile risalire rapidamente alle cause che hanno generato un malfunzionamento, eseguire cambiamenti di componenti originali e testare il sistema per validare le varie modifiche.
+	}
+\end{itemize}
+
+Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+\begin{itemize}
+	\item{\textbf{Functional Suitability}:
 		\begin{itemize}
 			\item{\emph{Functional Implementation Completeness}.}
 			\item{\emph{Average Functional Implementation Correctness}.}			
 		\end{itemize}	
 	}
-	\item{\textbf{Interazioni con l'utente}: 
+	\item{\textbf{Performance Efficiency}:
+		\begin{itemize}
+			\item{\emph{Tempo di risposta}.}
+		\end{itemize}
+	}
+	\item{\textbf{Usability}: 
 		\begin{itemize}
 			\item{\emph{Average Learning Time}.}
 		\end{itemize}	
 	}
-	\item{\textbf{Test e completezza}: 
-	\begin{itemize}
-		\item{\emph{Failure Density}.}
-	\end{itemize}	
-}
+	\item{\textbf{Reliability}: 
+		\begin{itemize}
+			\item{\emph{Failure Density};}
+			\item{\emph{Blocco di operzioni non corrette}.}
+		\end{itemize}	
+	}
+	\item{\textbf{Maintainability}: 
+		\begin{itemize}
+			\item{\emph{Failure Analysis};}
+			\item{\emph{Comment Ratio}.}
+		\end{itemize}	
+	}
 \end{itemize}
 
 \subsection{Tabella riassuntiva delle metriche relative ai prodotti}
@@ -135,14 +161,17 @@ Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, 
 		\hline
 		\rowcolor{title_row}
 		\textbf{\color{title_text}{Nome Metrica}} & \textbf{\color{title_text}{Intervallo limite}} & \textbf{\color{title_text}{Range accettabile}} & \textbf{\color{title_text}{Range ottimale}} \\ \hline
-		Functional Implementation Completeness & 0-100 & 75-100 & 100 \\ \hline
-		Average Functional Implementation Correctnes&0-100&80-100&95-100 \\ \hline
-		Numero di errori grammaticali & / & 0 & 0 \\ \hline
 		Gunning fog index & / &12-15&0-12 \\ \hline
 		Indice di Gulpease & 0-100& 40-100& 60-100 \\ \hline
-		Indice di Flesh& 0-100 & 50-100& 60-100\\ \hline
+		Numero di errori grammaticali & / & 0 & 0 \\ \hline
+		Functional Implementation Completeness & 0-100 & 75-100 & 100 \\ \hline
+		Average Functional Implementation Correctnes&0-100&80-100&95-100 \\ \hline
+		Tempo di risposta & / &0-8 sec & 0-3 sec \\ \hline
 		Average Learning Time& / &0-15 & 0-30 \\ \hline
 		Failure Density&0-100&0-10&0\\ \hline
+		Blocco di operazioni non corrette &0-100&80-10&95-100\\ \hline
+		Failure Analysis&0-100&60-10&80-100\\ \hline
+		Comment Ratio&0-100&60-10&80-100\\ \hline
 	\end{tabular}
 	\caption{Riassunto delle metriche dei test sui prodotti}
 	\label{tabella:riassunto metriche dei test sui prodotti}
