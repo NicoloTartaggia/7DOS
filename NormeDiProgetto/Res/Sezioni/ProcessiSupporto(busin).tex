@@ -327,4 +327,38 @@ Dove:
 	\item{\textbf{T\textsubscript{f}}: è il numero di test falliti;}
 	\item{\textbf{T\textsubscript{e}}: è il numero di test eseguiti.}
 \end{itemize}
+
+\subparagraph{Failure Analysis}\Spazio
+Misurazione in percentuale delle modifiche effettuate in risposta a failure che hanno portato all'introduzione di nuove failure in altre componenti del sistema. \\
+Viene utilizzata la seguente formula:
+$$FA=\frac{NF_I}{NF_R}*100$$
+Dove:
+\begin{itemize}
+	\item{\textbf{FA}: è il valore della metrica;}
+	\item{\textbf{NF\textsubscript{I}}: è il numero di failure delle quali sono state individuate le cause;}
+	\item{\textbf{NF\textsubscript{R}}: è il numero di failure rilevate.}
+\end{itemize}
+
+\subparagraph{Tempo di risposta}\Spazio
+Misurazione in secondi che indica il tempo medio che intercorre fra la richiesta software di una determinata funzionalità e la restituzione del risultato all'utente. \\
+Viene utilizzata la seguente formula:
+$$TR=\frac{\sum\limits_{i=1}^N{T_i}}{N}$$
+Dove:
+\begin{itemize}
+	\item{\textbf{TR}: è il valore della metrica;}
+	\item{\textbf{T\textsubscript{i}}: è il tempo intercorso fra la richiesta \emph{i} di una funzionalità ed il comportamento delle operazioni necessarie a restituire un risultato a tale richiesta;}
+	\item{\textbf{N}: è il numero totale di funzioni considerate.}
+\end{itemize}
+
+\subparagraph{Comment Ratio}\Spazio
+Misurazione in percentuale che indica il rapporto tra il numero di righe in cui è presente del codice ed il numero di righe in cui sono presenti dei commenti(o annotazioni). \\
+Viene utilizzata la seguente formula:
+$$CR=\frac{NR_C}{NR_A}*100$$
+Dove:
+\begin{itemize}
+	\item{\textbf{CR}: è il valore della metrica;}
+	\item{\textbf{NR\textsubscript{C}}: è il numero di righe in cui è presente del codice;}
+	\item{\textbf{NR\textsubscript{A}}: è il numero di righe in cui sono presenti dei commenti.}
+\end{itemize}
+
 \pagebreak
