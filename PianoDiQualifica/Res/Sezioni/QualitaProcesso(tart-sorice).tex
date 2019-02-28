@@ -6,44 +6,68 @@ La qualità di un qualsiasi prodotto o sistema è strettamente legata alla quali
 	È impossibile creare prodotti di alta qualità se il proprio \gl{way of working} è scadente: risulta quindi fondamentale che i processi attuati, \emph{in primis}, garantiscano un elevato livello qualitativo. Il gruppo 7DOS ha deciso di adottare la normativa \gl{ISO/IEC 15504}, anche nota come \gl{SPICE}, e di seguire il principio di miglioramento continuo (\gl{PDCA}). 
 
 
-\subsubsection{Obiettivi di qualità di processo}
-
+\subsubsection{Pianificazione e controllo} 
+Questo processo ha come scopo la pianificazione dello sviluppo del progetto, andando a definire suddivisione delle attività da svolgere, organizzazione oraria del lavoro, pianificazione e controllo dei costi e standard di supporto e accertandosi che il team abbia padronanza delle tecnologie utilizzate.
+\paragraph{Obiettivi} \Spazio
 Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
-
-\begin{itemize}
-	\item{\textbf{Pianificazione}: organizzazione oraria del lavoro, prestando attenzione nell'assegnazione dei compiti ai vari membri del gruppo e attenendosi ai costi preventivati;
-	}
-	\item{\textbf{Budget}: controllo e verifica della pianificazione monetaria cercando di attenersi ai costi preventivati;
-	}
-	\item{\textbf{Rischi}: quantificazione ed individuazione di rischi interni ed esterni, con particolare attenzione al calcolo dei rischi non previsti;
-	}
-	\item{\textbf{Versionamento e build}: monitoraggio del contenuto e quantificazione dei vari \gl{commit}. Inoltre ogni aggiornamento ad una nuova versione verrà controllato tramite uno strumento di \gl{buld automation}.
-	}
-\end{itemize}
+	\begin{itemize}
+		\item{\textbf{Pianificazione}: organizzazione oraria del lavoro, prestando attenzione nell'assegnazione dei compiti ai vari membri del gruppo e attenendosi ai costi preventivati;
+		}
+		\item{\textbf{Budget}: controllo e verifica della pianificazione monetaria cercando di attenersi ai costi preventivati;
+		}
+		\item{\textbf{Standard}: attenersi a standard ben precisi, affinché il gruppo abbia sempre una linea guida di supporto;
+		}
+		\item{\textbf{Preparazione del personale}: assicurarsi che ciascun membro del personale abbia familiarità con le tecnologie richieste in ogni \gl{task}, in modo tale da garantire produttività dell'ambiente lavorativo;
+		}
+	\end{itemize}
 
 Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
 \begin{itemize}
-	\item{\textbf{Pianificazione}: 
-		\begin{itemize}
-			\item{\emph{Schedule Variance} (\gl{SV}).}
-		\end{itemize}
-	}
-	\item{\textbf{Budget}: 
-		\begin{itemize}
+			\item{\emph{Schedule Variance} (\gl{SV});}
 			\item{\emph{Budget Variance} (\gl{BV}).}
-		\end{itemize}	
+\end{itemize}
+
+\subsubsection{Gestione dei rischi} 
+Questo processo ha come scopo il riconoscimento dei rischi a cui il progetto può incorrere. Il gruppo 7DOS mira, così facendo, a ridurre il più possibile il verificarsi di essi.
+\paragraph{Obiettivi} \Spazio
+Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+\begin{itemize}
+	\item{\textbf{Identificazione nuovi rischi}: ad ogni fase del progetto il gruppo identificherà i possibili nuovi rischi;}
+	\item{\textbf{Analisi dei rischi}: i rischi individuati verranno analizzati in modo da poter fornire procedure automatiche per prevenire che uno di essi si verifichi.}
+\end{itemize}
+Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+\begin{itemize}
+	\item\emph{Numero rischi non previsti;}
+	\item\emph{Indisponibilità servizi esterni.}
+\end{itemize}
+
+\subsubsection{Gestione dei test} 
+Questo processo ha come scopo 
+\paragraph{Obiettivi} \Spazio
+Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+\begin{itemize}
+	\item{}
+\end{itemize}
+Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+\begin{itemize}
+	\item{}
+\end{itemize}
+
+\subsubsection{Versionamento e build} 
+Questo processo ha come scopo la quantificazione e il controllo dei commit, in modo tale da verificare l'effettivo sviluppo di versioni sempre più complete e stabili del prodotto. Inoltre, lo strumento di integrazione continua \gl{Travis CI} permetterà di eseguire le \gl{build} in modo automatico, permettendo una verifica della correttezza del codice rispetto alle norme.
+\paragraph{Obiettivi} \Spazio
+Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+\begin{itemize}
+	\item{\textbf{Commit frequenti}: ogni membro del gruppo deve garantire una buona frequenza di commit, affinché il prodotto sia sempre aggiornato con le ultime modifiche;
+	\item{\textbf{Modifiche di piccole dimensioni}: ogni commit deve comportare una quantità di modifiche limitata. In questo modo, ogni versione del prodotto è monitorabile e verificabile;}
+	\item{\textbf{Buona riuscita delle build}: ogni membro deve accertarsi che ogni commit comporti una build positiva, in modo tale evitare la diffusione di errori.}
 	}
-	\item{\textbf{Rischi}:
-		\begin{itemize}
-			\item\emph{Numero rischi non previsti.}
-			\item\emph{Indisponibilità servizi esterni.}	
-		\end{itemize}	
-	}
-	\item{\textbf{Build e versionamento}: 
-		\begin{itemize}
-			\item\emph{Media commit a settimana.}
-		\end{itemize}	
-	}
+\end{itemize}
+Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+\begin{itemize}
+	\item\emph{Media commit a settimana;}
+	\item\emph{Media build a settimana;}
+	\item\emph{Percentuale build superate.}
 \end{itemize}
 
 \subsubsection{Tabella riassuntiva delle metriche relative ai processi}
@@ -59,6 +83,8 @@ Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, 
 		Numero rischi non previsti&$\geq$-3 &$\geq$0 \\ \hline
 		Indisponibilità servizi esterni&$\geq$-5 &$\geq$0 \\ \hline
 		Media commit a settimana&$\geq$20 &$\geq$30 \\ \hline
+		Media build a settimana&$\geq$20 &$\geq$30 \\ \hline
+		Percentuale build superate& $\geq$70\% &$\geq$80\% \\ \hline
 
 	\end{tabular}
 	\caption{Riassunto delle metriche dei test sui processi}
@@ -81,10 +107,10 @@ Tale modello comprende 8 caratteristiche (ciascuna divisa in sotto-caratteristic
 
 Per praticità e rilevanza ai fini del prodotto, sono state selezionate 5 caratteristiche da considerare e per ciascuna sono state individuate le sotto-caratteristiche più rilevanti al progetto, da perseguire come obiettivi prioritari. In particolare, sono state scartate: \gl{Compatibility}, in quanto andando a realizzare un plug-in (di natura integrato in un sistema preesistente) è stata giudicata superflua; \gl{Security}, in quanto il plug-in non dovrà gestire autenticazione o raccolta di dati; ed infine \gl{Portability} in quanto essendo il prodotto un plug-in per un determinato sistema, non è rilevante la sua portabilità ad altri ambienti. 
 
-\subsubsection{Obiettivi di qualità di prodotto}
+\subsubsection{Qualità dei documenti}
+I documenti prodotti devono possedere caratteristiche consistenti. In particolare, essi devono essere leggibili, comprensibili e corretti a livello ortografico e sintattico.
+\paragraph{Obiettivi} \Spazio
 Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
-
-\paragraph{Qualità dei documenti}
 	\begin{itemize}
 		\item{\textbf{Leggibilità}: i documenti prodotti dovranno essere leggibili e comprensibili da persone con almeno una licenza di istruzione media;}
 		\item{\textbf{Correttezza ortografica}: i documenti prodotti dovranno essere privi di errori ortografici.}
@@ -93,20 +119,12 @@ Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
 Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
 
 \begin{itemize}
-	\item{\textbf{Leggibilità}:
-		\begin{itemize}
-			\item{\emph{Gunning fog index};}
-			\item{\emph{Indice di Gulpease}.}
-		\end{itemize}	
-	}
-	\item{\textbf{Correttezza ortografica}:
-		\begin{itemize}
-			\item{\emph{Numero di errori grammaticali}.}
-		\end{itemize}	
-	}
+		\item{\emph{Gunning fog index};}
+		\item{\emph{Indice di Gulpease};}	
+		\item{\emph{Numero di errori grammaticali}.}
 \end{itemize}
 
-\paragraph{Qualità dei prodotti software}
+\subsubsection{Qualità del software}
 
 \begin{itemize}
 		\item{\textbf{Functional Suitability}: caratteristica che esprime il grado di soddisfacimento dei requisiti espliciti ed impliciti da parte di un prodotto o servizio.\\ L'insieme delle funzioni rispettano le aspettative e i risultati ottenuti sono corretti e presentano livelli di precisione desiderati;
