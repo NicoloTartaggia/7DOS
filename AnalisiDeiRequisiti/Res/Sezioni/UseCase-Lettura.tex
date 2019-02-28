@@ -105,66 +105,35 @@
 	\item \textbf{Postcondizione}: l'attore viene notificato dell'errore, il sistema rimane nello stato precedente all'azione.
 \end{itemize}
 
-\subsection{UC3: Lettura dei dati dalla rete Bayesiana}
+\subsection{UC3: Visualizzazione dell'output della rete Bayesiana}
 \hypertarget{UC3}{}
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.45]{Img/UC3}
-	\caption{UC3 - Lettura dei dati dalla rete Bayesiana}\label{}
+	\caption{UC3: Visualizzazione dell'output della rete Bayesiana}\label{}
 \end{figure}
 \begin{itemize}
-	\item \textbf{Attori}: Utente, Grafana;
-	\item \textbf{Scopo e descrizione}: l'utente richiede di visualizzare dei dati calcolati dalla rete nella dashboard; Grafana legge e rende disponibili tali dati.
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Scopo e descrizione}: l'utente richiede di visualizzare dei dati calcolati dalla rete nella dashboard, tali dati vengono resi disponibili tramite panel.
 	\item \textbf{Precondizione}: è stata caricata e configurata una rete Bayesiana adeguata; Grafana riceve correttamente informazioni dalla sorgente dati;
 	\item \textbf{Flusso principale degli eventi}:
 	\begin{itemize}
-		\item Lettura dei dati dalla rete (UC3.2);
-		\item Aggiornamento della dashboard (UC3.3)
+		\item Lettura dei dati dalla rete;
+		\item Aggiornamento della dashboard (UC3.1)
 	\end{itemize}
-	\item \textbf{Postcondizione}: Grafana legge correttamente i dati dalla rete Bayesiana e li rende disponibili all'utente.
+	\item \textbf{Postcondizione}: l'output della rete Bayesiana viene letto e reso disponibile all'utente tramite panel correttamente.
 \end{itemize}
-\subsection{UC3.1: Lettura dei dati dalla rete}
-\hypertarget{UC3.1}{}
-\begin{itemize}
-	\item \textbf{Attori}: Grafana;
-	\item \textbf{Scopo e descrizione}: Grafana legge i dati necessari dalla rete Bayesiana;
-	\item \textbf{Precondizione}: Grafana riesce a leggere i dati dalla rete Bayesiana;
-	\item \textbf{Postcondizione}: Grafana ha letto correttamente i dati dalla rete Bayesiana.
-\end{itemize}
-\subsection{UC3.2: Aggiornamento della dashboard}
-\hypertarget{UC3.2}{}
-\begin{figure} [H]
-	\centering
-	\includegraphics[scale=0.45]{Img/UC3-2}
-	\caption{UC3.2 - Aggiornamento della dashboard}\label{}
-\end{figure}
-\begin{itemize}
-	\item \textbf{Attori}: Utente, Grafana;
-	\item \textbf{Scopo e descrizione}: l'utente imposta la frequenza di aggiornamento della dashboard. Grafana aggiorna la visualizzazione dei panel;
-	\item \textbf{Precondizione}: Grafana legge correttamente i dati dalla rete Bayesiana, e il sistema permette di impostare la frequenza di aggiornamento;
-	\item \textbf{Flusso principale degli eventi}:
-	\begin{itemize}
-		\item Impostazione della frequenza di aggiornamento della dashboard (UC3.2.1);
-		\item Aggiornamento di un panel (UC3.2.2)
-	\end{itemize}
-	\item \textbf{Postcondizione}: Grafana aggiorna la dashboard con nuovi dati letti dalla rete, secondo la frequenza desiderata.
-\end{itemize}
-\subsection{UC3.2.1: Impostazione della frequenza di aggiornamento della dashboard}
-\hypertarget{UC3.2.1}{}
+\subsection{UC3.1: Aggiornamento della dashboard}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Scopo e descrizione}: l'attore imposta la frequenza secondo cui aggiornare la visualizzazione della dashboard;
-	\item \textbf{Precondizione}: il sistema permette l'impostazione della frequenza di aggiornamento della dashboard;
-	\item \textbf{Postcondizione}: è stata impostata la frequenza desiderata.
-\end{itemize}
-
-\subsection{UC3.2.2: Aggiornamento di un panel}
-\hypertarget{UC3.2.2}{}
-\begin{itemize}
-	\item \textbf{Attori}: Grafana;
-	\item \textbf{Scopo e descrizione}: l'attore aggiorna la visualizzazione di un panel con nuovi dati dal flusso collegato;
-	\item \textbf{Precondizione}: Grafana possiede nuovi dati relativi al flusso dati rappresentato dal panel;
-	\item \textbf{Postcondizione}: la visualizzazione del panel è aggiornata in base ai nuovi dati.
+	\item \textbf{Scopo e descrizione}: l'utente imposta la frequenza di aggiornamento della dashboard; Grafana aggiorna la visualizzazione dei panel;
+	\item \textbf{Precondizione}: il sistema permette di impostare la frequenza di aggiornamento;
+	\item \textbf{Flusso principale degli eventi}:
+	\begin{itemize}
+		\item Impostazione della frequenza di aggiornamento della dashboard;
+		\item Aggiornamento dei panel.
+	\end{itemize}
+	\item \textbf{Postcondizione}: Grafana aggiorna la dashboard con nuovi dati letti dalla rete, secondo la frequenza desiderata.
 \end{itemize}
 
 \subsection{UC4: Caricamento di una rete Bayesiana da file JSON}
