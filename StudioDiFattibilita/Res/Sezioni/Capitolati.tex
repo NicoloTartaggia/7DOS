@@ -38,10 +38,10 @@
 	\newsection{Valutazione sugli altri capitolati}
 	\subsection{Capitolato C1 - Butterfly}
 	\subsubsection{Descrizione}
-	Il capitolato C1 \emph{Butterfly: monitor per processi \gl{CI/CD}}, presentato dall'azienda Imola Informatica, richiede la creazione di un applicativo che integri i sistemi di segnalazione offerti da vari software utilizzati durante i processi di \gl{Continuous Integration} e \gl{Continuous Delivery}, con l'obiettivo di centralizzare e automatizzare l'invio delle segnalazioni, e indirizzarne la ricezione in modo appropriato. 
+	Il capitolato C1 \emph{Butterfly: monitor per processi CI/CD, presentato dall'azienda Imola Informatica, richiede la creazione di un applicativo che integri i sistemi di segnalazione offerti da vari software utilizzati durante i processi di \emph{Continuous Integration} e \emph{Continuous Delivery}, con l'obiettivo di centralizzare e automatizzare l'invio delle segnalazioni, e indirizzarne la ricezione in modo appropriato. 
 	\subsubsection{Studio del dominio}
 	\paragraph{Dominio applicativo} \Spazio
-	L'obiettivo del progetto è la realizzazione di un applicativo che verrà utilizzato in un contesto di sviluppo software con processi di Continuous Integration e Continuous Delivery, in cui vengono generate frequenti segnalazioni dai vari strumenti utilizzati (e.g. commit di \gl{git}) secondo i  meccanismi di esposizione proprietari. Esso dovrà recuperare o intercettare tali segnalazioni e, sfruttando il pattern \gl{publish/subscribe}, inoltrarle agli utenti di interesse.
+	L'obiettivo del progetto è la realizzazione di un applicativo che verrà utilizzato in un contesto di sviluppo software con processi di Continuous Integration e Continuous Delivery, in cui vengono generate frequenti segnalazioni dai vari strumenti utilizzati (e.g. commit di git) secondo i  meccanismi di esposizione proprietari. Esso dovrà recuperare o intercettare tali segnalazioni e, sfruttando il pattern \emph{publish/subscribe}, inoltrarle agli utenti di interesse.
 	L'applicativo da sviluppare sarà formato da 4 componenti principali:
 	\begin{itemize}	 
 		\item \textbf{{Producers}}: hanno il compito di recuperare le segnalazioni dai vari strumenti e pubblicarle, sotto forma di messaggi, all'interno dei
@@ -54,11 +54,11 @@
 	\paragraph{Dominio tecnologico} \Spazio
 	L'applicativo dovrà potersi interfacciare con i seguenti strumenti:
 	\begin{itemize}
-		\item  \textbf{\gl{Redmine}}: \gl{Issue Tracking System} e \gl{Project Management Tool};
-		\item  \textbf{\gl{GitLab}}: software di versionamento;
-		\item  \textbf{\gl{SonarQube}}: piattaforma per l'analisi statica del codice;
-		\item  \textbf{\gl{Telegram}}: sistema di messaggistica;
-		\item  \textbf{\gl{Slack}}: software per gestire le comunicazioni in un gruppo di lavoro;
+		\item  \textbf{Redmine}: \emph{Issue Tracking System} e \emph{Project Management Tool};
+		\item  \textbf{GitLab}: software di versionamento;
+		\item  \textbf{SonarQube}: piattaforma per l'analisi statica del codice;
+		\item  \textbf{Telegram}: sistema di messaggistica;
+		\item  \textbf{Slack}: software per gestire le comunicazioni in un gruppo di lavoro;
 		\item  \textbf{Email}: posta elettronica.
 		
 	\end{itemize}
@@ -66,13 +66,13 @@
 	Le preferenze tecniche per lo sviluppo del progetto prevedono l'uso obbligatorio di determinate tecnologie e l'eventuale utilizzo di tecnologie non obbligatorie, ma fortemente consigliate:
 	\subparagraph{Tecnologie obbligatorie}
 	\begin{itemize}
-		\item  \textbf{\gl{Docker}}: strumento per la \gl{containerizzazione} di applicativi software, da usare per l'istanziazione dei componenti;
-		\item  \textbf{\gl{API Rest}}: interfacce esposte dai componenti attraverso le quali usare l'applicativo.
+		\item  \textbf{Docker}: strumento per la containerizzazione di applicativi software, da usare per l'istanziazione dei componenti;
+		\item  \textbf{API Rest}: interfacce esposte dai componenti attraverso le quali usare l'applicativo.
 	\end{itemize}
 	\subparagraph{Tecnologie consigliate}
 	\begin{itemize}
-		\item \textbf{\gl{Java8+}, \gl{Python} o \gl{Node.js}}: linguaggi per lo sviluppo dei componenti applicativi;  
-		\item  \textbf{\gl{Apache Kafka}}: piattaforma a bassa latenza per la gestione dei \gl{feed dati} in tempo reale, da usare come Broker.
+		\item \textbf{Java8+, Python o Node.js}: linguaggi per lo sviluppo dei componenti applicativi;  
+		\item  \textbf{Apache Kafka}: piattaforma a bassa latenza per la gestione dei feed dati in tempo reale, da usare come Broker.
 	\end{itemize}
 	\subsubsection{Valutazione generale}
 	\paragraph{Aspetti positivi} 
@@ -90,7 +90,7 @@
 	\subsection{Capitolato C2 - Colletta}
 	\subsubsection{Descrizione}
 	Il capitolato C2 \emph{Colletta: piattaforma raccolta dati di analisi di testo}, presentato dall'azienda Mivoq, richiede la realizzazione di una piattaforma per la raccolta di dati in cui gli utenti possono avere a disposizione e svolgere piccoli esercizi di grammatica, come l'analisi grammaticale.
-	I dati raccolti dovranno essere facilmente accessibili dagli sviluppatori con l'obiettivo di ottimizzare un software per l'analisi grammaticale mediante tecniche di \gl{apprendimento automatico}.   
+	I dati raccolti dovranno essere facilmente accessibili dagli sviluppatori con l'obiettivo di ottimizzare un software per l'analisi grammaticale mediante tecniche di apprendimento automatico.  
 	
 	\subsubsection{Studio del dominio}
 	\paragraph{Dominio applicativo} \Spazio
@@ -105,8 +105,8 @@
 	Il committente non impone l'uso di specifiche tecnologie e lascia una discreta libertà sulla scelta di esse:
 	\begin{itemize}
 		\item \textbf{HTML, CSS e JavaScript}: linguaggi per lo sviluppo della piattaforma web;
-		\item \textbf{\gl{HunPos} o \gl{FreeLing}}: software open source per il \gl{part-of-speech tagging};
-		\item  \textbf{\gl{Firebase}}: database \gl{NoSQL}.
+		\item \textbf{HunPos o FreeLing}: software open source per il \emph{part-of-speech tagging};
+		\item  \textbf{Firebase}: database NoSQL.
 	\end{itemize}
 	\subsubsection{Valutazione generale}
 	\paragraph{Aspetti positivi}
@@ -115,7 +115,7 @@
 	\end{itemize} 
 	\paragraph{Aspetti negativi} 
 	\begin{itemize}
-		\item {Le tecniche di apprendimento automatico sono sconosciute dal gruppo e ciò richiede l'onere di acquisire determinate competenze in materia;}
+		\item {Le tecniche di apprendimento automatico sono sconosciute al gruppo e ciò richiede l'onere di acquisire determinate competenze in materia;}
 		\item {Lo scopo di realizzare una applicazione per esercizi di grammatica non è risultato un ambito di interesse comune.}
 	\end{itemize} 
 	\subsubsection{Valutazione finale}
@@ -127,13 +127,13 @@ Il capitolato C4 \emph{MegAlexa: arricchitore di skill di Amazon Alexa}, present
 \subsubsection{Studio del dominio}
 
 \paragraph{Dominio applicativo} \Spazio
-L'obiettivo del progetto è la realizzazione di un applicativo web e mobile per la creazione di interazioni personalizzate con Amazon Alexa. Registrandosi alla piattaforma, l'utente potrà accedere all'applicativo che fornirà dei "connettori" (o micro-funzioni) da inserire all'interno di un \gl{workflow}, permettendo all'utente di definire una routine univoca di azioni avviabili mediante un comando vocale (e.g.: una routine composta da un messaggio di benvenuto, lettura di un \gl{feed RSS} e selezione delle notizie). Il progetto farà uso di tecnologie di sintesi e riconoscimento vocale con la previsione di realizzare un applicativo multilingue.
+L'obiettivo del progetto è la realizzazione di un applicativo web e mobile per la creazione di interazioni personalizzate con Amazon Alexa. Registrandosi alla piattaforma, l'utente potrà accedere all'applicativo che fornirà dei "connettori" (o micro-funzioni) da inserire all'interno di un \emph{workflow}, permettendo all'utente di definire una routine univoca di azioni avviabili mediante un comando vocale (e.g.: una routine composta da un messaggio di benvenuto, lettura di un \emph{feed RSS} e selezione delle notizie). Il progetto farà uso di tecnologie di sintesi e riconoscimento vocale con la previsione di realizzare un applicativo multilingue.
 \paragraph{Dominio tecnologico}
 \begin{itemize}
-	\item {\textbf{\gl{AWS} con le relative API  \gl{Gateway}, \gl{Lambda} e \gl{Aurora Serverless}}: per l'interazione con Alexa};
+	\item {\textbf{AWS con le relative API Gateway, Lambda e Aurora Serverless}: per l'interazione con Alexa};
 	\item  \textbf{Node.js}: linguaggio di programmazione per la realizzazione dell'applicativo;
 	\item \textbf{HTML, CSS e JavaScript}: linguaggi per lo sviluppo dell'interfaccia web;
-	\item  \textbf{\gl{Swift} o \gl{Kotlin}}: linguaggi per lo sviluppo della mobile app.
+	\item  \textbf{Swift o Kotlin}: linguaggi per lo sviluppo della mobile app.
 \end{itemize}
 \subsubsection{Valutazione generale}
 \paragraph{Aspetti positivi}
@@ -152,15 +152,15 @@ Per i fattori appena elencati, il gruppo si è orientato verso un capitolato div
 
 	\subsection{Capitolato C5 - P2PCS}
 \subsubsection{Descrizione}
-Il capitolato C5 \emph{P2PCS: piattaforma di peer-to-peer car sharing}, presentato dall'azienda GaiaGo, prevede la realizzazione di un servizio per il car sharing \gl{Peer-to-peer (P2P)} di uno o più mezzi di trasporto propri. L'applicativo andrà ad arricchire le funzionalità di un'applicazione mobile preesistente, chiamata \gl{GaiaGo}, la quale implementa un applicativo per il car sharing condominiale.
+Il capitolato C5 \emph{P2PCS: piattaforma di peer-to-peer car sharing}, presentato dall'azienda GaiaGo, prevede la realizzazione di un servizio per il car sharing Peer-to-peer (P2P) di uno o più mezzi di trasporto propri. L'applicativo andrà ad arricchire le funzionalità di un'applicazione mobile preesistente, chiamata GaiaGo, la quale implementa un applicativo per il car sharing condominiale.
 \subsubsection{Studio del dominio}
 \paragraph{Dominio applicativo} \Spazio
-L'obiettivo del progetto é la realizzazione di applicativo con lo scopo di far incontrare domanda e offerta di noleggio auto P2P. L'affittuario dovrà poter indicare in quali giorni e in quali orari il suo veicolo è disponibile per un'eventuale prenotazione, il luogo in cui ritirarlo ed eventuali altre condizioni alle quali il cliente dovrà sottostare per affittare il mezzo. Il cliente, invece, avrà la possibilità di cercare e prenotare veicoli per una determinata data e luogo. Il tutto dovrà essere accompagnato da un sistema che coinvolga l'utente tramite sistemi di \gl{Gamification theory}.
+L'obiettivo del progetto è la realizzazione di applicativo con lo scopo di far incontrare domanda e offerta di noleggio auto P2P. L'affittuario dovrà poter indicare in quali giorni e in quali orari il suo veicolo è disponibile per un'eventuale prenotazione, il luogo in cui ritirarlo ed eventuali altre condizioni alle quali il cliente dovrà sottostare per affittare il mezzo. Il cliente, invece, avrà la possibilità di cercare e prenotare veicoli per una determinata data e luogo. Il tutto dovrà essere accompagnato da un sistema che coinvolga l'utente tramite sistemi di Gamification theory.
 \paragraph{Dominio tecnologico} 
 \begin{itemize}
 	\item  \textbf{NodejS}: piattaforma open source per l'esecuzione di codice JavaScript server-side;
-	\item \textbf{\gl{Android}}: sistema operativo per smartphone;
-	\item \textbf{\gl{Octalysis}}: \gl{Gamification framework}.
+	\item \textbf{Android}: sistema operativo per smartphone;
+	\item \textbf{Octalysis}: \emph{Gamification framework}.
 \end{itemize}
 \pagebreak
 \subsubsection{Valutazione generale}
@@ -182,14 +182,14 @@ Il capitolato non ha colto l'interesse del team per via del contesto poco intere
 		Il capitolato \emph{C6 Soldino: piattaforma Ethereum per pagamenti IVA}, presentato dall'azienda RedBabel, richiede la realizzazione di un sistema automatizzato basato su Ethereum per il calcolo e il pagamento dell'IVA tramite un'interfaccia web.
 		\subsubsection{Studio del dominio}
 			\paragraph{Dominio applicativo} \Spazio
-			La finalità del progetto è la realizzazione di un'\gl{applicazione decentralizzata} basata su Ethereum per il calcolo automatico dell'IVA, in modo da agevolare le operazioni contabili degli esercenti. L'applicativo richiede che le attività commerciali siano registrate in una lista, così da tenere traccia della contabilità aziendale al fine di calcolare automaticamente l'importo dell'IVA su base trimestrale. Il progetto richiede anche la realizzazione di un sistema di \gl{e-commerce}.
+			La finalità del progetto è la realizzazione di un'applicazione decentralizzata basata su Ethereum per il calcolo automatico dell'IVA, in modo da agevolare le operazioni contabili degli esercenti. L'applicativo richiede che le attività commerciali siano registrate in una lista, così da tenere traccia della contabilità aziendale al fine di calcolare automaticamente l'importo dell'IVA su base trimestrale. Il progetto richiede anche la realizzazione di un sistema di \emph{e-commerce}.
 			
 			
 			\paragraph{Dominio tecnologico}
 			\begin{itemize}
-				\item \textbf{Ethereum}: piattaforma per la creazione e pubblicazione di \gl{smart contracts};
-				\item \textbf{\gl{Truffle}}: framework per Ethereum;
-				\item \textbf{\gl{Raiden Network}}: soluzione per trasferimenti di \gl{token ERC-20} quasi istantanei;
+				\item \textbf{Ethereum}: piattaforma per la creazione e pubblicazione di \emph{smart contracts};
+				\item \textbf{Truffle}: framework per Ethereum;
+				\item \textbf{Raiden Networ}}: soluzione per trasferimenti di token ERC-20 quasi istantanei;
 				\item \textbf{HTML, CSS e Javascript}: linguaggi per lo sviluppo di siti web.
 			\end{itemize}
 		\subsubsection{Valutazione generale}
