@@ -367,4 +367,35 @@ Dove:
 	\item{\textbf{NR\textsubscript{A}}: è il numero di righe in cui sono presenti dei commenti.}
 \end{itemize}
 
+\subparagraph{Code coverage}\Spazio
+Per assicurarsi che la più grande porzione possibile di codice venga testata, si adotta questa metrica, che indica in percentuale, quanto del codice sorgente
+è soggetto a test. Più alta tale percentuale, minore il rischio che vi siano criticità non rilevate.
+Per il suo calcolo si farà uso degli strumenti automatici descritti nella sezione §2.2.2.4 di questo documento, ovvero TravisCI e Coveralls.
+
+\subparagraph{Media di build in travis per settimana}\Spazio
+Media dei processi di build effettuati settimanalmente. Il calcolo viene effettuato automaticamente tramite un bot connesso a TravisCI.
+
+\subparagraph{Percentuale di criticità corrette}\Spazio
+Indica la percentuale di criticità (bug, difetti in genere) risolte sul totale di quelle note.
+Se questa percentuale è troppo bassa, il team sarà costretto a fermare i processi di sviluppo per risolvere le criticità esistenti.
+Per il calcolo viene utilizzata la seguente formula:
+$$PCR=\frac{CR}{CN}*100$$
+Dove:
+\begin{itemize}
+	\item{\textbf{PCR}: è il valore della metrica;}
+	\item{\textbf{CR}: è il numero di criticità risolte;}
+	\item{\textbf{CN}: è il numero di criticità note.}
+\end{itemize}
+
+\subparagraph{Percentuale di test eseguiti}\Spazio
+Indica la percentuale di test eseguiti sul totale di test da eseguire, serve al team di verificatori per monitorare lo svolgimento delle loro attività.
+Viene utilizzata la seguente formula:
+$$PTE=\frac{TE}{TT}*100$$
+Dove:
+\begin{itemize}
+	\item{\textbf{PTE}: è il valore della metrica;}
+	\item{\textbf{TE}: è il numero di test eseguiti;}
+	\item{\textbf{NR\textsubscript{A}}: è il numero di totale di test.}
+\end{itemize}
+
 \pagebreak
