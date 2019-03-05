@@ -183,41 +183,6 @@ Il processo di verifica ha lo scopo di esaminare un prodotto al fine di accertar
 \subsubsection{Analisi dei processi}
 Descrizione delle procedure per verificare adeguatamente lo svolgimento dei processi.
 
-\paragraph{Controllo delle metriche} \Spazio
-Alla conclusione di ogni fase del progetto, per ogni macro-attività , si devono calcolare i relativi indici. Al fine di avere un indice complessivo di fase deve essere inoltre calcolato il valore medio
-di tali indici. Di seguito verranno descritte in modo dettagliato tutte le metriche relative ai processi adottate. Per una spiegazione dettagliata riguardo gli obbiettivi che il team si è imposto di raggiungere per le suddette metriche consultare il piano di qualifica.
-\subparagraph{\gl{Schedule Variance (SV)}}\Spazio
-Metrica che indica se si è in linea, in anticipo o in ritardo rispetto alle attività pianificate nella \gl{baseline}. Essa è un indicatore di efficacia. \\
-Calcolabile attraverso la seguente formula:
-\[ SV=BCWP-BCWS\]
-Dove:
-\begin{itemize}
-	\item {\textbf{SV}: corrisponde al valore della metrica;}
-	\item {\textbf{BCWP}: corrisponde al valore, in giorni od euro, prodotto dalle attività del progetto realizzate fino alla data corrente, od in altre parole la somma complessiva del valore di tutte le componenti completate fino ad ora.}
-	\item {\textbf{BCWS}: corrisponde al numero di giorni od euro pianificati inizialmente per realizzare le attività fino alla data corrente.}	
-\end{itemize}
-Se SV > 0 significa che si sta procedendo più velocemente rispetto a quanto pianificato. Viceversa, se SV < 0 allora il gruppo è in ritardo. 
-\subparagraph{\gl{Budget Variance (BV)}}\Spazio
-Metrica che indica se la spesa complessiva fino a quel momento è maggiore o minore rispetto a quanto pianificato. Essa è un indicatore con valore contabile e finanziario. \\
-Calcolabile attraverso la seguente formula:
-\[BV=BCWS-ACWP\]
-\begin{itemize}
-	\item {\textbf{BV}: corrisponde al valore della metrica;}
-	\item {\textbf{BCWS}: corrisponde al costo pianificato in giorni od euro per realizzare le attività del progetto fino alla data corrente;}
-	\item {\textbf{ACWP}: corrisponde al costo, in giorni od euro, effettivamente sostenuto fino alla data corrente.}
-\end{itemize}
-Se BV > 0 il budget complessivo sta diminuendo con velocità minore rispetto a quanto pianificato. Viceversa se BV < 0.
-\subparagraph{Numero rischi non previsti}\Spazio
-Indica la quantità di rischi rilevati durante lo svolgimento delle attività, non preventivati all'interno dell'analisi dei rischi durante l'attuale fase del progetto.
-\subparagraph{Indisponibilità servizi esterni}\Spazio
-Numero complessivo di giorni in cui uno specifico servizio esterno, tra tutti quelli utilizzati, è rimasto indisponibile per la maggior parte del tempo rendendone quindi impossibile l'utilizzo. Sarà necessario utilizzare un contatore separato per ogni servizio utilizzato.
-\subparagraph{Media commit a settimana}\Spazio
-Media dei commit effettuati settimanalmente sulle diverse repository del gruppo. Utile per tenere traccia dell'impegno dedicato settimanalmente dal team sul progetto.
-\subparagraph{Media build a settimana}\Spazio
-Media delle build effettuate settimanalmente sulle diverse repository del gruppo. Utile per tenere traccia dell'impegno dedicato settimanalmente dal team sul progetto.
-\subparagraph{Percentuale di build superate}\Spazio
-Percentuale delle build effettuate che hanno avuto esito positivo sul numero totale delle build effettuate. Utile per tenere traccia dei progressi raggiunti dal team.
-
 \paragraph{Analisi PDCA} \Spazio
 Attraverso lo studio della rappresentazione grafica del \gl{PDCA} relativo alla fase di progetto in esame, verranno tratte delle considerazioni riguardo lo svolgimento dei processi.
 Da esso si possono identificare in modo visuale, quindi generico e non numericamente \gl{quantificabile}, dei dati sulla fase in esame ed osservarne la tendenza:
@@ -229,37 +194,9 @@ Da esso si possono identificare in modo visuale, quindi generico e non numericam
 \end{itemize}
 
 
-
 \subsubsection{Analisi dei documenti}
  Descrizione delle procedure da eseguire per verificare adeguatamente i documenti.
-\paragraph{Controllo delle metriche} \Spazio
-In seguito ad una qualsiasi modifica di un documento, si devono calcolare tutti i relativi indici di quel specifico documento. Inoltre dovrà essere ricalcolata la media complessiva di tutti gli indici calcolati fino a quel momento del documento in questione.
-Di seguito verranno descritte in modo dettagliato tutte le metriche relative ai documenti adottate. Per una spiegazione dettagliata riguardo gli obbiettivi che il team si è imposto di raggiungere per le suddette metriche consultare il piano di qualifica.
 
-\subparagraph{Numero di errori ortografici}\Spazio
-Misura del numero di errori ortografici presenti all'interno di un documento.
-Per verificare la presenza di errori ortografici nella documentazione deve essere usato lo strumento di controllo ortografico offerto dall'editor \emph{TexStudio} che integra i dizionari di OpenOffice per segnalare potenziali errori presenti nel testo.
-
-\subparagraph{Gunning fog index}\Spazio
-Indice utilizzato per misurare la facilità di lettura e comprensione di un testo. Il numero risultante è un indicatore del numero di anni di educazione formale necessari al fine di leggere il testo con facilità. \\
-L'indice di Gunning fog è calcolabile tramite la seguente formula:
-$$
-0.4*((\frac{n^{\circ}\:parole}{n^{\circ}\:frasi})+100*(\frac{n^{\circ}\:parole\:complesse}{n^{\circ}\:parole}))
-$$
-Per ogni documento i \emph{Verificatori} devono calcolare il Gunning fog index e se questo dovesse risultare troppo alto, dovrà essere eseguita la verifica del documento con l'obiettivo di ricercare frasi troppo prolisse o complesse. Il calcolo deve essere effettuato attraverso uno \gl{script} scritto in Perl che trasforma i documenti dal formato .pdf al formato .txt per effettuare un calcolo più preciso, eliminando le tabelle ma non il loro contenuto.
-\subparagraph{Indice di Gulpease}\Spazio
-Utilizzato per misurare la leggibilità di un testo in lingua italiana.\\
-L'indice di Gulpease è calcolabile tramite la seguente formula:
-$$
-89+\frac{(numero\:delle\:frasi)-10*(numero\:delle\:lettere)}{numero\:delle\:parole}
-$$
-I risultati sono compresi tra 0 e 100, dove 0 indica la leggibilità più bassa e 100 la leggibilità più alta. In generale risulta che i testi con indice:
-\begin{itemize}
-	\item{\textbf{Inferiore	a 80}}: sono difficili da leggere per chi ha la licenza elementare;
-	\item{\textbf{Inferiore	a 60}}: sono difficili da leggere per chi ha la licenza media;
-	\item{\textbf{Inferiore	a 40}}: sono difficili da leggere per chi ha la licenza superiore.
-\end{itemize}
-Per ogni documento i \emph{Verificatori} devono calcolare l'indice di Gulpease e se questo dovesse risultare troppo basso, dovrà essere eseguita la verifica del documento con l'obiettivo di ricercare frasi troppo prolisse o complesse. Il calcolo deve essere effettuato attraverso uno \gl{script} scritto in Perl che trasforma i documenti dal formato .pdf al formato .txt per effettuare un calcolo più preciso, eliminando le tabelle ma non il loro contenuto.
 \paragraph{Controllo del periodo} \Spazio
 Per verificare la presenza di errori di sintassi, di parole grammaticalmente corrette ma presenti in un contesto sbagliato e di periodi difficili da comprendere è necessario l'intervento umano. Per questo motivo ogni documento deve essere sottoposto a verifica da parte dei \emph{Verificatori} incaricati, secondo la strategia walkthrough.
 
@@ -281,121 +218,6 @@ Le principali tipologie di test che è possibile eseguire durante l'analisi dina
 	\item {\textbf{Test d'unità}: verificano un unità, il più piccolo sottosistema possibile (nella programmazione ad oggetti comunemente una classe o od un metodo) che può essere testato separatamente;}
 	\item {\textbf{Test d'integrazione}: verificano se sono rispettati i contratti di interfaccia tra più moduli o sub-system;}
 	\item {\textbf{Test di sistema}: verificano il comportamento dell’intero sistema software.}
-\end{itemize}
-
-\paragraph{Controllo delle metriche} \Spazio
-Di seguito viene riportato solamente un piccolo sottoinsieme di metriche relative ai prodotti software ritenute come fondamentali dal team 7DOS.
-Questa sezione verrà ampliata successivamente qualora fosse necessario introdurre nuove metriche per la valutazione della qualità dei prodotti software.
-
-\subparagraph{Functional Implementation Completeness}\Spazio
-Misurazione in percentuale del grado con cui le funzionalità offerte dalla corrente implementazione del software coprono l'insieme di funzioni specificate nei requisiti.\\
-Questa metrica è stata scelta per valutare il grado di completezza del prodotto; l'obiettivo è implementare tutte le funzionalità richieste.\\
-Viene utilizzata la seguente formula:
-$$FI_{Comp}=\frac{NF_i}{NF_r}*100$$
-Dove:
-\begin{itemize}
-	\item{\textbf{FI\textsubscript{Comp}}: è il valore della metrica;}
-	\item{\textbf{NF\textsubscript{i}}: è il numero di funzioni attualmente implementate;}
-	\item{\textbf{NF\textsubscript{r}}: è il numero di funzioni specificate dai requisiti.}
-\end{itemize}
-\subparagraph{Average Functional Implementation Correctness}\Spazio
-Misurazione in percentuale del grado in cui le funzionalità offerte dalla corrente implementazione del software, in media, rispettano il livello di precisione indicato nei requisiti.\\
-Questa metrica è stata scelta per valutare il grado di accuratezza e garantire la qualità dei risultati restituiti dal prodotto, in quanto andrà a fare previsioni sulla verosimiglianza di alcuni eventi in base ai dati forniti, ed è necessario che tali previsioni siano sufficientemente accurate.\\
-Viene utilizzata la seguente formula:
-$$aFI_{Corr}=\frac{\sum\limits_{i=1}^N\frac{iPF_i}{rPF_i}}{N}*100$$
-Dove:
-\begin{itemize}
-	\item{\textbf{aFI\textsubscript{Corr}}: è il valore della metrica;}
-	\item{\textbf{iPF\textsubscript{i}}: è il livello di precisione della i-esima funzione implementata;}
-	\item{\textbf{rPF\textsubscript{i}}: è il livello di precisione della i-esima funzione secondo i requisiti;}
-	\item{\textbf{N}: è il numero totale di funzioni considerate.}
-\end{itemize}
-\subparagraph{Average Learning Time}\Spazio
-Misurazione in minuti del tempo medio impiegato da un utente per imparare ad utilizzare una singola funzionalità del prodotto.
-\\Questa metrica è stata scelta poiché, trattandosi di un prodotto che verrà reso disponibile pubblicamente, è stato ritenuto importante renderlo semplice da imparare per permetterne l'uso ad una vasta gamma di utenti.
-\\Viene utilizzata la seguente formula:
-$$aLT=\frac{\sum\limits_{i=1}^N{LT_i}}{N}$$
-Dove:
-\begin{itemize}
-	\item{\textbf{aLT}: è il valore della metrica;}
-	\item{\textbf{LT\textsubscript{i}}: è il tempo necessario ad imparare ad utilizzare la i-esima funzione implementata, espresso in minuti;}
-	\item{\textbf{N}: è il numero totale di funzioni considerate.}
-\end{itemize}
-
-\subparagraph{Failure Density}\Spazio
-Misurazione in percentuale della quantità di test falliti rispetto alla quantità di test eseguiti.
-\\Questa metrica è stata scelta per garantire che il prodotto sia generalmente stabile e non risulti poco utilizzabile o inutilizzabile a causa di eccessive \gl{failure}. Valutazioni più precise saranno effettuate in base ai singoli risultati dei test.\\
-Viene utilizzata la seguente formula:
-$$FD=\frac{T_f}{T_c}*100$$
-Dove:
-\begin{itemize}
-	\item{\textbf{FD}: è il valore della metrica;}
-	\item{\textbf{T\textsubscript{f}}: è il numero di test falliti;}
-	\item{\textbf{T\textsubscript{e}}: è il numero di test eseguiti.}
-\end{itemize}
-
-\subparagraph{Failure Analysis}\Spazio
-Misurazione in percentuale delle modifiche effettuate in risposta a failure che hanno portato all'introduzione di nuove failure in altre componenti del sistema. \\
-Viene utilizzata la seguente formula:
-$$FA=\frac{NF_I}{NF_R}*100$$
-Dove:
-\begin{itemize}
-	\item{\textbf{FA}: è il valore della metrica;}
-	\item{\textbf{NF\textsubscript{I}}: è il numero di failure delle quali sono state individuate le cause;}
-	\item{\textbf{NF\textsubscript{R}}: è il numero di failure rilevate.}
-\end{itemize}
-
-\subparagraph{Tempo di risposta}\Spazio
-Misurazione in secondi che indica il tempo medio che intercorre fra la richiesta software di una determinata funzionalità e la restituzione del risultato all'utente. \\
-Viene utilizzata la seguente formula:
-$$TR=\frac{\sum\limits_{i=1}^N{T_i}}{N}$$
-Dove:
-\begin{itemize}
-	\item{\textbf{TR}: è il valore della metrica;}
-	\item{\textbf{T\textsubscript{i}}: è il tempo intercorso fra la richiesta \emph{i} di una funzionalità ed il comportamento delle operazioni necessarie a restituire un risultato a tale richiesta;}
-	\item{\textbf{N}: è il numero totale di funzioni considerate.}
-\end{itemize}
-
-\subparagraph{Comment Ratio}\Spazio
-Misurazione in percentuale che indica il rapporto tra il numero di righe in cui è presente del codice ed il numero di righe in cui sono presenti dei commenti(o annotazioni). \\
-Viene utilizzata la seguente formula:
-$$CR=\frac{NR_C}{NR_A}*100$$
-Dove:
-\begin{itemize}
-	\item{\textbf{CR}: è il valore della metrica;}
-	\item{\textbf{NR\textsubscript{C}}: è il numero di righe in cui è presente del codice;}
-	\item{\textbf{NR\textsubscript{A}}: è il numero di righe in cui sono presenti dei commenti.}
-\end{itemize}
-
-\subparagraph{Code coverage}\Spazio
-Per assicurarsi che la più grande porzione possibile di codice venga testata, si adotta questa metrica, che indica in percentuale, quanto del codice sorgente
-è soggetto a test. Più alta tale percentuale, minore il rischio che vi siano criticità non rilevate.
-Per il suo calcolo si farà uso degli strumenti automatici descritti nella sezione §2.2.2.4 di questo documento, ovvero TravisCI e Coveralls.
-
-\subparagraph{Media di build in travis per settimana}\Spazio
-Media dei processi di build effettuati settimanalmente. Il calcolo viene effettuato automaticamente tramite un bot connesso a TravisCI.
-
-\subparagraph{Percentuale di criticità corrette}\Spazio
-Indica la percentuale di criticità (bug, difetti in genere) risolte sul totale di quelle note.
-Se questa percentuale è troppo bassa, il team sarà costretto a fermare i processi di sviluppo per risolvere le criticità esistenti.
-Per il calcolo viene utilizzata la seguente formula:
-$$PCR=\frac{CR}{CN}*100$$
-Dove:
-\begin{itemize}
-	\item{\textbf{PCR}: è il valore della metrica;}
-	\item{\textbf{CR}: è il numero di criticità risolte;}
-	\item{\textbf{CN}: è il numero di criticità note.}
-\end{itemize}
-
-\subparagraph{Percentuale di test eseguiti}\Spazio
-Indica la percentuale di test eseguiti sul totale di test da eseguire, serve al team di verificatori per monitorare lo svolgimento delle loro attività.
-Viene utilizzata la seguente formula:
-$$PTE=\frac{TE}{TT}*100$$
-Dove:
-\begin{itemize}
-	\item{\textbf{PTE}: è il valore della metrica;}
-	\item{\textbf{TE}: è il numero di test eseguiti;}
-	\item{\textbf{NR\textsubscript{A}}: è il numero di totale di test.}
 \end{itemize}
 
 \pagebreak
