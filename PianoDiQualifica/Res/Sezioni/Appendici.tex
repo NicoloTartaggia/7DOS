@@ -86,21 +86,63 @@ Dalla tabella si può notare come tutti gli indici Gulpease dei documenti rientr
 
 \subsection{Revisione di Progettazione}
 In questa sezione vengono riportati gli esiti delle metriche relative ai processi e delle metriche relative ai documenti.
+
 \subsubsection{Qualità di processo}
+\paragraph{Esiti metriche di processo}
 
-\paragraph{Esiti metriche di processo} \Spazio
-\begin{itemize}
-	\item{Schedule Variance}
-	\item{Budget Variance}	
-	\item{Numero rischi non previsti}
-	\item{Indisponibilità servizi esterni}
-	\item{Media commit a settimana}
-	\item{Media build a settimana}
-	\item{Percentuale build superate}
-\end{itemize}
+\subparagraph{Consolidamento dei requisiti}\MiniSpazio
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\rowcolor{title_row}
+			\textbf{\color{title_text}{Metrica}} & \textbf{\color{title_text}{Valore ottenuto}} & \textbf{\color{title_text}{Esito}} \\
+			\hline
+			{Schedule Variance} & {0} & {Superato}\\	
+			\hline
+			{Budget Variance} & {} & {Superato}\\	
+			\hline
+		\end{tabular}
+		\caption[Esiti metriche di processo, consolidamento dei requisiti]{Esiti derivanti dall'applicazione delle metriche di processo}	
+		\label{tabella: esiti derivanti dall'applicazione delle metriche di processo cr}
+	\end{center}
+\end{table}
 
+
+\subparagraph{Progettazione architetturale}\MiniSpazio
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\rowcolor{title_row}
+			\textbf{\color{title_text}{Metrica}} & \textbf{\color{title_text}{Valore ottenuto}} & \textbf{\color{title_text}{Esito}} \\
+			\hline
+			{Schedule Variance} & {-3} & {Superato}\\	
+			\hline	
+			{Budget Variance} & {} & {Superato}\\	
+			\hline
+			{Numero rischi non previsti} & {3} & {Superato}\\	
+			\hline
+			{Indisponibilità servizi esterni} & {0} & {Superato}\\	
+			\hline
+			{Media commit a settimana} & {23} & {Superato}\\	
+			\hline
+			{Media build a settimana} & {9} & {Superato}\\	
+			\hline
+			{Percentuale build superate} & {85.56\%} & {Superato}\\	
+			\hline
+		\end{tabular}
+		\caption[Esiti metriche di processo, Progettazione Architetturale]{Esiti derivanti dall'applicazione delle metriche di processo}	
+		\label{tabella: esiti derivanti dall'applicazione delle metriche di processo pa}
+	\end{center}
+\end{table}
+\pagebreak
 \paragraph{Maturità dei processi} \Spazio
 Come riportato nella sezione 2.1.6, il gruppo adotta l'approccio a maturità di processo. Il livello di maturità assume valori da 1 a 5.
+
+\subparagraph{Consolidamento dei requisiti}\MiniSpazio
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
 	\begin{center}
@@ -109,23 +151,44 @@ Come riportato nella sezione 2.1.6, il gruppo adotta l'approccio a maturità di 
 			\rowcolor{title_row}
 			\textbf{\color{title_text}{Processo}} & \textbf{\color{title_text}{Livello di maturità}} & \textbf{\color{title_text}{Considerazioni}} \\
 			\hline
-			{Pianificazioni e controllo} & {} & {}\\	
+			{Pianificazioni e controllo} & {3} & {}\\	
 			\hline
-			{Gestione dei rischi} & {} & {}\\	
+			{Gestione dei rischi} & {2} & {}\\	
 			\hline
-			{Gestione dei test} & {?} & {?}\\	
+			{Gestione dei test} & {2} & {?}\\	
 			\hline
-			{Versionamento e build} & {} & {}\\	
+			{Versionamento e build} & {2} & {}\\	
 			\hline
-			
 		\end{tabular}
-		\caption[Maturità dei processi, Analisi]{Maturità ei processi e considerazioni}	
+		\caption[Maturità dei processi, Consolidamento]{Maturità dei processi e considerazioni}	
 		\label{tabella: considerazioni sulla maturità dei processi raggiunta}
 	\end{center}
 \end{table}
 
-
+\subparagraph{Progettazione architetturale}\MiniSpazio
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\rowcolor{title_row}
+			\textbf{\color{title_text}{Processo}} & \textbf{\color{title_text}{Livello di maturità}} & \textbf{\color{title_text}{Considerazioni}} \\
+			\hline
+			{Pianificazioni e controllo} & {3} & {}\\	
+			\hline
+			{Gestione dei rischi} & {2} & {}\\	
+			\hline
+			{Gestione dei test} & {2} & {}\\	
+			\hline
+			{Versionamento e build} & {2} & {}\\	
+			\hline
+		\end{tabular}
+		\caption[Maturità dei processi, Progettazione Architetturale]{Maturità dei processi e considerazioni}	
+		\label{tabella: considerazioni sulla maturità dei processi raggiunta pa}
+	\end{center}
+\end{table}
 \renewcommand{\arraystretch}{1}
+
 \paragraph{Dettaglio delle verifiche tramite analisi} \Spazio
 Il grafico rappresentante l'applicazione del metodo PDCA della fase di Analisi è:
 \begin{figure} [H]
@@ -135,8 +198,8 @@ Il grafico rappresentante l'applicazione del metodo PDCA della fase di Analisi �
 \end{figure}
 Dal grafico possiamo estrapolare che:
 \begin{itemize}
-	\item Si notato alcuni mutamenti dei processi pianificati, dovuti ad errori di pianificazione dati dalla poca esperienza del gruppo di lavoro;
-	\item Si può notare come il gruppo abbia cercato di rendere omogenea nel tempo l'avanzamento dei processi, alcuni rallentamenti sono dovuti alla sovrapposizione degli impegni
+	\item alcuni dei processi pianificati hanno subito mutamenti, dovuti ad errori di pianificazione dati dalla poca esperienza del gruppo di lavoro;
+	\item il gruppo ha reso l'avanzamento dei processi omogeneo, nonostante alcuni rallentamenti dovuti alla sovrapposizione di impegni personali
 	universitari dei componenti del gruppo con la realizzazione del progetto. Nel complesso si vede come l'omogeneità è stata abbastanza rispettata.
 \end{itemize}
 \subsubsection{Qualità di prodotto}
@@ -150,37 +213,56 @@ Vengono qui riportati i valori dell'indice Gulpease per ogni documento durante l
 			\rowcolor{title_row}
 			\textbf{\color{title_text}{Documento}} & \textbf{\color{title_text}{Valore indice}} & \textbf{\color{title_text}{Esito}} \\
 			\hline
-			\emph{Piano di Progetto v1.0.0} & {} & {}\\
+			\emph{Piano di Progetto v2.0.0} & {53.78} & {Superato}\\
 			\hline
-			\emph{Norme di Progetto v1.0.0} & {} & {}\\
+			\emph{Norme di Progetto v2.0.0} & {53.87} & {Superato}\\
 			\hline
-			\emph{Analisi dei Requisiti v1.0.0} & {} & {}\\
+			\emph{Analisi dei Requisiti v2.0.0} & {59.02} & {Superato}\\
 			\hline
-			\emph{Piano di Qualifica v1.0.0} & {} & {}\\
+			\emph{Piano di Qualifica v2.0.0} & {49.68} & {Superato}\\
 			\hline
-			\emph{Studio di Fattibilità v1.0.0} & {} & {}\\
+			\emph{Studio di Fattibilità v2.0.0} & {49.64} & {Superato}\\
 			\hline
-			\emph{Glossario v1.0.0} & {} & {}\\
+			\emph{Glossario v2.0.0} & {52.11} & {Superato}\\
 			\hline
 		\end{tabular}
-		\caption[Esiti verifica documenti, Analisi]{Esito verifica documenti}
-		\label{tabella:verifica documenti}
+		\caption[Esiti verifica documenti, Consolidamento e Progettazione Architetturale]{Esito verifica documenti}
+		\label{tabella:verifica documenti rp}
 	\end{center}
 \end{table}
 \renewcommand{\arraystretch}{1}
 
 Dalla tabella si può notare come tutti gli indici Gulpease dei documenti rientrino nei vincoli dati. Per questo motivo i documenti redatti hanno raggiunto la leggibilità desiderata.
-
 \paragraph{Gunning fog index} \Spazio
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\rowcolor{title_row}
+			\textbf{\color{title_text}{Documento}} & \textbf{\color{title_text}{Valore indice}} & \textbf{\color{title_text}{Esito}} \\
+			\hline
+			\emph{Piano di Progetto v2.0.0} & {13.21} & {Superato}\\
+			\hline
+			\emph{Norme di Progetto v2.0.0} & {12.74} & {Superato}\\
+			\hline
+			\emph{Analisi dei Requisiti v2.0.0} & {11.96} & {Superato}\\
+			\hline
+			\emph{Piano di Qualifica v2.0.0} & {12.87} & {Superato}\\
+			\hline
+			\emph{Studio di Fattibilità v2.0.0} & {11.18} & {Superato}\\
+			\hline
+			\emph{Glossario v2.0.0} & {14.39} & {Superato}\\
+			\hline
+		\end{tabular}
+		\caption[Esiti verifica documenti, Consolidamento e Progettazione Architetturale]{Esito verifica documenti}
+		\label{tabella:verifica documenti gf}
+	\end{center}
+\end{table}
+Dalla tabella si può notare come tutti gli indici Gunning fox dei documenti rientrino nei vincoli dati. Per questo motivo i documenti redatti hanno raggiunto la leggibilità desiderata.
+
 \paragraph{Numero errori ortografici} \Spazio
-\paragraph{Functional Implementation Completeness} \Spazio
-\paragraph{Average Functional Implementation Correctness} \Spazio
-\paragraph{Tempo di risposta} \Spazio
-\paragraph{Average Learning Time} \Spazio
-\paragraph{Failure Density} \Spazio
-\paragraph{Blocco di operazioni non corrette} \Spazio
-\paragraph{Failure Analysis} \Spazio
-\paragraph{Comment ratio} \Spazio
+Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumento di controllo ortografico integrato in \gl{TexStudio}, il numero di errori ortografici per ogni documento ha raggiunto il valore ottimale di 0.
 
 \section{Specifiche dei test}
 Questa appendice contiene le specifiche relative ai vari test pianificati. Verrà redatta una volta presente la necessità di eseguire tali test.
