@@ -6,7 +6,7 @@ La seguente sezione riporta il resoconto delle attività di verifica svolte prim
 Al termine di ogni revisione, il committente segnalerà le problematiche riscontrate attraverso una valutazione globale dell'andamento del progetto ed una dettagliata per ciascun documento; questo aiuterà il gruppo a eliminare problemi e criticità nel progetto per poi procedere su una base verificata e il più possibile corretta.
 
 \subsection{Revisione dei Requisiti}
-In questa sezione vengono riportati gli esiti delle metriche relative ai processi e delle metriche relative ai documenti.
+In questa sezione vengono riportati gli esiti delle metriche relative ai processi e delle metriche relative ai documenti durante la fase di Analisi.
 \subsubsection{Qualità di processo}
  
 \paragraph{Esiti metriche di processo} \Spazio
@@ -16,7 +16,7 @@ In questa sezione vengono riportati gli esiti delle metriche relative ai process
 		\begin{tabular}{|c|c|c|}
 			\hline
 			\rowcolor{title_row}
-			\textbf{\color{title_text}{Documento}} & \textbf{\color{title_text}{Valore ottenuto}} & \textbf{\color{title_text}{Esito}} \\
+			\textbf{\color{title_text}{Metrica}} & \textbf{\color{title_text}{Valore ottenuto}} & \textbf{\color{title_text}{Esito}} \\
 			\hline
 			{Schedule Variance} & {} & {Superato}\\	
 			\hline
@@ -44,9 +44,7 @@ Dal grafico possiamo estrapolare che:
 \end{itemize}
 \subsubsection{Qualità di prodotto}
 \paragraph{Indice di Gulpease} \Spazio
-Vengono qui riportati i valori dell'indice Gulpease per ogni documento durante la fase
-di Analisi. Un documento è considerato valido soltanto se rispetta le metriche descritte
-su 4.1.
+Vengono qui riportati i valori dell'indice Gulpease per ogni documento durante la fase di Analisi. 
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
 \begin{center}
@@ -76,8 +74,6 @@ su 4.1.
 
 Dalla tabella si può notare come tutti gli indici Gulpease dei documenti rientrino nei vincoli dati. Per questo motivo i documenti redatti hanno raggiunto la leggibilità desiderata.
 
-\paragraph{Gunning fog index} \Spazio
-
 \subsubsection{Dettaglio dell'esito della revisione}
 \begin{itemize}
 	\item\emph{Norme di Progetto}: sono state effettuate le integrazioni richieste ed è stata aggiornata la struttura del documento in modo da rispettare gli stessi standard per ogni sezione.\\
@@ -93,23 +89,15 @@ In questa sezione vengono riportati gli esiti delle metriche relative ai process
 \subsubsection{Qualità di processo}
 
 \paragraph{Esiti metriche di processo} \Spazio
-\renewcommand{\arraystretch}{1.5}
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{|c|c|c|}
-			\hline
-			\rowcolor{title_row}
-			\textbf{\color{title_text}{Documento}} & \textbf{\color{title_text}{Valore ottenuto}} & \textbf{\color{title_text}{Esito}} \\
-			\hline
-			{Schedule Variance} & {} & {Superato}\\	
-			\hline
-			{Budget Variance} & {} & {Superato}\\	
-			\hline
-		\end{tabular}
-		\caption[Esiti metriche di processo, Analisi]{Esiti derivanti dall'applicazione delle metriche di processo}	
-		\label{tabella: esiti derivanti dall'applicazione delle metriche di processo}
-	\end{center}
-\end{table}
+\begin{itemize}
+	\item{Schedule Variance}
+	\item{Budget Variance}	
+	\item{Numero rischi non previsti}
+	\item{Indisponibilità servizi esterni}
+	\item{Media commit a settimana}
+	\item{Media build a settimana}
+	\item{Percentuale build superate}
+\end{itemize}
 
 \paragraph{Maturità dei processi} \Spazio
 Come riportato nella sezione 2.1.6, il gruppo adotta l'approccio a maturità di processo. Il livello di maturità assume valori da 1 a 5.
@@ -153,9 +141,7 @@ Dal grafico possiamo estrapolare che:
 \end{itemize}
 \subsubsection{Qualità di prodotto}
 \paragraph{Indice di Gulpease} \Spazio
-Vengono qui riportati i valori dell'indice Gulpease per ogni documento durante la fase
-di Analisi. Un documento è considerato valido soltanto se rispetta le metriche descritte
-su 4.1.
+Vengono qui riportati i valori dell'indice Gulpease per ogni documento durante le fasi di Consolidamento dei Requisiti e di Progettazione Architetturale.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
 	\begin{center}
@@ -164,17 +150,17 @@ su 4.1.
 			\rowcolor{title_row}
 			\textbf{\color{title_text}{Documento}} & \textbf{\color{title_text}{Valore indice}} & \textbf{\color{title_text}{Esito}} \\
 			\hline
-			\emph{Piano di Progetto v1.0.0} & {55.49} & {Superato}\\
+			\emph{Piano di Progetto v1.0.0} & {} & {}\\
 			\hline
-			\emph{Norme di Progetto v1.0.0} & {54.54} & {Superato}\\
+			\emph{Norme di Progetto v1.0.0} & {} & {}\\
 			\hline
-			\emph{Analisi dei Requisiti v1.0.0} & {58.80} & {Superato}\\
+			\emph{Analisi dei Requisiti v1.0.0} & {} & {}\\
 			\hline
-			\emph{Piano di Qualifica v1.0.0} & {53.98} & {Superato}\\
+			\emph{Piano di Qualifica v1.0.0} & {} & {}\\
 			\hline
-			\emph{Studio di Fattibilità v1.0.0} & {50.77} & {Superato}\\
+			\emph{Studio di Fattibilità v1.0.0} & {} & {}\\
 			\hline
-			\emph{Glossario v1.0.0} & {51.66} & {Superato}\\
+			\emph{Glossario v1.0.0} & {} & {}\\
 			\hline
 		\end{tabular}
 		\caption[Esiti verifica documenti, Analisi]{Esito verifica documenti}
@@ -186,6 +172,15 @@ su 4.1.
 Dalla tabella si può notare come tutti gli indici Gulpease dei documenti rientrino nei vincoli dati. Per questo motivo i documenti redatti hanno raggiunto la leggibilità desiderata.
 
 \paragraph{Gunning fog index} \Spazio
+\paragraph{Numero errori ortografici} \Spazio
+\paragraph{Functional Implementation Completeness} \Spazio
+\paragraph{Average Functional Implementation Correctness} \Spazio
+\paragraph{Tempo di risposta} \Spazio
+\paragraph{Average Learning Time} \Spazio
+\paragraph{Failure Density} \Spazio
+\paragraph{Blocco di operazioni non corrette} \Spazio
+\paragraph{Failure Analysis} \Spazio
+\paragraph{Comment ratio} \Spazio
 
 \section{Specifiche dei test}
 Questa appendice contiene le specifiche relative ai vari test pianificati. Verrà redatta una volta presente la necessità di eseguire tali test.
