@@ -150,13 +150,19 @@ TravisCI è una piattaforma che permette di associare un repository GitHub ad un
 Ad ogni commit viene eseguito il processo di build e vengono eseguiti i test. TravisCI inoltre offre integrazione con \gl{Coveralls} un
 servizio per la gestione del test coverage.
 \subsubsection{Codifica}
-Le convenzioni stilistiche definite in \gl{Grafana Plugin Code Styleguide} e, più in particolare per il linguaggio Typescript, in \gl{Angular TypeScript} Styleguide verranno seguite dai programmatori per lo sviluppo dell'intero progetto. \\
+La seguente sotto-sezione ha lo scopo di elencare le norme di codifica alle quali i Programmatori devono aderire durante l'attività di programmazione. Gli argomenti trattati riguardano:
+\begin{itemize}
+ \item{norme generali dello stile di codifica da adottare, qualsiasi sia il linguaggio utilizzato;}
+ \item{norme specifiche per i linguaggi \gl{JavaScript,} \gl{TypeScript,} \gl{HTML} e \gl{CSS}.}
+\end{itemize}
+Il gruppo 7DOS ha deciso di porre delle norme sulla codifica in quanto vantaggiose per la generazione di codice leggibile, adatto per le fasi di verifica e manutenzione, e per garantire qualità al prodotto.
 Soltanto il \emph{Responsabile di Progetto}, dopo un'attenta analisi e valutazione, potrà ammettere modifiche alle convenzioni stabilite.\\
 \paragraph{Norme sul codice}
 \begin{itemize}
-	\item \textbf{Nomi}: i nomi di variabili, classi, funzioni e metodi dovranno essere in \gl{camel case} ed in lingua inglese. I nomi di variabili, metodi e funzioni dovranno avere la prima lettera minuscola mentre i nomi delle classi dovranno avere la prima lettera maiuscola;
+	\item \textbf{Nomi}: i nomi di variabili, classi, funzioni e metodi dovranno essere in \gl{camel case} ed in lingua inglese. I nomi di variabili, metodi e funzioni dovranno avere la prima lettera minuscola mentre i nomi delle classi dovranno avere la prima lettera maiuscola.\\ Ogni nome deve essere unico e illustrativo, cioè deve richiamare lo scopo per cui è stato dichiarato.
 	\item \textbf{Ricorsione}: la ricorsione va evitata quando possibile. Per ogni funzione ricorsiva sarà necessario fornire una prova di terminazione e sarà necessario valutare il costo in termini di occupazione della memoria. Nel caso l’utilizzo di memoria risulti troppo elevato la ricorsione verrà rimossa;
-	\item \textbf{Intestazioni}: ogni file contenente codice deve essere provvisto di un'intestazione contenente:
+	\item \textbf{Intestazioni} \Spazio 
+	Ogni file contenente codice deve essere provvisto di un'intestazione contenente:
 
 	\code{/*} \\
 	\code{File: nome del file} \\
@@ -164,7 +170,8 @@ Soltanto il \emph{Responsabile di Progetto}, dopo un'attenta analisi e valutazio
 	\code{Author: autore} \\
 	\code{Email: indirizzo email dell'autore} \\
 	\code{Date: data di creazione} \\
-	\code{Desc: descrizione del file}\\
+	\code{Desc: descrizione del file}\\\\
+	\code{Changelog: autore, data, descrizione}\\
 	\code{*/} \\
 
 Ogni classe deve essere provvista di un'intestazione contenente:
@@ -182,12 +189,17 @@ Ogni funzione e metodo devono essere provvisti di un'intestazione contenente:
 	\code{Return: valore ritornato} \\
 	\code{*/}\\
 
-	\item \textbf{Commenti}: i commenti devono essere esaustivi e non prolissi in modo da aiutare il lettore a comprendere al meglio ciò che si sta leggendo. I commenti devono essere scritti in italiano. Inoltre è consentito l'uso di particolari tipi di commenti che hanno l'obiettivo di favorire la stesura del codice come:
+	\item \textbf{Commenti}: i commenti devono essere esaustivi e non prolissi in modo da aiutare il lettore a comprendere al meglio ciò che si sta leggendo. I commenti devono essere scritti in inglese. Inoltre è consentito l'uso di particolari tipi di commenti che hanno l'obiettivo di favorire la stesura del codice come:
 	\begin{itemize}
 		\item TODO: per segnalare la presenza di funzionalità che devono ancora essere implementate;
 		\item FIX: per segnalare la presenza di un errori che devono ancora essere corretti.
 	\end{itemize}
-
 \end{itemize}
+
+\paragraph{JavaScript}\Spazio
+\paragraph{TypeScript}\Spazio
+Le convenzioni stilistiche definite in \gl{Grafana Plugin Code Styleguide} e, più in particolare per il linguaggio Typescript, in \gl{Angular TypeScript} Styleguide verranno seguite dai programmatori per lo sviluppo dell'intero progetto.
+\paragraph{HTML}\Spazio
+\paragraph{CSS}\Spazio
 
 \pagebreak

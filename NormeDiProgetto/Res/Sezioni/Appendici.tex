@@ -120,11 +120,11 @@ Indica la quantità di rischi rilevati durante lo svolgimento delle attività, n
 \paragraph{Indisponibilità servizi esterni}\Spazio
 Numero complessivo di giorni in cui uno specifico servizio esterno, tra tutti quelli utilizzati, è rimasto indisponibile per la maggior parte del tempo rendendone quindi impossibile l'utilizzo. Sarà necessario utilizzare un contatore separato per ogni servizio utilizzato.
 \paragraph{Media commit a settimana}\Spazio
-Media dei commit effettuati settimanalmente sulle diverse repository del gruppo. Utile per tenere traccia dell'impegno dedicato settimanalmente dal team sul progetto.
-\paragraph{Media build a settimana}\Spazio
-Media delle build effettuate settimanalmente sulle diverse repository del gruppo. Utile per tenere traccia dell'impegno dedicato settimanalmente dal team sul progetto.
-\paragraph{Percentuale di build superate}\Spazio
-Percentuale delle build effettuate che hanno avuto esito positivo sul numero totale delle build effettuate. Utile per tenere traccia dei progressi raggiunti dal team.
+Media dei commit effettuati settimanalmente sulle diverse repository del gruppo. Utile per tenere traccia dell'impegno dedicato settimanalmente dal team sul progetto. \textbf{Misurazione}: verranno utilizzati i risultati dei grafici generati automaticamente nella sezione emph{Insights/Commits} di GitHub.
+\paragraph{Media numero build Travis a settimana}\Spazio
+Media delle build Travis effettuate settimanalmente sulle diverse repository del gruppo. Utile per tenere traccia dell'impegno dedicato settimanalmente dal team sul progetto.
+\paragraph{Percentuale di build Travis superate}\Spazio
+Percentuale delle build Travis effettuate che hanno avuto esito positivo sul numero totale delle build effettuate. Utile per tenere traccia dei progressi raggiunti dal team.
 
 
 \subsubsection{Per la qualità del prodotto}
@@ -132,7 +132,7 @@ Percentuale delle build effettuate che hanno avuto esito positivo sul numero tot
 In seguito ad una qualsiasi modifica di un documento, si devono calcolare tutti i relativi indici di quel specifico documento. Inoltre dovrà essere ricalcolata la media complessiva di tutti gli indici calcolati fino a quel momento del documento in questione.
 Di seguito verranno descritte in modo dettagliato tutte le metriche relative ai documenti adottate. Per una spiegazione dettagliata riguardo gli obbiettivi che il team si è imposto di raggiungere per le suddette metriche consultare il piano di qualifica.
 
-\subparagraph{Numero di errori ortografici}\Spazio
+\subparagraph{Numero di errori grammaticali}\Spazio
 Misura del numero di errori ortografici presenti all'interno di un documento.
 Per verificare la presenza di errori ortografici nella documentazione deve essere usato lo strumento di controllo ortografico offerto dall'editor \emph{TexStudio} che integra i dizionari di OpenOffice per segnalare potenziali errori presenti nel testo.
 
@@ -185,6 +185,18 @@ Dove:
 	\item{\textbf{rPF\textsubscript{i}}: è il livello di precisione della i-esima funzione secondo i requisiti;}
 	\item{\textbf{N}: è il numero totale di funzioni considerate.}
 \end{itemize}
+
+\subparagraph{Tempo di risposta}\Spazio
+Misurazione in secondi che indica il tempo medio che intercorre fra la richiesta software di una determinata funzionalità e la restituzione del risultato all'utente. \\
+Viene utilizzata la seguente formula:
+$$TR=\frac{\sum\limits_{i=1}^N{T_i}}{N}$$
+Dove:
+\begin{itemize}
+	\item{\textbf{TR}: è il valore della metrica;}
+	\item{\textbf{T\textsubscript{i}}: è il tempo intercorso fra la richiesta \emph{i} di una funzionalità ed il comportamento delle operazioni necessarie a restituire un risultato a tale richiesta;}
+	\item{\textbf{N}: è il numero totale di funzioni considerate.}
+\end{itemize}
+
 \subparagraph{Average Learning Time}\Spazio
 Misurazione in minuti del tempo medio impiegato da un utente per imparare ad utilizzare una singola funzionalità del prodotto.
 \\Abbiamo scelto questa metrica poiché, trattandosi di un prodotto che verrà reso disponibile pubblicamente, abbiamo ritenuto importante renderlo semplice da imparare per permetterne l'uso ad una vasta gamma di utenti.
@@ -209,6 +221,16 @@ Dove:
 	\item{\textbf{T\textsubscript{e}}: è il numero di test eseguiti.}
 \end{itemize}
 
+\subparagraph{Blocco di operazioni non corrette}\Spazio
+Misurazione in percentuale della quantità di funzionalità in grado di gestire in modo corretto possibili errori.\\
+Viene utilizzata la seguente formula:
+$$BONC=\frac{NF_E}{NO_T}*100$$
+Dove:
+\begin{itemize}
+	\item{\textbf{BONC}: è il valore della metrica;}
+	\item{\textbf{NF\textsubscript{E}}: è il numero di failure evitate;}
+	\item{\textbf{NO\textsubscript{T}}: è il numero di test con possibile esecuzione di operazioni non corrette.}
+\end{itemize}
 \subparagraph{Failure Analysis}\Spazio
 Misurazione in percentuale delle modifiche effettuate in risposta a failure che hanno portato all'introduzione di nuove failure in altre componenti del sistema. \\
 Viene utilizzata la seguente formula:
@@ -218,17 +240,6 @@ Dove:
 	\item{\textbf{FA}: è il valore della metrica;}
 	\item{\textbf{NF\textsubscript{I}}: è il numero di failure delle quali sono state individuate le cause;}
 	\item{\textbf{NF\textsubscript{R}}: è il numero di failure rilevate.}
-\end{itemize}
-
-\subparagraph{Tempo di risposta}\Spazio
-Misurazione in secondi che indica il tempo medio che intercorre fra la richiesta software di una determinata funzionalità e la restituzione del risultato all'utente. \\
-Viene utilizzata la seguente formula:
-$$TR=\frac{\sum\limits_{i=1}^N{T_i}}{N}$$
-Dove:
-\begin{itemize}
-	\item{\textbf{TR}: è il valore della metrica;}
-	\item{\textbf{T\textsubscript{i}}: è il tempo intercorso fra la richiesta \emph{i} di una funzionalità ed il comportamento delle operazioni necessarie a restituire un risultato a tale richiesta;}
-	\item{\textbf{N}: è il numero totale di funzioni considerate.}
 \end{itemize}
 
 \subparagraph{Comment Ratio}\Spazio
@@ -247,7 +258,7 @@ Per assicurarsi che la più grande porzione possibile di codice venga testata, s
 è soggetto a test. Più alta tale percentuale, minore il rischio che vi siano criticità non rilevate.
 Per il suo calcolo si farà uso degli strumenti automatici descritti nella sezione §2.2.2.4 di questo documento, ovvero TravisCI e Coveralls.
 
-\subparagraph{Percentuale di criticità corrette}\Spazio
+\subparagraph{Percentuale di criticità corrette} \Spazio
 Indica la percentuale di criticità (bug, difetti in genere) risolte sul totale di quelle note.
 Se questa percentuale è troppo bassa, il team sarà costretto a fermare i processi di sviluppo per risolvere le criticità esistenti.
 Per il calcolo viene utilizzata la seguente formula:
@@ -259,7 +270,7 @@ Dove:
 	\item{\textbf{CN}: è il numero di criticità note.}
 \end{itemize}
 
-\subparagraph{Percentuale di test eseguiti}\Spazio
+\subparagraph{Percentuale di test eseguiti} \Spazio
 Indica la percentuale di test eseguiti sul totale di test da eseguire, serve al team di verificatori per monitorare lo svolgimento delle loro attività.
 Viene utilizzata la seguente formula:
 $$PTE=\frac{TE}{TT}*100$$
