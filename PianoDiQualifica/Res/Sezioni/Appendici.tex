@@ -2,14 +2,13 @@
 \addcontentsline{toc}{section}{Appendici}
 \section*{Appendici}
 \section{Resoconto delle attività di verifica}
-La seguente sezione riporta il resoconto delle attività di verifica svolte prima di ciascuna delle quattro revisioni stabilite dal committente (Revisione dei Requisiti, Revisione di Progettazione, Revisione di Qualifica e Revisione di Accettazione).
-Al termine di ogni revisione, il committente segnalerà le problematiche riscontrate attraverso una valutazione globale dell'andamento del progetto ed una dettagliata per ciascun documento; questo aiuterà il gruppo a eliminare problemi e criticità nel progetto per poi procedere su una base verificata e il più possibile corretta.
+Questa sezione riporta il resoconto delle attività di verifica svolte prima di ciascuna delle quattro revisioni stabilite dal committente (Revisione dei Requisiti, R. di Progettazione, R. di Qualifica e R. di Accettazione).
+Al termine di ogni revisione il committente segnalerà le problematiche riscontrate attraverso una valutazione globale dell'andamento del progetto ed una dettagliata per ciascun documento, permettendo al gruppo di eliminare problemi e criticità nel progetto per poi procedere su una base verificata e il più possibile corretta.
 
 \subsection{Revisione dei Requisiti}
-In questa sezione vengono riportati gli esiti delle metriche relative ai processi e delle metriche relative ai documenti durante la fase di Analisi.
+In questa sezione vengono riportati gli esiti delle metriche relative ai processi e ai documenti durante la fase di Analisi.
 \subsubsection{Qualità di processo}
- 
-\paragraph{Esiti metriche di processo} \Spazio
+\paragraph{Esiti metriche di processo} \MiniSpazio
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
 	\begin{center}
@@ -27,14 +26,13 @@ In questa sezione vengono riportati gli esiti delle metriche relative ai process
 	\label{tabella: esiti derivanti dall'applicazione delle metriche di processo}
 	\end{center}
 \end{table}
-
 \renewcommand{\arraystretch}{1}
 \paragraph{Dettaglio delle verifiche tramite analisi} \Spazio
 Il grafico rappresentante l'applicazione del metodo PDCA della fase di Analisi è:
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/Grafico_PDCA}
-	\caption{Grafico del metodo PDCA, fase di Analisi}\label{}
+	\caption{Grafico del metodo PDCA, fase di Analisi}\label{immagine:pdca analisi}
 \end{figure}
 Dal grafico possiamo estrapolare che:
 \begin{itemize}
@@ -126,18 +124,24 @@ In questa sezione vengono riportati gli esiti delle metriche relative ai process
 			\hline
 			{Indisponibilità servizi esterni} & {0} & {Superato}\\	
 			\hline
-			{Media commit a settimana} & {24} & {Superato}\\	
+			{Media commit a settimana} & {26} & {Superato}\\	
 			\hline
-			{Media build a settimana} & {21} & {Superato}\\	
+			{Media build Travis a settimana} & {22} & {Superato}\\	
 			\hline
-			{Percentuale build superate} & {85.71\%} & {Superato}\\	
+			{Percentuale build Travis superate} & {72.72\%} & {Superato}\\	
 			\hline
 		\end{tabular}
 		\caption[Esiti metriche di processo, Progettazione Architetturale]{Esiti derivanti dall'applicazione delle metriche di processo}	
 		\label{tabella: esiti derivanti dall'applicazione delle metriche di processo pa}
 	\end{center}
 \end{table}
-\pagebreak
+
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.8]{Img/travis}
+	\caption{Andamento delle build per il Proof of Concept}\label{}
+\end{figure}
+
 \paragraph{Maturità dei processi} \Spazio
 Come riportato nella sezione 2.1.6, il gruppo adotta l'approccio a maturità di processo. Il livello di maturità assume valori da 1 a 5.
 
@@ -199,7 +203,6 @@ Il grafico rappresentante l'applicazione del metodo PDCA nella fase di Consolida
 \subparagraph{Progettazione architetturale}\MiniSpazio
 Il grafico rappresentante l'applicazione del metodo PDCA nella fase di Progettazione architetturale è:
 \begin{figure} [H]
-	
 	\centering
 	\includegraphics[scale=1]{Img/Grafico_PDCA_progettazione_architetturale}
 	\caption{Grafico del metodo PDCA, fase di Progettazione architetturale}\label{}
@@ -233,8 +236,13 @@ Vengono qui riportati i valori dell'indice Gulpease per ogni documento al termin
 	\end{center}
 \end{table}
 \renewcommand{\arraystretch}{1}
-
 Dalla tabella si può notare come tutti gli indici Gulpease dei documenti rientrino nei vincoli dati. Per questo motivo i documenti redatti hanno raggiunto la leggibilità desiderata.
+
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/and_gulp_rp}
+	\caption{Andamento dell'indice di Gulpease durante le fasi di Consolidamento dei requisiti e Progettazione architetturale}\label{immagine:gulpease rp}
+\end{figure}
 \paragraph{Gunning fog index} \Spazio
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
