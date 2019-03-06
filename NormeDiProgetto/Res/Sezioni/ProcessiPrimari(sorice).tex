@@ -166,6 +166,7 @@ Soltanto il \emph{Responsabile di Progetto}, dopo un'attenta analisi e valutazio
 
 	\code{/*} \\
 	\code{File: nome del file} \\
+	\code{Version: versione del file} \\
 	\code{Type: tipo del file} \\
 	\code{Author: autore} \\
 	\code{Email: indirizzo email dell'autore} \\
@@ -194,11 +195,30 @@ Ogni funzione e metodo devono essere provvisti di un'intestazione contenente:
 		\item TODO: per segnalare la presenza di funzionalità che devono ancora essere implementate;
 		\item FIX: per segnalare la presenza di un errori che devono ancora essere corretti.
 	\end{itemize}
+
+	\item \textbf{Versionamento:} la versione del file, inserita all'interno dell'intestazione, segue la convenzione \textbf{X.Y}. 
+	\begin{itemize}
+		\item{\textbf{X}: indica l'indice di versione principale. Incrementare il suo valore indica che sono state apportate modifiche significative e stabili al file, comportando di conseguenza l'azzeramento dell'indice Y;}
+		\item{\textbf{Y}: indica l'indice di versione parziale. Incrementare il suo valore indica che sono state apportate modifiche minori, come l'aggiunta o la rimozione di un metodo.}
+	\end{itemize}
+	Entrambe gli indici partono da 0. La versione \emph{1.0} indica la prima versione stabile del file, la quale copre le funzionalità obbligatorie. 
 \end{itemize}
 
 \paragraph{JavaScript}\Spazio
+Le convenzioni stilistiche definite in \gl{JavaScript Style Guide and Coding Conventions}\footnote{\url{https://www.w3schools.com/js/js_conventions.asp}} verranno seguite dai programmatori per lo sviluppo dell'intero progetto.
+
+\begin{itemize}
+	\item{Indentazione}: ogni livello di indentazione prevede l'uso di due spazi;
+	\begin{lstlisting}[rulecolor=\color{black}]
+		myFunction() {
+		..let myVariable;
+		}
+	\end{lstlisting}
+\end{itemize}
+
+
 \paragraph{TypeScript}\Spazio
-Le convenzioni stilistiche definite in \gl{Grafana Plugin Code Styleguide} e, più in particolare per il linguaggio Typescript, in \gl{Angular TypeScript} Styleguide verranno seguite dai programmatori per lo sviluppo dell'intero progetto.
+Le convenzioni stilistiche definite in \gl{Grafana Plugin Code Styleguide}\footnote{\url{http://docs.grafana.org/plugins/developing/code-styleguide}} e, più in particolare per il linguaggio Typescript, in \gl{Angular TypeScript Styleguide}\footnote{\url{https://angular.io/guide/styleguide}} verranno seguite dai programmatori per lo sviluppo dell'intero progetto.
 \paragraph{HTML}\Spazio
 \paragraph{CSS}\Spazio
 
