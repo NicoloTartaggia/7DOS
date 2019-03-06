@@ -38,9 +38,8 @@ Il grafico rappresentante l'applicazione del metodo PDCA della fase di Analisi �
 \end{figure}
 Dal grafico possiamo estrapolare che:
 \begin{itemize}
-	\item Si notato alcuni mutamenti dei processi pianificati, dovuti ad errori di pianificazione dati dalla poca esperienza del gruppo di lavoro;
-	\item Si può notare come il gruppo abbia cercato di rendere omogenea nel tempo l'avanzamento dei processi, alcuni rallentamenti sono dovuti alla sovrapposizione degli impegni
-	universitari dei componenti del gruppo con la realizzazione del progetto. Nel complesso si vede come l'omogeneità è stata abbastanza rispettata.
+	\item alcuni dei processi pianificati hanno subito mutamenti, dovuti ad errori di pianificazione dati dalla poca esperienza del gruppo di lavoro;
+	\item il gruppo ha reso l'avanzamento dei processi omogeneo, nonostante alcuni rallentamenti dovuti alla sovrapposizione di impegni personali e universitari dei componenti del gruppo con la realizzazione del progetto. Nel complesso si vede come l'omogeneità è stata abbastanza rispettata.
 \end{itemize}
 \subsubsection{Qualità di prodotto}
 \paragraph{Indice di Gulpease} \Spazio
@@ -119,7 +118,7 @@ In questa sezione vengono riportati gli esiti delle metriche relative ai process
 			\rowcolor{title_row}
 			\textbf{\color{title_text}{Metrica}} & \textbf{\color{title_text}{Valore ottenuto}} & \textbf{\color{title_text}{Esito}} \\
 			\hline
-			{Schedule Variance} & {0} & {Superato}\\	
+			{Schedule Variance} & {-3} & {Superato}\\	
 			\hline	
 			{Budget Variance} & {6\%} & {Superato}\\	
 			\hline
@@ -146,18 +145,18 @@ Come riportato nella sezione 2.1.6, il gruppo adotta l'approccio a maturità di 
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
 	\begin{center}
-		\begin{tabular}{|c|c|c|}
+		\begin{tabular}{|c|c|p{6.8cm}|}
 			\hline
 			\rowcolor{title_row}
 			\textbf{\color{title_text}{Processo}} & \textbf{\color{title_text}{Livello di maturità}} & \textbf{\color{title_text}{Considerazioni}} \\
 			\hline
-			{Pianificazioni e controllo} & {3} & {}\\	
+			{Pianificazione e controllo} & {3} & {Gestito con l'ausilio di nTask, ha permesso di rispettare le scadenze previste.}\\	
 			\hline
-			{Gestione dei rischi} & {2} & {}\\	
+			{Gestione dei rischi} & {1} & {Non si sono verificate situazioni di rischio.}\\	
 			\hline
-			{Gestione dei test} & {2} & {?}\\	
+			{Gestione dei test} & {0} & {Verrà istanziato una volta presente la necessità di definire e condurre dei test.}\\	
 			\hline
-			{Versionamento e build} & {2} & {}\\	
+			{Versionamento e build} & {0} & {Verrà istanziato una volta presente la necessità di versionare il prodotto software.}\\	
 			\hline
 		\end{tabular}
 		\caption[Maturità dei processi, Consolidamento]{Maturità dei processi e considerazioni}	
@@ -169,18 +168,18 @@ Come riportato nella sezione 2.1.6, il gruppo adotta l'approccio a maturità di 
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
 	\begin{center}
-		\begin{tabular}{|c|c|c|}
+		\begin{tabular}{|c|c|p{6.8cm}|}
 			\hline
 			\rowcolor{title_row}
 			\textbf{\color{title_text}{Processo}} & \textbf{\color{title_text}{Livello di maturità}} & \textbf{\color{title_text}{Considerazioni}} \\
 			\hline
-			{Pianificazioni e controllo} & {3} & {}\\	
+			{Pianificazione e controllo} & {3} & {Ha permesso di rispettare le scadenze previste.}\\	
 			\hline
-			{Gestione dei rischi} & {2} & {}\\	
+			{Gestione dei rischi} & {1} & {Si è dimostrato poco stabile al verificarsi di 3 situazioni di rischio (malattia di membri del gruppo), comportando una ridefinizione degli obiettivi per il periodo.}\\	
 			\hline
-			{Gestione dei test} & {2} & {}\\	
+			{Gestione dei test} & {1} & {Sono stati pianificati i primi test di sistema, le cui specifiche tuttavia rimangono da definire.}\\	
 			\hline
-			{Versionamento e build} & {2} & {}\\	
+			{Versionamento e build} & {1} & {Parzialmente automatizzato con l'utilizzo dello strumento \gl{Travis}.}\\	
 			\hline
 		\end{tabular}
 		\caption[Maturità dei processi, Progettazione Architetturale]{Maturità dei processi e considerazioni}	
@@ -189,22 +188,25 @@ Come riportato nella sezione 2.1.6, il gruppo adotta l'approccio a maturità di 
 \end{table}
 \renewcommand{\arraystretch}{1}
 
-\paragraph{Dettaglio delle verifiche tramite analisi} \Spazio
-Il grafico rappresentante l'applicazione del metodo PDCA della fase di Analisi è:
+\paragraph{Dettaglio delle verifiche tramite analisi}
+\subparagraph{Consolidamento dei requisiti}\MiniSpazio
+Il grafico rappresentante l'applicazione del metodo PDCA nella fase di Consolidamento dei requisiti è:
 \begin{figure} [H]
 	\centering
-	\includegraphics[scale=1]{Img/Grafico_PDCA}
-	\caption{Grafico del metodo PDCA, fase di Analisi}\label{}
+	\includegraphics[scale=1]{Img/Grafico_PDCA_consolidamento_requisiti}
+	\caption{Grafico del metodo PDCA, fase di Consolidamento dei requisiti}\label{}
 \end{figure}
-Dal grafico possiamo estrapolare che:
-\begin{itemize}
-	\item alcuni dei processi pianificati hanno subito mutamenti, dovuti ad errori di pianificazione dati dalla poca esperienza del gruppo di lavoro;
-	\item il gruppo ha reso l'avanzamento dei processi omogeneo, nonostante alcuni rallentamenti dovuti alla sovrapposizione di impegni personali
-	universitari dei componenti del gruppo con la realizzazione del progetto. Nel complesso si vede come l'omogeneità è stata abbastanza rispettata.
-\end{itemize}
+\subparagraph{Progettazione architetturale}\MiniSpazio
+Il grafico rappresentante l'applicazione del metodo PDCA nella fase di Progettazione architetturale è:
+\begin{figure} [H]
+	
+	\centering
+	\includegraphics[scale=1]{Img/Grafico_PDCA_progettazione_architetturale}
+	\caption{Grafico del metodo PDCA, fase di Progettazione architetturale}\label{}
+\end{figure}
 \subsubsection{Qualità di prodotto}
 \paragraph{Indice di Gulpease} \Spazio
-Vengono qui riportati i valori dell'indice Gulpease per ogni documento durante le fasi di Consolidamento dei Requisiti e di Progettazione Architetturale.
+Vengono qui riportati i valori dell'indice Gulpease per ogni documento al termine della fase di Progettazione Architetturale.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
 	\begin{center}
