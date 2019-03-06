@@ -19,8 +19,8 @@ Ogni caso d'uso è descritto dalla seguente struttura:
 	\item Estensioni (se presenti).
 \end{itemize}
 \Spazio
-Inoltre sono stati descritti due casi d'uso generali (UCG1 e UCG2) la cui nomenclatura non segue quella appena riportata. Essi rappresentano i casi d'uso più ad alto livello, insieme anche ad UC5, con cui l'utente può interagire con il prodotto.
-Sono state quindi individuate due macro aree, una relativa alle operazioni che si possono effettuare sulla rete Bayesiana e l'altra relativa alle operazioni che comprendono la visualizzazione dei dati acquisiti.
+Inoltre il team ha individuato due casi d'uso generali (UCG1 e UCG2) la cui nomenclatura non segue quella appena riportata. Essi rappresentano i casi d'uso più ad alto livello, insieme anche ad UC5, con cui l'utente può interagire con il prodotto.
+L'ambito d'azione del prodotto è distinguibile in due macro aree, una relativa alle operazioni che si possono effettuare sulla rete Bayesiana e l'altra relativa alle operazioni che comprendono la visualizzazione dei dati acquisiti.
 
 \subsection{Attori}
 L'attore che può interagire con il prodotto è soltanto uno:
@@ -35,21 +35,21 @@ L'attore che può interagire con il prodotto è soltanto uno:
 	\includegraphics[scale=0.7]{Img/UCG1}
 	\caption{UCG1 - Operazioni sulla rete Bayesiana}\label{}
 \end{figure}
-\begin{itemize} 
+\begin{itemize}
 	\item{\textbf{Attori primari}: Utente;}
-	\item{\textbf{Scopo e descrizione}: l'attore vuole eseguire delle operazioni sulla rete Bayesiana;} 
-	\item{\textbf{Precondizione}: l'applicazione deve essere avviata correttamente e pronta all'uso;} 
-	\item{\textbf{Flusso base degli eventi}: 
-		\begin{itemize} 
-			\item{L'attore utilizza l'editor grafico (UC1);} 
-			\item{L'attore configura la connessione tra la rete e la sorgente dati (UC2);} 
-			\item{L'attore legge i dati acquisiti dalla rete Bayesiana (UC3)}; 
-			\item{L'attore carica la definizione della rete da un file JSON (UC4).} 
-		\end{itemize} 
-	} 
-	\item{\textbf{Postcondizione}: l'attore ha eseguito le operazioni sulla rete Bayesiana;} 
-	\item{\textbf{Estensioni}: il file caricato non è valido (UC2.4.1).} 
-\end{itemize}	
+	\item{\textbf{Scopo e descrizione}: l'attore vuole eseguire delle operazioni sulla rete Bayesiana;}
+	\item{\textbf{Precondizione}: l'applicazione deve essere avviata correttamente e pronta all'uso;}
+	\item{\textbf{Flusso base degli eventi}:
+		\begin{itemize}
+			\item{L'attore utilizza l'editor grafico (UC1);}
+			\item{L'attore configura la connessione tra la rete e la sorgente dati (UC2);}
+			\item{L'attore legge i dati acquisiti dalla rete Bayesiana (UC3)};
+			\item{L'attore carica la definizione della rete da un file JSON (UC4).}
+		\end{itemize}
+	}
+	\item{\textbf{Postcondizione}: l'attore ha eseguito le operazioni sulla rete Bayesiana;}
+	\item{\textbf{Estensioni}: il file caricato non è valido (UC2.4.1).}
+\end{itemize}
 
 \subsection{Caso d'uso generale UCG2: Operazioni sulla visualizzazione dei dati}
 \begin{figure} [H]
@@ -57,17 +57,17 @@ L'attore che può interagire con il prodotto è soltanto uno:
 	\includegraphics[scale=0.5]{Img/UCG2}
 	\caption{UCG2 - Operazioni sulla visualizzazione dei dati}
 \end{figure}
-\begin{itemize} 
+\begin{itemize}
 	\item{\textbf{Attori primari}: Utente;}
-	\item{\textbf{Scopo e descrizione}: l'attore vuole eseguire delle operazioni relative alla visualizzazione dei dati acquisiti;} 
-	\item{\textbf{Precondizione}: l'applicazione deve essere avviata correttamente ed in grado di leggere un flusso dati;} 
-	\item{\textbf{Flusso base degli eventi}: 
-		\begin{itemize} 
-			\item{L'attore modifica la struttura della dashboard (UC6);} 
-			\item{L'attore modifica la struttura di un panel (UC7);} 
-			\item{L'attore condivide i grafici ottenuti (UC8)}. 
-		\end{itemize} 
-	} 
-	\item{\textbf{Postcondizione}: l'attore ha eseguito le operazioni sulla visualizzazione dei dati.} 
-\end{itemize} 
+	\item{\textbf{Scopo e descrizione}: l'attore vuole eseguire delle operazioni relative alla visualizzazione dei dati acquisiti;}
+	\item{\textbf{Precondizione}: l'applicazione deve essere avviata correttamente ed in grado di leggere un flusso dati;}
+	\item{\textbf{Flusso base degli eventi}:
+		\begin{itemize}
+			\item{L'attore modifica la struttura della dashboard (UC6);}
+			\item{L'attore modifica la struttura di un panel (UC7);}
+			\item{L'attore condivide i grafici ottenuti (UC8)}.
+		\end{itemize}
+	}
+	\item{\textbf{Postcondizione}: l'attore ha eseguito le operazioni sulla visualizzazione dei dati.}
+\end{itemize}
 \newpage
