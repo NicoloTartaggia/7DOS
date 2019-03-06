@@ -327,10 +327,128 @@ Le convenzioni stilistiche definite in \gl{Grafana Plugin Code Styleguide}\footn
 \end{itemize}
 
 \paragraph{HTML}\Spazio
-
 Le convenzioni stilistiche definite in \gl{HTML5 Style Guide and Coding Conventions}\footnote{\url{https://www.w3schools.com/html/html5_syntax.asp}} verranno seguite dai programmatori per lo sviluppo dell'intero progetto.
+
+\begin{itemize}
+	\item{\textbf{Doctype}: la prima riga di ogni documento HTML deve presentare la dichiarazione del tipo di documento;}
+	 \begin{lstlisting}
+	 <!doctype html> 
+	 \end{lstlisting}
+	 \item{\textbf{Elementi}}
+	 \begin{itemize}
+	 	\item{\textbf{Nomi}: ogni nome deve essere scritto in minuscolo;}
+	 	\begin{lstlisting}
+	 	<section>
+	 	  // CORRECT
+	 	</ section> 
+	 	
+	 	<SECTION>
+	 	  // INCORRECT
+	 	</ SECTION> 
+	 	\end{lstlisting}
+	 	\item{\textbf{Utilizzo dei tag}: ogni tag deve sempre essere chiuso. Per compatibilità con i vecchi browser, i tag non vuoti, anche se privi di contenuto, vanno nella forma <p></p>, mentre quelli vuoti vanno nella forma <br/>. 	
+	 	}
+ 		\begin{lstlisting}
+ 		<p>
+ 		  // CORRECT
+ 		</ p>
+ 		
+ 		<p />  // INCORRECT
+ 		
+ 		<br />// CORRECT
+ 		
+ 		<br>
+ 		  // INCORRECT
+ 		</ br>   
+ 		\end{lstlisting} 
+	 \end{itemize}
+ 	\item{\textbf{Spazi}: '=' tra l'attributo e il suo valore deve essere racchiuso tra spazi;}
+ 	\begin{lstlisting}
+ 	<p class = "...">
+ 	  // CORRECT
+ 	</ p>
+ 	
+ 	<p class="...">  
+ 	  // INCORRECT
+ 	</ p>
+ 	\end{lstlisting} 
+ 	\item{\textbf{Lunghezza di una linea}: ogni linea di codice non deve contenere più di 80 caratteri.
+ 	}
+\end{itemize}
 
 \paragraph{CSS}\Spazio
 Le convenzioni stilistiche definite in \gl{Airbnb CSS / Sass Styleguide}\footnote{\url{https://github.com/airbnb/css}} verranno seguite dai programmatori per lo sviluppo dell'intero progetto.
+
+\begin{itemize}
+	\item{\textbf{Indentazione:} le proprietà di stile relative ad un selettore devono essere indentate con due spazi; 
+	}
+	\begin{lstlisting}
+	.someselector {  // CORRECT
+	..property1: "...";
+	..property2: "...";
+	}
+	
+	.someselector {  // INCORRECT
+	....property1 = "...";
+	....property2 = "...";
+	}
+	\end{lstlisting} 
+	\item{\textbf{Spazi}}
+	\begin{itemize}
+		\item{Deve essere posto uno spazio tra un selettore e la parentesi graffa di apertura di una \gl{rule declaration};}
+		\begin{lstlisting}
+		.someselector {  // CORRECT
+		
+		}
+		
+		.someselector  // INCORRECT
+		{  
+		
+		}
+		\end{lstlisting}
+		\item{Nella dichiarazione di una proprietà deve essere posto uno spazio dopo ':' ma non prima;}
+		\begin{lstlisting}
+		.someselector {  // CORRECT
+		..property: "...";
+		}
+		
+		.someselector  // INCORRECT
+		{  
+		..property : "...";
+		}
+		\end{lstlisting}
+	\end{itemize}
+	\item{\textbf{Rule declaration}}
+	\begin{itemize}
+		\item{La parentesi graffa di chiusura deve essere posta in una nuova linea, senza l'uso di spazi;}
+		\begin{lstlisting}
+		.someselector {  // CORRECT
+		..property: "...";
+		}
+		
+		.someselector  // INCORRECT
+		{  
+		..property : "...";}
+		\end{lstlisting}
+		
+		\item{In presenza di più rule declaration, deve essere posta una linea vuota tra esse.}
+		\begin{lstlisting}
+		.selector1 {  // CORRECT
+		..property: "...";
+		}
+		
+		.selector2 {    
+		..property : "...";
+		}
+		
+		.selector1 {  // INCORRECT
+		..property: "...";
+		}
+		.selector2 {    
+		..property : "...";
+		}
+		\end{lstlisting}
+	\end{itemize} 	
+\end{itemize}
 
 \pagebreak
