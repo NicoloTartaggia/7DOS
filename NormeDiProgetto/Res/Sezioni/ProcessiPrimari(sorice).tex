@@ -208,18 +208,129 @@ Ogni funzione e metodo devono essere provvisti di un'intestazione contenente:
 Le convenzioni stilistiche definite in \gl{JavaScript Style Guide and Coding Conventions}\footnote{\url{https://www.w3schools.com/js/js_conventions.asp}} verranno seguite dai programmatori per lo sviluppo dell'intero progetto.
 
 \begin{itemize}
-	\item{Indentazione}: ogni livello di indentazione prevede l'uso di due spazi;
-	\begin{lstlisting}[rulecolor=\color{black}]
-		myFunction() {
-		..let myVariable;
+	\item{\textbf{Indentazione}}: ogni livello di indentazione prevede l'uso di due spazi;
+	\begin{lstlisting}
+		function toString() {
+		..let example;  // CORRECT
+		}
+		
+		function toString() {
+		....let example;  // INCORRECT
 		}
 	\end{lstlisting}
+	 
+	\item{\textbf{Spazi}: uno spazio vengono posti tra gli operatori ( = + - * / < >) e dopo le virgole. Non vengono posti spazi prima della lista degli argomenti nelle chiamate di funzioni e nelle dichiarazioni;}
+	\begin{lstlisting}
+		var example = "7DOS";  // CORRECT
+		
+		var example="7DOS";  //INCORRECT
+		
+		var example = ["one", "two", "three"];  // CORRECT
+		
+		var example = ["one","two","three"];  // INCORRECT
+	\end{lstlisting}
+	
+	\item{\textbf{Dichiarazioni di variabili}: ogni dichiarazione di variabile prevede l'utilizzo di \emph{var} o \emph{let} e termina con un punto e virgola;}
+	\begin{lstlisting}
+	var example = "7DOS";  // CORRECT
+	
+	var example= "7DOS"  //INCORRECT
+	
+	var example = ["one", "two", "three"];  // CORRECT
+	
+	var example = ["one","two","three"]  // INCORRECT
+	\end{lstlisting}
+	
+	\item{\textbf{Dichiarazione di funzioni}: la parentesi graffa di apertura viene posta nella stessa riga della dichiarazione della funzione, utilizzando uno spazio prima. La parentesi graffa di chiusura viene posta in una nuova riga senza utilizzare spazi;}
+	\begin{lstlisting}
+		function toString() {  // CORRECT
+		..var example;
+		}
+		
+		function toString()  // INCORRECT
+		{  
+		..var example;
+		}
+	\end{lstlisting}
+	
+	\item{\textbf{Cicli}: ogni parametro è separato dal successivo con uno spazio, così come le parentesi tonde. Valgono le stesse regole per le parentesi graffe viste nella dichiarazione di funzioni;
+	\begin{lstlisting}
+	while (i < 10) {  // CORRECT
+	
+	}
+	
+	while(i<10)  //INCORRECT
+	{  
+	
+	}
+	
+	for(i = 0; i < 10; i++) {  // CORRECT
+		
+	}
+	
+	for(i=0;i<10;i++)  // INCORRECT
+	{  
+	
+	}
+	\end{lstlisting}	
+	}
+
+	\item{\textbf{Controlli condizionali}: valgono le stesse regole per le parentesi graffe viste nella dichiarazione di funzioni. Ogni \emph{else} successivo ad un \emph{if} deve posizionarsi nella stessa riga della parentesi graffa di chiusura dell'\emph{if};}
+	\begin{lstlisting}
+	if (i < 10) {  // CORRECT
+	
+	} else {
+	
+	}
+	
+	if (i < 10) {  // INCORRECT  
+	
+	} 
+	else {
+	
+	}
+	\end{lstlisting}	
+	
+	\item{\textbf{Lunghezza di una linea}: ogni linea di codice non deve contenere più di 80 caratteri. Se necessario, spezzare la linea dopo punti specifici, come un operatore o una virgola;}
+	
+	\item{\textbf{Lunghezza metodi e funzioni}: il corpo dei metodi e delle funzioni non deve superare le 40 righe di lunghezza e tre gradi indentazione. In questo modo si evita la creazione di strutture troppo complesse, difficili da testare e mantenere. Nel caso un metodo o una funzione dovesse infrangere questi limiti, è opportuno riformattare il corpo utilizzando funzioni ausiliarie. Se ciò non è possibile, il Programmatore, con l'aiuto degli altri componenti, cercherà di circoscrivere la complessità del metodo/funzione per evitare che si discosti troppo dai limiti imposti.}
+	
+	
 \end{itemize}
 
 
 \paragraph{TypeScript}\Spazio
 Le convenzioni stilistiche definite in \gl{Grafana Plugin Code Styleguide}\footnote{\url{http://docs.grafana.org/plugins/developing/code-styleguide}} e, più in particolare per il linguaggio Typescript, in \gl{Angular TypeScript Styleguide}\footnote{\url{https://angular.io/guide/styleguide}} verranno seguite dai programmatori per lo sviluppo dell'intero progetto.
+
+\begin{itemize}
+	\item{\textbf{Import}: viene lasciata una linea tra i vari \emph{import} di terze parti. I moduli presenti nello stesso import devono essere listati in ordine alfabetico e staccati con uno spazio sia dalle parentesi graffe e che l'uno dall'altro. Infine, viene posto uno spazio tra le parentesi graffe che contengono i moduli e \emph{import}; }
+	\begin{lstlisting}
+		import { Example } from "../code";  // CORRECT
+		
+		import { Library1, Library2, Library3 } from "../code";
+		
+		import{Example} from "../code";  // INCORRECT
+		import{Library1,Library2,Library 3} from "../code";
+	\end{lstlisting}
+	
+	\item{\textbf{Export}: la parentesi graffa di apertura viene posta nella stessa riga della dichiarazione della funzione, utilizzando uno spazio prima. La parentesi graffa di chiusura viene posta in una nuova riga senza utilizzare spazi;}	
+	\begin{lstlisting}
+		export class JsImport {  //  CORRECT
+		
+		}
+		
+		export class JsImport //  INCORRECT
+		{  
+		
+		}
+	\end{lstlisting}
+\end{itemize}
+
 \paragraph{HTML}\Spazio
+
+Le convenzioni stilistiche definite in \gl{HTML5 Style Guide and Coding Conventions}\footnote{\url{https://www.w3schools.com/html/html5_syntax.asp}} verranno seguite dai programmatori per lo sviluppo dell'intero progetto.
+
 \paragraph{CSS}\Spazio
+Le convenzioni stilistiche definite in \gl{Airbnb CSS / Sass Styleguide}\footnote{\url{https://github.com/airbnb/css}} verranno seguite dai programmatori per lo sviluppo dell'intero progetto.
 
 \pagebreak
