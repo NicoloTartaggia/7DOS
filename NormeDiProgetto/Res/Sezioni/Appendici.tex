@@ -1,7 +1,7 @@
 \appendix
 \addcontentsline{toc}{section}{Appendici}
 \section*{Appendice}
-\subsection{ISO/IEC 15504(SPICE)}
+\section{ISO/IEC 15504(SPICE)}
 Per ogni \gl{processo} lo standard ISO/IEC 15504 definisce una scala di maturità a cinque livelli (più il livello base, detto "livello 0"), riportati di seguito:
 \begin{itemize}
 	\item \textbf {Livello 0 - Incomplete Process}: il processo riporta \gl{performance} e risultati incompleti, inoltre è gestito in modo caotico;
@@ -39,7 +39,7 @@ Lo standard SPICE offre una scala di valutazione per ogni processo, in modo da m
 	\item \textbf{F - Fully Achieved}: >85\% - 100\%.
 \end{itemize}
 
-\subsection{Ciclo di miglioramento continuo (PDCA)}
+\section{Ciclo di miglioramento continuo (PDCA)}
 Il ciclo di miglioramento continuo (PDCA, \emph{Plan-Do-Check-Act)} prevede quattro fasi iterative che permettono di controllare costantemente lo sviluppo di un processo, in modo da poter perseguire la miglior qualità di quest'ultimo:
 \begin{itemize}
 	\item \textbf{Plan}: in questa fase vengono definiti elementi estremamente importanti che riguardano il ciclo di miglioramento continuo. In particolare vengono fissati obiettivi, processi da utilizzare, risultati da ottenere, personale incaricato per i vari processi e scadenze da rispettare;
@@ -47,9 +47,8 @@ Il ciclo di miglioramento continuo (PDCA, \emph{Plan-Do-Check-Act)} prevede quat
 	\item \textbf{Check}: in questa fase vengono confrontati i risultati ottenuti dalle varie attività con quelli ipotizzati durante la fase Plan;
 	\item \textbf{Act}: in questa fase vengono individuate le possibili problematiche che hanno prodotto risultati differenti da quelli attesi. Di conseguenza, verranno determinate tutte le attività da revisionare per migliorare la qualità del processo.
 \end{itemize}
-
-\subsection{ISO/IEC 25010 (SQuaRE)}
-\subsubsection{Functional Suitability}
+\section{ISO/IEC 25010 (SQuaRE)}
+\subsection{Functional Suitability}
 Questa caratteristica esprime il grado di soddisfacimento dei requisiti espliciti ed impliciti da parte di un prodotto o servizio, quando utilizzato sotto determinate condizioni.\\ \\
 \textbf{Sotto-caratteristiche notevoli:}
 \begin{itemize}
@@ -57,7 +56,7 @@ Questa caratteristica esprime il grado di soddisfacimento dei requisiti esplicit
 	\item{\textbf{Functional Correctness}}: esprime il grado con cui il prodotto restituisce risultati corretti, entro il livello di precisione desiderato.
 \end{itemize}
 
-\subsubsection{Performance Efficiency}
+\subsection{Performance Efficiency}
 Questa caratteristica esprime le prestazioni relative al sistema come, quantità di risorse utilizzate per eseguire una determinata funzionalità del sistema sotto specifiche condizioni.  \\ \\
 \textbf{Sotto-caratteristiche notevoli:}
 \begin{itemize}
@@ -65,7 +64,7 @@ Questa caratteristica esprime le prestazioni relative al sistema come, quantità
 	\item{\textbf{Resource Utilization}}: esprime il grado con cui il numero e tipo di risorse utilizzate da un prodotto o sistema, durante l'esecuzione delle sue funzionalità, rispetta i requisiti.
 \end{itemize}
 
-\subsubsection{Usability}
+\subsection{Usability}
 Questa caratteristica esprime il grado con cui un prodotto o sistema può essere usato da un determinato utente per raggiungere determinati scopi con efficacia, efficienza e soddisfazione in uno specifico contesto d'uso.\\ \\
 \textbf{Sotto-caratteristiche notevoli:}
 \begin{itemize}
@@ -74,7 +73,7 @@ Questa caratteristica esprime il grado con cui un prodotto o sistema può essere
 	\item{\textbf{User Error Protection}}: esprime il grado di efficacia ed efficienza con cui un sistema protegge gli utenti dal commettere errori.
 \end{itemize}
 
-\subsubsection{Reliability}
+\subsection{Reliability}
 Questa caratteristica esprime il grado con cui un sistema, prodotto o componente esegue determinate funzioni sotto specifiche condizioni per un dato periodo di tempo. \\ \\
 \textbf{Sotto-caratteristiche notevoli:}
 \begin{itemize}
@@ -82,7 +81,7 @@ Questa caratteristica esprime il grado con cui un sistema, prodotto o componente
 	\item{\textbf{Fault Tolerance}}: esprime il grado con cui un sistema, prodotto o componente opera come previsto nonostante la presenza di malfunzionamenti hardware o software.
 \end{itemize}
 
-\subsubsection{Maintainability}
+\subsection{Maintainability}
 Questa caratteristica esprime il grado di efficacia ed efficienza con cui un prodotto, o componente può essere modificato per migliorarlo, correggerlo o adattarlo a dei cambiamenti all'ambiente. \\ \\
 \textbf{Sotto-caratteristiche notevoli}
 \begin{itemize}
@@ -92,11 +91,11 @@ Questa caratteristica esprime il grado di efficacia ed efficienza con cui un pro
 	\item{\textbf{Testability}}: esprime il grado di efficacia ed efficienza con cui è possibile stabilire ed eseguire dei test per valutare la qualità del sistema.
 \end{itemize}
 
-\subsection{Metriche}
+\section{Metriche}
 In questa sezione vengono riportate le metriche adottate.
-\subsubsection{Per la qualità del processo}
+\subsection{Per la qualità del processo}
 Alla conclusione di ogni fase del progetto, per ogni macro-attività , si devono calcolare i relativi indici. Al fine di avere un indice complessivo di fase deve essere inoltre calcolato il valore medio di tali indici. Di seguito verranno descritte in modo dettagliato tutte le metriche relative ai processi adottate. Per una spiegazione dettagliata riguardo gli obbiettivi che il team si è imposto di raggiungere per le suddette metriche consultare il piano di qualifica.
-\paragraph{\gl{Schedule Variance (SV)}}\Spazio
+\subsubsection{\gl{Schedule Variance (SV)}}\Spazio
 Metrica che indica se il progetto è in linea, in anticipo o in ritardo rispetto alle attività pianificate nella \gl{baseline}. Essa è un indicatore di efficacia. \\
 Calcolabile attraverso la seguente formula:
 \[ SV=BCWP-BCWS\]
@@ -107,45 +106,45 @@ Dove:
 	\item {\textbf{BCWS}: corrisponde al numero di giorni od euro pianificati inizialmente per realizzare le attività fino alla data corrente.}
 \end{itemize}
 Se SV > 0 significa che si sta procedendo più velocemente rispetto a quanto pianificato. Viceversa, se SV < 0 allora il gruppo è in ritardo.
-\paragraph{\gl{Budget Variance (BV)}}\Spazio
+\subsubsection{\gl{Budget Variance (BV)}}\Spazio
 Metrica che indica se la spesa complessiva fino a quel momento è maggiore o minore rispetto a quanto pianificato. Essa è un indicatore con valore contabile e finanziario. \\
 Calcolabile attraverso la seguente formula:
-\[BV=BCWS-ACWP\]
+\[BV=\frac{BCWS-ACWP}{BCWS}\]
 \begin{itemize}
 	\item {\textbf{BV}: corrisponde al valore della metrica;}
 	\item {\textbf{BCWS}: corrisponde al costo pianificato in giorni od euro per realizzare le attività del progetto fino alla data corrente;}
 	\item {\textbf{ACWP}: corrisponde al costo, in giorni od euro, effettivamente sostenuto fino alla data corrente.}
 \end{itemize}
 Se BV > 0 il budget complessivo sta diminuendo con velocità minore rispetto a quanto pianificato. Viceversa se BV < 0.
-\paragraph{Numero rischi non previsti}\Spazio
+\subsubsection{Numero rischi non previsti}\Spazio
 Indica la quantità di rischi rilevati durante lo svolgimento delle attività, non preventivati all'interno dell'analisi dei rischi durante l'attuale fase del progetto.
-\paragraph{Indisponibilità servizi esterni}\Spazio
+\subsubsection{Indisponibilità servizi esterni}\Spazio
 Numero complessivo di giorni in cui uno specifico servizio esterno, tra tutti quelli utilizzati, è rimasto indisponibile per la maggior parte del tempo rendendone quindi impossibile l'utilizzo. Sarà necessario utilizzare un contatore separato per ogni servizio utilizzato.
-\paragraph{Media commit a settimana}\Spazio
+\subsubsection{Media commit a settimana}\Spazio
 Media dei commit effettuati settimanalmente sulle diverse repository del gruppo. Utile per tenere traccia dell'impegno dedicato settimanalmente dal team sul progetto. \textbf{Misurazione}: verranno utilizzati i risultati dei grafici generati automaticamente nella sezione emph{Insights/Commits} di GitHub.
-\paragraph{Media numero build Travis a settimana}\Spazio
+\subsubsection{Media numero build Travis a settimana}\Spazio
 Media delle build Travis effettuate settimanalmente sulle diverse repository del gruppo. Utile per tenere traccia dell'impegno dedicato settimanalmente dal team sul progetto.
-\paragraph{Percentuale di build Travis superate}\Spazio
+\subsubsection{Percentuale di build Travis superate}\Spazio
 Percentuale delle build Travis effettuate che hanno avuto esito positivo sul numero totale delle build effettuate. Utile per tenere traccia dei progressi raggiunti dal team.
 
 
-\subsubsection{Per la qualità del prodotto}
-\paragraph{Metriche per i prodotti documentali}\Spazio
+\subsection{Per la qualità del prodotto}
+\subsubsection{Metriche per i prodotti documentali}\Spazio
 In seguito ad una qualsiasi modifica di un documento, si devono calcolare tutti i relativi indici di quel specifico documento. Inoltre dovrà essere ricalcolata la media complessiva di tutti gli indici calcolati fino a quel momento del documento in questione.
 Di seguito verranno descritte in modo dettagliato tutte le metriche relative ai documenti adottate. Per una spiegazione dettagliata riguardo gli obbiettivi che il team si è imposto di raggiungere per le suddette metriche consultare il piano di qualifica.
 
-\subparagraph{Numero di errori grammaticali}\Spazio
+\paragraph{Numero di errori grammaticali}\Spazio
 Misura del numero di errori ortografici presenti all'interno di un documento.
 Per verificare la presenza di errori ortografici nella documentazione deve essere usato lo strumento di controllo ortografico offerto dall'editor \emph{TexStudio} che integra i dizionari di OpenOffice per segnalare potenziali errori presenti nel testo.
 
-\subparagraph{Gunning fog index}\Spazio
+\paragraph{Gunning fog index}\Spazio
 Indice utilizzato per misurare la facilità di lettura e comprensione di un testo. Il numero risultante è un indicatore del numero di anni di educazione formale necessari al fine di leggere il testo con facilità. \\
 L'indice di Gunning fog è calcolabile tramite la seguente formula:
 $$
 0.4*((\frac{n^{\circ}\:parole}{n^{\circ}\:frasi})+100*(\frac{n^{\circ}\:parole\:complesse}{n^{\circ}\:parole}))
 $$
 Per ogni documento i \emph{Verificatori} devono calcolare il Gunning fog index e se questo dovesse risultare troppo alto, dovrà essere eseguita la verifica del documento con l'obiettivo di ricercare frasi troppo prolisse o complesse. Il calcolo deve essere effettuato attraverso uno \gl{script} scritto in Perl che trasforma i documenti dal formato .pdf al formato .txt per effettuare un calcolo più preciso, eliminando le tabelle ma non il loro contenuto.
-\subparagraph{Indice di Gulpease}\Spazio
+\paragraph{Indice di Gulpease}\Spazio
 Utilizzato per misurare la leggibilità di un testo in lingua italiana.\\
 L'indice di Gulpease è calcolabile tramite la seguente formula:
 $$
@@ -160,11 +159,11 @@ I risultati sono compresi tra 0 e 100, dove 0 indica la leggibilità più bassa 
 Per ogni documento i \emph{Verificatori} devono calcolare l'indice di Gulpease e se questo dovesse risultare troppo basso, dovrà essere eseguita la verifica del documento con l'obiettivo di ricercare frasi troppo prolisse o complesse. Il calcolo deve essere effettuato attraverso uno \gl{script} scritto in Perl che trasforma i documenti dal formato .pdf al formato .txt per effettuare un calcolo più preciso, eliminando le tabelle ma non il loro contenuto.
 
 
-\paragraph{Metriche per i prodotti software}\Spazio
+\subsubsection{Metriche per i prodotti software}\Spazio
 Di seguito viene riportato solamente un piccolo sottoinsieme di metriche relative ai prodotti software ritenute come fondamentali dal team 7DOS.
 Questa sezione verrà ampliata successivamente qualora fosse necessario introdurre nuove metriche per la valutazione della qualità dei prodotti software.
 
-\subparagraph{Functional Implementation Completeness}\Spazio
+\paragraph{Functional Implementation Completeness}\Spazio
 Misurazione in percentuale del grado con cui le funzionalità offerte dalla corrente implementazione del software coprono l'insieme di funzioni specificate nei requisiti.\\
 Abbiamo scelto questa metrica per valutare il grado di completezza del prodotto; l'obiettivo è implementare tutte le funzionalità richieste.\\
 Viene utilizzata la seguente formula:
@@ -175,7 +174,7 @@ Dove:
 	\item{\textbf{NF\textsubscript{i}}: è il numero di funzioni attualmente implementate;}
 	\item{\textbf{NF\textsubscript{r}}: è il numero di funzioni specificate dai requisiti.}
 \end{itemize}
-\subparagraph{Average Functional Implementation Correctness}\Spazio
+\paragraph{Average Functional Implementation Correctness}\Spazio
 Misurazione in percentuale del grado in cui le funzionalità offerte dalla corrente implementazione del software, in media, rispettano il livello di precisione indicato nei requisiti.\\
 Abbiamo scelto questa metrica per valutare il grado di accuratezza e garantire la qualità dei risultati restituiti dal prodotto, in quanto andrà a fare previsioni sulla verosimiglianza di alcuni eventi in base ai dati forniti, ed è necessario che tali previsioni siano sufficientemente accurate.\\
 Viene utilizzata la seguente formula:
@@ -188,7 +187,7 @@ Dove:
 	\item{\textbf{N}: è il numero totale di funzioni considerate.}
 \end{itemize}
 
-\subparagraph{Tempo di risposta}\Spazio
+\paragraph{Tempo di risposta}\Spazio
 Misurazione in secondi che indica il tempo medio che intercorre fra la richiesta software di una determinata funzionalità e la restituzione del risultato all'utente. \\
 Viene utilizzata la seguente formula:
 $$TR=\frac{\sum\limits_{i=1}^N{T_i}}{N}$$
@@ -199,7 +198,7 @@ Dove:
 	\item{\textbf{N}: è il numero totale di funzioni considerate.}
 \end{itemize}
 
-\subparagraph{Average Learning Time}\Spazio
+\paragraph{Average Learning Time}\Spazio
 Misurazione in minuti del tempo medio impiegato da un utente per imparare ad utilizzare una singola funzionalità del prodotto.
 \\Abbiamo scelto questa metrica poiché, trattandosi di un prodotto che verrà reso disponibile pubblicamente, abbiamo ritenuto importante renderlo semplice da imparare per permetterne l'uso ad una vasta gamma di utenti.
 \\Viene utilizzata la seguente formula:
@@ -211,7 +210,7 @@ Dove:
 	\item{\textbf{N}: è il numero totale di funzioni considerate.}
 \end{itemize}
 
-\subparagraph{Failure Density}\Spazio
+\paragraph{Failure Density}\Spazio
 Misurazione in percentuale della quantità di test falliti rispetto alla quantità di test eseguiti.
 \\Abbiamo scelto questa metrica per garantire che il prodotto sia generalmente stabile e non risulti poco utilizzabile o inutilizzabile a causa di eccessive \gl{failure}. Valutazioni più precise saranno effettuate in base ai singoli risultati dei test.\\
 Viene utilizzata la seguente formula:
@@ -223,7 +222,7 @@ Dove:
 	\item{\textbf{T\textsubscript{e}}: è il numero di test eseguiti.}
 \end{itemize}
 
-\subparagraph{Blocco di operazioni non corrette}\Spazio
+\paragraph{Blocco di operazioni non corrette}\Spazio
 Misurazione in percentuale della quantità di funzionalità in grado di gestire in modo corretto possibili errori.\\
 Viene utilizzata la seguente formula:
 $$BONC=\frac{NF_E}{NO_T}*100$$
@@ -233,7 +232,7 @@ Dove:
 	\item{\textbf{NF\textsubscript{E}}: è il numero di failure evitate;}
 	\item{\textbf{NO\textsubscript{T}}: è il numero di test con possibile esecuzione di operazioni non corrette.}
 \end{itemize}
-\subparagraph{Failure Analysis}\Spazio
+\paragraph{Failure Analysis}\Spazio
 Misurazione in percentuale delle modifiche effettuate in risposta a failure che hanno portato all'introduzione di nuove failure in altre componenti del sistema. \\
 Viene utilizzata la seguente formula:
 $$FA=\frac{NF_I}{NF_R}*100$$
@@ -244,7 +243,7 @@ Dove:
 	\item{\textbf{NF\textsubscript{R}}: è il numero di failure rilevate.}
 \end{itemize}
 
-\subparagraph{Comment Ratio}\Spazio
+\paragraph{Comment Ratio}\Spazio
 Misurazione in percentuale che indica il rapporto tra il numero di righe in cui è presente del codice ed il numero di righe in cui sono presenti dei commenti(o annotazioni). \\
 Viene utilizzata la seguente formula:
 $$CR=\frac{NR_C}{NR_A}*100$$
@@ -255,12 +254,12 @@ Dove:
 	\item{\textbf{NR\textsubscript{A}}: è il numero di righe in cui sono presenti dei commenti.}
 \end{itemize}
 
-\subparagraph{Code coverage}\Spazio
+\paragraph{Code coverage}\Spazio
 Per assicurarsi che la più grande porzione possibile di codice venga testata, si adotta questa metrica, che indica in percentuale, quanto del codice sorgente
 è soggetto a test. Più alta tale percentuale, minore il rischio che vi siano criticità non rilevate.
 Per il suo calcolo si farà uso degli strumenti automatici descritti nella sezione §2.2.2.4 di questo documento, ovvero TravisCI e Coveralls.
 
-\subparagraph{Percentuale di criticità corrette} \Spazio
+\paragraph{Percentuale di criticità corrette} \Spazio
 Indica la percentuale di criticità (bug, difetti in genere) risolte sul totale di quelle note.
 Se questa percentuale è troppo bassa, il team sarà costretto a fermare i processi di sviluppo per risolvere le criticità esistenti.
 Per il calcolo viene utilizzata la seguente formula:
@@ -272,7 +271,7 @@ Dove:
 	\item{\textbf{CN}: è il numero di criticità note.}
 \end{itemize}
 
-\subparagraph{Percentuale di test eseguiti} \Spazio
+\paragraph{Percentuale di test eseguiti} \Spazio
 Indica la percentuale di test eseguiti sul totale di test da eseguire, serve al team di verificatori per monitorare lo svolgimento delle loro attività.
 Viene utilizzata la seguente formula:
 $$PTE=\frac{TE}{TT}*100$$
