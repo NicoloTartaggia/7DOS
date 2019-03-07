@@ -115,11 +115,22 @@ Per quanto riguarda il tracciamento dei requisiti, il gruppo ha deciso di utiliz
 Per quanto concerne la creazione e la modellazione dei diagrammi UML per i casi d'uso, abbiamo deciso di utilizzare Astah UML, data la sua facilità di utilizzo e compatibilità con UML 2.x. Per la successiva fase di modellazione delle classi, potrebbe verificarsi una scelta diversa riguardo al software da utilizzare.
 \subsubsection{Progettazione}
 \paragraph{Scopo}\Spazio
-Esplicita concretamente una prima forma ad alto livello del design del software pensata per il progetto, determinandone le caratteristiche più in evidenza in modo da:
+La Progettazione esplicita concretamente una prima forma ad alto livello del design del software pensata per il progetto, determinandone le caratteristiche più in evidenza, in modo da comunicare con gli stakeholder e dare delle informazioni chiare, così da intraprendere le prime discussioni sul progetto. I \emph{Progettisti} hanno il compito di definire il sistema in modo esplicito così da poter fare importanti considerazioni riguardo a performance, affidabilità e manutenibilità, capire come è organizzato il sistema  e come i componenti interoperano tra di loro sottolineando la possibilità di riutilizzo in larga scala di parte del codice, dato che abbiamo notato una frequente ripetizione dei requisiti in un sistema complesso come quello affrontato dal nostro team.
+L’architettura dovrà avere le seguenti caratteristiche:
 	\begin{itemize}
-	\item \textbf{{Comunicare con gli stakeholder}} e dare delle informazioni chiare, così da intraprendere le prime discussioni sul progetto;
-	\item \textbf{{Analizzare il sistema}} in modo esplicito nei primi passi del progetto può portare ad importanti considerazioni riguardo a performance, affidabilità e manutenibilità;
-	\item Capire come è organizzato il sistema  e come i componenti interoperano tra di loro sottolineando la possibilità di \textbf{{riutilizzo in larga scala}} di parte del codice, dato che abbiamo notato una frequente ripetizione dei requisiti in un sistema complesso come quello affrontato dal nostro team.
+		\item \textbf{Sufficienza}: deve essere in grado di soddisfare i requisiti decritti nel documento \emph{Analisi dei Requisiti};
+		\item \textbf{Comprensibilità}: deve essere capita dagli stakeholder;
+		\item \textbf{Flessibilità}: deve permettere modifiche in seguito a delle variazioni, senza essere profondamente ristrutturata;
+		\item \textbf{Modularità}: deve essere composta di parti chiare e ben definite;
+		\item \textbf{Riusabilità}: le parti devono poter essere usate in più applicazioni;
+		\item \textbf{Efficienza}: deve ridurre al minimo gli sprechi;
+		\item \textbf{Affidabilità}: deve rispettare le specifiche nel tempo;
+		\item \textbf{Disponibilità}: non deve essere inabilitata durante la manutenzione;
+		\item \textbf{Sicurezza}: non deve essere vulnerabile ad intrusioni e malfunzionamenti;
+		\item \textbf{Semplicità}: deve contenere solo il necessario;
+		\item \textbf{Incapsulazione}: le informazioni interne delle componenti devono essere nascoste;
+		\item \textbf{Coesione}: le parti che condividono lo stesso fine devono stare insieme;
+		\item \textbf{Basso accoppiamento}: parti diverse devono essere poco dipendenti dalle altre.
 	\end{itemize}
 \paragraph{Attività}\Spazio
 Il design del software non è composto da una singola attività, bensì da un insieme preciso di sotto-attività progettuali che portano al design finale.
@@ -128,6 +139,17 @@ Le sotto-attività che il nostro gruppo ha scelto di svolgere sono:
 	\item\textbf{{Progettazione architetturale}}: i progettisti identificheranno una struttura globale del sistema, quindi i componenti principali, le loro relazioni e come saranno distribuiti;
 	\item\textbf{{Progettazione dell'interfaccia}}: i progettisti definiranno le interfacce tra i \gl{moduli} di sistema. Ciò deve essere fatto assolutamente in modo non ambiguo dato che, grazie a queste specifiche, ogni componente potrà usare in modo appropriato le funzionalità degli altri componenti del progetto senza sapere l'effettiva implementazione;
 	\item\textbf{{Selezione e progettazione dei componenti}}: i progettisti cercheranno dei componenti riutilizzabili e valuteranno se inserirli nel progetto, specificandone gli appropriati utilizzi e aggiustamenti, o se sarà più opportuno costruire dei nuovi componenti.
+\end{itemize}
+\paragraph{Diagrammi}\Spazio
+Per rendere più chiare le scelte progettuali adottate e ridurre le possibili
+ambiguità, verranno impiegate le seguenti tipologie di rappresentazioni:
+\begin{itemize}
+	\item \textbf{Diagrammi dei casi d’uso}: per descrivere le funzionalità del sistema;
+	\item \textbf{Diagrammi delle classi}: per descrivere gli oggetti presenti nel sistema;
+	\item \textbf{Diagrammi dei package}: per descrivere le dipendenze delle grassi raggruppate in package;
+	\item \textbf{Diagrammi di sequenza}: per descrivere la collaborazione nel tempo
+	tra un gruppo di oggetti;
+	\item \textbf{Diagrammi di attività}: per descrivere la logica procedurale.
 \end{itemize}
 \paragraph{Tecnologie}\Spazio
 Lo sviluppo del progetto richiede l'utilizzo di tecnologie, alcune imposte del capitolato, altre soggette a libera scelta da parte del team.
