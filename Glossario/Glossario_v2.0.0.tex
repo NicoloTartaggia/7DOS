@@ -26,7 +26,9 @@
 	\subsection{Analisi dei requisiti}
 	\label{sec:analisirequisiti}
 	L'obiettivo dell'analisi dei requisiti è individuare e definire i \underline{\hyperref[sec:requisito]{requisiti}} di progetto. Il risultato di tale processo è un documento contrattuale che andrà fornito all'azienda appaltatrice nell'ambito di una gara d'appalto. Sulla base di questo documento l'azienda deciderà a chi affidare l'appalto.
-
+	\subsection{Airbnb CSS / Sass Style guide}
+	\label{sec:airbnb}
+	Insieme di convenzioni da rispettare per la produzione di codice \underline{\hyperref[sec:css]{CSS}} e \underline{\hyperref[sec:sass]{SASS}} di qualità, reperbile al seguente link \href{https://github.com/airbnb/css} {Airbnb Style guide}.
 	\subsection{Analisi dinamica}
 	\label{sec:analisidinamica}
 	Tecnica di analisi di un \underline{\hyperref[sec:prodottosoftware]prodotto {software}} in cui quest'ultimo viene eseguito in un ambiente reale o virtuale; coincide con i test:
@@ -159,8 +161,8 @@
 	\label{sec:coveralls}
 	Coveralls è un servizio web che permette di monitorare la copertura dei test effettuati sul codice sorgente depositato all'interno di repository GitHub, Bitbucket o GitLab.
 	\subsection{CSS}
-	\label{sec:CSS}
-	Il CSS, acronimo di Cascading Style Sheets, è un linguaggio usato per definire la formattazione di documenti HTML.
+	\label{sec:css}
+	Il CSS, acronimo di Cascading Style Sheets, è un linguaggio usato per definire la formattazione di documenti \underline{\hyperref[sec:html]{HTML}}.
 	% D	----------------------------------------------------------------------------------------------
 	\newpage
 	\newsection{D}
@@ -233,7 +235,9 @@
 	\subsection{HTML}
 	\label{sec:html}
 	In informatica l'HyperText Markup Language (HTML) è un linguaggio di markup  nato per la formattazione e impaginazione di documenti ipertestuali disponibili nel web. HTML è un linguaggio di pubblico dominio, la cui sintassi è stabilita dal \emph{World Wide Web Consortium} (W3C).
-
+	\subsection{HTML5 Style Guide and Coding Conventions}
+	\label{sec:htmlstyleguide}
+	Insieme di convenzioni da rispettare, definite da W3c per la produzione di codice \underline{\hyperref[sec:html]{HTML}} di qualità, reperibile al seguente link \href{https://www.w3schools.com/html/html5_syntax.asp}{HTML Style guide}
 
 	% I	----------------------------------------------------------------------------------------------
 	\newpage
@@ -337,7 +341,7 @@
 	Linguaggio di scripting orientato agli oggetti e agli eventi, comunemente utilizzato nella programmazione web, lato client, per la creazione di effetti dinamici interattivi tramite funzioni di script, invocate da eventi innescati a loro volta in vari modi dall'utente sulla pagina web in uso.
 	\subsection{JavaScript Style Guide and Coding Conventions}
 	\label{sec:JavaScriptSGAC}
-	Insieme di convenzioni da rispettare definite da W3C per la produzione di codice \underline{\hyperref[sec:javascript]{JavaScript}} di qualità.
+	Insieme di convenzioni da rispettare, definite da W3C, per la produzione di codice \underline{\hyperref[sec:javascript]{JavaScript}} di qualità, reperibile al seguente link \href{https://www.w3schools.com/js/js_conventions.asp}{JavaScript Style guide}.
 	\subsection{JPG}
 	\label{sec:jpg}
 	Formato lossy per memorizzare immagini.
@@ -696,7 +700,27 @@ ISO 12207 definisce così le fasi del ciclo di vita sequenziale: analisi, proget
 	\label{sec:riuso}
 	Riutilizzo del codice, può essere di due tipi: opportunistico (copia e incolla), caratterizzato da un basso costo e poco impatto, o sistematico, caratterizzato da un maggior costo ed maggior impatto.
 
-
+	\subsection{Rule Declaration}
+	\label{sec:ruledeclaration}
+	All'interno del linguaggio \underline{\hyperref[sec:css]{CSS}} una rule declaration possiede la seguente struttura:
+	\begin{figure} [H]
+		\centering
+		\includegraphics[scale=0.45]{Img/selector.jpg} 
+		\caption{Struttura di una rule declaration} \label{}
+		Immagine presa da \href{https://www.w3schools.com/css/css_syntax.asp}{w3schools.com}
+		
+	\end{figure}
+	Dove:
+	\begin{itemize}
+		\item Il selettore punta all'elemento \underline{\hyperref[sec:html]{HTML}} che si vuole stilizzare;
+		\item Il blocco di dichiarazioni contiene una o più dichiarazioni separate da un punto e virgola;
+		\item {Ogni dichiarazione è composta da due componenti separate dal carattere due punti:
+			\begin{itemize}
+				\item il nome di una proprietà \underline{\hyperref[sec:css]{CSS}};
+				\item un valore da associare ad essa.
+			\end{itemize}
+		}
+	\end{itemize}
 	\subsection{Ruolo}
 	\label{sec:ruolo}
 	Indica l'area di specializzazione.
@@ -715,7 +739,10 @@ ISO 12207 definisce così le fasi del ciclo di vita sequenziale: analisi, proget
 	\newpage
 	\newsection{S}
 
-
+	\subsection{SASS}
+	\label{sec:sass}
+	SASS è un'estensione del linguaggio \underline{\hyperref[sec:css]{CSS}} che permette di utilizzare variabili, di creare funzioni e di organizzare il foglio di stile in più file.
+	
 	\subsection{Schedule Variance}
 	\label{sec:schedulevariance}
 	\emph{Schedule Variance (SV)} è una metrica che indica se le attività di progetto sono in linea rispetto alla loro schedulazione.
