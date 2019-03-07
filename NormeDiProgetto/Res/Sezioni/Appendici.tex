@@ -93,9 +93,9 @@ Questa caratteristica esprime il grado di efficacia ed efficienza con cui un pro
 
 \section{Metriche}
 In questa sezione vengono riportate le metriche adottate.
-\subsection{Per la qualità del processo}
-Alla conclusione di ogni fase del progetto, per ogni macro-attività , si devono calcolare i relativi indici. Al fine di avere un indice complessivo di fase deve essere inoltre calcolato il valore medio di tali indici. Di seguito verranno descritte in modo dettagliato tutte le metriche relative ai processi adottate. Per una spiegazione dettagliata riguardo gli obbiettivi che il team si è imposto di raggiungere per le suddette metriche consultare il piano di qualifica.
-\subsubsection{\gl{Schedule Variance (SV)}}\Spazio
+\subsection{Per la qualità di processo}
+Alla conclusione di ogni fase del progetto, per ogni macro-attività , si devono calcolare i relativi indici. Al fine di avere un indice complessivo di fase deve essere inoltre calcolato il valore medio di tali indici. Di seguito verranno descritte in modo dettagliato tutte le metriche relative ai processi adottate. Per una spiegazione dettagliata riguardo gli obbiettivi che il team si è imposto di raggiungere per le suddette metriche consultare il \emph{Piano di Qualifica v2.0.0.}
+\subsubsection{\gl{Schedule Variance (SV)}}
 Metrica che indica se il progetto è in linea, in anticipo o in ritardo rispetto alle attività pianificate nella \gl{baseline}. Essa è un indicatore di efficacia. \\
 Calcolabile attraverso la seguente formula:
 \[ SV=BCWP-BCWS\]
@@ -106,7 +106,7 @@ Dove:
 	\item {\textbf{BCWS}: corrisponde al numero di giorni od euro pianificati inizialmente per realizzare le attività fino alla data corrente.}
 \end{itemize}
 Se SV > 0 significa che si sta procedendo più velocemente rispetto a quanto pianificato. Viceversa, se SV < 0 allora il gruppo è in ritardo.
-\subsubsection{\gl{Budget Variance (BV)}}\Spazio
+\subsubsection{\gl{Budget Variance (BV)}}
 Metrica che indica se la spesa complessiva fino a quel momento è maggiore o minore rispetto a quanto pianificato. Essa è un indicatore con valore contabile e finanziario. \\
 Calcolabile attraverso la seguente formula:
 \[BV=\frac{BCWS-ACWP}{BCWS}\]
@@ -116,20 +116,38 @@ Calcolabile attraverso la seguente formula:
 	\item {\textbf{ACWP}: corrisponde al costo, in giorni od euro, effettivamente sostenuto fino alla data corrente.}
 \end{itemize}
 Se BV > 0 il budget complessivo sta diminuendo con velocità minore rispetto a quanto pianificato. Viceversa se BV < 0.
-\subsubsection{Numero rischi non previsti}\Spazio
+\subsubsection{Numero rischi non previsti}
 Indica la quantità di rischi rilevati durante lo svolgimento delle attività, non preventivati all'interno dell'analisi dei rischi durante l'attuale fase del progetto.
-\subsubsection{Indisponibilità servizi esterni}\Spazio
+\subsubsection{Indisponibilità servizi esterni}
 Numero complessivo di giorni in cui uno specifico servizio esterno, tra tutti quelli utilizzati, è rimasto indisponibile per la maggior parte del tempo rendendone quindi impossibile l'utilizzo. Sarà necessario utilizzare un contatore separato per ogni servizio utilizzato.
-\subsubsection{Media commit a settimana}\Spazio
-Media dei commit effettuati settimanalmente sulle diverse repository del gruppo. Utile per tenere traccia dell'impegno dedicato settimanalmente dal team sul progetto. \textbf{Misurazione}: verranno utilizzati i risultati dei grafici generati automaticamente nella sezione emph{Insights/Commits} di GitHub.
-\subsubsection{Media numero \gl{Build} \gl{Travis} a settimana}\Spazio
+\subsubsection{Media commit a settimana}
+Media dei commit effettuati settimanalmente sulle diverse repository del gruppo. Utile per tenere traccia dell'impegno dedicato settimanalmente dal team sul progetto. \textbf{Misurazione}: verranno utilizzati i risultati dei grafici generati automaticamente nella sezione \emph{Insights/Commits} di GitHub.
+\subsubsection{Media numero \gl{Build} \gl{Travis} a settimana}
 Media delle build Travis effettuate settimanalmente sulle diverse repository del gruppo. Utile per tenere traccia dell'impegno dedicato settimanalmente dal team sul progetto.
-\subsubsection{Percentuale di build Travis superate}\Spazio
+\subsubsection{Percentuale di build Travis superate}
 Percentuale delle build Travis effettuate che hanno avuto esito positivo sul numero totale delle build effettuate. Utile per tenere traccia dei progressi raggiunti dal team.
+
+\subsection{Per i test}
+Di seguito verranno descritte in modo dettagliato tutte le metriche relative ai test adottate. Per una spiegazione dettagliata riguardo gli obbiettivi che il team si è imposto di raggiungere per le suddette metriche consultare il \emph{Piano di Qualifica v2.0.0.}
+\subsubsection{Percentuale test case passati}
+Indica la percentuale di test passati rispetto ai test totali.\\
+La percentuale test case passati è calcolabile tramite la seguente formula:
+
+\subsubsection{Percentuale test case falliti}
+Indica la percentuale di test falliti rispetto ai test totali.\\
+La percentuale test case falliti è calcolabile tramite la seguente formula:
+
+\subsubsection{Tempo medio necessario al team per risolvere un errore}
+
+\subsubsection{Efficienza nella progettazione dei test}
+
+\subsubsection{Percentuale dei difetti corretti}
+
+\subsubsection{Percentuale dei test eseguiti}
 
 
 \subsection{Per la qualità del prodotto}
-\subsubsection{Metriche per i prodotti documentali}\Spazio
+\subsubsection{Metriche per i prodotti documentali}
 In seguito ad una qualsiasi modifica di un documento, si devono calcolare tutti i relativi indici di quel specifico documento. Inoltre dovrà essere ricalcolata la media complessiva di tutti gli indici calcolati fino a quel momento del documento in questione.
 Di seguito verranno descritte in modo dettagliato tutte le metriche relative ai documenti adottate. Per una spiegazione dettagliata riguardo gli obbiettivi che il team si è imposto di raggiungere per le suddette metriche consultare il piano di qualifica.
 
@@ -159,7 +177,7 @@ I risultati sono compresi tra 0 e 100, dove 0 indica la leggibilità più bassa 
 Per ogni documento i \emph{Verificatori} devono calcolare l'indice di Gulpease e se questo dovesse risultare troppo basso, dovrà essere eseguita la verifica del documento con l'obiettivo di ricercare frasi troppo prolisse o complesse. Il calcolo deve essere effettuato attraverso uno \gl{script} scritto in Perl che trasforma i documenti dal formato .pdf al formato .txt per effettuare un calcolo più preciso, eliminando le tabelle ma non il loro contenuto.
 
 
-\subsubsection{Metriche per i prodotti software}\Spazio
+\subsubsection{Metriche per i prodotti software}
 Di seguito viene riportato solamente un piccolo sottoinsieme di metriche relative ai prodotti software ritenute come fondamentali dal team 7DOS.
 Questa sezione verrà ampliata successivamente qualora fosse necessario introdurre nuove metriche per la valutazione della qualità dei prodotti software.
 
