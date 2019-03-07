@@ -74,10 +74,10 @@ Dalla tabella si può notare come tutti gli indici Gulpease dei documenti rientr
 \subsubsection{Dettaglio dell'esito della revisione}
 \begin{itemize}
 	\item\emph{Norme di Progetto}: sono state effettuate le integrazioni richieste ed è stata aggiornata la struttura del documento in modo da rispettare gli stessi standard per ogni sezione.\\
-	La sottosezione relativa alla verifica è stata opportunamente aggiornata in modo da contenere le nuove metriche inserite e le vecchie metriche erroneamente presenti nel \emph{Piano di Qualità v1.0.0}.	\item\emph{Analisi dei Requisiti}: al documento sono state attuate le opportune modifiche suggerite. Alcuni casi d'uso sono stati leggermente rivisti ed è stato introdotto un caso d'uso più generico per ogni agglomerato di azioni con attitudini simili. Ciò ha portato ad un importante cambiamento del caso d'uso principale. 	
+	La sottosezione relativa alla verifica è stata aggiornata in modo da contenere le nuove metriche inserite e le metriche erroneamente inserite nel \emph{Piano di Qualità v1.0.0}.	\item\emph{Analisi dei Requisiti}: sono state attuate le opportune modifiche suggerite. Alcuni casi d'uso sono stati leggermente rivisti ed è stato introdotto un caso d'uso più generico per ogni agglomerato di azioni con attitudini simili, modificando il caso d'uso principale. 	
 	\item\emph{Piano di Progetto}: sono state fatte alcune verifiche nell'uso di alcuni termini e standard come consigliato dal committente. Sono stati aggiunte le opportune motivazioni e spiegazioni nelle scelte effettuate. La presentazione dei contenuti è stata rivista in modo da renderla più efficace.
-	\item\emph{Piano di Qualifica}: il documento è stato profondamente rivisto per struttura e contenuti secondo le specifiche del committente. \\
-	Le specifiche degli standard utilizzati sono stati spostati in appendice alle \emph{Norme di Progetto}, come anche la descrizione delle metriche hanno trovato posto nello stesso documento. Le specifiche dei test sono state trasferite in appendice al documento. Infine, la strategia generale per la verifica ha assunto un ruolo centrale nella specifica degli obiettivi di qualità di processo e prodotto. 
+	\item\emph{Piano di Qualifica}: il documento è stato profondamente rivisto per struttura e contenuti secondo quanto specificato dal committente.
+	Le specifiche degli standard utilizzati e le descrizioni delle metriche sono stati spostati in appendice alle \emph{Norme di Progetto}. É stata aggiunta una sezione riguardante la pianificazione dei test, e le specifiche dei test sono state previste come futura aggiunta in appendice al documento. Infine, la strategia generale per la verifica ha assunto un ruolo centrale nella specifica degli obiettivi di qualità di processo e prodotto. 
 \end{itemize}
 
 \subsection{Revisione di Progettazione}
@@ -166,7 +166,7 @@ Come riportato nella sezione 2.1.6, il gruppo adotta l'approccio a maturità di 
 		\label{tabella: considerazioni sulla maturità dei processi raggiunta}
 	\end{center}
 \end{table}
-
+\pagebreak
 \subparagraph{Progettazione architetturale}\MiniSpazio
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
@@ -199,6 +199,11 @@ Il grafico rappresentante l'applicazione del metodo PDCA nella fase di Consolida
 	\includegraphics[scale=1]{Img/Grafico_PDCA_consolidamento_requisiti}
 	\caption{Grafico del metodo PDCA, fase di Consolidamento dei requisiti}\label{}
 \end{figure}
+Dal grafico possiamo estrapolare che:
+\begin{itemize}
+	\item trattandosi di un periodo relativamente breve (10 giorni), piccole variazioni nel numero di attività risultano in grossi cambiamenti grafici;
+	\item le attività in Plan sono state esaurite prima del termine del periodo, mentre quelle in Check e Act hanno avuto una permanenza maggiore; ciò é dovuto ad un numero di modifiche ai documenti relativamente basso ma di grande importanza e profondità (soprattutto per quanto riguarda il consolidamento del \emph{Piano di Qualifica}), che quindi hanno richiesto periodi di Check e Act prolungati.
+\end{itemize}
 \subparagraph{Progettazione architetturale}\MiniSpazio
 Il grafico rappresentante l'applicazione del metodo PDCA nella fase di Progettazione architetturale è:
 \begin{figure} [H]
@@ -206,6 +211,11 @@ Il grafico rappresentante l'applicazione del metodo PDCA nella fase di Progettaz
 	\includegraphics[scale=1]{Img/Grafico_PDCA_progettazione_architetturale}
 	\caption{Grafico del metodo PDCA, fase di Progettazione architetturale}\label{}
 \end{figure}
+Dal grafico possiamo estrapolare che:
+\begin{itemize}
+	\item si nota uno stallo nell'esecuzione delle attività nella prima metà del periodo, dovuto principalmente, come previsto, alla sovrapposizione degli impegni universitari dei vari membri del gruppo. A questo si sono aggiunte le situazioni di rischio verificatesi, comportando ulteriori ritardi;
+	\item verso al fine del periodo si nota un rapido decremento delle attività in Do e Check, dovuto ad uno sforzo maggiorato per compensare i ritardi dovuti alle situazioni di rischio verificatesi.
+\end{itemize}
 \subsubsection{Qualità di prodotto}
 \paragraph{Indice di Gulpease} \Spazio
 Vengono qui riportati i valori dell'indice Gulpease per ogni documento al termine della fase di Progettazione Architetturale.
@@ -242,6 +252,9 @@ Dalla tabella si può notare come tutti gli indici Gulpease dei documenti rientr
 	\includegraphics[scale=0.55]{Img/and_gulp_rp}
 	\caption{Andamento dell'indice di Gulpease durante le fasi di Consolidamento dei requisiti e Progettazione architetturale}\label{immagine:gulpease rp}
 \end{figure}
+
+\pagebreak
+
 \paragraph{Gunning fog index} \Spazio
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
