@@ -129,22 +129,74 @@ Percentuale delle build Travis effettuate che hanno avuto esito positivo sul num
 
 \subsection{Per i test}
 Di seguito verranno descritte in modo dettagliato tutte le metriche relative ai test adottate. Per una spiegazione dettagliata riguardo gli obbiettivi che il team si è imposto di raggiungere per le suddette metriche consultare il \emph{Piano di Qualifica v2.0.0.}
+
+\paragraph{Percentuale di test eseguiti} \Spazio
+Indica la percentuale di test eseguiti sul totale di test da eseguire, serve al team di verificatori per monitorare lo svolgimento delle loro attività.
+Viene utilizzata la seguente formula:
+$$PTE=\frac{TE}{TT}*100$$
+Dove:
+\begin{itemize}
+	\item{\textbf{PTE}: è il valore della metrica;}
+	\item{\textbf{TE}: è il numero di test eseguiti;}
+	\item{\textbf{NR\textsubscript{A}}: è il numero di totale di test.}
+\end{itemize}
+
 \subsubsection{Percentuale test case passati}
 Indica la percentuale di test passati rispetto ai test totali.\\
 La percentuale test case passati è calcolabile tramite la seguente formula:
+$$PTP=\frac{TP}{NT}*100$$
+Dove:
+\begin{itemize}
+	\item{\textbf{PTP}: è il valore della metrica;}
+	\item{\textbf{TP}: è il numero di test case passati;}
+	\item{\textbf{NT}: è il numero di test case totale.}
+\end{itemize}
 
 \subsubsection{Percentuale test case falliti}
 Indica la percentuale di test falliti rispetto ai test totali.\\
 La percentuale test case falliti è calcolabile tramite la seguente formula:
+$$PTF=\frac{TF}{NT}*100$$
+Dove:
+\begin{itemize}
+	\item{\textbf{PTF}: è il valore della metrica;}
+	\item{\textbf{TF}: è il numero di test case falliti;}
+	\item{\textbf{NT}: è il numero di test case totale.}
+\end{itemize}
 
 \subsubsection{Tempo medio necessario al team per risolvere un errore}
+Indica la quantità di tempo media spesa dal team per risolvere una criticità, utile a comprendere
+l'impatto che l'introduzione di bug ha sui tempi di sviluppo. La formula usata per calcolarla è:
+$$TMRE=\frac{TRE}{NE}$$
+Dove:
+\begin{itemize}
+	\item{\textbf{TMRE}: è il valore della metrica;}
+	\item{\textbf{TRE}: è il quantitativo di tempo speso a risolvere errori;}
+	\item{\textbf{NE}: è il numero di errori risolti.}
+\end{itemize}
 
 \subsubsection{Efficienza nella progettazione dei test}
+Indica il tempo medio per la scrittura dei test. Un valore troppo basso potrebbe indicare la scrittura di test banali o poco efficaci.
+Al contrario un valore troppo alto potrebbe indicare la scrittura di test troppo complessi che rischiano di contenere essi stessi errori.
+La formula usata per calcolare questa metrica è:
+$$TMT=\frac{CR}{CN}*100$$
+Dove:
+\begin{itemize}
+	\item{\textbf{TMT}: è il valore della metrica;}
+	\item{\textbf{TPT}: è il quantitativo di tempo speso a scrivere test;}
+	\item{\textbf{NTP}: è il numero di test scritti.}
+\end{itemize}
 
-\subsubsection{Percentuale dei difetti corretti}
-
-\subsubsection{Percentuale dei test eseguiti}
-
+\subsubsection{Percentuale di errori corretti} \Spazio
+Indica la percentuale di criticità (bug, difetti in genere) risolte sul totale di quelle note.
+Se questa percentuale è troppo bassa, il team sarà costretto a fermare i processi di sviluppo per risolvere le criticità esistenti.
+Per il calcolo viene utilizzata la seguente formula:
+$$PCR=\frac{CR}{CN}*100$$
+Dove:
+\begin{itemize}
+	\item{\textbf{PCR}: è il valore della metrica;}
+	\item{\textbf{CR}: è il numero di criticità risolte;}
+	\item{\textbf{CN}: è il numero di criticità note.}
+\end{itemize}
 
 \subsection{Per la qualità del prodotto}
 \subsubsection{Metriche per i prodotti documentali}
@@ -162,6 +214,7 @@ $$
 0.4*((\frac{n^{\circ}\:parole}{n^{\circ}\:frasi})+100*(\frac{n^{\circ}\:parole\:complesse}{n^{\circ}\:parole}))
 $$
 Per ogni documento i \emph{Verificatori} devono calcolare il Gunning fog index e se questo dovesse risultare troppo alto, dovrà essere eseguita la verifica del documento con l'obiettivo di ricercare frasi troppo prolisse o complesse. Il calcolo deve essere effettuato attraverso uno \gl{script} scritto in Perl che trasforma i documenti dal formato .pdf al formato .txt per effettuare un calcolo più preciso, eliminando le tabelle ma non il loro contenuto.
+
 \paragraph{Indice di Gulpease}\Spazio
 Utilizzato per misurare la leggibilità di un testo in lingua italiana.\\
 L'indice di Gulpease è calcolabile tramite la seguente formula:
@@ -192,6 +245,7 @@ Dove:
 	\item{\textbf{NF\textsubscript{i}}: è il numero di funzioni attualmente implementate;}
 	\item{\textbf{NF\textsubscript{r}}: è il numero di funzioni specificate dai requisiti.}
 \end{itemize}
+
 \paragraph{Average Functional Implementation Correctness}\Spazio
 Misurazione in percentuale del grado in cui le funzionalità offerte dalla corrente implementazione del software, in media, rispettano il livello di precisione indicato nei requisiti.\\
 Abbiamo scelto questa metrica per valutare il grado di accuratezza e garantire la qualità dei risultati restituiti dal prodotto, in quanto andrà a fare previsioni sulla verosimiglianza di alcuni eventi in base ai dati forniti, ed è necessario che tali previsioni siano sufficientemente accurate.\\
@@ -250,6 +304,7 @@ Dove:
 	\item{\textbf{NF\textsubscript{E}}: è il numero di failure evitate;}
 	\item{\textbf{NO\textsubscript{T}}: è il numero di test con possibile esecuzione di operazioni non corrette.}
 \end{itemize}
+
 \paragraph{Failure Analysis}\Spazio
 Misurazione in percentuale delle modifiche effettuate in risposta a failure che hanno portato all'introduzione di nuove failure in altre componenti del sistema. \\
 Viene utilizzata la seguente formula:
@@ -276,26 +331,3 @@ Dove:
 Per assicurarsi che la più grande porzione possibile di codice venga testata, si adotta questa metrica, che indica in percentuale, quanto del codice sorgente
 è soggetto a test. Più alta tale percentuale, minore il rischio che vi siano criticità non rilevate.
 Per il suo calcolo si farà uso degli strumenti automatici descritti nella sezione §2.2.2.4 di questo documento, ovvero TravisCI e Coveralls.
-
-\paragraph{Percentuale di criticità corrette} \Spazio
-Indica la percentuale di criticità (bug, difetti in genere) risolte sul totale di quelle note.
-Se questa percentuale è troppo bassa, il team sarà costretto a fermare i processi di sviluppo per risolvere le criticità esistenti.
-Per il calcolo viene utilizzata la seguente formula:
-$$PCR=\frac{CR}{CN}*100$$
-Dove:
-\begin{itemize}
-	\item{\textbf{PCR}: è il valore della metrica;}
-	\item{\textbf{CR}: è il numero di criticità risolte;}
-	\item{\textbf{CN}: è il numero di criticità note.}
-\end{itemize}
-
-\paragraph{Percentuale di test eseguiti} \Spazio
-Indica la percentuale di test eseguiti sul totale di test da eseguire, serve al team di verificatori per monitorare lo svolgimento delle loro attività.
-Viene utilizzata la seguente formula:
-$$PTE=\frac{TE}{TT}*100$$
-Dove:
-\begin{itemize}
-	\item{\textbf{PTE}: è il valore della metrica;}
-	\item{\textbf{TE}: è il numero di test eseguiti;}
-	\item{\textbf{NR\textsubscript{A}}: è il numero di totale di test.}
-\end{itemize}
