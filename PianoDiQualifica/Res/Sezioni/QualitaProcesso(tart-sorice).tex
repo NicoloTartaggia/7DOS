@@ -42,15 +42,23 @@ Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, 
 \end{itemize}
 
 \subsubsection{Gestione dei test}
-Questo processo ha come scopo
+Questo processo ha come scopo la definizione di misurazioni sull'esecuzione dell'analisi dinamica, in modo tale da garantire una gestione efficace di essa.
 \paragraph{Obiettivi} \Spazio
 Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
 \begin{itemize}
-	\item{}
+	\item{\textbf{Efficienza dei test}: i test devono essere progettati per individuare il maggior numero di difetti possibili. In questo modo è possibile realizzare un prodotto di qualità che soddisfa i requisiti specificati;}
+	\item{\textbf{Risoluzione tempestiva dei problemi riscontrati}: le problematiche evidenziate dai test devono essere risolte nel minor tempo possibile dal gruppo;}
+	\item{\textbf{Eseguire tutti i test necessari}: il sistema si evolve. Molti dei difetti precedentemente segnalati vengono corretti. Ogni volta che viene risolto un errore o è stata aggiunta una nuova funzionalità, è necessario eseguire tutti i test per assicurarsi che il nuovo software modificato abbia effettivamente corrette gli errori noti e non abbia introdotto nuovi errori.}
 \end{itemize}
 Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
 \begin{itemize}
-	\item{}
+	\item{MTS001 \emph{Percentuale test case passati};}
+	\item{MTS002 \emph{Percentuale test case falliti};}
+	\item{MTS003 \emph{Tempo medio necessario al team per risolvere un errore};}
+	\item{MTS004 \emph{Efficienza nella progettazione dei test};}
+	\item{MTS005 \emph{Percentuale di difetti corretti};}
+	\item{MTS006 \emph{Percentuale test eseguiti};}
+
 \end{itemize}
 
 \subsubsection{Versionamento e build} 
@@ -85,10 +93,30 @@ Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, 
 		Media commit a settimana&$\geq$20 &$\geq$30 \\ \hline
 		Media numero build Travis a settimana&$\geq$20 &$\geq$30 \\ \hline
 		Percentuale build Travis superate& $\geq$70\% &$\geq$80\% \\ \hline
-
 	\end{tabular}
 	\caption{Riassunto delle metriche dei test sui processi}
 	\label{tabella:riassunto metriche dei test sui processi}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+\subsubsection{Tabella riassuntiva delle metriche relative ai test}
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|C{3cm}|C{5cm}|C{4cm}|C{4cm}|}
+		\hline
+		\rowcolor{title_row}
+		\textbf{\color{title_text}{ID Metrica}} &
+		\textbf{\color{title_text}{Nome Metrica}} &  \textbf{\color{title_text}{Range accettabile}} & \textbf{\color{title_text}{Range ottimale}} \\ \hline
+		MTS001 & Percentuale test case passati & 100\%  & 100\% \\ \hline
+		MTS002 & Percentuale test case falliti & 0\% & 0\% \\ \hline
+		MTS003 & Tempo medio necessario al team per risolvere un errore & 0h-4h & 0h-2h \\ \hline
+		MTS004 & Efficienza nella progettazione dei test & 0.5h-3h & 0.5h-2h \\ \hline
+		MTS005 & Percentuale dei difetti corretti & 90\%-100\% & 95\%-100\% \\ \hline
+		MTS006 & Percentuale dei test eseguiti & 85\%-100\% & 95\%-100\% \\ \hline
+	\end{tabular}
+	\caption{Riassunto delle metriche dei test per l'analisi dinamica}
+	\label{tabella:riassunto metriche dei test per l'analisi dinamica}
 \end{table}
 \renewcommand{\arraystretch}{1}
 
