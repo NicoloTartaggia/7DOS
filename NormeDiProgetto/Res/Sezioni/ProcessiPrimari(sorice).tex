@@ -219,56 +219,98 @@ Le convenzioni stilistiche definite in \gl{JavaScript Style Guide and Coding Con
 		}
 	\end{lstlisting}
 	 
-	\item{\textbf{Spazi}: uno spazio vengono posti tra gli operatori ( = + - * / < >) e dopo le virgole. Non vengono posti spazi prima della lista degli argomenti nelle chiamate di funzioni e nelle dichiarazioni;}
-	\begin{lstlisting}
-		var example = "7DOS";  // CORRECT
+	\item{\textbf{Spazi}}
+		\begin{itemize}
+			\item{Viene posto uno spazio tra gli operatori ( = + - * / < >) e dopo le virgole;}
+			\begin{lstlisting}
+			// CORRECT
+			var example = "7DOS";  
 		
-		var example="7DOS";  //INCORRECT
-		
-		var example = ["one", "two", "three"];  // CORRECT
-		
-		var example = ["one","two","three"];  // INCORRECT
-	\end{lstlisting}
+			//INCORRECT		
+			var example="7DOS";  
+			
+			// CORRECT
+			var example = ["one", "two", "three"];  
+			
+			// INCORRECT
+			var example = ["one","two","three"];  
+			\end{lstlisting} 
+			\item{Non vengono posti spazi prima della lista degli argomenti nelle chiamate di funzioni e nelle dichiarazioni.}
+			\begin{lstlisting}
+			// CORRECT
+			function someOperation(int value) {  
+			..var result;
+			}
+			
+			// INCORRECT
+			function someOperation (int value) {  
+			..var result;
+			}
+			\end{lstlisting}
+		\end{itemize} 
 	
 	\item{\textbf{Dichiarazioni di variabili}: ogni dichiarazione di variabile prevede l'utilizzo di \emph{var} o \emph{let} e termina con un punto e virgola;}
 	\begin{lstlisting}
-	var example = "7DOS";  // CORRECT
+	// CORRECT
+	var example = "7DOS";  
 	
-	var example= "7DOS"  //INCORRECT
+	//INCORRECT
+	var example= "7DOS"  
 	
-	var example = ["one", "two", "three"];  // CORRECT
+	// CORRECT
+	let example = ["one", "two", "three"];  
 	
-	var example = ["one","two","three"]  // INCORRECT
+	// INCORRECT
+	let example = ["one","two","three"]  
 	\end{lstlisting}
 	
-	\item{\textbf{Dichiarazione di funzioni}: la parentesi graffa di apertura viene posta nella stessa riga della dichiarazione della funzione, utilizzando uno spazio prima. La parentesi graffa di chiusura viene posta in una nuova riga senza utilizzare spazi;}
-	\begin{lstlisting}
-		function toString() {  // CORRECT
-		..var example;
-		}
-		
-		function toString()  // INCORRECT
-		{  
-		..var example;
-		}
-	\end{lstlisting}
+	\item{\textbf{Dichiarazione di funzioni}}
+		\begin{itemize}
+			\item{La parentesi graffa di apertura viene posta nella stessa riga della dichiarazione della funzione, utilizzando uno spazio prima;}
+			\begin{lstlisting}
+			// CORRECT
+			function toString() {  
+			..var example;
+			}
+			
+			// INCORRECT
+			function toString(){    
+			..var example;
+			}
+			\end{lstlisting}
+			\item{La parentesi graffa di chiusura viene posta in una nuova riga senza utilizzare spazi.}
+			\begin{lstlisting}
+			// CORRECT
+			function toString() {  
+			..var example;
+			}
+			
+			// INCORRECT
+			function toString() {    
+			..var example;}
+			\end{lstlisting}
+		\end{itemize}
 	
 	\item{\textbf{Cicli}: ogni parametro è separato dal successivo con uno spazio, così come le parentesi tonde. Valgono le stesse regole per le parentesi graffe viste nella dichiarazione di funzioni;
 	\begin{lstlisting}
-	while (i < 10) {  // CORRECT
+	// CORRECT
+	while (i < 10) {  
 	
 	}
 	
-	while(i<10)  //INCORRECT
+	//INCORRECT
+	while(i<10)  
 	{  
 	
 	}
 	
-	for(i = 0; i < 10; i++) {  // CORRECT
+	// CORRECT
+	for(i = 0; i < 10; i++) {  
 		
 	}
 	
-	for(i=0;i<10;i++)  // INCORRECT
+	// INCORRECT
+	for(i=0;i<10;i++)  
 	{  
 	
 	}
@@ -277,13 +319,15 @@ Le convenzioni stilistiche definite in \gl{JavaScript Style Guide and Coding Con
 
 	\item{\textbf{Controlli condizionali}: valgono le stesse regole per le parentesi graffe viste nella dichiarazione di funzioni. Ogni \emph{else} successivo ad un \emph{if} deve posizionarsi nella stessa riga della parentesi graffa di chiusura dell'\emph{if};}
 	\begin{lstlisting}
-	if (i < 10) {  // CORRECT
+	// CORRECT
+	if (i < 10) {  
 	
 	} else {
 	
 	}
 	
-	if (i < 10) {  // INCORRECT  
+	// INCORRECT
+	if (i < 10) {    
 	
 	} 
 	else {
@@ -303,33 +347,87 @@ Le convenzioni stilistiche definite in \gl{JavaScript Style Guide and Coding Con
 Le convenzioni stilistiche definite in \gl{Grafana Plugin Code Styleguide}\footnote{\url{http://docs.grafana.org/plugins/developing/code-styleguide}} e, più in particolare per il linguaggio Typescript, in \gl{Angular TypeScript Styleguide}\footnote{\url{https://angular.io/guide/styleguide}} verranno seguite dai programmatori per lo sviluppo dell'intero progetto.
 
 \begin{itemize}
-	\item{\textbf{Import}: viene lasciata una linea tra i vari \emph{import} di terze parti. I moduli presenti nello stesso import devono essere listati in ordine alfabetico e staccati con uno spazio sia dalle parentesi graffe e che l'uno dall'altro. Infine, viene posto uno spazio tra le parentesi graffe che contengono i moduli e \emph{import}; }
-	\begin{lstlisting}
-		import { Example } from "../code";  // CORRECT
-		
-		import { Library1, Library2, Library3 } from "../code";
-		
-		import{Example} from "../code";  // INCORRECT
-		import{Library1,Library2,Library 3} from "../code";
-	\end{lstlisting}
+	\item{\textbf{Import}}
+		\begin{itemize}
+			\item{Viene lasciata una linea vuota tra i vari \emph{import} di terze parti;}
+				\begin{lstlisting}
+				// CORRECT
+				import { Example } from "../code";  
+				
+				import { Library1, Library2, Library3 } from "../code";
+				
+				// INCORRECT
+				import{ Component, NgModule, OnInit } from "../code";  
+				import{ Component, NgModule, OnInit } from "../code";
+				\end{lstlisting}
+			
+			\item{I moduli presenti nello stesso \emph{import} devono essere listati in
+			ordine alfabetico e staccati con uno spazio sia dalle parentesi graffe e che l'uno dall'altro;}
+				 \begin{lstlisting}
+				 // CORRECT
+				 import { Component, NgModule, OnInit } from "../code";  
+				 
+				 //INCORRECT
+				 import{Component,NgModule,OnInit} from "../code";  
+				 \end{lstlisting}
+			\item{Viene posto uno spazio tra le parentesi graffe che contengono i moduli e la dichiarazione \emph{import}.}
+				\begin{lstlisting}
+				// CORRECT
+				import { Component, NgModule, OnInit } from "../code";  
+				
+				//INCORRECT
+				import{ Component, NgModule, OnInit } from "../code";  
+				\end{lstlisting}
+		\end{itemize} 
 	
-	\item{\textbf{Export}: la parentesi graffa di apertura viene posta nella stessa riga della dichiarazione della funzione, utilizzando uno spazio prima. La parentesi graffa di chiusura viene posta in una nuova riga senza utilizzare spazi;}	
-	\begin{lstlisting}
-		export class JsImport {  //  CORRECT
+	\item{\textbf{Export}} 
+		\begin{itemize}
+		\item{La parentesi graffa di apertura viene posta nella stessa riga della dichiarazione della funzione, utilizzando uno spazio prima;}
+		\begin{lstlisting}
+		//  CORRECT
+		export class JsImport {  
 		
 		}
 		
-		export class JsImport //  INCORRECT
+		//  INCORRECT
+		export class JsImport 
 		{  
 		
 		}
-	\end{lstlisting}
+		\end{lstlisting} 
+		
+		\item{La parentesi graffa di chiusura viene posta in una nuova riga senza utilizzare spazi;}
+		\begin{lstlisting}
+		//  CORRECT
+		export class JsImport {  
+		  textJson: string;
+		  time: string;
+		}
+		
+		//  INCORRECT
+		export class JsImport {  
+		  textJson: string;
+		  time: string;}
+		\end{lstlisting}
+		\end{itemize}	
 \end{itemize}
 
 \paragraph{HTML}\Spazio
 Le convenzioni stilistiche definite in \gl{HTML5 Style Guide and Coding Conventions}\footnote{\url{https://www.w3schools.com/html/html5_syntax.asp}} verranno seguite dai programmatori per lo sviluppo dell'intero progetto.
 
 \begin{itemize}
+	\item{\textbf{Indentazione}: ogni livello di indentazione prevede l'uso di due spazi;}
+	\begin{lstlisting}
+	// CORRECT
+	<body>
+	..<h1>Heading</ h1>
+	</ body> 
+	
+	// INCORRECT
+	<body>
+	....<h1>Heading</ h1>
+	</ body> 
+	\end{lstlisting}
 	\item{\textbf{Doctype}: la prima riga di ogni documento HTML deve presentare la dichiarazione del tipo di documento;}
 	 \begin{lstlisting}
 	 <!doctype html> 
@@ -338,61 +436,83 @@ Le convenzioni stilistiche definite in \gl{HTML5 Style Guide and Coding Conventi
 	 \begin{itemize}
 	 	\item{\textbf{Nomi}: ogni nome deve essere scritto in minuscolo;}
 	 	\begin{lstlisting}
-	 	<section>
-	 	  // CORRECT
-	 	</ section> 
+	 	// CORRECT
+	 	<section></ section> 
 	 	
-	 	<SECTION>
-	 	  // INCORRECT
-	 	</ SECTION> 
+	 	// INCORRECT
+	 	<SECTION></ SECTION> 
 	 	\end{lstlisting}
 	 	\item{\textbf{Utilizzo dei tag}: ogni tag deve sempre essere chiuso. Per compatibilità con i vecchi browser, i tag non vuoti, anche se privi di contenuto, vanno nella forma <p></p>, mentre quelli vuoti vanno nella forma <br/>. 	
 	 	}
  		\begin{lstlisting}
- 		<p>
- 		  // CORRECT
- 		</ p>
+ 		// CORRECT
+ 		<p></ p>
  		
- 		<p />  // INCORRECT
+ 		// INCORRECT
+ 		<p />  
  		
- 		<br />// CORRECT
+ 		// CORRECT
+ 		<br />
  		
- 		<br>
- 		  // INCORRECT
- 		</ br>   
+ 		// INCORRECT
+ 		<br></ br>   
  		\end{lstlisting} 
 	 \end{itemize}
  	\item{\textbf{Spazi}: '=' tra l'attributo e il suo valore deve essere racchiuso tra spazi;}
  	\begin{lstlisting}
+ 	// CORRECT
  	<p class = "...">
- 	  // CORRECT
+ 
  	</ p>
  	
+ 	// INCORRECT
  	<p class="...">  
- 	  // INCORRECT
+ 	  
  	</ p>
  	\end{lstlisting} 
- 	\item{\textbf{Lunghezza di una linea}: ogni linea di codice non deve contenere più di 80 caratteri.
+ 	\item{\textbf{Lunghezza di una linea}: ogni linea di codice non deve contenere più di 80 caratteri;
  	}
+ 	\item{\textbf{Tag <html>, <head>, <body>}: i tag <html>, <head>, <body> non devono essere mai omessi.}
 \end{itemize}
 
 \paragraph{CSS}\Spazio
 Le convenzioni stilistiche definite in \gl{Airbnb CSS / Sass Styleguide}\footnote{\url{https://github.com/airbnb/css}} verranno seguite dai programmatori per lo sviluppo dell'intero progetto.
 
 \begin{itemize}
-	\item{\textbf{Indentazione:} le proprietà di stile relative ad un selettore devono essere indentate con due spazi; 
-	}
-	\begin{lstlisting}
-	.someselector {  // CORRECT
-	..property1: "...";
-	..property2: "...";
-	}
-	
-	.someselector {  // INCORRECT
-	....property1 = "...";
-	....property2 = "...";
-	}
-	\end{lstlisting} 
+	\item{\textbf{Formattazione}}
+	\begin{itemize}
+		\item{Le proprietà di stile relative ad un selettore devono essere indentate con due spazi;}
+		\begin{lstlisting}
+			// CORRECT
+			.someselector {  
+			..color: "...";
+			..text-aling: "...";
+			}
+			
+			// INCORRECT
+			.someselector {  
+			....color: "...";
+			....text-aling: "...";
+			}	
+		\end{lstlisting}
+		
+		\item{In caso di selettori multipli per una o più regole, inserire ogni selettore in una linea singola;}
+		\begin{lstlisting}
+		// CORRECT
+		.selectorOne,
+		.selectorTwo,
+		.selectorThree {  
+		..color: "...";
+		..text-aling: "...";
+		}
+		
+		// INCORRECT
+		.selectorOne, .selectorTwo, .selectorThree {  
+		....color: "...";
+		....text-aling: "...";
+		}	
+		\end{lstlisting}
+	\end{itemize} 
 	\item{\textbf{Spazi}}
 	\begin{itemize}
 		\item{Deve essere posto uno spazio tra un selettore e la parentesi graffa di apertura di una \gl{rule declaration};}
@@ -433,7 +553,8 @@ Le convenzioni stilistiche definite in \gl{Airbnb CSS / Sass Styleguide}\footnot
 		
 		\item{In presenza di più rule declaration, deve essere posta una linea vuota tra esse.}
 		\begin{lstlisting}
-		.selector1 {  // CORRECT
+		// CORRECT
+		.selector1 {  
 		..property: "...";
 		}
 		
@@ -441,11 +562,30 @@ Le convenzioni stilistiche definite in \gl{Airbnb CSS / Sass Styleguide}\footnot
 		..property : "...";
 		}
 		
-		.selector1 {  // INCORRECT
+		// INCORRECT
+		.selector1 {  
 		..property: "...";
 		}
 		.selector2 {    
 		..property : "...";
+		}
+		\end{lstlisting}
+		\item{Tutte le proprietà relative ad un selettore devono essere dichiarate in ordine alfabetico.}
+		\begin{lstlisting}
+		// CORRECT
+		.someSelector {  
+		..background: "...";
+		..border: "...";
+		..font-size: "...";
+		..text-align: "...";
+		}
+		
+		// INCORRECT
+		.someSelector1 {  
+		..border: "...";
+		..text-align: "...";
+		..background: "...";
+		..font-size: "...";
 		}
 		\end{lstlisting}
 	\end{itemize} 	
