@@ -36,7 +36,7 @@
 		\item Disconnessione di un nodo ad un flusso di dati (UC2.1.2);
 		\item Modifica del flusso di dati connesso ad un nodo (UC2.1.3).
 	\end{itemize}
-	\item \textbf{Postcondizione}: il nodo selezionato è connesso a, oppure disconnesso dal, flusso di dati designato.
+	\item \textbf{Postcondizione}: il nodo selezionato è connesso al, oppure disconnesso dal, flusso di dati designato.
 \end{itemize}
 
 \subsection{UC2.1.1: Connessione di un nodo ad un flusso di dati}
@@ -91,7 +91,7 @@
 	\item \textbf{Precondizione}: il sistema permette di leggere un file JSON, esiste un file JSON contenente la configurazione;
 	\item \textbf{Estensioni}: 
 	\begin{itemize}
-		\item  Viene caricato un file dal contenuto non valido e/o in un formato non valido, il sistema rimane nello stato precedente all'azione (UC2.4.1)
+		\item  Viene caricato un file dal contenuto non valido e/o in un formato non valido, il sistema rimane nello stato precedente all'azione (UC2.4.1).
 	\end{itemize}
 	\item \textbf{Postcondizione}: la connessione tra rete e sorgente dati viene configurata secondo le informazioni salvati nel file.
 \end{itemize}
@@ -114,12 +114,12 @@
 \end{figure}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Scopo e descrizione}: l'utente richiede di visualizzare dei dati calcolati dalla rete nella dashboard, tali dati vengono resi disponibili tramite panel.
+	\item \textbf{Scopo e descrizione}: l'utente richiede di visualizzare dei dati calcolati dalla rete nella dashboard, tali dati vengono resi disponibili tramite panel;
 	\item \textbf{Precondizione}: è stata caricata e configurata una rete Bayesiana adeguata; Grafana riceve correttamente informazioni dalla sorgente dati;
 	\item \textbf{Flusso principale degli eventi}:
 	\begin{itemize}
 		\item Lettura dei dati dalla rete;
-		\item Aggiornamento della dashboard (UC3.1)
+		\item Aggiornamento della dashboard (UC3.1).
 	\end{itemize}
 	\item \textbf{Postcondizione}: l'output della rete Bayesiana viene letto e reso disponibile all'utente tramite panel correttamente.
 \end{itemize}
@@ -142,9 +142,9 @@
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Scopo e descrizione}: l'attore carica la rete Bayesiana da un file JSON salvato su disco;
 	\item \textbf{Precondizione}: il sistema permette di leggere un file JSON, esiste un file JSON contenente la rete;
-	\item \textbf{Postcondizione}: la rete Bayesiana viene creata secondo le informazioni salvate nel file.
+	\item \textbf{Postcondizione}: la rete Bayesiana viene creata secondo le informazioni salvate nel file;
 	\item \textbf{Estensioni}:
 	\begin{itemize}
-		\item Viene caricato un file dal contenuto non valido e/o in un formato non valido, il sistema rimane nello stato precedente all'azione (UC2.4.1);
+		\item Viene caricato un file dal contenuto non valido e/o in un formato non valido, il sistema rimane nello stato precedente all'azione (UC2.4.1).
 	\end{itemize}
 \end{itemize}
