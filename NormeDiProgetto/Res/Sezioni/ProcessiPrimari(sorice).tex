@@ -67,7 +67,7 @@ Determinare con precisione i requisiti del progetto ed elencarli in modo formale
 \paragraph{Casi d'uso}\Spazio
 Ogni caso d'uso è descritto dalla seguente struttura:
 \begin{itemize}
-	\item codice identificativo: $$ \textbf{UC \{codice\_padre\}.\{codice\_figlio\}  } $$
+	\item Codice identificativo: $$ \textbf{UC \{codice\_padre\}.\{codice\_figlio\}  } $$
 		\begin{itemize}
 				\item UC specifica che si tratta di un caso d'uso;
 				\item Codice\_padre identifica univocamente i casi d'uso;
@@ -97,7 +97,7 @@ Inoltre, a ciascun requisito corrisponde un codice identificativo cosi composto:
 $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 \begin{itemize}
 	\item R specifica che si tratta di un requisito ;
-	\item importanza identifica la rilevanza del requisito e può assumere 3 valori:
+	\item Importanza identifica la rilevanza del requisito e può assumere 3 valori:
 	\begin{itemize}
 		\item 0: indica che il requisito è obbligatorio e il suo soddisfacimento dovrà necessariamente avvenire;
 		\item 1: indica che il requisito è desiderabile, cioè il suo soddisfacimento può portare maggiore completezza al sistema ma non è fondamentale per lo stesso;
@@ -114,6 +114,7 @@ Per quanto riguarda il tracciamento dei requisiti, il gruppo ha deciso di utiliz
 \subparagraph{Astah UML}\Spazio
 Per quanto concerne la creazione e la modellazione dei diagrammi UML per i casi d'uso, abbiamo deciso di utilizzare Astah UML, data la sua facilità di utilizzo e compatibilità con UML 2.x. Per la successiva fase di modellazione delle classi, potrebbe verificarsi una scelta diversa riguardo al software da utilizzare.
 \subsubsection{Progettazione}
+Questa sezione non è ancora del tutto completa, ma subirà un incremento durante la fase di "Progettazione di dettaglio e codifica".
 \paragraph{Scopo}\Spazio
 La Progettazione esplicita concretamente una prima forma ad alto livello del design del software pensata per il progetto, determinandone le caratteristiche più in evidenza, in modo da comunicare con gli stakeholder e dare delle informazioni chiare, così da intraprendere le prime discussioni sul progetto. I \emph{Progettisti} hanno il compito di definire il sistema in modo esplicito così da poter fare importanti considerazioni riguardo a performance, affidabilità e manutenibilità, capire come è organizzato il sistema  e come i componenti interoperano tra di loro sottolineando la possibilità di riutilizzo in larga scala di parte del codice, dato che abbiamo notato una frequente ripetizione dei requisiti in un sistema complesso come quello affrontato dal nostro team.
 L’architettura dovrà avere le seguenti caratteristiche:
@@ -146,7 +147,7 @@ ambiguità, verranno impiegate le seguenti tipologie di rappresentazioni:
 \begin{itemize}
 	\item \textbf{Diagrammi dei casi d’uso}: per descrivere le funzionalità del sistema;
 	\item \textbf{Diagrammi delle classi}: per descrivere gli oggetti presenti nel sistema;
-	\item \textbf{Diagrammi dei package}: per descrivere le dipendenze delle grassi raggruppate in package;
+	\item \textbf{Diagrammi dei package}: per descrivere le dipendenze delle classi raggruppate in package;
 	\item \textbf{Diagrammi di sequenza}: per descrivere la collaborazione nel tempo
 	tra un gruppo di oggetti;
 
@@ -175,8 +176,8 @@ servizio per la gestione del test coverage.
 \subsubsection{Codifica}
 La seguente sotto-sezione ha lo scopo di elencare le norme di codifica alle quali i Programmatori devono aderire durante l'attività di programmazione. Gli argomenti trattati riguardano:
 \begin{itemize}
- \item{norme generali dello stile di codifica da adottare, qualsiasi sia il linguaggio utilizzato;}
- \item{norme specifiche per i linguaggi \gl{JavaScript,} \gl{TypeScript,} \gl{HTML} e \gl{CSS}.}
+ \item{Norme generali dello stile di codifica da adottare, qualsiasi sia il linguaggio utilizzato;}
+ \item{Norme specifiche per i linguaggi \gl{JavaScript,} \gl{TypeScript,} \gl{HTML} e \gl{CSS}.}
 \end{itemize}
 Il gruppo 7DOS ha deciso di porre delle norme sulla codifica in quanto vantaggiose per la generazione di codice leggibile, adatto per le fasi di verifica e manutenzione, e per garantire qualità al prodotto.
 Soltanto il \emph{Responsabile di Progetto}, dopo un'attenta analisi e valutazione, potrà ammettere modifiche alle convenzioni stabilite.\\
@@ -228,7 +229,7 @@ Ogni funzione e metodo devono essere provvisti di un'intestazione contenente:
 \end{itemize}
 
 \paragraph{JavaScript}\Spazio
-Le convenzioni stilistiche definite in \gl{JavaScript Style Guide and Coding Conventions}\footnote{\url{https://www.w3schools.com/js/js_conventions.asp}} verranno seguite dai programmatori per lo sviluppo dell'intero progetto.
+Le convenzioni stilistiche definite in \gl{JavaScript Style Guide and Coding Conventions}\footnote{\url{https://www.w3schools.com/js/js_conventions.asp}} verranno seguite dai \emph{Programmatori} per lo sviluppo dell'intero progetto.
 
 \begin{itemize}
 	\item{\textbf{Indentazione}}: ogni livello di indentazione prevede l'uso di due spazi;
@@ -360,7 +361,7 @@ Le convenzioni stilistiche definite in \gl{JavaScript Style Guide and Coding Con
 	
 	\item{\textbf{Lunghezza di una linea}: ogni linea di codice non deve contenere più di 80 caratteri. Se necessario, spezzare la linea dopo punti specifici, come un operatore o una virgola;}
 	
-	\item{\textbf{Lunghezza metodi e funzioni}: il corpo dei metodi e delle funzioni non deve superare le 40 righe di lunghezza e tre gradi indentazione. In questo modo si evita la creazione di strutture troppo complesse, difficili da testare e mantenere. Nel caso un metodo o una funzione dovesse infrangere questi limiti, è opportuno riformattare il corpo utilizzando funzioni ausiliarie. Se ciò non è possibile, il Programmatore, con l'aiuto degli altri componenti, cercherà di circoscrivere la complessità del metodo/funzione per evitare che si discosti troppo dai limiti imposti.}
+	\item{\textbf{Lunghezza metodi e funzioni}: il corpo dei metodi e delle funzioni non deve superare le 40 righe di lunghezza e tre gradi indentazione. In questo modo si evita la creazione di strutture troppo complesse, difficili da testare e mantenere. Nel caso un metodo o una funzione dovesse infrangere questi limiti, è opportuno riformattare il corpo utilizzando funzioni ausiliarie. Se ciò non è possibile, il \emph{Programmatore}, con l'aiuto degli altri componenti, cercherà di circoscrivere la complessità del metodo/funzione per evitare che si discosti troppo dai limiti imposti.}
 	
 	
 \end{itemize}
@@ -419,7 +420,7 @@ Le convenzioni stilistiche definite in \gl{Grafana Plugin Code Styleguide}\footn
 		}
 		\end{lstlisting} 
 		
-		\item{La parentesi graffa di chiusura viene posta in una nuova riga senza utilizzare spazi;}
+		\item{La parentesi graffa di chiusura viene posta in una nuova riga senza utilizzare spazi.}
 		\begin{lstlisting}
 		//  CORRECT
 		export class JsImport {  
@@ -436,7 +437,7 @@ Le convenzioni stilistiche definite in \gl{Grafana Plugin Code Styleguide}\footn
 \end{itemize}
 
 \paragraph{HTML}\Spazio
-Le convenzioni stilistiche definite in \gl{HTML5 Style Guide and Coding Conventions}\footnote{\url{https://www.w3schools.com/html/html5_syntax.asp}} verranno seguite dai programmatori per lo sviluppo dell'intero progetto.
+Le convenzioni stilistiche definite in \gl{HTML5 Style Guide and Coding Conventions}\footnote{\url{https://www.w3schools.com/html/html5_syntax.asp}} verranno seguite dai \emph{Programmatori} per lo sviluppo dell'intero progetto.
 
 \begin{itemize}
 	\item{\textbf{Indentazione}: ogni livello di indentazione prevede l'uso di due spazi;}

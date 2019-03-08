@@ -33,17 +33,17 @@ L'\emph{Analista} si occupa di determinare e descrivere in maniera formale i req
 \end{itemize}
 
 \paragraph{Progettista} \Spazio
-Il \emph{Progettista} fa uso dell'Analisi dei Requisiti per produrre un architettura che rispetti i requisiti definiti dall'analista. Deve:
+Il \emph{Progettista} fa uso dell'Analisi dei Requisiti per produrre un architettura che rispetti i requisiti definiti dall'\emph{Analista}. Deve:
 \begin{itemize}
 \item Produrre un'architettura che faccia uso di best practices e che agevoli \gl{manutenzione} e verifica;
-\item Assicurarsi che l'architettura rispetti i requisiti definiti dall'analista;
+\item Assicurarsi che l'architettura rispetti i requisiti definiti dall'\emph{Analista};
 \item Redigere la documentazione relativa all'architettura del prodotto e un manuale destinato al programmatore per l'implementazione dell'architettura progettata.
 \end{itemize}
 
 \paragraph{Programmatore} \Spazio
-Il \emph{Programmatore} ha come compito implementare l'architettura progettata dal progettista. Deve:
+Il \emph{Programmatore} ha come compito implementare l'architettura progettata dal \emph{Progettista}. Deve:
 \begin{itemize}
-\item Scrivere codice che sia documentato e che rispetti le direttive del progettista;
+\item Scrivere codice che sia documentato e che rispetti le direttive del \emph{Progettista};
 \item Codificare i moduli necessari al testing del codice;
 \item Produrre il manuale utente.
 \end{itemize}
@@ -52,7 +52,7 @@ Il \emph{Programmatore} ha come compito implementare l'architettura progettata d
 Il \emph{Verificatore} si occupa delle attività di verifica. Deve:
 \begin{itemize}
 \item Verificare la qualità dei prodotti delle varie attività;
-\item Verificare che le attività siano svolte rispettando le norme di progetto stabilite;
+\item Verificare che le attività siano svolte rispettando le Norme di Progetto stabilite;
 \item Redigere il Piano di Qualifica.
 \end{itemize}
 
@@ -76,10 +76,10 @@ Il \emph{Responsabile} rappresenta il team nelle interazioni con il committente,
 \paragraph{Gestione dei task} \Spazio
 Vengono distinti 2 tipi di task:
 \begin{itemize}
-\item Pro-attivi: creati e assegnati dal \emph{Responsabile di progetto}, organizzano lo svolgimento delle attività e la verifica;
+\item Pro-attivi: creati e assegnati dal \emph{Responsabile di Progetto}, organizzano lo svolgimento delle attività e la verifica;
 \item Reattivi: creati e assegnati dai \emph{Verificatori}, organizzano la correzione o il \gl{miglioramento} dei prodotti delle attività.
 \end{itemize}
-Qualora l'assegnatario di un task dovesse realizzare tale task non è completabile entro la data di fine, o se ci dovessero essere altri problemi con il task, avrà la responsabilità di segnalare il problema al \emph{Responsabile di progetto} che sarà tenuto a ripianificare la risoluzione del task.
+Qualora l'assegnatario di un task dovesse realizzare tale task non è completabile entro la data di fine, o se ci dovessero essere altri problemi con il task, avrà la responsabilità di segnalare il problema al \emph{Responsabile di Progetto} che sarà tenuto a ripianificare la risoluzione del task.
 
 \paragraph{Norme sui task} \Spazio
 Il nome del task deve essere nella forma [attività] nome. Il nome deve essere descrittivo del task stesso. Ogni task dovrà avere almeno un assegnatario.
@@ -105,8 +105,8 @@ Le comunicazioni interne al gruppo sono gestite principalmente tramite due servi
 	\item{\textbf{Voice channels}: sezione che contiene tutti i canali vocali principali del server. Di seguito verranno riportati tutti i canali contenuti in questa sezione:
 		\begin{itemize}
 			\item{\textbf{General}: canale vocale generico utilizzato principalmente per effettuare riunioni che coinvolgono tutti i membri del team;}
-			\item{\textbf{Redazione}: canale vocale utilizzato principalmente per effettuare riunioni tra i /emph{Redattori} del team;}
-			\item{\textbf{Verifica}: canale vocale utilizzato principalmente per effettuare riunioni tra i /emph{Verificatori} del team.}
+			\item{\textbf{Redazione}: canale vocale utilizzato principalmente per effettuare riunioni tra i \emph{Redattori} del team;}
+			\item{\textbf{Verifica}: canale vocale utilizzato principalmente per effettuare riunioni tra i \emph{Verificatori} del team.}
 		\end{itemize}
 	}
 	\item{\textbf{Notification center}: sezione che contiene tutti i canali testuali collegati ad un \gl{Webhook} per ricevere notifiche a particolari piattaforme esterne.
@@ -115,7 +115,7 @@ Le comunicazioni interne al gruppo sono gestite principalmente tramite due servi
 			\item{\textbf{Gmail-notifications}: canale testuale in cui verranno comunicate da un bot tutte le notifiche relative all'indirizzo email del gruppo.}			
 		\end{itemize}
 	}
-	\item{\textbf{Documenti}: sezione contenente un canale testuale per ogni documento redatto dal team in modo tale da permettere un'efficace comunicazione tra i /emph{Redattori} di quello specifico documento.}
+	\item{\textbf{Documenti}: sezione contenente un canale testuale per ogni documento redatto dal team in modo tale da permettere un'efficace comunicazione tra i \emph{Redattori} di quello specifico documento.}
  \end{itemize}
 \paragraph{Norme su Telegram}\Spazio
  Telegram viene utilizzato principalmente per effettuare comunicazioni urgenti ed organizzare riunioni che coinvolgono tutti i membri del team e necessitano di essere effettuate in tempi brevi. Di conseguenza è sconsigliato utilizzare questo servizio per effettuare comunicazioni che non appartengano a nessuna delle categorie precedentemente citate.
