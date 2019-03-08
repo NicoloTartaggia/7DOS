@@ -138,7 +138,7 @@ Dove:
 \begin{itemize}
 	\item{\textbf{PTE}: è il valore della metrica;}
 	\item{\textbf{TE}: è il numero di test eseguiti;}
-	\item{\textbf{NR\textsubscript{A}}: è il numero di totale di test.}
+	\item{\textbf{TT}: è il numero di totale di test.}
 \end{itemize}
 
 \subsubsection{Percentuale test case passati}
@@ -178,12 +178,12 @@ Dove:
 Indica il tempo medio per la scrittura dei test. Un valore troppo basso potrebbe indicare la scrittura di test banali o poco efficaci.
 Al contrario un valore troppo alto potrebbe indicare la scrittura di test troppo complessi che rischiano di contenere essi stessi errori.
 La formula usata per calcolare questa metrica è:
-$$TMT=\frac{CR}{CN}*100$$
+$$TDE=\frac{NTP}{TST}$$
 Dove:
 \begin{itemize}
-	\item{\textbf{TMT}: è il valore della metrica;}
-	\item{\textbf{TPT}: è il quantitativo di tempo speso a scrivere test;}
-	\item{\textbf{NTP}: è il numero di test scritti.}
+	\item{\textbf{TDE}: è il valore della metrica;}
+	\item{\textbf{NTP}: è il numero di test scritti;}
+	\item{\textbf{TST}: è il quantitativo di tempo speso a scrivere test.}
 \end{itemize}
 
 \subsubsection{Percentuale di errori corretti} \Spazio
@@ -283,10 +283,10 @@ Dove:
 \end{itemize}
 
 \paragraph{Failure Density}\Spazio
-Misurazione in percentuale della quantità di test falliti rispetto alla quantità di test eseguiti.
+Misurazione in percentuale della quantità di failure rilevati rispetto alla quantità di test eseguiti.
 \\Abbiamo scelto questa metrica per garantire che il prodotto sia generalmente stabile e non risulti poco utilizzabile o inutilizzabile a causa di eccessive \gl{failure}. Valutazioni più precise saranno effettuate in base ai singoli risultati dei test.\\
 Viene utilizzata la seguente formula:
-$$FD=\frac{T_f}{T_c}*100$$
+$$FD=\frac{T_f}{T_e}*100$$
 Dove:
 \begin{itemize}
 	\item{\textbf{FD}: è il valore della metrica;}
