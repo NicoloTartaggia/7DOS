@@ -24,7 +24,7 @@ La redazione di un \gl{piano} da seguire durante la realizzazione del progetto s
  \begin{itemize}
  	\item\textbf{{Analisi dei rischi}}: riporta una dettagliata analisi dei rischi che si potrebbero incontrare durante la realizzazione del progetto, determinandone, in base alle conoscenze pregresse e alle nuove acquisite, la probabilità che essi accadano e la loro gravità. Inoltre, quando possibile, verranno analizzati i possibili metodi per affrontarli;
  	\item\textbf{{Pianificazione}}: viene presentata una pianificazione delle \gl{attività} da svolgere nel corso del progetto, fornendo delle scadenze temporali il più possibile precise e veritiere;
- 	\item {\textbf{Suddivisione risorse}: riporta la suddivisione oraria delle risorse, tenendo conto dei ruoli ricoperti da tutti i membri. In questo modo si ha una visione chiara su come il gruppo sta procedendo e quante ore vengono impiegate per ogni attività;}
+ 	\item {\textbf{Assegnazione risorse}: riporta la suddivisione oraria delle risorse, tenendo conto dei ruoli ricoperti da tutti i membri. In questo modo si ha una visione chiara su come il gruppo sta procedendo e quante ore vengono impiegate per ogni attività;}
  	\item\textbf{{Preventivo}}: sulla base della pianificazione, viene stimata la quantità di lavoro necessaria per portare a termine ogni attività (e quindi ogni fase) del progetto, per arrivare infine ad avere una valutazione complessiva per tutto il progetto e proporre un preventivo finale con il costo del lavoro precedentemente stimato.
  \end{itemize}
 \paragraph{Strumenti di supporto}
@@ -112,7 +112,7 @@ I diagrammi UML devono essere realizzati usando la versione del linguaggio \emph
 \subparagraph{Trender}\Spazio
 Per quanto riguarda il tracciamento dei requisiti, il gruppo ha deciso di utilizzare inizialmente uno strumento non totalmente adatto a questo compito, cioè un foglio di calcolo. Essendo a conoscenza delle limitate funzionalità offerte da questa tecnologia per lo scopo a noi d'interesse, il team 7DOS ha deciso di migrare i dati raccolti in uno strumento creato appositamente per questo scopo. Lo strumento scelto è Trender e rende il tracciamento dei requisiti semi-automatico, inoltre offre la creazione di file .tex per il tracciamento dei requisiti.
 \subparagraph{Astah UML}\Spazio
-Per quanto concerne la creazione e la modellazione dei diagrammi UML per i casi d'uso, abbiamo deciso di utilizzare Astah UML, data la sua facilità di utilizzo e compatibilità con UML 2.x. Per la successiva fase di modellazione delle classi, potrebbe verificarsi una scelta diversa riguardo al software da utilizzare.
+Per quanto concerne la creazione e la modellazione dei diagrammi UML per i casi d'uso, abbiamo deciso di utilizzare Astah UML, data la sua facilità di utilizzo e compatibilità con UML 2.0. Per la successiva fase di modellazione delle classi, potrebbe verificarsi una scelta diversa riguardo al software da utilizzare.
 \subsubsection{Progettazione}
 La presente sezione sarà soggetta ad incrementi durante la fase di "Progettazione di dettaglio e codifica". Per questo motivo, non si pone l'obiettivo di risultare completa in questa fase del progetto.
 \paragraph{Scopo}\Spazio
@@ -142,17 +142,62 @@ Le sotto-attività che il nostro gruppo ha scelto di svolgere sono:
 	\item\textbf{{Selezione e progettazione dei componenti}}: i progettisti cercheranno dei componenti riutilizzabili e valuteranno se inserirli nel progetto, specificandone gli appropriati utilizzi e aggiustamenti, o se sarà più opportuno costruire dei nuovi componenti.
 \end{itemize}
 \paragraph{Diagrammi}\Spazio
-Per rendere più chiare le scelte progettuali adottate e ridurre le possibili
-ambiguità, verranno impiegate le seguenti tipologie di rappresentazioni:
+Per rendere più chiare le scelte progettuali adottate e ridurre le possibili ambiguità, verranno impiegate le seguenti tipologie di rappresentazioni:
 \begin{itemize}
-	\item \textbf{Diagrammi dei casi d’uso}: per descrivere le funzionalità del sistema;
 	\item \textbf{Diagrammi delle classi}: per descrivere gli oggetti presenti nel sistema;
 	\item \textbf{Diagrammi dei package}: per descrivere le dipendenze delle classi raggruppate in package;
-	\item \textbf{Diagrammi di sequenza}: per descrivere la collaborazione nel tempo
-	tra un gruppo di oggetti;
-
+	\item \textbf{Diagrammi di sequenza}: per descrivere la collaborazione nel tempo tra un gruppo di oggetti;
 	\item \textbf{Diagrammi di attività}: per descrivere la logica procedurale.
 \end{itemize}
+\paragraph{Diagrammi delle classi}\Spazio
+Lo scopo dei diagrammi delle classi è:
+\begin{itemize}
+	\item Fornire la progettazione della visione statica di un'applicazione;
+	\item Descrivere le responsabilità di un sistema;
+	\item Base per diagrammi dei componenti e di rilascio;
+	\item \gl{Reverse Engineering}.
+\end{itemize}
+I diagrammi delle classi sono collegati fra loro da frecce che ne esplicitano le dipendenze. \\
+Verranno utilizzati i seguenti tipi di freccia:
+\begin{itemize}
+
+\item Indica che la classe A ha fra i propri campi dati una o più istanze della classe B;
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.75]{./Img/dipendenza_forte.jpg}
+	\caption{Relazione di dipendenza forte}\label{}
+\end{figure}
+
+\item  Indica che A dipende da B secondo una primitiva;
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.75]{./Img/dipendenza.jpg}
+	\caption{Relazione di dipendenza debole}\label{}
+\end{figure}
+
+\item Indica un'aggregazione da A verso B, cioè una relazione non forte nella quale le classi parte hanno un significato anche senza che sia presente la classe tutto;
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.75]{./Img/aggregazione.jpg}
+	\caption{Relazione di aggregazione}\label{}
+\end{figure}
+
+\item Indica una composizione da A verso B, cioè una relazione forte nella quale le classi parte hanno un reale significato solo se sono legate alla classe tutto;
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.75]{./Img/composizione.jpg}
+	\caption{Relazione di composizione}\label{}
+\end{figure}
+
+\item Indica l’ereditarietà, cioè che ogni oggetto di A è anche un oggetto di B.
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.75]{./Img/ereditarieta.jpg}
+	\caption{Relazione di ereditarietà}\label{}
+\end{figure}
+
+\end{itemize}
+
 \paragraph{Tecnologie}\Spazio
 Lo sviluppo del progetto richiede l'utilizzo di tecnologie, alcune imposte del capitolato, altre soggette a libera scelta da parte del team.
 Le tecnologie il cui uso è obbligatorio sono:
@@ -163,10 +208,10 @@ Le tecnologie il cui uso è obbligatorio sono:
 \end{itemize}
 Le tecnologie che invece il team ha scelto a valle di un attività di comparazione sono:
 \begin{itemize}
-\item\textbf{{TypeScript}} per la scrittura del plugin per Grafana;
-\item\textbf{{Webpack}} per il processo di build del plugin;
-\item\textbf{{JsBayes}} per il calcolo delle probabilità delle reti Bayesiane;
-\item\textbf{{NodeJS}} per l'esecuzione lato server di codice JavaScript.
+\item\textbf{{TypeScript}}: per la scrittura del plugin per Grafana;
+\item\textbf{{Webpack}}: per il processo di build del plugin;
+\item\textbf{{JsBayes}}: per il calcolo delle probabilità delle reti Bayesiane;
+\item\textbf{{NodeJS}}: per l'esecuzione lato server di codice JavaScript.
 \end{itemize}
 \paragraph{Integrazione continua}\Spazio
 Il team ha scelto di applicare pratiche di integrazione continua e per farlo ha scelto di usare \gl{TravisCI}.

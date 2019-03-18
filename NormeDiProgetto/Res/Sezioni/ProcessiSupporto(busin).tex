@@ -41,11 +41,11 @@ Questa sezione contiene tutti gli elementi che dovranno essere presenti nella pr
 \paragraph{Diario delle modifiche} \Spazio
 Questa sezione contiene le modifiche apportate al documento, organizzate in modo tabulare ed ordinate in modo decrescente dall'alto verso il basso secondo la versione dello stesso. Ogni colonna descrive le seguenti informazioni:
 \begin{itemize}
-	\item \textbf{Modifica}: tipo e soggetto di ogni modifica;
-	\item \textbf{Autore}: nome e cognome dell'autore;
-	\item \textbf{Ruolo}: ruolo dell'autore in quel momento;
+	\item \textbf{Versione}: versione del documento;
 	\item \textbf{Data}: data di esecuzione;
-	\item \textbf{Versione}: versione del documento.
+	\item \textbf{Descrizione}: tipo e soggetto di ogni modifica;
+	\item \textbf{Autore}: nome e cognome dell'autore;
+	\item \textbf{Ruolo}: ruolo dell'autore in quel momento.	
 \end{itemize}
 
 \paragraph{Indice} \Spazio
@@ -176,6 +176,51 @@ L'intera documentazione deve essere redatta usando il linguaggio di markup \LaTe
 \paragraph{TexStudio} \Spazio
 Per redigere i documenti in \LaTeX \emph{ }deve essere impiegato l'editor TexStudio. L'ambiente mette a disposizione un'interfaccia per la scrittura dei documenti, organizzati secondo una struttura gerarchica e la visualizzazione dell'anteprima del risultato ottenuto in seguito alla compilazione avvenuta con successo e in caso contrario segnalando all'utente eventuali errori.
 
+\subsection{Versionamento}
+Il servizio di hosting scelto per la repository è Github. La repository è
+privata e sarà resa pubblica a fine progetto. Seguono le norme che ne riguardano gli aspetti
+principali.
+\subsubsection{Norme sui file}
+I file devono rispettare le norme di nomenclatura già specificate in 3.1.6 Nomenclatura dei documenti.
+Tramite il file .gitignore vengono esclusi i file intermedi di compilazione dei file latex.
+Gli unici file ammessi nella repository sono .tex .jpg .png .pdf.
+
+\subsubsection{Norme sui \gl{Commit}}
+Ogni modifica sostanziale effettuata ai file dev'essere seguita da un commit. Il commento associato ad ogni commit deve essere nella forma: [nome file] descrizione.
+La descrizione deve essere concisa e quanto più esaustiva possibile. Ad ogni commit deve corrispondere un aggiornamento del diario delle modifiche.
+
+\subsubsection{Norme su branching e merging}
+Le norme usate per branching e merging si rifanno al Git Feauture Branch Workflow:
+master è il branch in cui risiederà documentazione e codice verificati e approvati.
+Le modifiche o le nuove feature vanno implementate su un feature branch che saranno verificati
+prima di effettuare una pull request verso master.
+La pull request permette di non modificare master fintanto che non viene verificato il branch.
+Ogni nuovo feature branch deve:
+\begin{itemize}
+	\item Essere creato a partire da master;
+	\item Avere un nome che permetta di capire a quale feature è associato.
+\end{itemize}
+Queste norme saranno rivisitate all'inizio del processo di sviluppo per accertarsi che il feature branch workflow sia il più opportuno da usare. Una possibile alternativa con cui verrà confrontato è GitFlow.
+
+\subsubsection{Strumenti di supporto}
+\paragraph{Github}\Spazio
+Github è il servizio di hosting scelto per la repository. Funziona utilizzando git, un software di \gl{versionamento} descritto nella sezione immediatamente successiva. Oltre all'hosting del codice sorgente, offre altre caratteristiche utili, tra le quali:
+\begin{itemize}
+	\item Un \gl{Issue tracking System}, con etichette e \gl{milestone};
+	\item Una lista dei commit passati e delle relative modifiche ai file semplice da consultare;
+	\item Account Educational gratuito per gli studenti, il quale permette la creazione di repository private, normalmente creabili solo con un account a pagamento.
+\end{itemize}
+
+\paragraph{Git}\Spazio
+Git è un software open-source di controllo \gl{versione} distribuito.
+Viene usato con Github, in quanto è un servizio già conosciuto dai membri del team e molto comodo da utilizzare.
+
+\paragraph{Client Git}\Spazio
+A seconda delle preferenze, ogni membro del team deciderà se usare come client GitKraken o Github Desktop. Entrambi sono client desktop che facilitano l'utilizzo di git, rendendo molto più semplice inviare le modifiche locali al repository remoto, o viceversa.
+
+\subsection{Controllo qualità di processo}
+La qualità dei processi è garantita dall'uso del ciclo di miglioramento continuo \gl{PDCA}, descritto nell'appendice B. Con l'applicazione di questo metodo è possibile perseguire una migliore qualità dei processi, incluso quello di verifica; ciò porta ad ottenere una migliore qualità dei prodotti che ne derivano. \\
+Per ottenere una migliore qualità, quindi, bisogna che un processo venga definito, controllato e valutato. 
 
 \subsection{Verifica}
 Il processo di verifica ha lo scopo di esaminare un prodotto al fine di accertare che le attività produttive non abbiano introdotto errori sullo stesso, fornendo una prova oggettiva della sua correttezza o nel caso contrario, segnalando le eventuali problematiche riscontrate. Le metriche ed i metodi per effettuare verifica sono ampiamente e dettagliatamente descritti nel \emph{Piano di Qualifica v2.0.0} . Per questa prima parte del progetto il processo di verifica viene eseguito sulla documentazione.
@@ -203,12 +248,16 @@ Per verificare la presenza di errori di sintassi, di parole grammaticalmente cor
 \paragraph{Rispetto delle Norme di Progetto} \Spazio
 La verifica del rispetto delle norme descritte in \emph{Norme di Progetto v2.0.0} è compito dei \emph{Verificatori} incaricati. Non essendo possibile impiegare strumenti automatici per verificare la corretta applicazione di tutte le norme spetta quindi ai \emph{Verificatori} sottoporre i documenti a verifica, secondo la strategia inspection.
 
-\paragraph{Miglioramento del processo di verifica} \Spazio
-Per migliorare e ottimizzare il processo di verifica i \emph{Verificatori} devono riportare gli errori riscontrati più frequentemente al fine di rendere più efficiente ed efficace la verifica di un documento, prestando maggiore attenzione agli errori più comuni.
 \subsubsection{Analisi dei prodotti software}
 Descrizione delle procedure da eseguire per verificare adeguatamente i prodotti software.
 \paragraph{Analisi statica}\Spazio
-Esecuzione di test che non richiedono l'esecuzione del sistema software ma effettuano controlli sul codice sorgente del prodotto software.
+Il processo di analisi statica consiste nello svolgere dei test che non richiedono l'esecuzione del sistema software ma effettuano controlli sul codice sorgente. 
+Può essere svolta nei seguenti modi:
+\begin{itemize}
+	\item \textbf{Walkthrough}: tecnica applicata quando non si sanno le tipologie di errori o problemi che si stanno cercando e quindi prevede una lettura da cima a fondo del codice o documento per trovare anomalie di qualsiasi tipo;
+	\item \textbf{Inspection}: tecnica da applicare quando si ha idea delle possibili problematiche che si stanno cercando e si attua leggendo in modo mirato il codice sulla base di una lista di possibili errori, stilata in precedenza.
+\end{itemize}
+
 \subparagraph{Strumenti di supporto}\Spazio
 Ai fini di svolgere l'analisi statica del codice lo strumento usato è: \gl{TSLint} un \gl{linter} che mette a disposizione numerose regole e la possibilità di creare regole personalizzate. TSLint è inoltre integrabile in numerosi IDE e nella piattaforma TravisCI che permette di eseguire test automatici su repository GitHub.
 \paragraph{Analisi dinamica}\Spazio
@@ -217,7 +266,24 @@ Le principali tipologie di test che è possibile eseguire durante l'analisi dina
 \begin{itemize}
 	\item {\textbf{Test d'unità}: verificano un'unità, il più piccolo sottosistema possibile (nella programmazione ad oggetti comunemente una classe o un metodo) che può essere testato separatamente;}
 	\item {\textbf{Test d'integrazione}: verificano se sono rispettati i contratti di interfaccia tra più moduli o sub-system;}
-	\item {\textbf{Test di sistema}: verificano il comportamento dell’intero sistema software.}
+	\item {\textbf{Test di sistema}: verificano il comportamento dell'intero sistema software.}
 \end{itemize}
+
+\subsubsection{Analisi diagrammi UML}
+La verifica dei diagrammi UML prodotti è compito dei \emph{Verificatori}, che devono accertarsi che rispettino lo standard UML e che siano semanticamente corretti.
+
+\subsubsection{Miglioramento del processo di verifica}
+Per migliorare e ottimizzare il processo di verifica i \emph{Verificatori} devono riportare gli errori riscontrati più frequentemente in una \emph{checklist}, al fine di rendere più efficiente ed efficace l'attività di verifica, prestando maggiore attenzione agli errori più comuni.
+
+\subsection{Validazione}
+Il processo di \gl{validazione} deve verificare che il prodotto sia conforme a quanto pianificato e sia capace di gestire e minimizzare gli effetti degli errori.
+\subsubsection{Procedura di validazione}
+Per completare l'attività di validazione il prodotto deve seguire, nel giusto ordine, i seguenti passi:
+\begin{enumerate}
+	\item Esecuzione dei test sul prodotto;
+	\item Verifica dei risultati ad opera dei \emph{Verificatori}, che ne stendono un resoconto;
+	\item Lettura del resoconto da parte del \emph{Responsabile di Progetto}. Se i test non danno risultati soddisfacenti, il \emph{Responsabile} chiede di eseguire nuovamente i test e, se lo ritiene necessario, può aggiungere nuove indicazioni in merito. In caso di esito negativo, ripetere tutti i passi a partire dal punto 1;
+	\item Invio dei risultati alla proponente.
+\end{enumerate}
 
 \pagebreak

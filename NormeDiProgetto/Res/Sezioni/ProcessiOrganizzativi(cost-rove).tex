@@ -84,6 +84,10 @@ Qualora l'assegnatario di un task dovesse realizzare tale task non è completabi
 \paragraph{Norme sui task} \Spazio
 Il nome del task deve essere nella forma [attività] nome. Il nome deve essere descrittivo del task stesso. Ogni task dovrà avere almeno un assegnatario.
 
+\paragraph{Strumenti di supporto}
+\subparagraph{nTask} \Spazio
+Per la gestione del sistema di ticketing viene utilizzato nTask. La piattaforma permette al \emph{Responsabile di Progetto} di creare \gl{task} e di assegnarli ai membri del gruppo. Ogni task è caratterizzato dalla data di inizio, data di fine, una descrizione ed una eventuale checklist. Esso permette di avere diverse visualizzazioni dei task assegnati: lista testuale, griglia e calendario. Abbiamo deciso di utilizzare questo strumento, data la sua comoda board view, la possibilità di creare più feature anche nella versione gratuita e di avere uno strumento di \gl{risk tracking} integrato.
+
 \subsection{Meccanismi di controllo}
 Il sistema di ticketing adottato, permette di suddividere e controllare le varie attività. In particolare, è possibile visualizzare:
 \begin{itemize}
@@ -100,10 +104,7 @@ Il sistema di ticketing adottato, permette ad ogni membro di rendicontare le ore
 \item{Ore di lavoro complessive per un ruolo.}
 \end{itemize}
 
-\paragraph{Strumenti di supporto}
-\subparagraph{nTask} \Spazio
-Per la gestione del sistema di ticketing viene utilizzato nTask. La piattaforma permette al \emph{Responsabile di Progetto} di creare \gl{task} e di assegnarli ai membri del gruppo. Ogni task è caratterizzato dalla
-data di inizio, data di fine, una descrizione ed una eventuale checklist. Esso permette di avere diverse visualizzazioni dei task assegnati: lista testuale, griglia e calendario. Abbiamo deciso di utilizzare questo strumento, data la sua comoda board view, la possibilità di creare più feature anche nella versione gratuita e di avere uno strumento di \gl{risk tracking} integrato.
+
 
 \subsection{Gestione delle comunicazioni}
 \subsubsection{Comunicazioni interne al gruppo}
@@ -157,52 +158,12 @@ Se non è possibile trovare un giorno in cui effettuare una riunione in un luogo
 Gli incontri esterni saranno anch'essi organizzati dal \emph{Responsabile di Progetto}, che si metterà in contatto con il committente o il proponente tramite email come descritto al punto 4.1.2 per accordarsi con essi sulla data, l'ora e il luogo dell'incontro. Una volta che questi ultimi saranno stati decisi e confermati da entrambe le parti, il \emph{Responsabile} avviserà i membri utilizzando Discord.
 In caso di impossibilità da una delle due parti ad organizzare un incontro fisico, si considererà l'opzione di un incontro utilizzando un servizio VoIP come Skype, Hangout o simili.
 
-\subsection{Norme di versionamento}
-Il servizio di hosting scelto per la repository è Github. La repository è
-privata e sarà resa pubblica a fine progetto. Seguono le norme che ne riguardano gli aspetti
-principali.
-\subsubsection{Norme sui file}
-I file devono rispettare le norme di nomenclatura già specificate in 3.1.6 Nomenclatura dei documenti.
-Tramite il file .gitignore vengono esclusi i file intermedi di compilazione dei file latex.
-Gli unici file ammessi nella repository sono .tex .jpg .png .pdf.
-
-\subsubsection{Norme sui \gl{Commit}}
-Ogni modifica sostanziale effettuata ai file dev'essere seguita da un commit. Il commento associato ad ogni commit deve essere nella forma: [nome file] descrizione.
-La descrizione deve essere concisa e quanto più esaustiva possibile. Ad ogni commit deve corrispondere un aggiornamento del diario delle modifiche.
-
-\subsubsection{Norme su branching e merging}
-Le norme usate per branching e merging si rifanno al Git Feauture Branch Workflow:
-master è il branch in cui risiederà documentazione e codice verificati e approvati.
-Le modifiche o le nuove feature vanno implementate su un feature branch che saranno verificati
-prima di effettuare una pull request verso master.
-La pull request permette di non modificare master fintanto che non viene verificato il branch.
-Ogni nuovo feature branch deve:
-\begin{itemize}
-\item Essere creato a partire da master;
-\item Avere un nome che permetta di capire a quale feature è associato.
-\end{itemize}
-Queste norme saranno rivisitate all'inizio del processo di sviluppo per accertarsi che il feature branch workflow sia il più opportuno da usare. Una possibile alternativa con cui verrà confrontato è GitFlow.
-
-\subsubsection{Strumenti di supporto}
-\paragraph{Github}\Spazio
-Github è il servizio di hosting scelto per la repository. Funziona utilizzando git, un software di \gl{versionamento} descritto nella sezione immediatamente successiva. Oltre all'hosting del codice sorgente, offre altre caratteristiche utili, tra le quali:
-\begin{itemize}
-\item Un \gl{Issue tracking System}, con etichette e \gl{milestone};
-\item Una lista dei commit passati e delle relative modifiche ai file semplice da consultare;
-\item Account Educational gratuito per gli studenti, il quale permette la creazione di repository private, normalmente creabili solo con un account a pagamento.
-\end{itemize}
-
-\paragraph{Git}\Spazio
-Git è un software open-source di controllo \gl{versione} distribuito.
-Viene usato con Github, in quanto è un servizio già conosciuto dai membri del team e molto comodo da utilizzare.
-
-\paragraph{Client Git}\Spazio
-A seconda delle preferenze, ogni membro del team deciderà se usare come client GitKraken o Github Desktop. Entrambi sono client desktop che facilitano l'utilizzo di git, rendendo molto più semplice inviare le modifiche locali al repository remoto, o viceversa.
 \subsection{Formazione}
 La formazione ai fini del progetto è responsabilità di ogni singolo membro del gruppo. Qualora ai fini del progetto un membro del gruppo dovesse formarsi autonomamente su un argomento sconosciuto agli altri, sarà sua responsabilità informare il gruppo e se ritenuto opportuno formarlo secondo una delle seguenti modalità:
 \begin{itemize}
-\item Redigere un documento a scopo introduttivo che illustri le tematiche principali ed
-elenchi le risorse usate per la formazione. Tale modalità è da preferirsi alla successiva che verrà adottata se le circostanze dovessero ostacolare la redazione del documento;
-\item Formare il gruppo tramite un incontro a scopo formativo.
+	\item Redigere un documento a scopo introduttivo che illustri le tematiche principali ed
+	elenchi le risorse usate per la formazione. Tale modalità è da preferirsi alla successiva che verrà adottata se le circostanze dovessero ostacolare la redazione del documento;
+	\item Formare il gruppo tramite un incontro a scopo formativo.
 \end{itemize}
+
 \pagebreak
