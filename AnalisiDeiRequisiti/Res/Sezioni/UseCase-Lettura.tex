@@ -9,7 +9,7 @@
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Scopo e descrizione}: l'attore configura la connessione dei nodi della rete ai rispettivi flussi di dati provenienti dalla \gl{sorgente dati};
 	\item \textbf{Precondizione}: è stata creata o caricata una rete Bayesiana adeguata. Grafana riceve correttamente informazioni dalla sorgente dati;
-	\item \textbf{Flusso principale degli eventi}:
+	\item \textbf{Scenario principale}:
 	\begin{itemize}
 		\item Gestione della connessione tra un nodo ed un flusso di dati (UC2.1);
 		\item Impostazione delle regole temporali per il ricalcolo (UC2.2);
@@ -30,7 +30,7 @@
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Scopo e descrizione}: l'attore modifica il modo in cui un nodo è connesso ad un flusso di dati;
 	\item \textbf{Precondizione}: l'attore ha selezionato un nodo della rete Bayesiana;
-	\item \textbf{Flusso principale degli eventi}:
+	\item \textbf{Scenario principale}:
 	\begin{itemize}
 		\item Connessione di un nodo ad un flusso di dati (UC2.1.1);
 		\item Disconnessione di un nodo ad un flusso di dati (UC2.1.2);
@@ -73,14 +73,43 @@
 	\item \textbf{Precondizione}: è possibile inserire delle regole temporali;
 	\item \textbf{Postcondizione}: l'attore inserisce le regole temporali desiderate.
 \end{itemize}
-\subsection{UC2.3: Salvataggio della configurazione attuale}
 
+\subsection{UC2.3: Salvataggio della configurazione attuale}
 \hypertarget{UC2.3}{}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.5]{Img/UC2-3}
+	\caption{UC2.3 - Salvataggio della configurazione attuale}\label{}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Scopo e descrizione}: l'attore salva l'attuale configurazione della connessione della rete Bayesiana al flusso dati in un file JSON per un futuro riutilizzo;
-	\item \textbf{Precondizione}: il sistema permette di leggere un file JSON, l'attore ha indicato di voler salvare la configurazione su file;
-	\item \textbf{Postcondizione}: viene salvato un file contenente la configurazione attuale.
+	\item \textbf{Precondizione}: il sistema permette di leggere un file JSON, l'attore ha indicato di voler salvare la configurazione attuale su file;
+	\item \textbf{Postcondizione}: viene salvato un file contenente la configurazione attuale;
+	\item \textbf{Estensioni}:
+	\begin{itemize}
+		\item L'utente prova a salvare una configurazione non valida, il sistema rimane nello stato precedente all'azione (UC2.5).
+	\end{itemize}
+\end{itemize}
+
+\subsection{UC2.3.1: Inserimento nome file} 
+\hypertarget{UC2.3.1}{} 
+\begin{itemize} 
+	\item{\textbf{Attori primari}: Utente;} 
+	\item{\textbf{Scopo e descrizione}: l'attore inserisce il nome con cui vuole salvare l'attuale configurazione di rete;} 
+	\item{\textbf{Precondizione}: l'attore ha indicato di volere salvare l'attuale configurazione di rete;}
+	\item{\textbf{Scenario principale}: viene inserito il nome dell'attuale configurazione di rete che l'attore vuole salvare;}
+	\item{\textbf{Postcondizione}: l'attuale configurazione di rete è stata nominata correttamente.}
+\end{itemize} 
+
+\subsection{UC2.3.2: Inserimento percorso file} 
+\hypertarget{UC2.3.2}{} 
+\begin{itemize} 
+	\item{\textbf{Attori primari}: Utente;} 
+	\item{\textbf{Scopo e descrizione}: l'attore inserisce il percorso in cui vuole salvare l'attuale configurazione di rete;} 
+	\item{\textbf{Precondizione}: l'attore ha indicato di volere salvare l'attuale configurazione di rete;}
+	\item{\textbf{Scenario principale}: viene inserito il percorso in cui l'attore vuole salvare l'attuale configurazione di rete;} 
+	\item{\textbf{Postcondizione}: il percorso in cui l'attuale configurazione di rete è stato definito correttamente.}
 \end{itemize}
 
 \subsection{UC2.4: Caricamento di una configurazione salvata}
@@ -89,15 +118,25 @@
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Scopo e descrizione}: l'attore configura la connessione tra la rete Bayesiana e la sorgente dati secondo le impostazioni descritte da un file salvato su disco;
 	\item \textbf{Precondizione}: il sistema permette di leggere un file JSON, esiste un file JSON contenente la configurazione;
+	\item \textbf{Postcondizione}: la connessione tra rete e sorgente dati viene configurata secondo le informazioni salvati nel file;
 	\item \textbf{Estensioni}: 
 	\begin{itemize}
-		\item  Viene caricato un file dal contenuto non valido e/o in un formato non valido, il sistema rimane nello stato precedente all'azione (UC2.4.1).
+		\item  Viene caricato un file dal contenuto non valido e/o in un formato non valido, il sistema rimane nello stato precedente all'azione (UC2.6).
 	\end{itemize}
-	\item \textbf{Postcondizione}: la connessione tra rete e sorgente dati viene configurata secondo le informazioni salvati nel file.
 \end{itemize}
 
-\subsection{UC2.4.1: Caricamento di un file non valido}
-\hypertarget{UC2.4.1}{}
+\subsection{UC2.5: Errore salvataggio configurazione attuale}
+\hypertarget{UC2.5}{}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Scopo e descrizione}: il salvataggio della configurazione di rete attuale non è terminato con successo, ciò può essere causato da diverse ragioni, le più comuni possono essere: l'inserimento di un nome non valido, l'inserimento di un percorso non valido o problemi hardware;
+	\item \textbf{Scenario principale}: il sistema notifica un messaggio d'errore causato da un salvataggio non andato a buon fine della configurazione dell'attuale configurazione di rete;
+	\item \textbf{Precondizione}: l'attore tenta di salvare una configurazione dell'attuale rete;
+	\item \textbf{Postcondizione}: l'attore viene notificato dell'errore, il sistema rimane nello stato precedente all'azione.
+\end{itemize}
+
+\subsection{UC2.6: Caricamento di un file non valido}
+\hypertarget{UC2.6}{}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Scopo e descrizione}: l'attore tenta di caricare un file non valido, e ne viene notificato;
@@ -116,7 +155,7 @@
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Scopo e descrizione}: l'utente richiede di visualizzare dei dati calcolati dalla rete nella dashboard, tali dati vengono resi disponibili tramite panel;
 	\item \textbf{Precondizione}: è stata caricata e configurata una rete Bayesiana adeguata; Grafana riceve correttamente informazioni dalla sorgente dati;
-	\item \textbf{Flusso principale degli eventi}:
+	\item \textbf{Scenario principale}:
 	\begin{itemize}
 		\item Lettura dei dati dalla rete;
 		\item Aggiornamento della dashboard (UC3.1).
@@ -129,7 +168,7 @@
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Scopo e descrizione}: l'utente imposta la frequenza di aggiornamento della dashboard; Grafana aggiorna la visualizzazione dei panel;
 	\item \textbf{Precondizione}: il sistema permette di impostare la frequenza di aggiornamento;
-	\item \textbf{Flusso principale degli eventi}:
+	\item \textbf{Scenario principale}:
 	\begin{itemize}
 		\item Impostazione della frequenza di aggiornamento della dashboard;
 		\item Aggiornamento dei panel.

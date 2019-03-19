@@ -9,14 +9,14 @@
 	\item{\textbf{Attori primari}: Utente;}
 	\item{\textbf{Scopo e descrizione}: l'attore vuole utilizzare l'editor grafico ai fini di realizzare facilmente tramite interfaccia grafica un'apposita rete Bayesiana, o modificarne una già esistente;} 
 	\item{\textbf{Precondizione}: l'editor grafico è stato caricato correttamente ed è pronto all'uso;} 
-	\item{\textbf{Flusso base degli eventi}: 
+	\item{\textbf{Scenario principale}: 
 		\begin{itemize} 
 			\item{L'attore crea uno o più nodi (UC1.1);} 
 			\item{L'attore modifica i parametri dei nodi impostati inizialmente con valori di default(UC1.2);} 
-			\item{L'attore può eliminare o modificare nuovamente determinati nodi (UC1.3, UC1.2)}; 
-			\item{L'attore crea un collegamento tra nodi (UC1.4);} 
-			\item{L'attore può eliminare determinati collegamenti in eccesso (UC1.5);} 
-			\item{L'attore effettua il salvataggio della rete su un apposito file (UC1.6).} 
+			\item{L'attore elimina dei nodi (UC1.3)}; 
+			\item{L'attore crea un collegamento tra i nodi (UC1.4);} 
+			\item{L'attore elimina collegamenti tra i nodi (UC1.5);} 
+			\item{L'attore effettua il salvataggio della rete su un apposito file JSON(UC1.6).} 
 		\end{itemize} 
 	} 
 	\item{\textbf{Postcondizione}: il sistema ha ottenuto le informazioni sulle operazioni che l'attore desidera eseguire e le ha eseguite.} 
@@ -39,7 +39,7 @@
 		\end{itemize} 
 		Al momento della creazione del nodo tutte le componenti vengono inizializzate con valori di default;} 
 	\item{\textbf{Precondizione}: l'attore ha indicato al sistema di voler inserire un nodo all'interno della rete Bayesiana;} 
-	\item{\textbf{Flusso base degli eventi}: } 
+	\item{\textbf{Scenario principale}: } 
 	\begin{itemize} 
 		\item{Inizializzazione lista predecessori(UC1.1.1);} 
 		\item{Inizializzazione lista successori(UC1.1.2);} 
@@ -91,7 +91,7 @@
 		Ogni punto deve essere inizializzato correttamente tramite appositi valori di default;
 	} 
 	\item{\textbf{Precondizione}: l'attore ha effettuato la creazione di un nuovo nodo della rete;} 
-	\item{\textbf{Flusso base degli eventi}: } 
+	\item{\textbf{Scenario principale}: } 
 	\begin{itemize} 
 		\item{Inizializzazione lista stati nodo corrente(UC1.1.4.1);} 
 		\item{Inizializzazione lista combinazione stati nodi predecessori(UC1.1.4.2);} 
@@ -134,7 +134,7 @@
 	\item{\textbf{Attori primari}: Utente;} 
 	\item{\textbf{Scopo e descrizione}: l'attore desidera modificare il valore di uno o più parametri di un nodo della rete Bayesiana;} 
 	\item{\textbf{Precondizione}: l'attore ha indicato il nodo su cui desidera effettuare l'operazione di modifica;} 
-	\item{\textbf{Flusso base degli eventi}: } 
+	\item{\textbf{Scenario principale}: } 
 	\begin{itemize} 
 		\item{L'attore può modificare il nome del nodo(UC1.2.1);} 
 		\item{L'attore può modificare la CPT associata al nodo(UC1.2.2).} 		
@@ -171,7 +171,7 @@
 		Questo caso d'uso si concentra principalmente sulla modifica della prima e dell'ultima componente. L'interazione dell'attore con la seconda componente verrà trattata nei casi d'uso UC1.3 e UC1.4;
 	} 
 	\item{\textbf{Precondizione}: l'attore ha indicato al sistema quale operazioni vuole effettuare sulla CPT di uno specifico nodo;} 
-	\item{\textbf{Flusso base degli eventi}: } 
+	\item{\textbf{Scenario principale}: } 
 	\begin{itemize} 
 		\item{L'attore può aggiungere uno stato al nodo corrente;} 
 		\item{L'attore può rimuovere uno stato dal nodo corrente;} 
@@ -207,7 +207,7 @@
 	\item{\textbf{Attori primari}: Utente;} 
 	\item{\textbf{Scopo e descrizione}: uno stato associato alla CPT di un nodo è composto da due componenti: un nome ed un intervallo di valori. L'attore può effettuare operazioni di modifica su entrambe le componenti;} 
 	\item{\textbf{Precondizione}: l'attore ha indicato quale stato vuole modificare e come vuole modificarlo;} 
-	\item{\textbf{Flusso base degli eventi}: 
+	\item{\textbf{Scenario principale}: 
 		\begin{itemize} 
 			\item{L'attore può modificare il nome dello stato;} 
 			\item{L'attore può modificare il range di valori dello stato.} 
@@ -315,7 +315,7 @@
 	\item{\textbf{Attori primari}: Utente;} 
 	\item{\textbf{Scopo e descrizione}: l'attore desidera creare un collegamento tra nodi all'interno della rete. I collegamenti all'interno di una rete Bayesiana sono direzionati, di conseguenza è sempre definito un nodo di partenza ed un nodo d'arrivo;} 
 	\item{\textbf{Precondizione}: l'attore ha indicato quale nodi della rete vuole collegare tra loro, qual è il nodo di partenza e qual è il nodo di arrivo;} 
-	\item{\textbf{Flusso base degli eventi}: } 
+	\item{\textbf{Scenario principale}: } 
 	\begin{itemize} 
 		\item{Inserimento nodo arrivo in lista successori del nodo di partenza(UC1.4.1);} 
 		\item{Inserimento nodo partenza lista predecessori del nodo di arrivo(UC1.4.2);} 
@@ -358,7 +358,7 @@
 	\item{\textbf{Attori primari}: Utente;} 
 	\item{\textbf{Scopo e descrizione}: l'attore desidera eliminare un collegamento tra nodi all'interno della rete. I collegamenti all'interno di una rete Bayesiana sono direzionati, di conseguenza è sempre definito un nodo di partenza ed un nodo d'arrivo;} 
 	\item{\textbf{Precondizione}: l'attore ha indicato quale collegamento vuole eliminare;} 
-	\item{\textbf{Flusso base degli eventi}: } 
+	\item{\textbf{Scenario principale}: } 
 	\begin{itemize} 
 		\item{Rimozione nodo arrivo da lista successori del nodo di partenza(UC1.5.1);} 
 		\item{Rimozione nodo partenza da lista predecessori del nodo di arrivo(UC1.5.2);} 
@@ -391,63 +391,56 @@
 	\item{\textbf{Postcondizione}: le celle in eccesso sono state rimosse correttamente.} 
 \end{itemize} 
 \subsection{UC1.6: Salvataggio rete} 
-\hypertarget{UC1.6}{} 
+\hypertarget{UC1.6}{}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.5]{Img/UC1-6} 
+	\caption{UC1.6 - Salvataggio rete} \label{} 
+\end{figure}  
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
 	\item{\textbf{Scopo e descrizione}: l'intera struttura realizzata dall'utente tramite l'editor grafico, cioè l'insieme dei nodi ed i collegamenti tra essi, deve essere salvabile su disco all'interno di un apposito file JSON;} 
-	\item{ \textbf{Precondizione}: l'attore ha indicato al sistema di voler salvare la rete all'interno di un apposito file JSON;} 
-	\item{\textbf{Postcondizione}: viene salvato su disco un file JSON contenente la struttura della rete realizzata.} 
-\end{itemize} 
-\subsection{UC1.7: Errore modifica nodo}
-\begin{itemize} 
-	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: l'attore, durante un'operazione di modifica di un nodo, ha inserito dei valori non validi per uno o più parametri. La causa dell'errore dovrà essere opportunamente segnalata all'attore. Il nodo e tutti i collegamenti ad esso associati, fintanto che gli errori non verranno risolti, risulteranno come temporaneamente inattivi all'interno della rete;} 
-	\item{\textbf{Precondizione}: l'attore ha eseguito una o più operazioni di modifica ad un nodo inserendo valori non validi;} 
-	\item{\textbf{Postcondizione}: gli errori sono stati gestiti correttamente e l'attore è stato informato di essi.} 
-\end{itemize}   
-\subsection{UC1.8: Salvataggio file JSON} 
-\hypertarget{UC1.8}{} 
-\begin{figure} [H]
-	\centering
-	\includegraphics[scale=0.45]{Img/UC1-8} 
-	\caption{UC1.8 - Salvataggio file JSON} \label{} 
-\end{figure} 
-\begin{itemize} 
-	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}: l'attore desidera salvare un file JSON, utilizzato per memorizzare diverse impostazioni della rete. Un file JSON è identificato principalmente da due componenti: un nome ed un percorso in cui è salvato all'interno del file system;} 
-	\item{\textbf{Precondizione}: l'attore ha indicato di volere salvare la rete su file;} 
-	\item{\textbf{Flusso base degli eventi}: } 
+	\item{ \textbf{Precondizione}: l'attore ha indicato al sistema di voler salvare la rete all'interno di un apposito file JSON;}
+	\item{\textbf{Scenario principale}: } 
 	\begin{itemize} 
-		\item{L'attore inserisce il nome del file(UC1.8.1);} 
-		\item{L'attore inserisce il percorso in cui salvare il file (UC1.8.2).} 
+		\item{L'attore inserisce il nome del file(UC1.6.1);} 
+		\item{L'attore inserisce il percorso in cui salvare il file (UC1.6.2).} 
 	\end{itemize} 
-	\item{\textbf{Postcondizione}: il file è stato salvato correttament;} 
+	\item{\textbf{Postcondizione}: viene salvato su disco un file JSON contenente la struttura della rete realizzata;}
 	\item \textbf{Estensioni}:
 	\begin{itemize}
-		\item Viene salvato un JSON non valido, il sistema rimane nello stato precedente all'azione informando l'utente dell'accaduto(UC1.9).
-	\end{itemize}
+		\item L'attore tenta di salvare un JSON non valido, il sistema rimane nello stato precedente all'azione informando l'utente dell'accaduto(UC1.8).
+	\end{itemize} 
 \end{itemize} 
-\subsection{UC1.8.1: Inserimento nome file} 
-\hypertarget{UC1.8.1}{} 
+\subsection{UC1.6.1: Inserimento nome file} 
+\hypertarget{UC1.6.1}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
 	\item{\textbf{Scopo e descrizione}: l'attore inserisce il nome con cui vuole salvare un file JSON;} 
 	\item{\textbf{Precondizione}: l'attore ha indicato di volere salvare il file;} 
 	\item{\textbf{Postcondizione}: il file è stato nominato correttamente.} 
 \end{itemize} 
-\subsection{UC1.8.2: Inserimento percorso file} 
-\hypertarget{UC1.8.2}{} 
+\subsection{UC1.6.2: Inserimento percorso file} 
+\hypertarget{UC1.6.2}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
 	\item{\textbf{Scopo e descrizione}: l'attore inserisce il percorso in cui vuole salvare il file associato alla rete;} 
 	\item{\textbf{Precondizione}: l'attore ha indicato di volere salvare la rete su file;} 
 	\item{\textbf{Postcondizione}: il percorso in cui salvare il file è stato definito correttamente.}
-\end{itemize} 
-\subsection{UC1.9: Errore salvataggio file JSON} 
-\hypertarget{UC1.9}{} 
+\end{itemize}
+\subsection{UC1.7: Errore modifica nodo}
+\hypertarget{UC1.7}{}
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
-	\item{\textbf{Scopo e descrizione}:Il salvataggio del file JSON su disco non è terminato con successo, ciò può essere causato da una moltitudine di ragioni, le più comuni possono essere: l'inserimento di un nome non valido, l'inserimento di un percorso non valido, o problemi hardware;} 
+	\item{\textbf{Scopo e descrizione}: l'attore, durante un'operazione di modifica di un nodo, ha inserito dei valori non validi per uno o più parametri. La causa dell'errore dovrà essere opportunamente segnalata all'attore. Il nodo e tutti i collegamenti ad esso associati, fintanto che gli errori non verranno risolti, risulteranno come temporaneamente inattivi all'interno della rete;} 
+	\item{\textbf{Precondizione}: l'attore ha eseguito una o più operazioni di modifica ad un nodo inserendo valori non validi;} 
+	\item{\textbf{Postcondizione}: gli errori sono stati gestiti correttamente e l'attore è stato informato di essi.} 
+\end{itemize}    
+\subsection{UC1.8: Errore salvataggio rete} 
+\hypertarget{UC1.8}{} 
+\begin{itemize} 
+	\item{\textbf{Attori primari}: Utente;} 
+	\item{\textbf{Scopo e descrizione}: il salvataggio del file JSON su disco non è terminato con successo, ciò può essere causato da una moltitudine di ragioni, le più comuni possono essere: l'inserimento di un nome non valido, l'inserimento di un percorso non valido o problemi hardware;} 
 	\item{\textbf{Precondizione}: l'attore ha indicato di volere salvare la rete su file;} 
-	\item{\textbf{Postcondizione}: Il salvataggio del file JSON non è terminato con successo, e l'utente è stato informato del fallimento dell'operazione.} 
+	\item{\textbf{Postcondizione}: il salvataggio del file JSON non è terminato con successo e l'utente è stato informato del fallimento dell'operazione.} 
 \end{itemize}
