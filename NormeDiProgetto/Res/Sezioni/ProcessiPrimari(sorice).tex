@@ -10,6 +10,14 @@ I punti fondamentali che verranno affrontati insieme al proponente saranno:
 \item Stimare i costi del prodotto finale.
 \end{itemize}
 Di seguito sono riportate tutte le attività che compongono questo processo:
+
+\subsubsection{Studio del dominio tecnologico}
+Consiste nella ricerca di tutte quelle informazioni relative alle tecnologie e nella valutazione di possibili alternative utili al fine del progetto. Ne consegue che i risultati ottenuti, frutto di informazioni reperite ed esperienze personali, devono prima essere discussi, approvati ed eventualmente concordati con la proponente.
+Ogni componente del gruppo è incaricato di approfondire o studiare autonomamente le tecnologie necessarie allo sviluppo del progetto, in modo da ottenere buona padronanza del dominio tecnologico impiegato.
+
+\subsubsection{Normazione}
+La definizione delle norme potrebbe subire delle variazioni con il progredire del progetto; ciò è dovuto a nuove necessità a cui il gruppo andrà incontro ed eventuali problematiche che potrebbero essere riscontrate. Sarà quindi \gl{compito} degli \emph{Amministratori} sopperire a queste complicazioni redigendo nuove norme o modificando quelle già presenti.
+
 \subsubsection{Studio di Fattibilità}
 Nel documento \emph{Studio di Fattibilità v1.0.0.} troviamo le motivazioni che hanno portato il nostro gruppo a favorire la scelta del prodotto per cui proporci come fornitori. Inoltre, si riportano, per ogni capitolato, le seguenti informazioni:
 \begin{itemize}
@@ -18,7 +26,7 @@ Nel documento \emph{Studio di Fattibilità v1.0.0.} troviamo le motivazioni che 
  	\item\textbf{{Valutazione generale}}: composta dagli aspetti positivi e dagli aspetti negativi trovati e discussi dal gruppo riguardo al capitolato in esame;
  	\item\textbf{{Valutazione finale}}: vi si può trovare in breve la motivazione della scelta presa per ogni capitolato in base a ciò che è stato riportato nelle tre sezioni precedenti.
 \end{itemize}
-\pagebreak
+
 \subsubsection{Piano di Progetto}
 La redazione di un \gl{piano} da seguire durante la realizzazione del progetto spetta al \emph{Responsabile}, aiutato nelle scelte dagli \emph{Amministratori}. Il documento dovrà coprire le seguenti tematiche:
  \begin{itemize}
@@ -27,13 +35,14 @@ La redazione di un \gl{piano} da seguire durante la realizzazione del progetto s
  	\item {\textbf{Assegnazione risorse}: riporta la suddivisione oraria delle risorse, tenendo conto dei ruoli ricoperti da tutti i membri. In questo modo si ha una visione chiara su come il gruppo sta procedendo e quante ore vengono impiegate per ogni attività;}
  	\item\textbf{{Preventivo}}: sulla base della pianificazione, viene stimata la quantità di lavoro necessaria per portare a termine ogni attività (e quindi ogni fase) del progetto, per arrivare infine ad avere una valutazione complessiva per tutto il progetto e proporre un preventivo finale con il costo del lavoro precedentemente stimato.
  \end{itemize}
+
 \paragraph{Strumenti di supporto}
 \subparagraph{Gantt Project}\Spazio
 Per quanto riguarda la creazione dei diagrammi di Gantt abbiamo deciso di utilizzare Gantt Project data la sua completezza, facilità di utilizzo e la possibilità di esportare i diagrammi sotto forma di \gl{PNG}. Inoltre, i file di Gantt Project sono salvati in formato \gl{XML}, quindi facilmente versionabili.
 \subparagraph{Microsoft Excel}\Spazio
 Per la realizzazione dei consuntivi abbiamo deciso di utilizzare Microsoft Excel come strumento per creare i grafici, data la sua efficacia e facilità di utilizzo.
 \subsubsection{Piano di Qualifica}
-Il \gl{compito} di \gl{verifica} e \gl{validazione} viene svolto da parte dei \emph{Verificatori}. Questa mansione verrà svolta secondo un preciso metodo che deve coprire le seguenti tematiche:
+Il compito di \gl{verifica} e \gl{validazione} viene svolto da parte dei \emph{Verificatori}. Questa mansione verrà svolta secondo un preciso metodo che deve coprire le seguenti tematiche:
 \begin{itemize}
 	\item\textbf{{Metodo di verifica}}: riporta le procedure di controllo sulla \gl{qualità} di \gl{processo} e di \gl{prodotto}, considerando i mezzi e le risorse a disposizione;
 	\item\textbf{{Misure e metriche}}: presenta criteri oggettivi per i documenti, i processi e il software;
@@ -41,6 +50,11 @@ Il \gl{compito} di \gl{verifica} e \gl{validazione} viene svolto da parte dei \e
 	\item\textbf{{Pianificazione del collaudo}}: definisce dettagliatamente le metodologie di collaudo a cui sarà sottoposto il progetto realizzato;
 	\item\textbf{{Resoconto dell'attività di verifica}}: riporta le metriche calcolate e il resoconto sul collaudo delle attività sottoposte a verifica e validazione.
 \end{itemize}
+
+
+\subsubsection{Ingresso alle revisioni}
+Prima di ogni revisione è fondamentale allestire ed organizzare correttamente il materiale da consegnare. Compito del \emph{Responsabile di Progetto} è redigere la lettera di presentazione da includere anch'essa per l'ingresso alla revisione.
+
 \subsection{Sviluppo}
 Il processo in questione affronta le attività ed i compiti svolti dal gruppo con l'obiettivo di sviluppare il software richiesto dal proponente. Per una corretta implementazione è fondamentale:
 \begin{itemize}
@@ -165,38 +179,47 @@ Verranno utilizzati i seguenti tipi di freccia:
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.75]{./Img/dipendenza_forte.jpg}
-	\caption{Relazione di dipendenza forte}\label{}
+	\caption{Relazione di dipendenza forte tra classi}\label{}
 \end{figure}
 
 \item  Indica che A dipende da B secondo una primitiva;
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.75]{./Img/dipendenza.jpg}
-	\caption{Relazione di dipendenza debole}\label{}
+	\caption{Relazione di dipendenza debole tra classi}\label{}
 \end{figure}
 
 \item Indica un'aggregazione da A verso B, cioè una relazione non forte nella quale le classi parte hanno un significato anche senza che sia presente la classe tutto;
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.75]{./Img/aggregazione.jpg}
-	\caption{Relazione di aggregazione}\label{}
+	\caption{Relazione di aggregazione tra classi}\label{}
 \end{figure}
 
 \item Indica una composizione da A verso B, cioè una relazione forte nella quale le classi parte hanno un reale significato solo se sono legate alla classe tutto;
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.75]{./Img/composizione.jpg}
-	\caption{Relazione di composizione}\label{}
+	\caption{Relazione di composizione tra classi}\label{}
 \end{figure}
 
 \item Indica l’ereditarietà, cioè che ogni oggetto di A è anche un oggetto di B.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.75]{./Img/ereditarieta.jpg}
-	\caption{Relazione di ereditarietà}\label{}
+	\caption{Relazione di ereditarietà tra classi}\label{}
 \end{figure}
 
 \end{itemize}
+
+\paragraph{Diagrammi dei package}\Spazio
+I package sono rappresentati in forma di rettangoli e dispongono di un nome univoco. Ogni rettangolo contiene i diagrammi delle classi presenti all'interno di quel package. Le dipendenze sono indicate da frecce tratteggiate.
+Nel seguente esempio si può vedere che il package A ha una dipendenza nei confronti di B.
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.7]{./Img/package.jpg}
+	\caption{Relazione di dipendenza tra package}\label{}
+\end{figure}
 
 \paragraph{Tecnologie}\Spazio
 Lo sviluppo del progetto richiede l'utilizzo di tecnologie, alcune imposte del capitolato, altre soggette a libera scelta da parte del team.

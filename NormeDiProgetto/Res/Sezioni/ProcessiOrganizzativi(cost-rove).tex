@@ -88,16 +88,16 @@ Il nome del task deve essere nella forma [attività] nome. Il nome deve essere d
 \subparagraph{nTask} \Spazio
 Per la gestione del sistema di ticketing viene utilizzato nTask. La piattaforma permette al \emph{Responsabile di Progetto} di creare \gl{task} e di assegnarli ai membri del gruppo. Ogni task è caratterizzato dalla data di inizio, data di fine, una descrizione ed una eventuale checklist. Esso permette di avere diverse visualizzazioni dei task assegnati: lista testuale, griglia e calendario. Abbiamo deciso di utilizzare questo strumento, data la sua comoda board view, la possibilità di creare più feature anche nella versione gratuita e di avere uno strumento di \gl{risk tracking} integrato.
 
-\subsection{Meccanismi di controllo}
+\paragraph{Meccanismi di controllo} \Spazio
 Il sistema di ticketing adottato, permette di suddividere e controllare le varie attività. In particolare, è possibile visualizzare:
 \begin{itemize}
 \item{\textbf{Calendario attività}}: la data di fine delle varie attività è indicata in un calendario e gestita automaticamente dal sistema di ticketing;  
 \item{\textbf{Dettaglio attività}}: ogni attività include diverse informazioni, quali personale incaricato, stato dell'attività e data di fine prevista. 
 \end{itemize}
-\subsubsection{Controllo dei ritardi}
+\subparagraph{Controllo dei ritardi} \Spazio
 Ogni attività, assegnata a uno o più componenti del gruppo, deve essere svolta entro una data prestabilita. In questo modo è possibile pianificare in modo chiaro ed efficace l'insieme delle varie attività. Il mancato completamento entro la data prevista comporta un ritardo. In questo caso, abbiamo deciso di chiudere la task tenendo conto delle ore effettive di lavoro fino a quel momento. Successivamente, verrà aperta una nuova task uguale alla precedente contrassegnata da una "R", che simboleggia un ritardo nel completamento. Così facendo, le ore aggiuntive necessarie possono, in ogni caso, essere segnate nella nuova task. Alla fine, si avrà un totale delle ore impiegate, le quali verranno rendicontate.
 
-\subsection{Meccanismi di rendicontazione}
+\paragraph{Meccanismi di rendicontazione} \Spazio
 Il sistema di ticketing adottato, permette ad ogni membro di rendicontare le ore spese per una specifica attività. In particolare, è possibile visualizzare:
 \begin{itemize}
 \item{Ore di lavoro complessive per un attività;}
@@ -116,7 +116,8 @@ Le comunicazioni interne al gruppo sono gestite principalmente tramite due servi
 	\item{\textbf{Text channels}: sezione che contiene tutti i canali testuali principali del server. Di seguito verranno riportati tutti i canali contenuti in questa sezione:
 		\begin{itemize}
 			\item{\textbf{General}: canale testuale generale in cui effettuare comunicazioni poco urgenti destinate a tutti i membri del team;}
-			\item{\textbf{Deadlines}: canale testuale in cui vengono scritte tutte le deadline imminenti in modo da ricordarle a tutti i membri del team.}
+			\item{\textbf{Deadlines}: canale testuale in cui vengono scritte tutte le deadline imminenti in modo da ricordarle a tutti i membri del team;}
+			\item{\textbf{Impegni-personali}: canale testuale in cui vengono scritti i periodi di assenza dei membri del team, per garantire una migliore pianificazione.}
 		\end{itemize}
 	}
 	\item{\textbf{Voice channels}: sezione che contiene tutti i canali vocali principali del server. Di seguito verranno riportati tutti i canali contenuti in questa sezione:
@@ -129,7 +130,8 @@ Le comunicazioni interne al gruppo sono gestite principalmente tramite due servi
 	\item{\textbf{Notification center}: sezione che contiene tutti i canali testuali collegati ad un \gl{Webhook} per ricevere notifiche a particolari piattaforme esterne.
 		\begin{itemize}
 			\item{\textbf{Github-notifications}: canale testuale in cui verranno comunicate da un bot tutte le notifiche provenienti da Github;}
-			\item{\textbf{Gmail-notifications}: canale testuale in cui verranno comunicate da un bot tutte le notifiche relative all'indirizzo email del gruppo.}			
+			\item{\textbf{Gmail-notifications}: canale testuale in cui verranno comunicate da un bot tutte le notifiche relative all'indirizzo email del gruppo;}
+			\item{\textbf{Travis-build}: canale testuale in cui verranno comunicate da un bot tutte le notifiche relative alle build effettuate con TravisCI.}			
 		\end{itemize}
 	}
 	\item{\textbf{Documenti}: sezione contenente un canale testuale per ogni documento redatto dal team in modo tale da permettere un'efficace comunicazione tra i \emph{Redattori} di quello specifico documento.}
