@@ -139,11 +139,7 @@
 		\item{L'attore può modificare il nome del nodo(UC1.2.1);} 
 		\item{L'attore può modificare la CPT associata al nodo(UC1.2.2).} 		
 	\end{itemize} 
-	\item{\textbf{Postcondizione}: l'attore ha indicato quali parametri del nodo desidera modificare, come devono essere modificati e sono stati aggiornati correttamente;} 
-	\item{\textbf{Estensioni}:} 
-	\begin{itemize} 
-		\item{Nel caso in cui l'attore modifichi gli attributi del nodo con valori non validi, il nodo e tutti i collegamenti ad esso associati non verranno considerati come facenti parte della rete.} 
-	\end{itemize} 
+	\item{\textbf{Postcondizione}: l'attore ha indicato quali parametri del nodo desidera modificare, come devono essere modificati e sono stati aggiornati correttamente.} 
 \end{itemize} 
 \subsection{UC1.2.1: Modifica nome nodo} 
 \hypertarget{UC1.2.1}{} 
@@ -151,7 +147,11 @@
 	\item{\textbf{Attori primari}: Utente;} 
 	\item{\textbf{Scopo e descrizione}: l'attore desidera modificare il nome di uno specifico nodo;} 
 	\item{\textbf{Precondizione}: l'attore ha indicato al sistema di volere modificare il nome di uno specifico nodo;} 
-	\item{\textbf{Postcondizione}: il nome del nodo è stato aggiornato correttamente.} 
+	\item{\textbf{Postcondizione}: il nome del nodo è stato aggiornato correttamente;}
+	\item{\textbf{Estensioni}:} 
+	\begin{itemize} 
+		\item{Nel caso in cui l'attore modifichi gli attributi del nodo con valori non validi, il nodo e tutti i collegamenti ad esso associati non verranno considerati come facenti parte della rete(UC1.2.3).} 
+	\end{itemize}  
 \end{itemize} 
 \subsection{UC1.2.2: Modifica CPT associata al nodo} 
 \hypertarget{UC1.2.2}{} 
@@ -224,7 +224,7 @@
 	\item{\textbf{Postcondizione}: il nome dello stato è stato aggiornato correttamente. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore;}
 	\item{\textbf{Estensioni}:
 		\begin{itemize}
-			\item{Valore nome stato nodo non valido (UC1.2.2.3.3)}.
+			\item{Il valore del nuovo nome dello stato del nodo non è valido (UC1.2.2.3.3)}.
 		\end{itemize}
 	}
 \end{itemize} 
@@ -237,7 +237,7 @@
 	\item{\textbf{Postcondizione}: l'intervallo di valori è stato aggiornato correttamente come richiesto dall'attore. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore;}
 	\item{\textbf{Estensioni}:
 		\begin{itemize}
-			\item{Valore intervallo stato nodo non valido (UC1.2.2.3.4).}
+			\item{Il nuovo intervallo dei valori dello stato non è valido (UC1.2.2.3.4).}
 		\end{itemize}
 	}
 \end{itemize}
@@ -266,8 +266,8 @@
 	\item{\textbf{Postcondizione}: il valore contenuto all'interno della cella è stato aggiornato correttamente. Eventuali errori causati dall'inserimento di valori non validi sono stati gestiti correttamente e segnalati all'attore;}
 	\item{\textbf{Estensioni}:
 		\begin{itemize}
-			\item{Somma percentuale CPT non valida (UC1.2.2.5);}
-			\item{Valore cella CPT non valido (UC1.2.2.6).}
+			\item{La somma delle percentuali della CPT non è valida (UC1.2.2.5);}
+			\item{Il nuovo valore della cella CPT non è valido (UC1.2.2.6).}
 		\end{itemize}
 	}
 \end{itemize}
