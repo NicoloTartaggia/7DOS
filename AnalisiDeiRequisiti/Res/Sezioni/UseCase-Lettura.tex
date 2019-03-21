@@ -45,6 +45,7 @@
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Scopo e descrizione}: l'attore connette il nodo selezionato ad un flusso di dati;
 	\item \textbf{Precondizione}: il nodo selezionato non è connesso ad un flusso dati;
+	\item \textbf{Scenario principale}: un nodo viene connesso al flusso dati dall'attore;
 	\item \textbf{Postcondizione}: il nodo selezionato è connesso al flusso di dati desiderato.
 \end{itemize}
 
@@ -54,6 +55,7 @@
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Scopo e descrizione}: l'attore disconnette il nodo selezionato da un flusso di dati;
 	\item \textbf{Precondizione}: il nodo selezionato è connesso ad un flusso dati;
+	\item \textbf{Scenario principale}: un nodo viene disconnesso dal flusso dati dall'attore;
 	\item \textbf{Postcondizione}: il nodo selezionato è disconnesso dal flusso di dati.
 \end{itemize}
 
@@ -63,6 +65,7 @@
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Scopo e descrizione}: l'attore modifica il flusso di dati a cui un nodo è connesso;
 	\item \textbf{Precondizione}: il nodo selezionato è connesso ad un flusso dati diverso da quello desiderato;
+	\item \textbf{Scenario principale}: un flusso dati viene modificato dall'attore;
 	\item \textbf{Postcondizione}: il nodo selezionato è connesso al flusso di dati desiderato.
 \end{itemize}
 \subsection{UC2.2: Impostazione delle regole temporali per il ricalcolo}
@@ -71,6 +74,7 @@
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Scopo e descrizione}: l'attore imposta le regole temporali per il ricalcolo delle probabilità della rete;
 	\item \textbf{Precondizione}: è possibile inserire delle regole temporali;
+	\item \textbf{Scenario principale}: vengono impostate le regole temporali per il ricalcolo delle probabilità dall'attore;
 	\item \textbf{Postcondizione}: l'attore inserisce le regole temporali desiderate.
 \end{itemize}
 
@@ -85,6 +89,11 @@
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Scopo e descrizione}: l'attore salva l'attuale configurazione della connessione della rete Bayesiana al flusso dati in un file JSON per un futuro riutilizzo;
 	\item \textbf{Precondizione}: il sistema permette di leggere un file JSON, l'attore ha indicato di voler salvare la configurazione attuale su file;
+	\item \textbf{Scenario principale}:
+	\begin{itemize}
+		\item Inserimento del nome (UC2.3.1);
+		\item Inserimento del percorso (UC2.3.2).
+	\end{itemize}
 	\item \textbf{Postcondizione}: viene salvato un file contenente la configurazione attuale;
 	\item \textbf{Estensioni}:
 	\begin{itemize}
@@ -92,7 +101,7 @@
 	\end{itemize}
 \end{itemize}
 
-\subsection{UC2.3.1: Inserimento nome file} 
+\subsection{UC2.3.1: Inserimento nome} 
 \hypertarget{UC2.3.1}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
@@ -102,7 +111,7 @@
 	\item{\textbf{Postcondizione}: l'attuale configurazione di rete è stata nominata correttamente.}
 \end{itemize} 
 
-\subsection{UC2.3.2: Inserimento percorso file} 
+\subsection{UC2.3.2: Inserimento percorso} 
 \hypertarget{UC2.3.2}{} 
 \begin{itemize} 
 	\item{\textbf{Attori primari}: Utente;} 
@@ -119,6 +128,7 @@
 	\item \textbf{Scopo e descrizione}: l'attore configura la connessione tra la rete Bayesiana e la sorgente dati secondo le impostazioni descritte da un file salvato su disco;
 	\item \textbf{Precondizione}: il sistema permette di leggere un file JSON, esiste un file JSON contenente la configurazione;
 	\item \textbf{Postcondizione}: la connessione tra rete e sorgente dati viene configurata secondo le informazioni salvati nel file;
+	\item \textbf{Scenario principale}: viene caricata una configurazione di rete dall'attore;
 	\item \textbf{Estensioni}: 
 	\begin{itemize}
 		\item  Viene caricato un file dal contenuto non valido e/o in un formato non valido, il sistema rimane nello stato precedente all'azione (UC2.6).
@@ -130,8 +140,8 @@
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Scopo e descrizione}: il salvataggio della configurazione di rete attuale non è terminato con successo, ciò può essere causato da diverse ragioni, le più comuni possono essere: l'inserimento di un nome non valido, l'inserimento di un percorso non valido o problemi hardware;
-	\item \textbf{Scenario principale}: il sistema notifica un messaggio d'errore causato da un salvataggio non andato a buon fine della configurazione dell'attuale configurazione di rete;
 	\item \textbf{Precondizione}: l'attore tenta di salvare una configurazione dell'attuale rete;
+	\item \textbf{Scenario principale}: il sistema notifica un messaggio d'errore causato da un salvataggio non andato a buon fine dell'attuale configurazione di rete;
 	\item \textbf{Postcondizione}: l'attore viene notificato dell'errore, il sistema rimane nello stato precedente all'azione.
 \end{itemize}
 
@@ -141,6 +151,7 @@
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Scopo e descrizione}: l'attore tenta di caricare un file non valido, e ne viene notificato;
 	\item \textbf{Precondizione}: i contenuti del file, e/o il suo formato, non sono validi;
+	\item \textbf{Scenario principale}: il sistema notifica un messaggio d'errore causato da un caricamento non andato a buon fine della configurazione di rete;
 	\item \textbf{Postcondizione}: l'attore viene notificato dell'errore, il sistema rimane nello stato precedente all'azione.
 \end{itemize}
 
@@ -182,6 +193,7 @@
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Scopo e descrizione}: l'attore carica la rete Bayesiana da un file JSON salvato su disco;
 	\item \textbf{Precondizione}: il sistema permette di leggere un file JSON, esiste un file JSON contenente la rete;
+	\item \textbf{Scenario principale}: viene caricata una rete Bayesiana presente in un file JSON dall'attore;
 	\item \textbf{Postcondizione}: la rete Bayesiana viene creata secondo le informazioni salvate nel file;
 	\item \textbf{Estensioni}:
 	\begin{itemize}
