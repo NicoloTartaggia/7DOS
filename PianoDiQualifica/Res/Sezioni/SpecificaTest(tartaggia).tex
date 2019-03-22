@@ -1,34 +1,3 @@
-\newsection{Metodologia di analisi}
-
-\subsection{Analisi statica}
-L'analisi statica è una tecnica di analisi applicabile sia a prodotti di natura documentale che applicativa, e consiste nell'effettuare la verifica del prodotto individuando eventuali errori/anomalie. Nella sezione 3.2 del documento \emph{Norme di Progetto v2.0.0} vengono elencati gli strumenti per effettuare la verifica della documentazione. Essa si compone di due attività complementari, come di seguito.
-
-\subsubsection{Walkthrough}
-Attività di lettura integrale e approfondita del testo o codice del prodotto, principalmente utilizzata durante le prime fasi del progetto in quanto permette una verifica più attenta e precisa dei prodotti (che nei primi stadi sono usualmente ridotti in contenuti). Ricade tra i compiti del \emph{Verificatore} (vedere \emph{Norme di Progetto}), che si occuperà anche di stilare una lista degli errori riscontrati per facilitare la discussione di eventuali modifiche e permettere di individuare gli errori più frequenti. La fase finale dell'attività di \emph{Walkthrough} consiste nell'applicare e registrare le modifiche correttive approvate.
-
-\subsubsection{Inspection}
-Attività di analisi mirata di parti specifiche del prodotto documentale o software che sono ritenute sezioni critiche, ovvero con grande concentrazione, potenziale o effettiva, di errori o anomalie. La lista degli errori da controllare va compilata prima dell'inizio dell'attività, in quanto maturata dall'esperienza acquisita durante le precedenti attività di \emph{Walkthrough}. Essendo limitata ad un'area specifica, risulta più veloce nell'esecuzione e nell'attuazione delle modifiche necessarie.
-
-\subsection{Analisi dinamica}
-L'analisi dinamica è una tecnica di analisi applicabile solamente al prodotto software, messa in atto durante l'esecuzione del software attraverso l'uso di appositi test mirati a verificare il corretto funzionamento del prodotto, rilevando possibili \emph{failure} e risalendo agli eventuali errori di implementazione che ne sono la causa.\\
-L'analisi dinamica prevede 5 possibili categorie di test, come di seguito. 
-
-\subsubsection{Test di unità}
-I test di unità mirano alla verifica della parte più piccola di lavoro prodotta da un \emph{Programmatore}, equivalente all'unità logica più piccola del prodotto, che può essere una singola classe, un metodo o funzione oppure un insieme di essi.
-\subsubsection{Test di integrazione}
-I test di integrazione mirano alla verifica di due o più unità già testate che vengono aggregate \textbf{incrementalmente} in una struttura più grande, rappresentando l’estensione logica del test di unità. In questo modo si può testare se il comportamento atteso dell'aggregato rispetta le previsioni. In caso negativo, è possibile che le singole unità contengano difetti residui da correggere oppure che i software utilizzati siano poco conosciuti e abbiano comportamenti inaspettati.\\
-La strategia di integrazione dei vari moduli scelta è quella \gl{bottom-up}, la quale prevede che vengano testate per prime le procedure più a basso livello e passando, progressivamente, a procedure di più alto livello. 
-\subsubsection{Test di sistema}
-I test di sistema mirano alla verifica del prodotto software completo di tutte le sue componenti. Un software a cui vengono applicati questi tipi di test deve essere giunto ad una versione ritenuta definitiva. \\
-Essendo test significativi, sarà richiesta la supervisione dei \emph{Verificatori} incaricati.
-\subsubsection{Test di regressione}
-I test di regressione mirano ad eseguire nuovamente i test di unità e di integrazione su componenti software che hanno subito modifiche, in modo da controllare che i cambiamenti apportati non abbiano inserito nuovi errori sia nelle componenti modificate che nelle componenti non modificate e che prima non erano soggette ad errori.
-\subsubsection{Test di accettazione}
-I test di accettazione mirano al collaudo del prodotto software in presenza del \gl{proponente}. Essi sono test finali il cui superamento comporta la validazione e il rilascio del prodotto.
-
-\pagebreak
-
-
 \newsection{Pianificazione dei test dinamici}
 
 In questa sezione vengono dichiarati i test che verranno utilizzati per la fase di analisi dinamica del prodotto software, suddivisi secondo le categorie descritte nella sezione 2.1.

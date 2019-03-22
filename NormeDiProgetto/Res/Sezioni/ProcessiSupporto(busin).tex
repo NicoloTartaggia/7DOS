@@ -254,8 +254,12 @@ Descrizione delle procedure da eseguire per verificare adeguatamente i prodotti 
 Il processo di analisi statica consiste nello svolgere dei test che non richiedono l'esecuzione del sistema software ma effettuano controlli sul codice sorgente. 
 Può essere svolta nei seguenti modi:
 \begin{itemize}
-	\item \textbf{Walkthrough}: tecnica applicata quando non si sanno le tipologie di errori o problemi che si stanno cercando e quindi prevede una lettura da cima a fondo del codice o documento per trovare anomalie di qualsiasi tipo;
-	\item \textbf{Inspection}: tecnica da applicare quando si ha idea delle possibili problematiche che si stanno cercando e si attua leggendo in modo mirato il codice sulla base di una lista di possibili errori, stilata in precedenza.
+	\item \textbf{Walkthrough}: tecnica applicata quando non si sanno le tipologie di errori o problemi che si stanno cercando; è un'attività di lettura integrale e approfondita del testo o codice del prodotto, principalmente utilizzata durante le prime fasi del progetto in quanto permette una verifica più attenta e precisa dei prodotti. Ricade tra
+	i compiti del \emph{Verificatore}, che si occuperà anche di stilare una
+	lista degli errori riscontrati per facilitare la discussione di eventuali modifiche e permettere di individuare gli errori più frequenti. La fase finale consiste nell'applicare e registrare le modifiche correttive approvate;
+	\item \textbf{Inspection}: attività di analisi mirata di parti specifiche del prodotto documentale o software che sono ritenute sezioni critiche, ovvero con grande concentrazione, potenziale o effettiva, di errori
+	o anomalie. La lista degli errori da controllare va compilata prima dell'inizio dell'attività, in quanto maturata dall'esperienza acquisita durante le precedenti attività di \emph{Walkthrough}.
+	Essendo limitata ad un'area specifica, risulta più veloce nell'esecuzione e nell'attuazione delle modifiche necessarie.
 \end{itemize}
 
 \subparagraph{Strumenti di supporto}\Spazio
@@ -264,11 +268,13 @@ Ai fini di svolgere l'analisi statica del codice lo strumento usato è: \gl{TSLi
 Il processo di analisi dinamica consiste nell'esecuzione di test di varia tipologia i quali richiedono l'esecuzione del sistema software o solamente di alcune sue componenti.
 Le principali tipologie di test che è possibile eseguire durante l'analisi dinamica sono le seguenti:
 \begin{itemize}
-	\item {\textbf{Test di unità}: verificano un'unità, il più piccolo sottosistema possibile (nella programmazione ad oggetti comunemente una classe o un metodo) che può essere testato separatamente;}
-	\item {\textbf{Test di integrazione}: verificano se sono rispettati i contratti di interfaccia tra più moduli o sub-system;}
-	\item {\textbf{Test di sistema}: verificano il comportamento dell'intero sistema software;}
-	\item {\textbf{Test di regressione}: ogni modifica fatta al sistema scaturisce l'esecuzione di tutti i test effettuati in precedenza, per verificare il corretto comportamento del sistema a fronte di un cambiamento;}
-	\item {\textbf{Test di accettazione}: collaudo svolto in presenza del richiedente che, se superato, porterà al rilascio del prodotto.}
+	\item {\textbf{Test di unità}: mirano alla verifica della parte più piccola di lavoro prodotta da un \emph{Programmatore}, equivalente all'unità logica più piccola del prodotto, che può essere una singola classe, un metodo o funzione oppure un insieme di essi;}
+	\item {\textbf{Test di integrazione}: mirano alla verifica di due o più unità già testate che vengono aggregate \textbf{incrementalmente} in una struttura più grande, rappresentando l’estensione logica del test di unità. In questo modo si può testare se il comportamento atteso dell'aggregato rispetta le previsioni. In caso negativo, è possibile che le singole unità contengano difetti residui da correggere oppure che i software utilizzati siano poco conosciuti e abbiano comportamenti inaspettati.
+	La strategia di integrazione dei vari moduli scelta è quella \gl{bottom-up}, la quale prevede che vengano testate per prime le procedure più a basso livello e passando, progressivamente, a procedure di più alto livello;}
+	\item {\textbf{Test di sistema}: mirano alla verifica del prodotto software completo di tutte le sue componenti. Un software a cui vengono applicati questi tipi di test deve essere giunto ad una versione ritenuta definitiva.
+	Essendo test significativi, sarà richiesta la supervisione dei \emph{Verificatori} incaricati;}
+	\item {\textbf{Test di regressione}: mirano ad eseguire nuovamente i test di unità e di integrazione su componenti software che hanno subito modifiche, in modo da controllare che i cambiamenti apportati non abbiano inserito nuovi errori sia nelle componenti modificate che nelle componenti non modificate e che prima non erano soggette ad errori;}
+	\item {\textbf{Test di accettazione}: mirano al collaudo del prodotto software in presenza del \gl{proponente}. Essi sono test finali il cui superamento comporta la validazione e il rilascio del prodotto.}
 \end{itemize}
 
 \subsubsection{Analisi diagrammi UML}
