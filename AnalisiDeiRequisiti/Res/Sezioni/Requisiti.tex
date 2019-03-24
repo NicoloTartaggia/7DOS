@@ -94,7 +94,7 @@ $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 	\hypertarget{R2F9}{R2F9} & Deve essere possibile creare una rete Bayesiana a partire dai dati raccolti sul campo anziché svilupparla con la collaborazione degli esperti del settore. & Capitolato \\ \hline 
 	\hypertarget{R2F10}{R2F10} & Deve essere possibile condividere un grafico. & Interno \\ \hline 
 	\hypertarget{R2F10.1}{R2F10.1} & Deve essere possibile visualizzare il link diretto ad una dashboard o ad un panel. & Interno \\ \hline 
-	\hypertarget{R2F10.2}{R2F10.2} & Deve essere possibile visualizzare visualizzare il codice per l'inclusione di un panel in una pagina web. & Interno \\ \hline 
+	\hypertarget{R2F10.2}{R2F10.2} & Deve essere possibile visualizzare il codice per l'inclusione di un panel in una pagina web. & Interno \\ \hline 
 	\hypertarget{R2F10.3}{R2F10.3} & Deve essere possibile selezionare le opzioni di visualizzazione per la condivisione dei grafici. & Interno \\ \hline 
 	\hypertarget{R2F10.3.1}{R2F10.3.1} & Deve essere possibile selezionare la visualizzazione dell'intervallo di tempo corrente in un grafico. & Interno \\ \hline 
 	\hypertarget{R2F10.3.2}{R2F10.3.2} & Deve essere possibile deselezionare la visualizzazione dell'intervallo di tempo corrente in un grafico. & Interno \\ \hline 
@@ -108,6 +108,11 @@ $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 	\hypertarget{R2F10.4.3.1}{R2F10.4.3.1} & Deve essere possibile inserire il nome di uno snapshot. & Interno \\ \hline 
 	\hypertarget{R2F10.4.3.2}{R2F10.4.3.2} & Deve essere possibile selezionare il tempo di permanenza di uno snapshot. & Interno \\ \hline 
 	\hypertarget{R2F10.4.3.3}{R2F10.4.3.3} & Deve essere possibile inserire il tempo massimo per il caricamento dei dati in uno snapshot. & Interno \\ \hline 
+	
+	% NUOVI REQUISITI
+	\hypertarget{R2F10.5}{R2F10.5} & Deve essere possibile visualizzare il codice JSON contenente la definizione di una dashboard. & Interno \\ \hline 
+	\hypertarget{R2F10.6}{R2F10.6} & Deve essere possibile salvare il file JSON contenente la definizione di una dashboard. & Interno \\ \hline 
+	
 	
 	\caption[Requisiti Funzionali]{Requisiti Funzionali}
 	\label{tabella:req0}
@@ -146,7 +151,7 @@ $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 	\endhead
 	\hypertarget{R0V1}{R0V1} & Il plug-in deve essere scritto in TypeScript 3.3. & Interno  \\ \hline 	 
 	\hypertarget{R1V2}{R1V2} & Il plug-in può utilizzare la libreria JsBayes.js. & Capitolato  \\ \hline 
-	\hypertarget{R0V3}{R0V3} & Il plug-in deve essere utilizzabile nell'ambiente Grafana 5.0. & Capitolato  \\ \hline 
+	\hypertarget{R0V3}{R0V3} & Il plug-in deve essere utilizzabile nell'ambiente Grafana 5.4.0. & Capitolato  \\ \hline 
 	\caption[Requisiti Di Vincolo]{Requisiti di Vincolo}
 	\label{tabella:req3}
 \end{longtable}
@@ -156,6 +161,7 @@ $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 
 
 \subsection{Tracciamento Requisiti - Casi d'uso}
+\vspace{1cm}
 \normalsize
 \renewcommand{\arraystretch}{1.5}
 \begin{longtable}{|c|c|}
@@ -286,33 +292,61 @@ $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 \hline
 \hyperlink{R2F10.1}{R2F10.1} & \hyperlink{UC8.1}{UC8.1}\\
 \hline
-\hyperlink{R2F10.2}{R2F10.2} & \hyperlink{UC8.2}{UC8.2}\\
+\hyperlink{R2F10.2}{R2F10.2} & \hyperlink{UC9.1}{UC9.1}\\
 \hline
-\hyperlink{R2F10.3}{R2F10.3} & \hyperlink{UC8.3}{UC8.3}\\
+\hyperlink{R2F10.3}{R2F10.3} &
+\begin{tabular}{c}
+	\hyperlink{UC8.1}{UC8.1}\\
+	\hyperlink{UC9.1}{UC9.1}
+\end{tabular} \\  
 \hline
-\hyperlink{R2F10.3.1}{R2F10.3.1} & \hyperlink{UC8.3.1}{UC8.3.1}\\
+\hyperlink{R2F10.3.1}{R2F10.3.1} &
+\begin{tabular}{c}
+	\hyperlink{UC8.1.1}{UC8.1.1}\\
+	\hyperlink{UC9.1.1}{UC9.1.1}
+\end{tabular} \\
 \hline
-\hyperlink{R2F10.3.2}{R2F10.3.2} & \hyperlink{UC8.3.2}{UC8.3.2}\\
+\hyperlink{R2F10.3.2}{R2F10.3.2} &
+\begin{tabular}{c}
+	\hyperlink{UC8.1.2}{UC8.1.2}\\
+	\hyperlink{UC9.1.2}{UC9.1.2}
+\end{tabular} \\ 
 \hline
-\hyperlink{R2F10.3.3}{R2F10.3.3} & \hyperlink{UC8.3.3}{UC8.3.3}\\
+\hyperlink{R2F10.3.3}{R2F10.3.3} &
+\begin{tabular}{c}
+	\hyperlink{UC8.1.3}{UC8.1.3}\\
+	\hyperlink{UC9.1.3}{UC9.1.3}
+\end{tabular} \\ 
 \hline
-\hyperlink{R2F10.3.4}{R2F10.3.4} & \hyperlink{UC8.3.4}{UC8.3.4}\\
+\hyperlink{R2F10.3.4}{R2F10.3.4} &
+\begin{tabular}{c}
+	\hyperlink{UC8.1.4}{UC8.1.4}\\
+	\hyperlink{UC9.1.4}{UC9.1.4}
+\end{tabular} \\
 \hline
-\hyperlink{R2F10.3.5}{R2F10.3.5} & \hyperlink{UC8.3.5}{UC8.3.5}\\
+\hyperlink{R2F10.3.5}{R2F10.3.5} &
+\begin{tabular}{c}
+	\hyperlink{UC8.1.5}{UC8.1.5}\\
+	\hyperlink{UC9.1.5}{UC9.1.5}
+\end{tabular} \\
 \hline
-\hyperlink{R2F10.4}{R2F10.4} & \hyperlink{UC8.4}{UC8.4}\\
+\hyperlink{R2F10.4}{R2F10.4} & \hyperlink{UC8.2}{UC8.2}\\
 \hline
-\hyperlink{R2F10.4.1}{R2F10.4.1} & \hyperlink{UC8.4.1}{UC8.4.1}\\
+\hyperlink{R2F10.4.1}{R2F10.4.1} & \hyperlink{UC8.2.1}{UC8.2.1}\\
 \hline
-\hyperlink{R2F10.4.2}{R2F10.4.2} & \hyperlink{UC8.4.2}{UC8.4.2}\\
+\hyperlink{R2F10.4.2}{R2F10.4.2} & \hyperlink{UC8.2.2}{UC8.2.2}\\
 \hline
-\hyperlink{R2F10.4.3}{R2F10.4.3} & \hyperlink{UC8.4.3}{UC8.4.3}\\
+\hyperlink{R2F10.4.3}{R2F10.4.3} & \hyperlink{UC8.2.3}{UC8.2.3}\\
 \hline
-\hyperlink{R2F10.4.3.1}{R2F10.4.3.1} & \hyperlink{UC8.4.3.1}{UC8.4.3.1}\\
+\hyperlink{R2F10.4.3.1}{R2F10.4.3.1} & \hyperlink{UC8.2.3.1}{UC8.2.3.1}\\
 \hline
-\hyperlink{R2F10.4.3.2}{R2F10.4.3.2} & \hyperlink{UC8.4.3.2}{UC8.4.3.2}\\
+\hyperlink{R2F10.4.3.2}{R2F10.4.3.2} & \hyperlink{UC8.2.3.2}{UC8.2.3.2}\\
 \hline
-\hyperlink{R2F10.4.3.3}{R2F10.4.3.3} & \hyperlink{UC8.4.3.3}{UC8.4.3.3}\\
+\hyperlink{R2F10.4.3.3}{R2F10.4.3.3} & \hyperlink{UC8.2.3.3}{UC8.2.3.3}\\
+\hline
+\hyperlink{R2F10.5}{R2F10.5} & \hyperlink{UC10.1.1}{UC10.1.1}\\
+\hline
+\hyperlink{R2F10.6}{R2F10.6} & \hyperlink{UC10.1.2}{UC10.1.2}\\
 \hline
 	\caption[Tracciamento Requisiti - Casi d'uso]{Tracciamento Requisiti - Casi d'uso}
 	\label{tabella:requi-usecase}
@@ -321,6 +355,7 @@ $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 \clearpage
 
 \subsection{Tracciamento Casi d'uso - Requisiti}
+\vspace{1cm}
 \normalsize
 \renewcommand{\arraystretch}{1.5}
 \begin{longtable}{|c|c|}
@@ -446,35 +481,53 @@ $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 	\hline
 	\hyperlink{UC8}{UC8} & \hyperlink{R2F10}{R2F10}\\
 	\hline
-	\hyperlink{UC8.1}{UC8.1} & \hyperlink{R2F10.1}{R2F10.1}\\
+	\hyperlink{UC8.1}{UC8.1} &
+	\begin{tabular}{c}
+		\hyperlink{R2F10.1}{R2F10.1} \\ \hyperlink{R2F10.3}{R2F10.3}
+	\end{tabular} \\
 	\hline
-	\hyperlink{UC8.2}{UC8.2} & \hyperlink{R2F10.2}{R2F10.2}\\
+	\hyperlink{UC8.1.1}{UC8.1.1} & \hyperlink{R2F10.3.1}{R2F10.3.1}\\
 	\hline
-	\hyperlink{UC8.3}{UC8.3} & \hyperlink{R2F10.3}{R2F10.3}\\
+	\hyperlink{UC8.1.2}{UC8.1.2} & \hyperlink{R2F10.3.2}{R2F10.3.2}\\
 	\hline
-	\hyperlink{UC8.3.1}{UC8.3.1} & \hyperlink{R2F10.3.1}{R2F10.3.1}\\
+	\hyperlink{UC8.1.3}{UC8.1.3} & \hyperlink{R2F10.3.3}{R2F10.3.3}\\
 	\hline
-	\hyperlink{UC8.3.2}{UC8.3.2} & \hyperlink{R2F10.3.2}{R2F10.3.2}\\
+	\hyperlink{UC8.1.4}{UC8.1.4} & \hyperlink{R2F10.3.4}{R2F10.3.4}\\
 	\hline
-	\hyperlink{UC8.3.3}{UC8.3.3} & \hyperlink{R2F10.3.3}{R2F10.3.3}\\
+	\hyperlink{UC8.1.5}{UC8.1.5} & \hyperlink{R2F10.3.5}{R2F10.3.5}\\
 	\hline
-	\hyperlink{UC8.3.4}{UC8.3.4} & \hyperlink{R2F10.3.4}{R2F10.3.4}\\
+	\hyperlink{UC8.2}{UC8.2} & \hyperlink{R2F10.4}{R2F10.4}\\
 	\hline
-	\hyperlink{UC8.3.5}{UC8.3.5} & \hyperlink{R2F10.3.5}{R2F10.3.5}\\
+	\hyperlink{UC8.2.1}{UC8.2.1} & \hyperlink{R2F10.4.1}{R2F10.4.1}\\
 	\hline
-	\hyperlink{UC8.4}{UC8.4} & \hyperlink{R2F10.4}{R2F10.4}\\
+	\hyperlink{UC8.2.2}{UC8.2.2} & \hyperlink{R2F10.4.2}{R2F10.4.2}\\
 	\hline
-	\hyperlink{UC8.4.1}{UC8.4.1} & \hyperlink{R2F10.4.1}{R2F10.4.1}\\
+	\hyperlink{UC8.2.3}{UC8.2.3} & \hyperlink{R2F10.4.3}{R2F10.4.3}\\
 	\hline
-	\hyperlink{UC8.4.2}{UC8.4.2} & \hyperlink{R2F10.4.2}{R2F10.4.2}\\
+	\hyperlink{UC8.2.3.1}{UC8.2.3.1} & \hyperlink{R2F10.4.3.1}{R2F10.4.3.1}\\
 	\hline
-	\hyperlink{UC8.4.3}{UC8.4.3} & \hyperlink{R2F10.4.3}{R2F10.4.3}\\
+	\hyperlink{UC8.2.3.2}{UC8.2.3.2} & \hyperlink{R2F10.4.3.2}{R2F10.4.3.2}\\
 	\hline
-	\hyperlink{UC8.4.3.1}{UC8.4.3.1} & \hyperlink{R2F10.4.3.1}{R2F10.4.3.1}\\
+	\hyperlink{UC8.2.3.3}{UC8.2.3.3} & \hyperlink{R2F10.4.3.3}{R2F10.4.3.3}\\
 	\hline
-	\hyperlink{UC8.4.3.2}{UC8.4.3.2} & \hyperlink{R2F10.4.3.2}{R2F10.4.3.2}\\
+		\hyperlink{UC9.1}{UC9.1} &
+	\begin{tabular}{c}
+		\hyperlink{R2F10.2}{R2F10.2}\\ \hyperlink{R2F10.3}{R2F10.3}
+	\end{tabular} \\ 
 	\hline
-	\hyperlink{UC8.4.3.3}{UC8.4.3.3} & \hyperlink{R2F10.4.3.3}{R2F10.4.3.3}\\
+	\hyperlink{UC9.1.1}{UC9.1.1} & \hyperlink{R2F10.3.1}{R2F10.3.1}\\
+	\hline
+	\hyperlink{UC9.1.2}{UC9.1.2} & \hyperlink{R2F10.3.2}{R2F10.3.2}\\
+	\hline
+	\hyperlink{UC9.1.3}{UC9.1.3} & \hyperlink{R2F10.3.3}{R2F10.3.3}\\
+	\hline
+	\hyperlink{UC9.1.4}{UC9.1.4} & \hyperlink{R2F10.3.4}{R2F10.3.4}\\
+	\hline
+	\hyperlink{UC9.1.5}{UC9.1.5} & \hyperlink{R2F10.3.5}{R2F10.3.5}\\
+	\hline
+	\hyperlink{UC10.1.1}{UC10.1.1} &  \hyperlink{R2F10.5}{R2F10.5}\\
+	\hline
+	\hyperlink{UC10.1.2}{UC10.1.2} & \hyperlink{R2F10.6}{R2F10.6} \\
 	\hline
 	\caption[Tracciamento Casi d'uso - Requisiti]{Tracciamento Casi d'uso - Requisiti}
 	\label{tabella:requi-usecase}
@@ -490,7 +543,7 @@ $$ \textbf{R \{importanza\}.\{tipo\}.\{identificativo\}  } $$
 			\hline
 			\rowcolor{title_row}
 			\textbf{\color{title_text}{Tipologia}}  & \textbf{\color{title_text}{0 Obbligatori}} & \textbf{\color{title_text}{1 Desiderabili}}& \textbf{\color{title_text}{2 Opzionali}} & \textbf{\color{title_text}{Totale}} \\ \hline
-			Funzionali & 7 & 53 & 18 & 78\\ \hline
+			Funzionali & 7 & 53 & 20 & 80\\ \hline
 			Di qualità & 5 & 0 & 0 & 5\\ \hline
 			Di vincolo & 2 & 1 & 0 & 3\\ \hline
 			Prestazionali & 0 & 0 & 0 & 0 \\ \hline
