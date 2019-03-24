@@ -11,6 +11,7 @@ Ogni caso d'uso è descritto dalla seguente struttura:
 	\item Titolo;
 	\item Diagramma UML;
 	\item Attori;
+	\item Attori secondari (se presenti);
 	\item Scopo e descrizione;
 	\item Precondizioni;
 	\item Scenario principale;
@@ -23,9 +24,9 @@ Inoltre il team ha individuato due casi d'uso generali (UCG1 e UCG2) la cui nome
 L'ambito d'azione del prodotto è distinguibile in due macro aree, una relativa alle operazioni che si possono effettuare sulla rete Bayesiana e l'altra relativa alle operazioni che comprendono la visualizzazione dei dati acquisiti.
 
 \subsection{Attori}
-L'attore che può interagire con il prodotto è soltanto uno:
 \begin{itemize}
-	\item \textbf{Utente}: si fa riferimento ad un utente generico, che ha intenzione di associare una rete Bayesiana ad un flusso dati per monitorare un'applicazione.
+	\item \textbf{Utente}: si fa riferimento ad un utente generico, che ha intenzione di associare una rete Bayesiana ad un flusso dati per monitorare un'applicazione;
+	\item \textbf{\gl{Raintank}}: servizio \gl{cloud} connesso a Grafana che permette di condividere dashboard e panel con altri utenti.
 \end{itemize}
 
 \newpage
@@ -36,7 +37,7 @@ L'attore che può interagire con il prodotto è soltanto uno:
 	\caption{UCG1 - Operazioni sulla rete Bayesiana}\label{}
 \end{figure}
 \begin{itemize}
-	\item{\textbf{Attori primari}: Utente;}
+	\item{\textbf{Attori}: Utente;}
 	\item{\textbf{Scopo e descrizione}: l'attore vuole eseguire delle operazioni sulla rete Bayesiana;}
 	\item{\textbf{Precondizione}: l'applicazione deve essere avviata correttamente e pronta all'uso;}
 	\item{\textbf{Scenario principale}:
@@ -57,16 +58,17 @@ L'attore che può interagire con il prodotto è soltanto uno:
 	\caption{UCG2 - Operazioni sulla visualizzazione dei dati}
 \end{figure}
 \begin{itemize}
-	\item{\textbf{Attori primari}: Utente;}
-	\item{\textbf{Scopo e descrizione}: l'attore vuole eseguire delle operazioni relative alla visualizzazione dei dati acquisiti;}
+	\item{\textbf{Attori}: Utente;}
+	\item{\textbf{Attori secondari}: Raintank;}
+	\item{\textbf{Scopo e descrizione}: l'utente vuole eseguire delle operazioni relative alla visualizzazione dei dati acquisiti;}
 	\item{\textbf{Precondizione}: l'applicazione deve essere avviata correttamente ed in grado di leggere un flusso dati;}
 	\item{\textbf{Scenario principale}:
 		\begin{itemize}
-			\item{L'attore modifica la struttura della dashboard (UC6);}
-			\item{L'attore modifica la struttura di un panel (UC7);}
-			\item{L'attore condivide i grafici ottenuti (UC8)}.
+			\item{L'utente modifica la struttura della dashboard (UC6);}
+			\item{L'utente modifica la struttura di un panel (UC7);}
+			\item{L'utente condivide i grafici ottenuti (UC8), che si distinguono in dashboard(UC10) o singoli panel(UC10)}.
 		\end{itemize}
 	}
-	\item{\textbf{Postcondizione}: l'attore ha eseguito le operazioni sulla visualizzazione dei dati.}
+	\item{\textbf{Postcondizione}: l'utente ha eseguito le operazioni sulla visualizzazione dei dati.}
 \end{itemize}
 \newpage
