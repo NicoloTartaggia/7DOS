@@ -10,7 +10,7 @@ Per quanto concerne la \emph{specifica di progettazione}, il team ha scelto di a
 
 Ogni test, per essere identificato in modo univoco, segue la seguente sintassi:
 \begin{center}
-	T[Tipo][ID]
+	T[Tipo]-[ID]
 \end{center}
 \begin{itemize}
 	\item \textbf{Tipo}: specifica il tipo del test	e viene indicato con una delle seguenti lettere:
@@ -31,35 +31,244 @@ Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti si
 	\item \textcolor{darkgreen}{\textbf{S}}: superato.
 \end{itemize}
 \subsubsection{Test di accettazione}
-Questa sezione verrà sviluppata in futuro, quando sorgerà la necessità di definire dei test di accettazione per il prodotto.
+\normalsize
+\renewcommand{\arraystretch}{1}
+\begin{longtable}{|C{2.5cm}|C{2.5cm}|C{6.5cm}|C{1.5cm}|}
+	\hline
+	\rowcolor{title_row}
+	\textbf{\color{title_text}{Test}} & \textbf{\color{title_text}{Requisito}} & \textbf{\color{title_text}{Descrizione}} & \textbf{\color{title_text}{Stato}} \\
+	\hline
+	\endhead
+	{TS-1} & {R0F1} & prova  & {NI}\\
+	\hline
+	{TS-2} & {R0F2} & prova & {NI}\\
+	\hline
+	{TS-3} & {R0F3} & prova & {NI}\\
+	\hline
+	{TS-3} & {R0F3} & prova & {NI}\\
+	\hline
+	{TS-4} & {R0F4} & prova & {NI}\\
+	\hline
+	{TS-5} & {R0F5} & prova & {NI}\\
+	\hline
+	\caption{Riassunto dei test di accettazione}
+	\label{tabella:riassunto ta}
+\end{longtable}
+\normalsize
+\renewcommand{\arraystretch}{1}
 \subsubsection{Test di sistema}
-I test di sistema vengono fatti corrispondere ai requisiti funzionali principali e in particolare, nella versione corrente del documento, è previsto un test per ciascun requisito funzionale principale obbligatorio. \\
-Le specifiche di test sono associate al codice univoco del test; quelle definite sono descritte per intero nell'Appendice B.
-\renewcommand{\arraystretch}{1.5}
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{|c|c|c|}
+\begin{longtable}{|C{2.5cm}|C{2.5cm}|C{6.5cm}|C{1.5cm}|}
 			\hline
 			\rowcolor{title_row}
-			\textbf{\color{title_text}{Id Test}} & \textbf{\color{title_text}{Id Requisito}} & \textbf{\color{title_text}{Stato specifica}} \\
+			\textbf{\color{title_text}{Test}} & \textbf{\color{title_text}{Requisito}} & \textbf{\color{title_text}{Descrizione}} & \textbf{\color{title_text}{Stato}} \\
 			\hline
-			{TS0F1} & {R0F1} & {ND}\\
+			\endhead
+			{TS-0F1} & {R0F1} & Verifica che sia possibile e leggere la
+			definizione della rete Bayesiana da un
+			file in formato JSON.  & {NI}\\
 			\hline
-			{TS0F2} & {R0F2} & {ND}\\
+			{TS-0F1.1} & {R1F1.1} & Verifica che sia possibile validare un
+			file .json. & {NI}\\
 			\hline
-			{TS0F3} & {R0F3} & {ND}\\
+			{TS-2} & {R0F2} & Verifica che sia possibile gestire la
+			connessione tra i nodi della rete ai
+			rispettivi flussi di dati. & {NI}\\
 			\hline
-			{TS0F3} & {R0F3} & {ND}\\
+			{TS-2.1} & {R0F2.1} & Verifica che sia possibile connettere un
+			nodo della rete ad un flusso di dati. & {NI}\\
 			\hline
-			{TS0F4} & {R0F4} & {ND}\\
+			{TS-2.2} & {R0F2.2} & Verifica che sia possibile disconnettere un
+			nodo della rete da un flusso di dati. & {NI}\\
 			\hline
-			{TS0F5} & {R0F5} & {ND}\\
+			{TS-2.3} & {R1F2.3} & Verifica che sia essere possibile modificare il
+			flusso di dati connesso ad un nodo. & {NI}\\
 			\hline
-		\end{tabular}
-		\caption{Riassunto dei test di sistema pianificati}
-		\label{tabella:riassunto ts}
-	\end{center}
-\end{table}
+			{TS-3} & {R0F3} & Verifica che sia possibile applicare il
+			ri-calcolo delle probabilità della rete
+			secondo regole temporali prestabilite. & {NI}\\
+			\hline
+			{TS-3.1} & {R1F3.1} & Verifica che sia possibile modificare le
+			suddette regole temporali. & {NI}\\
+			\hline
+			{TS-4} & {R0F4} & Verifica che sia possibile fornire nuovi dati
+			al sistema di Grafana derivati dai nodi
+			della rete non collegati al flusso di
+			monitoraggio. & {NI}\\
+			\hline
+			{TS-4.1} & {R1F4.1} & Verifica che sia possibile aggiornare i dati
+			in base alla frequenza stabilita. & {NI}\\
+			\hline
+			{TS-5} & {R0F5} & Verifica che i dati siano disponibili al sistema di
+			creazione di grafici e dashboard per la
+			loro visualizzazione. & {NI}\\
+			\hline
+			{TS-5.1} & {R1F5.1} & Verifica che sia e possibile aggiornare la
+			dashboard in base alla frequenza
+			stabilita. & {NI}\\
+			\hline
+			{TS-5.2} & {R1F5.2} & Verifica che sia possibile creare un panel. & {NI}\\
+			\hline
+			{TS-5.3} & {R1F5.3} & Verifica che sia possibile spostare un
+			panel. & {NI}\\
+			\hline
+			{TS-5.4} & {R1F5.4} & Verifica che sia possibile cancellare un
+			panel. & {NI}\\
+			\hline
+			{TS-5.5} & {R1F5.5} & Verifica che sia possibile minimizzare un
+			panel. & {NI}\\
+			\hline
+			{TS-5.6} & {R1F5.6} & Verifica che sia possibile configurare un
+			panel. & {NI}\\
+			\hline
+			{TS-5.6.1} & {R0F5.6.1} & Verifica che sia possibile selezionare un
+			flusso dati. & {NI}\\
+			{TS-5.6.2} & {R1F5.6.2} & Verifica che sia selezionare un
+			nodo della rete. & {NI}\\
+			\hline
+			{TS-5.6.3} & {R1F5.6.3} & Verifica che sia possibile selezionare un
+			intervallo di tempo.  & {NI}\\
+			\hline
+			{TS-5.7} & {R1F5.7} & Verifica che sia possibile modificare un
+			panel.  & {NI}\\
+			\hline
+			{TS-5.7.1} & {R1F5.7.1} & Verifica che sia possibile usare le
+			modifiche standard di Grafana su un
+			panel.  & {NI}\\
+			\hline
+			{TS-6} & {R1F6} & Verifica che sia  possibile definire alert in
+			base a livelli di soglia raggiunti dai
+			nodi non collegati al flusso dei dati.  & {NI}\\
+			\hline
+			{TS-6.1} & {R1F6.1} & Verifica che sia possibile configurare i
+			parametri di un alert.  & {NI}\\
+			\hline
+			{TS-6.1.1} & {R1F6.1.1} & Verifica che sia possibile inserire il nome
+			di un alert.  & {NI}\\
+			\hline
+			{TS-6.1.2} & {R1F6.1.2} & Verifica che sia  possibile inserire
+			l'intervallo di verifica di un alert.  & {NI}\\
+			\hline
+			{TS-6.1.3} & {R1F6.1.3} & Verifica che sia possibile inserire la
+			condizione di attivazione di un alert.  & {NI}\\
+			\hline
+			{TS-6.2} & {R1F6.2} & Verifica che sia possibile impostare il
+			modo in cui viene notificata
+			l'attivazione di un alert.  & {NI}\\
+			\hline
+			{TS-7} & {R1F7} & Verifica che sia possibile disegnare la rete
+			Bayesiana con un editor
+			grafico specializzato.  & {NI}\\
+			\hline
+			{TS-7.1} & {R1F7.1} & Verifica che sia possibile creare un nodo
+			della rete.  & {NI}\\
+			\hline
+			{TS-7.11} & {R1F7.1.1} & Verifica che sia  possibile inizializzare la lista di predecessori
+			del nodo.  & {NI}\\
+			\hline
+			{TS-7.1.2} & {R1F7.1.2} & Verifica che sia possibile inizializzare la lista di successori del
+			nodo.  & {NI}\\
+			\hline
+			{TS-7.1.3} & {R1F7.1.3} & Verifica che sia possibile inizializzare il nome del nodo.  & {NI}\\
+			\hline
+			{TS-7.1.4} & {R1F7.1.4} & Verifica che sia possibile inizializzare la CPT associata al
+			nodo.  & {NI}\\
+			\hline
+			{TS-7.1.4.1} & {R1F7.1.4.1} & Verifica che sia possibile inizializzare la lista degli stati
+			associata alla CPT del nodo.  & {NI}\\
+			\hline
+			{TS-7.1.4.2} & {R1F7.1.4.2} & Verifica che sia possibile inizializzare la lista delle
+			combinazioni degli stati dei nodi
+			predecessori associata alla CPT del
+			nodo.  & {NI}\\
+			\hline
+			{TS-7.1.4.3} & {R1F7.1.4.3} & Verifica che sia possibile inizializzare le celle della CPT.  & {NI}\\
+			\hline
+			{TS-7.2} & {R1F7.2} & Verifica che sia possibile modificare i
+			parametri di un nodo della rete.  & {NI}\\
+			\hline
+			{TS-7.2.1} & {R1F7.2.1} & Verifica che sia  possibile modificare il
+			nome di un nodo della rete.  & {NI}\\
+			\hline
+			{TS-7.2.2} & {R1F7.2.2} & Verifica che sia possibile modificare la
+			CPT associata ad un nodo della rete.  & {NI}\\
+			\hline
+			{TS-7.2.2.1} & {R1F7.2.2.1} & Verifica che sia possibile aggiungere uno
+			stato alla CPT associata ad un nodo
+			della rete.  & {NI}\\
+			\hline
+			{TS-7.2.2.2} & {R1F7.2.2.2} & Verifica che sia possibile eliminare uno
+			stato dalla CPT associata ad un nodo
+			della rete.  & {NI}\\
+			\hline
+			{TS-7.2.2.3} & {R1F7.2.2.3} & Verifica che sia possibile modificare i
+			parametri associati ad uno stato della
+			CPT associata ad un nodo della rete.  & {NI}\\
+			\hline
+			{TS-7.2.2.4} & {R1F7.2.2.4} & Verifica che sia possibile modificare una
+			cella della CPT.  & {NI}\\
+			\hline
+			{TS-7.3} & {R1F7.3} & Verifica che sia possibile eliminare un
+			nodo dalla rete.  & {NI}\\
+			\hline
+			{TS-7.4} & {R1F7.4} & Verifica che sia possibile creare un
+			collegamento tra due nodi della rete.  & {NI}\\
+			\hline
+			{TS-7.4.1} & {R1F7.4.1} & Verifica che sia possibile indicare il nodo
+			di partenza del collegamento.  & {NI}\\
+			\hline
+			{TS-7.4.2} & {R1F7.4.2} & Verifica che sia possibile indicare il nodo
+			di arrivo del collegamento.  & {NI}\\
+			\hline
+			{TS-7.5} & {R1F7.5} & Verifica che sia possibile eliminare un
+			collegamento dalla rete.  & {NI}\\
+			\hline
+			{TS-7.6} & {R1F7.6} & Verifica che sia possibile salvare la rete su
+			file JSON.  & {NI}\\
+			\hline
+			{TS-7.6.1} & {R1F7.6.1} & Verifica che sia possibile indicare il nome
+			del file JSON su cui si vuole salvare la
+			struttura della rete.  & {NI}\\
+			\hline
+			{TS-7.6.2} & {R1F7.6.2} & Verifica che sia possibile indicare il
+			percorso del file system in cui si vuole
+			salvare il file JSON contenente la
+			struttura della rete.  & {NI}\\
+			\hline
+			{TS-7.7} & {R1F7.7} & Verifica che sia possibile gestire errori
+			relativi alla modifica di un nodo.  & {NI}\\
+			\hline
+			{TS-7.7.1} & {R1F7.7.1} & Verifica che sia  possibile gestire
+			l'inserimento di valori non validi per il
+			nome di un nodo.  & {NI}\\
+			\hline
+			{TS-7.7.2} & {R1F7.7.2} & Verifica che sia possibile gestire
+			l'inserimento di valori non validi per il
+			nome di uno stato associato alla CPT
+			di un nodo della rete  & {NI}\\
+			\hline
+			{TS-7.7.3} & {R1F7.7.3} & Verifica che sia possibile gestire
+			l'inserimento di valori non validi per
+			l'intervallo associato ad uno stato del
+			nodo.  & {NI}\\
+			\hline
+			{TS-7.7.4} & {R1F7.7.4} & Verifica che sia e possibile gestire
+			l'inserimento di valori non validi per
+			una cella della tabella.  & {NI}\\
+			\hline
+			{TS-8} & {R2F8} & Verifica che sia possibile applicare più reti
+			Bayesiane in oggetti di monitoraggio
+			diversi.  & {NI}\\
+			\hline
+			{TS-} & {RF} & Verifica che sia   & {NI}\\
+			\hline
+			{TS-} & {RF} & Verifica che sia   & {NI}\\
+			\hline
+			{TS-} & {RF} & Verifica che sia   & {NI}\\
+			\hline
+	\caption{Riassunto dei test di sistema}
+	\label{tabella:riassunto TS-}
+\end{longtable}
+
 \renewcommand{\arraystretch}{1}
 \subsubsection{Test di integrazione}
 Questa sezione verrà sviluppata in futuro, quando sorgerà la necessità di definire dei test di integrazione per il prodotto.
