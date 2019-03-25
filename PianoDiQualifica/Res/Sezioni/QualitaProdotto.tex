@@ -1,0 +1,144 @@
+\newsection{Qualità di prodotto}
+Per poter garantire che il prodotto realizzato sia di alta qualità, è necessario definire un modello per la valutazione di quest'ultima; il team 7DOS, per questo motivo, ha scelto di adottare il modello di qualità delineato nello standard \gl{ISO/IEC 25010}, anche noto come \gl{SQuaRE}.
+
+Tale modello comprende 8 caratteristiche (ciascuna divisa in sotto-caratteristiche, per un totale di 31) che vanno prese in considerazione durante lo sviluppo del progetto per garantire un'elevata qualità complessiva del prodotto finale.
+
+Per praticità e rilevanza ai fini del prodotto, sono state selezionate 5 caratteristiche da considerare e per ciascuna sono state individuate le sotto-caratteristiche più rilevanti al progetto, da perseguire come obiettivi prioritari. In particolare, sono state scartate: \gl{Compatibility}, in quanto andando a realizzare un plug-in (di natura integrato in un sistema preesistente) è stata giudicata superflua; \gl{Security}, in quanto il plug-in non dovrà gestire autenticazione o raccolta di dati; ed infine \gl{Portability} in quanto essendo il prodotto un plug-in per un determinato sistema, non è rilevante la sua portabilità ad altri ambienti.
+
+\subsection{Qualità dei documenti}
+I documenti prodotti devono possedere caratteristiche consistenti. In particolare, essi devono essere leggibili, comprensibili e corretti a livello ortografico e sintattico.
+\subsubsection{Obiettivi}
+Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+	\begin{itemize}
+		\item{\textbf{Leggibilità}: i documenti prodotti dovranno essere leggibili e comprensibili da persone con almeno una licenza di istruzione media;}
+		\item{\textbf{Correttezza ortografica}: i documenti prodotti dovranno essere privi di errori ortografici.}
+	\end{itemize}
+
+\subsubsection{Metriche} 
+Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+
+\begin{itemize}
+		\item{\emph{Gunning fog index};}
+		\item{\emph{Indice di Gulpease};}
+		\item{\emph{Numero di errori grammaticali}.}
+\end{itemize}
+
+\subsection{Qualità del software}
+\subsubsection{Functional Suitability}
+	Caratteristica che esprime il grado di soddisfacimento dei requisiti espliciti ed impliciti da parte di un prodotto o servizio. 
+\paragraph{Obiettivi}\Spazio
+Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+	\begin{itemize}
+			\item{\textbf{Functional Completeness}: l'insieme delle funzioni rispettano le aspettative;
+			}
+			\item{\textbf{Functional Correctness}: i risultati ottenuti sono corretti e presentano livelli di precisione desiderati.
+			}
+	\end{itemize}
+
+\paragraph{Metriche} \Spazio
+Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+	\begin{itemize}
+		\item{\emph{Functional Implementation Completeness};}
+		\item{\emph{Average Functional Implementation Correctness}.}
+	\end{itemize}
+
+\subsubsection{Performance Efficiency}
+	Caratteristica che esprime le prestazioni relative al sistema come quantità di risorse utilizzate per eseguire una determinata funzionalità. 
+\paragraph{Obiettivi} \Spazio
+Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+	\begin{itemize}
+			\item{\textbf{Time Behaviour}: tempi di risposta ed elaborazione assumono valori adeguati;
+			}
+			\item{\textbf{Resource Utilization}: le risorse disponibili utilizzate durante l'esecuzione di una funzionalità sono adeguate rispetto alla funzionalità stessa.
+			}
+	\end{itemize}
+
+\paragraph{Metriche} \Spazio
+Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+	\begin{itemize}
+		\item{\emph{Tempo di risposta}.}
+	\end{itemize}
+
+\subsubsection{Usability} 
+	Caratteristica che esprime il grado con cui un prodotto o sistema può essere usato da un determinato utente.
+\paragraph{Obiettivi} \Spazio
+Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+	\begin{itemize}
+		\item{\textbf{Learnability}: il prodotto è comprensibile dall'utente e il tempo per conoscere a pieno le sue funzionalità è accettabile;
+		}
+		\item{\textbf{Operability}: le funzionalità offerte devono essere coerenti con ciò che l'utente si aspetta;
+		}
+		\item{\textbf{User Error Protection}: il sistema presenta procedure per proteggere gli utenti dal commettere errori.
+		}
+	\end{itemize}
+\paragraph{Metriche} \Spazio
+Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+	\begin{itemize}
+		\item{\emph{Average Learning Time}.}
+	\end{itemize}
+
+\subsubsection{Reliability} 
+	Caratteristica che esprime il grado con cui un prodotto esegue correttamente determinate funzioni  mentre è in uso.
+\paragraph{Obiettivi} \Spazio
+Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+	\begin{itemize}
+		\item{\textbf{Maturity}: evitare il più possibile malfunzionamenti in caso di \gl{fault};
+		}
+		\item{\textbf{Fault Tolerance}: se si verificano errori, vengono attivate procedure di gestione dell'errore in modo da non influenzare le prestazioni.
+		}
+	\end{itemize}
+
+\paragraph{Metriche} \Spazio
+Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+	\begin{itemize}
+		\item{\emph{Failure Density};}
+		\item{\emph{Blocco di operzioni non corrette}.}
+	\end{itemize}
+
+\subsubsection{Maintainability} 
+	Caratteristica che esprime il grado di efficacia ed efficienza con cui il prodotto può essere modificato, tramite azioni di correzione, o aggiornato, tramite azioni di miglioramento.
+\paragraph{Obiettivi} \Spazio
+Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+	\begin{itemize}
+		\item{\textbf{Modularity:}: il sistema presenta componenti tali che una modifica ad uno di essi ha il minimo impatto su tutte le altre componenti;
+		}
+		\item{\textbf{Analyzability}: deve essere possibile analizzare l'impatto nel sistema di uno specifico cambiamento ad una o più delle sue parti, ai fini
+		di risalire rapidamente eventuali cause che hanno generato un malfunzionamento;
+ 		}
+		\item{\textbf{Modifiability}: deve essere possibile eseguire cambiamenti di componenti originali senza introdurre possibili errori;
+		}
+		\item{\textbf{Testability}: deve essere possibile testare il sistema per validare le varie modifiche e per valutare la qualità del sistema.
+		}
+	\end{itemize}
+
+\paragraph{Metriche} \Spazio
+Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+	\begin{itemize}
+		\item{\emph{Failure Analysis};}
+		\item{\emph{Comment Ratio}.}
+	\end{itemize}
+
+\subsection{Riassunto delle metriche di prodotto}
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|C{4cm}|C{3cm}|C{3cm}|C{3cm}|}
+		\hline
+		\rowcolor{title_row}
+		\textbf{\color{title_text}{Nome Metrica}} & \textbf{\color{title_text}{Intervallo limite}} & \textbf{\color{title_text}{Range accettabile}} & \textbf{\color{title_text}{Range ottimale}} \\ \hline
+		Gunning fog index & / &12-15&0-12 \\ \hline
+		Indice di Gulpease & 0\%-100\%& 40\%-100\%& 60\%-100\% \\ \hline
+		Numero di errori grammaticali & / & 0 & 0 \\ \hline
+		Functional Implementation Completeness & 0\%-100\% & 75\%-100\% & 100\% \\ \hline
+		Average Functional Implementation Correctnes&0\%-100\%&80\%-100\%&95\%-100\% \\ \hline
+		Tempo di risposta & / &0-8 sec & 0-3 sec \\ \hline
+		Average Learning Time& / &0-15 & 0-30 \\ \hline
+		Failure Density&0\%-100\%&0\%-10\%&0\% \\ \hline
+		Blocco di operazioni non corrette &0\%-100\%&80\%-100\%&95\%-100\% \\ \hline
+		Failure Analysis&0\%-100\%&60\%-100\%&80\%-100\% \\ \hline
+		Comment Ratio&0\%-100\%&60\%-100\%&80\%-100\%\\ \hline
+	\end{tabular}
+	\caption{Riassunto delle metriche dei test sui prodotti}
+	\label{tabella:riassunto metriche dei test sui prodotti}
+\end{table}
+\renewcommand{\arraystretch}{1}

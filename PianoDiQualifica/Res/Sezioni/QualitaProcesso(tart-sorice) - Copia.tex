@@ -1,0 +1,264 @@
+\newsection{Strategia generale per la verifica}
+Il Piano di Qualifica impone che vengano delineati obiettivi da portare a termine seguendo strategia e metriche ben definite.\\
+La qualità di un qualsiasi prodotto o sistema è strettamente legata alla qualità dei processi che portano al suo sviluppo. Pertanto, nelle seguenti sezioni, verranno descritti gli obiettivi da perseguire nell'intento di garantire la massima qualità di processi e prodotti nella realizzazione del progetto.
+
+\subsection{Qualità di processo}
+	È impossibile creare prodotti di alta qualità se il proprio \gl{way of working} è scadente: risulta quindi fondamentale che i processi attuati, \emph{in primis}, garantiscano un elevato livello qualitativo. Il gruppo 7DOS ha deciso di adottare la normativa \gl{ISO/IEC 15504}, anche nota come \gl{SPICE}, e di seguire il principio di miglioramento continuo (\gl{PDCA}).
+
+
+\subsubsection{Pianificazione e controllo}
+Questo processo ha come scopo la pianificazione dello sviluppo del progetto, andando a definire suddivisione delle attività da svolgere, organizzazione oraria del lavoro, pianificazione e controllo dei costi e standard di supporto e accertandosi che il team abbia padronanza delle tecnologie utilizzate.
+\paragraph{Obiettivi} \Spazio
+Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+	\begin{itemize}
+		\item{\textbf{Pianificazione}: organizzazione oraria del lavoro, prestando attenzione nell'assegnazione dei compiti ai vari membri del gruppo e attenendosi ai costi preventivati;
+		}
+		\item{\textbf{Budget}: controllo e verifica della pianificazione monetaria cercando di attenersi ai costi preventivati;
+		}
+		\item{\textbf{Standard}: attenersi a standard ben precisi, affinché il gruppo abbia sempre una linea guida di supporto;
+		}
+		\item{\textbf{Preparazione del personale}: assicurarsi che ciascun membro del personale abbia familiarità con le tecnologie richieste in ogni \gl{task}, in modo tale da garantire produttività dell'ambiente lavorativo.
+		}
+	\end{itemize}
+
+Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+\begin{itemize}
+			\item{\emph{Schedule Variance} (\gl{SV});}
+			\item{\emph{Budget Variance} (\gl{BV}).}
+\end{itemize}
+
+\subsubsection{Gestione dei rischi}
+Questo processo ha come scopo il riconoscimento dei rischi a cui il progetto può incorrere. Il gruppo 7DOS mira, così facendo, a ridurre il più possibile il verificarsi di essi.
+\paragraph{Obiettivi} \Spazio
+Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+\begin{itemize}
+	\item{\textbf{Identificazione nuovi rischi}: ad ogni fase del progetto il gruppo identificherà i possibili nuovi rischi;}
+	\item{\textbf{Analisi dei rischi}: i rischi individuati verranno analizzati in modo da poter fornire procedure automatiche per prevenire che uno di essi si verifichi.}
+\end{itemize}
+Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+\begin{itemize}
+	\item\emph{Numero rischi non previsti;}
+	\item\emph{Indisponibilità servizi esterni.}
+\end{itemize}
+
+\subsubsection{Gestione dei test}
+Questo processo ha come scopo la definizione di misurazioni sull'esecuzione dell'analisi dinamica, in modo tale da garantire una gestione efficace di essa.
+\paragraph{Obiettivi} \Spazio
+Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+\begin{itemize}
+	\item{\textbf{Efficienza dei test}: i test devono essere progettati per individuare il maggior numero di difetti possibili. In questo modo è possibile realizzare un prodotto di qualità che soddisfa i requisiti specificati;}
+	\item{\textbf{Risoluzione tempestiva dei problemi riscontrati}: le problematiche evidenziate dai test devono essere risolte nel minor tempo possibile dal gruppo;}
+	\item{\textbf{Eseguire tutti i test necessari}: il sistema si evolve. Molti dei difetti precedentemente segnalati vengono corretti. Ogni volta che viene risolto un errore o è stata aggiunta una nuova funzionalità, è necessario eseguire tutti i test per assicurarsi che il nuovo software modificato abbia effettivamente corrette gli errori noti e non abbia introdotto nuovi errori.}
+\end{itemize}
+Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+\begin{itemize}
+	\item{\emph{Percentuale test case passati};}
+	\item{\emph{Percentuale test case falliti};}
+	\item{\emph{Tempo medio necessario al team per risolvere un errore};}
+	\item{\emph{Efficienza nella progettazione dei test};}
+	\item{\emph{Percentuale di difetti corretti};}
+	\item{\emph{Percentuale test eseguiti}.}
+
+\end{itemize}
+
+\subsubsection{Versionamento e build} 
+Questo processo ha come scopo la quantificazione e il controllo dei \gl{Commit}, in modo tale da verificare l'effettivo sviluppo di versioni sempre più complete e stabili del prodotto. Inoltre, lo strumento di integrazione continua \gl{Travis CI} permetterà di eseguire le \gl{build} in modo automatico, permettendo una verifica della correttezza del codice rispetto alle norme.
+\paragraph{Obiettivi} \Spazio
+Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+\begin{itemize}
+	\item{\textbf{Commit frequenti}: ogni membro del gruppo deve garantire una buona frequenza di commit, affinché il prodotto sia sempre aggiornato con le ultime modifiche;
+	\item{\textbf{Modifiche di piccole dimensioni}: ogni commit deve comportare una quantità di modifiche limitata. In questo modo, ogni versione del prodotto è monitorabile e verificabile;}
+	\item{\textbf{Buona riuscita delle build}: ogni membro deve accertarsi che ogni commit comporti una build positiva, in modo tale evitare la diffusione di errori.}
+	}
+\end{itemize}
+Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+\begin{itemize}
+	\item\emph{Media commit a settimana;}
+	\item\emph{Media numero build Travis a settimana;}
+	\item\emph{Percentuale build Travis superate.}
+\end{itemize}
+
+\subsubsection{Tabella riassuntiva delle metriche relative ai processi}
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|C{5cm}|C{4cm}|C{4cm}|}
+		\hline
+		\rowcolor{title_row}
+		\textbf{\color{title_text}{Nome Metrica}} &  \textbf{\color{title_text}{Range accettabile}} & \textbf{\color{title_text}{Range ottimale}} \\ \hline
+		Schedule Variance & $\geq$-5 giorni  & $\geq$0 giorni \\ \hline
+		Budget Variance&$\geq$-10\% &$\geq$0\% \\ \hline
+		Numero rischi non previsti&$\leq$3 & 0 \\ \hline
+		Indisponibilità servizi esterni&$\geq$-5 &$\geq$0 \\ \hline
+		Media commit a settimana&$\geq$20 &$\geq$30 \\ \hline
+		Media numero build Travis a settimana&$\geq$20 &$\geq$30 \\ \hline
+		Percentuale build Travis superate& $\geq$70\% &$\geq$80\% \\ \hline
+	\end{tabular}
+	\caption{Riassunto delle metriche dei test sui processi}
+	\label{tabella:riassunto metriche dei test sui processi}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+\subsubsection{Tabella riassuntiva delle metriche relative ai test}
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|C{5cm}|C{4cm}|C{4cm}|}
+		\hline
+		\rowcolor{title_row}
+		\textbf{\color{title_text}{Nome Metrica}} &  \textbf{\color{title_text}{Range accettabile}} & \textbf{\color{title_text}{Range ottimale}} \\ \hline
+		Percentuale test case passati & 100\%  & 100\% \\ \hline
+		Percentuale test case falliti & 0\% & 0\% \\ \hline
+		Tempo medio necessario al team per risolvere un errore & 0h-4h & 0h-2h \\ \hline
+		Efficienza nella progettazione dei test & 0.5h-3h & 0.5h-2h \\ \hline
+		Percentuale dei difetti corretti & 90\%-100\% & 95\%-100\% \\ \hline
+		Percentuale dei test eseguiti & 85\%-100\% & 95\%-100\% \\ \hline
+	\end{tabular}
+	\caption{Riassunto delle metriche dei test per l'analisi dinamica}
+	\label{tabella:riassunto metriche dei test per l'analisi dinamica}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+\subsubsection{Gestione}
+	Il gruppo 7DOS ha deciso di seguire l'approccio a maturità di processo per i seguenti motivi:
+	\begin{itemize}
+	\item Predisposizione alla cura della qualità del prodotto e dei processi;
+	\item Previsto nelle buone pratiche di \gl{management};
+	\item Adatto per i neofiti della programmazione progettuale.
+	\end{itemize}
+
+\subsection{Qualità di prodotto}
+Per poter garantire che il prodotto realizzato sia di alta qualità, è necessario definire un modello per la valutazione di quest'ultima; il team 7DOS, per questo motivo, ha scelto di adottare il modello di qualità delineato nello standard \gl{ISO/IEC 25010}, anche noto come \gl{SQuaRE}.
+
+Tale modello comprende 8 caratteristiche (ciascuna divisa in sotto-caratteristiche, per un totale di 31) che vanno prese in considerazione durante lo sviluppo del progetto per garantire un'elevata qualità complessiva del prodotto finale.
+
+Per praticità e rilevanza ai fini del prodotto, sono state selezionate 5 caratteristiche da considerare e per ciascuna sono state individuate le sotto-caratteristiche più rilevanti al progetto, da perseguire come obiettivi prioritari. In particolare, sono state scartate: \gl{Compatibility}, in quanto andando a realizzare un plug-in (di natura integrato in un sistema preesistente) è stata giudicata superflua; \gl{Security}, in quanto il plug-in non dovrà gestire autenticazione o raccolta di dati; ed infine \gl{Portability} in quanto essendo il prodotto un plug-in per un determinato sistema, non è rilevante la sua portabilità ad altri ambienti.
+
+\subsubsection{Qualità dei documenti}
+I documenti prodotti devono possedere caratteristiche consistenti. In particolare, essi devono essere leggibili, comprensibili e corretti a livello ortografico e sintattico.
+\paragraph{Obiettivi} \Spazio
+Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+	\begin{itemize}
+		\item{\textbf{Leggibilità}: i documenti prodotti dovranno essere leggibili e comprensibili da persone con almeno una licenza di istruzione media;}
+		\item{\textbf{Correttezza ortografica}: i documenti prodotti dovranno essere privi di errori ortografici.}
+	\end{itemize}
+
+Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+
+\begin{itemize}
+		\item{\emph{Gunning fog index};}
+		\item{\emph{Indice di Gulpease};}
+		\item{\emph{Numero di errori grammaticali}.}
+\end{itemize}
+
+\subsubsection{Qualità del software}
+\paragraph{Functional Suitability} \Spazio
+	Caratteristica che esprime il grado di soddisfacimento dei requisiti espliciti ed impliciti da parte di un prodotto o servizio. \Spazio
+	\textbf{Obiettivi} \Spazio
+	Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+	\begin{itemize}
+			\item{\textbf{Functional Completeness}: l'insieme delle funzioni rispettano le aspettative;
+			}
+			\item{\textbf{Functional Correctness}: i risultati ottenuti sono corretti e presentano livelli di precisione desiderati.
+			}
+	\end{itemize}
+	Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+	\begin{itemize}
+		\item{\emph{Functional Implementation Completeness};}
+		\item{\emph{Average Functional Implementation Correctness}.}
+	\end{itemize}
+
+\paragraph{Performance Efficiency} \Spazio
+	Caratteristica che esprime le prestazioni relative al sistema come quantità di risorse utilizzate per eseguire una determinata funzionalità. \Spazio
+	\textbf{Obiettivi} \Spazio
+	Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+	\begin{itemize}
+			\item{\textbf{Time Behaviour}: tempi di risposta ed elaborazione assumono valori adeguati;
+			}
+			\item{\textbf{Resource Utilization}: le risorse disponibili utilizzate durante l'esecuzione di una funzionalità sono adeguate rispetto alla funzionalità stessa.
+			}
+	\end{itemize}
+	Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+	\begin{itemize}
+		\item{\emph{Tempo di risposta}.}
+	\end{itemize}
+
+\paragraph{Usability} \Spazio
+	Caratteristica che esprime il grado con cui un prodotto o sistema può essere usato da un determinato utente.\Spazio
+	\textbf{Obiettivi} \Spazio
+	Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+	\begin{itemize}
+		\item{\textbf{Learnability}: il prodotto è comprensibile dall'utente e il tempo per conoscere a pieno le sue funzionalità è accettabile;
+		}
+		\item{\textbf{Operability}: le funzionalità offerte devono essere coerenti con ciò che l'utente si aspetta;
+		}
+		\item{\textbf{User Error Protection}: il sistema presenta procedure per proteggere gli utenti dal commettere errori.
+		}
+	\end{itemize}
+	Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+	\begin{itemize}
+		\item{\emph{Average Learning Time}.}
+	\end{itemize}
+
+\paragraph{Reliability} \Spazio
+	Caratteristica che esprime il grado con cui un prodotto esegue correttamente determinate funzioni  mentre è in uso.\Spazio
+	\textbf{Obiettivi} \Spazio
+	Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+	\begin{itemize}
+		\item{\textbf{Maturity}: evitare il più possibile malfunzionamenti in caso di \gl{fault};
+		}
+		\item{\textbf{Fault Tolerance}: se si verificano errori, vengono attivate procedure di gestione dell'errore in modo da non influenzare le prestazioni.
+		}
+	\end{itemize}
+	Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+	\begin{itemize}
+		\item{\emph{Failure Density};}
+		\item{\emph{Blocco di operzioni non corrette}.}
+	\end{itemize}
+
+\paragraph{Maintainability} \Spazio
+	Caratteristica che esprime il grado di efficacia ed efficienza con cui il prodotto può essere modificato, tramite azioni di correzione, o aggiornato, tramite azioni di miglioramento. \Spazio
+	\textbf{Obiettivi} \Spazio
+	Gli obiettivi da rispettare durante lo sviluppo del progetto sono i seguenti:
+	\begin{itemize}
+		\item{\textbf{Modularity:}: il sistema presenta componenti tali che una modifica ad uno di essi ha il minimo impatto su tutte le altre componenti;
+		}
+		\item{\textbf{Analyzability}: deve essere possibile analizzare l'impatto nel sistema di uno specifico cambiamento ad una o più delle sue parti, ai fini
+		di risalire rapidamente eventuali cause che hanno generato un malfunzionamento;
+ 		}
+		\item{\textbf{Modifiability}: deve essere possibile eseguire cambiamenti di componenti originali senza introdurre possibili errori;
+		}
+		\item{\textbf{Testability}: deve essere possibile testare il sistema per validare le varie modifiche e per valutare la qualità del sistema.
+		}
+	\end{itemize}
+	Le metriche utilizzate, definite nel documento \emph{Norme di Progetto v2.0.0}, sono le seguenti:
+	\begin{itemize}
+		\item{\emph{Failure Analysis};}
+		\item{\emph{Comment Ratio}.}
+	\end{itemize}
+
+\subsection{Tabella riassuntiva delle metriche relative ai prodotti}
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|C{4cm}|C{3cm}|C{3cm}|C{3cm}|}
+		\hline
+		\rowcolor{title_row}
+		\textbf{\color{title_text}{Nome Metrica}} & \textbf{\color{title_text}{Intervallo limite}} & \textbf{\color{title_text}{Range accettabile}} & \textbf{\color{title_text}{Range ottimale}} \\ \hline
+		Gunning fog index & / &12-15&0-12 \\ \hline
+		Indice di Gulpease & 0\%-100\%& 40\%-100\%& 60\%-100\% \\ \hline
+		Numero di errori grammaticali & / & 0 & 0 \\ \hline
+		Functional Implementation Completeness & 0\%-100\% & 75\%-100\% & 100\% \\ \hline
+		Average Functional Implementation Correctnes&0\%-100\%&80\%-100\%&95\%-100\% \\ \hline
+		Tempo di risposta & / &0-8 sec & 0-3 sec \\ \hline
+		Average Learning Time& / &0-15 & 0-30 \\ \hline
+		Failure Density&0\%-100\%&0\%-10\%&0\% \\ \hline
+		Blocco di operazioni non corrette &0\%-100\%&80\%-100\%&95\%-100\% \\ \hline
+		Failure Analysis&0\%-100\%&60\%-100\%&80\%-100\% \\ \hline
+		Comment Ratio&0\%-100\%&60\%-100\%&80\%-100\%\\ \hline
+	\end{tabular}
+	\caption{Riassunto delle metriche dei test sui prodotti}
+	\label{tabella:riassunto metriche dei test sui prodotti}
+\end{table}
+\renewcommand{\arraystretch}{1}
+\pagebreak

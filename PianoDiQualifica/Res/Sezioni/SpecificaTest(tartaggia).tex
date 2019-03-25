@@ -1,6 +1,4 @@
-\newsection{Pianificazione dei test dinamici}
-
-In questa sezione vengono dichiarati i test che verranno utilizzati per la fase di analisi dinamica del prodotto software, suddivisi secondo le categorie descritte nella sezione 2.1.
+\subsection{Pianificazione dei test}
 La consistenza dei test in esecuzioni ripetute è una condizione imperativa, dunque è necessario che essi siano \gl{ripetibili}: un dato test eseguito in un ambiente specifico deve produrre, se fornito un determinato input, sempre gli stessi output. Al fine di garantire ciò, il team 7DOS ha scelto di basarsi sullo standard \gl{ISO/IEC/IEEE 29119}\footnote{ISO/IEC/IEEE 29119 parte 3 sezione 7, IEEE 2013.} per quanto riguarda la pianificazione e documentazione dei test dinamici. Tale standard prevede di definire, per ciascun test o suite di test, una \emph{specifica di test} composta di:
 \begin{itemize}
 	\item {\textbf{Specifica di progettazione:} definisce le funzionalità del prodotto da testare e le condizioni di test, ovvero l'ambiente di esecuzione e le pre-condizioni (particolari eventi o stati pregressi) necessarie al suo svolgimento;}
@@ -8,16 +6,35 @@ La consistenza dei test in esecuzioni ripetute è una condizione imperativa, dun
 	\item {\textbf{Specifica di procedura:} definisce l'ordine di esecuzione dei test (nel caso di una suite di test), la modalità di svolgimento, ovvero le azioni da compiere e gli input da inserire in modo ordinato, eventuali azioni necessarie per il raggiungimento delle pre-condizioni e la modalità di analisi dei risultati ottenuti.}
 \end{itemize}
 
-Per quanto concerne la \emph{specifica di progettazione}, il team ha scelto di associarvi uno o più requisiti funzionali a seconda della specificità del test. Questo permette di descrivere più precisamente le funzionalità oggetto di test e di tracciare al meglio il soddisfacimento dei requisiti.
-\subsection{Test di unità}
-Questa sezione verrà sviluppata in futuro, quando sorgerà la necessità di definire dei test di unità per il prodotto.
-\subsection{Test di integrazione}
-Questa sezione verrà sviluppata in futuro, quando sorgerà la necessità di definire dei test di integrazione per il prodotto.
-\subsection{Test di sistema}
-Di seguito viene riportata una tabella riassuntiva che dichiara i test di sistema pianificati. Per ogni test vengono riportati: un codice univoco identificativo con prefisso "TS", il codice identificativo del requisito funzionale associato e lo stato della definizione della specifica di test ("ND" indica che la specifica non è stata definita, "RW" indica che è in revisione, "OK" indica che è stata definita e approvata). \\
+Per quanto concerne la \emph{specifica di progettazione}, il team ha scelto di associarvi uno o più requisiti funzionali a seconda della specificità del test, descritti nell'\emph{Analisi dei Requisiti v3.0.0}. Questo permette di descrivere più precisamente le funzionalità oggetto di test e di tracciare al meglio il soddisfacimento dei requisiti. \\
+
+Ogni test, per essere identificato in modo univoco, segue la seguente sintassi:
+\begin{center}
+	T[Tipo][ID]
+\end{center}
+\begin{itemize}
+	\item \textbf{Tipo}: specifica il tipo del test	e viene indicato con una delle seguenti lettere:
+	\begin{itemize}
+		\item A: accettazione;
+		\item S: sistema;
+		\item I: integrazione;
+		\item U: unità.
+	\end{itemize}
+	\item \textbf{ID}: indica il codice del test rispettando una struttura gerarchica.	
+\end{itemize}
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
+Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti sigle:
+\begin{itemize}
+	\item \textbf{NI}: non implementato;
+	\item \textcolor{orange}{\textbf{I}}: implementato;
+	\item \textcolor{red}{\textbf{NS}}: non superato;
+	\item \textcolor{darkgreen}{\textbf{S}}: superato.
+\end{itemize}
+\subsubsection{Test di accettazione}
+Questa sezione verrà sviluppata in futuro, quando sorgerà la necessità di definire dei test di accettazione per il prodotto.
+\subsubsection{Test di sistema}
 I test di sistema vengono fatti corrispondere ai requisiti funzionali principali e in particolare, nella versione corrente del documento, è previsto un test per ciascun requisito funzionale principale obbligatorio. \\
 Le specifiche di test sono associate al codice univoco del test; quelle definite sono descritte per intero nell'Appendice B.
-
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
 	\begin{center}
@@ -41,11 +58,14 @@ Le specifiche di test sono associate al codice univoco del test; quelle definite
 		\end{tabular}
 		\caption{Riassunto dei test di sistema pianificati}
 		\label{tabella:riassunto ts}
-\end{center}
+	\end{center}
 \end{table}
 \renewcommand{\arraystretch}{1}
-\subsection{Test di regressione}
-Questa sezione verrà sviluppata in futuro, quando sorgerà la necessità di definire dei test di regressione per il prodotto.
-\subsection{Test di accettazione}
-Questa sezione verrà sviluppata in futuro, quando sorgerà la necessità di definire dei test di accettazione per il prodotto.
+\subsubsection{Test di integrazione}
+Questa sezione verrà sviluppata in futuro, quando sorgerà la necessità di definire dei test di integrazione per il prodotto.
+\subsubsection{Test di unità}
+Questa sezione verrà sviluppata in futuro, quando sorgerà la necessità di definire dei test di unità per il prodotto.
+
+
+
 \pagebreak
