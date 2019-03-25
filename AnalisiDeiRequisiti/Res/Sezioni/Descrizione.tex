@@ -4,28 +4,18 @@
 Il prodotto di questo progetto vede la realizzazione di un plug-in per la piattaforma Grafana in grado di sfruttare la tecnologia delle reti Bayesiane associando i nodi della rete ad un flusso di dati costantemente monitorato. Correlato al mondo \gl{DevOps}, il prodotto si pone l'obiettivo di determinare quali eventi non visibili siano i più probabili, segnalando in modo tempestivo quelli che superano precise soglie limite, attivando degli allarmi personalizzati. 
 
 \subsection{Funzioni del prodotto}
-Il plug-in fornisce un'interfaccia che permette all'utente di:
+Il plug-in fornisce l'interfaccia di un panel per Grafana con diversi tab, che permettono all'utente di effettuare operazioni su una rete Bayesiana e sulla visualizzazione dei grafici risultanti dall'elaborazione dei dati. Per quanto riguarda la rete Bayesiana l'utente può importarne la definizione tramite un file JSON, definito in precedenza. Il JSON sfrutta la struttura della libreria JsBayes, che offre diversi metodi per definire reti Bayesiane come la creazione di un nuovo nodo, l'associazione dei successori e dei predecessori e la configurazione della CPT. Inoltre è possibile modificare la rete una volta che è stata correttamente importata, permettendone il salvataggio della versione aggiornata. Il nostro prodotto si appoggia sulla datasource \gl{InfluxDB}, infatti è necessario associare i nodi della rete ad un flusso di dati. In questo modo le probabilità e gli stati dei nodi saranno costantemente ricalcolati, aggiornati e monitorati; l'utente può decidere ogni quanto deve avvenire questo aggiornamento. \\
+Per quanto riguarda la parte di visualizzazione dei dati l'utente ha la possibilità di visualizzare un grafico che mostra l'andamento dello stato di un nodo nel tempo, nodo che può essere selezionato da un elenco dei nodi presenti nella rete attuale. L'utente avrà poi la possibilità di personalizzare a proprio piacimento il modo in cui visualizzare le informazioni, modificando la posizione e la dimensione dei panel presenti all'interno di una dashboard. 
+Viene offerta all'utente anche la possibilità di condividere dashboard e panel. \\
+Infine è possibile creare degli alert che possono essere personalizzati secondo le necessità dell'utente, configurando diverse impostazioni come le soglie di attivazione, l'intervallo di tempo per la verifica e il sistema di notifica impiegato per segnalarne l'attivazione.
 
-\begin{itemize}
-	\item Importare la definizione di una rete Bayesiana da un file JSON;
-	\item Utilizzare un editor grafico per:
-	\begin{itemize}
-		\item Creare una rete Bayesiana;
-		\item Modificare una rete Bayesiana;
-		\item Esportare la definizione della rete in un file JSON.
-	\end{itemize}
-	\item Configurare la connessione tra i nodi della rete ed il flusso dati;
-	\item Ricalcolare le probabilità della rete in base ai flussi dati collegati;
-	\item Visualizzare i dati raccolti tramite grafici;
-	\item Modificare e configurare i panel su una dashboard;
-	\item Creare \gl{alert} personalizzati;
-	\item Condividere i grafici.
-\end{itemize}
 
 \subsection{Caratteristiche degli utenti}
 Come specificato dal proponente nel Verbale del 2018-12-12 il prodotto si rivolge ad un utente generico e non ad uno nello specifico, in quanto chiunque potrà usufruire dei servizi offerti dal plug-in attraverso Grafana. Non emerge quindi il requisito di avere alcuna gerarchia di utenti, o utenti con privilegi differenziati. Pertanto il prodotto prevede una sola tipologia di utente, ovvero l’utilizzatore finale.
 
 \subsection{Vincoli generali}
-Il prodotto deve essere compatibile con Grafana e deve essere sviluppato in JavaScript. L'utente deve essere registrato alla piattaforma per ottenere l'accesso all'area \emph{Plugins} da cui effettuare il download e l'installazione del prodotto. Non sono richiesti particolari requisiti hardware, anche se gli stessi possono influenzarne la velocità di esecuzione.
+Il prodotto deve essere compatibile con Grafana e deve essere sviluppato in TypeScript. L'utente deve essere registrato alla piattaforma per ottenere l'accesso all'area \emph{Plugins} da cui effettuare il download e l'installazione del prodotto.
+L'utente deve aver configurato un database InfluxDB, che si occuperà del monitoraggio e del salvataggio dei dati necessari per il calcolo delle probabilità e degli stati dei nodi della rete Bayesiana associata ad essi. \\
+Non sono richiesti particolari requisiti hardware, anche se gli stessi possono influenzarne la velocità di esecuzione.
 
 \pagebreak
