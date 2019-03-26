@@ -22,7 +22,8 @@ Ogni test, per essere identificato in modo univoco, segue la seguente sintassi:
 	\end{itemize}
 	\item \textbf{ID}: indica il codice del test rispettando una struttura gerarchica.	
 \end{itemize}
-\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
+
+\definecolor{darkgreen}{rgb}{0.0, 0.6, 0.0}
 Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti sigle:
 \begin{itemize}
 	\item \textbf{NI}: non implementato;
@@ -33,29 +34,59 @@ Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti si
 \subsubsection{Test di accettazione}
 \normalsize
 \renewcommand{\arraystretch}{1}
-\begin{longtable}{|C{2.5cm}|C{2.5cm}|C{6.5cm}|C{1.5cm}|}
+\begin{longtable}{|C{2.5cm}|C{2.5cm}|L{6.5cm}|C{1.5cm}|}
 	\hline
 	\rowcolor{title_row}
 	\textbf{\color{title_text}{Test}} & \textbf{\color{title_text}{Requisito}} & \textbf{\color{title_text}{Descrizione}} & \textbf{\color{title_text}{Stato}} \\
 	\hline
 	\endhead
-	{TS-1} & {R0F1} & prova  & {NI}\\
+	{TA-1} & {R0F1} & 
+	Verifica che il sistema permetta di leggere la definizione di una rete Bayesiana importando un file in formato JSON.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente crea un nuovo 7DOS panel;
+		\item L'utente si posiziona sulla scheda di \emph{"Edit"};
+		\item L'utente si posiziona sul \emph{"JSON import"} panel;
+		\item L'utente preme il pulsante per importare un file JSON;
+		\item L'utente seleziona il file da importare;
+		\item Conferma la selezione del file;
+		\item Il sistema importa la definizione della rete mostrandone il contenuto.
+	\end{itemize}
+	  & {NI}\\
 	\hline
-	{TS-2} & {R0F2} & prova & {NI}\\
+	{TA-1.1} & {R1F1.1} & Verifica che il sistema permetta di verificare se un file JSON sia valido.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente crea un nuovo 7DOS panel;
+		\item L'utente si posiziona sulla scheda di \emph{"Edit"};
+		\item L'utente si posiziona sul \emph{"JSON import"} panel;
+		\item L'utente preme il pulsante per importare un file JSON;
+		\item L'utente seleziona il file non valido da importare;
+		\item Conferma la selezione del file;
+		\item Il sistema mostra un messaggio di errore e l'importazione del file non è andata a buon fine.
+	\end{itemize}
+	 & {NI}\\
 	\hline
-	{TS-3} & {R0F3} & prova & {NI}\\
+	{TA-3} & {R0F3} & prova & {NI}\\
 	\hline
-	{TS-3} & {R0F3} & prova & {NI}\\
+	{TA-3} & {R0F3} & prova & {NI}\\
 	\hline
-	{TS-4} & {R0F4} & prova & {NI}\\
+	{TA-4} & {R0F4} & prova & {NI}\\
 	\hline
-	{TS-5} & {R0F5} & prova & {NI}\\
+	{TA-5} & {R0F5} & prova & {NI}\\
 	\hline
-	\caption{Riassunto dei test di accettazione}
+	\caption{Riassunto test di accettazione}
 	\label{tabella:riassunto ta}
 \end{longtable}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/TA}
+	\caption{Resoconto test di accettazione}\label{}
+\end{figure}
 \normalsize
 \renewcommand{\arraystretch}{1}
+\newpage
+
 \subsubsection{Test di sistema}
 \begin{longtable}{|C{2.5cm}|C{2.5cm}|C{6.5cm}|C{1.5cm}|}
 			\hline
@@ -65,10 +96,10 @@ Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti si
 			\endhead
 			{TS-0F1} & {R0F1} & Verifica che sia possibile e leggere la
 			definizione della rete Bayesiana da un
-			file in formato JSON.  & {NI}\\
+			file in formato JSON.  & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-0F1.1} & {R1F1.1} & Verifica che sia possibile validare un
-			file .json. & {NI}\\
+			file JSON. & {NI}\\
 			\hline
 			{TS-2} & {R0F2} & Verifica che sia possibile gestire la
 			connessione tra i nodi della rete ai
@@ -81,7 +112,7 @@ Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti si
 			nodo della rete da un flusso di dati. & {NI}\\
 			\hline
 			{TS-2.3} & {R1F2.3} & Verifica che sia essere possibile modificare il
-			flusso di dati connesso ad un nodo. & {NI}\\
+			flusso di dati connesso ad un nodo. & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-3} & {R0F3} & Verifica che sia possibile applicare il
 			ri-calcolo delle probabilità della rete
@@ -96,64 +127,65 @@ Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti si
 			monitoraggio. & {NI}\\
 			\hline
 			{TS-4.1} & {R1F4.1} & Verifica che sia possibile aggiornare i dati
-			in base alla frequenza stabilita. & {NI}\\
+			in base alla frequenza stabilita. & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-5} & {R0F5} & Verifica che i dati siano disponibili al sistema di
 			creazione di grafici e dashboard per la
 			loro visualizzazione. & {NI}\\
 			\hline
-			{TS-5.1} & {R1F5.1} & Verifica che sia e possibile aggiornare la
+			{TS-5.1} & {R1F5.1} & Verifica che sia possibile aggiornare la
 			dashboard in base alla frequenza
-			stabilita. & {NI}\\
+			stabilita. & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
-			{TS-5.2} & {R1F5.2} & Verifica che sia possibile creare un panel. & {NI}\\
+			{TS-5.2} & {R1F5.2} & Verifica che sia possibile creare un panel. & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-5.3} & {R1F5.3} & Verifica che sia possibile spostare un
-			panel. & {NI}\\
+			panel. & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-5.4} & {R1F5.4} & Verifica che sia possibile cancellare un
-			panel. & {NI}\\
+			panel. & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-5.5} & {R1F5.5} & Verifica che sia possibile minimizzare un
-			panel. & {NI}\\
+			panel. & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-5.6} & {R1F5.6} & Verifica che sia possibile configurare un
-			panel. & {NI}\\
+			panel. & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-5.6.1} & {R0F5.6.1} & Verifica che sia possibile selezionare un
 			flusso dati. & {NI}\\
+			\hline
 			{TS-5.6.2} & {R1F5.6.2} & Verifica che sia selezionare un
 			nodo della rete. & {NI}\\
 			\hline
 			{TS-5.6.3} & {R1F5.6.3} & Verifica che sia possibile selezionare un
-			intervallo di tempo.  & {NI}\\
+			intervallo di tempo.  & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-5.7} & {R1F5.7} & Verifica che sia possibile modificare un
-			panel.  & {NI}\\
+			panel.  & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-5.7.1} & {R1F5.7.1} & Verifica che sia possibile usare le
 			modifiche standard di Grafana su un
-			panel.  & {NI}\\
+			panel. & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-6} & {R1F6} & Verifica che sia  possibile definire alert in
 			base a livelli di soglia raggiunti dai
-			nodi non collegati al flusso dei dati.  & {NI}\\
+			nodi non collegati al flusso dei dati.  & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-6.1} & {R1F6.1} & Verifica che sia possibile configurare i
-			parametri di un alert.  & {NI}\\
+			parametri di un alert.  & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-6.1.1} & {R1F6.1.1} & Verifica che sia possibile inserire il nome
-			di un alert.  & {NI}\\
+			di un alert.  & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-6.1.2} & {R1F6.1.2} & Verifica che sia  possibile inserire
-			l'intervallo di verifica di un alert.  & {NI}\\
+			l'intervallo di verifica di un alert.  & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-6.1.3} & {R1F6.1.3} & Verifica che sia possibile inserire la
-			condizione di attivazione di un alert.  & {NI}\\
+			condizione di attivazione di un alert.  & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-6.2} & {R1F6.2} & Verifica che sia possibile impostare il
 			modo in cui viene notificata
-			l'attivazione di un alert.  & {NI}\\
+			l'attivazione di un alert.  & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-7} & {R1F7} & Verifica che sia possibile disegnare la rete
 			Bayesiana con un editor
@@ -194,7 +226,8 @@ Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti si
 			\hline
 			{TS-7.2.2.1} & {R1F7.2.2.1} & Verifica che sia possibile aggiungere uno
 			stato alla CPT associata ad un nodo
-			della rete.  & {NI}\\
+			della rete.
+  & {NI}\\
 			\hline
 			{TS-7.2.2.2} & {R1F7.2.2.2} & Verifica che sia possibile eliminare uno
 			stato dalla CPT associata ad un nodo
@@ -249,7 +282,8 @@ Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti si
 			{TS-7.7.3} & {R1F7.7.3} & Verifica che sia possibile gestire
 			l'inserimento di valori non validi per
 			l'intervallo associato ad uno stato del
-			nodo.  & {NI}\\
+			nodo.
+  & {NI}\\
 			\hline
 			{TS-7.7.4} & {R1F7.7.4} & Verifica che sia e possibile gestire
 			l'inserimento di valori non validi per
@@ -259,21 +293,122 @@ Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti si
 			Bayesiane in oggetti di monitoraggio
 			diversi.  & {NI}\\
 			\hline
-			{TS-} & {RF} & Verifica che sia   & {NI}\\
+			{TS-9} & {R2F9} & Verifica che sia  possibile creare una rete
+			Bayesiana a partire dai dati raccolti
+			sul campo anziché svilupparla con la
+			collaborazione degli esperti del settore.  & {NI}\\
 			\hline
-			{TS-} & {RF} & Verifica che sia   & {NI}\\
+			{TS-10} & {R2F10} & Verifica che sia possibile condividere un
+			grafico.  & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
-			{TS-} & {RF} & Verifica che sia   & {NI}\\
+			{TS-10.1} & {R2F10.1} & Verifica che sia possibile visualizzare il
+			link diretto ad una dashboard o ad un
+			panel.  & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
-	\caption{Riassunto dei test di sistema}
-	\label{tabella:riassunto TS-}
+			{TS-10.2} & {R2F10.2} & Verifica che sia  possibile visualizzare il
+			codice per l’inclusione di un panel in
+			una pagina web.  & \textcolor{darkgreen}{\textbf{S}}\\
+			\hline
+			{TS-10.3} & {R2F10.3} & Verifica che sia possibile selezionare le
+			opzioni di visualizzazione per la
+			condivisione dei grafici.  & \textcolor{darkgreen}{\textbf{S}}\\
+			\hline
+			{TS-10.3.1} & {R2F10.3.1} & Verifica che sia  possibile selezionare la
+			visualizzazione dell'intervallo di tempo
+			corrente in un grafico.  & \textcolor{darkgreen}{\textbf{S}}\\
+			\hline
+			{TS-10.3.2} & {R2F10.3.2} & Verifica che sia  possibile deselezionare la
+			visualizzazione dell'intervallo di tempo
+			corrente in un grafico.  & \textcolor{darkgreen}{\textbf{S}}\\
+			\hline
+			{TS-10.3.3} & {R2F10.3.3} & Verifica che sia possibile selezionare la
+			visualizzazione di variabili di template
+			in un grafico.  & \textcolor{darkgreen}{\textbf{S}}\\
+			\hline
+			{TS-10.3.4} & {R2F10.3.4} & Verifica che sia  possibile deselezionare la
+			visualizzazione di variabili di template
+			in un grafico.  & \textcolor{darkgreen}{\textbf{S}}\\
+			\hline
+			{TS-10.3.5} & {R2F10.3.5} & Verifica che sia possibile selezionare il
+			tema di un grafico.  & \textcolor{darkgreen}{\textbf{S}}\\
+			\hline
+			{TS-10.4} & {R2F10.4} & Verifica che sia possibile condividere uno
+			snapshot di una dashboard o di un
+			panel.  & \textcolor{darkgreen}{\textbf{S}}\\
+			\hline
+			{TS-10.4.1} & {R2F10.4.1} & Verifica che sia possibile pubblicare uno
+			snapshot sull'istanza locale dell'utente.   & \textcolor{darkgreen}{\textbf{S}}\\
+			\hline
+			{TS-10.4.2} & {R2F10.4.2} & Verifica che sia possibile pubblicare uno
+			snapshot su Raintank.  & \textcolor{darkgreen}{\textbf{S}}\\
+			\hline
+			{TS-10.4.3} & {R2F10.4.3} & Verifica che sia possibile configurare le
+			opzioni di visualizzazione di uno
+			snapshot.  & \textcolor{darkgreen}{\textbf{S}}\\
+			\hline
+			{TS-10.4.3.1} & {R2F10.4.3.1} & Verifica che sia possibile inserire il nome
+			di uno snapshot.  & \textcolor{darkgreen}{\textbf{S}}\\
+			\hline
+			{TS-10.4.3.2} & {R2F10.4.3.2} & Verifica che sia possibile selezionare il
+			tempo di permanenza di uno snapshot.  & \textcolor{darkgreen}{\textbf{S}}\\
+			\hline
+			{TS-10.4.3.3} & {R2F10.4.3.3} & Verifica che sia possibile inserire il tempo
+			massimo per il caricamento dei dati in
+			uno snapshot.  & \textcolor{darkgreen}{\textbf{S}}\\
+			\hline
+			{TS-10.5} & {R2F10.5} & Verifica che sia possibile visualizzare il
+			codice JSON contenente la definizione
+			di una dashboard.  & \textcolor{darkgreen}{\textbf{S}}\\
+			\hline
+			{TS-10.6} & {R2F10.6} & Verifica che sia possibile salvare il file
+			JSON contenente la definizione di una
+			dashboard.  & \textcolor{darkgreen}{\textbf{S}}\\
+			\hline
+	\caption{Riassunto test di sistema}
+	\label{tabella:riassunto TS}
 \end{longtable}
-
 \renewcommand{\arraystretch}{1}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/TS}
+	\caption{Resoconto test di sistema}\label{}
+\end{figure}
+\newpage
+
 \subsubsection{Test di integrazione}
-Questa sezione verrà sviluppata in futuro, quando sorgerà la necessità di definire dei test di integrazione per il prodotto.
+\normalsize
+\renewcommand{\arraystretch}{1}
+\begin{longtable}{|C{2.5cm}|C{6.5cm}|C{1.5cm}|}
+	\hline
+	\rowcolor{title_row}
+	\textbf{\color{title_text}{Test}} & \textbf{\color{title_text}{Descrizione}} & \textbf{\color{title_text}{Stato}} \\
+	\hline
+	\endhead
+	{TI-1} & Verifica l'integrazione tra client e Grafana. & \textcolor{darkgreen}{\textbf{S}}\\
+	\hline
+	{TI-2} & Verifica l'integrazione tra Grafana ed \gl{InfluxDB}. & \textcolor{darkgreen}{\textbf{S}}\\
+	\hline
+	{TI-3} & Verifica l'integrazione tra Grafana e JsBayes. & \textcolor{darkgreen}{\textbf{S}}\\
+	\hline
+	{TI-4} & Verifica l'integrazione tra Grafana e Raintank. & \textcolor{darkgreen}{\textbf{S}}\\
+	\hline
+	\caption{Riassunto test di integrazione}
+	\label{tabella:riassunto ta}
+\end{longtable}
+\renewcommand{\arraystretch}{1}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/TI}
+	\caption{Resoconto test di integrazione}\label{}
+\end{figure}
+\newpage
+
 \subsubsection{Test di unità}
-Questa sezione verrà sviluppata in futuro, quando sorgerà la necessità di definire dei test di unità per il prodotto.
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/TU}
+	\caption{Resoconto test di unità}\label{}
+\end{figure}
 
 
 
