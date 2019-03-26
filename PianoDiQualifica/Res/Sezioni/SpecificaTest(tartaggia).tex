@@ -67,13 +67,372 @@ Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti si
 	\end{itemize}
 	 & {NI}\\
 	\hline
-	{TA-3} & {R0F3} & prova & {NI}\\
+	{TA-2} & {R0F2} & 
+	Verifica che il sistema permetta la gestione della connessione tra i nodi della rete ed il flusso di dati.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona sulla scheda di \emph{"Edit"};
+		\item L'utente si posiziona sul \emph{"Network"} panel;
+		\item L'utente seleziona il flusso di dati da monitorare.
+	\end{itemize}
+	 & {NI}\\
 	\hline
-	{TA-3} & {R0F3} & prova & {NI}\\
+	{TA-2.1} & {R0F2.1} & 
+	Verifica che il sistema permetta di connettere un nodo della rete al flusso di dati.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona sulla scheda di \emph{"Edit"};
+		\item L'utente si posiziona sul \emph{"Network"} panel;
+		\item L'utente seleziona il nodo da monitorare rispetto al flusso di dati.
+	\end{itemize}
+	 & {NI}\\
 	\hline
-	{TA-4} & {R0F4} & prova & {NI}\\
+	{TA-2.2} & {R0F2.2} & 
+	Verifica che il sistema permetta di disconnettere un nodo della rete al flusso di dati.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona sulla scheda di \emph{"Edit"};
+		\item L'utente si posiziona sul \emph{"Network"} panel;
+		\item L'utente deseleziona il nodo da monitorare rispetto al flusso di dati.
+	\end{itemize}
+	 & {NI}\\
 	\hline
-	{TA-5} & {R0F5} & prova & {NI}\\
+	{TA-2.3} & {R1F2.3} & 
+	Verifica che il sistema permetta di modificare un nodo della rete connesso al flusso di dati.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona sulla scheda di \emph{"Edit"};
+		\item L'utente si posiziona sul \emph{"Network"} panel;
+		\item L'utente modifica il nodo da monitorare rispetto al flusso di dati.
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-3} & {R0F3} & 
+	Verifica che il sistema permetta di applicare il
+	ricalcolo delle probabilità della rete
+	secondo regole temporali stabilite dall'utente.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona sulla scheda di \emph{"Edit"};
+		\item L'utente si posiziona sul \emph{"Network"} panel;
+		\item Il sistema effettua il ricalcolo delle probabilità della rete aggiornandone lo stato dei nodi.
+	\end{itemize}	
+	 & {NI}\\
+	\hline
+	{TA-3.1} & {R1F3.1} & 
+	Verifica che il sistema permetta all'utente di modificare le regole temporali per effettuare il ricalcolo delle probabilità della rete.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona sulla scheda di \emph{"Edit"};
+		\item L'utente si posiziona sul \emph{"Network"} panel;
+		\item L'utente modifica le regole temporali per il ricalcolo delle probabilità della rete.
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-4} & {R0F4} & 
+	Verifica che il sistema permetta fornire nuovi dati a Grafana derivati dai nodi
+	della rete non direttamente collegati al flusso di
+	dati.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item ;
+		\item ;
+		\item .
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-4.1} & {R1F4.1} & 
+	Verifica che il sistema permetta l'aggiornamento dei dati secondo una frequenza stabilita dall'utente.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item ;
+		\item ;
+		\item .
+	\end{itemize}
+	& {NI}\\
+	\hline
+	{TA-5} & {R0F5} & 
+	Verifica che il sistema permetta di leggere i dati provenienti dal flusso ed elaborarli, visualizzandone il risultato attraverso un grafico.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item Il sistema legge i dati proveniente dal flusso;
+		\item Il sistema effettua il ricalcolo delle probabilità della rete aggiornando lo stato dei nodi;
+		\item Il sistema elabora i risultati e li mostra attraverso un grafico.
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-5.1} & {R1F5.1} & 
+	Verifica che il sistema aggiorni i dati presenti nel grafico in base alla frequenza stabilita dall'utente.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item Il sistema legge i nuovi dati proveniente dal flusso, in base alla frequenza stabilita;
+		\item Il sistema effettua il ricalcolo delle probabilità della rete aggiornando lo stato dei nodi, in base alla frequenza stabilita;
+		\item Il sistema elabora i risultati e li mostra attraverso un grafico.
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-5.2} & {R1F5.2} & 
+	Verifica che il sistema permetta all'utente di creare un nuovo panel.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente clicca sulla voce \emph{add panel};
+		\item L'utente sceglie la tipologia di panel da creare;
+		\item Il sistema crea il nuovo panel e lo mostra all'interno della dashboard.
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-5.3} & {R1F5.3} & 
+	Verifica che il sistema permetta all'utente di spostare un panel all'interno della dashboard.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente trascina il panel che vuole spostare nella posizione desiderata;
+		\item Il sistema sposta panel nella nuova posizione scelta dall'utente.
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-5.4} & {R1F5.4} & 
+	Verifica che il sistema permetta all'utente di cancellare un panel all'interno della dashboard.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente clicca sull'intestazione del panel;
+		\item L'utente seleziona la voce \emph{"Remove"};
+		\item Conferma l'eliminazione del panel;
+		\item Il sistema cancella panel scelto dall'utente.
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-5} & {R1F5.5} & 
+	Verifica che il sistema permetta all'utente di minimizzare un panel.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente si posiziona sull'angolo in basso a destra del panel;
+		\item L'utente modifica minimizza il panel;
+		\item Il sistema modifica la dimensione del panel come scelto dall'utente.
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-5.6} & {R1F5.6} & 
+	Verifica che il sistema permetta all'utente configurare un panel dopo la sua creazione.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente configura le opzioni del panel come desidera;
+		\item Il sistema configura le opzioni del panel come stabilito dall'utente.
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-5.7} & {R1F5.7} & 
+	Verifica che il sistema permetta all'utente di modificare un panel all'interno della dashboard.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente modifica le opzioni del panel come desidera;
+		\item Il sistema modifica le opzioni del panel come stabilito dall'utente.
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-6} & {R1F6} & 
+	Verifica che il sistema permetta all'utente di definire alert in base a livelli di soglia raggiunti dai nodi non collegati al flusso dei dati.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona all'interno di un panel di tipo \emph{graph};
+		\item L'utente si posiziona sulla schermata di \emph{edit};
+		\item L'utente si posiziona sulla scheda \emph{"Alert"};
+		\item L'utente clicca sul pulsante \emph{"Create alert"};
+		\item Il sistema crea un nuovo alert.
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-6.1} & {R1F6.1} & 
+	Verifica che il sistema permetta all'utente di configurare i parametri di un alert.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona sulla scheda \emph{"Alert"};
+		\item L'utente seleziona l'alert da configurare;
+		\item L'utente configura i parametri come desidera;
+		\item Il sistema configura i parametri dell'alert.
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-6.2} & {R1F6.2} & 
+	Verifica che il sistema permetta all'utente di impostare il modo in cui viene notificata l'attivazione di un alert.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona sulla scheda \emph{"Alert"};
+		\item L'utente seleziona l'alert da configurare;
+		\item L'utente imposta come deve venire notificata l'attivazione dell'alert;
+		\item Il sistema imposta il sistema di notifica dell'alert.
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-7} & {R1F7} & 
+	Verifica che il sistema permetta di disegnare una rete Bayesiana con un editor grafico specializzato.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item ;
+		\item ;
+		\item .
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-7.1} & {R1F7.1} & 
+	Verifica che il sistema permetta di creare un nuovo nodo della rete.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item ;
+		\item ;
+		\item .
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-7.2} & {R1F7.2} & 
+	Verifica che il sistema permetta di modificare i parametri di un nodo della rete.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item ;
+		\item ;
+		\item .
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-7.4} & {R1F7.4} & 
+	Verifica che il sistema permetta di creare un collegamento tra due nodi della rete.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item ;
+		\item ;
+		\item .
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-7.5} & {R1F7.5} & 
+	Verifica che il sistema permetta di eliminare un collegamento tra due nodi della rete.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item ;
+		\item ;
+		\item .
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-7.6} & {R1F7.6} & 
+	Verifica che il sistema permetta di salvare la rete realizzata su un file JSON.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item ;
+		\item ;
+		\item .
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-7.7} & {R1F7.7} & 
+	Verifica che il sistema rilevi e sia in grado di gestire eventuali errori derivati dalla modifica di un nodo.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item ;
+		\item ;
+		\item .
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-8} & {R2F8} & 
+	Verifica che il sistema permetta di applicare più reti Bayesiane a diversi oggetti di monitoraggio.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item ;
+		\item ;
+		\item .
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-9} & {R2F9} & 
+	Verifica che il sistema permetta di creare una rete Bayesiana a partire dai dati raccolti
+	sul campo.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item ;
+		\item ;
+		\item .
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-10} & {R2F10} & 
+	Verifica che il sistema permetta di condividere grafici presenti in una dashboard o in un singolo panel.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente seleziona l'opzione \emph{"Share"} relativa alla dashboard o ad un panel;
+		\item Il sistema condivide il grafico secondo l'opzione scelta dall'utente.
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-10.1} & {R2F10.1} & 
+	Verifica che il sistema permetta di visualizzare il link diretto ad una dashboard o ad un
+	panel.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente seleziona l'opzione \emph{"Share"} relativa alla dashboard o ad un panel;
+		\item L'utente si posiziona sulla scheda \emph{"Link"};
+		\item L'utente configura le opzioni per generare il link per la condivisione;
+		\item Il sistema mostra il link generato con cui l'utente può effettuare la condivisione.
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-10.2} & {R2F10.2} & 
+	Verifica che il sistema permetta di visualizzare il codice per l'inclusione di un panel in una pagina web.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente seleziona l'opzione \emph{"Share"} relativa ad un panel;
+		\item L'utente si posiziona sulla scheda \emph{"Embed"};
+		\item L'utente configura le opzioni per generare il frame per la condivisione;
+		\item Il sistema mostra il frame generato con cui l'utente può effettuare la condivisione.
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-10.4} & {R2F10.4} & 
+	Verifica che il sistema permetta di condividere lo snapshot di una dashboard o di un
+	panel.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente seleziona l'opzione \emph{"Share"} relativa a una dashboard ad un panel;
+		\item L'utente si posiziona sulla scheda \emph{"Snapshot"};
+		\item L'utente configura le opzioni per la condivisione dello snapshot;
+		\item Il sistema effettua la condivisione dello snapshot.
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-10.5} & {R2F10.5} & 
+	Verifica che il sistema permetta di visualizzare il codice JSON contenente la definizione
+	di una dashboard.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente seleziona l'opzione \emph{"Share dashboard"};
+		\item L'utente si posiziona sulla scheda \emph{"Export"};
+		\item L'utente clicca sul pulsante per visualizzare il JSON;
+		\item Il sistema mostra il codice JSON con la definizione della dashboard.
+	\end{itemize}
+	 & {NI}\\
+	\hline
+	{TA-10.6} & {R2F10.6} & 
+	Verifica che il sistema permetta di salvare il file JSON contenente la definizione di una
+	dashboard.
+	\textbf{Procedura}:
+	\begin{itemize}		
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente seleziona l'opzione \emph{"Share dashboard"};
+		\item L'utente si posiziona sulla scheda \emph{"Export"};
+		\item L'utente clicca sul pulsante per salvare il JSON;
+		\item Il sistema effettua il salvataggio del codice JSON con la definizione della dashboard.
+	\end{itemize}
+	 & {NI}\\
 	\hline
 	\caption{Riassunto test di accettazione}
 	\label{tabella:riassunto ta}
@@ -115,7 +474,7 @@ Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti si
 			flusso di dati connesso ad un nodo. & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-3} & {R0F3} & Verifica che sia possibile applicare il
-			ri-calcolo delle probabilità della rete
+			ricalcolo delle probabilità della rete
 			secondo regole temporali prestabilite. & {NI}\\
 			\hline
 			{TS-3.1} & {R1F3.1} & Verifica che sia possibile modificare le
