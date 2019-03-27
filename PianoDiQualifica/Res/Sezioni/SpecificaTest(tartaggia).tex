@@ -8,29 +8,6 @@ La consistenza dei test in esecuzioni ripetute è una condizione imperativa, dun
 
 Per quanto concerne la \emph{specifica di progettazione}, il team ha scelto di associarvi uno o più requisiti funzionali a seconda della specificità del test, descritti nell'\emph{Analisi dei Requisiti v3.0.0}. Questo permette di descrivere più precisamente le funzionalità oggetto di test e di tracciare al meglio il soddisfacimento dei requisiti. \\
 
-Ogni test, per essere identificato in modo univoco, segue la seguente sintassi:
-\begin{center}
-	T[Tipo]-[ID]
-\end{center}
-\begin{itemize}
-	\item \textbf{Tipo}: specifica il tipo del test	e viene indicato con una delle seguenti lettere:
-	\begin{itemize}
-		\item A: accettazione;
-		\item S: sistema;
-		\item I: integrazione;
-		\item U: unità.
-	\end{itemize}
-	\item \textbf{ID}: indica il codice del test rispettando una struttura gerarchica.	
-\end{itemize}
-
-\definecolor{darkgreen}{rgb}{0.0, 0.6, 0.0}
-Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti sigle:
-\begin{itemize}
-	\item \textbf{NI}: non implementato;
-	\item \textcolor{orange}{\textbf{I}}: implementato;
-	\item \textcolor{red}{\textbf{NS}}: non superato;
-	\item \textcolor{darkgreen}{\textbf{S}}: superato.
-\end{itemize}
 \subsubsection{Test di accettazione}
 \normalsize
 \renewcommand{\arraystretch}{1}
@@ -397,7 +374,8 @@ Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti si
 	\hline
 	{TA-10.4} & {R2F10.4} & 
 	Verifica che il sistema permetta di condividere lo snapshot di una dashboard o di un
-	panel.
+	panel.
+
 	\textbf{Procedura}:
 	\begin{itemize}		
 		\item L'utente si posiziona all'interno di una dashboard;
@@ -446,6 +424,7 @@ Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti si
 \renewcommand{\arraystretch}{1}
 \newpage
 
+\definecolor{darkgreen}{rgb}{0.0, 0.6, 0.0}
 \subsubsection{Test di sistema}
 \begin{longtable}{|C{2.5cm}|C{2.5cm}|C{6.5cm}|C{1.5cm}|}
 			\hline
@@ -670,7 +649,8 @@ Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti si
 			\hline
 			{TS-10.3} & {R2F10.3} & Verifica che sia possibile selezionare le
 			opzioni di visualizzazione per la
-			condivisione dei grafici.  & \textcolor{darkgreen}{\textbf{S}}\\
+			condivisione dei grafici.
+  & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-10.3.1} & {R2F10.3.1} & Verifica che sia  possibile selezionare la
 			visualizzazione dell'intervallo di tempo
@@ -678,7 +658,8 @@ Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti si
 			\hline
 			{TS-10.3.2} & {R2F10.3.2} & Verifica che sia  possibile deselezionare la
 			visualizzazione dell'intervallo di tempo
-			corrente in un grafico.  & \textcolor{darkgreen}{\textbf{S}}\\
+			corrente in un grafico.
+  & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-10.3.3} & {R2F10.3.3} & Verifica che sia possibile selezionare la
 			visualizzazione di variabili di template
@@ -703,7 +684,8 @@ Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti si
 			\hline
 			{TS-10.4.3} & {R2F10.4.3} & Verifica che sia possibile configurare le
 			opzioni di visualizzazione di uno
-			snapshot.  & \textcolor{darkgreen}{\textbf{S}}\\
+			snapshot.
+  & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-10.4.3.1} & {R2F10.4.3.1} & Verifica che sia possibile inserire il nome
 			di uno snapshot.  & \textcolor{darkgreen}{\textbf{S}}\\
@@ -713,7 +695,8 @@ Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti si
 			\hline
 			{TS-10.4.3.3} & {R2F10.4.3.3} & Verifica che sia possibile inserire il tempo
 			massimo per il caricamento dei dati in
-			uno snapshot.  & \textcolor{darkgreen}{\textbf{S}}\\
+			uno snapshot.
+  & \textcolor{darkgreen}{\textbf{S}}\\
 			\hline
 			{TS-10.5} & {R2F10.5} & Verifica che sia possibile visualizzare il
 			codice JSON contenente la definizione

@@ -265,7 +265,30 @@ Può essere svolta nei seguenti modi:
 \subparagraph{Strumenti di supporto}\Spazio
 Ai fini di svolgere l'analisi statica del codice lo strumento usato è: \gl{TSLint} un \gl{linter} che mette a disposizione numerose regole e la possibilità di creare regole personalizzate. TSLint è inoltre integrabile in numerosi IDE e nella piattaforma TravisCI che permette di eseguire test automatici su repository GitHub.
 \paragraph{Analisi dinamica}\Spazio
-Il processo di analisi dinamica consiste nell'esecuzione di test di varia tipologia i quali richiedono l'esecuzione del sistema software o solamente di alcune sue componenti.
+Il processo di analisi dinamica consiste nell'esecuzione di test di varia tipologia i quali richiedono l'esecuzione del sistema software o solamente di alcune sue componenti. \\
+Ogni test, per essere identificato in modo univoco, deve seguire la seguente sintassi:
+\begin{center}
+	T[Tipo]-[ID]
+\end{center}
+\begin{itemize}
+	\item \textbf{Tipo}: specifica il tipo del test	e viene indicato con una delle seguenti lettere:
+	\begin{itemize}
+		\item A: accettazione;
+		\item S: sistema;
+		\item I: integrazione;
+		\item U: unità.
+	\end{itemize}
+	\item \textbf{ID}: indica il codice del test rispettando una struttura gerarchica.	
+\end{itemize}
+
+\definecolor{darkgreen}{rgb}{0.0, 0.6, 0.0}
+Per ogni test viene indicato lo stato in cui si trova, con una delle seguenti sigle:
+\begin{itemize}
+	\item \textbf{NI}: non implementato;
+	\item \textcolor{orange}{\textbf{I}}: implementato;
+	\item \textcolor{red}{\textbf{NS}}: non superato;
+	\item \textcolor{darkgreen}{\textbf{S}}: superato.
+\end{itemize}
 Le principali tipologie di test che è possibile eseguire durante l'analisi dinamica sono le seguenti:
 \begin{itemize}
 	\item {\textbf{Test di unità}: mirano alla verifica della parte più piccola di lavoro prodotta da un \emph{Programmatore}, equivalente all'unità logica più piccola del prodotto, che può essere una singola classe, un metodo o funzione oppure un insieme di essi;}
@@ -276,6 +299,9 @@ Le principali tipologie di test che è possibile eseguire durante l'analisi dina
 	\item {\textbf{Test di regressione}: mirano ad eseguire nuovamente i test di unità e di integrazione su componenti software che hanno subito modifiche, in modo da controllare che i cambiamenti apportati non abbiano inserito nuovi errori sia nelle componenti modificate che nelle componenti non modificate e che prima non erano soggette ad errori;}
 	\item {\textbf{Test di accettazione}: mirano al collaudo del prodotto software in presenza del \gl{proponente}. Essi sono test finali il cui superamento comporta la validazione e il rilascio del prodotto.}
 \end{itemize}
+
+\subparagraph{Strumenti di supporto} \Spazio
+Lo strumento usato per l'analisi dinamica è TravisCI, un servizio che permette di eseguire delle build automatiche su codice presente in repository GitHub. Tiene traccia dello storico delle build effettuate, mostrando per ognuna di esse varie informazioni tra cui l'esito, il commit che ha scaturito la build e l'utente che l'ha effettuato. Esso è facilmente integrabile con Coveralls, un servizio che permette di misurare la percentuale di codice coperto dai test. 
 
 \subsubsection{Analisi diagrammi UML}
 La verifica dei diagrammi UML prodotti è compito dei \emph{Verificatori}, che devono accertarsi che rispettino lo standard UML e che siano semanticamente corretti.
