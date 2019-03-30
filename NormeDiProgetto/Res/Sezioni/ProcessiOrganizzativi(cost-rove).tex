@@ -104,6 +104,33 @@ Il sistema di ticketing adottato, permette ad ogni membro di rendicontare le ore
 \item{Ore di lavoro complessive per un ruolo.}
 \end{itemize}
 
+\subsubsection{Metriche}
+\paragraph{\gl{Schedule Variance (SV)}} \Spazio
+Metrica che indica se il progetto è in linea, in anticipo o in ritardo rispetto alle attività pianificate nella \gl{baseline}. Essa è un indicatore di efficacia. \\
+Calcolabile attraverso la seguente formula:
+\[ SV=BCWP-BCWS\]
+Dove:
+\begin{itemize}
+	\item {\textbf{SV}: corrisponde al valore della metrica;}
+	\item {\textbf{BCWP}: corrisponde al valore, in giorni od euro, prodotto dalle attività del progetto realizzate fino alla data corrente, od in altre parole la somma complessiva del valore di tutte le componenti completate fino ad ora.}
+	\item {\textbf{BCWS}: corrisponde al numero di giorni od euro pianificati inizialmente per realizzare le attività fino alla data corrente.}
+\end{itemize}
+Se SV > 0 significa che si sta procedendo più velocemente rispetto a quanto pianificato. Viceversa, se SV < 0 allora il gruppo è in ritardo.
+\paragraph{\gl{Budget Variance (BV)}} \Spazio
+Metrica che indica se la spesa complessiva fino a quel momento è maggiore o minore rispetto a quanto pianificato. Essa è un indicatore con valore contabile e finanziario. \\
+Calcolabile attraverso la seguente formula:
+\[BV=\frac{BCWS-ACWP}{BCWS}\]
+\begin{itemize}
+	\item {\textbf{BV}: corrisponde al valore della metrica;}
+	\item {\textbf{BCWS}: corrisponde al costo pianificato in giorni od euro per realizzare le attività del progetto fino alla data corrente;}
+	\item {\textbf{ACWP}: corrisponde al costo, in giorni od euro, effettivamente sostenuto fino alla data corrente.}
+\end{itemize}
+Se BV > 0 il budget complessivo sta diminuendo con velocità minore rispetto a quanto pianificato. Viceversa se BV < 0.
+\paragraph{Numero rischi non previsti}\Spazio
+Indica la quantità di rischi rilevati durante lo svolgimento delle attività, non preventivati all'interno dell'analisi dei rischi durante l'attuale fase del progetto.
+\paragraph{Indisponibilità servizi esterni} \Spazio
+Numero complessivo di giorni in cui uno specifico servizio esterno, tra tutti quelli utilizzati, è rimasto indisponibile per la maggior parte del tempo rendendone quindi impossibile l'utilizzo. Sarà necessario utilizzare un contatore separato per ogni servizio utilizzato.
+
 
 
 \subsection{Gestione delle comunicazioni}

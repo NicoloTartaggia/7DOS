@@ -176,6 +176,7 @@ L'intera documentazione deve essere redatta usando il linguaggio di markup \LaTe
 \paragraph{TexStudio} \Spazio
 Per redigere i documenti in \LaTeX \emph{ }deve essere impiegato l'editor TexStudio. L'ambiente mette a disposizione un'interfaccia per la scrittura dei documenti, organizzati secondo una struttura gerarchica e la visualizzazione dell'anteprima del risultato ottenuto in seguito alla compilazione avvenuta con successo e in caso contrario segnalando all'utente eventuali errori.
 
+
 \subsection{Versionamento}
 Il servizio di hosting scelto per la repository è Github. La repository è
 privata e sarà resa pubblica a fine progetto. Seguono le norme che ne riguardano gli aspetti
@@ -218,15 +219,16 @@ Viene usato con Github, in quanto è un servizio già conosciuto dai membri del 
 \paragraph{Client Git}\Spazio
 A seconda delle preferenze, ogni membro del team deciderà se usare come client GitKraken o Github Desktop. Entrambi sono client desktop che facilitano l'utilizzo di git, rendendo molto più semplice inviare le modifiche locali al repository remoto, o viceversa.
 
-\subsection{Qualità di processo}
-La qualità dei processi è garantita dall'uso del ciclo di miglioramento continuo \gl{PDCA}, descritto nell'appendice B. Con l'applicazione di questo metodo è possibile perseguire una migliore qualità dei processi, incluso quello di verifica; ciò porta ad ottenere una migliore qualità dei prodotti che ne derivano. \\
-Per ottenere una migliore qualità, quindi, bisogna che un processo venga definito, controllato e valutato. 
+\subsubsection{Metriche}
+\paragraph{Media commit a settimana} \Spazio
+Media dei commit effettuati settimanalmente sulle diverse repository del gruppo. Utile per tenere traccia dell'impegno dedicato settimanalmente dal team sul progetto. Per questa metrica verranno utilizzati i risultati dei grafici generati automaticamente nella sezione \emph{Insights/Commits} di GitHub.
 
 \subsection{Verifica}
 Il processo di verifica ha lo scopo di esaminare un prodotto al fine di accertare che le attività produttive non abbiano introdotto errori sullo stesso, fornendo una prova oggettiva della sua correttezza o nel caso contrario, segnalando le eventuali problematiche riscontrate. Le metriche ed i metodi per effettuare verifica sono ampiamente e dettagliatamente descritti nel \emph{Piano di Qualifica v2.0.0}.
 
 \subsubsection{Analisi dei processi}
-Descrizione delle procedure per verificare adeguatamente lo svolgimento dei processi.
+La qualità dei processi è garantita dall'uso del ciclo di miglioramento continuo \gl{PDCA}, descritto nell'appendice B. Con l'applicazione di questo metodo è possibile perseguire una migliore qualità dei processi, incluso quello di verifica; ciò porta ad ottenere una migliore qualità dei prodotti che ne derivano. \\
+Per ottenere una migliore qualità, quindi, bisogna che un processo venga definito, controllato e valutato.
 
 \paragraph{Analisi PDCA} \Spazio
 Attraverso lo studio della rappresentazione grafica del \gl{PDCA} relativo alla fase di progetto in esame, verranno tratte delle considerazioni riguardo lo svolgimento dei processi.
@@ -247,6 +249,36 @@ Per verificare la presenza di errori di sintassi, di parole grammaticalmente cor
 
 \paragraph{Rispetto delle Norme di Progetto} \Spazio
 La verifica del rispetto delle norme descritte in \emph{Norme di Progetto v2.0.0} è compito dei \emph{Verificatori} incaricati. Non essendo possibile impiegare strumenti automatici per verificare la corretta applicazione di tutte le norme spetta quindi ai \emph{Verificatori} sottoporre i documenti a verifica, secondo la strategia inspection.
+
+\paragraph{Metriche} \Spazio
+In seguito ad una qualsiasi modifica di un documento, si devono calcolare tutti i relativi indici di quel specifico documento. Inoltre dovrà essere ricalcolata la media complessiva di tutti gli indici calcolati fino a quel momento del documento in questione.
+Di seguito verranno descritte in modo dettagliato tutte le metriche relative ai documenti adottate. Per una spiegazione dettagliata riguardo gli obbiettivi che il team si è imposto di raggiungere per le suddette metriche consultare il documento \emph{Piano di Qualifica v3.0.0}.
+\subparagraph{Numero di errori grammaticali}\Spazio
+Misura del numero di errori ortografici presenti all'interno di un documento.
+Per verificare la presenza di errori ortografici nella documentazione deve essere usato lo strumento di controllo ortografico offerto dall'editor \emph{TexStudio} che integra i dizionari di OpenOffice per segnalare potenziali errori presenti nel testo.
+
+\subparagraph{Gunning fog index}\Spazio
+Indice utilizzato per misurare la facilità di lettura e comprensione di un testo. Il numero risultante è un indicatore del numero di anni di educazione formale necessari al fine di leggere il testo con facilità. \\
+L'indice di Gunning fog è calcolabile tramite la seguente formula:
+$$
+0.4*((\frac{n^{\circ}\:parole}{n^{\circ}\:frasi})+100*(\frac{n^{\circ}\:parole\:complesse}{n^{\circ}\:parole}))
+$$
+Per ogni documento i \emph{Verificatori} devono calcolare il Gunning fog index e se questo dovesse risultare troppo alto, dovrà essere eseguita la verifica del documento con l'obiettivo di ricercare frasi troppo prolisse o complesse. Il calcolo deve essere effettuato attraverso uno \gl{script} scritto in Perl che trasforma i documenti dal formato .pdf al formato .txt per effettuare un calcolo più preciso, eliminando le tabelle ma non il loro contenuto.
+
+\subparagraph{Indice di Gulpease}\Spazio
+Utilizzato per misurare la leggibilità di un testo in lingua italiana.\\
+L'indice di Gulpease è calcolabile tramite la seguente formula:
+$$
+89+\frac{(numero\:delle\:frasi)-10*(numero\:delle\:lettere)}{numero\:delle\:parole}
+$$
+I risultati sono compresi tra 0 e 100, dove 0 indica la leggibilità più bassa e 100 la leggibilità più alta. In generale risulta che i testi con indice:
+\begin{itemize}
+	\item{\textbf{Inferiore	a 80}}: sono difficili da leggere per chi ha la licenza elementare;
+	\item{\textbf{Inferiore	a 60}}: sono difficili da leggere per chi ha la licenza media;
+	\item{\textbf{Inferiore	a 40}}: sono difficili da leggere per chi ha la licenza superiore.
+\end{itemize}
+Per ogni documento i \emph{Verificatori} devono calcolare l'indice di Gulpease e se questo dovesse risultare troppo basso, dovrà essere eseguita la verifica del documento con l'obiettivo di ricercare frasi troppo prolisse o complesse. Il calcolo deve essere effettuato attraverso uno \gl{script} scritto in Perl che trasforma i documenti dal formato .pdf al formato .txt per effettuare un calcolo più preciso, eliminando le tabelle ma non il loro contenuto.
+
 
 \subsubsection{Analisi dei prodotti software}
 Descrizione delle procedure da eseguire per verificare adeguatamente i prodotti software.
@@ -301,7 +333,87 @@ Le principali tipologie di test che è possibile eseguire durante l'analisi dina
 \end{itemize}
 
 \subparagraph{Strumenti di supporto} \Spazio
-Lo strumento usato per l'analisi dinamica è TravisCI, un servizio che permette di eseguire delle build automatiche su codice presente in repository GitHub. Tiene traccia dello storico delle build effettuate, mostrando per ognuna di esse varie informazioni tra cui l'esito, il commit che ha scaturito la build e l'utente che l'ha effettuato. Esso è facilmente integrabile con Coveralls, un servizio che permette di misurare la percentuale di codice coperto dai test. 
+Per l'analisi dinamica vengono usati Mocha e Chai. Il primo è un framework  per l'esecuzione di test JavaScript che si basa su Node.js, il secondo è una libreria che contiene numerose interfacce per facilitare lo sviluppo dei test.
+
+\paragraph{Metriche}  \Spazio
+Di seguito verranno descritte in modo dettagliato tutte le metriche adottate relative ai test. Per una spiegazione dettagliata riguardo gli obiettivi che il team si è imposto di raggiungere per le suddette metriche consultare il \emph{Piano di Qualifica v3.0.0.}
+
+\subparagraph{Media \gl{Build} \gl{Travis} a settimana}\Spazio
+Media delle build Travis effettuate settimanalmente sulle diverse repository del gruppo. Utile per tenere traccia dell'impegno dedicato settimanalmente dal team sul progetto.
+\subparagraph{Percentuale di build Travis superate}\Spazio
+Percentuale delle build Travis effettuate che hanno avuto esito positivo sul numero totale delle build effettuate. Utile per tenere traccia dei progressi raggiunti dal team.
+\subparagraph{Percentuale di test eseguiti}\Spazio
+Indica la percentuale di test eseguiti sul totale di test da eseguire, serve al team di verificatori per monitorare lo svolgimento delle loro attività.
+Viene utilizzata la seguente formula:
+$$PTE=\frac{TE}{TT}*100$$
+Dove:
+\begin{itemize}
+	\item{\textbf{PTE}: è il valore della metrica;}
+	\item{\textbf{TE}: è il numero di test eseguiti;}
+	\item{\textbf{TT}: è il numero di totale di test.}
+\end{itemize}
+
+\subparagraph{Percentuale test case passati}\Spazio
+Indica la percentuale di test passati rispetto ai test totali.\\
+La percentuale test case passati è calcolabile tramite la seguente formula:
+$$PTP=\frac{TP}{NT}*100$$
+Dove:
+\begin{itemize}
+	\item{\textbf{PTP}: è il valore della metrica;}
+	\item{\textbf{TP}: è il numero di test case passati;}
+	\item{\textbf{NT}: è il numero di test case totale.}
+\end{itemize}
+
+\subparagraph{Percentuale test case falliti}\Spazio
+Indica la percentuale di test falliti rispetto ai test totali.\\
+La percentuale test case falliti è calcolabile tramite la seguente formula:
+$$PTF=\frac{TF}{NT}*100$$
+Dove:
+\begin{itemize}
+	\item{\textbf{PTF}: è il valore della metrica;}
+	\item{\textbf{TF}: è il numero di test case falliti;}
+	\item{\textbf{NT}: è il numero di test case totale.}
+\end{itemize}
+
+\subparagraph{Tempo medio necessario al team per risolvere un errore}\Spazio
+Indica la quantità di tempo media spesa dal team per risolvere una criticità, utile a comprendere
+l'impatto che l'introduzione di bug ha sui tempi di sviluppo. La formula usata per calcolarla è:
+$$TMRE=\frac{TRE}{NE}$$
+Dove:
+\begin{itemize}
+	\item{\textbf{TMRE}: è il valore della metrica;}
+	\item{\textbf{TRE}: è il quantitativo di tempo speso a risolvere errori;}
+	\item{\textbf{NE}: è il numero di errori risolti.}
+\end{itemize}
+
+\subparagraph{Efficienza nella progettazione dei test}\Spazio
+Indica il tempo medio per la scrittura dei test. Un valore troppo basso potrebbe indicare la scrittura di test banali o poco efficaci.
+Al contrario un valore troppo alto potrebbe indicare la scrittura di test troppo complessi che rischiano di contenere essi stessi errori.
+La formula usata per calcolare questa metrica è:
+$$TDE=\frac{NTP}{TST}$$
+Dove:
+\begin{itemize}
+	\item{\textbf{TDE}: è il valore della metrica;}
+	\item{\textbf{NTP}: è il numero di test scritti;}
+	\item{\textbf{TST}: è il quantitativo di tempo speso a scrivere test.}
+\end{itemize}
+
+\subparagraph{Percentuale di errori corretti} \Spazio
+Indica la percentuale di criticità (bug, difetti in genere) risolte sul totale di quelle note.
+Se questa percentuale è troppo bassa, il team sarà costretto a fermare i processi di sviluppo per risolvere le criticità esistenti.
+Per il calcolo viene utilizzata la seguente formula:
+$$PCR=\frac{CR}{CN}*100$$
+Dove:
+\begin{itemize}
+	\item{\textbf{PCR}: è il valore della metrica;}
+	\item{\textbf{CR}: è il numero di criticità risolte;}
+	\item{\textbf{CN}: è il numero di criticità note.}
+\end{itemize}
+
+\subparagraph{Code coverage}\Spazio
+Per assicurarsi che la più grande porzione possibile di codice venga testata, si adotta questa metrica, che indica in percentuale, quanto del codice sorgente
+è soggetto a test. Più alta tale percentuale, minore il rischio che vi siano criticità non rilevate.
+Per il suo calcolo si farà uso degli strumenti automatici descritti nella sezione §2.2.2 di questo documento, ovvero TravisCI e Coveralls.
 
 \subsubsection{Analisi diagrammi UML}
 La verifica dei diagrammi UML prodotti è compito dei \emph{Verificatori}, che devono accertarsi che rispettino lo standard UML e che siano semanticamente corretti.
