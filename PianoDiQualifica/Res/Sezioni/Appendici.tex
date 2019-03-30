@@ -285,6 +285,7 @@ Dalla tabella si può notare come tutti gli indici Gunning fox dei documenti rie
 
 \paragraph{Numero errori ortografici} \Spazio
 Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumento di controllo ortografico integrato in \gl{TexStudio}, il numero di errori ortografici per ogni documento ha raggiunto il valore ottimale di 0.
+\newpage
 
 \newsection{Specifica dei test}
 \subsection{Test di accettazione}
@@ -302,7 +303,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 		\begin{itemize}
 			\item \textbf{Input}: file JSON con la definizione di rete;
-			\item \textbf{Output}: il sistema importa la definizione della rete mostrandone il contenuto.
+			\item \textbf{Risultato atteso}: il sistema importa la definizione della rete mostrandone il contenuto.
 		\end{itemize}
 	\item \textbf{Procedura}:
 		\begin{itemize}
@@ -322,7 +323,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}:
-		\item \textbf{Output}: il sistema effettua la connessione tra flusso dati e nodi della rete.
+		\item \textbf{Risultato atteso}: il sistema effettua la connessione tra flusso dati e nodi della rete.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -338,7 +339,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: 
-		\item \textbf{Output}: il sistema connette il nodo selezionato e lo monitora rispetto al flusso dati.
+		\item \textbf{Risultato atteso}: il sistema connette il nodo selezionato e lo monitora rispetto al flusso dati.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -354,7 +355,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}:
-		\item \textbf{Output}: il sistema disconnette il nodo selezionato.
+		\item \textbf{Risultato atteso}: il sistema disconnette il nodo selezionato.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -370,7 +371,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: 
-		\item \textbf{Output}: il sistema apporta le modifiche richieste.
+		\item \textbf{Risultato atteso}: il sistema apporta le modifiche richieste.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -388,7 +389,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: 
-		\item \textbf{Output}: il sistema effettua il ricalcolo delle probabilità della rete aggiornandone lo stato dei nodi.
+		\item \textbf{Risultato atteso}: il sistema effettua il ricalcolo delle probabilità della rete aggiornandone lo stato dei nodi.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -404,7 +405,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: 
-		\item \textbf{Output}: il sistema apporta le modifiche richieste alle regole temporali per il ricalcolo delle probabilità.
+		\item \textbf{Risultato atteso}: il sistema apporta le modifiche richieste alle regole temporali per il ricalcolo delle probabilità.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -416,19 +417,18 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 \hline
 {TA-4} &
 \begin{itemize}
-	\item \textbf{Progettazione}: verifica che il sistema permetta fornire nuovi dati a Grafana derivati dai nodi
-	della rete non direttamente collegati al flusso di
+	\item \textbf{Progettazione}: verifica che il sistema permetta di fornire nuovi dati a Grafana derivati dai nodi della rete non direttamente collegati al flusso di
 	dati;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}:
+		\item \textbf{Risultato atteso}: il sistema elabora i dati proveniente dai nodi non connessi al flusso.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item ;
-		\item .
+		\item Il sistema legge i dati in ingresso dal flusso;
+		\item Il sistema elabora i dati;
+		\item Il sistema usa i risultati ottenuti per calcolare le probabilità dei nodi non connessi.
 	\end{itemize} 
 \end{itemize}\\
 \hline
@@ -437,14 +437,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Progettazione}: verifica che il sistema permetta l'aggiornamento dei dati secondo una frequenza stabilita dall'utente;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}:
+		\item \textbf{Risultato atteso}: il sistema effettua l'aggiornamento costante dei dati.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item ;
-		\item .
+		\item Il sistema, dopo un tempo predefinito, legge nuovi dati in ingresso;
+		\item Il sistema elabora i nuovi dati.
 	\end{itemize} 
 \end{itemize} \\
 \hline
@@ -454,7 +453,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: flusso di dati;
-		\item \textbf{Output}: grafico derivato dall'elaborazione dei dati.
+		\item \textbf{Risultato atteso}: grafico derivato dall'elaborazione dei dati.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -471,7 +470,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: nuovi dati dal flusso;
-		\item \textbf{Output}: il sistema aggiorna i dati nel grafico.
+		\item \textbf{Risultato atteso}: il sistema aggiorna i dati nel grafico.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -487,7 +486,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}:
-		\item \textbf{Output}: il sistema crea il nuovo panel e lo mostra all'interno della dashboard..
+		\item \textbf{Risultato atteso}: il sistema crea il nuovo panel e lo mostra all'interno della dashboard..
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -503,7 +502,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}:
-		\item \textbf{Output}: il sistema sposta panel nella nuova posizione scelta dall'utente.
+		\item \textbf{Risultato atteso}: il sistema sposta panel nella nuova posizione scelta dall'utente.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -518,7 +517,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema cancella panel scelto dall'utente.
+		\item \textbf{Risultato atteso}: il sistema cancella panel scelto dall'utente.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -535,7 +534,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema modifica la dimensione del panel come scelto dall'utente.
+		\item \textbf{Risultato atteso}: il sistema modifica la dimensione del panel come scelto dall'utente.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -551,7 +550,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema configura le opzioni del panel come stabilito dall'utente.
+		\item \textbf{Risultato atteso}: il sistema configura le opzioni del panel come stabilito dall'utente.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -566,7 +565,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema modifica le opzioni del panel come stabilito dall'utente.
+		\item \textbf{Risultato atteso}: il sistema modifica le opzioni del panel come stabilito dall'utente.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -581,7 +580,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema crea un nuovo alert.
+		\item \textbf{Risultato atteso}: il sistema crea un nuovo alert.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -598,7 +597,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema configura i parametri dell'alert.
+		\item \textbf{Risultato atteso}: il sistema configura i parametri dell'alert.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -614,7 +613,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema imposta il sistema di notifica dell'alert.
+		\item \textbf{Risultato atteso}: il sistema imposta il sistema di notifica dell'alert.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -629,12 +628,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Progettazione}: verifica che il sistema permetta di disegnare una rete Bayesiana con un editor grafico specializzato;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}:
+		\item \textbf{Risultato atteso}: la rete Bayesiana è stata disegnata.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
+		\item L'utente avvia l'editor grafico;
+		\item L'utente inizia a disegnare una rete Bayesiana;
 	\end{itemize} 
 \end{itemize} \\
 \hline
@@ -643,12 +643,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Progettazione}: verifica che il sistema permetta di creare un nuovo nodo della rete;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}:
+		\item \textbf{Risultato atteso}: il nuovo della rete è stato creato.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
+		\item L'utente preme il pulsante \emph{add node};
+		\item L'utente sceglie la posizione in cui crearlo.
 	\end{itemize} 
 \end{itemize} \\
 \hline
@@ -657,12 +658,14 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Progettazione}: verifica che il sistema permetta di modificare i parametri di un nodo della rete;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}:
+		\item \textbf{Risultato atteso}: i parametri del nodo vengono modificati.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
+		\item L'utente si posiziona nelle impostazioni del nodo;
+		\item L'utente modifica i parametri secondo le sue preferenze;
+		\item L'utente conferma le modifiche.
 	\end{itemize} 
 \end{itemize} \\
 \hline
@@ -671,12 +674,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Progettazione}: verifica che il sistema permetta di creare un collegamento tra due nodi della rete;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il nuovo collegamento viene creato.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
+		\item L'utente preme il pulsante \emph{"add link"};
+		\item L'utente sceglie i nodi da collegare.
 	\end{itemize} 
 \end{itemize} \\
 \hline
@@ -685,12 +689,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Progettazione}: verifica che il sistema permetta di eliminare un collegamento tra due nodi della rete;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il collegamento viene eliminato.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
+		\item L'utente preme il pulsante \emph{"remove link"};
+		\item L'utente sceglie il collegamento da rimuovere.
 	\end{itemize} 
 \end{itemize}\\
 \hline
@@ -699,12 +704,14 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Progettazione}: verifica che il sistema permetta di salvare la rete realizzata su un file JSON;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}:
+		\item \textbf{Risultato atteso}: il file JSON con la definizione della rete viene salvato.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
+		\item L'utente preme il pulsante \emph{"save network"};
+		\item L'utente sceglie il percorso in cui salvare il file;
+		\item L'utente conferma la scelta.
 	\end{itemize} 
 \end{itemize} \\
 \hline
@@ -713,12 +720,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Progettazione}: verifica che il sistema rilevi e sia in grado di gestire eventuali errori derivati dalla modifica di un nodo;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}:
+		\item \textbf{Risultato atteso}: il sistema mostra un messaggio di errore.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
+		\item L'utente si posiziona nelle impostazioni di un nodo;
+		\item L'utente effettua delle modifiche non valide.
 	\end{itemize} 
 \end{itemize} \\
 \hline
@@ -727,12 +735,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Progettazione}: verifica che il sistema permetta di applicare più reti Bayesiane a diversi oggetti di monitoraggio;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema avvia il monitoraggio di diversi oggetti.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
+		\item L'utente importa più reti Bayesiane;
+		\item L'utente connette le reti a diversi flussi di dati.
 	\end{itemize} 
 \end{itemize} \\
 \hline
@@ -742,12 +751,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	sul campo;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}:
+		\item \textbf{Risultato atteso}: il sistema crea une rete Bayesiana.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
+		\item Il sistema raccoglie i dati provenienti dal flusso;
+		\item Il sistema li elabora per costruire una rete Bayesiana.
 	\end{itemize} 
 \end{itemize} \\
 \hline
@@ -756,8 +766,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Progettazione}: verifica che il sistema permetta di condividere grafici presenti in una dashboard o in un singolo panel;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema condivide il grafico secondo l'opzione scelta dall'utente.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema condivide il grafico secondo l'opzione scelta dall'utente.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -772,8 +782,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	panel;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema mostra il link generato con cui l'utente può effettuare la condivisione.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema mostra il link generato con cui l'utente può effettuare la condivisione.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -789,8 +799,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Progettazione}: verifica che il sistema permetta di visualizzare il codice per l'inclusione di un panel in una pagina web;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: Il sistema mostra il frame generato con cui l'utente può effettuare la condivisione.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: Il sistema mostra il frame generato con cui l'utente può effettuare la condivisione.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -807,8 +817,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	panel;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema effettua la condivisione dello snapshot.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema effettua la condivisione dello snapshot.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -825,8 +835,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	di una dashboard;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema mostra il codice JSON con la definizione della dashboard.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema mostra il codice JSON con la definizione della dashboard.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -843,8 +853,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	dashboard;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema effettua il salvataggio del codice JSON con la definizione della dashboard.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema effettua il salvataggio del codice JSON con la definizione della dashboard.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -876,7 +886,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: file JSON con la definizione di una rete Bayesiana;
-		\item \textbf{Output}: il sistema legge il JSON e costruisce la rete.
+		\item \textbf{Risultato atteso}: il sistema legge il JSON e costruisce la rete.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -893,7 +903,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: file JSON;
-		\item \textbf{Output}: il sistema mostra degli errori se il file non è valido.
+		\item \textbf{Risultato atteso}: il sistema mostra degli errori se il file non è valido.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -909,8 +919,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	connessione tra i nodi della rete ai rispettivi flussi di dati;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema effettua la connessione tra flusso dati e nodi della rete.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema effettua la connessione tra flusso dati e nodi della rete.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -925,8 +935,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	nodo della rete ad un flusso di dati;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema connette il nodo selezionato al flusso dati.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema connette il nodo selezionato al flusso dati.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -942,8 +952,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	nodo della rete da un flusso di dati.;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema disconnette il nodo selezionato dal flusso dati.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema disconnette il nodo selezionato dal flusso dati.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -959,8 +969,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	flusso di dati connesso ad un nodo;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema  seleziona un altro flusso di dati da associare alla rete.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema  seleziona un altro flusso di dati da associare alla rete.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -977,7 +987,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: flusso di dati;
-		\item \textbf{Output}: il sistema effettua il ricalcolo delle probabilità della
+		\item \textbf{Risultato atteso}: il sistema effettua il ricalcolo delle probabilità della
 		rete aggiornandone lo stato dei nodi.
 	\end{itemize}
 	\item \textbf{Procedura}:
@@ -995,8 +1005,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	suddette regole temporali;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema apporta le modifiche richieste alle regole temporali per il ricalcolo delle probabilità.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema apporta le modifiche richieste alle regole temporali per il ricalcolo delle probabilità.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1014,14 +1024,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	monitoraggio;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+	\item \textbf{Input}:
+	\item \textbf{Risultato atteso}: il sistema elabora i dati proveniente dai nodi non connessi al flusso.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
-	\end{itemize} 
+	\item Il sistema legge i dati in ingresso dal flusso;
+	\item Il sistema elabora i dati;
+	\item Il sistema usa i risultati ottenuti per calcolare le probabilità dei nodi non connessi.
+	\end{itemize}
 \end{itemize}
 	\\
 	\hline
@@ -1031,16 +1042,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	in base alla frequenza stabilita;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}:
+		\item \textbf{Risultato atteso}: il sistema effettua l'aggiornamento costante dei dati.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item Il sistema, dopo un tempo predefinito, legge nuovi dati in ingresso;
+		\item Il sistema elabora i nuovi dati.
 	\end{itemize} 
-\end{itemize}
-	\\
+\end{itemize} \\
 	\hline
 	{TS-5} & 
 \begin{itemize}
@@ -1049,7 +1059,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: flusso di dati;
-		\item \textbf{Output}: grafico derivato dall'elaborazione dei dati.
+		\item \textbf{Risultato atteso}: grafico derivato dall'elaborazione dei dati.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1067,7 +1077,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: nuovi dati dal flusso;
-		\item \textbf{Output}: il sistema aggiorna i dati nel grafico.
+		\item \textbf{Risultato atteso}: il sistema aggiorna i dati nel grafico.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1083,8 +1093,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Progettazione}: verifica che sia possibile creare un panel;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema crea il nuovo panel e lo mostra all'interno della dashboard.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema crea il nuovo panel e lo mostra all'interno della dashboard.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1100,8 +1110,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Progettazione}: verifica che sia possibile spostare un panel;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema sposta panel nella nuova posizione scelta dall'utente.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema sposta panel nella nuova posizione scelta dall'utente.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1117,8 +1127,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	panel;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema cancella panel scelto dall'utente.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema cancella panel scelto dall'utente.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1136,8 +1146,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	panel;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema modifica la dimensione del panel come scelto dall'utente.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema modifica la dimensione del panel come scelto dall'utente.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1154,8 +1164,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	panel;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema configura le opzioni del panel come stabilito dall'utente.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema configura le opzioni del panel come stabilito dall'utente.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1171,8 +1181,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	flusso dati;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema associa i dati in ingresso al flusso.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema associa i dati in ingresso al flusso.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1188,8 +1198,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	nodo della rete;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: .
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1205,8 +1215,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	intervallo di tempo;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema mostra nel grafico i dati elaborati in quell'intervallo di tempo.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema mostra nel grafico i dati elaborati in quell'intervallo di tempo.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1222,8 +1232,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	panel;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema modifica le opzioni del panel come stabilito dall'utente.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema modifica le opzioni del panel come stabilito dall'utente.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1239,8 +1249,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	modifiche standard di Grafana su un panel;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema apporta le modifiche richieste.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema apporta le modifiche richieste.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1256,8 +1266,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	base a livelli di soglia raggiunti dai nodi non collegati al flusso dei dati;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema crea un nuovo alert.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema crea un nuovo alert.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1275,8 +1285,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	parametri di un alert;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema configura i parametri dell'alert.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema configura i parametri dell'alert.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1294,7 +1304,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: stringa col nome dell'alert;
-		\item \textbf{Output}: il sistema inserisce il nome dell'alert.
+		\item \textbf{Risultato atteso}: il sistema inserisce il nome dell'alert.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1312,7 +1322,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: numero intero;
-		\item \textbf{Output}: il sistema inserisce il tempo per l'intervallo di verifica.
+		\item \textbf{Risultato atteso}: il sistema inserisce il tempo per l'intervallo di verifica.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1329,8 +1339,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	condizione di attivazione di un alert;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema inserisce la condizione di attivazione.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema inserisce la condizione di attivazione.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1347,8 +1357,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	modo in cui viene notificata l'attivazione di un alert;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema imposta il sistema di notifica dell'alert.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema imposta il sistema di notifica dell'alert.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1365,46 +1375,44 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	Bayesiana con un editor grafico specializzato;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}:
+		\item \textbf{Risultato atteso}: la rete Bayesiana è stata disegnata.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente avvia l'editor grafico;
+		\item L'utente inizia a disegnare una rete Bayesiana;
 	\end{itemize} 
-\end{itemize}
-	\\
-	\hline
+\end{itemize} \\
+\hline
 	{TS-7.1} & 
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica che sia possibile creare un nodo
 	della rete;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}:
+		\item \textbf{Risultato atteso}: il nuovo della rete è stato creato.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente preme il pulsante \emph{add node};
+		\item L'utente sceglie la posizione in cui crearlo.
 	\end{itemize} 
-\end{itemize}
-	  \\
-	\hline
+\end{itemize} \\
+\hline
 	{TS-7.1.1} &
 \begin{itemize}
-	\item \textbf{Progettazione}: verifica che sia  possibile inizializzare la lista di predecessori del nodo;
+	\item \textbf{Progettazione}: verifica che sia possibile inizializzare la lista di predecessori del nodo;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: elenco dei predecessori;
+		\item \textbf{Risultato atteso}: la lista dei predecessori viene inizializzata.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona nelle impostazioni del nodo;
+		\item L'utente inserisce l'elenco dei predecessori.
 	\end{itemize} 
 \end{itemize}
 	  \\
@@ -1414,13 +1422,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Progettazione}: verifica che sia possibile inizializzare la lista di successori del nodo;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: elenco dei successori;
+		\item \textbf{Risultato atteso}: la lista dei successori viene inizializzata.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona nelle impostazioni del nodo;
+		\item L'utente inserisce l'elenco dei successori.
 	\end{itemize} 
 \end{itemize}
 	  \\
@@ -1430,13 +1438,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Progettazione}: verifica che sia possibile inizializzare il nome del nodo;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: stringa col nome del nodo;
+		\item \textbf{Risultato atteso}: il nome del nodo viene inizializzato.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona nelle impostazioni del nodo;
+		\item L'utente inserisce il nome.
 	\end{itemize} 
 \end{itemize}
 	  \\
@@ -1446,13 +1454,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Progettazione}: verifica che sia possibile inizializzare la CPT associata al nodo;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: dati della CPT;
+		\item \textbf{Risultato atteso}: la CPT di un nodo viene inizializzata.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona nelle impostazioni del nodo;
+		\item L'utente inserisce inserisce i dati per la CPT.
 	\end{itemize} 
 \end{itemize}
 	  \\
@@ -1462,30 +1470,29 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Progettazione}: verifica che sia possibile inizializzare la lista degli stati associata alla CPT del nodo;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: elenco degli stati;
+		\item \textbf{Risultato atteso}: la lista degli stati associata alla CPT viene inizializzata.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona nelle impostazioni del nodo;
+		\item L'utente inserisce inserisce gli stati associati alla CPT.
 	\end{itemize} 
 \end{itemize}
 	  \\
 	\hline
 	{TS-7.1.4.2} &
 \begin{itemize}
-	\item \textbf{Progettazione}:  verifica che sia possibile inizializzare la lista delle combinazioni degli stati dei nodi
-	predecessori associata alla CPT del nodo;
+	\item \textbf{Progettazione}: verifica che sia possibile inizializzare la lista delle combinazioni degli stati dei nodi predecessori associata alla CPT del nodo;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: elenco delle combinazioni;
+		\item \textbf{Risultato atteso}: la lista delle combinazioni degli stati dei nodi predecessori viene inizializzata.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona nelle impostazioni del nodo;
+		\item L'utente inserisce inserisce le combinazioni degli stati dei nodi predecessori.
 	\end{itemize} 
 \end{itemize}
 	 \\
@@ -1495,13 +1502,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Progettazione}:  verifica che sia possibile inizializzare le celle della CPT;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: dati della CPT;
+		\item \textbf{Risultato atteso}: le celle della CPT vengono inizializzate.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona nelle impostazioni del nodo;
+		\item L'utente inserisce inserisce i dati per le celle della CPT.
 	\end{itemize} 
 \end{itemize}
 	  \\
@@ -1512,13 +1519,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	parametri di un nodo della rete;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema modifica i parametri di un nodo.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona nelle impostazioni del nodo;
+		\item L'utente modifica i parametri.
 	\end{itemize} 
 \end{itemize}
 	 \\
@@ -1529,13 +1536,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	nome di un nodo della rete;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: stringa con nome del nodo;
+		\item \textbf{Risultato atteso}: il sistema modifica il nome del nodo.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona nelle impostazioni del nodo;
+		\item L'utente inserisce il nuovo nome del nodo.
 	\end{itemize} 
 \end{itemize}
 	 \\
@@ -1546,13 +1553,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	CPT associata ad un nodo della rete;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: dati della CPT;
+		\item \textbf{Risultato atteso}: il sistema modifica la CPT.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona nelle impostazioni del nodo;
+		\item L'utente modifica la CPT.
 	\end{itemize} 
 \end{itemize}
 	 \\
@@ -1563,13 +1570,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	stato alla CPT associata ad un nodo della rete;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema aggiunge un nuovo stato alla CPT.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona nelle impostazioni del nodo;
+		\item L'utente aggiunge un nuovo stato alla CPT.
 	\end{itemize} 
 \end{itemize}
 	 
@@ -1581,13 +1588,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	stato dalla CPT associata ad un nodo della rete;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema elimina uno stato dalla CPT.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona nelle impostazioni del nodo;
+		\item L'utente rimuove uno stato dalla CPT.
 	\end{itemize} 
 \end{itemize}
 	   \\
@@ -1598,13 +1605,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	parametri associati ad uno stato della CPT associata ad un nodo della rete;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema modifica i parametri associati ad uno stato della CPT.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona nelle impostazioni del nodo;
+		\item L'utente modifica i parametri della CPT.
 	\end{itemize} 
 \end{itemize}
 	 \\
@@ -1615,13 +1622,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	cella della CPT;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema modifica la cella della CPT.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona nelle impostazioni del nodo;
+		\item L'utente modifica la cella della CPT.
 	\end{itemize} 
 \end{itemize}
 	 \\
@@ -1632,13 +1639,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	nodo dalla rete;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema elimina il nodo dalla rete.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente preme il pulsante \emph{"add link"};
+		\item L'utente sceglie i nodi da collegare.
 	\end{itemize} 
 \end{itemize}
 	  \\
@@ -1649,30 +1656,29 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	collegamento tra due nodi della rete;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il collegamento viene eliminato.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente preme il pulsante \emph{"remove link"};
+		\item L'utente sceglie il collegamento da rimuovere.
 	\end{itemize} 
-\end{itemize}
-	  \\
-	\hline
+\end{itemize}\\
+\hline
 	{TS-7.4.1} & 
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica che sia possibile indicare il nodo
 	di partenza del collegamento;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema seleziona il nodo di partenza.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente preme il pulsante \emph{"add link"};
+		\item L'utente sceglie il nodo di partenza.
 	\end{itemize} 
 \end{itemize}
 	 \\
@@ -1683,64 +1689,63 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	di arrivo del collegamento;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema seleziona il nodo di partenza.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente preme il pulsante \emph{"add link"};
+		\item L'utente sceglie il nodo di arrivo.
 	\end{itemize} 
 \end{itemize}
-	  \\
-	\hline
+\\
+\hline
 	{TS-7.5} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica che sia possibile eliminare un
 	collegamento dalla rete;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}:
+		\item \textbf{Risultato atteso}: il file JSON con la definizione della rete viene salvato.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente preme il pulsante \emph{"save network"};
+		\item L'utente sceglie il percorso in cui salvare il file;
+		\item L'utente conferma la scelta.
 	\end{itemize} 
-\end{itemize}
-	  \\
-	\hline
+\end{itemize} \\
+\hline
 	{TS-7.6} & 
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica che sia possibile salvare la rete su
 	file JSON;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}:
+		\item \textbf{Risultato atteso}: il sistema mostra un messaggio di errore.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona nelle impostazioni di un nodo;
+		\item L'utente effettua delle modifiche non valide.
 	\end{itemize} 
-\end{itemize}
-	 \\
-	\hline
+\end{itemize} \\
+\hline
 	{TS-7.6.1} & 
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica che sia possibile indicare il nome
 	del file JSON su cui si vuole salvare la struttura della rete;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: stringa con il nome del file;
+		\item \textbf{Risultato atteso}: il  sistema inserisce il nome del file.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente preme il pulsante \emph{save network};
+		\item L'utente inserisce il nome del file.
 	\end{itemize} 
 \end{itemize}
 	 \\
@@ -1752,13 +1757,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	struttura della rete;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: percorso del file system;
+		\item \textbf{Risultato atteso}: il sistema inserisci il percorso in cui salvare il file.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente preme il pulsante \emph{save network};
+		\item L'utente inserisce percorso del file.
 	\end{itemize} 
 \end{itemize}
 	  \\
@@ -1769,13 +1774,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	relativi alla modifica di un nodo;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema mostra un messaggio di errore.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona nelle impostazioni di un nodo;
+		\item L'utente effettua delle modifiche non valide.
 	\end{itemize} 
 \end{itemize}
 	 \\
@@ -1786,13 +1791,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	l'inserimento di valori non validi per il nome di un nodo;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: stringa non valida;
+		\item \textbf{Risultato atteso}: il sistema mostra un messaggio di errore.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona nelle impostazioni di un nodo;
+		\item L'utente inserisce un nome non valido.
 	\end{itemize} 
 \end{itemize}
 	 \\
@@ -1804,13 +1809,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	di un nodo della rete;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: stringa non valida;
+		\item \textbf{Risultato atteso}: il sistema mostra un messaggio di errore.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona nelle impostazioni di un nodo;
+		\item L'utente inserisce un nome non valido.
 	\end{itemize} 
 \end{itemize}
 	 \\
@@ -1822,13 +1827,13 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	nodo;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: numero intero;
+		\item \textbf{Risultato atteso}: il sistema mostra un messaggio di errore.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona nelle impostazioni di un nodo;
+		\item L'utente inserisce un valore non valido.
 	\end{itemize} 
 \end{itemize}
 	 \\
@@ -1839,34 +1844,33 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	l'inserimento di valori non validi per una cella della tabella;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: numero intero;
+		\item \textbf{Risultato atteso}: il sistema mostra un messaggio di errore.
 	\end{itemize}
-	\item \textbf{Procedura}:
-	\begin{itemize}
-		\item ;
-		\item .
-	\end{itemize} 
+\item \textbf{Procedura}:
+\begin{itemize}
+\item L'utente si posiziona nelle impostazioni di un nodo;
+\item L'utente inserisce un valore non valido.
+\end{itemize} 
 \end{itemize}
-	 \\
-	\hline
+\\
+\hline
 	{TS-8} & 
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica che sia possibile applicare più reti
 	Bayesiane in oggetti di monitoraggio diversi;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema avvia il monitoraggio di diversi oggetti.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente importa più reti Bayesiane;
+		\item L'utente connette le reti a diversi flussi di dati.
 	\end{itemize} 
-\end{itemize}
-	 \\
-	\hline
+\end{itemize} \\
+\hline
 	{TS-9} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica che sia  possibile creare una rete
@@ -1874,25 +1878,24 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	collaborazione degli esperti del settore;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: .
+		\item \textbf{Input}:
+		\item \textbf{Risultato atteso}: il sistema crea une rete Bayesiana.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item Il sistema raccoglie i dati provenienti dal flusso;
+		\item Il sistema li elabora per costruire una rete Bayesiana.
 	\end{itemize} 
-\end{itemize}
-	  \\
-	\hline
+\end{itemize} \\
+\hline
 	{TS-10} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica che sia possibile condividere un
 	grafico;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema condivide il grafico secondo l'opzione scelta dall'utente.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema condivide il grafico secondo l'opzione scelta dall'utente.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1908,8 +1911,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	link diretto ad una dashboard o ad un panel;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema mostra il link generato con cui l'utente può effettuare la condivisione.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema mostra il link generato con cui l'utente può effettuare la condivisione.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1927,8 +1930,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	codice per l’inclusione di un panel in una pagina web;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema mostra il frame generato con cui l'utente può effettuare la condivisione.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema mostra il frame generato con cui l'utente può effettuare la condivisione.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -1946,13 +1949,14 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	opzioni di visualizzazione per la condivisione dei grafici;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema seleziona le opzioni richieste.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema seleziona le opzioni richieste.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente seleziona l'opzione \emph{"Share"} relativa ad un panel o una dashboard;
+		\item L'utente configura le opzioni di visualizzazione.
 	\end{itemize} 
 \end{itemize}
 	\\
@@ -1963,13 +1967,14 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	visualizzazione dell'intervallo di tempo corrente in un grafico;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema mostra l'intervallo di tempo corrente.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema mostra l'intervallo di tempo corrente.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente seleziona l'opzione \emph{"Share"} relativa ad un panel o una dashboard;
+		\item L'utente seleziona la visualizzazione dell'intervallo di tempo.
 	\end{itemize} 
 \end{itemize}
 	  \\
@@ -1980,13 +1985,14 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	visualizzazione dell'intervallo di tempo corrente in un grafico;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema nasconde l'intervallo di tempo corrente.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema nasconde l'intervallo di tempo corrente.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente seleziona l'opzione \emph{"Share"} relativa ad un panel o una dashboard;
+		\item L'utente deseleziona la visualizzazione dell'intervallo di tempo.
 	\end{itemize} 
 \end{itemize}
 	 \\
@@ -1997,13 +2003,14 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	visualizzazione di variabili di template in un grafico;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema mostra le variabili di template.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema mostra le variabili di template.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente seleziona l'opzione \emph{"Share"} relativa ad un panel o una dashboard;
+		\item L'utente seleziona la visualizzazione delle variabili di template.
 	\end{itemize} 
 \end{itemize}
 	  \\
@@ -2014,13 +2021,14 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	visualizzazione di variabili di template in un grafico;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema nasconde le variabili di template.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema nasconde le variabili di template.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente seleziona l'opzione \emph{"Share"} relativa ad un panel o una dashboard;
+		\item L'utente deseleziona la visualizzazione delle variabili di template.
 	\end{itemize} 
 \end{itemize}
 	  \\
@@ -2031,13 +2039,14 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	tema di un grafico;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema mostra il tema selezionato.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema mostra il tema selezionato.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente seleziona l'opzione \emph{"Share"} relativa ad un panel o una dashboard;
+		\item L'utente seleziona il tema.
 	\end{itemize} 
 \end{itemize}
 	  \\
@@ -2048,8 +2057,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	snapshot di una dashboard o di un panel;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema effettua la condivisione dello snapshot.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema effettua la condivisione dello snapshot.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -2067,13 +2076,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	snapshot sull'istanza locale dell'utente;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema pubblica lo snapshot sull'istanza.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema pubblica lo snapshot sull'istanza.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente seleziona l'opzione \emph{"Share"} relativa a una dashboard ad un panel;
+		\item L'utente si posiziona sulla scheda \emph{"Snapshot"};
+		\item L'utente preme il pulsante per pubblicare lo snaphsot sulla sua istanza.
 	\end{itemize} 
 \end{itemize}
 	  \\
@@ -2084,13 +2095,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	snapshot su Raintank;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema pubblica lo snapshot su Raintank.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema pubblica lo snapshot su Raintank.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente seleziona l'opzione \emph{"Share"} relativa a una dashboard ad un panel;
+		\item L'utente si posiziona sulla scheda \emph{"Snapshot"};
+		\item L'utente preme il pulsante per pubblicare lo snaphsot su Raintank.
 	\end{itemize} 
 \end{itemize}
 	 \\
@@ -2101,13 +2114,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	opzioni di visualizzazione di uno snapshot;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema configura le opzioni selezionate.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema configura le opzioni selezionate.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente seleziona l'opzione \emph{"Share"} relativa a una dashboard ad un panel;
+		\item L'utente si posiziona sulla scheda \emph{"Snapshot"};
+		\item L'utente configura le opzioni di visualizzazione.
 	\end{itemize} 
 \end{itemize}
 	\\
@@ -2119,12 +2134,14 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: stringa con il nome;
-		\item \textbf{Output}: il sistema inserisce il nome dello snapshot.
+		\item \textbf{Risultato atteso}: il sistema inserisce il nome dello snapshot.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente seleziona l'opzione \emph{"Share"} relativa a una dashboard ad un panel;
+		\item L'utente si posiziona sulla scheda \emph{"Snapshot"};
+		\item L'utente inserisce il nome dello snapshot.
 	\end{itemize} 
 \end{itemize}
 	  \\
@@ -2136,12 +2153,14 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: numero intero;
-		\item \textbf{Output}: il sistema inserisce il tempo di permanenza.
+		\item \textbf{Risultato atteso}: il sistema inserisce il tempo di permanenza.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente seleziona l'opzione \emph{"Share"} relativa a una dashboard ad un panel;
+		\item L'utente si posiziona sulla scheda \emph{"Snapshot"};
+		\item L'utente inserisce il tempo di permanenza dello snapshot.
 	\end{itemize} 
 \end{itemize}
 	  \\
@@ -2153,12 +2172,14 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\item \textbf{Caso}: 
 	\begin{itemize}
 		\item \textbf{Input}: numero intero;
-		\item \textbf{Output}: il sistema inserisce il tempo di timeout.
+		\item \textbf{Risultato atteso}: il sistema inserisce il tempo di timeout.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
-		\item ;
-		\item .
+		\item L'utente si posiziona all'interno di una dashboard;
+		\item L'utente seleziona l'opzione \emph{"Share"} relativa a una dashboard ad un panel;
+		\item L'utente si posiziona sulla scheda \emph{"Snapshot"};
+		\item L'utente inserisce il tempo di timeout dello snapshot.
 	\end{itemize} 
 \end{itemize}
 	\\
@@ -2169,8 +2190,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	codice JSON contenente la definizione di una dashboard;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema mostra il codice JSON con la definizione della dashboard.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema mostra il codice JSON con la definizione della dashboard.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
@@ -2188,8 +2209,8 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	JSON contenente la definizione di una dashboard;
 	\item \textbf{Caso}: 
 	\begin{itemize}
-		\item \textbf{Input}: ;
-		\item \textbf{Output}: il sistema effettua il salvataggio del codice JSON con la definizione della dashboard.
+		\item \textbf{Input}: 
+		\item \textbf{Risultato atteso}: il sistema effettua il salvataggio del codice JSON con la definizione della dashboard.
 	\end{itemize}
 	\item \textbf{Procedura}:
 	\begin{itemize}
