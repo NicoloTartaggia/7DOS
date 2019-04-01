@@ -1,11 +1,3 @@
-\subsection{Pianificazione dei test}
-La consistenza dei test in esecuzioni ripetute è una condizione imperativa, dunque è necessario che essi siano \gl{ripetibili}: un dato test eseguito in un ambiente specifico deve produrre, se fornito un determinato input, sempre gli stessi output. Al fine di garantire ciò, il team 7DOS ha scelto di basarsi sullo standard \gl{ISO/IEC/IEEE 29119}\footnote{ISO/IEC/IEEE 29119 parte 3 sezione 7, IEEE 2013.} per quanto riguarda la pianificazione e documentazione dei test dinamici. Tale standard prevede di definire, per ciascun test o suite di test, una \emph{specifica di test} composta di:
-\begin{itemize}
-	\item {\textbf{Specifica di progettazione:} definisce le funzionalità del prodotto da testare e le condizioni di test, ovvero l'ambiente di esecuzione e le pre-condizioni (particolari eventi o stati pregressi) necessarie al suo svolgimento;}
-	\item {\textbf{Specifica di caso:} definisce l'insieme degli input che si desidera testare, e l'insieme dei risultati attesi per ogni input per una o più funzionalità testate;}
-	\item {\textbf{Specifica di procedura:} definisce l'ordine di esecuzione dei test (nel caso di una suite di test), la modalità di svolgimento, ovvero le azioni da compiere e gli input da inserire in modo ordinato, eventuali azioni necessarie per il raggiungimento delle pre-condizioni e la modalità di analisi dei risultati ottenuti.}
-\end{itemize}
-
 \newsection{Specifica dei test}
 \definecolor{darkgreen}{rgb}{0.0, 0.6, 0.0}
 \subsection{Test di accettazione}
