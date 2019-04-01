@@ -2260,14 +2260,507 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 	\textbf{\color{title_text}{Test}} & \textbf{\color{title_text}{Specifica}}  \\
 	\hline
 	\endhead
-	{TU-1} &  \\
+	{TU-1} & 
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica che il sistema rilevi una stringa non valida per il costruttore di \emph{BoolValue()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: stringa non valida;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
+		\end{itemize}
+	\end{itemize} \\
 	\hline
-	{TU-2} & \\
+	{TU-2} & 
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica che il sistema rilevi un valore booleano non valido per il costruttore di \emph{BoolValue()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: boolean non valido;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
+		\end{itemize}
+	\end{itemize}\\
 	\hline
-	{TU-3} & \\
+	{TU-3} & 
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{BoolValue} valido;
+			\item \textbf{Risultato atteso}: True.
+		\end{itemize}
+	\end{itemize}\\
 	\hline
-	{TU-4} &  \\
+	{TU-4} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con un parametro errato;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{BoolValue};
+			\item \textbf{Risultato atteso}: False.
+		\end{itemize}
+	\end{itemize}\\
 	\hline
+	{TU-5} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con un parametro casuale;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{BoolValue};
+			\item \textbf{Risultato atteso}: False.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-6} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il corretto funzionamento di \emph{isValueType()} senza parametro;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{BoolValue};
+			\item \textbf{Risultato atteso}: False.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-7} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con un parametro valido ma con la lettera maiuscola;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{BoolValue};
+			\item \textbf{Risultato atteso}: True.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-8} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con un parametro non definito;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{BoolValue};
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-9} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getValueName()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{BoolValue};
+			\item \textbf{Risultato atteso}: stringa col nome dell'oggetto.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-10} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica che il sistema rilevi parametri non validi per il costruttore di \emph{RangeValue()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: parametri non validi;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-11} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica che il sistema rilevi parametri invertiti del range per il costruttore di \emph{RangeValue()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: \emph{minRange} e \emph{maxRange} invertiti;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"maxRange is less then minRange"}.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-12} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{RangeValue()} con gli stessi parametri di range;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: \emph{minRange} e \emph{maxRange} uguali a 50;
+			\item \textbf{Risultato atteso}: stringa col nome dell'oggetto.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-13} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{RangeValue};
+			\item \textbf{Risultato atteso}: True.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-14} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro il limite del range;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{RangeValue};
+			\item \textbf{Risultato atteso}: True.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-15} &  
+	\begin{itemize}
+	\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro casuale;
+	\item \textbf{Caso}: 
+	\begin{itemize}
+		\item \textbf{Input}: oggetto \emph{RangeValue};
+		\item \textbf{Risultato atteso}: False.
+	\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-16} &  
+		\begin{itemize}
+			\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro vuoto;
+			\item \textbf{Caso}: 
+			\begin{itemize}
+				\item \textbf{Input}: oggetto \emph{RangeValue};
+				\item \textbf{Risultato atteso}: False.
+			\end{itemize}
+		\end{itemize}\\
+	\hline
+	{TU-17} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro errato;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{RangeValue};
+			\item \textbf{Risultato atteso}: False.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-18} &  
+	\begin{itemize}
+			\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro non definito;
+			\item \textbf{Caso}: 
+			\begin{itemize}
+				\item \textbf{Input}: oggetto \emph{RangeValue};
+				\item \textbf{Risultato atteso}: False.
+			\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-19} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} su un oggetto con gli stessi valori di range;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{RangeValue} con  \emph{minRange} e \emph{maxRange} uguali a 50;
+			\item \textbf{Risultato atteso}: True.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-20} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getValueName()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{RangeValue};
+			\item \textbf{Risultato atteso}: stringa col nome dell'oggetto.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-21} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica che il sistema rilevi parametri non validi per il costruttore di \emph{StringValue()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: stringa non valida;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-22} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{StringValue};
+			\item \textbf{Risultato atteso}: True.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-23} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro errato;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{StringValue};
+			\item \textbf{Risultato atteso}: False.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-24} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro casuale;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{StringValue};
+			\item \textbf{Risultato atteso}: False.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-25} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro vuoto;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{StringValue};
+			\item \textbf{Risultato atteso}: False.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-26} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro non definito;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{StringValue};
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-27} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getValueName()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{StringValue};
+			\item \textbf{Risultato atteso}: stringa col nome dell'oggetto.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-28} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica che il sistema rilevi parametri non validi per il costruttore di \emph{ConcreteNodeAdapter()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: parametro \emph{node} non definito;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-29} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica che il sistema rilevi parametri non validi per il costruttore di \emph{ConcreteNodeAdapter()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: parametro \emph{values} non definito;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-30} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getStates()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{concreteNode} con stati [True, False];
+			\item \textbf{Risultato atteso}: [True, False].
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-31} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getStates()} controllando che venga ritornata una copia profonda dell'oggetto;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{concreteNode} con stati [True, False];
+			\item \textbf{Risultato atteso}: [True, False].
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-32} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getStates()} con stati di un nodo invertiti;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{concreteNode} con stati [True, False];
+			\item \textbf{Risultato atteso}: diverso da [False, True].
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-33} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getValueName()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{concreteNodeValues};
+			\item \textbf{Risultato atteso}: nome dei values.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-34} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getValueName()} controllando che venga ritornata una copia profonda dell'oggetto;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{concreteNodeValues};
+			\item \textbf{Risultato atteso}: nome dei values.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-35} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getValueName()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{concreteNodeValues};
+			\item \textbf{Risultato atteso}: diverso da un nome predefinito.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-36} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{findValue()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{concreteNodeValues} con più oggetti con lo stesso valore booleano;
+			\item \textbf{Risultato atteso}: primo value con la stessa chiave di ricerca.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-37} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{findValue()} su un oggetto non presente nella lista;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{concreteNodeValues};
+			\item \textbf{Risultato atteso}: NULL.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-38} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{findValue()} su un oggetto non definito;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{concreteNodeValues};
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-39} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} controllando il numero di nodi presenti;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: file JSON con definizione di rete con due nodi;
+			\item \textbf{Risultato atteso}: 2.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-40} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un input nullo;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: NULL;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{Error} mostrando il messaggio \emph{"JSON file content is null..."}.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-41} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON vuoto;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: file JSON vuoto;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{Error} mostrando il messaggio \emph{"Bad Json Content!"}.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-42} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON non valido;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: file JSON non valido;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{Error} mostrando il messaggio \emph{"Bad Json Content!"}.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-43} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON che non rispetta la struttura di rete;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: file JSON con un struttura di rete errata;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{Error} mostrando il messaggio \emph{"Bad Json Content!"}.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-44} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON con valori della CPT errati;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: file JSON con valori della CPT errati;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{Error} mostrando il messaggio \emph{"CPT error!"}.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-45} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON con range invertiti;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: file JSON con range invertiti;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"maxRange is less then minRange"}.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-46} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON con valori dei nodi errati;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: file JSON con valori dei nodi errati;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-47} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON con un nodo padre non esistente;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: file JSON con un nodo padre non esistente;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{Error} mostrando il messaggio \emph{"Node Parent not found in the network!"}.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-48} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON con un riferimento circolare diretto;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: file JSON con un riferimento circolare diretto;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{Error} mostrando il messaggio \emph{"Direct circular parenthood"}.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-49} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON con un riferimento circolare indiretto;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: file JSON con un riferimento circolare indiretto;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{Error} mostrando il messaggio \emph{"Indirect circular parenthood"}.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	{TU-50} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON con due nodi dallo stesso nome;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: file JSON con un nodo dallo stesso nome di un altro nodo;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{Error} mostrando il messaggio \emph{"The node ExampleNode2 already exist in the network!"}.
+		\end{itemize}
+	\end{itemize}\\
+	\hline
+	
 	\caption{Specifica test di unità}
 	\label{tabella:specifica tu}
 \end{longtable}
