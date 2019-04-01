@@ -2251,15 +2251,19 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 \renewcommand{\arraystretch}{1}
 \newpage
 
+\definecolor{ashgrey}{rgb}{0.85, 0.85, 0.85}
+
 \subsection{Test di unità}
 \normalsize
 \renewcommand{\arraystretch}{1}
-\begin{longtable}{|C{2.5cm}|C{13cm}|}
+\begin{longtable}{|C{1.5cm}|C{14.5cm}|}
 	\hline
 	\rowcolor{title_row}
 	\textbf{\color{title_text}{Test}} & \textbf{\color{title_text}{Specifica}}  \\
 	\hline
 	\endhead
+	\rowcolor{ashgrey}{Scope} & BoolValue::constructor\\
+	\hline
 	{TU-1} & 
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica che il sistema rilevi una stringa non valida per il costruttore di \emph{BoolValue()};
@@ -2268,6 +2272,11 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: stringa non valida;
 			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+let str: string;
+expect(() => new BoolValue(true, str)).to.throw(TypeError, "invalid parameter");
+		\end{lstlisting}
 	\end{itemize} \\
 	\hline
 	{TU-2} & 
@@ -2278,7 +2287,14 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: boolean non valido;
 			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+let str: boolean;
+expect(() => new BoolValue(str, "name1")).to.throw(TypeError, "invalid parameter");
+		\end{lstlisting}
 	\end{itemize}\\
+	\hline
+	\rowcolor{ashgrey}{Scope} & BoolValue::isValueType\\
 	\hline
 	{TU-3} & 
 	\begin{itemize}
@@ -2288,6 +2304,12 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: oggetto \emph{BoolValue} valido;
 			\item \textbf{Risultato atteso}: True.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const boolV = new BoolValue(true, "name2");
+const result: boolean = boolV.isValueType("true");
+expect(result).to.equal(true);
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
 	{TU-4} &  
@@ -2298,6 +2320,12 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: oggetto \emph{BoolValue};
 			\item \textbf{Risultato atteso}: False.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const boolV = new BoolValue(false, "name3");
+const result: boolean = boolV.isValueType("true");
+expect(result).to.equal(false);		
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
 	{TU-5} &  
@@ -2308,6 +2336,12 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: oggetto \emph{BoolValue};
 			\item \textbf{Risultato atteso}: False.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const boolV = new BoolValue(false, "name4");
+const result: boolean = boolV.isValueType("brzcld");
+expect(result).to.equal(false);		
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
 	{TU-6} &  
@@ -2318,6 +2352,12 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: oggetto \emph{BoolValue};
 			\item \textbf{Risultato atteso}: False.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const boolV = new BoolValue(true, "name5");
+const result: boolean = boolV.isValueType("");
+expect(result).to.equal(false);		
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
 	{TU-7} &  
@@ -2328,6 +2368,12 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: oggetto \emph{BoolValue};
 			\item \textbf{Risultato atteso}: True.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const boolV = new BoolValue(true, "name6");
+const result: boolean = boolV.isValueType("True");
+expect(result).to.equal(true);		
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
 	{TU-8} &  
@@ -2338,7 +2384,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: oggetto \emph{BoolValue};
 			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const boolV = new BoolValue(true, "name7");
+let str: string;
+expect(() => boolV.isValueType(str)).to.throw(TypeError, "invalid parameter");		
+		\end{lstlisting}
 	\end{itemize}\\
+	\hline
+	\rowcolor{ashgrey}{Scope} & BoolValue::getValueName\\
 	\hline
 	{TU-9} &  
 	\begin{itemize}
@@ -2346,21 +2400,53 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 		\item \textbf{Caso}: 
 		\begin{itemize}
 			\item \textbf{Input}: oggetto \emph{BoolValue};
-			\item \textbf{Risultato atteso}: stringa col nome dell'oggetto.
+			\item \textbf{Risultato atteso}: stringa con nome dell'oggetto.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const name: string = "name8";
+const boolV = new BoolValue(true, name);
+boolV.isValueType("true");
+boolV.isValueType("false");
+const result: string = boolV.getValueName();
+expect(result).to.equal(name);		
+		\end{lstlisting}
 	\end{itemize}\\
+	\hline
+	\rowcolor{ashgrey}{Scope} & RangeValue::constructor\\
 	\hline
 	{TU-10} &  
 	\begin{itemize}
-		\item \textbf{Progettazione}: verifica che il sistema rilevi parametri non validi per il costruttore di \emph{RangeValue()};
+		\item \textbf{Progettazione}: verifica che il sistema rilevi un nome come parametro non valido per il costruttore di \emph{RangeValue()};
 		\item \textbf{Caso}: 
 		\begin{itemize}
-			\item \textbf{Input}: parametri non validi;
+			\item \textbf{Input}: stringa col nome non valida;
 			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+let str: string;
+expect(() => new RangeValue(30, 70, str)).to.throw(TypeError, "invalid parameter");		
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
 	{TU-11} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica che il sistema rilevi dei valori di range come parametri non validi per il costruttore di \emph{RangeValue()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: valori del range non validi;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
+		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+let n1: number;
+let n2: number;
+expect(() => new RangeValue(n1, n2, "name1")).to.throw(TypeError, "invalid parameter");		
+		\end{lstlisting}
+	\end{itemize}\\
+	\hline
+	{TU-12} &  
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica che il sistema rilevi parametri invertiti del range per il costruttore di \emph{RangeValue()};
 		\item \textbf{Caso}: 
@@ -2368,19 +2454,32 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: \emph{minRange} e \emph{maxRange} invertiti;
 			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"maxRange is less then minRange"}.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+expect(() => new RangeValue(70, 30, "name1")).to.throw(TypeError, "maxRange is less then minRange");		
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-12} &  
+	{TU-13} &  
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{RangeValue()} con gli stessi parametri di range;
 		\item \textbf{Caso}: 
 		\begin{itemize}
 			\item \textbf{Input}: \emph{minRange} e \emph{maxRange} uguali a 50;
-			\item \textbf{Risultato atteso}: stringa col nome dell'oggetto.
+			\item \textbf{Risultato atteso}: stringa con nome dell'oggetto.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const name: string = "name1";
+const rangeV: RangeValue = new RangeValue(50, 50, name);
+rangeV.getValueName();
+expect(rangeV.getValueName()).to.equal(name);		
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-13} &  
+	\rowcolor{ashgrey}{Scope} & RangeValue::isValueType\\
+	\hline
+	{TU-14} &  
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()};
 		\item \textbf{Caso}: 
@@ -2388,9 +2487,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: oggetto \emph{RangeValue};
 			\item \textbf{Risultato atteso}: True.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const rangeV = new RangeValue(30, 70, "name2");
+const result: boolean = rangeV.isValueType("50");
+expect(result).to.equal(true);		
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-14} &  
+	{TU-15} &  
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro il limite del range;
 		\item \textbf{Caso}: 
@@ -2398,9 +2503,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: oggetto \emph{RangeValue};
 			\item \textbf{Risultato atteso}: True.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const rangeV = new RangeValue(30, 70, "name3");
+const result: boolean = rangeV.isValueType("70");
+expect(result).to.equal(true);		
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-15} &  
+	{TU-16} &  
 	\begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro casuale;
 	\item \textbf{Caso}: 
@@ -2408,9 +2519,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 		\item \textbf{Input}: oggetto \emph{RangeValue};
 		\item \textbf{Risultato atteso}: False.
 	\end{itemize}
+	\item \textbf{Procedura}:
+	\begin{lstlisting}
+const rangeV = new RangeValue(30, 70, "name4");
+const result: boolean = rangeV.isValueType("brzcld");
+expect(result).to.equal(false);	
+	\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-16} &  
+	{TU-17} &  
 		\begin{itemize}
 			\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro vuoto;
 			\item \textbf{Caso}: 
@@ -2418,9 +2535,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 				\item \textbf{Input}: oggetto \emph{RangeValue};
 				\item \textbf{Risultato atteso}: False.
 			\end{itemize}
+			\item \textbf{Procedura}:
+			\begin{lstlisting}
+const rangeV = new RangeValue(30, 70, "name5");
+const result: boolean = rangeV.isValueType("");
+expect(result).to.equal(false);			
+			\end{lstlisting}
 		\end{itemize}\\
 	\hline
-	{TU-17} &  
+	{TU-18} &  
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro errato;
 		\item \textbf{Caso}: 
@@ -2428,9 +2551,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: oggetto \emph{RangeValue};
 			\item \textbf{Risultato atteso}: False.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const rangeV = new RangeValue(30, 70, "name6");
+const result: boolean = rangeV.isValueType("20");
+expect(result).to.equal(false);		
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-18} &  
+	{TU-19} &  
 	\begin{itemize}
 			\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro non definito;
 			\item \textbf{Caso}: 
@@ -2438,9 +2567,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 				\item \textbf{Input}: oggetto \emph{RangeValue};
 				\item \textbf{Risultato atteso}: False.
 			\end{itemize}
+			\item \textbf{Procedura}:
+			\begin{lstlisting}
+const rangeV = new RangeValue(30, 70, "name7");
+let str: string;
+expect(() => rangeV.isValueType(str)).to.throw(TypeError, "invalid parameter");			
+			\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-19} &  
+	{TU-20} &  
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} su un oggetto con gli stessi valori di range;
 		\item \textbf{Caso}: 
@@ -2448,29 +2583,70 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: oggetto \emph{RangeValue} con  \emph{minRange} e \emph{maxRange} uguali a 50;
 			\item \textbf{Risultato atteso}: True.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const rangeV = new RangeValue(50, 50, "name8");
+const result: boolean = rangeV.isValueType("50");
+expect(result).to.equal(true);		
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-20} &  
+	\rowcolor{ashgrey}{Scope} & RangeValue::getValueName\\
+	\hline
+	{TU-21} &  
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getValueName()};
 		\item \textbf{Caso}: 
 		\begin{itemize}
 			\item \textbf{Input}: oggetto \emph{RangeValue};
-			\item \textbf{Risultato atteso}: stringa col nome dell'oggetto.
+			\item \textbf{Risultato atteso}: stringa con nome dell'oggetto.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const name: string = "name9";
+const rangeV = new RangeValue(30, 70, name);
+rangeV.isValueType("true");
+rangeV.isValueType("false");
+const result: string = rangeV.getValueName();
+expect(result).to.equal(name);		
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-21} &  
-	\begin{itemize}
-		\item \textbf{Progettazione}: verifica che il sistema rilevi parametri non validi per il costruttore di \emph{StringValue()};
-		\item \textbf{Caso}: 
-		\begin{itemize}
-			\item \textbf{Input}: stringa non valida;
-			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
-		\end{itemize}
-	\end{itemize}\\
+	\rowcolor{ashgrey}{Scope} & StringValue::constructor\\
 	\hline
 	{TU-22} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica che il sistema rilevi un valore come parametro non valido per il costruttore di \emph{StringValue()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: stringa con value non valida;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
+		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+let str: string;
+expect(() => new StringValue("value1", str)).to.throw(TypeError, "invalid parameter");		
+		\end{lstlisting}
+	\end{itemize}\\
+	\hline	
+	{TU-23} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica che il sistema rilevi un nome come parametro non valido per il costruttore di \emph{StringValue()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: stringa con nome non valida;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
+		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+let str: string;
+expect(() => new StringValue(str, "name1")).to.throw(TypeError, "invalid parameter");		
+		\end{lstlisting}
+	\end{itemize}\\
+	\hline
+	\rowcolor{ashgrey}{Scope} & StringValue::isValueType\\
+	\hline
+	{TU-24} &  
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()};
 		\item \textbf{Caso}: 
@@ -2478,9 +2654,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: oggetto \emph{StringValue};
 			\item \textbf{Risultato atteso}: True.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const stringV = new StringValue("value2", "name2");
+const result: boolean = stringV.isValueType("value2");
+expect(result).to.equal(true);
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-23} &  
+	{TU-25} &  
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro errato;
 		\item \textbf{Caso}: 
@@ -2488,9 +2670,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: oggetto \emph{StringValue};
 			\item \textbf{Risultato atteso}: False.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const stringV = new StringValue("value3", "name3");
+const result: boolean = stringV.isValueType("true");
+expect(result).to.equal(false);		
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-24} &  
+	{TU-26} &  
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro casuale;
 		\item \textbf{Caso}: 
@@ -2498,9 +2686,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: oggetto \emph{StringValue};
 			\item \textbf{Risultato atteso}: False.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const stringV = new StringValue("value4", "name4");
+const result: boolean = stringV.isValueType("brzcld");
+expect(result).to.equal(false);		
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-25} &  
+	{TU-27} &  
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro vuoto;
 		\item \textbf{Caso}: 
@@ -2508,9 +2702,47 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: oggetto \emph{StringValue};
 			\item \textbf{Risultato atteso}: False.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const stringV = new StringValue("value4", "name4");
+const result: boolean = stringV.isValueType("brzcld");
+expect(result).to.equal(false);		
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-26} &  
+	{TU-28} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro vuoto;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{StringValue};
+			\item \textbf{Risultato atteso}: False.
+		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const stringV = new StringValue("value5", "name5");
+const result: boolean = stringV.isValueType("");
+expect(result).to.equal(false);
+		\end{lstlisting}
+	\end{itemize}\\
+	\hline
+	{TU-29} &  
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro corretto ma con la lettera maiuscola;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: oggetto \emph{StringValue};
+			\item \textbf{Risultato atteso}: False.
+		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const stringV = new StringValue("value6", "name6");
+const result: boolean = stringV.isValueType("VALUE6");
+expect(result).to.equal(false);
+		\end{lstlisting}
+	\end{itemize}\\
+	\hline
+	{TU-30} &  
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{isValueType()} con parametro non definito;
 		\item \textbf{Caso}: 
@@ -2518,19 +2750,38 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: oggetto \emph{StringValue};
 			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const stringV = new StringValue("value7", "name7");
+let str: string;
+expect(() => stringV.isValueType(str)).to.throw(TypeError, "invalid parameter");
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-27} &  
+	\rowcolor{ashgrey}{Scope} & StringValue::getValueName\\
+	\hline
+	{TU-31} &  
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getValueName()};
 		\item \textbf{Caso}: 
 		\begin{itemize}
 			\item \textbf{Input}: oggetto \emph{StringValue};
-			\item \textbf{Risultato atteso}: stringa col nome dell'oggetto.
+			\item \textbf{Risultato atteso}: stringa con nome dell'oggetto.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const name: string = "name8";
+const stringV = new StringValue("value8", name);
+stringV.isValueType("true");
+stringV.isValueType("false");
+const result: string = stringV.getValueName();
+expect(result).to.equal(name);
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-28} &  
+	\rowcolor{ashgrey}{Scope} & ConcreteNodeAdapter::constructor \\
+	\hline
+	{TU-32} &  
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica che il sistema rilevi parametri non validi per il costruttore di \emph{ConcreteNodeAdapter()};
 		\item \textbf{Caso}: 
@@ -2538,9 +2789,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: parametro \emph{node} non definito;
 			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+let node: JNode;
+const values: Array<AbstractValue> = new Array<AbstractValue>();
+expect(() => new ConcreteNodeAdapter(node, values)).to.throw(TypeError, "invalid parameter");
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-29} &  
+	{TU-33} &  
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica che il sistema rilevi parametri non validi per il costruttore di \emph{ConcreteNodeAdapter()};
 		\item \textbf{Caso}: 
@@ -2548,99 +2805,220 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: parametro \emph{values} non definito;
 			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const graph: JGraph = jsbayes.newGraph();
+const n1: JNode = graph.addNode("n1", ["true", "false"]);
+let values: Array<AbstractValue>;
+expect(() => new ConcreteNodeAdapter(n1, values)).to.throw(TypeError, "invalid parameter");	
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-30} &
+	\rowcolor{ashgrey}{Scope} & ConcreteNodeAdapter::getSates\\
+	\hline
+	{TU-34} &
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getStates()};
 		\item \textbf{Caso}: 
 		\begin{itemize}
-			\item \textbf{Input}: oggetto \emph{concreteNode} con stati [True, False];
+			\item \textbf{Input}: oggetto \emph{ConcreteNodeAdapter} con stati [True, False];
 			\item \textbf{Risultato atteso}: [True, False].
 		\end{itemize}
-	\end{itemize}\\
-	\hline
-	{TU-31} &
-	\begin{itemize}
-		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getStates()} controllando che venga ritornata una copia profonda dell'oggetto;
-		\item \textbf{Caso}: 
-		\begin{itemize}
-			\item \textbf{Input}: oggetto \emph{concreteNode} con stati [True, False];
-			\item \textbf{Risultato atteso}: [True, False].
-		\end{itemize}
-	\end{itemize}\\
-	\hline
-	{TU-32} &
-	\begin{itemize}
-		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getStates()} con stati di un nodo invertiti;
-		\item \textbf{Caso}: 
-		\begin{itemize}
-			\item \textbf{Input}: oggetto \emph{concreteNode} con stati [True, False];
-			\item \textbf{Risultato atteso}: diverso da [False, True].
-		\end{itemize}
-	\end{itemize}\\
-	\hline
-	{TU-33} &
-	\begin{itemize}
-		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getValueName()};
-		\item \textbf{Caso}: 
-		\begin{itemize}
-			\item \textbf{Input}: oggetto \emph{concreteNodeValues};
-			\item \textbf{Risultato atteso}: nome dei values.
-		\end{itemize}
-	\end{itemize}\\
-	\hline
-	{TU-34} &
-	\begin{itemize}
-		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getValueName()} controllando che venga ritornata una copia profonda dell'oggetto;
-		\item \textbf{Caso}: 
-		\begin{itemize}
-			\item \textbf{Input}: oggetto \emph{concreteNodeValues};
-			\item \textbf{Risultato atteso}: nome dei values.
-		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const graph: JGraph = jsbayes.newGraph();
+const n1: JNode = graph.addNode("n1", ["true", "false"]);
+const concreteNode = new ConcreteNodeAdapter(n1, new Array<AbstractValue>());
+const states: Array<string> = concreteNode.getStates();
+expect(states.toLocaleString()).to.equal("true,false");
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
 	{TU-35} &
 	\begin{itemize}
-		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getValueName()};
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getStates()} controllando che venga ritornata una copia profonda dell'oggetto;
 		\item \textbf{Caso}: 
 		\begin{itemize}
-			\item \textbf{Input}: oggetto \emph{concreteNodeValues};
-			\item \textbf{Risultato atteso}: diverso da un nome predefinito.
+			\item \textbf{Input}: oggetto \emph{ConcreteNodeAdapter} con stati [True, False];
+			\item \textbf{Risultato atteso}: [True, False].
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const graph: JGraph = jsbayes.newGraph();
+const n1: JNode = graph.addNode("n1", ["true", "false"]);
+const concreteNode = new ConcreteNodeAdapter(n1, new Array<AbstractValue>());
+const states = concreteNode.getStates();
+states.reverse();
+expect(concreteNode.getStates().toLocaleString()).to.equal("true,false");
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
 	{TU-36} &
 	\begin{itemize}
-		\item \textbf{Progettazione}: verifica il funzionamento di \emph{findValue()};
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getStates()} con stati di un nodo invertiti;
 		\item \textbf{Caso}: 
 		\begin{itemize}
-			\item \textbf{Input}: oggetto \emph{concreteNodeValues} con più oggetti con lo stesso valore booleano;
-			\item \textbf{Risultato atteso}: primo value con la stessa chiave di ricerca.
+			\item \textbf{Input}: oggetto \emph{ConcreteNodeAdapter} con stati [True, False];
+			\item \textbf{Risultato atteso}: diverso da [False, True].
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const graph: JGraph = jsbayes.newGraph();
+const n1: JNode = graph.addNode("n1", ["true", "false"]);
+const concreteNode = new ConcreteNodeAdapter(n1, new Array<AbstractValue>());
+const states = concreteNode.getStates();
+expect(states.toLocaleString()).to.not.equal("false,true");
+		\end{lstlisting}
 	\end{itemize}\\
+	\hline
+	\rowcolor{ashgrey}{Scope} & ConcreteNodeAdapter::getValueName\\
 	\hline
 	{TU-37} &
 	\begin{itemize}
-		\item \textbf{Progettazione}: verifica il funzionamento di \emph{findValue()} su un oggetto non presente nella lista;
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getValueName()};
 		\item \textbf{Caso}: 
 		\begin{itemize}
-			\item \textbf{Input}: oggetto \emph{concreteNodeValues};
-			\item \textbf{Risultato atteso}: NULL.
+			\item \textbf{Input}: array di \emph{BoolValue};
+			\item \textbf{Risultato atteso}: nome dei values.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const graph: JGraph = jsbayes.newGraph();
+const n1: JNode = graph.addNode("n1", ["true", "false"]);
+const concreteNodeValues: Array<AbstractValue> = new Array<AbstractValue>();
+concreteNodeValues.push(new BoolValue(false, "boolvalue-1"));
+concreteNodeValues.push(new BoolValue(true, "boolvalue-2"));
+concreteNodeValues.push(new BoolValue(true, "boolvalue-3"));
+const concreteNode = new ConcreteNodeAdapter(n1, concreteNodeValues);
+const values: Array<AbstractValue> = concreteNode.getValues();
+expect(values[0].getValueName()).to.equal("boolvalue-1");
+expect(values[1].getValueName()).to.equal("boolvalue-2");
+expect(values[2].getValueName()).to.equal("boolvalue-3");
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
 	{TU-38} &
 	\begin{itemize}
-		\item \textbf{Progettazione}: verifica il funzionamento di \emph{findValue()} su un oggetto non definito;
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getValueName()} controllando che venga ritornata una copia profonda dell'oggetto;
 		\item \textbf{Caso}: 
 		\begin{itemize}
-			\item \textbf{Input}: oggetto \emph{concreteNodeValues};
-			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
+			\item \textbf{Input}: array di \emph{BoolValue};
+			\item \textbf{Risultato atteso}: nome dei values.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const graph: JGraph = jsbayes.newGraph();
+const n1: JNode = graph.addNode("n1", ["true", "false"]);
+const concreteNodeValues: Array<AbstractValue> = new Array<AbstractValue>();
+concreteNodeValues.push(new BoolValue(false, "boolvalue-1"));
+concreteNodeValues.push(new BoolValue(true, "boolvalue-2"));
+concreteNodeValues.push(new BoolValue(true, "boolvalue-3"));
+const concreteNode = new ConcreteNodeAdapter(n1, concreteNodeValues);
+const values: Array<AbstractValue> = concreteNode.getValues();
+values.reverse();
+const newValues = concreteNode.getValues();
+expect(newValues[0].getValueName()).to.equal("boolvalue-1");
+expect(newValues[1].getValueName()).to.equal("boolvalue-2");
+expect(newValues[2].getValueName()).to.equal("boolvalue-3");
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
 	{TU-39} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{getValueName()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: array di \emph{BoolValue};
+			\item \textbf{Risultato atteso}: diverso da un nome predefinito.
+		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const graph: JGraph = jsbayes.newGraph();
+const n1: JNode = graph.addNode("n1", ["true", "false"]);
+const concreteNodeValues: Array<AbstractValue> = new Array<AbstractValue>();
+concreteNodeValues.push(new BoolValue(false, "boolvalue-1"));
+concreteNodeValues.push(new BoolValue(true, "boolvalue-2"));
+concreteNodeValues.push(new BoolValue(true, "boolvalue-2"));
+const concreteNode = new ConcreteNodeAdapter(n1, concreteNodeValues);
+const values: Array<AbstractValue> = concreteNode.getValues();
+let str: string;
+expect(values[0].getValueName()).to.not.equal("test");
+expect(values[1].getValueName()).to.not.equal(str);
+expect(values[2].getValueName()).to.not.equal("");
+		\end{lstlisting}
+	\end{itemize}\\
+	\hline
+	\rowcolor{ashgrey}{Scope} & concreteNodeValues::findValue\\
+	\hline
+	{TU-40} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{findValue()};
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: array di \emph{BoolValue};;
+			\item \textbf{Risultato atteso}: primo value con la stessa chiave di ricerca.
+		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const graph: JGraph = jsbayes.newGraph();
+const n1: JNode = graph.addNode("n1", ["true", "false"]);
+const concreteNodeValues: Array<AbstractValue> = new Array<AbstractValue>();
+concreteNodeValues.push(new BoolValue(false, "boolvalue-1"));
+concreteNodeValues.push(new BoolValue(true, "boolvalue-2"));
+concreteNodeValues.push(new BoolValue(true, "boolvalue-3"));
+const concreteNode = new ConcreteNodeAdapter(n1, concreteNodeValues);
+const value: AbstractValue = concreteNode.findValue("true");
+expect(value.getValueName()).to.equal("boolvalue-2");
+		\end{lstlisting}
+	\end{itemize}\\
+	\hline
+	{TU-41} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{findValue()} su un oggetto non presente nella lista;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: array di \emph{BoolValue};;
+			\item \textbf{Risultato atteso}: NULL.
+		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const graph: JGraph = jsbayes.newGraph();
+const n1: JNode = graph.addNode("n1", ["true", "false"]);
+const concreteNodeValues: Array<AbstractValue> = new Array<AbstractValue>();
+concreteNodeValues.push(new BoolValue(false, "boolvalue-1"));
+concreteNodeValues.push(new BoolValue(true, "boolvalue-2"));
+concreteNodeValues.push(new BoolValue(true, "boolvalue-3"));
+const concreteNode = new ConcreteNodeAdapter(n1, concreteNodeValues);
+const value: AbstractValue = concreteNode.findValue("valorechenonce");
+expect(value).to.equal(null);
+		\end{lstlisting}
+	\end{itemize}\\
+	\hline
+	{TU-42} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica il funzionamento di \emph{findValue()} su un oggetto non definito;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: array di \emph{BoolValue};;
+			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
+		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const graph: JGraph = jsbayes.newGraph();
+const n1: JNode = graph.addNode("n1", ["true", "false"]);
+const concreteNodeValues: Array<AbstractValue> = new Array<AbstractValue>();
+concreteNodeValues.push(new BoolValue(false, "boolvalue-1"));
+concreteNodeValues.push(new BoolValue(true, "boolvalue-2"));
+concreteNodeValues.push(new BoolValue(true, "boolvalue-3"));
+const concreteNode = new ConcreteNodeAdapter(n1, concreteNodeValues);
+let str: string;
+expect(() => concreteNode.findValue(str)).to.throw(TypeError, "invalid parameter");
+		\end{lstlisting}
+	\end{itemize}\\
+	\hline
+	\rowcolor{ashgrey}{Scope} & ConcreteNetworkFactory::parseNetwork \\
+	\hline
+	{TU-43} &
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} controllando il numero di nodi presenti;
 		\item \textbf{Caso}: 
@@ -2648,9 +3026,16 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: file JSON con definizione di rete con due nodi;
 			\item \textbf{Risultato atteso}: 2.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const json = require("./CorrectNetwork.json");
+const jsonString: string = JSON.stringify(json);
+const s: ConcreteNetworkAdapter = new ConcreteNetworkFactory().parseNetwork(jsonString);
+expect(s.getNodeList().length).to.equal(2);
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-40} &
+	{TU-44} &
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un input nullo;
 		\item \textbf{Caso}: 
@@ -2658,9 +3043,14 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: NULL;
 			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{Error} mostrando il messaggio \emph{"JSON file content is null..."}.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+let str: string;
+expect(() => new ConcreteNetworkFactory().parseNetwork(str)).to.throw(Error, "JSON file content is null...");
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-41} &
+	{TU-45} &
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON vuoto;
 		\item \textbf{Caso}: 
@@ -2668,9 +3058,14 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: file JSON vuoto;
 			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{Error} mostrando il messaggio \emph{"Bad Json Content!"}.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+let str: string = "";
+expect(() => new ConcreteNetworkFactory().parseNetwork(str)).to.throw(Error, "Bad Json Content!");
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-42} &
+	{TU-46} &
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON non valido;
 		\item \textbf{Caso}: 
@@ -2678,9 +3073,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: file JSON non valido;
 			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{Error} mostrando il messaggio \emph{"Bad Json Content!"}.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+let json = require("./InvalidNetwork.json");
+const jsonString = JSON.stringify(json);
+expect(() => new ConcreteNetworkFactory().parseNetwork(jsonString)).to.throw(Error, "");
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-43} &
+	{TU-47} &
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON che non rispetta la struttura di rete;
 		\item \textbf{Caso}: 
@@ -2688,9 +3089,14 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: file JSON con un struttura di rete errata;
 			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{Error} mostrando il messaggio \emph{"Bad Json Content!"}.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const jsonString = "{"nodes": {[)}}";
+expect(() => new ConcreteNetworkFactory().parseNetwork(jsonString)).to.throw(Error, "Bad Json Content!");
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-44} &
+	{TU-48} &
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON con valori della CPT errati;
 		\item \textbf{Caso}: 
@@ -2698,9 +3104,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: file JSON con valori della CPT errati;
 			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{Error} mostrando il messaggio \emph{"CPT error!"}.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+let json = require("./IncorrectCpt.json");
+const jsonString = JSON.stringify(json);
+expect(() => new ConcreteNetworkFactory().parseNetwork(jsonString)).to.throw(Error, "CPT error!");
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-45} &
+	{TU-49} &
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON con range invertiti;
 		\item \textbf{Caso}: 
@@ -2708,9 +3120,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: file JSON con range invertiti;
 			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"maxRange is less then minRange"}.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+let json = require("./InvertedMinMax.json");
+const jsonString = JSON.stringify(json);
+expect(() => new ConcreteNetworkFactory().parseNetwork(jsonString)).to.throw(TypeError, "maxRange is less then minRange");
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-46} &
+	{TU-50} &
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON con valori dei nodi errati;
 		\item \textbf{Caso}: 
@@ -2718,9 +3136,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: file JSON con valori dei nodi errati;
 			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{TypeError} mostrando il messaggio \emph{"invalid parameter"}.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+let json = require("./IncorrectType.json");
+const jsonString = JSON.stringify(json);
+expect(() => new ConcreteNetworkFactory().parseNetwork(jsonString)).to.throw(TypeError, "invalid parameter");
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-47} &
+	{TU-51} &
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON con un nodo padre non esistente;
 		\item \textbf{Caso}: 
@@ -2728,9 +3152,15 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: file JSON con un nodo padre non esistente;
 			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{Error} mostrando il messaggio \emph{"Node Parent not found in the network!"}.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+let json = require("./IncorrectParent.json");
+const jsonString = JSON.stringify(json);
+expect(() => new ConcreteNetworkFactory().parseNetwork(jsonString)).to.throw(Error, "Node Parent not found in the network!");
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-48} &
+	{TU-52} &
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON con un riferimento circolare diretto;
 		\item \textbf{Caso}: 
@@ -2738,9 +3168,16 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: file JSON con un riferimento circolare diretto;
 			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{Error} mostrando il messaggio \emph{"Direct circular parenthood"}.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+let json = require("./DCircularParenthood.json");
+const jsonString = JSON.stringify(json);
+new ConcreteNetworkFactory().parseNetwork(jsonString);
+expect(() => new ConcreteNetworkFactory().parseNetwork(jsonString)).to.throw(Error, "Direct circular parenthood");
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-49} &
+	{TU-53} &
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON con un riferimento circolare indiretto;
 		\item \textbf{Caso}: 
@@ -2748,9 +3185,16 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: file JSON con un riferimento circolare indiretto;
 			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{Error} mostrando il messaggio \emph{"Indirect circular parenthood"}.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+let json = require("./ICircularParenthood.json");
+const jsonString = JSON.stringify(json);
+new ConcreteNetworkFactory().parseNetwork(jsonString);
+expect(() => new ConcreteNetworkFactory().parseNetwork(jsonString)).to.throw(Error, "Indirect circular parenthood");
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
-	{TU-50} &
+	{TU-54} &
 	\begin{itemize}
 		\item \textbf{Progettazione}: verifica il funzionamento di \emph{ConcreteNetworkFactory()} con un JSON con due nodi dallo stesso nome;
 		\item \textbf{Caso}: 
@@ -2758,6 +3202,12 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 			\item \textbf{Input}: file JSON con un nodo dallo stesso nome di un altro nodo;
 			\item \textbf{Risultato atteso}: il sistema lancia un'eccezione di tipo \emph{Error} mostrando il messaggio \emph{"The node ExampleNode2 already exist in the network!"}.
 		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+let json = require("./IncorrectName.json");
+const jsonString = JSON.stringify(json);
+expect(() => new ConcreteNetworkFactory().parseNetwork(jsonString)).to.throw(Error, "The node ExampleNode2 already exist in the network!");
+		\end{lstlisting}
 	\end{itemize}\\
 	\hline
 	
