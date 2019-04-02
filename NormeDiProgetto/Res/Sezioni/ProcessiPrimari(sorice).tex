@@ -222,6 +222,90 @@ Nel seguente esempio si può vedere che il package A ha una dipendenza nei confr
 	\caption{Relazione di dipendenza tra package}\label{}
 \end{figure}
 
+\paragraph{Diagrammi di sequenza}\Spazio
+Questi diagrammi hanno un verso di lettura dall'alto verso il basso, che indica lo scorrere del tempo. 
+Gli oggetti presenti nei diagrammi di sequenza sono rappresentati da rettangoli, al cui interno è presente un nome per identificarli. Sotto ad ogni istanza è presente una linea tratteggiata verticale, che indica la vita dell'oggetto. Da esse possono partire o arrivare delle frecce orizzontali di attivazione, che si distinguono nelle seguenti tipologie:
+\begin{itemize}
+	\item Messaggi sincroni, in cui il chiamante resta in attesa di una risposta
+	\begin{figure} [H]
+		\centering
+		\includegraphics[scale=0.7]{./Img/sequence_sincrono.jpg}
+		\caption{Messaggio sincrono}\label{}
+	\end{figure}
+	\item Messaggi asincroni, in cui il chiamante non rimane in attesa di una risposta
+	\begin{figure} [H]
+		\centering
+		\includegraphics[scale=0.7]{./Img/sequence_asincrono.jpg}
+		\caption{Messaggio asincrono}\label{}
+	\end{figure}
+	\item Messaggio di ritorno
+	\begin{figure} [H]
+		\centering
+		\includegraphics[scale=0.7]{./Img/sequence_ritorno.jpg}
+		\caption{Messaggio di ritorno}\label{}
+	\end{figure}
+	\item Creazione e distruzione di un partecipante
+	\begin{figure} [H]
+		\centering
+		\includegraphics[scale=0.7]{./Img/sequence_partecipant.jpg}
+		\caption{Messaggio di ritorno}\label{}
+	\end{figure}
+\end{itemize}
+
+\paragraph{Diagrammi di attività}\Spazio
+I diagrammi di attività aiutano a descrivere gli aspetti dinamici dei casi d'uso e supportano l'elaborazione parallela. Ogni attività viene rappresentata da un rettangolo dagli angoli arrotondati e contiene al suo interno il nome. Un diagramma si compone delle seguenti parti:
+\begin{itemize}
+	\item Nodo iniziale da dove inizia l'esecuzione del processo
+	\begin{figure} [H]
+		\centering
+		\includegraphics[scale=0.8]{./Img/attivita_start.jpg}
+		\caption{Nodo iniziale}\label{}
+	\end{figure}
+	\item Fork per l'elaborazione parallela
+	\begin{figure} [H]
+		\centering
+		\includegraphics[scale=0.8]{./Img/attivita_fork.jpg}
+		\caption{Fork di attività}\label{}
+	\end{figure}
+	\item Join per la sincronizzazione dei processi paralleli
+	\begin{figure} [H]
+		\centering
+		\includegraphics[scale=0.8]{./Img/attivita_join.jpg}
+		\caption{Join dei processi paralleli}\label{}
+	\end{figure}
+	\item Branch per la scelta di uno dei rami decisionali
+	\begin{figure} [H]
+		\centering
+		\includegraphics[scale=0.8]{./Img/attivita_branch.jpg}
+		\caption{Branch per decisione}\label{}
+	\end{figure}
+	\item Merge per unire i rami separati dal branch
+	\begin{figure} [H]
+		\centering
+		\includegraphics[scale=0.8]{./Img/attivita_merge.jpg}
+		\caption{Merge per unire rami separati da branch}\label{}
+	\end{figure}
+	\item I segnali seguono la notazione seguente per indicare il tempo da aspettare prima dell'invio di un segnale, l'invio di un segnale e la sua ricezione
+	\begin{figure} [H]
+		\centering
+		\includegraphics[scale=0.7]{./Img/attivita_segnali.jpg}
+		\caption{Notazioni dei segnali}\label{}
+	\end{figure}
+	\item Nodo di fine flusso per indicare la terminazione di un ramo
+	\begin{figure} [H]
+		\centering
+		\includegraphics[scale=0.8]{./Img/attivita_fineflusso.jpg}
+		\caption{Nodo di fine flusso}\label{}
+	\end{figure}
+	\item Nodo finale per indicare la terminazione dell'esecuzione
+	\begin{figure} [H]
+		\centering
+		\includegraphics[scale=0.8]{./Img/attivita_fine.jpg}
+		\caption{Nodo finale}\label{}
+	\end{figure}
+	
+\end{itemize}
+
 \paragraph{Tecnologie}\Spazio
 Lo sviluppo del progetto richiede l'utilizzo di tecnologie, alcune imposte del capitolato, altre soggette a libera scelta da parte del team.
 Le tecnologie il cui uso è obbligatorio sono:
@@ -258,29 +342,29 @@ Soltanto il \emph{Responsabile di Progetto}, dopo un'attenta analisi e valutazio
 	Ogni file contenente codice deve essere provvisto di un'intestazione contenente:
 
 	\code{/*} \\
-	\code{File: nome del file} \\
-	\code{Version: versione del file} \\
-	\code{Type: tipo del file} \\
-	\code{Author: autore} \\
-	\code{Email: indirizzo email dell'autore} \\
-	\code{Date: data di creazione} \\
-	\code{Desc: descrizione del file}\\\\
-	\code{Changelog: autore, data, descrizione}\\
+	\code{@File: nome del file} \\
+	\code{@Version: versione del file} \\
+	\code{@Type: tipo del file} \\
+	\code{@Author: autore} \\
+	\code{@Email: indirizzo email dell'autore} \\
+	\code{@Date: data di creazione} \\
+	\code{@Desc: descrizione del file}\\\\
+	\code{@Changelog: autore, data, descrizione}\\
 	\code{*/} \\
 
 Ogni classe deve essere provvista di un'intestazione contenente:
 
 	\code{/*} \\
-	\code{Class: nome della classe} \\
-	\code{Desc: descrizione della classe} \\
+	\code{@Class: nome della classe} \\
+	\code{@Desc: descrizione della classe} \\
 	\code{*/}\\
 
 Ogni funzione e metodo devono essere provvisti di un'intestazione contenente:
 
 	\code{/*} \\
-	\code{Desc: descrizione della funzione/metodo} \\
-	\code{Param: elenco dei parametri} \\
-	\code{Return: valore ritornato} \\
+	\code{@Desc: descrizione della funzione/metodo} \\
+	\code{@Param: elenco dei parametri} \\
+	\code{@Return: valore ritornato} \\
 	\code{*/}\\
 
 	\item \textbf{Commenti}: i commenti devono essere esaustivi e non prolissi in modo da aiutare il lettore a comprendere al meglio ciò che si sta leggendo. I commenti devono essere scritti in inglese. Inoltre è consentito l'uso di particolari tipi di commenti che hanno l'obiettivo di favorire la stesura del codice come:
