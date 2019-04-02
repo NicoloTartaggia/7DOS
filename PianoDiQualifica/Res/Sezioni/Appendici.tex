@@ -1,12 +1,295 @@
 \appendix
 \addcontentsline{toc}{section}{Appendici}
 %\section*{Appendici}
+\newsection{Copertura dei requisiti}
+\subsection{Requisiti funzionali}
+
+\subsection{Requisiti di qualità}
+
+\subsection{Requisiti di vincolo}
+
 \newsection{Resoconto delle attività di verifica}
+
+\subsection{Revisioni}
 Questa sezione riporta il resoconto delle attività di verifica svolte prima di ciascuna delle quattro revisioni stabilite dal committente (Revisione dei Requisiti, R. di Progettazione, R. di Qualifica e R. di Accettazione).
 Al termine di ogni revisione il committente segnalerà le problematiche riscontrate attraverso una valutazione globale dell'andamento del progetto ed una dettagliata per ciascun documento, permettendo al gruppo di eliminare problemi e criticità nel progetto per poi procedere su una base verificata e il più possibile corretta.
 
-\subsection{Revisione dei Requisiti}
-In questa sezione vengono riportati gli esiti delle metriche relative ai processi e ai documenti durante la fase di Analisi.
+\subsubsection{Revisione dei Requisiti}
+
+\begin{itemize}
+	\item\emph{Norme di Progetto}: sono state effettuate le integrazioni richieste ed è stata aggiornata la struttura del documento in modo da rispettare gli stessi standard per ogni sezione;\\
+	La sottosezione relativa alla verifica è stata aggiornata in modo da contenere le nuove metriche inserite e le metriche erroneamente inserite nel \emph{Piano di Qualità v1.0.0};	\item\emph{Analisi dei Requisiti}: sono state attuate le opportune modifiche suggerite. Alcuni casi d'uso sono stati leggermente rivisti ed è stato introdotto un caso d'uso più generico per ogni agglomerato di azioni con attitudini simili, modificando il caso d'uso principale; 	
+	\item\emph{Piano di Progetto}: sono state fatte alcune verifiche nell'uso di alcuni termini e standard come consigliato dal committente. Sono state aggiunte le opportune motivazioni e spiegazioni nelle scelte effettuate. La presentazione dei contenuti è stata rivista in modo da renderla più efficace;
+	\item\emph{Piano di Qualifica}: il documento è stato profondamente rivisto per struttura e contenuti secondo quanto specificato dal committente.
+	Le specifiche degli standard utilizzati e le descrizioni delle metriche sono stati spostati in appendice alle \emph{Norme di Progetto}. È stata aggiunta una sezione riguardante la pianificazione dei test, e le specifiche dei test sono state previste come futura aggiunta in appendice al documento. Infine, la strategia generale per la verifica ha assunto un ruolo centrale nella specifica degli obiettivi di qualità di processo e prodotto. 
+\end{itemize}
+\Spazio
+Il grafico rappresentante l'applicazione del metodo PDCA della fase di Analisi è:
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/Ciclo_PDCA}
+	\caption{Grafico del metodo PDCA, fase di Analisi}\label{immagine:pdca analisi}
+\end{figure}
+Dal grafico possiamo estrapolare che:
+\begin{itemize}
+	\item Alcuni dei processi pianificati hanno subito mutamenti, dovuti ad errori di pianificazione dati dalla poca esperienza del gruppo di lavoro;
+	\item Il gruppo ha reso l'avanzamento dei processi omogeneo, nonostante alcuni rallentamenti dovuti alla sovrapposizione di impegni personali e universitari dei componenti del gruppo con la realizzazione del progetto. Nel complesso si vede come l'omogeneità è stata abbastanza rispettata.
+\end{itemize}
+
+\subsubsection{Revisione di Progettazione}
+
+\paragraph{Consolidamento dei requisiti}\MiniSpazio
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|p{6.8cm}|}
+			\hline
+			\rowcolor{title_row}
+			\textbf{\color{title_text}{Processo}} & \textbf{\color{title_text}{Livello di maturità}} & \textbf{\color{title_text}{Considerazioni}} \\
+			\hline
+			{Pianificazione e controllo} & {3} & {Gestito con l'ausilio di nTask, ha permesso di rispettare le scadenze previste.}\\	
+			\hline
+			{Gestione dei rischi} & {1} & {Non si sono verificate situazioni di rischio.}\\	
+			\hline
+			{Gestione dei test} & {0} & {Verrà istanziato una volta presente la necessità di definire e condurre dei test.}\\	
+			\hline
+			{Versionamento e build} & {0} & {Verrà istanziato una volta presente la necessità di versionare il prodotto software.}\\	
+			\hline
+		\end{tabular}
+		\caption[Maturità dei processi, Consolidamento]{Maturità dei processi e considerazioni}	
+		\label{tabella: considerazioni sulla maturità dei processi raggiunta}
+	\end{center}
+\end{table}
+
+
+Il grafico rappresentante l'applicazione del metodo PDCA nella fase di Consolidamento dei requisiti è:
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/Ciclo_PDCA_consolidamento_requisiti}
+	\caption{Grafico del metodo PDCA, fase di Consolidamento dei requisiti}\label{}
+\end{figure}
+Dal grafico possiamo estrapolare che:
+\begin{itemize}
+	\item Trattandosi di un periodo relativamente breve (10 giorni), piccole variazioni nel numero di attività risultano in grossi cambiamenti grafici;
+	\item Le attività in Plan sono state esaurite prima del termine del periodo, mentre quelle in Check e Act hanno avuto una permanenza maggiore; ciò è dovuto ad un numero di modifiche ai documenti relativamente basso ma di grande importanza e profondità (soprattutto per quanto riguarda il consolidamento del \emph{Piano di Qualifica}), che quindi hanno richiesto periodi di Check e Act prolungati.
+\end{itemize}
+
+\pagebreak
+\paragraph{Progettazione architetturale}\MiniSpazio
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|p{6.8cm}|}
+			\hline
+			\rowcolor{title_row}
+			\textbf{\color{title_text}{Processo}} & \textbf{\color{title_text}{Livello di maturità}} & \textbf{\color{title_text}{Considerazioni}} \\
+			\hline
+			{Pianificazione e controllo} & {3} & {Ha permesso di rispettare le scadenze previste.}\\	
+			\hline
+			{Gestione dei rischi} & {1} & {Si è dimostrato poco stabile al verificarsi di 3 situazioni di rischio (malattia di membri del gruppo), comportando una ridefinizione degli obiettivi per il periodo.}\\	
+			\hline
+			{Gestione dei test} & {1} & {Sono stati pianificati i primi test di sistema, le cui specifiche tuttavia rimangono da definire.}\\	
+			\hline
+			{Versionamento e build} & {1} & {Parzialmente automatizzato con l'utilizzo dello strumento \gl{Travis}.}\\	
+			\hline
+		\end{tabular}
+		\caption[Maturità dei processi, Progettazione Architetturale]{Maturità dei processi e considerazioni}	
+		\label{tabella: considerazioni sulla maturità dei processi raggiunta pa}
+	\end{center}
+\end{table}
+\renewcommand{\arraystretch}{1}
+Il grafico rappresentante l'applicazione del metodo PDCA nella fase di Progettazione architetturale è:
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/Ciclo_PDCA_progettazione_architetturale}
+	\caption{Grafico del metodo PDCA, fase di Progettazione architetturale}\label{}
+\end{figure}
+Dal grafico possiamo estrapolare che:
+\begin{itemize}
+	\item Si nota uno stallo nell'esecuzione delle attività nella prima metà del periodo, dovuto principalmente, come previsto, alla sovrapposizione degli impegni universitari dei vari membri del gruppo. A questo si sono aggiunte le situazioni di rischio verificatesi, comportando ulteriori ritardi;
+	\item Verso al fine del periodo si nota un rapido decremento delle attività in Do e Check, dovuto ad uno sforzo maggiorato per compensare i ritardi dovuti alle situazioni di rischio verificatesi.
+\end{itemize}
+
+\subsubsection{Revisione di Qualifica}
+TODO
+
+\subsection{Misurazioni}
+
+\subsubsection{Schedule Variance}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/schedulev}
+	\caption{Misurazione Schedule Variance}\label{}
+\end{figure}
+
+\subsubsection{Budget Variance}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/budgetv}
+	\caption{Misurazione Budget Variance}\label{}
+\end{figure}
+
+\subsubsection{Numero rischi non previsti}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/rischi}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Indisponibilità dei servizi esterni}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/indisp}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Percentuale di test eseguiti}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/testEs}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Percentuale test case passati}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/testPas}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Percentuale test case falliti}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/testNoPas}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Code coverage}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/CC}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Tempo medio necessario al team per risolvere un errore}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/risErr}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Efficienza nella progettazione dei test}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/progTest}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Percentuale di errori corretti}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/errCorr}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Media commit a settimana}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/commit}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Media build Travis a settimana}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/build}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Percentuale build Travis superate}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/buildPass}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Gunning fog index}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/fog}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Indice di Gulpease}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/gulp}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Numero di errori grammaticali}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/gramm}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Functional Implementation Completeness}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/FIC}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Average Functional Implementation Correctness}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/AFIC}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Tempo di risposta}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/risp}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Average Learning Time}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/ALT}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Failure Density}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/FD}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Blocco di operazioni non corrette}
+\begin{figure} [H]
+	\centering
+	%\includegraphics[scale=1]{Img/blocco}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Failure Analysis}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/FA}
+	\caption{Misurazione }\label{}
+\end{figure}
+
+\subsubsection{Comment Ratio}
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=1]{Img/CR}
+	\caption{Misurazione }\label{}
+\end{figure}
+
 \subsubsection{Qualità di processo}
 \paragraph{Esiti metriche di processo} \MiniSpazio
 \renewcommand{\arraystretch}{1.5}
@@ -26,19 +309,25 @@ In questa sezione vengono riportati gli esiti delle metriche relative ai process
 	\label{tabella: esiti derivanti dall'applicazione delle metriche di processo}
 	\end{center}
 \end{table}
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\rowcolor{title_row}
+			\textbf{\color{title_text}{Metrica}} & \textbf{\color{title_text}{Valore ottenuto}} & \textbf{\color{title_text}{Esito}} \\
+			\hline
+			{Schedule Variance} & {0} & {Superato}\\	
+			\hline
+			{Budget Variance} & {8\%} & {Superato}\\	
+			\hline
+		\end{tabular}
+		\caption[Esiti metriche di processo, consolidamento dei requisiti]{Esiti derivanti dall'applicazione delle metriche di processo}	
+		\label{tabella: esiti derivanti dall'applicazione delle metriche di processo cr}
+	\end{center}
+\end{table}
 \renewcommand{\arraystretch}{1}
-\paragraph{Dettaglio delle verifiche tramite analisi} \Spazio
-Il grafico rappresentante l'applicazione del metodo PDCA della fase di Analisi è:
-\begin{figure} [H]
-	\centering
-	\includegraphics[scale=1]{Img/Ciclo_PDCA}
-	\caption{Grafico del metodo PDCA, fase di Analisi}\label{immagine:pdca analisi}
-\end{figure}
-Dal grafico possiamo estrapolare che:
-\begin{itemize}
-	\item Alcuni dei processi pianificati hanno subito mutamenti, dovuti ad errori di pianificazione dati dalla poca esperienza del gruppo di lavoro;
-	\item Il gruppo ha reso l'avanzamento dei processi omogeneo, nonostante alcuni rallentamenti dovuti alla sovrapposizione di impegni personali e universitari dei componenti del gruppo con la realizzazione del progetto. Nel complesso si vede come l'omogeneità è stata abbastanza rispettata.
-\end{itemize}
+
 \subsubsection{Qualità di prodotto}
 \paragraph{Indice di Gulpease} \Spazio
 Vengono qui riportati i valori dell'indice Gulpease per ogni documento durante la fase di Analisi. 
@@ -71,39 +360,14 @@ Vengono qui riportati i valori dell'indice Gulpease per ogni documento durante l
 
 Dalla tabella si può notare come tutti gli indici Gulpease dei documenti rientrino nei vincoli dati. Per questo motivo i documenti redatti hanno raggiunto la leggibilità desiderata.
 
-\subsubsection{Dettaglio dell'esito della revisione}
-\begin{itemize}
-	\item\emph{Norme di Progetto}: sono state effettuate le integrazioni richieste ed è stata aggiornata la struttura del documento in modo da rispettare gli stessi standard per ogni sezione;\\
-	La sottosezione relativa alla verifica è stata aggiornata in modo da contenere le nuove metriche inserite e le metriche erroneamente inserite nel \emph{Piano di Qualità v1.0.0}.	\item\emph{Analisi dei Requisiti}: sono state attuate le opportune modifiche suggerite. Alcuni casi d'uso sono stati leggermente rivisti ed è stato introdotto un caso d'uso più generico per ogni agglomerato di azioni con attitudini simili, modificando il caso d'uso principale; 	
-	\item\emph{Piano di Progetto}: sono state fatte alcune verifiche nell'uso di alcuni termini e standard come consigliato dal committente. Sono state aggiunte le opportune motivazioni e spiegazioni nelle scelte effettuate. La presentazione dei contenuti è stata rivista in modo da renderla più efficace;
-	\item\emph{Piano di Qualifica}: il documento è stato profondamente rivisto per struttura e contenuti secondo quanto specificato dal committente.
-	Le specifiche degli standard utilizzati e le descrizioni delle metriche sono stati spostati in appendice alle \emph{Norme di Progetto}. È stata aggiunta una sezione riguardante la pianificazione dei test, e le specifiche dei test sono state previste come futura aggiunta in appendice al documento. Infine, la strategia generale per la verifica ha assunto un ruolo centrale nella specifica degli obiettivi di qualità di processo e prodotto. 
-\end{itemize}
 
-\subsection{Revisione di Progettazione}
-In questa sezione vengono riportati gli esiti delle metriche relative ai processi e delle metriche relative ai documenti.
+
 
 \subsubsection{Qualità di processo}
 \paragraph{Esiti metriche di processo}
 
 \subparagraph{Consolidamento dei requisiti}\MiniSpazio
-\renewcommand{\arraystretch}{1.5}
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{|c|c|c|}
-			\hline
-			\rowcolor{title_row}
-			\textbf{\color{title_text}{Metrica}} & \textbf{\color{title_text}{Valore ottenuto}} & \textbf{\color{title_text}{Esito}} \\
-			\hline
-			{Schedule Variance} & {0} & {Superato}\\	
-			\hline
-			{Budget Variance} & {8\%} & {Superato}\\	
-			\hline
-		\end{tabular}
-		\caption[Esiti metriche di processo, consolidamento dei requisiti]{Esiti derivanti dall'applicazione delle metriche di processo}	
-		\label{tabella: esiti derivanti dall'applicazione delle metriche di processo cr}
-	\end{center}
-\end{table}
+
 
 
 \subparagraph{Progettazione architetturale}\MiniSpazio
@@ -135,87 +399,18 @@ In questa sezione vengono riportati gli esiti delle metriche relative ai process
 	\end{center}
 \end{table}
 
+
+
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.8]{Img/travis}
 	\caption{Andamento delle build per il Proof of Concept}\label{}
 \end{figure}
 
-\paragraph{Maturità dei processi} \Spazio
-Come riportato nella sezione 2.1.6, il gruppo adotta l'approccio a maturità di processo. Il livello di maturità assume valori da 1 a 5.
-
-\subparagraph{Consolidamento dei requisiti}\MiniSpazio
-\renewcommand{\arraystretch}{1.5}
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{|c|c|p{6.8cm}|}
-			\hline
-			\rowcolor{title_row}
-			\textbf{\color{title_text}{Processo}} & \textbf{\color{title_text}{Livello di maturità}} & \textbf{\color{title_text}{Considerazioni}} \\
-			\hline
-			{Pianificazione e controllo} & {3} & {Gestito con l'ausilio di nTask, ha permesso di rispettare le scadenze previste.}\\	
-			\hline
-			{Gestione dei rischi} & {1} & {Non si sono verificate situazioni di rischio.}\\	
-			\hline
-			{Gestione dei test} & {0} & {Verrà istanziato una volta presente la necessità di definire e condurre dei test.}\\	
-			\hline
-			{Versionamento e build} & {0} & {Verrà istanziato una volta presente la necessità di versionare il prodotto software.}\\	
-			\hline
-		\end{tabular}
-		\caption[Maturità dei processi, Consolidamento]{Maturità dei processi e considerazioni}	
-		\label{tabella: considerazioni sulla maturità dei processi raggiunta}
-	\end{center}
-\end{table}
-\pagebreak
-\subparagraph{Progettazione architetturale}\MiniSpazio
-\renewcommand{\arraystretch}{1.5}
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{|c|c|p{6.8cm}|}
-			\hline
-			\rowcolor{title_row}
-			\textbf{\color{title_text}{Processo}} & \textbf{\color{title_text}{Livello di maturità}} & \textbf{\color{title_text}{Considerazioni}} \\
-			\hline
-			{Pianificazione e controllo} & {3} & {Ha permesso di rispettare le scadenze previste.}\\	
-			\hline
-			{Gestione dei rischi} & {1} & {Si è dimostrato poco stabile al verificarsi di 3 situazioni di rischio (malattia di membri del gruppo), comportando una ridefinizione degli obiettivi per il periodo.}\\	
-			\hline
-			{Gestione dei test} & {1} & {Sono stati pianificati i primi test di sistema, le cui specifiche tuttavia rimangono da definire.}\\	
-			\hline
-			{Versionamento e build} & {1} & {Parzialmente automatizzato con l'utilizzo dello strumento \gl{Travis}.}\\	
-			\hline
-		\end{tabular}
-		\caption[Maturità dei processi, Progettazione Architetturale]{Maturità dei processi e considerazioni}	
-		\label{tabella: considerazioni sulla maturità dei processi raggiunta pa}
-	\end{center}
-\end{table}
-\renewcommand{\arraystretch}{1}
-
 \paragraph{Dettaglio delle verifiche tramite analisi}
 \subparagraph{Consolidamento dei requisiti}\MiniSpazio
-Il grafico rappresentante l'applicazione del metodo PDCA nella fase di Consolidamento dei requisiti è:
-\begin{figure} [H]
-	\centering
-	\includegraphics[scale=1]{Img/Ciclo_PDCA_consolidamento_requisiti}
-	\caption{Grafico del metodo PDCA, fase di Consolidamento dei requisiti}\label{}
-\end{figure}
-Dal grafico possiamo estrapolare che:
-\begin{itemize}
-	\item Trattandosi di un periodo relativamente breve (10 giorni), piccole variazioni nel numero di attività risultano in grossi cambiamenti grafici;
-	\item Le attività in Plan sono state esaurite prima del termine del periodo, mentre quelle in Check e Act hanno avuto una permanenza maggiore; ciò è dovuto ad un numero di modifiche ai documenti relativamente basso ma di grande importanza e profondità (soprattutto per quanto riguarda il consolidamento del \emph{Piano di Qualifica}), che quindi hanno richiesto periodi di Check e Act prolungati.
-\end{itemize}
-\subparagraph{Progettazione architetturale}\MiniSpazio
-Il grafico rappresentante l'applicazione del metodo PDCA nella fase di Progettazione architetturale è:
-\begin{figure} [H]
-	\centering
-	\includegraphics[scale=1]{Img/Ciclo_PDCA_progettazione_architetturale}
-	\caption{Grafico del metodo PDCA, fase di Progettazione architetturale}\label{}
-\end{figure}
-Dal grafico possiamo estrapolare che:
-\begin{itemize}
-	\item Si nota uno stallo nell'esecuzione delle attività nella prima metà del periodo, dovuto principalmente, come previsto, alla sovrapposizione degli impegni universitari dei vari membri del gruppo. A questo si sono aggiunte le situazioni di rischio verificatesi, comportando ulteriori ritardi;
-	\item Verso al fine del periodo si nota un rapido decremento delle attività in Do e Check, dovuto ad uno sforzo maggiorato per compensare i ritardi dovuti alle situazioni di rischio verificatesi.
-\end{itemize}
+
+
 \subsubsection{Qualità di prodotto}
 \paragraph{Indice di Gulpease} \Spazio
 Vengono qui riportati i valori dell'indice Gulpease per ogni documento al termine della fase di Progettazione Architetturale.
