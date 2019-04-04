@@ -1,0 +1,59 @@
+% Creazione della copertina
+\newcommand{\copertina}{
+  \newgeometry{top=4cm}
+  
+  \begin{titlepage}
+  \begin{center}
+
+  \begin{center}
+    %% qui metteteci l'immagine di copertina. Io ho messo quella dell'uni,
+    %voi mettete quella del vostro grupo
+    \centerline{\includegraphics[scale=0.1]{../logo}}
+  \end{center}
+  
+  \vspace{1cm}
+
+  \begin{Huge}
+    \textbf{\Titolo{}} \\
+  \end{Huge}
+
+  \vspace{9pt}  
+  
+  \begin{large}
+  \Gruppo{}\ - \Data{}
+  \end{large}	  
+  
+  \vspace{15pt}
+
+  \bgroup
+  \def\arraystretch{1.3}
+   \centering
+   \begin{tabular}{c|L{5cm}}
+      \multicolumn{2}{c}{\textbf{Informazioni sul documento} } \\ \hline
+      \textbf{Versione} &  \Versione{}\\
+      \textbf{Responsabile} & \Responsabile{}\\
+      \textbf{Verifica} & \Verifica{}\\
+      \textbf{Redazione} & \Redazione{} \\
+      \textbf{Stato} & \Stato{} \\
+      \textbf{Uso} & \Uso{} \\
+      \textbf{Destinato a} & \Destinatoa{} \\
+      \textbf{Email} & \Email{} \\
+    \end{tabular}
+  \egroup
+  
+  \vspace{15pt}
+
+  \begin{center}
+    \textbf{Descrizione\\}
+    \DescrizioneDoc{}
+  \end{center}
+
+  \end{center}
+  \end{titlepage}
+  
+  \restoregeometry
+}
+
+\newcommand{\code}[1]{\flextt{\texttt{#1}}}
+
+\newcommand{\gl}[1]{\textit{#1}\ped{g}}
