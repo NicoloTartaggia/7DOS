@@ -585,7 +585,21 @@ Le convenzioni stilistiche definite in \gl{Grafana Plugin Code Styleguide}\footn
 		export class JsImport {  
 		  textJson: string;
 		  time: string;}
-		\end{lstlisting}
+		\end{lstlisting}		
+		\end{itemize}
+		\item{\textbf{Test}} 
+		\begin{itemize}
+			\item Ogni test deve rispettare la seguente struttura:
+			\begin{lstlisting}
+describe("NomeClasse - NomeMetodo", () => {
+	it("Input, Eventuali altre operazioni - Output atteso", () => {
+		// primo test del metodo NomeMetodo
+	});
+	it("Input, Eventuali altre operazioni - Output atteso", () => {
+		// secondo test del metodo NomeMetodo
+	});
+});
+			\end{lstlisting}
 		\end{itemize}	
 \end{itemize}
 
