@@ -303,11 +303,33 @@ Dal grafico possiamo estrapolare che:
 \end{itemize}
 
 \subsubsection{Revisione di Qualifica}
-TODO
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|p{6.8cm}|}
+			\hline
+			\rowcolor{title_row}
+			\textbf{\color{title_text}{Processo}} & \textbf{\color{title_text}{Livello di maturità}} & \textbf{\color{title_text}{Considerazioni}} \\
+			\hline
+			{Pianificazione e controllo} & {3} & {Ha permesso di rispettare le scadenze previste.}\\	
+			\hline
+			{Gestione dei rischi} & {3} & {Si è dimostrato stabile al verificarsi di alcune situazioni di basso rischio, grazie alle istruzione impartite dal \emph{Responsabile di Progetto.}}\\	
+			\hline
+			{Gestione dei test} & {4} & {Sono stati specificati ed implementati buona parte dei test La copertura dei test di unità a registrato esiti molto positivi.}\\	
+			\hline
+			{Versionamento e build} & {4} & {Automatizzato il processo tramite \gl{Travis}.} Ogni modifica apportata alla repository di GitHub scaturisce una serie di test sul codice, tenendo traccia dell'esito delle varie build e registrando valori utili per le nostre metriche, come il code coverage.\\	
+			\hline
+		\end{tabular}
+		\caption[Maturità dei processi, Progettazione Architetturale]{Maturità dei processi e considerazioni}	
+		\label{tabella: considerazioni sulla maturità dei processi raggiunta pa}
+	\end{center}
+\end{table}
+\renewcommand{\arraystretch}{1}
 
 \subsection{Misurazioni}
 
 \subsubsection{Schedule Variance}
+Questa metrica è sempre rimasta in linea con il valore accettabile, ma non ha ancora raggiunto quello ottimale.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/schedulev}
@@ -315,6 +337,7 @@ TODO
 \end{figure}
 
 \subsubsection{Budget Variance}
+Questa metrica è sempre rimasta in linea con il valore ottimale.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/budgetv}
@@ -322,6 +345,7 @@ TODO
 \end{figure}
 
 \subsubsection{Numero rischi non previsti}
+Questa metrica è sempre rimasta in linea con il valore accettabile.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/rischi}
@@ -329,6 +353,7 @@ TODO
 \end{figure}
 
 \subsubsection{Indisponibilità dei servizi esterni}
+Questa metrica è sempre rimasta in linea con il valore ottimale, tranne per il verificarsi dell'indisponibilità del servizio \emph{TravisCI}.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/indisp}
@@ -336,6 +361,7 @@ TODO
 \end{figure}
 
 \subsubsection{Percentuale di test eseguiti}
+Questa metrica inizialmente ha registrato dei valori non accettabili, ma con lo sviluppo dei test ha raggiunto un valore accettabile.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/testEs}
@@ -343,6 +369,7 @@ TODO
 \end{figure}
 
 \subsubsection{Percentuale test case passati}
+Questa metrica ha quasi raggiunto un valore ottimale.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/testPas}
@@ -350,6 +377,7 @@ TODO
 \end{figure}
 
 \subsubsection{Percentuale test case falliti}
+Questa metrica ha quasi raggiunto un valore ottimale.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/testNoPas}
@@ -357,6 +385,7 @@ TODO
 \end{figure}
 
 \subsubsection{Code coverage}
+Questa metrica inizialmente ha registrato dei valori non accettabili, ma con lo sviluppo dei test ha raggiunto un valore quasi ottimale.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/CC}
@@ -364,6 +393,7 @@ TODO
 \end{figure}
 
 \subsubsection{Tempo medio necessario al team per risolvere un errore}
+Questa metrica è sempre rimasta in linea con un valore ottimale, tranne in un'occasione causata da un errore consistente.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/risErr}
@@ -371,6 +401,7 @@ TODO
 \end{figure}
 
 \subsubsection{Efficienza nella progettazione dei test}
+Tranne per la fase di sviluppo dei test iniziale, ha sempre registrato un valore ottimale.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/progTest}
@@ -378,6 +409,7 @@ TODO
 \end{figure}
 
 \subsubsection{Percentuale di errori corretti}
+La presenza di vari errori ha fatto registrare dei valori non accettabili, ma grazie al lavoro dei \emph{Verificatori} questi sono stati corretti, raggiungendo un valore ottimale per questa metrica.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/errCorr}
@@ -385,6 +417,7 @@ TODO
 \end{figure}
 
 \subsubsection{Media commit a settimana}
+Il lavoro costante del gruppo ha permesso di registrare dei valori accettabili, a volte anche ottimali, per questa metrica.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/commit}
@@ -392,6 +425,7 @@ TODO
 \end{figure}
 
 \subsubsection{Media build Travis a settimana}
+Il lavoro costante del gruppo ha permesso di registrare dei valori accettabili, a volte anche ottimali, per questa metrica.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/build}
@@ -399,6 +433,7 @@ TODO
 \end{figure}
 
 \subsubsection{Percentuale build Travis superate}
+La presenza di vari errori ha fatto registrare dei valori non accettabili inizialmente, ma una volta corrette queste criticità questa metrica ha raggiunto un valore ottimale.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/buildPass}
@@ -430,6 +465,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 \end{figure}
 
 \subsubsection{Functional Implementation Completeness}
+La scarsa copertura delle funzionalità in ingresso alla fase di progetto ha fatto registrare valori non accettabili, ma grazie al lavoro del team questa metrica ha raggiunto un valore accettabile, anche se non ancora ottimale.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/FIC}
@@ -437,6 +473,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 \end{figure}
 
 \subsubsection{Average Functional Implementation Correctness}
+La presenza di alcune criticità in ingresso alla fase di progetto ha fatto registrare valori non accettabili, ma grazie al lavoro del team questa metrica ha raggiunto un valore accettabile, anche se non ancora ottimale.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/AFIC}
@@ -444,6 +481,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 \end{figure}
 
 \subsubsection{Tempo di risposta}
+Il valore di questa metrica è sempre rimasto in linea con il valore ottimale.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/risp}
@@ -451,6 +489,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 \end{figure}
 
 \subsubsection{Average Learning Time}
+Il valore di questa metrica è sempre rimasto in linea con il valore accettabile.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/ALT}
@@ -458,6 +497,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 \end{figure}
 
 \subsubsection{Failure Density}
+La presenza di alcune criticità in ingresso alla fase di progetto ha fatto registrare valori non accettabili, ma grazie al lavoro del team questa metrica ha raggiunto un valore accettabile, anche se non ancora ottimale.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/FD}
@@ -472,6 +512,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 \end{figure}
 
 \subsubsection{Failure Analysis}
+Il valore di questa metrica è sempre rimasto in linea con il valore accettabile.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/FA}
@@ -479,6 +520,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 \end{figure}
 
 \subsubsection{Comment Ratio}
+La presenza di pochi commenti nel codice in ingresso alla fase di progetto ha fatto registrare dei valori non accettabili, ma con il lavoro del team questa metrica ha raggiunto un valore accettabile.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/CR}
