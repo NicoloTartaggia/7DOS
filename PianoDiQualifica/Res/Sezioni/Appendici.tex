@@ -3745,7 +3745,7 @@ expect(nodeOne.getName()).to.equal("Example2");
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-\rowcolor{ashgrey}{Scope} & InfluxInputFlow::constructor
+\rowcolor{ashgrey}{Scope} & InputFlow::constructor
 \\ \hline
 {TU-77} &
 \begin{itemize}
@@ -3834,9 +3834,63 @@ new ConcreteReadClientFactory().makeInfluxReadClient("http://localhost", "9957",
 	\end{lstlisting}
 \end{itemize}\\
 \hline
+{TU-82} &
+\begin{itemize}
+	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{InfluxInputFlow()};
+	\item \textbf{Caso}: 
+	\begin{itemize}
+		\item \textbf{Input}: parametri corretti;
+		\item \textbf{Risultato atteso}: nessuna eccezione viene viene lanciata.
+	\end{itemize}
+	\item \textbf{Procedura}:
+	\begin{lstlisting}
+expect(()=> 
+new InfluxInputFlow("db", "query", 
+new ConcreteReadClientFactory().makeInfluxReadClient("http://localhost", "9957", ["user", "password"]))
+).to.not.throw(Error);
+	\end{lstlisting}
+\end{itemize}\\
+\hline
+\rowcolor{ashgrey}{Scope} & InfluxInputFlow::getResult
+\\ \hline
+{TU-83} &
+\begin{itemize}
+	\item \textbf{Progettazione}: verifica il funzionamento di \emph{getResult()};
+	\item \textbf{Caso}: 
+	\begin{itemize}
+		\item \textbf{Input}: oggetto \emph{InfluxInputFlow};
+		\item \textbf{Risultato atteso}: viene ritornato il risultato.
+	\end{itemize}
+	\item \textbf{Procedura}:
+	\begin{lstlisting}
+const influxInput: InfluxInputFlow = new InfluxInputFlow("prova", "SELECT field1 FROM burglary", 
+new ConcreteReadClientFactory().makeInfluxReadClient("http://localhost", "8086", ["root", "root"]));
+influxInput.getResult().then(function(result){
+expect(result.toString()).to.not.equal(null);
+	\end{lstlisting}
+\end{itemize}\\
+\hline
+{TU-84} &
+\begin{itemize}
+	\item \textbf{Progettazione}: verifica il funzionamento di \emph{getResult()} quando c'è un errore nalla query;
+	\item \textbf{Caso}: 
+	\begin{itemize}
+		\item \textbf{Input}: query errata;
+		\item \textbf{Risultato atteso}: il sistema mostra il messaggio \emph{"Error: Query"}.
+	\end{itemize}
+	\item \textbf{Procedura}:
+	\begin{lstlisting}
+const influxInput: InfluxInputFlow = new InfluxInputFlow("prova", "SELECT field FROM measurement", 
+new ConcreteReadClientFactory().makeInfluxReadClient("http://localhost", "8086", ["user", "password"]));
+influxInput.getResult().then(function(){}).catch(function(e){
+expect(e.toString()).to.contain("Error: Query");
+});
+	\end{lstlisting}
+\end{itemize}\\
+\hline
 \rowcolor{ashgrey}{Scope} & Datasource::constructor
 \\ \hline
-{TU-82} &
+{TU-85} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{Datasource()} quando \emph{url} è vuoto;
 	\item \textbf{Caso}: 
@@ -3851,7 +3905,7 @@ expect(() => new DataSource("", "database")).to.throw(Error, "invalid url parame
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-83} &
+{TU-86} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{Datasource()} quando \emph{database} è vuoto;
 	\item \textbf{Caso}: 
@@ -3865,7 +3919,7 @@ expect(() => new DataSource("http://localhost", "")).to.throw(Error, "invalid db
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-84} &
+{TU-87} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{Datasource()} quando \emph{username} è vuoto;
 	\item \textbf{Caso}: 
@@ -3879,7 +3933,7 @@ expect(() => new DataSource("http://localhost", "database", "")).to.throw(Error,
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-85} &
+{TU-88} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{Datasource()} quando \emph{password} è vuoto;
 	\item \textbf{Caso}: 
@@ -3893,7 +3947,7 @@ expect(() => new DataSource("http://localhost", "database", "username", "")).to.
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-86} &
+{TU-89} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{Datasource()} quando \emph{type} è vuoto;
 	\item \textbf{Caso}: 
@@ -3907,7 +3961,7 @@ expect(() => new DataSource("http://localhost", "database", "username", "passwor
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-87} &
+{TU-90} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{Datasource()} quando \emph{name} è vuoto;
 	\item \textbf{Caso}: 
@@ -3923,7 +3977,7 @@ expect(() => new DataSource("http://localhost", "database", "username", "passwor
 \hline
 \rowcolor{ashgrey}{Scope} & NetReader::constructor
 \\ \hline
-{TU-88} &
+{TU-91} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{NetReader()} con parametro non definito;
 	\item \textbf{Caso}: 
@@ -3938,9 +3992,28 @@ expect(()=> new NetReader(networkAdapter)).to.throw(Error, "invalid parameter");
 	\end{lstlisting}
 \end{itemize}\\
 \hline
+\rowcolor{ashgrey}{Scope} & NetReader::read
+\\ \hline
+{TU-92} &
+\begin{itemize}
+	\item \textbf{Progettazione}: verifica il funzionamento di \emph{read()};
+	\item \textbf{Caso}: 
+	\begin{itemize}
+		\item \textbf{Input}: oggetto \emph{NetReader};
+		\item \textbf{Risultato atteso}: "Example".
+	\end{itemize}
+	\item \textbf{Procedura}:
+	\begin{lstlisting}
+const networkReader: NetReader = new NetReader(network);
+networkReader.connectNode("Example", new DataSource("http://localhost:8086/"), "SELECT Percent_DPC_Time FROM win_cpu");
+networkReader.read().then(function(result){
+expect(result.buildIterator().next().value.getNode().getName()).to.equal("Example");
+	\end{lstlisting}
+\end{itemize}\\
+\hline
 \rowcolor{ashgrey}{Scope} & NetReader::connectNode
 \\ \hline
-{TU-89} &
+{TU-93} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento di \emph{connectNode()} con \emph{node} non definito;
 	\item \textbf{Caso}: 
@@ -3955,7 +4028,7 @@ expect(() => networkReader.connectNode(node, new DataSource("http://localhost"),
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-90} &
+{TU-94} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento di \emph{connectNode()} con \emph{datasource} non definito;
 	\item \textbf{Caso}: 
@@ -3970,7 +4043,7 @@ expect(() => networkReader.connectNode("node", dataS, "query")).to.throw(Error, 
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-91} &
+{TU-95} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento di \emph{connectNode()} con \emph{query} non definito;
 	\item \textbf{Caso}: 
@@ -3985,7 +4058,7 @@ expect(() => networkReader.connectNode("node", new DataSource("http://localhost"
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-92} &
+{TU-96} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento di \emph{connectNode()} con \emph{node} vuoto;
 	\item \textbf{Caso}: 
@@ -3999,7 +4072,7 @@ expect(() => networkReader.connectNode("", new DataSource("http://localhost"), "
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-93} &
+{TU-97} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento di \emph{connectNode()} con \emph{query} vuoto;
 	\item \textbf{Caso}: 
@@ -4015,7 +4088,7 @@ expect(() => networkReader.connectNode("node", new DataSource("http://localhost"
 \hline
 \rowcolor{ashgrey}{Scope} & ReusableReadClientPool::acquireReusable
 \\ \hline
-{TU-94} &
+{TU-98} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento di \emph{acquireReusable()} con \emph{datasource} non definito;
 	\item \textbf{Caso}: 
@@ -4030,7 +4103,7 @@ expect(() => ReusableReadClientPool.getInstance().acquireReusable(datasource)).t
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-95} &
+{TU-99} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento di \emph{acquireReusable()} con \emph{datasource} definito;
 	\item \textbf{Caso}: 
@@ -4046,7 +4119,7 @@ expect(JSONstr.includes("http://localhost/")).to.equal(true);
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-96} &
+{TU-100} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento di \emph{acquireReusable()} con \emph{to\_remove} non definito;
 	\item \textbf{Caso}: 
@@ -4063,7 +4136,7 @@ expect(() => ReusableReadClientPool.getInstance().releseReusable(to_remove)).to.
 \hline
 \rowcolor{ashgrey}{Scope} & CalcResultAggregate::constructor
 \\ \hline
-{TU-97} &
+{TU-101} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{CalcResultAggregate()} con \emph{collection} non definito;
 	\item \textbf{Caso}: 
@@ -4078,7 +4151,7 @@ expect(()=> new CalcResultAggregate(collection)).to.throw(Error, "invalid collec
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-98} &
+{TU-102} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{CalcResultAggregate()} con \emph{collection} vuoto;
 	\item \textbf{Caso}: 
@@ -4095,7 +4168,7 @@ expect(()=> new CalcResultAggregate(collection)).to.throw(Error, "invalid collec
 \hline
 \rowcolor{ashgrey}{Scope} & CalcResultAggregate::createIterator
 \\ \hline
-{TU-99} &
+{TU-103} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento di \emph{createIterator()};
 	\item \textbf{Caso}: 
@@ -4115,7 +4188,7 @@ expect(new CalcResultAggregate(collection).createIterator().next().value.getNode
 \hline
 \rowcolor{ashgrey}{Scope} & CalcResultItem::constructor
 \\ \hline
-{TU-100} &
+{TU-104} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{CalcResultItem()} con parametri nulli;
 	\item \textbf{Caso}: 
@@ -4129,7 +4202,7 @@ expect(() => new CalcResultItem(null,null)).to.throw(Error, "invalid null parame
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-101} &
+{TU-105} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{CalcResultItem()} con probabilità negativa;
 	\item \textbf{Caso}: 
@@ -4143,7 +4216,7 @@ expect(() => new CalcResultItem("n1",-5)).to.throw(Error, "invalid probability p
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-102} &
+{TU-106} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{CalcResultItem()} con probabilità maggiore di uno;
 	\item \textbf{Caso}: 
@@ -4159,7 +4232,7 @@ expect(() => new CalcResultItem("n1",1.1)).to.throw(Error, "invalid parameter");
 \hline
 \rowcolor{ashgrey}{Scope} & CalcResultItem::getValueName
 \\ \hline
-{TU-103} &
+{TU-107} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento di \emph{getValueName()};
 	\item \textbf{Caso}: 
@@ -4175,7 +4248,7 @@ expect(new CalcResultItem("n1",0.5).getValueName()).to.equal("n1");
 \hline
 \rowcolor{ashgrey}{Scope} & CalcResultItem::getProbValue
 \\ \hline
-{TU-104} &
+{TU-108} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento di \emph{getProbValue()};
 	\item \textbf{Caso}: 
@@ -4191,7 +4264,7 @@ expect(new CalcResultItem("n1",0.5).getProbValue()).to.equal(0.5);
 \hline
 \rowcolor{ashgrey}{Scope} & CalcResult::constructor
 \\ \hline
-{TU-105} &
+{TU-109} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{CalcResult()} con parametri nulli;
 	\item \textbf{Caso}: 
@@ -4205,7 +4278,7 @@ expect(() => new CalcResult(null,null)).to.throw(Error, "invalid null parameter"
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-106} &
+{TU-110} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{CalcResult()} con item nulli in array;
 	\item \textbf{Caso}: 
@@ -4224,9 +4297,25 @@ expect(() => new CalcResult(null,calcItems)).to.throw(Error, "invalid array para
 	\end{lstlisting}
 \end{itemize}\\
 \hline
+{TU-111} &
+\begin{itemize}
+	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{CalcResult()};
+	\item \textbf{Caso}: 
+	\begin{itemize}
+		\item \textbf{Input}: oggetto \emph{CalcResult};
+		\item \textbf{Risultato atteso}: nessuna eccezione viene lanciata.
+	\end{itemize}
+	\item \textbf{Procedura}:
+	\begin{lstlisting}
+let calcItems:Array<CalcResultItem>=new Array<CalcResultItem>();
+calcItems.push(new CalcResultItem("1",0.5));
+expect(() => new CalcResult("n1",calcItems)).to.not.throw(Error);
+	\end{lstlisting}
+\end{itemize}\\
+\hline
 \rowcolor{ashgrey}{Scope} & CalcResult::getNodeName
 \\ \hline
-{TU-107} &
+{TU-112} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento di \emph{getNodeName()};
 	\item \textbf{Caso}: 
@@ -4242,9 +4331,33 @@ expect(new CalcResult("n1",calcItems).getNodeName()).to.equal("n1");
 	\end{lstlisting}
 \end{itemize}\\
 \hline
+\rowcolor{ashgrey}{Scope} & CalcResult::getValueProbs
+\\ \hline
+{TU-113} &
+\begin{itemize}
+	\item \textbf{Progettazione}: verifica il funzionamento di \emph{getValueProbs()};
+	\item \textbf{Caso}: 
+	\begin{itemize}
+		\item \textbf{Input}: oggetto \emph{calcResult};
+		\item \textbf{Risultato atteso}: ["n5", 0.5], ["n3", 0.6].
+	\end{itemize}
+	\item \textbf{Procedura}:
+	\begin{lstlisting}
+let calcItems:Array<CalcResultItem>=new Array<CalcResultItem>();
+calcItems.push(new CalcResultItem("n5",0.5));
+calcItems.push(new CalcResultItem("n3",0.6));
+let calcResult=new CalcResult("n1",calcItems);
+let probs=calcResult.getValueProbs();
+expect(probs[0].getValueName()).to.equals("n5");
+expect(probs[0].getProbValue()).to.equals(0.5);
+expect(probs[1].getValueName()).to.equals("n3");
+expect(probs[1].getProbValue()).to.equals(0.6);
+	\end{lstlisting}
+\end{itemize}\\
+\hline
 \rowcolor{ashgrey}{Scope} & InputResultAggregate::constructor
 \\ \hline
-{TU-108} &
+{TU-114} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{InputResultAggregate()} con \emph{collection} non definito;
 	\item \textbf{Caso}: 
@@ -4261,7 +4374,7 @@ expect(() => new InputResultAggregate(collection)).to.throw(Error, "invalid coll
 \hline
 \rowcolor{ashgrey}{Scope} & InputResultAggregate::buildIterator
 \\ \hline
-{TU-109} &
+{TU-115} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento di \emph{buildIterator()};
 	\item \textbf{Caso}: 
@@ -4285,7 +4398,7 @@ expect(new InputResultAggregate(collection).buildIterator().next().value.getCurr
 \hline
 \rowcolor{ashgrey}{Scope} & InputResult::constructor
 \\ \hline
-{TU-110} &
+{TU-116} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{InputResult()} con \emph{nodeName} non definito;
 	\item \textbf{Caso}: 
@@ -4300,7 +4413,7 @@ expect(() => new InputResult(nodeName, "valore")).to.throw(Error, "invalid nodeN
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-111} &
+{TU-117} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{InputResult()} con \emph{currentValue} non definito;
 	\item \textbf{Caso}: 
@@ -4322,7 +4435,7 @@ expect(() => new InputResult(nodeName, currentValue)).to.throw(Error, "invalid c
 \hline
 \rowcolor{ashgrey}{Scope} & InputResult::getNode
 \\ \hline
-{TU-112} &
+{TU-118} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento di \emph{getNode()};
 	\item \textbf{Caso}: 
@@ -4345,7 +4458,7 @@ expect(name).to.equal("n1");
 \hline
 \rowcolor{ashgrey}{Scope} & InputResult::getCurrentValue
 \\ \hline
-{TU-113} &
+{TU-119} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento di \emph{getCurrentValue()};
 	\item \textbf{Caso}: 
@@ -4368,7 +4481,7 @@ expect(getCurrent).to.equal("valore");
 \hline
 \rowcolor{ashgrey}{Scope} & NetUpdater::constructor
 \\ \hline
-{TU-114} &
+{TU-120} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{NetUpdater()} con \emph{network} non definito;
 	\item \textbf{Caso}: 
@@ -4385,7 +4498,7 @@ expect(() => new NetUpdater(network)).to.throw(Error, "invalid network parameter
 \hline
 \rowcolor{ashgrey}{Scope} & NetUpdater::updateNet
 \\ \hline
-{TU-115} &
+{TU-121} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{updateNet()} con \emph{InputResultAggregate} non definito;
 	\item \textbf{Caso}: 
@@ -4404,7 +4517,7 @@ expect(()=> networkUpdater.updateNet(results)).to.throw(Error, "invalid InputRes
 \hline
 \rowcolor{ashgrey}{Scope} & SingleNetWriter::constructor
 \\ \hline
-{TU-116} &
+{TU-122} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{SingleNetWriter()} con \emph{client} non definito;
 	\item \textbf{Caso}: 
@@ -4419,7 +4532,7 @@ expect(()=> new SingleNetWriter(client)).to.throw(Error, "invalid client paramet
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-117} &
+{TU-123} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{SingleNetWriter()} con \emph{client} definito;
 	\item \textbf{Caso}: 
@@ -4440,7 +4553,7 @@ new ConcreteWriteClientFactory().makeInfluxWriteClient(
 \hline
 \rowcolor{ashgrey}{Scope} & SingleNetWriter::write
 \\ \hline
-{TU-118} &
+{TU-124} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{write()} con \emph{calcData} non definito;
 	\item \textbf{Caso}: 
@@ -4463,7 +4576,7 @@ singleWriter.write(calc).then(function (){})
 \hline
 \rowcolor{ashgrey}{Scope} & NetManager::constructor
 \\ \hline
-{TU-119} &
+{TU-125} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{NetManager()} con \emph{reader} non definito;
 	\item \textbf{Caso}: 
@@ -4478,7 +4591,7 @@ expect(() =>new NetManager(unReader, updater, writer)).to.throw(Error, "invalid 
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-120} &
+{TU-126} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{NetManager()} con \emph{updater} non definito;
 	\item \textbf{Caso}: 
@@ -4493,7 +4606,7 @@ expect(() =>new NetManager(reader, unUpdater, writer)).to.throw(Error, "invalid 
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-121} &
+{TU-127} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{NetManager()} con \emph{writer} non definito;
 	\item \textbf{Caso}: 
@@ -4510,7 +4623,7 @@ expect(() => new NetManager(reader, updater, unWriter)).to.throw(Error, "invalid
 \hline
 \rowcolor{ashgrey}{Scope} & NetManager::updateNet
 \\ \hline
-{TU-122} &
+{TU-128} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento di \emph{updateNet()};
 	\item \textbf{Caso}: 
@@ -4522,7 +4635,7 @@ expect(() => new NetManager(reader, updater, unWriter)).to.throw(Error, "invalid
 \hline
 \rowcolor{ashgrey}{Scope} & InfluxWriteClient::constructor
 \\ \hline
-{TU-123} &
+{TU-129} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{InfluxWriteClient()} con \emph{dsn} non definito;
 	\item \textbf{Caso}: 
@@ -4537,7 +4650,7 @@ expect(() => new InfluxWriteClient(dsn, "prova", influx)).to.throw(Error, "inval
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-124} &
+{TU-130} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{InfluxWriteClient()} con \emph{defaultDB} non definito;
 	\item \textbf{Caso}: 
@@ -4552,7 +4665,7 @@ expect(() => new InfluxWriteClient("http://localhost:8086/", defaultDB, influx))
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-125} &
+{TU-131} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{InfluxWriteClient()} con \emph{influx} non definito;
 	\item \textbf{Caso}: 
@@ -4569,7 +4682,7 @@ expect(() => new InfluxWriteClient("http://localhost:8086/", "prova", unInflux))
 \hline
 \rowcolor{ashgrey}{Scope} & InfluxWriteClient::getAddress
 \\ \hline
-{TU-126} &
+{TU-132} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento di \emph{getAddress()};
 	\item \textbf{Caso}: 
@@ -4585,7 +4698,7 @@ expect(new InfluxWriteClient("http://localhost:8086/", "prova", influx).getAddre
 \hline
 \rowcolor{ashgrey}{Scope} & InfluxWriteClient::getDefaultDB
 \\ \hline
-{TU-127} &
+{TU-133} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento di \emph{getDefaultDB()};
 	\item \textbf{Caso}: 
@@ -4599,9 +4712,54 @@ expect(new InfluxWriteClient("http://localhost:8086/", "prova", influx).getDefau
 	\end{lstlisting}
 \end{itemize}\\
 \hline
+\rowcolor{ashgrey}{Scope} & InfluxWriteClient::writeBatchData
+\\ \hline
+{TU-134} &
+\begin{itemize}
+	\item \textbf{Progettazione}: verifica il funzionamento di \emph{writeBatchData()};
+	\item \textbf{Caso}: 
+	\begin{itemize}
+		\item \textbf{Input}: oggetto \emph{InfluxWriteClient};
+		\item \textbf{Risultato atteso}: TRUE.
+	\end{itemize}
+	\item \textbf{Procedura}:
+	\begin{lstlisting}
+const influxWriter: InfluxWriteClient = new InfluxWriteClient("http://localhost:8086/", "prova", influx);
+let calcArray: Array<CalcResult> = new Array<CalcResult>();
+let calcItemArray: Array<CalcResultItem> = new Array<CalcResultItem>();
+calcItemArray.push(new CalcResultItem("field1", 0.5));
+calcArray.push(new CalcResult("burglary", calcItemArray)); 
+let toBeWritten: CalcResultAggregate = new CalcResultAggregate(calcArray);
+influxWriter.writeBatchData(toBeWritten).then(function(){
+	expect(true).to.equal(true);
+});
+	\end{lstlisting}
+\end{itemize}\\
+\hline
+\rowcolor{ashgrey}{Scope} & InfluxWriteClient::writePointData
+\\ \hline
+{TU-135} &
+\begin{itemize}
+	\item \textbf{Progettazione}: verifica il funzionamento di \emph{writePointData()};
+	\item \textbf{Caso}: 
+	\begin{itemize}
+		\item \textbf{Input}: oggetto \emph{InfluxWriteClient};
+		\item \textbf{Risultato atteso}: TRUE.
+	\end{itemize}
+	\item \textbf{Procedura}:
+	\begin{lstlisting}
+const influxWriter: InfluxWriteClient = new InfluxWriteClient("http://localhost:8086/", "prova", influx);
+let calcItemArray: Array<CalcResultItem> = new Array<CalcResultItem>();
+calcItemArray.push(new CalcResultItem("field1", 0.5));
+influxWriter.writePointData(new CalcResult("burglary", calcItemArray)).then(function(){
+	expect(true).to.equal(true);
+});
+	\end{lstlisting}
+\end{itemize}\\
+\hline
 \rowcolor{ashgrey}{Scope} & WriteClientFactory::constructor
 \\ \hline
-{TU-128} &
+{TU-136} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{WriteClientFactory()} con \emph{host} non definito;
 	\item \textbf{Caso}: 
@@ -4620,7 +4778,7 @@ expect(<Error> e.toString()).to.equal("Error: invalid host parameter");
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-129} &
+{TU-137} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{WriteClientFactory()} con \emph{port} non definito;
 	\item \textbf{Caso}: 
@@ -4639,7 +4797,7 @@ expect(<Error> e.toString()).to.equal("Error: invalid port parameter");
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-130} &
+{TU-138} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{WriteClientFactory()} con \emph{defaultDB} non definito;
 	\item \textbf{Caso}: 
@@ -4658,7 +4816,7 @@ expect(<Error> e.toString()).to.equal("Error: invalid defaultDB parameter");
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-131} &
+{TU-139} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{WriteClientFactory()} con \emph{host} vuoto;
 	\item \textbf{Caso}: 
@@ -4676,7 +4834,7 @@ expect(<Error> e.toString()).to.equal("Error: invalid host parameter");
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-132} &
+{TU-140} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{WriteClientFactory()} con \emph{port} vuoto;
 	\item \textbf{Caso}: 
@@ -4694,7 +4852,7 @@ expect(<Error> e.toString()).to.equal("Error: invalid port parameter");
 	\end{lstlisting}
 \end{itemize}\\
 \hline
-{TU-132} &
+{TU-141} &
 \begin{itemize}
 	\item \textbf{Progettazione}: verifica il funzionamento del costruttore di \emph{WriteClientFactory()} con \emph{deafultDB} vuoto;
 	\item \textbf{Caso}: 
