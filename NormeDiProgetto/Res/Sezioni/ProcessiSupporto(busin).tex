@@ -281,14 +281,12 @@ Per ogni documento i \emph{Verificatori} devono calcolare l'indice di Gulpease e
 
 
 \subsubsection{Analisi dei prodotti software}
-Descrizione delle procedure da eseguire per verificare adeguatamente i prodotti software.
+Abbiamo deciso di dotarci di uno strumento per il pre-commit che, prima di completare l'operazione di commit sulla repository, esegue l'analisi statica e l'analisi dinamica in locale della nuova versione del codice; se l'esito di questi test dovesse risultare negativo allora il commit non andrà a buon fine, in caso contrario invece l'operazione avrà successo.
 \paragraph{Analisi statica}\Spazio
-Il processo di analisi statica consiste nello svolgere dei test che non richiedono l'esecuzione del sistema software ma effettuano controlli sul codice sorgente. 
+Il processo di analisi statica consiste nello svolgere dei test che non richiedono l'esecuzione del sistema software ma effettuano controlli sul codice sorgente.
 Può essere svolta nei seguenti modi:
 \begin{itemize}
-	\item \textbf{Walkthrough}: tecnica applicata quando non si sanno le tipologie di errori o problemi che si stanno cercando; è un'attività di lettura integrale e approfondita del testo o codice del prodotto, principalmente utilizzata durante le prime fasi del progetto in quanto permette una verifica più attenta e precisa dei prodotti. Ricade tra
-	i compiti del \emph{Verificatore}, che si occuperà anche di stilare una
-	lista degli errori riscontrati per facilitare la discussione di eventuali modifiche e permettere di individuare gli errori più frequenti. La fase finale consiste nell'applicare e registrare le modifiche correttive approvate;
+	\item \textbf{Walkthrough}: tecnica applicata quando non si sanno le tipologie di errori o problemi che si stanno cercando; è un'attività di lettura integrale e approfondita del testo o codice del prodotto, principalmente utilizzata durante le prime fasi del progetto in quanto permette una verifica più attenta e precisa dei prodotti. Ricade tra i compiti del \emph{Verificatore}, che si occuperà anche di stilare una lista degli errori riscontrati per facilitare la discussione di eventuali modifiche e permettere di individuare gli errori più frequenti. La fase finale consiste nell'applicare e registrare le modifiche correttive approvate;
 	\item \textbf{Inspection}: attività di analisi mirata di parti specifiche del prodotto documentale o software che sono ritenute sezioni critiche, ovvero con grande concentrazione, potenziale o effettiva, di errori
 	o anomalie. La lista degli errori da controllare va compilata prima dell'inizio dell'attività, in quanto maturata dall'esperienza acquisita durante le precedenti attività di \emph{Walkthrough}.
 	Essendo limitata ad un'area specifica, risulta più veloce nell'esecuzione e nell'attuazione delle modifiche necessarie.
