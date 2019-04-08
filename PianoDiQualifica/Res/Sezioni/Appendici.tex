@@ -22,13 +22,13 @@
 	\hline
 	{R1F2.3} & Implementato\\
 	\hline
-	{R0F3} & Non implementato\\
+	{R0F3} & Implementato\\
 	\hline
 	{R1F3.1} & Implementato\\
 	\hline
-	{R0F4} & Non implementato\\
+	{R0F4} & Implementato\\
 	\hline
-	{R1F4.1} & Non implementato\\
+	{R1F4.1} & Implementato\\
 	\hline
 	{R0F5} & Implementato\\
 	\hline
@@ -315,13 +315,13 @@ Dal grafico possiamo estrapolare che:
 			\hline
 			{Gestione dei rischi} & {3} & {Si è dimostrato stabile al verificarsi di alcune situazioni di basso rischio, grazie alle istruzione impartite dal \emph{Responsabile di Progetto.}}\\	
 			\hline
-			{Gestione dei test} & {4} & {Sono stati specificati ed implementati buona parte dei test La copertura dei test di unità a registrato esiti molto positivi.}\\	
+			{Gestione dei test} & {3} & {Sono stati specificati ed implementati buona parte dei test La copertura dei test di unità a registrato esiti molto positivi.}\\	
 			\hline
 			{Versionamento e build} & {4} & {Automatizzato il processo tramite \gl{Travis}.} Ogni modifica apportata alla repository di GitHub scaturisce una serie di test sul codice, tenendo traccia dell'esito delle varie build e registrando valori utili per le nostre metriche, come il code coverage.\\	
 			\hline
 		\end{tabular}
 		\caption[Maturità dei processi, Progettazione Architetturale]{Maturità dei processi e considerazioni}	
-		\label{tabella: considerazioni sulla maturità dei processi raggiunta pa}
+		\label{tabella: considerazioni sulla maturità dei processi raggiunta rq}
 	\end{center}
 \end{table}
 \renewcommand{\arraystretch}{1}
@@ -433,7 +433,7 @@ Il lavoro costante del gruppo ha permesso di registrare dei valori accettabili, 
 \end{figure}
 
 \subsubsection{Percentuale build Travis superate}
-La presenza di vari errori ha fatto registrare dei valori non accettabili inizialmente, ma una volta corrette queste criticità questa metrica ha raggiunto un valore ottimale.
+La presenza di vari errori ha fatto registrare dei valori non accettabili inizialmente, ma una volta corrette queste criticità questa metrica ha raggiunto un valore accettabile.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/buildPass}
@@ -465,7 +465,7 @@ Grazie le procedura di verifica e correzione attuate e all'ausilio dello strumen
 \end{figure}
 
 \subsubsection{Functional Implementation Completeness}
-La scarsa copertura delle funzionalità in ingresso alla fase di progetto ha fatto registrare valori non accettabili, ma grazie al lavoro del team questa metrica ha raggiunto un valore accettabile, anche se non ancora ottimale.
+La scarsa copertura delle funzionalità inizialmente ha fatto registrare valori non accettabili, ma grazie al lavoro del team questa metrica ha raggiunto un valore accettabile, anche se non ancora ottimale.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/FIC}
@@ -473,7 +473,7 @@ La scarsa copertura delle funzionalità in ingresso alla fase di progetto ha fat
 \end{figure}
 
 \subsubsection{Average Functional Implementation Correctness}
-La presenza di alcune criticità in ingresso alla fase di progetto ha fatto registrare valori non accettabili, ma grazie al lavoro del team questa metrica ha raggiunto un valore accettabile, anche se non ancora ottimale.
+La presenza di alcune criticità inizialmente ha fatto registrare valori non accettabili, ma grazie al lavoro del team questa metrica ha raggiunto un valore accettabile, anche se non ancora ottimale.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/AFIC}
@@ -497,17 +497,18 @@ Il valore di questa metrica è sempre rimasto in linea con il valore accettabile
 \end{figure}
 
 \subsubsection{Failure Density}
-La presenza di alcune criticità in ingresso alla fase di progetto ha fatto registrare valori non accettabili, ma grazie al lavoro del team questa metrica ha raggiunto un valore accettabile, anche se non ancora ottimale.
+La presenza di alcune criticità iniziali ha fatto registrare valori non accettabili, ma grazie al lavoro del team questa metrica ha raggiunto un valore accettabile, anche se non ancora ottimale.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/FD}
 	\caption{Misurazione Failure Density}\label{}
 \end{figure}
 
-\subsubsection{Blocco di operazioni non corrette}
+\subsubsection{Operazioni con gestione errori}
+Inizialmente abbiamo registrato dei valori non accettabili a causa della scarsa gestione degli errori, ma grazie allo sviluppo dei test siamo riusciti ad ottenere un valore accettabile per questa metrica.
 \begin{figure} [H]
 	\centering
-	%\includegraphics[scale=1]{Img/blocco}
+	\includegraphics[scale=1]{Img/blocco}
 	\caption{Misurazione }\label{}
 \end{figure}
 
@@ -520,7 +521,7 @@ Il valore di questa metrica è sempre rimasto in linea con il valore accettabile
 \end{figure}
 
 \subsubsection{Comment Ratio}
-La presenza di pochi commenti nel codice in ingresso alla fase di progetto ha fatto registrare dei valori non accettabili, ma con il lavoro del team questa metrica ha raggiunto un valore accettabile.
+La presenza di pochi commenti nel codice inizialmente ha fatto registrare dei valori non accettabili, ma con il lavoro del team questa metrica ha raggiunto un valore accettabile.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/CR}
