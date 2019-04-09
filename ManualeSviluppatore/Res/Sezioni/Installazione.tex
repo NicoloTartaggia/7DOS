@@ -1,5 +1,16 @@
 \newsection{Installazione}
-\subsection{Node.js}
+\subsection{Requisiti}
+Nel file \gl{package.json} nella \gl{root directory} definisce tutte le dipendenze necessarie per l'esecuzione del plug-in.
+Esse, ad esempio \gl{TypeScript}, \gl{Node} e \gl{NPM}, vengono installati automaticamente attraverso il comando
+\begin{verbatim}
+	npm install
+\end{verbatim}
 \subsection{Installazione Grafana}
+Per poter installare e utilizzare il plug-in è necessario scaricare e configurare precedentemente Grafana, al link URL \url{http://docs.grafana.org/installation/}. \\
+Il plug-in è stato sviluppato utilizzando la versione 5.4.3. Per evitare errori nell'esecuzione, si raccomanda di avvalersi della stessa versione. Inoltre, il prodotto è stato testato con successo su versioni precedenti, tra le quali 5.x.x ecc.
+Una volta terminata la configurazione descritta al riferimento precedente, avviare l'eseguibile \begin{ttfamily}
+	grafana-5.x.x/bin/grafana-server.exe
+\end{ttfamily}.
+A questo punto, aprire una finestra del browser e spostarsi all'indirizzo URL \url{localhost:8080}. Sottolineiamo che la porta 8080 è quella suggerita nella pagina di installazione di Grafana.
 \subsection{Installazione plugin}
 \subsection{Installazione e configurazione InfluxDB}
