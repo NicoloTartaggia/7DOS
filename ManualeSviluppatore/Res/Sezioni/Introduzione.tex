@@ -1,42 +1,13 @@
 \newsection{Introduzione}
 \subsection{Scopo del documento}
-Questo documento rappresenta il Manuale dello Sviluppatore relativo al \gl{prodotto software} G\&B sviluppato dal gruppo 7DOS. Il suo scopo principale è fornire tutte le informazioni necessarie per usufruire delle funzionalità fino ad ora implementate ed, eventualmente, per estendere e migliorare il prodotto.
+Questo documento rappresenta il Manuale dello Sviluppatore relativo al prodotto software G\&B sviluppato dal gruppo 7DOS. Il suo scopo principale è fornire tutte le informazioni necessarie per usufruire delle funzionalità fino ad ora implementate ed, eventualmente, per estendere e migliorare il prodotto.
 \subsection{Scopo del prodotto}
-Lo scopo del prodotto è la creazione di un \gl{plug-in} per il software di monitoraggio \gl{Grafana} in grado di collegare dati provenienti da una specifica \gl{datasource} ad un sistema probabilistico definito in una \gl{rete Bayesiana}. In seguito, i risultati ottenuti vengono memorizzati in un database, nel nostro caso \gl{influxDB}, e letti attraverso un \gl{panel} standard di Grafana. In questo modo è possibile evidenziare eventi non visibili ma con alta \gl{likelihood}.
-\subsection{Riferimenti}
-\subsubsection{Informativi}
-\begin{itemize}
-	\item{\textbf{Rete Bayesiana}\\
-		\url{https://en.wikipedia.org/wiki/Bayesian_network}}
-\end{itemize}
-\subsubsection{Installazione}
-\begin{itemize}
-	\item{\textbf{TypeScript}\\
-		\url{https://www.typescriptlang.org/index.html#download-links}}
-	\item{\textbf{Node.js}\\
-		\url{https://nodejs.org/it/}}
-	\item{\textbf{Grafana}\\
-		\url{http://docs.grafana.org/installation/}}
-	\item{\textbf{Grafana Plug-in}\\
-		\url{http://docs.grafana.org/plugins/installation/}}
-	\item{\textbf{InfluxDB}\\
-		\url{https://portal.influxdata.com/downloads/}}
-	\item{\textbf{VSCode}\\
-		\url{https://code.visualstudio.com/}}
-	\item{\textbf{JetBrains WebStorm}\\
-		\url{https://www.jetbrains.com/webstorm/}}
-	\item{\textbf{JetBrains WebStorm for students}\\
-		\url{https://www.jetbrains.com/student/}}
-\end{itemize}	
-\subsubsection{Legali}
-\begin{itemize}
-	\item{\textbf{Licenza MIT}\\
-		\url{https://opensource.org/licenses/MIT}}
-\end{itemize}
+\emph{G\&B} è un plug-in per il software di monitoraggio Grafana. Il suo scopo è estenderne le funzionalità permettendo di monitorare il sistema desiderato con una o più reti Bayesiane definita ad-hoc dall'utente, consentendo poi la visualizzazione dei dati calcolati mediante i panel di Grafana.
+\\
+Il plug-in può essere utilizzato interamente in locale, e non dipende da servizi esterni per il suo funzionamento: una volta installato, è sufficiente impostare le \gl{datasource} necessarie, caricare e configurare la rete Bayesiana scelta e avviare il monitoraggio.
+
 \subsection{Glossario}
-Per rendere la lettura del documento più semplice, chiara e comprensibile viene allegato il
-\emph{Glossario\_v3.0.0} nel quale sono contenute le definizioni dei termini tecnici, dei vocaboli
-ambigui, degli acronimi e delle abbreviazioni. La presenza di un termine all'interno del
-Glossario è segnalata con una 'g' posta come pedice (esempio: \gl{Glossario}).
+In appendice al documento è presente un glossario con tutti i termini necessari per la piena comprensione del documento. Il prodotto è diretto a operatori IT e addetti al monitoraggio di sistemi informatici, pertanto vocaboli valutati come di conoscenza comune o appartenenti a competenze informatiche di base sono stati ignorati.\\
+La presenza di un termine all'interno del glossario è segnalata con una "g" posta come pedice (esempio: \gl{Glossario}).
 
 \pagebreak
