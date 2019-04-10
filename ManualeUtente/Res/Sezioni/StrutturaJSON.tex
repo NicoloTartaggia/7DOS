@@ -1,0 +1,69 @@
+\pagebreak
+\newsection{Struttura del JSON}
+I file JSON che contengono la definizione di una rete Bayesiana sono strutturati nel seguente modo:
+\begin{itemize}
+	\item \textbf{nodes}: contiene l'elenco dei nodi della rete;
+	\begin{itemize}
+		\item \textbf{name}: nome del nodo;
+		\item \textbf{values}: contiene l'elenco delle values:
+		\begin{itemize}
+			\item name: nome della value;
+			\item type: tipo della value;
+			\item value/rangeMin/rangeMax: valore della value.
+		\end{itemize}
+		\item \textbf{parents}: contiene l'elenco dei nodi padri;
+		\item \textbf{cpt}: contiene l'elenco delle probabilità associate.
+	\end{itemize}
+\end{itemize}
+\Spazio
+Ecco un esempio di rete con due nodi in formato JSON:
+\begin{lstlisting}
+{
+	"nodes":[
+		{
+		"name":"Node1",
+		"values":[
+			{
+				"name":"Example of string value",
+				"type":"string",
+				"value":"Value1"
+			},
+			{
+				"name":"Another example of string value",
+				"type":"string",
+				"value":"Value2"
+			}
+		],
+		"parents":["Node2"],
+		"cpt":[[0.2,0.8],[0.5,0.5],[0.4,0.6]]
+		},
+		{
+		"name":"Node2",
+		"values":[
+			{
+				"name":"Low Range",
+				"type":"range",
+				"rangeMin":0,
+				"rangeMax":10
+			},
+			{
+				"name":"Normal Range",
+				"type":"range",
+				"rangeMin":11,
+				"rangeMax":80
+			},
+			{
+				"name":"Alert Range",
+				"type":"range",
+				"rangeMin":81,
+				"rangeMax":100
+			}
+		],
+		"parents":[],
+		"cpt":[[0.6,0.2,0.2]]
+		}
+	]
+}
+\end{lstlisting}
+
+
