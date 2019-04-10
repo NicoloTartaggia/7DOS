@@ -84,21 +84,28 @@ Dopo un attenta analisi del problema il team è riuscito a scomporre il suddetto
 Ci è sembrato dunque abbastanza naturale modellare l'architettura del buisness layer in tre oggetti distinti ognuno dei quali si occupa di gestire una specifica fase del processo dall'inizio alla fine.
 Analizziamo ora più in dettaglio gli oggetti precedentemente citati.
 \subsubsection{NetReader}
-Il NetReader è collegato ad un ReadClient, di cui parleremo successivamente all'interno della sezione dedicata al database layer. NetReader è responsabile di collegare un nodo ad un flusso di dati e di richiedere a ReadClient di interrogare il database per ottenere i dati necessari.\\
-Per non dover istanziare più client di lettura per la stessa sorgente dati o database, abbiamo implementato una Object Pool per i client di lettura: quando si connette un nodo ad un flusso di dati, se il client richiesto esiste viene estratto dal pool, altrimenti viene creato ad-hoc.
+Il NetReader ha il compito di associare i nodi della rete a delle sorgenti dati (come dei database) scelte dall'utente, quest'ultimne vengono rappresentate all'interno della nostra applicazione da oggetti di tipo Flow.
 \begin{figure} [H]
 	\centering
 	
 	\caption{Diagramma UML NetReader}\label{}
 \end{figure}
+\paragraph{Flow}\Spazio
+Un oggetto Flow ha il compito ritornare un risultato prelevato da una qualsiasi sorgente dati.
+Il team attualmente ha realizzato un unica implementazione di un flow il ClientFlow il quale utilizza dei ReadClient, di cui parleremo più approffonditamente all'interno della prossima sezione, per interfacciarsi con dei database.
+\paragraph{ClientPool}\Spazio
+Per non dover istanziare più client di lettura per la stessa sorgente dati o database, abbiamo implementato una Object Pool per i client di lettura: quando si connette un nodo ad un flusso di dati, se il client richiesto esiste viene estratto dal pool, altrimenti viene creato ad-hoc.
 \subsubsection{NetUpdater}
-NetUpdater ha il compito di effettuare il ricalcolo utilizzando i dati letti da NetReader e le funzionalità esposte dal NetworkAdapter.
+NetUpdater ha il compito di effettuare il calcolo delle probabilità vero e proprio utilizzando i dati letti da NetReader e le funzionalità esposte dal NetworkAdapter.s
 \begin{figure} [H]
 	\centering
 	
 	\caption{Diagramma UML NetUpdater}\label{}
 \end{figure}
 \subsubsection{NetWriter}
+Il NetWriter ha il compito di scrivere all'interno di un apposito database scelto dall'utente tutti i dati calcolati dal NetUpdater. Per fare ciò esso si appoggia ad uno o più WriteClient classe che analizzeremo più approffonditamente all'interno del database layer.
+Il team, ai fini del proggetto, attualmente ha realizzato un unica implementazione del NetWriter, il SingleNetWriter il quale scrive tutti i dati ricevuti in input all'interno di un unico database. 
+E' importante sottolineare tuttavia come, grazie all'interfaccia NetWriter, sia relativamente semplice integrare all'interno del plugin una versione differente del NetWriter il quale per esempio permette la scrittura dei dati ricevuti in input all'interno di database differenti.
 \begin{figure} [H]
 	\centering
 	
@@ -112,7 +119,61 @@ Il NetManager non è altro che un facade il quale ha un riferimento ad un istanz
 	\caption{Diagramma UML NetManager}\label{}
 \end{figure}
 \subsubsection{Results}
-
+NetReader, NetUpdater e NetWriter comunicano tra loro fornendo i risultati delle proprie operazioni  all'interno di appositi oggetti “risultato” il cui cambiamento è altamente improbabile. In questo modo è possibile effettuare anche importanti modifiche alla struttura interna di queste macrocomponenti senza che le interazioni con le altre ne risentano anche solo minimamente.
+Inoltre abbiamo deciso di rendere questi oggetti risultato degli iterator per garantire un ordine nel loro scorrimento.\\
+In particolare sono state realizzate due tipologie di result:\\
+Gli InputResult ritornati dal NetReader al termine delle sue operazioni ed utilizzati dal NetUpdater per effettuare il calcolo delle probabilità.
+\begin{figure} [H]
+	\centering
+	
+	\caption{Diagramma UML InputResult}\label{}
+\end{figure}
+I CalcResult ritornati dal NetUpdater al termine delle sue operazioni ed utilizzati dal NetWriter per effettuare la scrittura sul database di output indicato dall'utente.
+\begin{figure} [H]
+	\centering
+	
+	\caption{Diagramma UML CalcResult}\label{}
+\end{figure}
+Di seguito è possibile vedere un diagramma di sequenza il quale riassume l'intero processo di calcolo delle probabilità descritto all'interno di questa sezione.
+\begin{figure} [H]
+	\centering
+	
+	\caption{Diagramma sequenza calcolo probabilità}\label{}
+\end{figure}
+\subsubsection{TimeBasedNetUpdater}
+Il TimeBasedNetUpdater possiede un riferimento del NetManager ed ha il compito di effettuare il processo di calcolo regolarmente secondo regole temporali definite dall'utente.
+\begin{figure} [H]
+	\centering
+	
+	\caption{Diagramma UML TimeBasedNetUpdater}\label{}
+\end{figure}
 \subsection{Database Layer}
+Il database layer è composto da tutto l'insieme di classi che permettono all'applicazione di interfacciarsi con sorgenti dati esterne come per l'appunto dei database.
+In particolare questo layer è suddivisibile in due tipologie di classi, i ReadClient ed i WriteClient i quali offrono rispettivamente funzionalità di scrittura e lettura su database.\\
+Il team attualmente ha realizzato solo due implementazioni di ReadClient e WriteClient, quelle necessarie per interfacciarsi con database di tipo influx in quanto espressamente richiesto dal committente.\\
+Tuttavia essendo i ReadClient e WriteClient degli strategy pattern è relativamente facile realizzare differenti implementazioni di quest'ultimi che permettono di interfacciarsi con database differenti.
+\begin{figure} [H]
+	\centering
+	
+	\caption{Diagramma UML ReadClient}\label{}
+\end{figure}
+\begin{figure} [H]
+	\centering
+	
+	\caption{Diagramma UML WriteClient}\label{}
+\end{figure}
 \subsection{Presentation Layer}
+Il presentation layer ha il compito di gestire l'interfaccia grafica del plugin.\\
+Ad ogni tab di edit del plugin è associata una view ed un controller, in particolare abbiamo:
+\begin{itemize}
+	\item Una tab per l’associazione dei database da cui prelevare i dati necessari per il processo di calcolo delle probabilità, la quale fa riferimento al NetReader come model;
+	\item Una tab che permette di selezionare il database di output in cui si vogliono scrivere le probabilità calcolate, la quale fa riferimento al NetWriter come model;
+	\item Una tab in cui l'utente può caricare un file JSON a partire dal quale verrà poi creata l'intera rete, il cui model è il NetParser.
+	\item una tab in cui l'utente può avviare e terminare il processo di ricalcolo continuo e scegliere la frequenza con cui quest'ultimo avverrà. Questa tab fa riferimento al TimeBasedUpdater come model.
+\end{itemize}
+\begin{figure} [H]
+	\centering
+	
+	\caption{Diagramma UML presentation layer}\label{}
+\end{figure}
 \pagebreak
