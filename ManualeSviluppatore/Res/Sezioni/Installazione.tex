@@ -1,16 +1,29 @@
 \newsection{Installazione}
-\subsection{Requisiti}
-Nel file \gl{package.json} nella \gl{root directory} definisce tutte le dipendenze necessarie per l'esecuzione del plug-in.
-Esse, ad esempio \gl{TypeScript}, \gl{Node} e \gl{NPM}, vengono installati automaticamente attraverso il comando
-\begin{verbatim}
-	npm install
-\end{verbatim}
-\subsection{Installazione Grafana}
+\subsection{Installazione di Grafana}
 Per poter installare e utilizzare il plug-in è necessario scaricare e configurare precedentemente Grafana, al link URL \url{http://docs.grafana.org/installation/}. \\
-Il plug-in è stato sviluppato utilizzando la versione 5.4.3. Per evitare errori nell'esecuzione, si raccomanda di avvalersi della stessa versione. Inoltre, il prodotto è stato testato con successo su versioni precedenti, tra le quali 5.x.x ecc.
-Una volta terminata la configurazione descritta al riferimento precedente, avviare l'eseguibile \begin{ttfamily}
-	grafana-5.x.x/bin/grafana-server.exe
-\end{ttfamily}.
+Il plug-in è stato sviluppato utilizzando la versione 5.4.3. Per evitare errori nell'esecuzione, si raccomanda di avvalersi della stessa versione.
+Una volta terminata la configurazione descritta al riferimento precedente, in Windows avviare l'eseguibile\\ \begin{ttfamily}grafana-5.4.3/bin/grafana-server.exe\end{ttfamily}, mentre in Linux eseguire il comando\\ \begin{ttfamily}sudo service grafana-server start\end{ttfamily}.\\
 A questo punto, aprire una finestra del browser e spostarsi all'indirizzo URL \url{localhost:8080}. Sottolineiamo che la porta 8080 è quella suggerita nella pagina di installazione di Grafana.
+
+\subsection{Installazione Node.js}
+Per usufruire delle funzionalità del plug-in è necessario installare il \gl{framework} Node.js e il relativo gestore dei pacchetti chiamato Node Package Manager (\gl{NPM}) attraverso l'apposita sezione al link URL \url{https://nodejs.org/it/download/}. In questo modo saranno disponibili i comandi \begin{ttfamily}npm install\end{ttfamily} e \begin{ttfamily}npm run build\end{ttfamily}, necessari rispettivamente per l'installazione di tutte le dipendenze specificate nel \gl{package.json} e per l'esecuzione del processo di \gl{build}.
+Verificare, alla fine, la disponibilità le comando \begin{ttfamily}npm\end{ttfamily} tramite comando \begin{ttfamily}npm -v\end{ttfamily}. In caso negativo, scaricarlo dal link \url{https://www.npmjs.com/get-npm}.
+
 \subsection{Installazione plugin}
+Il plug-in completo è disponibile al link \url{https://github.com/NicoloTartaggia/7DOS-plugin}, scaricabile attraverso il bottone "Clone or download" e, in seguito, "Download ZIP", oppure attraverso comando \begin{ttfamily}git clone https://github.com/NicoloTartaggia/7DOS-plugin\end{ttfamily}. Una volta scaricato ed, eventualmente, estratto dall'archivio complesso, spostare il contenuto all'interno del percorso specifico: 
+\begin{itemize}
+	\item{\begin{ttfamily}grafana-5.4.3/data/plugins\end{ttfamily}} in Windows; \item{\begin{ttfamily}var/lib/grafana/plugins\end{ttfamily} in Linux.}
+\end{itemize}
+Dopodiché, da terminale spostarsi all'interno della cartella del plug-in e eseguire il comando \begin{ttfamily}npm install\end{ttfamily} per installare tutti i moduli node necessari al funzionamento del plug-in. Terminata l'installazione, procedere con il comando \begin{ttfamily}npm run build\end{ttfamily} per eseguire il processo di build. 
+Infine, riavviare il server di grafana. In Windows riaprire l'eseguibile \begin{ttfamily}grafana-server.exe\end{ttfamily}; in Linux eseguire il comando \begin{ttfamily}sudo service grafana-server restart\end{ttfamily}.
+
 \subsection{Installazione e configurazione InfluxDB}
+Grafana utilizza diverse \gl{datasource} per prelevare i dati da elaborare e monitorare. In particolare, il prodotto sviluppato si appoggia ad \gl{InfluxDB}.
+Di conseguenza, sono necessari due passaggi:
+\begin{itemize}
+	\item{Installare InfluxDB su Grafana:  dirigersi alla sezione "Configuration" dal side-menu a sinistra e selezionare la voce "Data sources". Successivamente, aggiungere una datasource tramite il bottone "Add data source" e selezionare InfluxDB. Una volta installato, impostare InfluxDB come datasource di default spuntando il relativo checkbox nelle impostazioni;}
+	\item{Scaricare InfluxDB al link \url{https://portal.influxdata.com/downloads/}. La versione di riferimento utilizzata durante lo sviluppo è la 1.7. Una volta scaricato, avviare il server. In Windows, eseguire \begin{ttfamily}influxd.exe\end{ttfamily}}, mentre in Linux eseguire il comando \begin{ttfamily}sudo service influxdb start\end{ttfamily}.\\
+	L'istanza sarà interrogabile all'indirizzo \url{localhost:8086}.
+\end{itemize}
+
+\pagebreak
