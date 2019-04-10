@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-03-14" view-index="0" gantt-divider-location="409" resource-divider-location="300" version="2.8.9" locale="en_US">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-03-14" view-index="0" gantt-divider-location="550" resource-divider-location="300" version="2.8.9" locale="en_US">
     <description/>
     <view zooming-state="default:3" id="gantt-chart">
-        <field id="tpd3" name="Name" width="213" order="0"/>
-        <field id="tpd4" name="Begin date" width="73" order="1"/>
-        <field id="tpd5" name="End date" width="58" order="2"/>
-        <field id="tpd6" name="Duration" width="61" order="3"/>
+        <field id="tpd3" name="Name" width="248" order="0"/>
+        <field id="tpd4" name="Begin date" width="108" order="1"/>
+        <field id="tpd5" name="End date" width="94" order="2"/>
+        <field id="tpd6" name="Duration" width="96" order="3"/>
         <option id="color.recent"><![CDATA[#00cc33 #000000 #ff0033 #00ff33 #ff0000 #00cc00]]></option>
     </view>
     <view id="resource-table">
@@ -99,8 +99,16 @@
             </task>
         </task>
         <task id="307" name="Manuale utente" meeting="false" start="2019-04-01" duration="8" complete="0" expand="true">
-            <task id="308" name="Stesura" color="#8cb6ce" meeting="false" start="2019-04-01" duration="7" complete="0" thirdDate="2019-03-16" thirdDate-constraint="0" expand="true"/>
-            <task id="309" name="Verifica" color="#00cc33" meeting="false" start="2019-04-06" duration="3" complete="0" thirdDate="2019-03-16" thirdDate-constraint="0" expand="true"/>
+            <task id="308" name="Stesura" color="#8cb6ce" meeting="false" start="2019-04-01" duration="7" complete="0" thirdDate="2019-03-16" thirdDate-constraint="0" expand="true">
+                <depend id="309" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="309" name="Verifica" color="#00cc33" meeting="false" start="2019-04-08" duration="1" complete="0" thirdDate="2019-03-16" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="320" name="Manuale Sviluppatore" color="#000000" meeting="false" start="2019-04-01" duration="8" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" expand="true">
+            <task id="322" name="Stesura" color="#8cb6ce" meeting="false" start="2019-04-01" duration="7" complete="0" thirdDate="2019-03-16" thirdDate-constraint="0" expand="true">
+                <depend id="324" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="324" name="Verifica" color="#00cc33" meeting="false" start="2019-04-08" duration="1" complete="0" thirdDate="2019-03-16" thirdDate-constraint="0" expand="true"/>
         </task>
         <task id="236" name="Consegna" color="#ff0033" meeting="true" start="2019-04-12" duration="0" complete="0" thirdDate="2019-04-12" thirdDate-constraint="1" expand="true"/>
     </tasks>
