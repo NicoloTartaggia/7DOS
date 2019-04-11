@@ -5,7 +5,6 @@ Per poter utilizzare il plug-in e tutto ciò che permette la sua esecuzione vann
 	\item{Installazione ed accesso a Grafana;}
 	\item{Installazione del plug-in;}
 	\item{Connessione di uno o più datasource a Grafana, su cui si abbiano permessi di scrittura.}
-	\item{Altro?} 
 \end{itemize}
 \subsection{Browser compatibili}
 Di seguito vengono riportate le versioni minime dei browser sui quali è garantito il funzionamento del nostro plug-in:
@@ -16,14 +15,15 @@ Di seguito vengono riportate le versioni minime dei browser sui quali è garanti
 	\item{Microsoft Internet Explorer v.11}
 	\item{Microsoft Edge v.41} \\
 \end{itemize}
-
-Affinché tutte le funzionalità offerte dal plug-in vengano eseguite correttamente, è necessario che \gl{JavaScript} sia abilitato.
+Affinché il plug-in possa funzionare correttamente, è necessario che \gl{JavaScript} sia abilitato.
 \subsection{Installazione}
 Per installare il plug-in all'interno di Grafana è necessario scaricare l'intero progetto dal seguente link: \\[0.2cm]
 \hspace*{10mm}\url{https://github.com/NicoloTartaggia/7DOS-plugin}\\[0.2cm]
-ed inserirlo all'interno della cartella  del folder di Grafana (se non presente il folder precedentemente indicato, il progetto dovrà essere inserito all'interno del folder ~ \texttt{/data/plugins} ~).
+ed copiarlo all'interno della cartella \texttt{/plugins} nella \gl{radice} del server Grafana (nel caso tale cartella non fosse presente, il progetto dovrà essere copiato all'interno della cartella ~ \texttt{/data/plugins} ~).
 Infine, per abilitare l'utilizzo dell'applicativo, servirà abilitarlo nell'apposita \textbf{Config} tab del plug-in.\\
 Per ulteriori informazioni consultare il seguente link:\\[0.2cm]
 \hspace*{10mm}
 \url{https://grafana.com/docs/plugins/installation/}
+
+\textbf{N.B.}: Nel caso il server Grafana sia già in esecuzione, è necessario riavviarlo prima di poter utilizzare il plug-in.
 \pagebreak

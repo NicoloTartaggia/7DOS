@@ -1,21 +1,25 @@
 \pagebreak
 \newsection{Struttura del JSON}
-I file JSON che contengono la definizione di una rete Bayesiana sono strutturati nel seguente modo:
+I file JSON che contengono la definizione di una rete Bayesiana devono essere strutturati strutturati nel seguente modo:
 \begin{itemize}
-	\item \textbf{nodes}: contiene l'elenco dei nodi della rete;
+	\item \textbf{nodes}: elenco dei nodi della rete;
 	\begin{itemize}
 		\item \textbf{name}: nome del nodo;
-		\item \textbf{values}: contiene l'elenco delle values:
+		\item \textbf{values}: elenco degli stati che il nodo può assumere:
 		\begin{itemize}
-			\item name: nome della value;
-			\item type: tipo della value. Al momento sono stati implementati solamente 3 tipologie di value Range, Stringa e boolean;
-			\item value: valore della value.
-			\item RangeMin/RangeMax: Da utilizzare per al posto di value nel caso in cui si utilizzi value di tipo range.
+			\item name: nome dello stato;
+			\item type: tipo dello stato. Al momento ne sono state implementate 3 tipologie: \textit{range}, \textit{string} e \textit{boolean};
+			\item value: valore dello stato;
+			\item rangeMin/rangeMax: da utilizzare per al posto di \textit{value} nel caso in cui si utilizzino valori di tipo \textit{range}.
 		\end{itemize}
-		\item \textbf{parents}: contiene l'elenco dei nodi padri;
-		\item \textbf{cpt}: contiene l'elenco delle probabilità associate.
+		\item \textbf{parents}: elenco dei \gl{nodi padri};
+		\item \textbf{cpt}:  tabella delle probabilità condizionali associata al nodo.
 	\end{itemize}
 \end{itemize}
+Per maggiori informazioni sulle regole sintattiche dei file JSON, consultare la documentazione W3C al seguente link:
+\\[0.2cm]
+\hspace*{10mm}
+\url{https://www.w3schools.com/js/js_json_syntax.asp}
 \Spazio
 Ecco un esempio di rete con due nodi in formato JSON:
 \begin{lstlisting}
