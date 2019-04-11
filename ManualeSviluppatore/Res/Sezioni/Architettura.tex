@@ -6,7 +6,7 @@ I principali layer che sono stati individuti nel corso dello sviluppo dell'appli
 \begin{itemize}
 	\item{\textbf{Presentation layer}: si occupa di gestire la componente grafica del panel;}
 	\item{\textbf{Persistence layer}: si occupa di mantenere la struttura della rete;}
-	\item{\textbf{Buisness layer}: incorpora tutta la logica relativa all’intero processo di ricalcolo delle probabilità;}
+	\item{\textbf{Business layer}: incorpora tutta la logica relativa all’intero processo di ricalcolo delle probabilità;}
 	\item{\textbf{Database layer}: composto dall’insieme di tutti i database esterni forniti dall’utente per il reperimento delle informazioni.}
 \end{itemize}
 \begin{figure} [H]
@@ -24,6 +24,11 @@ Analizziamo ora più in dettaglio ciascuno dei layer precedentemente descritti.
 L'intera nostra applicazione è basata sulla libreria Javascript JSBayes consigliata dal proponente, la quale permette di mantenere l'intera struttura della rete ed esegue su di essa il calcolo delle probabilità di ogni stato associato ad ogni nodo della rete.
 Questa libreria tuttavia presenta non pochi problemi, tra i quali una pressochè totale assenza della gestione degli errori, una difficile interazione con altri oggetti, ed una scarsa estendibilità.
 Il persistence layer è composto principalmente da un insieme di classi che permettono di ovviare ai problemi precedentemente descritti.
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.1]{Img/PersistenceLayer}
+	\caption{Diagramma UML persistence layer}\label{}
+\end{figure}
 \subsubsection{NetworkAdapter}
 La classe NetworkAdapter ha il compito di schermare tutte le operazioni non sicure di JSBayes, cioè quelle che vanno a modificare la struttura della rete rischiando quindi di minare la potenziale integrità dei dati.
 Essa espone solamente i metodi necessari per effettuare il ricalcolo delle probabilità e che quindi non modificano in alcun modo lo stato.
@@ -73,14 +78,19 @@ Nel caso in cui un giorno fosse necessario utilizzare formati differenti è sar�
 	\caption{Diagramma UML NetParser}\label{}
 \end{figure}
 \subsection{Buisness Layer}
-Il buisness layer ingloba all'interno di esso tutta la logica relativa al processo di calcolo delle probabilità.
+Il business layer ingloba all'interno di esso tutta la logica relativa al processo di calcolo delle probabilità.
 Dopo un attenta analisi del problema il team è riuscito a scomporre il processo di calcolo delle probabilità in 3 macro-fasi principali:
 \begin{itemize}
 	\item La lettura dei dati dai database associati ai nodi delle rete;
 	\item Il processo di calcolo delle probabilità vero e proprio partendo dai dati letti precedentemente.
 	\item La scrittura delle probabilitá appena calcolate su un database che l'utente poi potrá utilizzare per fare la visualizzazione dei dati su grafana
 \end{itemize}
-Ci è sembrato dunque abbastanza naturale modellare l'architettura del buisness layer in tre oggetti distinti ognuno dei quali si occupa di gestire una specifica fase del processo dall'inizio alla fine.
+Ci è sembrato dunque abbastanza naturale modellare l'architettura del business layer in tre oggetti distinti ognuno dei quali si occupa di gestire una specifica fase del processo dall'inizio alla fine.
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.1]{Img/BuisnessLayer}
+	\caption{Diagramma UML Business Layer}\label{}
+\end{figure}
 Analizziamo ora più in dettaglio gli oggetti precedentemente citati.
 \subsubsection{NetReader}
 Il NetReader ha il compito di associare i nodi della rete a delle sorgenti dati scelte dall'utente, come per esempio dei database. Quest'ultime vengono rappresentate all'interno della nostra applicazione da oggetti di tipo Flow.
@@ -93,7 +103,13 @@ Il NetReader ha il compito di associare i nodi della rete a delle sorgenti dati 
 Un oggetto Flow ha il compito ritornare un risultato prelevato da una qualsiasi sorgente dati.
 Il team attualmente ha realizzato un unica implementazione di un Flow il ClientFlow il quale utilizza dei ReadClient, di cui parleremo più approfonditamente all'interno della prossima sezione, per interfacciarsi con dei database.
 \paragraph{ClientPool}\Spazio
-Per non dover istanziare più client di lettura per la stessa sorgente dati o database, abbiamo implementato una Object Pool per i client di lettura: quando si connette un nodo ad un flusso di dati, se il client richiesto esiste viene estratto dalla pool, altrimenti viene creato.
+Per non dover istanziare più client di lettura per la stessa sorgente dati o database, abbiamo implementato una Object Pool per i client di lettura: quando si connette un nodo ad un flusso di dati, se il client richiesto esiste viene estratto dalla pool, altrimenti viene creato.\\
+Di seguito è possibile vedere un diagramma di sequenza il quale riassume il processo di associazione di un flusso dati ad un nodo nel caso in cui il client non sia già presente all'interno della pool
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.17]{Img/ConnessioneNodi}
+	\caption{Diagramma di sequenza connessione nodi}\label{}
+\end{figure}
 \subsubsection{NetUpdater}
 NetUpdater ha il compito di effettuare il calcolo delle probabilità vero e proprio utilizzando i dati letti da NetReader e le funzionalità esposte dal NetworkAdapter.
 \begin{figure} [H]
@@ -176,5 +192,11 @@ Ad ogni tab di edit del plugin è associata una view ed un controller, in partic
 	\centering
 	\includegraphics[scale=0.17]{Img/PresentationLayer}
 	\caption{Diagramma UML presentation layer}\label{}
+\end{figure}
+Di seguito è possibile vedere un diagramma di sequenza il quale riassume l'intero processo di creazione delle classi che avviene una volta avviato il plug-in
+\begin{figure} [H]
+	\centering
+	\includegraphics[scale=0.2]{Img/Creazione}
+	\caption{Diagramma sequenza creazione classi plug-in}\label{}
 \end{figure}
 \pagebreak
