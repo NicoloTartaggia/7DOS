@@ -137,19 +137,21 @@ La classe NetManager ha un riferimento ad un istanza di NetReader, NetUpdater e 
 \subsubsection{Results}
 NetReader, NetUpdater e NetWriter comunicano tra loro fornendo i risultati delle proprie operazioni  all'interno di appositi oggetti “risultato” il cui cambiamento è altamente improbabile. In questo modo è possibile effettuare anche importanti modifiche alla struttura interna di queste macro-componenti senza che le interazioni con le altre ne risentano anche solo minimamente.\\
 Inoltre abbiamo deciso di rendere questi oggetti risultato degli iterator per garantire un ordine nel loro scorrimento.\\
-In particolare sono state realizzate due tipologie di result:\\
-Gli InputResult ritornati dal NetReader al termine delle sue operazioni ed utilizzati dal NetUpdater per effettuare il calcolo delle probabilità.
-\begin{figure} [H]
-	\centering
-	\includegraphics[scale=0.65]{Img/InputResult}
-	\caption{Diagramma UML InputResult}\label{}
-\end{figure}
-I CalcResult ritornati dal NetUpdater al termine delle sue operazioni ed utilizzati dal NetWriter per effettuare la scrittura sul database di output indicato dall'utente.
-\begin{figure} [H]
-	\centering
-	\includegraphics[scale=0.5]{Img/CalcResult}
-	\caption{Diagramma UML CalcResult}\label{}
-\end{figure}
+In particolare sono state realizzate due tipologie di result:
+\begin{itemize}
+	\item Gli InputResult ritornati dal NetReader al termine delle sue operazioni ed utilizzati dal NetUpdater per effettuare il calcolo delle probabilità.
+	\begin{figure} [H]
+		\centering
+		\includegraphics[scale=0.65]{Img/InputResult}
+		\caption{Diagramma UML InputResult}\label{}
+	\end{figure}
+	\item I CalcResult ritornati dal NetUpdater al termine delle sue operazioni ed utilizzati dal NetWriter per effettuare la scrittura sul database di output indicato dall'utente;
+	\begin{figure} [H]
+		\centering
+		\includegraphics[scale=0.5]{Img/CalcResult}
+		\caption{Diagramma UML CalcResult}\label{}
+	\end{figure}
+\end{itemize}
 Di seguito è possibile vedere un diagramma di sequenza il quale riassume l'intero processo di calcolo delle probabilità descritto all'interno di questa sezione.
 \begin{figure} [H]
 	\centering
