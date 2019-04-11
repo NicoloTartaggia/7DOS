@@ -8,8 +8,9 @@ I file JSON che contengono la definizione di una rete Bayesiana sono strutturati
 		\item \textbf{values}: contiene l'elenco delle values:
 		\begin{itemize}
 			\item name: nome della value;
-			\item type: tipo della value;
-			\item value/rangeMin/rangeMax: valore della value.
+			\item type: tipo della value. Al momento sono stati implementati solamente 3 tipologie di value Range, Stringa e boolean;
+			\item value: valore della value.
+			\item RangeMin/RangeMax: Da utilizzare per al posto di value nel caso in cui si utilizzi value di tipo range.
 		\end{itemize}
 		\item \textbf{parents}: contiene l'elenco dei nodi padri;
 		\item \textbf{cpt}: contiene l'elenco delle probabilità associate.
