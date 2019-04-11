@@ -1,6 +1,7 @@
 \appendix
 \addcontentsline{toc}{section}{Appendici}
 %\section*{Appendici}
+\definecolor{ashgrey}{rgb}{0.85, 0.85, 0.85}
 \newsection{Copertura dei requisiti}
 \normalsize
 \renewcommand{\arraystretch}{1.5}
@@ -2490,15 +2491,129 @@ La presenza di pochi commenti nel codice inizialmente ha fatto registrare dei va
 	\hline
 	\rowcolor{title_row}
 	\textbf{\color{title_text}{Test}} & \textbf{\color{title_text}{Specifica}}  \\
-	\hline
 	\endhead
-	{TI-1} & verifica l'integrazione tra client e Grafana. \\
 	\hline
-	{TI-2} & verifica l'integrazione tra Grafana ed \gl{InfluxDB}. \\
+	\rowcolor{ashgrey}{Unità} & NetReader - NetUpdater\\
 	\hline
-	{TI-3} & verifica l'integrazione tra Grafana e JsBayes.\\
-	\hline
-	{TI-4} & verifica l'integrazione tra Grafana e Raintank. \\
+	{TI-1} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica che l'interazione tra NetReader e NetUpdater dati input corretti si svolga correttamente;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: network corretta;
+			\item \textbf{Risultato atteso}: termine del test senza errori, correttezza dei valori risultanti dall'update.
+		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const reader: NetReader = new NetReader(network);
+const updater: NetUpdater = new NetUpdater(network);
+const error: boolean = false;
+// read
+const read_result: InputResultAggregate = reader
+	.read()
+	.catch((e) => { error = true };
+// update
+const update_result: CalcResultAggregate;
+update_res = updater.updateNet(read_result);
+// check
+expect(error).to.equal(false); 
+expect(update_result[0]).to.be.between(0.18, 0.22);
+expect(update_result[1]).to.be.between(0.58, 0.62);
+		\end{lstlisting}
+	\end{itemize} \\ 
+	\hline \newpage	\hline
+	\rowcolor{ashgrey}{Unità} &  NetUpdater - NetWriter\\
+	\hline	
+	{TI-2} &
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica che l'interazione tra NetUpdater e NetWriter dati input corretti si svolga correttamente;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: network corretta;
+			\item \textbf{Risultato atteso}: termine del test senza errori.
+		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const updater: NetUpdater = new NetUpdater(network);
+const writer: SingleNetWriter = new SingleNetWriter(
+	new ConcreteWriteClientFactory()
+		.makeInfluxWriteClient(...));
+const arrayResult: Array<InputResult>;
+arrayResult.push(new InputResult(nodeAdapter, "0"));
+const error: boolean = false;
+// update
+const update_res: CalcResultAggregate = updater
+	.updateNet(read_res);
+// write
+writer.write(new InputResultAggregate(arrayResult))
+	.catch(()=> {error = true});
+// check
+expect(error).to.equal(false); 
+		\end{lstlisting}
+	\end{itemize} \\		
+	\hline \newpage	\hline
+	\rowcolor{ashgrey}{Unità} & NetManager: NetReader - NetUpdater - NetWriter\\
+	\hline	
+	{TI-3} & 
+
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica che l'interazione tra NetReader, NetUpdater e NetWriter dati input corretti si svolga correttamente;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: network corretta;
+			\item \textbf{Risultato atteso}: termine del test senza errori.
+		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const reader: NetReader = new NetReader(network);
+const updater: NetUpdater = new NetUpdater(network);
+const writer: SingleNetWriter = new SingleNetWriter(
+	new ConcreteWriteClientFactory()
+		.makeInfluxWriteClient(...));
+const readerError: boolean = false;
+const writerError: boolean = false;
+// read
+const read_res: InputResultAggregate = reader
+	.read()
+	.catch((e) => { readerError = true };
+// update
+const update_res: CalcResultAggregate = updater
+	.updateNet(read_res);
+// write
+writer.write(new InputResultAggregate(arrayResult))
+	.catch((e) => {writerError = true});
+// check
+expect(readerError).to.equal(false); 
+expect(writerError).to.equal(false); 
+		\end{lstlisting}
+	\end{itemize} \\		
+	\hline \newpage	\hline
+	\rowcolor{ashgrey}{Unità} & NetworkAdapter - NetUpdater \\
+	\hline	
+	{TI-4} & 
+	
+	\begin{itemize}
+		\item \textbf{Progettazione}: verifica che l'interazione tra NetworkAdapter, AbstractValue e NetUpdater dati input corretti si svolga correttamente;
+		\item \textbf{Caso}: 
+		\begin{itemize}
+			\item \textbf{Input}: network corretta;
+			\item \textbf{Risultato atteso}: termine del test senza errori.
+		\end{itemize}
+		\item \textbf{Procedura}:
+		\begin{lstlisting}
+const network: NetworkAdapter;
+// parse
+network = new ConcreteNetworkFactory()
+	.parseNetwork(network, networkSchema);
+const networkUpdater: NetUpdater = new NetUpdater(network);
+// update
+const it: Array<CalcResult> = networkUpdater
+	.updateNet(results);
+	// check
+expect(it.probs[0]).to.be.between(0.18, 0.22);
+expect(it.probs[1]).to.be.between(0.58, 0.62);
+		\end{lstlisting}
+	\end{itemize} \\		
 	\hline
 	\caption{Specifica test di integrazione}
 	\label{tabella:specifica ti}
@@ -2506,7 +2621,6 @@ La presenza di pochi commenti nel codice inizialmente ha fatto registrare dei va
 \renewcommand{\arraystretch}{1}
 \newpage
 
-\definecolor{ashgrey}{rgb}{0.85, 0.85, 0.85}
 
 \subsection{Test di unità}
 \normalsize
