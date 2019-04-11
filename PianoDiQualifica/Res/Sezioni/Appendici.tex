@@ -2501,7 +2501,7 @@ La presenza di pochi commenti nel codice inizialmente ha fatto registrare dei va
 		\item \textbf{Caso}: 
 		\begin{itemize}
 			\item \textbf{Input}: network corretta;
-			\item \textbf{Risultato atteso}: False, 0.18 < update_result[0] < 0.22, 0.58 < update_result[1] < 0.62.
+			\item \textbf{Risultato atteso}: False, \newline $0.18 < update\_result[0] < 0.22$, \newline $0.58 < update\_result[1] < 0.62$.
 		\end{itemize}
 		\item \textbf{Procedura}:
 		\begin{lstlisting}
@@ -2597,7 +2597,7 @@ expect(writerError).to.equal(false);
 		\item \textbf{Caso}: 
 		\begin{itemize}
 			\item \textbf{Input}: network corretta;
-			\item \textbf{Risultato atteso}: False.
+			\item \textbf{Risultato atteso}: False, \newline $0.18 < update\_result[0] < 0.22$, \newline $0.58 < update\_result[1] < 0.62$.
 		\end{itemize}
 		\item \textbf{Procedura}:
 		\begin{lstlisting}
@@ -2605,13 +2605,15 @@ const network: NetworkAdapter;
 // parse
 network = new ConcreteNetworkFactory()
 	.parseNetwork(network, networkSchema);
-const networkUpdater: NetUpdater = new NetUpdater(network);
+const networkUpdater: NetUpdater = new NetUpdater(
+	network);
 // update
-const it: Array<CalcResult> = networkUpdater
+const update_result: Array<CalcResult>;
+update_result = networkUpdater
 	.updateNet(results);
 	// check
-expect(it.probs[0]).to.be.between(0.18, 0.22);
-expect(it.probs[1]).to.be.between(0.58, 0.62);
+expect(update_result[0]).to.be.between(0.18, 0.22);
+expect(update_result[1]).to.be.between(0.58, 0.62);
 		\end{lstlisting}
 	\end{itemize} \\		
 	\hline
