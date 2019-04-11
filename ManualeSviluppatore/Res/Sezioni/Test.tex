@@ -1,6 +1,6 @@
 \newsection{Test}
 Questo capitolo descrive le procedure per eseguire i test sul funzionamento e sulla sintassi del codice.
-\subsection{Test sul codice TypeScript}
+\subsection{Test sul codice}
 Per avviare i test sul funzionamento del codice TypeScript, è sufficiente eseguire da terminale il comando:
 \begin{verbatim}
 	npm run test
@@ -8,12 +8,8 @@ Per avviare i test sul funzionamento del codice TypeScript, è sufficiente esegu
 Il comando avvierà l'esecuzione di tutti i test presenti nella cartella \texttt{/src/test}.
 Per avviare i test sulla sintassi del codice è necessario lanciare i comandi:
 \begin{itemize}
-	\item \begin{verbatim}
-	npm run eslint
-	\end{verbatim} per verificare la sintassi JavaScript;
-	\item \begin{verbatim}
-	npm run tslint
-	\end{verbatim}
+	\item \begin{ttfamily}npm run eslint\end{ttfamily} per verificare la sintassi JavaScript;
+	\item \begin{ttfamily}npm run tslint\end{ttfamily}
 	per verificare la sintassi TypeScript.
 \end{itemize}
 Alternativamente questi due comandi possono essere eseguiti assieme lanciando:

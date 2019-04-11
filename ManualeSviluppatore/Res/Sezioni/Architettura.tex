@@ -1,9 +1,9 @@
 \pagebreak
 \newsection{Architettura}
 All'interno della seguente sezione verrà descritta l'architettura dell'intero sistema.\\
-Ogni componente logico del plug-in viene eseguito all'interno dello stesso, e quindi all'interno del browser, senza appoggiarsi a server esterni per l'esecuzione. Per questo motivo ogni panel è un componente a se stante e indipendente. \\
+Ogni componente logico del plug-in viene eseguito all'interno dello stesso, e quindi all'interno del browser, senza appoggiarsi a server esterni per l'esecuzione. Per questo motivo ogni panel è un componente a sé stante e indipendente. \\
 Per la realizzazione dell'architettura del plug-in il team ha deciso di adottare uno stile architetturale a layer.\\
-I principali layer che sono stati individuti nel corso dello sviluppo dell'applicazione sono i seguenti:
+I principali layer che sono stati individuati nel corso dello sviluppo dell'applicazione sono i seguenti:
 \begin{itemize}
 	\item{\textbf{Presentation layer}: si occupa di gestire la componente grafica del panel;}
 	\item{\textbf{Persistence layer}: si occupa di mantenere la struttura della rete;}
@@ -26,8 +26,8 @@ L'intera nostra applicazione è basata sulla libreria Javascript JSBayes consigl
 Questa libreria tuttavia presenta non pochi problemi, tra i quali una pressochè totale assenza della gestione degli errori, una difficile interazione con altri oggetti, ed una scarsa estendibilità.
 Il persistence layer è composto principalmente da un insieme di classi che permettono di ovviare ai problemi precedentemente descritti.
 \begin{figure} [H]
-	\centering
-	\includegraphics[scale=0.1]{Img/PersistenceLayer}
+	\centerline{
+	\includegraphics[scale=0.25]{Img/PersistenceLayer2}}
 	\caption{Diagramma UML persistence layer}\label{}
 \end{figure}
 \subsubsection{NetworkAdapter}
@@ -35,7 +35,7 @@ La classe NetworkAdapter ha il compito di schermare tutte le operazioni non sicu
 Essa espone solamente i metodi necessari per effettuare il ricalcolo delle probabilità e che quindi non modificano in alcun modo lo stato.
 \begin{figure} [H]
 	\centering
-	\includegraphics[scale=0.7]{Img/NetworkAdapter}
+	\includegraphics[scale=0.7]{Img/NetworkAdapter2}
 	\caption{Diagramma UML NetworkAdapter}\label{}
 \end{figure}
 \subsubsection{NodeAdapter}
