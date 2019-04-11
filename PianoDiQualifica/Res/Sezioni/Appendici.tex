@@ -2611,7 +2611,7 @@ const networkUpdater: NetUpdater = new NetUpdater(
 const update_result: Array<CalcResult>;
 update_result = networkUpdater
 	.updateNet(results);
-	// check
+// check
 expect(update_result[0]).to.be.between(0.18, 0.22);
 expect(update_result[1]).to.be.between(0.58, 0.62);
 		\end{lstlisting}
