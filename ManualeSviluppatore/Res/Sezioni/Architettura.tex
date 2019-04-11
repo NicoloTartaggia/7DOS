@@ -33,7 +33,7 @@ Essa espone solamente i metodi necessari per effettuare il ricalcolo delle proba
 	\caption{Diagramma UML NetworkAdapter}\label{}
 \end{figure}
 \subsubsection{NodeAdapter}
-Per lo sviluppo delle funzionalità del plugin il team ha avuto la necessità di aggiungere informazioni ai singoli nodi della rete bayesiana memorizzata da JSBayes.
+Per lo sviluppo delle funzionalità del plug-in il team ha avuto la necessità di aggiungere informazioni ai singoli nodi della rete bayesiana memorizzata da JSBayes.
 Estendere dalle classi offerte dalla libreria era impensabile a causa dei molteplici problemi descritti all'inizio di questa sezione. Per questo motivo abbiamo deciso di realizzare un adapter anche per i singoli nodi di JSBayes ed includere all'interno di questi tutte le informazioni aggiuntive necessarie, come gli AbstractValue che verranno descritti in dettaglio all'interno della sezione seguente.
 \begin{figure} [H]
 	\centering
@@ -66,7 +66,7 @@ Per garantire l'integrità dei dati abbiamo deciso di esternare il processo di c
 \subsubsection{NetParser}
 Il NetParser ha il compito di realizzare un NetAdapter a partire dal contenuto di un file di testo, sfruttando le funzionalità esposte dal NetBuilder.
 Il team fino ad ora ha realizzato un unica implementazione, quella relativa a file di tipo JSON in quanto era l'unico formato richiesto esplicitamente dal proponente.
-Nel caso in cui un giorno fosse necessario utilizzare formati differenti è sarà sufficiente realizzare una differente implementazione dell'interfaccia NetParser.
+Nel caso in cui un giorno fosse necessario utilizzare formati differenti sarà sufficiente realizzare una differente implementazione dell'interfaccia NetParser.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/NetParser}
@@ -104,14 +104,14 @@ NetUpdater ha il compito di effettuare il calcolo delle probabilità vero e prop
 \subsubsection{NetWriter}
 Il NetWriter ha il compito di scrivere all'interno di un apposito database scelto dall'utente tutti i dati calcolati dal NetUpdater. Per fare ciò esso si appoggia ad uno o più WriteClient classe che analizzeremo più approffonditamente all'interno del database layer.
 Il team, ai fini del proggetto, attualmente ha realizzato un unica implementazione del NetWriter, il SingleNetWriter il quale scrive tutti i dati ricevuti in input all'interno di un unico database. 
-E' importante sottolineare tuttavia come, grazie all'interfaccia NetWriter, sia relativamente semplice integrare all'interno del plugin una versione differente del NetWriter il quale per esempio permette la scrittura dei dati ricevuti in input all'interno di multipli database differenti.
+E' importante sottolineare tuttavia come, grazie all'interfaccia NetWriter, sia relativamente semplice integrare all'interno del plug-in una versione differente del NetWriter il quale per esempio permette la scrittura dei dati ricevuti in input all'interno di molteplici database differenti.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/NetWriter}
 	\caption{Diagramma UML NetWriter}\label{}
 \end{figure}
 \subsubsection{NetManager}
-Il NetManager non è altro che un facade il quale ha un riferimento ad un istanza di NetReader, NetUpdater e NetWriter. Esso ha il compito di coordinare l'intero processo di calcolo delle probabilità invocando sequenzialmente le operazioni giuste nell'ordine corretto.
+La classe NetManager ha un riferimento ad un istanza di NetReader, NetUpdater e NetWriter. Esso ha il compito di coordinare l'intero processo di calcolo delle probabilità invocando sequenzialmente le operazioni giuste nell'ordine corretto.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.8]{Img/NetManager}
@@ -164,8 +164,8 @@ Inoltre per semplificare la creazione dei client si è deciso di implementare un
 	\caption{Diagramma UML WriteClient}\label{}
 \end{figure}
 \subsection{Presentation Layer}
-Il presentation layer ha il compito di gestire l'interfaccia grafica del plugin.\\
-Ad ogni tab di edit del plugin è associata una view ed un controller, in particolare abbiamo:
+Il presentation layer ha il compito di gestire l'interfaccia grafica del plug-in.\\
+Ad ogni tab di edit del plug-in è associata una view ed un controller, in particolare abbiamo:
 \begin{itemize}
 	\item Una tab per l’associazione dei database da cui prelevare i dati necessari per il processo di calcolo delle probabilità, la quale fa riferimento al NetReader come model;
 	\item Una tab che permette di selezionare il database di output in cui si vogliono scrivere le probabilità calcolate, la quale fa riferimento al NetWriter come model;
