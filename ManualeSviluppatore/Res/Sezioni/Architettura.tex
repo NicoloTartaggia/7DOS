@@ -105,10 +105,10 @@ Un oggetto Flow ha il compito ritornare un risultato prelevato da una qualsiasi 
 Il team attualmente ha realizzato un'unica implementazione di un Flow il ClientFlow il quale utilizza dei ReadClient, di cui parleremo più approfonditamente all'interno della prossima sezione, per interfacciarsi con dei database.
 \paragraph{ClientPool}\Spazio
 Per non dover istanziare più client di lettura per la stessa sorgente dati o database, abbiamo implementato una Object Pool per i client di lettura: quando si connette un nodo ad un flusso di dati, se il client richiesto esiste viene estratto dalla pool, altrimenti viene creato.\\
-Di seguito è possibile vedere un diagramma di sequenza il quale riassume il processo di associazione di un flusso dati ad un nodo nel caso in cui il client non sia già presente all'interno della pool
+Di seguito è possibile vedere un diagramma di sequenza il quale riassume il processo di associazione di un flusso dati ad un nodo nel caso in cui il client non sia già presente all'interno della pool.
 \begin{figure} [H]
 	\centerline{
-	\includegraphics[scale=0.23]{Img/ConnessioneNodi}}
+	\includegraphics[scale=0.2]{Img/ConnessioneNodi}}
 	\caption{Diagramma di sequenza connessione nodi}\label{}
 \end{figure}
 \subsubsection{NetUpdater}
@@ -199,7 +199,7 @@ Ad ogni tab di edit del plug-in è associata una view ed un controller, in parti
 Di seguito è possibile vedere un diagramma di sequenza il quale riassume l'intero processo di creazione delle classi che avviene una volta avviato il plug-in
 \begin{figure} [H]
 	\centerline{
-	\includegraphics[scale=0.25]{Img/Creazione}}
+	\includegraphics[scale=0.2]{Img/Creazione}}
 	\caption{Diagramma sequenza creazione classi plug-in}\label{}
 \end{figure}
 \pagebreak
