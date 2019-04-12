@@ -71,20 +71,20 @@ Per garantire l'integrità dei dati abbiamo deciso di esternare il processo di c
 \end{figure}
 \subsubsection{NetParser}
 Il NetParser ha il compito di realizzare un NetAdapter a partire dal contenuto di un file di testo, sfruttando le funzionalità esposte dal NetBuilder.
-Il team fino ad ora ha realizzato un unica implementazione, quella relativa a file di tipo JSON in quanto era l'unico formato richiesto esplicitamente dal proponente.
+Il team fino ad ora ha realizzato un'unica implementazione, quella relativa a file di tipo JSON in quanto era l'unico formato richiesto esplicitamente dal proponente.
 Nel caso in cui un giorno fosse necessario utilizzare formati differenti sarà sufficiente realizzare una differente implementazione dell'interfaccia NetParser.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/NetParser}
 	\caption{Diagramma UML NetParser}\label{}
 \end{figure}
-\subsection{Buisness Layer}
+\subsection{Business Layer}
 Il business layer ingloba all'interno di esso tutta la logica relativa al processo di calcolo delle probabilità.
 Dopo un attenta analisi del problema il team è riuscito a scomporre il processo di calcolo delle probabilità in 3 macro-fasi principali:
 \begin{itemize}
 	\item La lettura dei dati dai database associati ai nodi delle rete;
 	\item Il processo di calcolo delle probabilità vero e proprio partendo dai dati letti precedentemente;
-	\item La scrittura delle probabilitá appena calcolate su un database che l'utente poi potrá utilizzare per fare la visualizzazione dei dati su grafana.
+	\item La scrittura delle probabilità appena calcolate su un database che l'utente poi potrà utilizzare per fare la visualizzazione dei dati su Grafana.
 \end{itemize}
 Ci è sembrato dunque abbastanza naturale modellare l'architettura del business layer in tre oggetti distinti ognuno dei quali si occupa di gestire una specifica fase del processo dall'inizio alla fine.
 \begin{figure} [H]
@@ -102,7 +102,7 @@ Il NetReader ha il compito di associare i nodi della rete a delle sorgenti dati 
 \end{figure}
 \paragraph{Flow}\Spazio
 Un oggetto Flow ha il compito ritornare un risultato prelevato da una qualsiasi sorgente dati.
-Il team attualmente ha realizzato un unica implementazione di un Flow il ClientFlow il quale utilizza dei ReadClient, di cui parleremo più approfonditamente all'interno della prossima sezione, per interfacciarsi con dei database.
+Il team attualmente ha realizzato un'unica implementazione di un Flow il ClientFlow il quale utilizza dei ReadClient, di cui parleremo più approfonditamente all'interno della prossima sezione, per interfacciarsi con dei database.
 \paragraph{ClientPool}\Spazio
 Per non dover istanziare più client di lettura per la stessa sorgente dati o database, abbiamo implementato una Object Pool per i client di lettura: quando si connette un nodo ad un flusso di dati, se il client richiesto esiste viene estratto dalla pool, altrimenti viene creato.\\
 Di seguito è possibile vedere un diagramma di sequenza il quale riassume il processo di associazione di un flusso dati ad un nodo nel caso in cui il client non sia già presente all'interno della pool
@@ -119,16 +119,16 @@ NetUpdater ha il compito di effettuare il calcolo delle probabilità vero e prop
 	\caption{Diagramma UML NetUpdater}\label{}
 \end{figure}
 \subsubsection{NetWriter}
-Il NetWriter ha il compito di scrivere all'interno di un apposito database scelto dall'utente tutti i dati calcolati dal NetUpdater. Per fare ciò esso si appoggia ad uno o più WriteClient classe che analizzeremo più approffonditamente all'interno del database layer.
-Il team, ai fini del proggetto, attualmente ha realizzato un unica implementazione del NetWriter, il SingleNetWriter il quale scrive tutti i dati ricevuti in input all'interno di un unico database. 
-E' importante sottolineare tuttavia come, grazie all'interfaccia NetWriter, sia relativamente semplice integrare all'interno del plug-in una versione differente del NetWriter il quale per esempio permette la scrittura dei dati ricevuti in input all'interno di molteplici database differenti.
+Il NetWriter ha il compito di scrivere all'interno di un apposito database scelto dall'utente tutti i dati calcolati dal NetUpdater. Per fare ciò esso si appoggia ad uno o più WriteClient classe che analizzeremo più approfonditamente all'interno del database layer.
+Il team, ai fini del progetto, attualmente ha realizzato un'unica implementazione del NetWriter, il SingleNetWriter il quale scrive tutti i dati ricevuti in input all'interno di un unico database. 
+È importante sottolineare tuttavia come, grazie all'interfaccia NetWriter, sia relativamente semplice integrare all'interno del plug-in una versione differente del NetWriter il quale per esempio permette la scrittura dei dati ricevuti in input all'interno di molteplici database differenti.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=1]{Img/NetWriter}
 	\caption{Diagramma UML NetWriter}\label{}
 \end{figure}
 \subsubsection{NetManager}
-La classe NetManager ha un riferimento ad un istanza di NetReader, NetUpdater e NetWriter. Esso ha il compito di coordinare l'intero processo di calcolo delle probabilità invocando sequenzialmente le operazioni giuste nell'ordine corretto.
+La classe NetManager ha un riferimento ad un'istanza di NetReader, NetUpdater e NetWriter. Esso ha il compito di coordinare l'intero processo di calcolo delle probabilità invocando sequenzialmente le operazioni giuste nell'ordine corretto.
 \begin{figure} [H]
 	\centering
 	\includegraphics[scale=0.8]{Img/NetManager}
@@ -139,13 +139,13 @@ NetReader, NetUpdater e NetWriter comunicano tra loro fornendo i risultati delle
 Inoltre abbiamo deciso di rendere questi oggetti risultato degli iterator per garantire un ordine nel loro scorrimento.\\
 In particolare sono state realizzate due tipologie di result:
 \begin{itemize}
-	\item Gli InputResult ritornati dal NetReader al termine delle sue operazioni ed utilizzati dal NetUpdater per effettuare il calcolo delle probabilità.
+	\item Gli InputResult ritornati dal NetReader al termine delle sue operazioni ed utilizzati dal NetUpdater per effettuare il calcolo delle probabilità;
 	\begin{figure} [H]
 		\centering
 		\includegraphics[scale=0.65]{Img/InputResult}
 		\caption{Diagramma UML InputResult}\label{}
 	\end{figure}
-	\item I CalcResult ritornati dal NetUpdater al termine delle sue operazioni ed utilizzati dal NetWriter per effettuare la scrittura sul database di output indicato dall'utente;
+	\item I CalcResult ritornati dal NetUpdater al termine delle sue operazioni ed utilizzati dal NetWriter per effettuare la scrittura sul database di output indicato dall'utente.
 	\begin{figure} [H]
 		\centering
 		\includegraphics[scale=0.5]{Img/CalcResult}
