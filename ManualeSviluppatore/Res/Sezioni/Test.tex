@@ -6,7 +6,7 @@ Per avviare i test sul funzionamento del codice TypeScript, è sufficiente esegu
 \hspace*{10mm}
 \begin{ttfamily}
 	npm run test
-\end{ttfamily}.
+\end{ttfamily}
 \\[0.2cm]
 Il comando avvierà l'esecuzione di tutti i test presenti nella cartella \texttt{/src/test}.
 Per avviare i test sulla sintassi del codice è necessario lanciare i comandi:
@@ -19,7 +19,7 @@ Alternativamente questi due comandi possono essere eseguiti assieme lanciando:\\
 \hspace*{10mm}
 \begin{ttfamily}
 npm run eslint \&\& npm run tslint
-\end{ttfamily}.
+\end{ttfamily}
 \\[0.2cm]
 È importante notare che il comando congiunto non è compatibile con \emph{Windows Powershell}.
 Al termine verranno segnalate le parti di codice che non rispettano le linee guida.
@@ -30,7 +30,7 @@ Per avviare il calcolo del code coverage è sufficiente eseguire da terminale il
 \hspace*{10mm}
 \begin{ttfamily}
 	npm run coverage
-\end{ttfamily}.
+\end{ttfamily}
 \\[0.2cm]
 Il comando esegue prima i test generando un report di coverage (in formato text-lcov) e poi manda direttamente il risultato a \href{https://coveralls.io/}{coveralls.io}.
 Se la repository non è pubblica è necessario generare e usare un token per l'account usato. La precisa procedura per fare ciò è presente nella documentazione di coveralls.io.
