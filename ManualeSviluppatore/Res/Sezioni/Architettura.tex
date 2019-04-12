@@ -83,8 +83,8 @@ Il business layer ingloba all'interno di esso tutta la logica relativa al proces
 Dopo un attenta analisi del problema il team è riuscito a scomporre il processo di calcolo delle probabilità in 3 macro-fasi principali:
 \begin{itemize}
 	\item La lettura dei dati dai database associati ai nodi delle rete;
-	\item Il processo di calcolo delle probabilità vero e proprio partendo dai dati letti precedentemente.
-	\item La scrittura delle probabilitá appena calcolate su un database che l'utente poi potrá utilizzare per fare la visualizzazione dei dati su grafana
+	\item Il processo di calcolo delle probabilità vero e proprio partendo dai dati letti precedentemente;
+	\item La scrittura delle probabilitá appena calcolate su un database che l'utente poi potrá utilizzare per fare la visualizzazione dei dati su grafana.
 \end{itemize}
 Ci è sembrato dunque abbastanza naturale modellare l'architettura del business layer in tre oggetti distinti ognuno dei quali si occupa di gestire una specifica fase del processo dall'inizio alla fine.
 \begin{figure} [H]
@@ -159,7 +159,7 @@ Di seguito è possibile vedere un diagramma di sequenza il quale riassume l'inte
 	\caption{Diagramma sequenza calcolo probabilità}\label{}
 \end{figure}
 \subsubsection{TimeBasedNetUpdater}
-Il TimeBasedNetUpdater possiede un riferimento del NetManager ed ha il compito di effettuare il processo di calcolo regolarmente secondo regole temporali definite dall'utente.
+Il TimeBasedNetUpdater possiede un riferimento al NetManager ed ha il compito di effettuare il processo di calcolo regolarmente secondo regole temporali definite dall'utente.
 \begin{figure} [H]
 	\centering
 		\includegraphics[scale=0.8]{Img/TimeBasedUpdater}
@@ -188,8 +188,8 @@ Ad ogni tab di edit del plug-in è associata una view ed un controller, in parti
 \begin{itemize}
 	\item Una tab per l’associazione dei database da cui prelevare i dati necessari per il processo di calcolo delle probabilità, la quale fa riferimento al NetReader come model;
 	\item Una tab che permette di selezionare il database di output in cui si vogliono scrivere le probabilità calcolate, la quale fa riferimento al NetWriter come model;
-	\item Una tab in cui l'utente può caricare un file JSON a partire dal quale verrà poi creata l'intera rete, il cui model è il NetParser.
-	\item una tab in cui l'utente può avviare e terminare il processo di ricalcolo continuo e scegliere la frequenza con cui quest'ultimo avverrà. Questa tab fa riferimento al TimeBasedUpdater come model.
+	\item Una tab in cui l'utente può caricare un file JSON a partire dal quale verrà poi creata l'intera rete, il cui model è il NetParser;
+	\item Una tab in cui l'utente può avviare e terminare il processo di ricalcolo continuo e scegliere la frequenza con cui quest'ultimo avverrà. Questa tab fa riferimento al TimeBasedUpdater come model.
 \end{itemize}
 \begin{figure} [H]
 	\centerline{
