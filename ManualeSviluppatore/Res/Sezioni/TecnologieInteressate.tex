@@ -1,12 +1,12 @@
-\newsection{Tecnologie Interessate}
-\subsection{InfluxDB HTTP API}
-InfluxDB HTTP API fornisce tutti gli strumenti necessari per interagire con il database. Attraverso comandi specifici, è possibile eseguire sia operazioni di scrittura che di lettura in InfluxDB.
-\subsection{Librerie esterne}
-\subsubsection{JsBayes}
-Libreria JavaScript consigliata dal proponente. Essa definisce i componenti base e rende disponibili metodi specifici per costruire una rete Bayesiana.
+\newsection{Tecnologie interessate}
+\subsection{JsBayes}
+Libreria JavaScript consigliata dal proponente, che permette di definire una rete Bayesiana in forma di grafo, e successivamente di inferire le probabilità dei suoi nodi tramite campionamento ponderato delle probabilità. Essa costituisce il cardine del modello matematico e delle procedure di calcolo.
 
-\subsubsection{rx-http-request}
-Libreria TypeScript che permette di eseguire richieste HTTP lato client, operazione indispensabile all'interno del nostro progetto. 
+\subsection{node-influx}
+Libreria TypeScript che rende disponibile una semplice API per effettuare svariati tipi di operazioni su database Influx, senza dipendenze esterne. È stata utilizzata per l'implementazione di client Influx per la lettura e scrittura di informazioni.
 
-\subsubsection{stream-http}
-Libreria patchata da InfluxDB che permette di eseguire richieste HTTP verso InfluxDB da browser. 
+\subsection{rx-http-request}
+Libreria TypeScript che permette di eseguire richieste HTTP dal lato client, operazione indispensabile all'interno del nostro progetto per ottenere informazioni dalla API HTTP di Grafana. 
+
+\subsection{stream-http}
+Libreria JavaScript il cui utilizzo viene consigliato dalla documentazione di \texttt{node-influx}; assicura il corretto funzionamento dei timeout delle richieste andando a sostituire il modulo \texttt{http} nativo di Node.js
