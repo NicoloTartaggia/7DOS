@@ -216,21 +216,9 @@ Al termine di ogni revisione il committente segnalerà le problematiche riscontr
 	\item\emph{Piano di Qualifica}: il documento è stato profondamente rivisto per struttura e contenuti secondo quanto specificato dal committente.
 	Le specifiche degli standard utilizzati e le descrizioni delle metriche sono stati spostati in appendice alle \emph{Norme di Progetto}. È stata aggiunta una sezione riguardante la pianificazione dei test, e le specifiche dei test sono state previste come futura aggiunta in appendice al documento. Infine, la strategia generale per la verifica ha assunto un ruolo centrale nella specifica degli obiettivi di qualità di processo e prodotto. 
 \end{itemize}
-\Spazio
-Il grafico rappresentante l'applicazione del metodo PDCA della fase di Analisi è:
-\begin{figure} [H]
-	\centering
-	\includegraphics[scale=1]{Img/Ciclo_PDCA}
-	\caption{Grafico del metodo PDCA, fase di Analisi}\label{immagine:pdca analisi}
-\end{figure}
-Dal grafico possiamo estrapolare che:
-\begin{itemize}
-	\item Alcuni dei processi pianificati hanno subito mutamenti, dovuti ad errori di pianificazione dati dalla poca esperienza del gruppo di lavoro;
-	\item Il gruppo ha reso l'avanzamento dei processi omogeneo, nonostante alcuni rallentamenti dovuti alla sovrapposizione di impegni personali e universitari dei componenti del gruppo con la realizzazione del progetto. Nel complesso si vede come l'omogeneità è stata abbastanza rispettata.
-\end{itemize}
 
 \subsubsection{Revisione di Progettazione}
-
+L'attività di verifica è stata svolta per ogni documento, con particolare attenzione alle modifiche e agli incrementi che sono stati effettuati. Sono state eseguite le misurazioni per alcune delle metriche previste.
 \paragraph{Consolidamento dei requisiti}\MiniSpazio
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
@@ -253,19 +241,6 @@ Dal grafico possiamo estrapolare che:
 		\label{tabella: considerazioni sulla maturità dei processi raggiunta}
 	\end{center}
 \end{table}
-
-
-Il grafico rappresentante l'applicazione del metodo PDCA nella fase di Consolidamento dei requisiti è:
-\begin{figure} [H]
-	\centering
-	\includegraphics[scale=1]{Img/Ciclo_PDCA_consolidamento_requisiti}
-	\caption{Grafico del metodo PDCA, fase di Consolidamento dei requisiti}\label{}
-\end{figure}
-Dal grafico possiamo estrapolare che:
-\begin{itemize}
-	\item Trattandosi di un periodo relativamente breve (10 giorni), piccole variazioni nel numero di attività risultano in grossi cambiamenti grafici;
-	\item Le attività in Plan sono state esaurite prima del termine del periodo, mentre quelle in Check e Act hanno avuto una permanenza maggiore; ciò è dovuto ad un numero di modifiche ai documenti relativamente basso ma di grande importanza e profondità (soprattutto per quanto riguarda il consolidamento del \emph{Piano di Qualifica}), che quindi hanno richiesto periodi di Check e Act prolungati.
-\end{itemize}
 
 \pagebreak
 \paragraph{Progettazione architetturale}\MiniSpazio
@@ -291,19 +266,9 @@ Dal grafico possiamo estrapolare che:
 	\end{center}
 \end{table}
 \renewcommand{\arraystretch}{1}
-Il grafico rappresentante l'applicazione del metodo PDCA nella fase di Progettazione architetturale è:
-\begin{figure} [H]
-	\centering
-	\includegraphics[scale=1]{Img/Ciclo_PDCA_progettazione_architetturale}
-	\caption{Grafico del metodo PDCA, fase di Progettazione architetturale}\label{}
-\end{figure}
-Dal grafico possiamo estrapolare che:
-\begin{itemize}
-	\item Si nota uno stallo nell'esecuzione delle attività nella prima metà del periodo, dovuto principalmente, come previsto, alla sovrapposizione degli impegni universitari dei vari membri del gruppo. A questo si sono aggiunte le situazioni di rischio verificatesi, comportando ulteriori ritardi;
-	\item Verso al fine del periodo si nota un rapido decremento delle attività in Do e Check, dovuto ad uno sforzo maggiorato per compensare i ritardi dovuti alle situazioni di rischio verificatesi.
-\end{itemize}
 
 \subsubsection{Revisione di Qualifica}
+L'attività di verifica è stata svolta per ogni documento, con particolare attenzione alle modifiche e agli incrementi che sono stati effettuati. Sono state raccolte più misurazioni per ogni metrica prevista, in modo da ottenere delle serie storiche per monitorarne l'andamento.
 \paragraph{Progettazione di dettaglio e codifica} \Spazio
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
@@ -317,7 +282,7 @@ Dal grafico possiamo estrapolare che:
 			\hline
 			{Gestione dei rischi} & {3} & {Si è dimostrato stabile al verificarsi di alcune situazioni di basso rischio, grazie alle istruzione impartite dal \emph{Responsabile di Progetto.}}\\	
 			\hline
-			{Gestione dei test} & {3} & {Sono stati specificati ed implementati buona parte dei test La copertura dei test di unità a registrato esiti molto positivi.}\\	
+			{Gestione dei test} & {3} & {Sono stati specificati ed implementati buona parte dei test. La copertura dei test di unità ha registrato esiti molto positivi.}\\	
 			\hline
 			{Versionamento e build} & {4} & {Automatizzato il processo tramite \gl{Travis}.} Ogni modifica apportata alla repository di GitHub scaturisce una serie di test sul codice, tenendo traccia dell'esito delle varie build e registrando valori utili per le nostre metriche, come il code coverage.\\	
 			\hline
@@ -327,17 +292,32 @@ Dal grafico possiamo estrapolare che:
 	\end{center}
 \end{table}
 \renewcommand{\arraystretch}{1}
-Il grafico rappresentante l'applicazione del metodo PDCA nella fase di Progettazione di dettaglio e codifica è:
-\begin{figure} [H]
-	\centering
-	\includegraphics[scale=1]{Img/Ciclo_PDCA_progettazione_dettaglio}
-	\caption{Grafico del metodo PDCA, fase di Progettazione di dettaglio e codifica}\label{}
-\end{figure}
-Dal grafico possiamo estrapolare che:
-\begin{itemize}
-	\item Si nota una fase iniziale dovuta in maggior parte alla pianificazione delle attività finalizzate all'incremento dei documenti e allo sviluppo dei test;
-	\item Il completamento delle attività pianificate comporta delle transizioni tra lo stato Do e lo stato Check che segue un andamento omogeneo, dovuto al fatto che non sono stati registrati scostamenti nelle tempistiche.
-\end{itemize}
+
+
+\subsubsection{Revisione di Accettazione}
+L'attività di verifica è stata svolta per ogni documento, con particolare attenzione alle modifiche e agli incrementi che sono stati effettuati. Sono state raccolte ulteriori misurazioni delle metriche previste, aggiornando così le serie storiche relative.
+\paragraph{Verifica e validazione} \Spazio
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|p{6.8cm}|}
+			\hline
+			\rowcolor{title_row}
+			\textbf{\color{title_text}{Processo}} & \textbf{\color{title_text}{Livello di maturità}} & \textbf{\color{title_text}{Considerazioni}} \\
+			\hline
+			{Pianificazione e controllo} & {4} & {Ha permesso di terminare poco prima delle scadenze previste.}\\	
+			\hline
+			{Gestione dei rischi} & {4} & {Si è dimostrato stabile al verificarsi di alcune situazioni di basso rischio, grazie alle istruzione impartite dal \emph{Responsabile di Progetto} e anche grazie al fatto che eventi simili si fossero già verificati in precedenza, e quindi di facile mitigazione.}\\	
+			\hline
+			{Gestione dei test} & {4} & {Sono stati implementati ulteriori test, registrando ottimi esiti per quanto riguarda la copertura.}\\	
+			\hline
+			{Versionamento e build} & {4} & {Automatizzato il processo tramite \gl{Travis}.} Ogni modifica apportata alla repository di GitHub scaturisce una serie di test sul codice, tenendo traccia dell'esito delle varie build e registrando valori utili per le nostre metriche, come il code coverage.\\	
+			\hline
+		\end{tabular}
+		\caption[Maturità dei processi, Verifica e validazione]{Maturità dei processi e considerazioni}	
+		\label{tabella: considerazioni sulla maturità dei processi raggiunta ra}
+	\end{center}
+\end{table}
 \newpage
 
 \subsection{Misurazioni}
