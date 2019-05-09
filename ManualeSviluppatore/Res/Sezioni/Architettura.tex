@@ -15,21 +15,15 @@ I principali layer che sono stati individuati nel corso dello sviluppo dell'appl
 	\includegraphics[scale=0.3]{Img/Diagramma_Package}}
 	\caption{Diagramma dei package}\label{}
 \end{figure}
-\begin{figure} [H]
-	\centering
-	\includegraphics[scale=0.07]{Img/Diagramma_Classi}
-	\caption{Diagramma delle classi complessivo}\label{}
-\end{figure}
+Per vedere in dettaglio il diagramma delle classi relativo all'architettura complessiva del plug-in consultare l'immagine \emph{Diagramma Delle Classi} consegnata in allegato al documento. \\ \\
 Analizziamo ora più in dettaglio ciascuno dei layer precedentemente descritti.
 \subsection{Persistence Layer}
 L'intera nostra applicazione è basata sulla libreria Javascript JSBayes consigliata dal proponente, la quale permette di mantenere l'intera struttura della rete ed esegue su di essa il calcolo delle probabilità di ogni stato associato ad ogni nodo della rete.
 Questa libreria tuttavia presenta non pochi problemi, tra i quali una pressochè totale assenza della gestione degli errori, una difficile interazione con altri oggetti, ed una scarsa estendibilità.
-Il persistence layer è composto principalmente da un insieme di classi che permettono di ovviare ai problemi precedentemente descritti.
-\begin{figure} [H]
-	\centerline{
-	\includegraphics[scale=0.25]{Img/PersistenceLayer2}}
-	\caption{Diagramma UML persistence layer}\label{}
-\end{figure}
+Il persistence layer è composto principalmente da un insieme di classi che permettono di ovviare ai problemi precedentemente descritti. \\
+
+Per vedere in dettaglio il diagramma delle classi relativo al persistence layer del plug-in consultare l'immagine \emph{Persistence Layer} consegnata in allegato al documento.
+
 \subsubsection{NetworkAdapter}
 La classe NetworkAdapter ha il compito di schermare tutte le operazioni non sicure di JSBayes, cioè quelle che vanno a modificare la struttura della rete rischiando quindi di minare la potenziale integrità dei dati.
 Essa espone solamente i metodi necessari per effettuare il ricalcolo delle probabilità e che quindi non modificano in alcun modo lo stato.
@@ -87,11 +81,9 @@ Dopo un attenta analisi del problema il team è riuscito a scomporre il processo
 	\item La scrittura delle probabilità appena calcolate su un database che l'utente poi potrà utilizzare per fare la visualizzazione dei dati su Grafana.
 \end{itemize}
 Ci è sembrato dunque abbastanza naturale modellare l'architettura del business layer in tre oggetti distinti ognuno dei quali si occupa di gestire una specifica fase del processo dall'inizio alla fine.
-\begin{figure} [H]
-	\centering
-	\includegraphics[scale=0.1]{Img/BuisnessLayer}
-	\caption{Diagramma UML Business Layer}\label{}
-\end{figure}
+ 
+Per vedere in dettaglio il diagramma delle classi relativo al buisness layer del plug-in consultare l'immagine \emph{Buisness Layer} consegnata in allegato al documento.
+ 
 Analizziamo ora più in dettaglio gli oggetti precedentemente citati.
 \subsubsection{NetReader}
 Il NetReader ha il compito di associare i nodi della rete a delle sorgenti dati scelte dall'utente, come per esempio dei database. Quest'ultime vengono rappresentate all'interno della nostra applicazione da oggetti di tipo Flow.
@@ -155,15 +147,8 @@ In particolare sono state realizzate due tipologie di result:
 Di seguito è possibile vedere un diagramma di sequenza il quale riassume l'intero processo di calcolo delle probabilità descritto all'interno di questa sezione.
 \begin{figure} [H]
 	\centering
-			\includegraphics[scale=0.17]{Img/ProcessoRicalcolo}
+			\includegraphics[scale=0.165]{Img/ProcessoRicalcolo}
 	\caption{Diagramma sequenza calcolo probabilità}\label{}
-\end{figure}
-\subsubsection{TimeBasedNetUpdater}
-Il TimeBasedNetUpdater possiede un riferimento al NetManager ed ha il compito di effettuare il processo di calcolo regolarmente secondo regole temporali definite dall'utente.
-\begin{figure} [H]
-	\centering
-		\includegraphics[scale=0.8]{Img/TimeBasedUpdater}
-	\caption{Diagramma UML TimeBasedNetUpdater}\label{}
 \end{figure}
 
 \subsection{Database Layer}
@@ -191,15 +176,7 @@ Ad ogni tab di edit del plug-in è associata una view ed un controller, in parti
 	\item Una tab in cui l'utente può caricare un file JSON a partire dal quale verrà poi creata l'intera rete, il cui model è il NetParser;
 	\item Una tab in cui l'utente può avviare e terminare il processo di ricalcolo continuo e scegliere la frequenza con cui quest'ultimo avverrà. Questa tab fa riferimento al TimeBasedUpdater come model.
 \end{itemize}
-\begin{figure} [H]
-	\centerline{
-	\includegraphics[scale=0.22]{Img/PresentationLayer}}
-	\caption{Diagramma UML presentation layer}\label{}
-\end{figure}
-Di seguito è possibile vedere un diagramma di sequenza il quale riassume l'intero processo di creazione delle classi che avviene una volta avviato il plug-in
-\begin{figure} [H]
-	\centerline{
-	\includegraphics[scale=0.2]{Img/Creazione}}
-	\caption{Diagramma sequenza creazione classi plug-in}\label{}
-\end{figure}
+Per vedere in dettaglio il diagramma delle classi relativo al Presentation layer del plug-in consultare l'immagine \emph{Presentation Layer} consegnata in allegato al documento.\\
+\\
+L'immagine \emph{Processo Creazione} allegata al documento permette di vedere un diagramma di sequenza il quale riassume l'intero processo di creazione delle classi che avviene una volta avviato il plug-in.
 \pagebreak
