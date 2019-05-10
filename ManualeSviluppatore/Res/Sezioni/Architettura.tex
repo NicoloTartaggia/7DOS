@@ -180,3 +180,17 @@ Per vedere in dettaglio il diagramma delle classi relativo al Presentation layer
 \\
 L'immagine \emph{Processo Creazione} allegata al documento permette di vedere un diagramma di sequenza il quale riassume l'intero processo di creazione delle classi che avviene una volta avviato il plug-in.
 \pagebreak
+
+\newsection{Estensione delle funzionalità}
+Il plug-in è stato progettato e realizzato per poter essere facilmente estensibile. Di seguito vengono elencati i principali punti di estensione per l'aggiunta di nuove funzionalità al prodotto.
+\subsection{Supporto di nuovi formati per la lettura della rete}
+Al momento della stesura, il plug-in è in grado di leggere solamente reti Bayesiane in formato JSON codificate secondo regole precise. Per aggiungere il supporto ad un formato diverso, eventualmente con codifica della rete differente da quella in uso al momento, è sufficiente creare una nuova implementazione dell'interfaccia NetParser (vedere §7.1.5) il cui metodo \texttt{createNet(net: string): ConcreteNetworkAdapter} invochi correttamente le funzionalità di NetBuilder (vedere §7.1.4) per la creazione della rete.\\
+\textbf{N.B.:} il formato del file deve essere supportato in lettura da TypeScript. Per aggiungere formati non supportati da TypeScript occorrerà implementare le funzionalità necessarie a leggere tali formati come stringhe di testo.
+\subsection{Supporto per nuove datasource}
+Il plug-in supporta nativamente lettura e scrittura su datasource Influx, ma si presta facilmente all'aggiunta di client adatti a supportare datasource differenti grazie alle classi InputResult e CalcResult (vedere §7.2.5), che standardizzano la comunicazione tra client (rispettivamente, di lettura e scrittura) e Business Layer dell'applicazione.
+\subsubsection{In lettura}
+Per dare la possibilità di leggere da una nuova datasource, è sufficiente realizzare una implementazione ad-hoc dell'interfaccia ReadClient (vedere §7.3), aggiungendo il relativo metodo di costruzione a ReadClientFactory e alle sue implementazioni coinvolte. La ReadClientPool descritta in vedere §7.2.1.2 non necessita di adattamenti, in quanto è in grado di gestire implementazioni diverse di ReadClient.
+\subsubsection{In scrittura}
+Per dare la possibilità di scrivere su una nuova datasource, è sufficiente realizzare una implementazione ad-hoc dell'interfaccia WriteClient (vedere §7.3), aggiungendo il relativo metodo di costruzione a WriteClientFactory e alle sue implementazioni coinvolte.
+\subsection{Supporto per nuovi tipi di client}
+Nel caso si desiderasse aggiungere diversi tipi di client, ad esempio client connessi a più host, è sufficiente scrivere una implementazione ad hoc di ReadClient o WriteClient, a seconda della necessità, e creare una nuova implementazione di, rispettivamente, ReadClientFactory e WriteClientFactory.

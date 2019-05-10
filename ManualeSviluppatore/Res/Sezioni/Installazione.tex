@@ -8,6 +8,11 @@ Una volta terminata la configurazione descritta al riferimento precedente, in Wi
 \hspace*{10mm}\begin{ttfamily}grafana-5.4.3/bin/grafana-server.exe\end{ttfamily}\\[0.2cm] mentre in Linux eseguire il comando\\[0.2cm]
 \hspace*{10mm}\begin{ttfamily}sudo service grafana-server start\end{ttfamily}\\[0.2cm]
 A questo punto, aprire una finestra del browser e navigare all'indirizzo URL \url{localhost:3000}. La porta 3000 è quella di default per Grafana, ma su sistema operativo Windows potrebbe richiedere permessi aggiuntivi.
+\begin{figure} [H]
+	\centerline{
+		\includegraphics[scale=0.5]{Img/grafana_login}}
+	\caption{Pagina di login di Grafana}\label{}
+\end{figure}
 \subsection{Installazione Node.js}
 Per usufruire delle funzionalità del plug-in è necessario installare il \gl{framework} Node.js e il relativo gestore dei pacchetti chiamato Node Package Manager (\gl{NPM}), attraverso l'apposita sezione al link\\[0.2cm]
 \hspace*{10mm}\url{https://nodejs.org/it/download/}.\\[0.2cm] In questo modo saranno disponibili i comandi \begin{ttfamily}npm install\end{ttfamily} e \begin{ttfamily}npm run build\end{ttfamily}, necessari rispettivamente per l'installazione di tutte le dipendenze specificate nel \gl{package.json} e per l'esecuzione del processo di \gl{build}.
