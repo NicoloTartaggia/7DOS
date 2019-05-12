@@ -3,10 +3,14 @@
 % - INSERT INFORMAZIONI INCONTRO
 \begin{itemize}
 	\item { \textbf{Luogo:} sede Zucchetti Software srl, via Cittadella 7, Padova;}
-	\item { \textbf{Data:} 9 Aprile 2019};
+	\item { \textbf{Data:} 8 Maggio 2019};
 	\item { \textbf{Ora di inizio:} 14.30};
 	\item { \textbf{Ora di fine:} 15.30};
-	\item { \textbf{Partecipanti del gruppo:} gruppo al completo};
+	\item { \textbf{Partecipanti del gruppo:}	\begin{itemize}
+			\item Giovanni Sorice;
+			\item Michele Roverato;
+			\item Nicolò Tartaggia.
+	\end{itemize}}
 	\item { \textbf{Partecipanti esterni:} 
 	\begin{itemize}
 			\item dott. Gregorio Piccoli.
@@ -16,25 +20,23 @@
 
 \subsection{Agenda}
 \begin{itemize}
-	\item {Demo del progetto;}
-	\item {Domande;}
+	\item {Visione funzionalità aggiunte;}
+	\item {Metodologia di sviluppo;}
 	\item {Risposte.}
 \end{itemize}
 
 \subsection{Resoconto}
 \begin{itemize}
-	\item \textbf{Demo:} abbiamo mostrato una demo del nostro prodotto al proponente che ne è rimasto piacevolmente soddisfatto, affermando che tutto ciò che si aspettava siamo riusciti a portarlo a termine. Abbiamo inoltre mostrato l'architettura del nostro plug-in e le scelte implementative da noi effettuate ed anche in questo caso egli ha espresso un parere positivo. Infine abbiamo discusso di quali altre funzionalità preferirebbe vedere implementate per la prossima revisione;
-	\item {\textbf{Domande}:
-		\begin{enumerate}
-			\item Il nostro plug-in è stato sviluppato per funzionare con la versione di Grafana 5.4.x; Zucchetti ha l'intenzione futura di passare alla nuova versione di Grafana 6 e quindi dobbiamo adottare delle tecniche che garantiscano la retrocompatibilità?
-			\item Ci sono altre feature che vorreste che implementassimo per la RA oltre a quelle da noi pianificate?
-			\item Per quanto riguarda l'editor grafico che vorremmo implementare, preferireste che sia una funzionalità interna al plug-in oppure un piccolo programma stand-alone?
-		\end{enumerate}}
-	\item {\textbf{Risposte}:
-		\begin{enumerate}
-			\item Il proponente ha affermato che Zucchetti non ha intenzione di passare alla nuova versione di Grafana e che la nostra soluzione va bene così. Non vi è dunque la necessità di garantire la retrocompatibilità;
-			\item Il proponente ci ha consigliato di implementare una funzionalità per mostrare in forma di grafo la rete Bayesiana; un'altra funzionalità di interesse, anche se di difficile realizzazione, consiste nell'analisi a posteriori dei risultati raccolti per verificare la coerenza delle probabilità di rete, con l'uso possibile di algoritmi di Bloom;
-			\item Il proponente ha espresso un parere positivo in merito alla realizzazione di un applicativo indipendente dal plug-in; esso consiste in un editor grafico per la creazione/modifica di una rete Bayesiana che consente di esportarne la definizione in JSON.
-		\end{enumerate}}
+	\item \textbf{Visione funzionalità aggiunte:} abbiamo mostrato una demo del nostro prodotto al proponente che ne è rimasto piacevolmente soddisfatto, affermando che tutto ciò che si aspettava siamo riusciti a portarlo a termine. Abbiamo inoltre mostrato le funzionalità aggiunte quali:
+	\begin{itemize}
+		\item Miglioramento grafica;
+		\item Aggiunta visualizzazione grafica della rete Bayesiana;
+		\item Aggiunta funzionalità di import/export completa del panel;
+		\item Aggiunta sistema di warning;
+		\item Aggiunta funzionalità di disconnesione dei nodi.
+	\end{itemize}
+	Anche di queste nuove funzionalità ne è rimasto soddisfatto, notando l'effettivo ritorno visivo della grafica e della visualizzazione della rete Bayesiana;
+	\item {\textbf{Metodologia di sviluppo}:
+	il dott. Gregorio Piccoli ci ha fatto ragionare sulla metodologia di sviluppo da noi utilizzata e sui possibili miglioramenti apportabili, mostrandoci anche un esempio aziendale verificatosi all'interno dell'azienda proponente.}
 \end{itemize}
 
