@@ -1,0 +1,62 @@
+<div class="editor-row">
+    <div class="gf-form-group">
+        <div class="gf-form">
+            <label class="gf-form-label width-20">Load datasources and saved data</label>
+            <button type="button" id="load-btn" ng-click="ctrl.loadData()" class="btn btn-success" ng-model="load" >Load data</button>
+        </div>
+        <div class="gf-form-inline" style="padding-bottom: 1em">
+            <div class="gf-form">
+                <label class="gf-form-label width-20">Upload connections file (Warning, this will overwrite the currently saved data if present)</label>
+                <dash-upload on-upload="ctrl.loadSavedConnections(dash)"></dash-upload>
+            </div>
+        </div>
+        <div class="gf-form" ng-repeat="value in ctrl.nodes" style="align-items: flex-start">
+            <label class="gf-form-label width-20">Node: {{value.getName()}} </label>
+            <div style="flex-wrap: wrap; display: flex;">
+                <div class="gf-form-select-wrapper width-15">
+                    <select ng-change="ctrl.select_datasource('{{value.getName()}}')" ng-model="ctrl.selected_datasource[value.getName()]"
+                    class="gf-form-input ng-pristine ng-valid ng-not-empty ng-touched">
+                        <option value="">-- Choose a datasource --</option>
+                        <option ng-repeat="(datasource_id, object) in ctrl.datasources" value="{{object.getGrafanaDatasourceId()}}">{{object.getName()}} - {{object.getUrl()}}</option>
+                    </select>
+                </div>
+                <div class="gf-form-select-wrapper width-15">
+                    <select ng-change="ctrl.select_database('{{value.getName()}}')"
+                            ng-options="database_name for database_name in ctrl.databases_names[ctrl.selected_datasource[value.getName()]] track by database_name"
+                            ng-model="ctrl.selected_database_name[value.getName()]"
+                            class="gf-form-input ng-pristine ng-valid ng-not-empty ng-touched">
+                        <option value="">-- Choose a database --</option>
+                    </select>
+                </div>
+                <div class="gf-form-select-wrapper width-15">
+                    <select ng-change="ctrl.select_table('{{value.getName()}}')"
+                            ng-options="table.name for table in ctrl.selected_database[value.getName()].tables track by table.name"
+                            ng-model="ctrl.selected_table[value.getName()]"
+                            class="gf-form-input ng-pristine ng-valid ng-not-empty ng-touched">
+                        <option value="">-- Choose a measurement --</option>
+                    </select>
+                </div>
+                <div class="gf-form-select-wrapper width-15">
+                    <select ng-change="ctrl.select_field('{{value.getName()}}')"
+                            ng-options="field for field in ctrl.selected_database[value.getName()].tables[ctrl.selected_table[value.getName()].name].fields track by field"
+                            ng-model="ctrl.selected_field[value.getName()]"
+                            class="gf-form-input ng-pristine ng-valid ng-not-empty ng-touched">
+                        <option value="">-- Choose a field --</option>
+                    </select>
+                </div>
+                <div class="width-15">
+                    <button type="button" ng-click="ctrl.disconnectNodes(value.getName())" class="btn btn-danger" ng-model="load">Disconnect node</button>
+                </div>
+            </div>
+        </div>
+        <div class="gf-form-group">
+            <div class="gf-form" style="padding-top: 1em">
+                <label class="gf-form-label width-20">Save nodes connections</label>
+                <button type="button" ng-click="ctrl.connectNodes()" class="btn btn-success" ng-model="load" >Save connections</button>
+            </div>
+            <div class="gf-form">
+                <label class="gf-form-label width-20">Export saved nodes connections as .json</label>
+                <button type="button" ng-click="ctrl.exportSavedConnections()" class="btn btn-success" ng-model="load" >Export connections</button>
+            </div>
+    </div>
+</div>
