@@ -1,0 +1,47 @@
+language: node_js
+node_js:
+  - "10"
+
+cache: npm
+
+before_install:
+  - npm i -g npm@6.4.1
+
+# Trigger a push build on master branches only + PRs build on every branches
+branches:
+  only:
+    - master
+
+stages:
+  - lint
+  - mocha-test
+  - build
+
+jobs:
+  include:
+    - stage: lint
+      script:
+        - npm run eslint
+        - npm run tslint
+
+    - stage: mocha-test
+      services:
+        - docker
+      before_install:
+        - docker pull influxdb:1.7.4
+        - docker run -p 8086:8086 --detach --rm influxdb:1.7.4
+      script:
+        - npm run test && npm run coverage
+
+    - stage: build
+      script:
+        - npm run build
+
+after_success:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh success $WEBHOOK_URL
+after_failure:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh failure $WEBHOOK_URL
